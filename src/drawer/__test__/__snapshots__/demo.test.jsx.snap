@@ -299,11 +299,64 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
+              <defs>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v0-overlap-fill1"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <g>
+                    <path
+                      d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </g>
+                </mask>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v0-overlap-fill2"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <path
+                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </mask>
+              </defs>
               <g
                 id="app"
               >
                 <g
                   id="fill1"
+                  mask="url(#t-icon-app-instance-v0-overlap-fill1)"
                 >
                   <path
                     d="M3 3H10V10H3V3Z"
@@ -322,22 +375,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
                   d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                   fill="transparent"
                   id="fill2"
+                  mask="url(#t-icon-app-instance-v0-overlap-fill2)"
                 />
                 <g
                   id="stroke1"
                 >
                   <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
+                    d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                     stroke="currentColor"
                     stroke-width="2"
                   />
@@ -371,11 +415,64 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
+              <defs>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v1-overlap-fill1"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <g>
+                    <path
+                      d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </g>
+                </mask>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v1-overlap-fill2"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <path
+                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </mask>
+              </defs>
               <g
                 id="app"
               >
                 <g
                   id="fill1"
+                  mask="url(#t-icon-app-instance-v1-overlap-fill1)"
                 >
                   <path
                     d="M3 3H10V10H3V3Z"
@@ -394,22 +491,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
                   d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                   fill="transparent"
                   id="fill2"
+                  mask="url(#t-icon-app-instance-v1-overlap-fill2)"
                 />
                 <g
                   id="stroke1"
                 >
                   <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
+                    d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                     stroke="currentColor"
                     stroke-width="2"
                   />
@@ -443,11 +531,64 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
+              <defs>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v2-overlap-fill1"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <g>
+                    <path
+                      d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </g>
+                </mask>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v2-overlap-fill2"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <path
+                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </mask>
+              </defs>
               <g
                 id="app"
               >
                 <g
                   id="fill1"
+                  mask="url(#t-icon-app-instance-v2-overlap-fill1)"
                 >
                   <path
                     d="M3 3H10V10H3V3Z"
@@ -466,22 +607,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
                   d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                   fill="transparent"
                   id="fill2"
+                  mask="url(#t-icon-app-instance-v2-overlap-fill2)"
                 />
                 <g
                   id="stroke1"
                 >
                   <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
+                    d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                     stroke="currentColor"
                     stroke-width="2"
                   />
@@ -515,11 +647,64 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
+              <defs>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v3-overlap-fill1"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <g>
+                    <path
+                      d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </g>
+                </mask>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v3-overlap-fill2"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <path
+                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </mask>
+              </defs>
               <g
                 id="app"
               >
                 <g
                   id="fill1"
+                  mask="url(#t-icon-app-instance-v3-overlap-fill1)"
                 >
                   <path
                     d="M3 3H10V10H3V3Z"
@@ -538,22 +723,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
                   d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                   fill="transparent"
                   id="fill2"
+                  mask="url(#t-icon-app-instance-v3-overlap-fill2)"
                 />
                 <g
                   id="stroke1"
                 >
                   <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
+                    d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                     stroke="currentColor"
                     stroke-width="2"
                   />
@@ -587,11 +763,64 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
+              <defs>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v4-overlap-fill1"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <g>
+                    <path
+                      d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </g>
+                </mask>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v4-overlap-fill2"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <path
+                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </mask>
+              </defs>
               <g
                 id="app"
               >
                 <g
                   id="fill1"
+                  mask="url(#t-icon-app-instance-v4-overlap-fill1)"
                 >
                   <path
                     d="M3 3H10V10H3V3Z"
@@ -610,22 +839,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
                   d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                   fill="transparent"
                   id="fill2"
+                  mask="url(#t-icon-app-instance-v4-overlap-fill2)"
                 />
                 <g
                   id="stroke1"
                 >
                   <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
+                    d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                     stroke="currentColor"
                     stroke-width="2"
                   />
@@ -659,11 +879,64 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
+              <defs>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v5-overlap-fill1"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <g>
+                    <path
+                      d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </g>
+                </mask>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v5-overlap-fill2"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <path
+                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </mask>
+              </defs>
               <g
                 id="app"
               >
                 <g
                   id="fill1"
+                  mask="url(#t-icon-app-instance-v5-overlap-fill1)"
                 >
                   <path
                     d="M3 3H10V10H3V3Z"
@@ -682,22 +955,13 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
                   d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                   fill="transparent"
                   id="fill2"
+                  mask="url(#t-icon-app-instance-v5-overlap-fill2)"
                 />
                 <g
                   id="stroke1"
                 >
                   <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
+                    d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                     stroke="currentColor"
                     stroke-width="2"
                   />
@@ -953,11 +1217,64 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
+                  <defs>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v0-overlap-fill1"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <g>
+                        <path
+                          d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </mask>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v0-overlap-fill2"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <path
+                        d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                        fill="none"
+                        stroke="#000"
+                        stroke-width="2"
+                      />
+                    </mask>
+                  </defs>
                   <g
                     id="app"
                   >
                     <g
                       id="fill1"
+                      mask="url(#t-icon-app-instance-v0-overlap-fill1)"
                     >
                       <path
                         d="M3 3H10V10H3V3Z"
@@ -976,22 +1293,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                       d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                       fill="transparent"
                       id="fill2"
+                      mask="url(#t-icon-app-instance-v0-overlap-fill2)"
                     />
                     <g
                       id="stroke1"
                     >
                       <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
+                        d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                         stroke="currentColor"
                         stroke-width="2"
                       />
@@ -1025,11 +1333,64 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
+                  <defs>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v1-overlap-fill1"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <g>
+                        <path
+                          d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </mask>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v1-overlap-fill2"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <path
+                        d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                        fill="none"
+                        stroke="#000"
+                        stroke-width="2"
+                      />
+                    </mask>
+                  </defs>
                   <g
                     id="app"
                   >
                     <g
                       id="fill1"
+                      mask="url(#t-icon-app-instance-v1-overlap-fill1)"
                     >
                       <path
                         d="M3 3H10V10H3V3Z"
@@ -1048,22 +1409,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                       d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                       fill="transparent"
                       id="fill2"
+                      mask="url(#t-icon-app-instance-v1-overlap-fill2)"
                     />
                     <g
                       id="stroke1"
                     >
                       <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
+                        d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                         stroke="currentColor"
                         stroke-width="2"
                       />
@@ -1097,11 +1449,64 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
+                  <defs>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v2-overlap-fill1"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <g>
+                        <path
+                          d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </mask>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v2-overlap-fill2"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <path
+                        d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                        fill="none"
+                        stroke="#000"
+                        stroke-width="2"
+                      />
+                    </mask>
+                  </defs>
                   <g
                     id="app"
                   >
                     <g
                       id="fill1"
+                      mask="url(#t-icon-app-instance-v2-overlap-fill1)"
                     >
                       <path
                         d="M3 3H10V10H3V3Z"
@@ -1120,22 +1525,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                       d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                       fill="transparent"
                       id="fill2"
+                      mask="url(#t-icon-app-instance-v2-overlap-fill2)"
                     />
                     <g
                       id="stroke1"
                     >
                       <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
+                        d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                         stroke="currentColor"
                         stroke-width="2"
                       />
@@ -1169,11 +1565,64 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
+                  <defs>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v3-overlap-fill1"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <g>
+                        <path
+                          d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </mask>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v3-overlap-fill2"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <path
+                        d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                        fill="none"
+                        stroke="#000"
+                        stroke-width="2"
+                      />
+                    </mask>
+                  </defs>
                   <g
                     id="app"
                   >
                     <g
                       id="fill1"
+                      mask="url(#t-icon-app-instance-v3-overlap-fill1)"
                     >
                       <path
                         d="M3 3H10V10H3V3Z"
@@ -1192,22 +1641,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                       d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                       fill="transparent"
                       id="fill2"
+                      mask="url(#t-icon-app-instance-v3-overlap-fill2)"
                     />
                     <g
                       id="stroke1"
                     >
                       <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
+                        d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                         stroke="currentColor"
                         stroke-width="2"
                       />
@@ -1241,11 +1681,64 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
+                  <defs>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v4-overlap-fill1"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <g>
+                        <path
+                          d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </mask>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v4-overlap-fill2"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <path
+                        d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                        fill="none"
+                        stroke="#000"
+                        stroke-width="2"
+                      />
+                    </mask>
+                  </defs>
                   <g
                     id="app"
                   >
                     <g
                       id="fill1"
+                      mask="url(#t-icon-app-instance-v4-overlap-fill1)"
                     >
                       <path
                         d="M3 3H10V10H3V3Z"
@@ -1264,22 +1757,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                       d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                       fill="transparent"
                       id="fill2"
+                      mask="url(#t-icon-app-instance-v4-overlap-fill2)"
                     />
                     <g
                       id="stroke1"
                     >
                       <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
+                        d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                         stroke="currentColor"
                         stroke-width="2"
                       />
@@ -1313,11 +1797,64 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
+                  <defs>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v5-overlap-fill1"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <g>
+                        <path
+                          d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                          fill="none"
+                          stroke="#000"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </mask>
+                    <mask
+                      height="24"
+                      id="t-icon-app-instance-v5-overlap-fill2"
+                      mask-type="luminance"
+                      maskContentUnits="userSpaceOnUse"
+                      maskUnits="userSpaceOnUse"
+                      width="24"
+                      x="0"
+                      y="0"
+                    >
+                      <rect
+                        fill="#fff"
+                        height="24"
+                        width="24"
+                        x="0"
+                        y="0"
+                      />
+                      <path
+                        d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                        fill="none"
+                        stroke="#000"
+                        stroke-width="2"
+                      />
+                    </mask>
+                  </defs>
                   <g
                     id="app"
                   >
                     <g
                       id="fill1"
+                      mask="url(#t-icon-app-instance-v5-overlap-fill1)"
                     >
                       <path
                         d="M3 3H10V10H3V3Z"
@@ -1336,22 +1873,13 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
                       d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                       fill="transparent"
                       id="fill2"
+                      mask="url(#t-icon-app-instance-v5-overlap-fill2)"
                     />
                     <g
                       id="stroke1"
                     >
                       <path
-                        d="M3 3H10V10H3V3Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M14 14H21V21H14V14Z"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M3 14H10V21H3V14Z"
+                        d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                         stroke="currentColor"
                         stroke-width="2"
                       />

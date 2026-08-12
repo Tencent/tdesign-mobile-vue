@@ -296,6 +296,40 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-close-circle-instance-v4-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="close-circle"
                 >
@@ -303,6 +337,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-close-circle-instance-v4-overlap-fill1)"
                   />
                   <path
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
@@ -7453,6 +7488,40 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
+            <defs>
+              <mask
+                height="24"
+                id="t-icon-close-circle-instance-v4-overlap-fill1"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+            </defs>
             <g
               id="close-circle"
             >
@@ -7460,6 +7529,7 @@ exports[`ConfigProvider > ConfigProvider uploadEnVue demo works fine 1`] = `
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                 fill="transparent"
                 id="fill1"
+                mask="url(#t-icon-close-circle-instance-v4-overlap-fill1)"
               />
               <path
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"

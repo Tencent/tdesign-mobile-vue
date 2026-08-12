@@ -1003,6 +1003,113 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-user-avatar-instance-v1-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <g>
+                      <path
+                        d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
+                        fill="#000"
+                        stroke="none"
+                      />
+                      <path
+                        d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
+                        fill="#000"
+                        stroke="none"
+                      />
+                    </g>
+                    <g>
+                      <path
+                        d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
+                        fill="none"
+                        stroke="#000"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                    <path
+                      d="M3 3L21 3L21 21L3 21L3 3Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-user-avatar-instance-v1-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <g>
+                      <path
+                        d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
+                        fill="none"
+                        stroke="#000"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                    <path
+                      d="M3 3L21 3L21 21L3 21L3 3Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-user-avatar-instance-v1-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M3 3L21 3L21 21L3 21L3 3Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="user-avatar"
                 >
@@ -1010,9 +1117,11 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                     d="M3 3L21 3L21 21L3 21L3 3Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-user-avatar-instance-v1-overlap-fill1)"
                   />
                   <g
                     id="fill2"
+                    mask="url(#t-icon-user-avatar-instance-v1-overlap-fill2)"
                   >
                     <path
                       d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
@@ -1025,15 +1134,10 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                   </g>
                   <g
                     id="stroke2"
+                    mask="url(#t-icon-user-avatar-instance-v1-overlap-stroke2)"
                   >
                     <path
-                      d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
+                      d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
                       stroke="currentColor"
                       stroke-linecap="square"
                       stroke-width="2"
@@ -1095,11 +1199,64 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
+              <defs>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v2-overlap-fill1"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <g>
+                    <path
+                      d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </g>
+                </mask>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v2-overlap-fill2"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <path
+                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </mask>
+              </defs>
               <g
                 id="app"
               >
                 <g
                   id="fill1"
+                  mask="url(#t-icon-app-instance-v2-overlap-fill1)"
                 >
                   <path
                     d="M3 3H10V10H3V3Z"
@@ -1118,22 +1275,13 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                   d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                   fill="transparent"
                   id="fill2"
+                  mask="url(#t-icon-app-instance-v2-overlap-fill2)"
                 />
                 <g
                   id="stroke1"
                 >
                   <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
+                    d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                     stroke="currentColor"
                     stroke-width="2"
                   />
@@ -1195,11 +1343,64 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
+              <defs>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v3-overlap-fill1"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <g>
+                    <path
+                      d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </g>
+                </mask>
+                <mask
+                  height="24"
+                  id="t-icon-app-instance-v3-overlap-fill2"
+                  mask-type="luminance"
+                  maskContentUnits="userSpaceOnUse"
+                  maskUnits="userSpaceOnUse"
+                  width="24"
+                  x="0"
+                  y="0"
+                >
+                  <rect
+                    fill="#fff"
+                    height="24"
+                    width="24"
+                    x="0"
+                    y="0"
+                  />
+                  <path
+                    d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-width="2"
+                  />
+                </mask>
+              </defs>
               <g
                 id="app"
               >
                 <g
                   id="fill1"
+                  mask="url(#t-icon-app-instance-v3-overlap-fill1)"
                 >
                   <path
                     d="M3 3H10V10H3V3Z"
@@ -1218,22 +1419,13 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                   d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
                   fill="transparent"
                   id="fill2"
+                  mask="url(#t-icon-app-instance-v3-overlap-fill2)"
                 />
                 <g
                   id="stroke1"
                 >
                   <path
-                    d="M3 3H10V10H3V3Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M14 14H21V21H14V14Z"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M3 14H10V21H3V14Z"
+                    d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                     stroke="currentColor"
                     stroke-width="2"
                   />
@@ -1340,12 +1532,40 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-browse-off-instance-v4-overlap-stroke1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M20.9996 21L3 3"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="browse-off"
                 >
                   <path
                     d="M13.1758 8.17578C14.4396 8.56376 15.4368 9.56096 15.8247 10.8247M21.2858 15.2856C22.0085 14.2983 22.5776 13.1913 22.9578 12C21.4771 7.36017 17.131 4 12.0001 4C11.3698 4 10.7513 4.05072 10.1484 4.1483M5.80747 5.80786C3.57225 7.23888 1.86478 9.42193 1.04199 12.0001C2.52275 16.6399 6.86881 20.0001 11.9997 20.0001C14.2796 20.0001 16.4045 19.3367 18.1919 18.1923L5.80747 5.80786ZM8 12.0003C8 10.8957 8.44771 9.89573 9.17157 9.17188L14.8284 14.8287C14.1046 15.5526 13.1046 16.0003 12 16.0003C9.79086 16.0003 8 14.2094 8 12.0003Z"
                     id="stroke1"
+                    mask="url(#t-icon-browse-off-instance-v4-overlap-stroke1)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -2233,11 +2453,64 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           viewBox="0 0 24 24"
           width="1em"
         >
+          <defs>
+            <mask
+              height="24"
+              id="t-icon-app-instance-v0-overlap-fill1"
+              mask-type="luminance"
+              maskContentUnits="userSpaceOnUse"
+              maskUnits="userSpaceOnUse"
+              width="24"
+              x="0"
+              y="0"
+            >
+              <rect
+                fill="#fff"
+                height="24"
+                width="24"
+                x="0"
+                y="0"
+              />
+              <g>
+                <path
+                  d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </g>
+            </mask>
+            <mask
+              height="24"
+              id="t-icon-app-instance-v0-overlap-fill2"
+              mask-type="luminance"
+              maskContentUnits="userSpaceOnUse"
+              maskUnits="userSpaceOnUse"
+              width="24"
+              x="0"
+              y="0"
+            >
+              <rect
+                fill="#fff"
+                height="24"
+                width="24"
+                x="0"
+                y="0"
+              />
+              <path
+                d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </mask>
+          </defs>
           <g
             id="app"
           >
             <g
               id="fill1"
+              mask="url(#t-icon-app-instance-v0-overlap-fill1)"
             >
               <path
                 d="M3 3H10V10H3V3Z"
@@ -2256,22 +2529,13 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
               d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
               fill="transparent"
               id="fill2"
+              mask="url(#t-icon-app-instance-v0-overlap-fill2)"
             />
             <g
               id="stroke1"
             >
               <path
-                d="M3 3H10V10H3V3Z"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M14 14H21V21H14V14Z"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M3 14H10V21H3V14Z"
+                d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                 stroke="currentColor"
                 stroke-width="2"
               />
@@ -2333,11 +2597,64 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
           viewBox="0 0 24 24"
           width="1em"
         >
+          <defs>
+            <mask
+              height="24"
+              id="t-icon-app-instance-v1-overlap-fill1"
+              mask-type="luminance"
+              maskContentUnits="userSpaceOnUse"
+              maskUnits="userSpaceOnUse"
+              width="24"
+              x="0"
+              y="0"
+            >
+              <rect
+                fill="#fff"
+                height="24"
+                width="24"
+                x="0"
+                y="0"
+              />
+              <g>
+                <path
+                  d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-width="2"
+                />
+              </g>
+            </mask>
+            <mask
+              height="24"
+              id="t-icon-app-instance-v1-overlap-fill2"
+              mask-type="luminance"
+              maskContentUnits="userSpaceOnUse"
+              maskUnits="userSpaceOnUse"
+              width="24"
+              x="0"
+              y="0"
+            >
+              <rect
+                fill="#fff"
+                height="24"
+                width="24"
+                x="0"
+                y="0"
+              />
+              <path
+                d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
+                fill="none"
+                stroke="#000"
+                stroke-width="2"
+              />
+            </mask>
+          </defs>
           <g
             id="app"
           >
             <g
               id="fill1"
+              mask="url(#t-icon-app-instance-v1-overlap-fill1)"
             >
               <path
                 d="M3 3H10V10H3V3Z"
@@ -2356,22 +2673,13 @@ exports[`Input > Input prefixVue demo works fine 1`] = `
               d="M21.5 6.5C21.5 8.70914 19.7091 10.5 17.5 10.5C15.2909 10.5 13.5 8.70914 13.5 6.5C13.5 4.29086 15.2909 2.5 17.5 2.5C19.7091 2.5 21.5 4.29086 21.5 6.5Z"
               fill="transparent"
               id="fill2"
+              mask="url(#t-icon-app-instance-v1-overlap-fill2)"
             />
             <g
               id="stroke1"
             >
               <path
-                d="M3 3H10V10H3V3Z"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M14 14H21V21H14V14Z"
-                stroke="currentColor"
-                stroke-width="2"
-              />
-              <path
-                d="M3 14H10V21H3V14Z"
+                d="M3 3H10V10H3V3Z M14 14H21V21H14V14Z M3 14H10V21H3V14Z"
                 stroke="currentColor"
                 stroke-width="2"
               />
@@ -2465,12 +2773,40 @@ exports[`Input > Input specialVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
+            <defs>
+              <mask
+                height="24"
+                id="t-icon-browse-off-instance-v0-overlap-stroke1"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M20.9996 21L3 3"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+            </defs>
             <g
               id="browse-off"
             >
               <path
                 d="M13.1758 8.17578C14.4396 8.56376 15.4368 9.56096 15.8247 10.8247M21.2858 15.2856C22.0085 14.2983 22.5776 13.1913 22.9578 12C21.4771 7.36017 17.131 4 12.0001 4C11.3698 4 10.7513 4.05072 10.1484 4.1483M5.80747 5.80786C3.57225 7.23888 1.86478 9.42193 1.04199 12.0001C2.52275 16.6399 6.86881 20.0001 11.9997 20.0001C14.2796 20.0001 16.4045 19.3367 18.1919 18.1923L5.80747 5.80786ZM8 12.0003C8 10.8957 8.44771 9.89573 9.17157 9.17188L14.8284 14.8287C14.1046 15.5526 13.1046 16.0003 12 16.0003C9.79086 16.0003 8 14.2094 8 12.0003Z"
                 id="stroke1"
+                mask="url(#t-icon-browse-off-instance-v0-overlap-stroke1)"
                 stroke="currentColor"
                 stroke-linecap="square"
                 stroke-width="2"
@@ -2999,6 +3335,113 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
+            <defs>
+              <mask
+                height="24"
+                id="t-icon-user-avatar-instance-v1-overlap-fill1"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <g>
+                  <path
+                    d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
+                    fill="#000"
+                    stroke="none"
+                  />
+                  <path
+                    d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
+                    fill="#000"
+                    stroke="none"
+                  />
+                </g>
+                <g>
+                  <path
+                    d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+                <path
+                  d="M3 3L21 3L21 21L3 21L3 3Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+              <mask
+                height="24"
+                id="t-icon-user-avatar-instance-v1-overlap-fill2"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <g>
+                  <path
+                    d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+                <path
+                  d="M3 3L21 3L21 21L3 21L3 3Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+              <mask
+                height="24"
+                id="t-icon-user-avatar-instance-v1-overlap-stroke2"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M3 3L21 3L21 21L3 21L3 3Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+            </defs>
             <g
               id="user-avatar"
             >
@@ -3006,9 +3449,11 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
                 d="M3 3L21 3L21 21L3 21L3 3Z"
                 fill="transparent"
                 id="fill1"
+                mask="url(#t-icon-user-avatar-instance-v1-overlap-fill1)"
               />
               <g
                 id="fill2"
+                mask="url(#t-icon-user-avatar-instance-v1-overlap-fill2)"
               >
                 <path
                   d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
@@ -3021,15 +3466,10 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
               </g>
               <g
                 id="stroke2"
+                mask="url(#t-icon-user-avatar-instance-v1-overlap-stroke2)"
               >
                 <path
-                  d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
+                  d="M15.5 9.5C15.5 11.433 13.933 13 12 13C10.067 13 8.5 11.433 8.5 9.5C8.5 7.567 10.067 6 12 6C13.933 6 15.5 7.567 15.5 9.5Z M5.5 20C5.5 17.7909 7.29086 16 9.5 16H14.5C16.7091 16 18.5 17.7909 18.5 20V21H5.5V20Z"
                   stroke="currentColor"
                   stroke-linecap="square"
                   stroke-width="2"
