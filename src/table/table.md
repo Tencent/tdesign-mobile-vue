@@ -136,3 +136,20 @@ sorter | Boolean / Function | false | 该列是否支持排序。值为 true 表
 title | String / Function | - | 自定义表头渲染。值类型为 Function 表示以函数形式渲染表头。值类型为 string 表示使用插槽渲染，插槽名称为 title 的值。优先级高于 render。TS 类型：`string \| TNode<{ col: PrimaryTableCol; colIndex: number }>`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 type | String | single | `colKey` 值为 `row-select` 时表示行选中列，有两种模式：单选和多选。 `type=single` 表示单选，`type=multiple` 表示多选。可选项：single/multiple | N
 `Omit<BaseTableCol, 'cell' \| 'title' \| 'render' \| 'children'>` | \- | - | 继承 `Omit<BaseTableCol, 'cell' \| 'title' \| 'render' \| 'children'>` 中的全部属性 | N
+
+### TableColumnFilter
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+attrs | Object | - | 组件其他属性，透传全部属性。TS 类型：`HTMLElementAttributes`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+classNames | String | - | 自定义类名。TS 类型：`ClassName`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+component | TElement | - | 筛选器组件。TS 类型：`ComponentType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+confirmEvents | Array | - | 触发筛选查询的事件名，如输入框回车触发查询：confirmEvents: ['onEnter']。默认情况下，输入框类型筛选器需要点击 “确认” 按钮才会触发搜索，一旦设置 confirmEvents 就会以 confirmEvents 定义的事件替代默认的 “确认” 按钮事件；单选框、复选框类型筛选器，一旦点击就会立即触发筛选事件，如果不希望这么快触发筛选，可以自定义 confirmEvents 事件，如：confirmEvents: ['onSomeEvent']（一个不存在的事件名）。TS 类型：`string[]` | N
+label | String / Function | - | 筛选列标题，用于呈现在筛选行中。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+list | Array | - | 用于渲染筛选内容为单选框、复选框等的数据。TS 类型：`Array<OptionData>`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+popupProps | Object | - | 弹出层显示筛选内容时，弹出层组件属性。TS 类型：`PopupProps`，[Popup API Documents](./popup?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
+props | Object | - | 用于扩展筛选组件属性。TS 类型：`FilterProps` `type FilterProps = RadioProps \| CheckboxProps \| InputProps \| { [key: string]: any }`，[Input API Documents](./input?tab=api)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
+resetValue | \- | - | 重置筛选值，一般用于重置为默认值。如：resetValue: ''、resetValue: []、resetValue: [1,'南方']。TS 类型：`any` | N
+showConfirmAndReset | Boolean | false | 是否显示 “重置” 和 “确认” 按钮，一般用于筛选值不是立即生效的场景，需要用户点击确认后才生效 | N
+style | Object | - | 用于自定义样式。TS 类型：`Styles`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+type | String | - | 筛选组件类型，如：单选按钮、复选框、输入框等。1. input 表示输入框。2. single 表示单选，一般搭配 Radio 组件使用。3. multiple 表示复选，一般搭配 Checkbox 组件使用。4. 值为其他值时，需要配合 component 自定义组件使用。TS 类型：`FilterType` `type FilterType = 'input' \| 'single' \| 'multiple'`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N

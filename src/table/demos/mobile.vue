@@ -22,6 +22,18 @@
     <tdesign-demo-block summary="带合并单元格的表格" :padding="true">
       <rowspanColspan />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="带拖拽的表格" :padding="true">
+      <dragSort />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="带加载的表格" :padding="true">
+      <loadingDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="带选择的表格" :padding="true">
+      <selectDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="带筛选的表格" :padding="true">
+      <filterSort />
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -32,4 +44,8 @@ import stripeDemo from './stripe.vue';
 import borderedDemo from './bordered.vue';
 import customRowStyle from './custom-row-style.vue';
 import rowspanColspan from './rowspan-colspan.vue';
+import dragSort from './drag-sort.vue';
+import loadingDemo from './loading.vue';
+import selectDemo from './select.vue';
+import filterSort from './filter-sort.vue';
 </script>

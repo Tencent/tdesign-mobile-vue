@@ -9,7 +9,9 @@ import { CheckboxGroupValue } from '../checkbox';
 import { SortableEvent, SortableOptions } from 'sortablejs';
 import { CheckboxProps } from '../checkbox';
 import { RadioProps } from '../radio';
-import type { TNode, ClassName, HTMLElementAttributes } from '../common';
+import { PopupProps } from '../popup';
+import { InputProps } from '../input';
+import type { TNode, ClassName, Styles, ComponentType, OptionData, HTMLElementAttributes } from '../common';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
   /**
@@ -393,6 +395,68 @@ export interface PrimaryTableCol<T extends TableRowData = TableRowData> extends 
   type?: 'single' | 'multiple';
 }
 
+export interface TableColumnFilter {
+  /**
+   * 组件其他属性，透传全部属性
+   */
+  attrs?: HTMLElementAttributes;
+  /**
+   * 自定义类名
+   */
+  classNames?: ClassName;
+  /**
+   * 筛选器组件
+   */
+  component?: ComponentType;
+  /**
+   * 触发筛选查询的事件名，如输入框回车触发查询：confirmEvents: ['onEnter']。默认情况下，输入框类型筛选器需要点击 “确认” 按钮才会触发搜索，一旦设置 confirmEvents 就会以 confirmEvents 定义的事件替代默认的 “确认” 按钮事件；单选框、复选框类型筛选器，一旦点击就会立即触发筛选事件，如果不希望这么快触发筛选，可以自定义 confirmEvents 事件，如：confirmEvents: ['onSomeEvent']（一个不存在的事件名）
+   */
+  confirmEvents?: string[];
+  /**
+   * 筛选列标题，用于呈现在筛选行中
+   */
+  label?: string | TNode;
+  /**
+   * 用于渲染筛选内容为单选框、复选框等的数据
+   */
+  list?: Array<OptionData>;
+  /**
+   * 弹出层显示筛选内容时，弹出层组件属性
+   */
+  popupProps?: PopupProps;
+  /**
+   * 用于扩展筛选组件属性
+   */
+  props?: FilterProps;
+  /**
+   * 重置筛选值，一般用于重置为默认值。如：resetValue: ''、resetValue: []、resetValue: [1,'남자']
+   */
+  resetValue?: any;
+  /**
+   * 是否显示 “重置” 和 “确认” 按钮，一般用于筛选值不是立即生效的场景，需要用户点击确认后才生效
+   * @default false
+   */
+  showConfirmAndReset?: boolean;
+  /**
+   * 用于自定义样式
+   */
+  style?: Styles;
+  /**
+   * 筛选组件类型，如：单选按钮、复选框、输入框等。1. input 表示输入框。2. single 表示单选，一般搭配 Radio 组件使用。3. multiple 表示复选，一般搭配 Checkbox 组件使用。4. 值为其他值时，需要配合 component 自定义组件使用
+   */
+  type?: FilterType;
+}
+
+/**
+ * 筛选组件属性，示例：Input组件属性、Radio 组件属性、Checkbox 组件属性等
+ */
+export type FilterProps = RadioProps | CheckboxProps | InputProps | { [key: string]: any };
+
+/**
+ * 筛选组件类型
+ */
+export type FilterType = 'input' | 'single' | 'multiple';
+
 export interface PaginationProps {
   current?: number;
   defaultCurrent?: number;
@@ -535,7 +599,7 @@ export interface PrimaryTableColumnChange<T> {
   columns?: CheckboxGroupValue;
   currentColumn?: PrimaryTableCol<T>;
   type?: 'check' | 'uncheck';
-  e?: ChangeEvent;
+  e?: Event;
 }
 
 export interface TableDataChangeContext {
@@ -578,6 +642,13 @@ export interface SortOptions<T> {
 
 export type CheckProps<T> =
   CheckboxProps | RadioProps | ((options: { row: T; rowIndex: number }) => CheckboxProps | RadioProps);
+
+export interface PrimaryTableCellParams<T> {
+  row: T;
+  rowIndex: number;
+  col: PrimaryTableCol<T>;
+  colIndex: number;
+}
 
 export interface PrimaryTableRenderParams<T> extends PrimaryTableCellParams<T> {
   type: RenderType;

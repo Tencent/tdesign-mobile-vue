@@ -11,6 +11,8 @@ declare module 'vue' {
     TBackTop: typeof import('tdesign-mobile-vue')['BackTop'];
     TBadge: typeof import('tdesign-mobile-vue')['Badge'];
     TTable: typeof import('tdesign-mobile-vue')['Table'];
+    TBaseTable: typeof import('tdesign-mobile-vue')['BaseTable'];
+    TPrimaryTable: typeof import('tdesign-mobile-vue')['PrimaryTable'];
     TButton: typeof import('tdesign-mobile-vue')['Button'];
     TCalendar: typeof import('tdesign-mobile-vue')['Calendar'];
     TCascader: typeof import('tdesign-mobile-vue')['Cascader'];

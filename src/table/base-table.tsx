@@ -1,4 +1,4 @@
-import { defineComponent, computed, h, ref, SetupContext, toRefs } from 'vue';
+import { defineComponent, computed, h, ref, watch, SetupContext, toRefs, type PropType } from 'vue';
 import { get, isFunction, isString } from 'lodash-es';
 import baseTableProps from './base-table-props';
 import useClassName from './hooks/useClassName';
@@ -6,6 +6,8 @@ import useStyle, { formatCSSUnit } from './hooks/useStyle';
 import useFixed, { getRowFixedStyles, getColumnFixedStyles } from './hooks/useFixed';
 import { renderTitle } from './hooks/useTableHeader';
 import useRowspanAndColspan from './hooks/useRowspanAndColspan';
+import usePagination from './hooks/usePagination';
+import usePullRefresh from './hooks/usePullRefresh';
 import {
   formatClassNames,
   formatRowAttributes,
@@ -24,7 +26,13 @@ import { useTNodeJSX } from '../hooks/tnode';
 
 export default defineComponent({
   name: 'TBaseTable',
-  props: baseTableProps,
+  props: {
+    ...baseTableProps,
+    // 内部私有属性：是否需要给列表头添加拖拽排序标识，供PrimaryTable 列拖拽功能使用
+    thDraggable: Boolean,
+    // 内部私有属性：叶子节点列发生变化时触发，供 PrimaryTable 拖拽排序功能使用
+    onLeafColumnsChange: Function as PropType<(columns: BaseTableCol<TableRowData>[]) => void>,
+  },
   emits: ['cell-click', 'row-click', 'scroll', 'scroll-to-bottom'],
   setup(props, context) {
     const tableRef = ref();
@@ -41,6 +49,7 @@ export default defineComponent({
       tdEllipsisClass,
       tableRowFixedClasses,
       tableColFixedClasses,
+      tableDraggableClasses,
     } = useClassName();
     const { globalConfig, t } = useConfig('table');
     const defaultLoadingContent = h(TLoading, { ...(props.loadingProps as TdLoadingProps) });
@@ -57,6 +66,28 @@ export default defineComponent({
     } = useFixed(props);
 
     const { skipSpansMap } = useRowspanAndColspan(data, columns, rowKey, rowspanAndColspan);
+
+    // 分页功能
+    const {
+      isPaginateData: isPaginationMode,
+      dataSource: paginationData,
+      renderPagination,
+    } = usePagination(props, tableContentRef);
+
+    // 上拉加载功能
+    const {
+      isPaginateData: isPullRefreshMode,
+      dataSource: pullRefreshData,
+      handleScrollToBottom,
+      renderPullRefreshLoading,
+    } = usePullRefresh(props, tableContentRef);
+
+    // 实际渲染的数据：分页模式 > 上拉加载模式 > 原始数据
+    const renderData = computed(() => {
+      if (isPaginationMode.value) return paginationData.value;
+      if (isPullRefreshMode.value) return pullRefreshData.value;
+      return props.data || [];
+    });
 
     const defaultColWidth = props.tableLayout === 'fixed' ? '80px' : undefined;
 
@@ -146,6 +177,7 @@ export default defineComponent({
       const threshold = 50;
       if (target.scrollHeight - target.scrollTop - target.clientHeight <= threshold) {
         props.onScrollToBottom?.();
+        handleScrollToBottom();
       }
     };
 
@@ -187,7 +219,7 @@ export default defineComponent({
 
     const renderTableBody = () => {
       const renderContentEmpty = renderTNodeJSX('empty') || t(globalConfig.value.empty);
-      if (!props.data?.length && renderContentEmpty) {
+      if (!renderData.value?.length && renderContentEmpty) {
         return (
           <tr class={tableBaseClass.emptyRow}>
             <td colspan={props.columns?.length}>
@@ -196,13 +228,13 @@ export default defineComponent({
           </tr>
         );
       }
-      if (props.data?.length) {
-        return props.data?.map((tr_item, tr_index) => {
+      if (renderData.value?.length) {
+        return renderData.value?.map((tr_item, tr_index) => {
           const rowId = get(tr_item, props.rowKey || 'id') as string | number;
           const { style, classes } = getRowFixedStyles(
             rowId,
             tr_index,
-            props.data?.length || 0,
+            renderData.value?.length || 0,
             props.fixedRows as TdBaseTableProps['fixedRows'],
             rowAndColFixedPosition.value,
             tableRowFixedClasses,
@@ -258,7 +290,7 @@ export default defineComponent({
                   tdClassName(td_item, [tdStyles.classes, customClasses]),
                   {
                     // 合并单元格场景：最后一行移除底部边框
-                    [tableBaseClass.tdLastRow]: isLastRowInSpan(tr_index, rowspan, props.data?.length),
+                    [tableBaseClass.tdLastRow]: isLastRowInSpan(tr_index, rowspan, renderData.value?.length),
                     // 合并单元格场景：第一列移除左边框
                     [tableBaseClass.tdFirstCol]: props.rowspanAndColspan && isFirstColumnInSpan(td_index, rowspan),
                   },
@@ -286,13 +318,29 @@ export default defineComponent({
       }
     };
 
+    watch(
+      () => props.columns,
+      () => {
+        props.onLeafColumnsChange?.(props.columns as BaseTableCol<TableRowData>[]);
+      },
+      { immediate: true },
+    );
+
     context.expose({
+      tableElement: tableRef,
+      tableContentElement: tableContentRef,
+      tableHtmlElement: tableElmRef,
       refreshTable,
     });
 
     return () => {
       const renderLoading = renderTNodeJSX('loading', { defaultNode: defaultLoadingContent });
       const renderFooter = renderTNodeJSX('footerSummary');
+
+      const renderPaginationNode = () => {
+        if (!props.pagination || props.loadingMode !== 'pagination') return null;
+        return <div class={tableBaseClass.paginationWrap}>{renderPagination()}</div>;
+      };
 
       return (
         <div ref={tableRef} class={dynamicBaseTableClasses.value} style="position: relative">
@@ -321,7 +369,10 @@ export default defineComponent({
                       return (
                         <th
                           key={index_th}
-                          class={thClassName(item_th, thStyles.classes)}
+                          class={[
+                            thClassName(item_th, thStyles.classes),
+                            { [tableDraggableClasses.dragSortTh]: props.thDraggable },
+                          ]}
                           style={thStyles.style}
                           data-colKey={item_th.colKey}
                         >
@@ -337,6 +388,8 @@ export default defineComponent({
               <tbody class={tbodyClasses.value}>{renderTableBody()}</tbody>
             </table>
             {renderLoading && <div class={loadingClasses.value}>{renderLoading}</div>}
+            {renderPullRefreshLoading()}
+            {renderPaginationNode()}
           </div>
           {renderFooter && <div class={tableBaseClass.bottomContent}>{renderFooter}</div>}
         </div>

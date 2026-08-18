@@ -43,3 +43,11 @@ export interface FixedColumnInfo {
 
 // 固定表头和固定列 具体的固定位置（left/top/right/bottom）
 export type RowAndColFixedPosition = Map<string | number, FixedColumnInfo>;
+
+// BaseTable 组件实例暴露的属性和方法，供PrimaryTable 内部拖拽排序、筛选弹层挂载点等场景使用
+export interface BaseTableExpose {
+  tableElement: HTMLDivElement;
+  tableContentElement: HTMLDivElement;
+  tableHtmlElement: HTMLTableElement;
+  refreshTable: () => void;
+}

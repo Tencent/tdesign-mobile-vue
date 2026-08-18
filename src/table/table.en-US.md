@@ -136,3 +136,20 @@ sorter | Boolean / Function | false | sort configs。Typescript: `boolean \| Sor
 title | String / Function | - | to render table head。Typescript: `string \| TNode<{ col: PrimaryTableCol; colIndex: number }>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 type | String | single | row select type。options: single/multiple | N
 `Omit<BaseTableCol, 'cell' \| 'title' \| 'render' \| 'children'>` | \- | - | extends `Omit<BaseTableCol, 'cell' \| 'title' \| 'render' \| 'children'>` | N
+
+### TableColumnFilter
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+attrs | Object | - | transparent all properties of the filter component。Typescript: `HTMLElementAttributes`。[Global Type Definitions](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+classNames | String | - | className of the filter component。Typescript: `ClassName`。[Global Type Definitions](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+component | TElement | - | custom filter component。Typescript: `ComponentType`。[Global Type Definitions](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+confirmEvents | Array | - | event name that triggers the filter query, such as pressing enter to trigger the query in an input box: confirmEvents: ['onEnter']。By default, the input box filter needs to click the "confirm" button to trigger the search. Once confirmEvents is set, the event defined by confirmEvents will replace the default "confirm" button event; for radio and checkbox filters, the filter event is triggered immediately once clicked. If you don't want to trigger the filter that quickly, you can customize the confirmEvents, such as: confirmEvents: ['onSomeEvent'] (a non-existent event name)。Typescript: `string[]` | N
+label | String / Function | - | filter column title, used to be displayed in the filter row。Typescript: `string \| TNode`。[Global Type Definitions](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+list | Array | - | data used to render filter content such as radio, checkbox, etc。Typescript: `Array<OptionData>`。[Global Type Definitions](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+popupProps | Object | - | popup component properties, used when the popup layer displays filter content。Typescript: `PopupProps`，[Popup API Documents](./popup?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
+props | Object | - | used to extend the properties of the filter component。Typescript: `FilterProps` `type FilterProps = RadioProps \| CheckboxProps \| InputProps \| { [key: string]: any }`，[Input API Documents](./input?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
+resetValue | \- | - | reset the filter value, generally used to reset to the default value. Such as: resetValue: ''、resetValue: []、resetValue: [1,'south']。Typescript: `any` | N
+showConfirmAndReset | Boolean | false | whether to display the "reset" and "confirm" buttons, generally used in scenarios where the filter value does not take effect immediately and requires user confirmation | N
+style | Object | - | used to customize styles。Typescript: `Styles`。[Global Type Definitions](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+type | String | - | filter component type, such as radio, checkbox, input box, etc. 1. input means input box. 2. single means radio, generally used with the Radio component. 3. multiple means checkbox, generally used with the Checkbox component. 4. when the value is other value, it needs to be used with custom component。Typescript: `FilterType` `type FilterType = 'input' \| 'single' \| 'multiple'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N

@@ -175,6 +175,13 @@ export default function useClassName() {
       dragSortTh: `${classPrefix.value}-table__th--drag-sort`,
     },
 
+    // 分页功能类名
+    tablePaginationClasses: {
+      content: `${classPrefix.value}-table__pagination-content`,
+      button: `${classPrefix.value}-table__pagination-content__button`,
+      paginationIndicator: `${classPrefix.value}-table__pagination-content__indicator`,
+    },
+
     virtualScrollClasses: {
       cursor: `${classPrefix.value}-table__virtual-scroll-cursor`,
       header: `${classPrefix.value}-table__virtual-scroll-header`,
