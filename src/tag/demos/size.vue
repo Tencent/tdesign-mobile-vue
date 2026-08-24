@@ -22,10 +22,12 @@
 }
 .tag-block {
   display: flex;
+  align-items: flex-start;
 }
 .tag-block1 {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .tag-block1 {
