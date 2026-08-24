@@ -2,7 +2,6 @@
   <td-doc-layout>
     <td-header slot="header" platform="mobile" framework="vue">
       <div slot="search" style="display: flex; align-items: center">
-        <td-ai-button style="margin-right: 8px" framework="mobile-vue" :demoRequestBody="demoRequestBody" />
         <td-doc-search ref="tdDocSearch" />
       </div>
     </td-header>
@@ -19,7 +18,6 @@ import { defineComponent } from 'vue';
 import packageJson from '../../package.json';
 import siteConfig from '../docs.config';
 import { filterVersions, sortDocs } from './utils';
-import { htmlContent, mainJsContent, styleContent, packageJSONContent } from './components/codeSandbox/content';
 
 const registryUrl =
   'https://service-edbzjd6y-1257786608.hk.apigw.tencentcs.com/release/npm/versions/tdesign-mobile-vue';
@@ -32,30 +30,12 @@ const docsMap = {
   en: sortDocs(enDocs),
 };
 
-const demoRequestBody = JSON.stringify({
-  files: {
-    'package.json': {
-      content: packageJSONContent(`tdesign-mobile-vue-demo`),
-    },
-    'index.html': {
-      content: htmlContent,
-    },
-    'src/main.js': {
-      content: mainJsContent,
-    },
-    'src/index.css': {
-      content: styleContent,
-    },
-  },
-});
-
 export default defineComponent({
   data() {
     return {
       docType: '',
       loaded: false,
       version: currentVersion,
-      demoRequestBody,
     };
   },
 
