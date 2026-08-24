@@ -19,6 +19,65 @@ exports[`Search > Search actionVue demo works fine 1`] = `
           viewBox="0 0 24 24"
           width="1em"
         >
+          <defs>
+            <mask
+              height="24"
+              id="t-icon-search-instance-v0-overlap-fill1"
+              mask-type="luminance"
+              maskContentUnits="userSpaceOnUse"
+              maskUnits="userSpaceOnUse"
+              width="24"
+              x="0"
+              y="0"
+            >
+              <rect
+                fill="#fff"
+                height="24"
+                width="24"
+                x="0"
+                y="0"
+              />
+              <path
+                d="M15.8027 15.8037L21.106 21.107"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </mask>
+            <mask
+              height="24"
+              id="t-icon-search-instance-v0-overlap-stroke2"
+              mask-type="luminance"
+              maskContentUnits="userSpaceOnUse"
+              maskUnits="userSpaceOnUse"
+              width="24"
+              x="0"
+              y="0"
+            >
+              <rect
+                fill="#fff"
+                height="24"
+                width="24"
+                x="0"
+                y="0"
+              />
+              <path
+                d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </mask>
+          </defs>
           <g
             id="search"
           >
@@ -26,10 +85,12 @@ exports[`Search > Search actionVue demo works fine 1`] = `
               d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
               fill="transparent"
               id="fill1"
+              mask="url(#t-icon-search-instance-v0-overlap-fill1)"
             />
             <path
               d="M15.8027 15.8037L21.106 21.107"
               id="stroke2"
+              mask="url(#t-icon-search-instance-v0-overlap-stroke2)"
               stroke="currentColor"
               stroke-linecap="square"
               stroke-width="2"
@@ -83,6 +144,65 @@ exports[`Search > Search baseVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
+            <defs>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v0-overlap-fill1"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8027 15.8037L21.106 21.107"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v0-overlap-stroke2"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+            </defs>
             <g
               id="search"
             >
@@ -90,10 +210,12 @@ exports[`Search > Search baseVue demo works fine 1`] = `
                 d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                 fill="transparent"
                 id="fill1"
+                mask="url(#t-icon-search-instance-v0-overlap-fill1)"
               />
               <path
                 d="M15.8027 15.8037L21.106 21.107"
                 id="stroke2"
+                mask="url(#t-icon-search-instance-v0-overlap-stroke2)"
                 stroke="currentColor"
                 stroke-linecap="square"
                 stroke-width="2"
@@ -140,6 +262,65 @@ exports[`Search > Search baseVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
+            <defs>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v1-overlap-fill1"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8027 15.8037L21.106 21.107"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v1-overlap-stroke2"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+            </defs>
             <g
               id="search"
             >
@@ -147,10 +328,12 @@ exports[`Search > Search baseVue demo works fine 1`] = `
                 d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                 fill="transparent"
                 id="fill1"
+                mask="url(#t-icon-search-instance-v1-overlap-fill1)"
               />
               <path
                 d="M15.8027 15.8037L21.106 21.107"
                 id="stroke2"
+                mask="url(#t-icon-search-instance-v1-overlap-stroke2)"
                 stroke="currentColor"
                 stroke-linecap="square"
                 stroke-width="2"
@@ -206,6 +389,65 @@ exports[`Search > Search maxLengthVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
+            <defs>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v0-overlap-fill1"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8027 15.8037L21.106 21.107"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v0-overlap-stroke2"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+            </defs>
             <g
               id="search"
             >
@@ -213,10 +455,12 @@ exports[`Search > Search maxLengthVue demo works fine 1`] = `
                 d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                 fill="transparent"
                 id="fill1"
+                mask="url(#t-icon-search-instance-v0-overlap-fill1)"
               />
               <path
                 d="M15.8027 15.8037L21.106 21.107"
                 id="stroke2"
+                mask="url(#t-icon-search-instance-v0-overlap-stroke2)"
                 stroke="currentColor"
                 stroke-linecap="square"
                 stroke-width="2"
@@ -263,6 +507,65 @@ exports[`Search > Search maxLengthVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
+            <defs>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v1-overlap-fill1"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8027 15.8037L21.106 21.107"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v1-overlap-stroke2"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+            </defs>
             <g
               id="search"
             >
@@ -270,10 +573,12 @@ exports[`Search > Search maxLengthVue demo works fine 1`] = `
                 d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                 fill="transparent"
                 id="fill1"
+                mask="url(#t-icon-search-instance-v1-overlap-fill1)"
               />
               <path
                 d="M15.8027 15.8037L21.106 21.107"
                 id="stroke2"
+                mask="url(#t-icon-search-instance-v1-overlap-stroke2)"
                 stroke="currentColor"
                 stroke-linecap="square"
                 stroke-width="2"
@@ -360,6 +665,65 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v0-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8027 15.8037L21.106 21.107"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v0-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="search"
                 >
@@ -367,10 +731,12 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                     d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-search-instance-v0-overlap-fill1)"
                   />
                   <path
                     d="M15.8027 15.8037L21.106 21.107"
                     id="stroke2"
+                    mask="url(#t-icon-search-instance-v0-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -417,6 +783,65 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v1-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8027 15.8037L21.106 21.107"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v1-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="search"
                 >
@@ -424,10 +849,12 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                     d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-search-instance-v1-overlap-fill1)"
                   />
                   <path
                     d="M15.8027 15.8037L21.106 21.107"
                     id="stroke2"
+                    mask="url(#t-icon-search-instance-v1-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -496,6 +923,65 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v2-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8027 15.8037L21.106 21.107"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v2-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="search"
                 >
@@ -503,10 +989,12 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                     d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-search-instance-v2-overlap-fill1)"
                   />
                   <path
                     d="M15.8027 15.8037L21.106 21.107"
                     id="stroke2"
+                    mask="url(#t-icon-search-instance-v2-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -553,6 +1041,65 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v3-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8027 15.8037L21.106 21.107"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v3-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="search"
                 >
@@ -560,10 +1107,12 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                     d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-search-instance-v3-overlap-fill1)"
                   />
                   <path
                     d="M15.8027 15.8037L21.106 21.107"
                     id="stroke2"
+                    mask="url(#t-icon-search-instance-v3-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -631,6 +1180,65 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v4-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8027 15.8037L21.106 21.107"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v4-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="search"
                 >
@@ -638,10 +1246,12 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                     d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-search-instance-v4-overlap-fill1)"
                   />
                   <path
                     d="M15.8027 15.8037L21.106 21.107"
                     id="stroke2"
+                    mask="url(#t-icon-search-instance-v4-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -713,6 +1323,65 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v5-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8027 15.8037L21.106 21.107"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v5-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="search"
                 >
@@ -720,10 +1389,12 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                     d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-search-instance-v5-overlap-fill1)"
                   />
                   <path
                     d="M15.8027 15.8037L21.106 21.107"
                     id="stroke2"
+                    mask="url(#t-icon-search-instance-v5-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -770,6 +1441,65 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v6-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8027 15.8037L21.106 21.107"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v6-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="search"
                 >
@@ -777,10 +1507,12 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                     d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-search-instance-v6-overlap-fill1)"
                   />
                   <path
                     d="M15.8027 15.8037L21.106 21.107"
                     id="stroke2"
+                    mask="url(#t-icon-search-instance-v6-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -848,6 +1580,65 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v7-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8027 15.8037L21.106 21.107"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-search-instance-v7-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="search"
                 >
@@ -855,10 +1646,12 @@ exports[`Search > Search mobileVue demo works fine 1`] = `
                     d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-search-instance-v7-overlap-fill1)"
                   />
                   <path
                     d="M15.8027 15.8037L21.106 21.107"
                     id="stroke2"
+                    mask="url(#t-icon-search-instance-v7-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -912,6 +1705,65 @@ exports[`Search > Search otherVue demo works fine 1`] = `
           viewBox="0 0 24 24"
           width="1em"
         >
+          <defs>
+            <mask
+              height="24"
+              id="t-icon-search-instance-v0-overlap-fill1"
+              mask-type="luminance"
+              maskContentUnits="userSpaceOnUse"
+              maskUnits="userSpaceOnUse"
+              width="24"
+              x="0"
+              y="0"
+            >
+              <rect
+                fill="#fff"
+                height="24"
+                width="24"
+                x="0"
+                y="0"
+              />
+              <path
+                d="M15.8027 15.8037L21.106 21.107"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </mask>
+            <mask
+              height="24"
+              id="t-icon-search-instance-v0-overlap-stroke2"
+              mask-type="luminance"
+              maskContentUnits="userSpaceOnUse"
+              maskUnits="userSpaceOnUse"
+              width="24"
+              x="0"
+              y="0"
+            >
+              <rect
+                fill="#fff"
+                height="24"
+                width="24"
+                x="0"
+                y="0"
+              />
+              <path
+                d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                fill="none"
+                stroke="#000"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </mask>
+          </defs>
           <g
             id="search"
           >
@@ -919,10 +1771,12 @@ exports[`Search > Search otherVue demo works fine 1`] = `
               d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
               fill="transparent"
               id="fill1"
+              mask="url(#t-icon-search-instance-v0-overlap-fill1)"
             />
             <path
               d="M15.8027 15.8037L21.106 21.107"
               id="stroke2"
+              mask="url(#t-icon-search-instance-v0-overlap-stroke2)"
               stroke="currentColor"
               stroke-linecap="square"
               stroke-width="2"
@@ -976,6 +1830,65 @@ exports[`Search > Search shapeVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
+            <defs>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v0-overlap-fill1"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8027 15.8037L21.106 21.107"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v0-overlap-stroke2"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+            </defs>
             <g
               id="search"
             >
@@ -983,10 +1896,12 @@ exports[`Search > Search shapeVue demo works fine 1`] = `
                 d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                 fill="transparent"
                 id="fill1"
+                mask="url(#t-icon-search-instance-v0-overlap-fill1)"
               />
               <path
                 d="M15.8027 15.8037L21.106 21.107"
                 id="stroke2"
+                mask="url(#t-icon-search-instance-v0-overlap-stroke2)"
                 stroke="currentColor"
                 stroke-linecap="square"
                 stroke-width="2"
@@ -1033,6 +1948,65 @@ exports[`Search > Search shapeVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
+            <defs>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v1-overlap-fill1"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8027 15.8037L21.106 21.107"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+              <mask
+                height="24"
+                id="t-icon-search-instance-v1-overlap-stroke2"
+                mask-type="luminance"
+                maskContentUnits="userSpaceOnUse"
+                maskUnits="userSpaceOnUse"
+                width="24"
+                x="0"
+                y="0"
+              >
+                <rect
+                  fill="#fff"
+                  height="24"
+                  width="24"
+                  x="0"
+                  y="0"
+                />
+                <path
+                  d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                  fill="none"
+                  stroke="#000"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </mask>
+            </defs>
             <g
               id="search"
             >
@@ -1040,10 +2014,12 @@ exports[`Search > Search shapeVue demo works fine 1`] = `
                 d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
                 fill="transparent"
                 id="fill1"
+                mask="url(#t-icon-search-instance-v1-overlap-fill1)"
               />
               <path
                 d="M15.8027 15.8037L21.106 21.107"
                 id="stroke2"
+                mask="url(#t-icon-search-instance-v1-overlap-stroke2)"
                 stroke="currentColor"
                 stroke-linecap="square"
                 stroke-width="2"

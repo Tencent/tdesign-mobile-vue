@@ -92,7 +92,7 @@
     "@vueuse/core": "10.7.0",
     "dayjs": "^1.10.7",
     "lodash-es": "^4.17.21",
-    "tdesign-icons-vue-next": "^0.4.5",
+    "tdesign-icons-vue-next": "^0.4.9",
     "tinycolor2": "^1.6.0",
     "validator": "^13.5.1"
   },
@@ -141,7 +141,7 @@
     "camelcase": "~6.3.0",
     "codesandbox": "^2.2.3",
     "commitizen": "^4.2.3",
-    "concurrently": "^6.5.1",
+    "concurrently": "^10.0.4",
     "cross-env": "^7.0.3",
     "cypress": "^9.1.1",
     "cz-conventional-changelog": "3.3.0",
