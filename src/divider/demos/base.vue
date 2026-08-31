@@ -9,13 +9,13 @@
     <t-divider content="文字信息" align="right" />
 
     <div class="divider-demo__title" style="margin-bottom: 10px">垂直分割线</div>
-    <view class="divider-wrapper">
+    <div class="divider-wrapper">
       <span>文字信息</span>
       <t-divider layout="vertical" />
       <span>文字信息</span>
       <t-divider layout="vertical" />
       <span>文字信息</span>
-    </view>
+    </div>
   </div>
 </template>
 

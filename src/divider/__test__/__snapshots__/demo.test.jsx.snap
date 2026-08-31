@@ -67,7 +67,7 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
   >
     垂直分割线
   </div>
-  <view
+  <div
     class="divider-wrapper"
     data-v-99a2d095=""
   >
@@ -108,7 +108,7 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
     >
       文字信息
     </span>
-  </view>
+  </div>
 </div>
 `;
 
@@ -214,7 +214,7 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
         >
           垂直分割线
         </div>
-        <view
+        <div
           class="divider-wrapper"
           data-v-99a2d095=""
         >
@@ -255,7 +255,7 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
           >
             文字信息
           </span>
-        </view>
+        </div>
       </div>
       
     </div>

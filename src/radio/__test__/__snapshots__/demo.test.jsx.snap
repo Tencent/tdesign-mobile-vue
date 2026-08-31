@@ -290,7 +290,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     <!---->
     
     
-    <view
+    <div
       class="card card--active"
       data-v-bb126958=""
     >
@@ -337,8 +337,8 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
-    </view>
-    <view
+    </div>
+    <div
       class="card"
       data-v-bb126958=""
     >
@@ -377,8 +377,8 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
-    </view>
-    <view
+    </div>
+    <div
       class="card"
       data-v-bb126958=""
     >
@@ -417,17 +417,17 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
-    </view>
+    </div>
     
     
   </div>
-  <view
+  <div
     class="demo-desc"
     data-v-bb126958=""
     style="margin: 24px 16px 16px;"
   >
     横向卡片单选框
-  </view>
+  </div>
   <div
     class="t-radio-group horizontal-box"
     data-v-bb126958=""
@@ -436,7 +436,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     <!---->
     
     
-    <view
+    <div
       class="card card--active"
       data-v-bb126958=""
     >
@@ -478,8 +478,8 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
-    </view>
-    <view
+    </div>
+    <div
       class="card"
       data-v-bb126958=""
     >
@@ -513,8 +513,8 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
-    </view>
-    <view
+    </div>
+    <div
       class="card"
       data-v-bb126958=""
     >
@@ -548,7 +548,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         </div>
         <!---->
       </div>
-    </view>
+    </div>
     
     
   </div>
@@ -1575,7 +1575,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         <!---->
         
         
-        <view
+        <div
           class="card card--active"
           data-v-bb126958=""
         >
@@ -1622,8 +1622,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-        </view>
-        <view
+        </div>
+        <div
           class="card"
           data-v-bb126958=""
         >
@@ -1662,8 +1662,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-        </view>
-        <view
+        </div>
+        <div
           class="card"
           data-v-bb126958=""
         >
@@ -1702,17 +1702,17 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-        </view>
+        </div>
         
         
       </div>
-      <view
+      <div
         class="demo-desc"
         data-v-bb126958=""
         style="margin: 24px 16px 16px;"
       >
         横向卡片单选框
-      </view>
+      </div>
       <div
         class="t-radio-group horizontal-box"
         data-v-bb126958=""
@@ -1721,7 +1721,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         <!---->
         
         
-        <view
+        <div
           class="card card--active"
           data-v-bb126958=""
         >
@@ -1763,8 +1763,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-        </view>
-        <view
+        </div>
+        <div
           class="card"
           data-v-bb126958=""
         >
@@ -1798,8 +1798,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-        </view>
-        <view
+        </div>
+        <div
           class="card"
           data-v-bb126958=""
         >
@@ -1833,7 +1833,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-        </view>
+        </div>
         
         
       </div>
