@@ -59,7 +59,7 @@ export interface TdSwiperProps {
   /**
    * 导航器全部配置
    */
-  navigation?: SwiperNavigation | TNode;
+  navigation?: SwiperNavigation | TNode | boolean;
   /**
    * 【开发中】后边距，可用于露出后一项的一小部分。默认单位 `px`
    * @default 0
