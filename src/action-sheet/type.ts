@@ -6,7 +6,7 @@
 
 import { BadgeProps } from '../badge';
 import { PopupProps } from '../popup';
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdActionSheetProps {
   /**
@@ -87,7 +87,7 @@ export interface ActionSheetItem {
   description?: string;
   color?: string;
   disabled?: boolean;
-  icon?: TNode;
+  icon?: string | TNode;
   suffixIcon?: TNode;
   badge?: BadgeProps;
 }
