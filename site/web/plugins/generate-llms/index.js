@@ -103,6 +103,7 @@ export default function generateLlmsPlugin() {
         parseComponentDoc,
         siteTitle: 'TDesign Mobile Vue',
         siteDescription: 'TDesign Mobile Vue 组件库的 LLM 友好文档索引。',
+        siteBaseUrl: config.base,
       });
     },
   };
