@@ -5,6 +5,28 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.16.2 `2026-09-10`
+
+### 🚀 Features
+
+- `ActionSheet`: `ActionSheetItem` 的 `icon` 字段补充 `string` 类型 @anlyyao ([#2312](https://github.com/Tencent/tdesign-mobile-vue/pull/2312))
+- `Button`: 
+  - 优化点击态过渡效果 @anlyyao ([common#2692](https://github.com/Tencent/tdesign-common/pull/2692))
+  - 新增 `tag`、`href` 和 `form` 属性 @anlyyao ([#2319](https://github.com/Tencent/tdesign-mobile-vue/pull/2319))
+
+### 🐞 Bug Fixes
+
+- `ActionSheet`: 
+  - 修复子项激活态样式缺失的问题 @anlyyao ([common#2691](https://github.com/Tencent/tdesign-common/pull/2691))
+  - 修复 `items` 未传时组件报错 @anlyyao ([#2312](https://github.com/Tencent/tdesign-mobile-vue/pull/2312))
+- `Icon`: 修复 usb 原始图标的图层 ID 错误,在深色模式下渲染错误 @uyarn ([icons#298](https://github.com/Tencent/tdesign-icons/pull/298)) ([#2295](https://github.com/Tencent/tdesign-mobile-vue/pull/2295))
+- `Swiper`: 
+  - `navigation` 属性补充 `Boolean` 类型，修复类型校验告警 @anlyyao ([#2313](https://github.com/Tencent/tdesign-mobile-vue/pull/2313))
+  - 移除未声明的 `update:value`事件，解决运行时警告 @Jesse205 ([#2309](https://github.com/Tencent/tdesign-mobile-vue/pull/2309))
+- `Upload`: 
+  - 修复开启 `preview` 后点击图片无法触发预览及 `onPreview` 事件 @anlyyao ([#2313](https://github.com/Tencent/tdesign-mobile-vue/pull/2313))
+  - 修复 `useMockProgress=false` 时真实上传进度不回调的问题 @anlyyao ([#2310](https://github.com/Tencent/tdesign-mobile-vue/pull/2310))
+
 ## 🌈 1.16.1 `2026-08-06`
 
 ### 🐞 Bug Fixes
