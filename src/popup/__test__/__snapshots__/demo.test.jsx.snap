@@ -7,10 +7,9 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
 >
   
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-c0baf305=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -24,10 +23,9 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-c0baf305=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -41,10 +39,9 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-c0baf305=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -58,10 +55,9 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-c0baf305=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -75,10 +71,9 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-c0baf305=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -117,9 +112,8 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
   class="popup-demo"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -207,10 +201,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-c0baf305=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -224,10 +217,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-c0baf305=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -241,10 +233,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-c0baf305=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -258,10 +249,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-c0baf305=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -275,10 +265,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-c0baf305=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -341,10 +330,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         data-v-342d27ca=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-342d27ca=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -406,9 +394,8 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         data-v-12934826=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -479,10 +466,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         data-v-4d689919=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-4d689919=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -527,10 +513,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
               这是第一层 Popup，点击下方按钮可打开子弹窗。
             </p>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
               data-v-4d689919=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -575,10 +560,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
                   这是第二层 Popup，通过将 attach 指向父 Popup 内部的 DOM 容器，实现正确的嵌套层级。
                 </p>
                 <button
-                  aria-disabled="false"
                   class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
                   data-v-4d689919=""
-                  role="button"
+                  tabindex="0"
                   type="button"
                 >
                   <!---->
@@ -614,10 +598,9 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
   data-v-4d689919=""
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-4d689919=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -662,10 +645,9 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
         这是第一层 Popup，点击下方按钮可打开子弹窗。
       </p>
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
         data-v-4d689919=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -710,10 +692,9 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
             这是第二层 Popup，通过将 attach 指向父 Popup 内部的 DOM 容器，实现正确的嵌套层级。
           </p>
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
             data-v-4d689919=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -745,10 +726,9 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
   data-v-342d27ca=""
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-342d27ca=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->

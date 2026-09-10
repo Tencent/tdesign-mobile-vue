@@ -944,9 +944,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
         </div>
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1720,9 +1719,8 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
                   class="suffix--line"
                 />
                 <button
-                  aria-disabled="false"
                   class="t-button t-button--size-extra-small t-button--text t-button--primary t-button--rectangle"
-                  role="button"
+                  tabindex="0"
                   type="button"
                 >
                   <!---->
@@ -2961,9 +2959,8 @@ exports[`Input > Input specialVue demo works fine 1`] = `
               class="suffix--line"
             />
             <button
-              aria-disabled="false"
               class="t-button t-button--size-extra-small t-button--text t-button--primary t-button--rectangle"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3276,9 +3273,8 @@ exports[`Input > Input suffixVue demo works fine 1`] = `
     </div>
     
     <button
-      aria-disabled="false"
       class="t-button t-button--size-extra-small t-button--base t-button--primary t-button--rectangle"
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->

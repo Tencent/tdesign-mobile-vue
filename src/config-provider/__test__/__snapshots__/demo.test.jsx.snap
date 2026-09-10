@@ -3228,9 +3228,8 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               class="t-calendar__footer"
             >
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -6525,9 +6524,8 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
           class="t-calendar__footer"
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->

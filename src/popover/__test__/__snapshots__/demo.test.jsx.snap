@@ -56,10 +56,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
           >
             
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
               data-v-a7775494=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -98,10 +97,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
           >
             
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
               data-v-a7775494=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -140,10 +138,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
           >
             
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
               data-v-a7775494=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -199,10 +196,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
           >
             
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
               data-v-511741f9=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -230,10 +226,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
           >
             
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
               data-v-511741f9=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -261,10 +256,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
           >
             
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
               data-v-511741f9=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -297,10 +291,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
           >
             
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
               data-v-511741f9=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -328,10 +321,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
           >
             
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
               data-v-511741f9=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -359,10 +351,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
           >
             
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
               data-v-511741f9=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -419,10 +410,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -450,10 +440,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -481,10 +470,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -528,10 +516,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -559,10 +546,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -590,10 +576,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -637,10 +622,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -668,10 +652,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -699,10 +682,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -746,10 +728,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -777,10 +758,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -808,10 +788,9 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
                 data-v-0d324054=""
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -867,10 +846,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -898,10 +876,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -929,10 +906,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -976,10 +952,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -1007,10 +982,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -1038,10 +1012,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -1085,10 +1058,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -1116,10 +1088,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -1147,10 +1118,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -1194,10 +1164,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -1225,10 +1194,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -1256,10 +1224,9 @@ exports[`Popover > Popover placementVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-with--large"
             data-v-0d324054=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -1302,10 +1269,9 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
           data-v-511741f9=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1333,10 +1299,9 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
           data-v-511741f9=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1364,10 +1329,9 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
           data-v-511741f9=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1400,10 +1364,9 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
           data-v-511741f9=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1431,10 +1394,9 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
           data-v-511741f9=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1462,10 +1424,9 @@ exports[`Popover > Popover themeVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle button-width--small"
           data-v-511741f9=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1513,10 +1474,9 @@ exports[`Popover > Popover typeVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
           data-v-a7775494=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1555,10 +1515,9 @@ exports[`Popover > Popover typeVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
           data-v-a7775494=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1597,10 +1556,9 @@ exports[`Popover > Popover typeVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle"
           data-v-a7775494=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->

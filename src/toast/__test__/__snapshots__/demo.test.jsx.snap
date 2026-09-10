@@ -6,9 +6,8 @@ exports[`Toast > Toast baseVue demo works fine 1`] = `
   id="toast-demo"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -22,9 +21,8 @@ exports[`Toast > Toast baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -38,9 +36,8 @@ exports[`Toast > Toast baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -54,9 +51,8 @@ exports[`Toast > Toast baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -70,9 +66,8 @@ exports[`Toast > Toast baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -93,9 +88,8 @@ exports[`Toast > Toast closeVue demo works fine 1`] = `
   class="toast-demo"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -109,9 +103,8 @@ exports[`Toast > Toast closeVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -132,9 +125,8 @@ exports[`Toast > Toast coverVue demo works fine 1`] = `
   class="toast-demo"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -190,9 +182,8 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
         id="toast-demo"
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -206,9 +197,8 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -222,9 +212,8 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -238,9 +227,8 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -254,9 +242,8 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -298,9 +285,8 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
         class="toast-demo"
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -314,9 +300,8 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -330,9 +315,8 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -374,9 +358,8 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
         class="toast-demo"
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -418,9 +401,8 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
         class="toast-demo"
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -434,9 +416,8 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -461,9 +442,8 @@ exports[`Toast > Toast themeVue demo works fine 1`] = `
   class="toast-demo"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -477,9 +457,8 @@ exports[`Toast > Toast themeVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -493,9 +472,8 @@ exports[`Toast > Toast themeVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
