@@ -74,7 +74,7 @@ const items = ref([
     icon: () => h(Edit1Icon, { size: '24px' }),
   },
 ]);
-const items2 = ref([
+const items2 = ref<ActionSheetItem[]>([
   {
     label: '微信',
     icon: 'https://tdesign.gtimg.com/mobile/demos/wechat.png',

@@ -40,11 +40,11 @@ const items = ref([
   },
   {
     label: 'Unsubscribe',
-    icon: h(PinIcon),
+    icon: () => h(PinIcon),
   },
   {
     label: 'Add to Tasks',
-    icon: h(CloudUploadIcon),
+    icon: () => h(CloudUploadIcon),
   },
 ]);
 const centerVisible = ref(false);

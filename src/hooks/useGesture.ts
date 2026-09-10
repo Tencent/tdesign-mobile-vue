@@ -32,7 +32,7 @@ export type UseGestureConfig = {
   visible?: boolean;
 };
 
-type UseGrestureReturn = {
+type UseGestureReturn = {
   gesture: ReturnType<typeof Gesture> | null;
   destroy: () => void;
   create: (target: Element, handler: GestureHandler, config?: UserGestureConfig) => void;
@@ -56,7 +56,7 @@ type UseGrestureReturn = {
  * gesture.destroy();
  */
 
-export default function useGesture(config: UseGestureConfig): UseGrestureReturn {
+export default function useGesture(config: UseGestureConfig): UseGestureReturn {
   const gesture = ref(null);
 
   const destroy = () => gesture.value?.destroy?.();
@@ -80,7 +80,7 @@ export default function useGesture(config: UseGestureConfig): UseGrestureReturn 
     returns.gesture = gesture.value;
   };
 
-  const returns: UseGrestureReturn = reactive({
+  const returns: UseGestureReturn = reactive({
     gesture: gesture.value,
     destroy,
     create,

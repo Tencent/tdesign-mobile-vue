@@ -17,7 +17,7 @@ export default defineComponent({
     const { globalConfig } = useConfig('actionSheet');
 
     const actionItems = computed(() => {
-      return props.items.map((item: string | ActionSheetItem) => {
+      return (props.items || []).map((item: string | ActionSheetItem) => {
         if (typeof item === 'string') {
           return {
             label: item,
