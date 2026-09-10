@@ -50,7 +50,7 @@ export default defineComponent({
     const root = ref();
     const items = ref<SwiperItemInstance[]>([]);
     const { current: value, modelValue } = toRefs(props);
-    const [currentIndex, setCurrent] = useVModel(value, modelValue, props.defaultCurrent);
+    const [currentIndex, setCurrent] = useVModel(value, modelValue, props.defaultCurrent, undefined, 'current');
     const swiperContainer = ref<HTMLElement | null>(null);
     const previous = ref(currentIndex.value ?? 0);
 
@@ -180,7 +180,6 @@ export default defineComponent({
         val = props.loop ? 0 : max - 1;
       }
       innerSetCurrent(val);
-      emit('update:current', val);
       emit('change', val, { source });
     };
 
