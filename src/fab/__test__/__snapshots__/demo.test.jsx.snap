@@ -6,9 +6,8 @@ exports[`Fab > Fab advanceVue demo works fine 1`] = `
   style="right: 16px; bottom: 32px;"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--round t-fab__button"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <svg
@@ -49,9 +48,8 @@ exports[`Fab > Fab baseVue demo works fine 1`] = `
   style="right: 16px; bottom: 32px;"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--circle t-fab__button"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <svg
@@ -300,9 +298,8 @@ exports[`Fab > Fab draggableVue demo works fine 1`] = `
   style="right: 16px; bottom: 32px;"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--circle t-fab__button"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <svg
@@ -377,10 +374,9 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
     >
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-760ddee4=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -415,10 +411,9 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
     >
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-760ddee4=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -457,10 +452,9 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
     >
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-760ddee4=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -495,10 +489,9 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
     >
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-760ddee4=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -720,9 +713,8 @@ exports[`Fab > Fab mobileVue demo works fine 1`] = `
     style="right: 16px; bottom: 32px;"
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--circle t-fab__button"
-      role="button"
+      tabindex="0"
       type="button"
     >
       <svg

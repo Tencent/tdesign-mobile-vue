@@ -27,7 +27,7 @@ export default defineComponent({
       [`${actionSheetClass.value}__list-item`]: true,
     }));
 
-    const renderTNode = (node: TNode) => {
+    const renderTNode = (node: string | TNode) => {
       if (!node) return null;
       if (typeof node === 'function') {
         return node(h);

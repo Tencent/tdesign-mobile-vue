@@ -6188,9 +6188,8 @@ exports[`SideBar > SideBar mobileVue demo works fine 1`] = `
     >
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -6204,9 +6203,8 @@ exports[`SideBar > SideBar mobileVue demo works fine 1`] = `
         <!---->
       </button>
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -6240,9 +6238,8 @@ exports[`SideBar > SideBar mobileVue demo works fine 1`] = `
     >
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -6280,9 +6277,8 @@ exports[`SideBar > SideBar mobileVue demo works fine 1`] = `
     >
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->

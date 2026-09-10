@@ -31,18 +31,18 @@ const iconData = {
     },
     {
       label: 'Unsubscribe',
-      icon: h(PinIcon),
+      icon: () => h(PinIcon),
       color: '#E34D59',
     },
     {
       label: 'Add to Tasks',
-      icon: h(CloudUploadIcon),
+      icon: () => h(CloudUploadIcon),
       disabled: true,
     },
   ],
 };
 
-const handleSelected = (selected: ActionSheetItem, selectedIndex: number) => {
+const handleSelected = (selected: ActionSheetItem | string, selectedIndex: number) => {
   console.log('[handleSelected]', { selected, selectedIndex });
 };
 const handleCancel = (): void => {

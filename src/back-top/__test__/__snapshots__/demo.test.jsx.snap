@@ -6,10 +6,9 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
   data-v-db5fce21=""
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-db5fce21=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -33,10 +32,9 @@ exports[`BackTop > BackTop halfRoundVue demo works fine 1`] = `
     data-v-37c0a853=""
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-37c0a853=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -302,10 +300,9 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         data-v-db5fce21=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-db5fce21=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -344,10 +341,9 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         data-v-37c0a853=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-37c0a853=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->

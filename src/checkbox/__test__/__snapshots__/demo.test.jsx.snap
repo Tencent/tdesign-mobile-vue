@@ -1345,7 +1345,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             class="t-checkbox__border t-checkbox__border--left"
           />
         </div>
-        <view
+        <div
           class="box"
           style="height: 16px;"
         />
@@ -1831,7 +1831,7 @@ exports[`Checkbox > Checkbox rightVue demo works fine 1`] = `
       class="t-checkbox__border t-checkbox__border--left"
     />
   </div>
-  <view
+  <div
     class="box"
     style="height: 16px;"
   />

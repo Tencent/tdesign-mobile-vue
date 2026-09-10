@@ -1,18 +1,18 @@
 <template>
   <t-radio-group :value="radio" @change="onChange">
-    <view v-for="(item, index) in 3" :key="index" :class="`card ${radio == index ? 'card--active' : ''}`">
+    <div v-for="(item, index) in 3" :key="index" :class="`card ${radio == index ? 'card--active' : ''}`">
       <icon v-if="radio == index" class="card__icon" name="check" />
       <t-radio :value="index" borderless content="描述信息描述信息描述信息描述信息描述信息" icon="none" label="单选" />
-    </view>
+    </div>
   </t-radio-group>
 
-  <view class="demo-desc" style="margin: 24px 16px 16px">横向卡片单选框</view>
+  <div class="demo-desc" style="margin: 24px 16px 16px">横向卡片单选框</div>
 
   <t-radio-group :value="radio1" class="horizontal-box" @change="onChange1">
-    <view v-for="(item, index) in 3" :key="index" :class="`card ${radio1 == index ? 'card--active' : ''}`">
+    <div v-for="(item, index) in 3" :key="index" :class="`card ${radio1 == index ? 'card--active' : ''}`">
       <icon v-if="radio1 == index" class="card__icon" name="check" />
       <t-radio :value="index" borderless icon="none" label="单选" />
-    </view>
+    </div>
   </t-radio-group>
 </template>
 

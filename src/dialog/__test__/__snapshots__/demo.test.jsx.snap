@@ -6,9 +6,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
 >
   
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -64,9 +63,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -78,9 +76,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -101,9 +98,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     class="btn-gap"
   />
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -155,9 +151,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -169,9 +164,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--danger t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -192,9 +186,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
     class="btn-gap"
   />
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -242,9 +235,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -256,9 +248,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -285,9 +276,8 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
 >
   
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -344,9 +334,8 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
         <!---->
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -367,9 +356,8 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     class="btn-gap"
   />
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -422,9 +410,8 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
         <!---->
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -445,9 +432,8 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
     class="btn-gap"
   />
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -510,9 +496,8 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
         <!---->
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -539,10 +524,9 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
 >
   
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-11e94e26=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -643,9 +627,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -657,9 +640,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -681,10 +663,9 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     data-v-11e94e26=""
   />
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-11e94e26=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -781,9 +762,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -795,9 +775,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -819,10 +798,9 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     data-v-11e94e26=""
   />
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-11e94e26=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -915,9 +893,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -929,9 +906,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -953,10 +929,9 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     data-v-11e94e26=""
   />
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-11e94e26=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -1045,9 +1020,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1059,9 +1033,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1083,10 +1056,9 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     data-v-11e94e26=""
   />
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-11e94e26=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -1187,9 +1159,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1201,9 +1172,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1225,10 +1195,9 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
     data-v-11e94e26=""
   />
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-11e94e26=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -1321,9 +1290,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1335,9 +1303,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1364,10 +1331,9 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
 >
   
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-5e3ce9ff=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -1461,9 +1427,8 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1475,9 +1440,8 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1499,10 +1463,9 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
     data-v-5e3ce9ff=""
   />
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-5e3ce9ff=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -1601,9 +1564,8 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1615,9 +1577,8 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1675,9 +1636,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -1734,9 +1694,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -1757,9 +1716,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         class="btn-gap"
       />
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -1812,9 +1770,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -1835,9 +1792,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         class="btn-gap"
       />
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -1900,9 +1856,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
             <!---->
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -1942,9 +1897,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2000,9 +1954,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2014,9 +1967,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2037,9 +1989,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         class="btn-gap"
       />
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2091,9 +2042,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2105,9 +2055,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--danger t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2128,9 +2077,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         class="btn-gap"
       />
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2178,9 +2126,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2192,9 +2139,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2234,10 +2180,9 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-5e3ce9ff=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2331,9 +2276,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2345,9 +2289,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2369,10 +2312,9 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         data-v-5e3ce9ff=""
       />
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-5e3ce9ff=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2471,9 +2413,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2485,9 +2426,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2527,10 +2467,9 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-11e94e26=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2631,9 +2570,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2645,9 +2583,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2669,10 +2606,9 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         data-v-11e94e26=""
       />
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-11e94e26=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2769,9 +2705,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2783,9 +2718,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2807,10 +2741,9 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         data-v-11e94e26=""
       />
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-11e94e26=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2903,9 +2836,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2917,9 +2849,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -2941,10 +2872,9 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         data-v-11e94e26=""
       />
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-11e94e26=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -3033,9 +2963,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3047,9 +2976,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3071,10 +2999,9 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         data-v-11e94e26=""
       />
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-11e94e26=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -3175,9 +3102,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3189,9 +3115,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3213,10 +3138,9 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         data-v-11e94e26=""
       />
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-11e94e26=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -3309,9 +3233,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3323,9 +3246,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3370,9 +3292,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         文字按钮
       </div>
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -3428,9 +3349,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3442,9 +3362,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3470,9 +3389,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         水平基础按钮
       </div>
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -3528,9 +3446,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3542,9 +3459,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3570,9 +3486,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         垂直基础按钮
       </div>
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -3628,9 +3543,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3642,9 +3556,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--vertical"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3670,9 +3583,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         多按钮
       </div>
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -3728,9 +3640,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3742,9 +3653,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3756,9 +3666,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--vertical"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3787,9 +3696,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
         带关闭按钮的对话框
       </div>
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -3868,9 +3776,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
           >
             <!---->
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3882,9 +3789,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
               <!---->
             </button>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--vertical"
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -3927,9 +3833,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
     >
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -3957,9 +3862,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     文字按钮
   </div>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -4015,9 +3919,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--text t-button--default t-button--rectangle t-dialog__button t-dialog__button--text"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -4029,9 +3932,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--text t-button--primary t-button--rectangle t-dialog__button t-dialog__button--text"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -4057,9 +3959,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     水平基础按钮
   </div>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -4115,9 +4016,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -4129,9 +4029,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--horizontal"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -4157,9 +4056,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     垂直基础按钮
   </div>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -4215,9 +4113,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -4229,9 +4126,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--vertical"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -4257,9 +4153,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     多按钮
   </div>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -4315,9 +4210,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -4329,9 +4223,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -4343,9 +4236,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--vertical"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -4374,9 +4266,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
     带关闭按钮的对话框
   </div>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -4455,9 +4346,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
       >
         <!---->
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--light t-button--rectangle t-dialog__button t-dialog__button--vertical"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -4469,9 +4359,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-dialog__button t-dialog__button--vertical"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -4494,9 +4383,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
 
 exports[`Dialog > Dialog pluginVue demo works fine 1`] = `
 <button
-  aria-disabled="false"
   class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-  role="button"
+  tabindex="0"
   type="button"
 >
   <!---->

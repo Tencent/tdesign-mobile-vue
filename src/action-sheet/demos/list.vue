@@ -67,11 +67,11 @@ const iconData = {
     },
     {
       label: 'Unsubscribe',
-      icon: h(PinIcon),
+      icon: () => h(PinIcon),
     },
     {
       label: 'Add to Tasks',
-      icon: h(CloudUploadIcon),
+      icon: () => h(CloudUploadIcon),
     },
   ],
 };

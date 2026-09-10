@@ -1756,10 +1756,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
     data-v-0efbfc02=""
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
       data-v-0efbfc02=""
-      role="button"
+      tabindex="0"
       type="submit"
     >
       <!---->
@@ -1773,10 +1772,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       <!---->
     </button>
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
       data-v-0efbfc02=""
-      role="button"
+      tabindex="0"
       type="reset"
     >
       <!---->
@@ -1844,10 +1842,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           data-v-abfd963f=""
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--light t-button--round"
             data-v-abfd963f=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -1861,10 +1858,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             <!---->
           </button>
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--default t-button--round"
             data-v-abfd963f=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -3690,10 +3686,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
           data-v-0efbfc02=""
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
             data-v-0efbfc02=""
-            role="button"
+            tabindex="0"
             type="submit"
           >
             <!---->
@@ -3707,10 +3702,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             <!---->
           </button>
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
             data-v-0efbfc02=""
-            role="button"
+            tabindex="0"
             type="reset"
           >
             <!---->
@@ -5473,10 +5467,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
     data-v-39ff7205=""
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
       data-v-39ff7205=""
-      role="button"
+      tabindex="0"
       type="submit"
     >
       <!---->
@@ -5490,10 +5483,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
       <!---->
     </button>
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle"
       data-v-39ff7205=""
-      role="button"
+      tabindex="0"
       type="reset"
     >
       <!---->

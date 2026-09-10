@@ -151,9 +151,8 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -330,9 +329,8 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -376,10 +374,9 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           aria-label="通知"
           class="t-button t-button--size-large t-button--base t-button--default t-button--square"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <svg
@@ -678,9 +675,8 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -857,9 +853,8 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-medium t-button--base t-button--default t-button--rectangle"
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -903,10 +898,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 aria-label="通知"
                 class="t-button t-button--size-large t-button--base t-button--default t-button--square"
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <svg
@@ -1300,10 +1294,9 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
             >
               
               <button
-                aria-disabled="false"
                 aria-label="商店"
                 class="t-button t-button--size-large t-button--base t-button--default t-button--square"
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <svg
@@ -2308,10 +2301,9 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
       >
         
         <button
-          aria-disabled="false"
           aria-label="商店"
           class="t-button t-button--size-large t-button--base t-button--default t-button--square"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <svg
