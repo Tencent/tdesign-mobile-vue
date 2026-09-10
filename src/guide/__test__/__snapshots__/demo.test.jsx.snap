@@ -6,10 +6,9 @@ exports[`Guide > Guide baseVue demo works fine 1`] = `
   data-v-4e055ece=""
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
     data-v-4e055ece=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -30,10 +29,9 @@ exports[`Guide > Guide customPopoverVue demo works fine 1`] = `
   data-v-760ff522=""
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
     data-v-760ff522=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -79,10 +77,9 @@ exports[`Guide > Guide dialogVue demo works fine 1`] = `
   data-v-365702ae=""
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
     data-v-365702ae=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -144,10 +141,9 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
         data-v-4e055ece=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
           data-v-4e055ece=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -187,10 +183,9 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
         data-v-230fbba9=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
           data-v-230fbba9=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -232,10 +227,9 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
         data-v-365702ae=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
           data-v-365702ae=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -277,10 +271,9 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
         data-v-45f2f5e4=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
           data-v-45f2f5e4=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -322,10 +315,9 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
         data-v-760ff522=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
           data-v-760ff522=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -383,10 +375,9 @@ exports[`Guide > Guide myPopoverVue demo works fine 1`] = `
     data-v-eb2238b1=""
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-extra-small t-button--base t-button--light t-button--rectangle"
       data-v-eb2238b1=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -412,10 +403,9 @@ exports[`Guide > Guide noMaskVue demo works fine 1`] = `
   data-v-230fbba9=""
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
     data-v-230fbba9=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -438,10 +428,9 @@ exports[`Guide > Guide popoverDialogVue demo works fine 1`] = `
   data-v-45f2f5e4=""
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
     data-v-45f2f5e4=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->

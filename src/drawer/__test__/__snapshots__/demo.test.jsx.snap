@@ -97,9 +97,8 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
   
   <!--teleport end-->
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -214,9 +213,8 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
           class="button-host"
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -238,9 +236,8 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
   
   <!--teleport end-->
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -990,10 +987,9 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
   
   <!--teleport end-->
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-5cca2c30=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -1142,9 +1138,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       
       <!--teleport end-->
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -1908,10 +1903,9 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       
       <!--teleport end-->
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-5cca2c30=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2047,9 +2041,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       
       <!--teleport end-->
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2178,9 +2171,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
               class="button-host"
             >
               <button
-                aria-disabled="false"
                 class="t-button t-button--size-large t-button--outline t-button--default t-button--rectangle t-button--block"
-                role="button"
+                tabindex="0"
                 type="button"
               >
                 <!---->
@@ -2202,9 +2194,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       
       <!--teleport end-->
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2244,10 +2235,9 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
     >
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
         data-v-bf17674a=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -2268,9 +2258,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
 
 exports[`Drawer > Drawer pluginVue demo works fine 1`] = `
 <button
-  aria-disabled="false"
   class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-  role="button"
+  tabindex="0"
   type="button"
 >
   <!---->
@@ -2386,9 +2375,8 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
   
   <!--teleport end-->
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->

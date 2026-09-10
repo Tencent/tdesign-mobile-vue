@@ -355,9 +355,8 @@ exports[`Swiper > Swiper currentVue demo works fine 1`] = `
     class="tdesign-demo-block-row"
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -1093,9 +1092,8 @@ exports[`Swiper > Swiper mobileVue demo works fine 1`] = `
           class="tdesign-demo-block-row"
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-small t-button--base t-button--primary t-button--rectangle"
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->

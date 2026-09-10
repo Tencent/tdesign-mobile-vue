@@ -753,10 +753,9 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
         style="margin: 0px 20px;"
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
           t-class="wrapper"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -1480,10 +1479,9 @@ exports[`ColorPicker > ColorPicker usePopupVue demo works fine 1`] = `
     style="margin: 0px 20px;"
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-      role="button"
       t-class="wrapper"
+      tabindex="0"
       type="button"
     >
       <!---->
