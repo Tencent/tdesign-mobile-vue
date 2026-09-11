@@ -26,6 +26,7 @@ interface HoverContext {
   upHandler: (e: Event) => void;
   cancelHandler: (e: Event) => void;
   timers: number[];
+  hovered: boolean;
   current: Required<Pick<HoverBindingObject, 'className' | 'disabledHover' | 'startTime' | 'stayTime'>>;
 }
 
@@ -58,6 +59,7 @@ const Hover: Directive<HTMLElement, HoverBinding> = {
     const state = resolveBinding(binding);
     const ctx: HoverContext = {
       current: state,
+      hovered: false,
       timers: [],
       add() {
         if (ctx.current.disabledHover || !ctx.current.className) return;
@@ -74,7 +76,8 @@ const Hover: Directive<HTMLElement, HoverBinding> = {
         ctx.timers = [];
       },
       downHandler() {
-        if (ctx.current.disabledHover) return;
+        if (ctx.current.disabledHover || ctx.hovered) return;
+        ctx.hovered = true;
         ctx.clearTimers();
         // 按下后预定时添加
         ctx.timers.push(
@@ -84,8 +87,10 @@ const Hover: Directive<HTMLElement, HoverBinding> = {
         );
       },
       upHandler() {
-        if (ctx.current.disabledHover) return;
+        if (ctx.current.disabledHover || !ctx.hovered) return;
+        ctx.hovered = false;
         ctx.clearTimers();
+        ctx.add();
         ctx.timers.push(
           window.setTimeout(() => {
             ctx.remove();
@@ -94,6 +99,8 @@ const Hover: Directive<HTMLElement, HoverBinding> = {
       },
       cancelHandler() {
         // 取消（如滚动、移出）立即移除
+        if (!ctx.hovered) return;
+        ctx.hovered = false;
         ctx.clearTimers();
         ctx.remove();
       },
@@ -123,14 +130,14 @@ const Hover: Directive<HTMLElement, HoverBinding> = {
     if (!ctx) return;
     const next = resolveBinding(binding);
     const prev = ctx.current;
-    if (next.disabledHover) {
+    if (next.disabledHover && ctx.hovered) {
       ctx.clearTimers();
       if (prev.className) el.classList.remove(prev.className);
     }
     // className 变化需要替换
     if (prev.className !== next.className) {
       if (prev.className) el.classList.remove(prev.className);
-      if (!next.disabledHover && next.className && el.matches(':active')) {
+      if (!next.disabledHover && next.className && ctx.hovered) {
         el.classList.add(next.className);
       }
     }
