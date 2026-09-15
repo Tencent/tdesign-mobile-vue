@@ -2,12 +2,13 @@ import { ref, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { isObject } from 'lodash-es';
+import { ChevronRightIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { FormItem, Form } from '../index.ts';
 import Input from '../../input';
+import { ConfigProvider } from '../../config-provider';
 import Radio, { RadioGroup } from '../../radio';
 import config from '../../config';
 import { useFormDisabled } from '../hooks';
-import { ChevronRightIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 
 const { prefix } = config;
 
@@ -120,6 +121,51 @@ describe('form', () => {
       await wrapper.setProps({ resetType: 'initial' });
       await form.vm.$.exposed.reset();
       expect(formData.value.name).eq('defaultName');
+    });
+
+    it(':requiredMarkPosition form prop', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form>
+              <FormItem required-mark />
+            </Form>
+          );
+        },
+      });
+      const labelEl = wrapper.find(`.${name}__label`);
+
+      expect(labelEl.classes(`${name}__label--required-right`)).toBe(false);
+
+      await wrapper.setProps({ requiredMarkPosition: 'right' });
+      await nextTick();
+      expect(labelEl.classes(`${name}__label--required-right`)).toBe(true);
+
+      await wrapper.setProps({ requiredMarkPosition: 'left' });
+      await nextTick();
+      expect(labelEl.classes(`${name}__label--required-right`)).toBe(false);
+    });
+
+    it(':requiredMarkPosition config-provider global fallback', async () => {
+      const wrapper = mount({
+        setup() {
+          const globalConfig = {
+            form: {
+              requiredMarkPosition: 'right',
+            },
+          };
+          return () => (
+            <ConfigProvider globalConfig={globalConfig}>
+              <Form>
+                <FormItem required-mark />
+              </Form>
+            </ConfigProvider>
+          );
+        },
+      });
+      await nextTick();
+      const labelEl = wrapper.find(`.${name}__label`);
+      expect(labelEl.classes(`${name}__label--required-right`)).toBe(true);
     });
 
     describe('rules', () => {
@@ -429,7 +475,7 @@ describe('form', () => {
             setup() {
               return () => (
                 <FormItem arrow label="name" name="name">
-                  <Input v-model={data.name} />
+                  <Input v-model={data.value.name} />
                 </FormItem>
               );
             },
