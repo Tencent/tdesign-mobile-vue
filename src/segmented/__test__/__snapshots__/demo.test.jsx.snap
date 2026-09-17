@@ -98,6 +98,102 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v0-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="#000"
+                      stroke="none"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v0-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v0-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="home"
                 >
@@ -105,15 +201,18 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
                     d="M3 10L12 2.5L21 10V21H3V10Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-home-instance-v0-overlap-fill1)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-home-instance-v0-overlap-fill2)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     id="stroke2"
+                    mask="url(#t-icon-home-instance-v0-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -152,6 +251,102 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v1-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="#000"
+                      stroke="none"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v1-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v1-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="home"
                 >
@@ -159,15 +354,18 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
                     d="M3 10L12 2.5L21 10V21H3V10Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-home-instance-v1-overlap-fill1)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-home-instance-v1-overlap-fill2)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     id="stroke2"
+                    mask="url(#t-icon-home-instance-v1-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -206,6 +404,102 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v2-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="#000"
+                      stroke="none"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v2-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v2-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="home"
                 >
@@ -213,15 +507,18 @@ exports[`Segmented > Segmented baseVue demo works fine 1`] = `
                     d="M3 10L12 2.5L21 10V21H3V10Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-home-instance-v2-overlap-fill1)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-home-instance-v2-overlap-fill2)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     id="stroke2"
+                    mask="url(#t-icon-home-instance-v2-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -348,6 +645,102 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v0-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="#000"
+                      stroke="none"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v0-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v0-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="home"
                 >
@@ -355,15 +748,18 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
                     d="M3 10L12 2.5L21 10V21H3V10Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-home-instance-v0-overlap-fill1)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-home-instance-v0-overlap-fill2)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     id="stroke2"
+                    mask="url(#t-icon-home-instance-v0-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -402,6 +798,102 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v1-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="#000"
+                      stroke="none"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v1-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v1-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="home"
                 >
@@ -409,15 +901,18 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
                     d="M3 10L12 2.5L21 10V21H3V10Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-home-instance-v1-overlap-fill1)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-home-instance-v1-overlap-fill2)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     id="stroke2"
+                    mask="url(#t-icon-home-instance-v1-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -456,6 +951,102 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v2-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="#000"
+                      stroke="none"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v2-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M9 14H15V21H9V14Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-home-instance-v2-overlap-stroke2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M3 10L12 2.5L21 10V21H3V10Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="home"
                 >
@@ -463,15 +1054,18 @@ exports[`Segmented > Segmented blockVue demo works fine 1`] = `
                     d="M3 10L12 2.5L21 10V21H3V10Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-home-instance-v2-overlap-fill1)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-home-instance-v2-overlap-fill2)"
                   />
                   <path
                     d="M9 14H15V21H9V14Z"
                     id="stroke2"
+                    mask="url(#t-icon-home-instance-v2-overlap-stroke2)"
                     stroke="currentColor"
                     stroke-linecap="square"
                     stroke-width="2"
@@ -701,6 +1295,102 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       viewBox="0 0 24 24"
                       width="1em"
                     >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v0-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="#000"
+                            stroke="none"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v0-overlap-fill2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v0-overlap-stroke2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
                       <g
                         id="home"
                       >
@@ -708,15 +1398,18 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                           d="M3 10L12 2.5L21 10V21H3V10Z"
                           fill="transparent"
                           id="fill1"
+                          mask="url(#t-icon-home-instance-v0-overlap-fill1)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           fill="transparent"
                           id="fill2"
+                          mask="url(#t-icon-home-instance-v0-overlap-fill2)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           id="stroke2"
+                          mask="url(#t-icon-home-instance-v0-overlap-stroke2)"
                           stroke="currentColor"
                           stroke-linecap="square"
                           stroke-width="2"
@@ -755,6 +1448,102 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       viewBox="0 0 24 24"
                       width="1em"
                     >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v1-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="#000"
+                            stroke="none"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v1-overlap-fill2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v1-overlap-stroke2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
                       <g
                         id="home"
                       >
@@ -762,15 +1551,18 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                           d="M3 10L12 2.5L21 10V21H3V10Z"
                           fill="transparent"
                           id="fill1"
+                          mask="url(#t-icon-home-instance-v1-overlap-fill1)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           fill="transparent"
                           id="fill2"
+                          mask="url(#t-icon-home-instance-v1-overlap-fill2)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           id="stroke2"
+                          mask="url(#t-icon-home-instance-v1-overlap-stroke2)"
                           stroke="currentColor"
                           stroke-linecap="square"
                           stroke-width="2"
@@ -809,6 +1601,102 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       viewBox="0 0 24 24"
                       width="1em"
                     >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v2-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="#000"
+                            stroke="none"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v2-overlap-fill2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v2-overlap-stroke2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
                       <g
                         id="home"
                       >
@@ -816,15 +1704,18 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                           d="M3 10L12 2.5L21 10V21H3V10Z"
                           fill="transparent"
                           id="fill1"
+                          mask="url(#t-icon-home-instance-v2-overlap-fill1)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           fill="transparent"
                           id="fill2"
+                          mask="url(#t-icon-home-instance-v2-overlap-fill2)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           id="stroke2"
+                          mask="url(#t-icon-home-instance-v2-overlap-stroke2)"
                           stroke="currentColor"
                           stroke-linecap="square"
                           stroke-width="2"
@@ -968,6 +1859,102 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       viewBox="0 0 24 24"
                       width="1em"
                     >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v3-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="#000"
+                            stroke="none"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v3-overlap-fill2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v3-overlap-stroke2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
                       <g
                         id="home"
                       >
@@ -975,15 +1962,18 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                           d="M3 10L12 2.5L21 10V21H3V10Z"
                           fill="transparent"
                           id="fill1"
+                          mask="url(#t-icon-home-instance-v3-overlap-fill1)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           fill="transparent"
                           id="fill2"
+                          mask="url(#t-icon-home-instance-v3-overlap-fill2)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           id="stroke2"
+                          mask="url(#t-icon-home-instance-v3-overlap-stroke2)"
                           stroke="currentColor"
                           stroke-linecap="square"
                           stroke-width="2"
@@ -1022,6 +2012,102 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       viewBox="0 0 24 24"
                       width="1em"
                     >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v4-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="#000"
+                            stroke="none"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v4-overlap-fill2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v4-overlap-stroke2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
                       <g
                         id="home"
                       >
@@ -1029,15 +2115,18 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                           d="M3 10L12 2.5L21 10V21H3V10Z"
                           fill="transparent"
                           id="fill1"
+                          mask="url(#t-icon-home-instance-v4-overlap-fill1)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           fill="transparent"
                           id="fill2"
+                          mask="url(#t-icon-home-instance-v4-overlap-fill2)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           id="stroke2"
+                          mask="url(#t-icon-home-instance-v4-overlap-stroke2)"
                           stroke="currentColor"
                           stroke-linecap="square"
                           stroke-width="2"
@@ -1076,6 +2165,102 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                       viewBox="0 0 24 24"
                       width="1em"
                     >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v5-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="#000"
+                            stroke="none"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v5-overlap-fill2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M9 14H15V21H9V14Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-home-instance-v5-overlap-stroke2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M3 10L12 2.5L21 10V21H3V10Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
                       <g
                         id="home"
                       >
@@ -1083,15 +2268,18 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
                           d="M3 10L12 2.5L21 10V21H3V10Z"
                           fill="transparent"
                           id="fill1"
+                          mask="url(#t-icon-home-instance-v5-overlap-fill1)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           fill="transparent"
                           id="fill2"
+                          mask="url(#t-icon-home-instance-v5-overlap-fill2)"
                         />
                         <path
                           d="M9 14H15V21H9V14Z"
                           id="stroke2"
+                          mask="url(#t-icon-home-instance-v5-overlap-stroke2)"
                           stroke="currentColor"
                           stroke-linecap="square"
                           stroke-width="2"

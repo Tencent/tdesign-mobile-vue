@@ -313,6 +313,56 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v0-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v0-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="edit-1"
                 >
@@ -320,11 +370,13 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                     d="M3.0001 20.9999L7.5 20.9999L17.5 11L13 6.5L3.0001 16.5L3.0001 20.9999Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-edit-1-instance-v0-overlap-fill1)"
                   />
                   <path
                     d="M21.5 7L17 2.5L13 6.5L17.5 11L21.5 7Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-edit-1-instance-v0-overlap-fill2)"
                   />
                   <path
                     d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
@@ -352,6 +404,40 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-delete-instance-v1-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="delete"
                 >
@@ -359,6 +445,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                     d="M5 5H19L18.5 22H5.5L5 5Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-delete-instance-v1-overlap-fill1)"
                   />
                   <path
                     d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -472,6 +559,56 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v2-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v2-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="edit-1"
                 >
@@ -479,11 +616,13 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                     d="M3.0001 20.9999L7.5 20.9999L17.5 11L13 6.5L3.0001 16.5L3.0001 20.9999Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-edit-1-instance-v2-overlap-fill1)"
                   />
                   <path
                     d="M21.5 7L17 2.5L13 6.5L17.5 11L21.5 7Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-edit-1-instance-v2-overlap-fill2)"
                   />
                   <path
                     d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
@@ -507,6 +646,40 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-delete-instance-v3-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="delete"
                 >
@@ -514,6 +687,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                     d="M5 5H19L18.5 22H5.5L5 5Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-delete-instance-v3-overlap-fill1)"
                   />
                   <path
                     d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -627,6 +801,56 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v4-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v4-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="edit-1"
                 >
@@ -634,11 +858,13 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                     d="M3.0001 20.9999L7.5 20.9999L17.5 11L13 6.5L3.0001 16.5L3.0001 20.9999Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-edit-1-instance-v4-overlap-fill1)"
                   />
                   <path
                     d="M21.5 7L17 2.5L13 6.5L17.5 11L21.5 7Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-edit-1-instance-v4-overlap-fill2)"
                   />
                   <path
                     d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
@@ -666,6 +892,40 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-delete-instance-v5-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="delete"
                 >
@@ -673,6 +933,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                     d="M5 5H19L18.5 22H5.5L5 5Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-delete-instance-v5-overlap-fill1)"
                   />
                   <path
                     d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -1814,6 +2075,56 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v0-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v0-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="edit-1"
                 >
@@ -1821,11 +2132,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                     d="M3.0001 20.9999L7.5 20.9999L17.5 11L13 6.5L3.0001 16.5L3.0001 20.9999Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-edit-1-instance-v0-overlap-fill1)"
                   />
                   <path
                     d="M21.5 7L17 2.5L13 6.5L17.5 11L21.5 7Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-edit-1-instance-v0-overlap-fill2)"
                   />
                   <path
                     d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
@@ -1853,6 +2166,40 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-delete-instance-v1-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="delete"
                 >
@@ -1860,6 +2207,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                     d="M5 5H19L18.5 22H5.5L5 5Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-delete-instance-v1-overlap-fill1)"
                   />
                   <path
                     d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -1973,6 +2321,56 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v2-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v2-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="edit-1"
                 >
@@ -1980,11 +2378,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                     d="M3.0001 20.9999L7.5 20.9999L17.5 11L13 6.5L3.0001 16.5L3.0001 20.9999Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-edit-1-instance-v2-overlap-fill1)"
                   />
                   <path
                     d="M21.5 7L17 2.5L13 6.5L17.5 11L21.5 7Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-edit-1-instance-v2-overlap-fill2)"
                   />
                   <path
                     d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
@@ -2008,6 +2408,40 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-delete-instance-v3-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="delete"
                 >
@@ -2015,6 +2449,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                     d="M5 5H19L18.5 22H5.5L5 5Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-delete-instance-v3-overlap-fill1)"
                   />
                   <path
                     d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -2128,6 +2563,56 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v4-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                  <mask
+                    height="24"
+                    id="t-icon-edit-1-instance-v4-overlap-fill2"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
+                      fill="none"
+                      stroke="#000"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="edit-1"
                 >
@@ -2135,11 +2620,13 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                     d="M3.0001 20.9999L7.5 20.9999L17.5 11L13 6.5L3.0001 16.5L3.0001 20.9999Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-edit-1-instance-v4-overlap-fill1)"
                   />
                   <path
                     d="M21.5 7L17 2.5L13 6.5L17.5 11L21.5 7Z"
                     fill="transparent"
                     id="fill2"
+                    mask="url(#t-icon-edit-1-instance-v4-overlap-fill2)"
                   />
                   <path
                     d="M12.9999 6.5L3 16.5L3 20.9999L7.4999 20.9999L17.4999 11M12.9999 6.5L17.4999 11M12.9999 6.5L16.9999 2.5L21.4999 7L17.4999 11"
@@ -2167,6 +2654,40 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-delete-instance-v5-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
                 <g
                   id="delete"
                 >
@@ -2174,6 +2695,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                     d="M5 5H19L18.5 22H5.5L5 5Z"
                     fill="transparent"
                     id="fill1"
+                    mask="url(#t-icon-delete-instance-v5-overlap-fill1)"
                   />
                   <path
                     d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
