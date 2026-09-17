@@ -23,7 +23,7 @@
 
   &__summary {
     font-size: 14px;
-    color: var(--td-text-color-primary);
+    color: var(--td-text-color-secondary);
     margin-bottom: 16px;
     line-height: 22px;
   }
