@@ -23,7 +23,7 @@
 
   &__summary {
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--td-text-color-primary);
     margin-bottom: 16px;
     line-height: 22px;
   }
