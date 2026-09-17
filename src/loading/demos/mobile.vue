@@ -28,6 +28,9 @@
     <tdesign-demo-block title="03 加载速度" summary="加载速度调整">
       <speed />
     </tdesign-demo-block>
+    <tdesign-demo-block title="04 进阶" summary="延迟显示加载">
+      <delay />
+    </tdesign-demo-block>
     <!-- 视觉稿待定，暂时注释 -->
     <!-- <tdesign-demo-block title="04 全屏加载" summary="全屏展示加载状态，阻止用户操作。">
       <fullscreen />
@@ -54,6 +57,7 @@ import size from './size.vue';
 import service from './service.vue';
 import fullscreen from './fullscreen.vue';
 import attach from './attach.vue';
+import delay from './delay.vue';
 </script>
 
 <style scoped lang="less">

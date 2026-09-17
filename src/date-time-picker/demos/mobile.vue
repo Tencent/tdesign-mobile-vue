@@ -26,6 +26,10 @@
       <showWeekDemo />
     </tdesign-demo-block>
 
+    <tdesign-demo-block summary="间隔时间选择器">
+      <stepsDemo />
+    </tdesign-demo-block>
+
     <tdesign-demo-block title="02 组件样式" summary="是否带标题">
       <withTitleDemo />
     </tdesign-demo-block>
@@ -42,6 +46,7 @@ import hourMinuteSecondDemo from './hour-minute-second.vue';
 import hourMinuteDemo from './hour-minute.vue';
 import dateAllDemo from './date-all.vue';
 import showWeekDemo from './show-week.vue';
+import stepsDemo from './steps.vue';
 import withTitleDemo from './with-title.vue';
 import withoutTitleDemo from './without-title.vue';
 </script>

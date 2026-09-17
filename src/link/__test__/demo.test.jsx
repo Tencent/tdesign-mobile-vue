@@ -4,7 +4,7 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/link/demos/base.vue';
-import linkSizeVue from '@/link/demos/linkSize.vue';
+import linkSizeVue from '@/link/demos/link-size.vue';
 import mobileVue from '@/link/demos/mobile.vue';
 import prefixVue from '@/link/demos/prefix.vue';
 import statusVue from '@/link/demos/status.vue';

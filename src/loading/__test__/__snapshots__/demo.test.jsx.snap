@@ -985,6 +985,66 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
       
     </div>
   </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-e4d4f46b=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        04 进阶
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        延迟显示加载
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="switch-wrap"
+        data-v-c584110f=""
+      >
+        <div
+          class="t-switch t-switch--medium"
+          data-v-c584110f=""
+        >
+          <div
+            class="t-switch__dot t-switch__dot--medium t-switch__dot--plain"
+          >
+            <div
+              class="t-switch__label t-switch__label--medium"
+            >
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div
+          data-v-c584110f=""
+        >
+          请求结束，隐藏loading
+        </div>
+      </div>
+      <div
+        class="t-loading"
+        data-v-c584110f=""
+        style="font-size: 20px;"
+      >
+        <!---->
+        <!---->
+        <!---->
+      </div>
+      
+      
+    </div>
+  </div>
   <!-- 视觉稿待定，暂时注释 -->
   <!-- &lt;tdesign-demo-block title="04 全屏加载" summary="全屏展示加载状态，阻止用户操作。"&gt;
       &lt;fullscreen /&gt;
