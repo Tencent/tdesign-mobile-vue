@@ -718,6 +718,90 @@ exports[`PullDownRefresh > PullDownRefresh mobileVue demo works fine 1`] = `
       
     </div>
   </div>
+  <div
+    class="tdesign-mobile-demo"
+  >
+    <div
+      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    >
+      <!--v-if-->
+      <div
+        class="tdesign-mobile-demo-block__slot"
+      >
+        
+        <div
+          class="t-pull-down-refresh"
+        >
+          <div
+            class="t-pull-down-refresh__track t-pull-down-refresh__track--loosing"
+            style="transform: translate3d(0, 0px, 0);"
+          >
+            <div
+              class="t-pull-down-refresh__tips"
+              style="height: 80px;"
+            >
+              <div
+                class="t-pull-down-refresh__loading"
+                style="transform: translateY(15px); height: 0px; max-height: 50px;"
+              >
+                <div
+                  class="t-pull-down-refresh__text"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+            
+            下拉刷新
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo"
+  >
+    <div
+      class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    >
+      <!--v-if-->
+      <div
+        class="tdesign-mobile-demo-block__slot"
+      >
+        
+        <div
+          class="t-pull-down-refresh"
+        >
+          <div
+            class="t-pull-down-refresh__track t-pull-down-refresh__track--loosing"
+            style="transform: translate3d(0, 0px, 0);"
+          >
+            <div
+              class="t-pull-down-refresh__tips"
+              style="height: 100px;"
+            >
+              <div
+                class="t-pull-down-refresh__loading"
+                style="transform: translateY(15px); height: 0px; max-height: 70px;"
+              >
+                <div
+                  class="t-pull-down-refresh__text"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+            
+            下拉刷新
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 </div>
 `;
 

@@ -5,12 +5,12 @@
 import { mount } from '@vue/test-utils';
 import baseVue from '@/layout/demos/base.vue';
 import mobileVue from '@/layout/demos/mobile.vue';
-import offsetVue from '@/layout/demos/offset.vue';
+import gutterVue from '@/layout/demos/gutter.vue';
 
 const mapper = {
   baseVue,
   mobileVue,
-  offsetVue,
+  gutterVue,
 };
 
 describe('Layout', () => {

@@ -23,6 +23,9 @@
     <tdesign-demo-block summary="outside模式">
       <outside />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="卡片式">
+      <card />
+    </tdesign-demo-block>
   </div>
 </template>
 <script lang="ts" setup>
@@ -33,6 +36,7 @@ import control from './control.vue';
 import vertical from './vertical.vue';
 import outside from './outside.vue';
 import current from './current.vue';
+import card from './card.vue';
 </script>
 
 <style lang="less">
