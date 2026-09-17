@@ -96,67 +96,6 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
-              <defs>
-                <mask
-                  height="24"
-                  id="t-icon-camera-instance-v0-overlap-fill1"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                    fill="#000"
-                    stroke="none"
-                  />
-                  <path
-                    d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-width="2"
-                  />
-                </mask>
-                <mask
-                  height="24"
-                  id="t-icon-camera-instance-v0-overlap-fill2"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-width="2"
-                  />
-                </mask>
-              </defs>
               <g
                 id="camera"
               >
@@ -164,13 +103,11 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
                   d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
                   fill="transparent"
                   id="fill1"
-                  mask="url(#t-icon-camera-instance-v0-overlap-fill1)"
                 />
                 <path
                   d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
                   fill="transparent"
                   id="fill2"
-                  mask="url(#t-icon-camera-instance-v0-overlap-fill2)"
                 />
                 <path
                   d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
@@ -235,67 +172,6 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
-              <defs>
-                <mask
-                  height="24"
-                  id="t-icon-camera-instance-v1-overlap-fill1"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                    fill="#000"
-                    stroke="none"
-                  />
-                  <path
-                    d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-width="2"
-                  />
-                </mask>
-                <mask
-                  height="24"
-                  id="t-icon-camera-instance-v1-overlap-fill2"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-width="2"
-                  />
-                </mask>
-              </defs>
               <g
                 id="camera"
               >
@@ -303,13 +179,11 @@ exports[`Upload > Upload customVue demo works fine 1`] = `
                   d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
                   fill="transparent"
                   id="fill1"
-                  mask="url(#t-icon-camera-instance-v1-overlap-fill1)"
                 />
                 <path
                   d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
                   fill="transparent"
                   id="fill2"
-                  mask="url(#t-icon-camera-instance-v1-overlap-fill2)"
                 />
                 <path
                   d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
@@ -1049,40 +923,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <defs>
-                  <mask
-                    height="24"
-                    id="t-icon-close-circle-instance-v9-overlap-fill1"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <path
-                      d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                      fill="none"
-                      stroke="#000"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-                      fill="none"
-                      stroke="#000"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </mask>
-                </defs>
                 <g
                   id="close-circle"
                 >
@@ -1090,7 +930,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                     fill="transparent"
                     id="fill1"
-                    mask="url(#t-icon-close-circle-instance-v9-overlap-fill1)"
                   />
                   <path
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
@@ -1341,40 +1180,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <defs>
-                  <mask
-                    height="24"
-                    id="t-icon-close-circle-instance-v16-overlap-fill1"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <path
-                      d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                      fill="none"
-                      stroke="#000"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-                      fill="none"
-                      stroke="#000"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </mask>
-                </defs>
                 <g
                   id="close-circle"
                 >
@@ -1382,7 +1187,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                     fill="transparent"
                     id="fill1"
-                    mask="url(#t-icon-close-circle-instance-v16-overlap-fill1)"
                   />
                   <path
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
@@ -1447,40 +1251,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <defs>
-                  <mask
-                    height="24"
-                    id="t-icon-close-circle-instance-v18-overlap-fill1"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <path
-                      d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                      fill="none"
-                      stroke="#000"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-                      fill="none"
-                      stroke="#000"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </mask>
-                </defs>
                 <g
                   id="close-circle"
                 >
@@ -1488,7 +1258,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                     fill="transparent"
                     id="fill1"
-                    mask="url(#t-icon-close-circle-instance-v18-overlap-fill1)"
                   />
                   <path
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
@@ -2017,40 +1786,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <defs>
-                  <mask
-                    height="24"
-                    id="t-icon-close-circle-instance-v32-overlap-fill1"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <path
-                      d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                      fill="none"
-                      stroke="#000"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-                      fill="none"
-                      stroke="#000"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </mask>
-                </defs>
                 <g
                   id="close-circle"
                 >
@@ -2058,7 +1793,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                     fill="transparent"
                     id="fill1"
-                    mask="url(#t-icon-close-circle-instance-v32-overlap-fill1)"
                   />
                   <path
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
@@ -2165,40 +1899,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <defs>
-                  <mask
-                    height="24"
-                    id="t-icon-close-circle-instance-v34-overlap-fill1"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <path
-                      d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                      fill="none"
-                      stroke="#000"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-                      fill="none"
-                      stroke="#000"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </mask>
-                </defs>
                 <g
                   id="close-circle"
                 >
@@ -2206,7 +1906,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                     fill="transparent"
                     id="fill1"
-                    mask="url(#t-icon-close-circle-instance-v34-overlap-fill1)"
                   />
                   <path
                     d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
@@ -2472,40 +2171,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-delete-instance-v40-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <path
-                        d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M12 9V18"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </mask>
-                  </defs>
                   <g
                     id="delete"
                   >
@@ -2513,7 +2178,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                       d="M5 5H19L18.5 22H5.5L5 5Z"
                       fill="transparent"
                       id="fill1"
-                      mask="url(#t-icon-delete-instance-v40-overlap-fill1)"
                     />
                     <path
                       d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -2575,40 +2239,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-delete-instance-v42-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <path
-                        d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M12 9V18"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </mask>
-                  </defs>
                   <g
                     id="delete"
                   >
@@ -2616,7 +2246,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                       d="M5 5H19L18.5 22H5.5L5 5Z"
                       fill="transparent"
                       id="fill1"
-                      mask="url(#t-icon-delete-instance-v42-overlap-fill1)"
                     />
                     <path
                       d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -2713,40 +2342,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-delete-instance-v43-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <path
-                        d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M12 9V18"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </mask>
-                  </defs>
                   <g
                     id="delete"
                   >
@@ -2754,7 +2349,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                       d="M5 5H19L18.5 22H5.5L5 5Z"
                       fill="transparent"
                       id="fill1"
-                      mask="url(#t-icon-delete-instance-v43-overlap-fill1)"
                     />
                     <path
                       d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -2820,40 +2414,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-delete-instance-v45-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <path
-                        d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M12 9V18"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </mask>
-                  </defs>
                   <g
                     id="delete"
                   >
@@ -2861,7 +2421,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                       d="M5 5H19L18.5 22H5.5L5 5Z"
                       fill="transparent"
                       id="fill1"
-                      mask="url(#t-icon-delete-instance-v45-overlap-fill1)"
                     />
                     <path
                       d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -2927,40 +2486,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-delete-instance-v47-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <path
-                        d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M12 9V18"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </mask>
-                  </defs>
                   <g
                     id="delete"
                   >
@@ -2968,7 +2493,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                       d="M5 5H19L18.5 22H5.5L5 5Z"
                       fill="transparent"
                       id="fill1"
-                      mask="url(#t-icon-delete-instance-v47-overlap-fill1)"
                     />
                     <path
                       d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -3034,40 +2558,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-delete-instance-v49-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <path
-                        d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M12 9V18"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </mask>
-                  </defs>
                   <g
                     id="delete"
                   >
@@ -3075,7 +2565,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                       d="M5 5H19L18.5 22H5.5L5 5Z"
                       fill="transparent"
                       id="fill1"
-                      mask="url(#t-icon-delete-instance-v49-overlap-fill1)"
                     />
                     <path
                       d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -3153,40 +2642,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-delete-instance-v51-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <path
-                        d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M12 9V18"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </mask>
-                  </defs>
                   <g
                     id="delete"
                   >
@@ -3194,7 +2649,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                       d="M5 5H19L18.5 22H5.5L5 5Z"
                       fill="transparent"
                       id="fill1"
-                      mask="url(#t-icon-delete-instance-v51-overlap-fill1)"
                     />
                     <path
                       d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -3264,40 +2718,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-delete-instance-v53-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <path
-                        d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M12 9V18"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </mask>
-                  </defs>
                   <g
                     id="delete"
                   >
@@ -3305,7 +2725,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                       d="M5 5H19L18.5 22H5.5L5 5Z"
                       fill="transparent"
                       id="fill1"
-                      mask="url(#t-icon-delete-instance-v53-overlap-fill1)"
                     />
                     <path
                       d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -3402,67 +2821,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <defs>
-                      <mask
-                        height="24"
-                        id="t-icon-camera-instance-v54-overlap-fill1"
-                        mask-type="luminance"
-                        maskContentUnits="userSpaceOnUse"
-                        maskUnits="userSpaceOnUse"
-                        width="24"
-                        x="0"
-                        y="0"
-                      >
-                        <rect
-                          fill="#fff"
-                          height="24"
-                          width="24"
-                          x="0"
-                          y="0"
-                        />
-                        <path
-                          d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                          fill="#000"
-                          stroke="none"
-                        />
-                        <path
-                          d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-width="2"
-                        />
-                      </mask>
-                      <mask
-                        height="24"
-                        id="t-icon-camera-instance-v54-overlap-fill2"
-                        mask-type="luminance"
-                        maskContentUnits="userSpaceOnUse"
-                        maskUnits="userSpaceOnUse"
-                        width="24"
-                        x="0"
-                        y="0"
-                      >
-                        <rect
-                          fill="#fff"
-                          height="24"
-                          width="24"
-                          x="0"
-                          y="0"
-                        />
-                        <path
-                          d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-width="2"
-                        />
-                      </mask>
-                    </defs>
                     <g
                       id="camera"
                     >
@@ -3470,13 +2828,11 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                         d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
                         fill="transparent"
                         id="fill1"
-                        mask="url(#t-icon-camera-instance-v54-overlap-fill1)"
                       />
                       <path
                         d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
                         fill="transparent"
                         id="fill2"
-                        mask="url(#t-icon-camera-instance-v54-overlap-fill2)"
                       />
                       <path
                         d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
@@ -3541,67 +2897,6 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                     viewBox="0 0 24 24"
                     width="1em"
                   >
-                    <defs>
-                      <mask
-                        height="24"
-                        id="t-icon-camera-instance-v55-overlap-fill1"
-                        mask-type="luminance"
-                        maskContentUnits="userSpaceOnUse"
-                        maskUnits="userSpaceOnUse"
-                        width="24"
-                        x="0"
-                        y="0"
-                      >
-                        <rect
-                          fill="#fff"
-                          height="24"
-                          width="24"
-                          x="0"
-                          y="0"
-                        />
-                        <path
-                          d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                          fill="#000"
-                          stroke="none"
-                        />
-                        <path
-                          d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-width="2"
-                        />
-                        <path
-                          d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-width="2"
-                        />
-                      </mask>
-                      <mask
-                        height="24"
-                        id="t-icon-camera-instance-v55-overlap-fill2"
-                        mask-type="luminance"
-                        maskContentUnits="userSpaceOnUse"
-                        maskUnits="userSpaceOnUse"
-                        width="24"
-                        x="0"
-                        y="0"
-                      >
-                        <rect
-                          fill="#fff"
-                          height="24"
-                          width="24"
-                          x="0"
-                          y="0"
-                        />
-                        <path
-                          d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-width="2"
-                        />
-                      </mask>
-                    </defs>
                     <g
                       id="camera"
                     >
@@ -3609,13 +2904,11 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
                         d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
                         fill="transparent"
                         id="fill1"
-                        mask="url(#t-icon-camera-instance-v55-overlap-fill1)"
                       />
                       <path
                         d="M16 12.5C16 14.7091 14.2091 16.5 12 16.5C9.79086 16.5 8 14.7091 8 12.5C8 10.2909 9.79086 8.5 12 8.5C14.2091 8.5 16 10.2909 16 12.5Z"
                         fill="transparent"
                         id="fill2"
-                        mask="url(#t-icon-camera-instance-v55-overlap-fill2)"
                       />
                       <path
                         d="M15.5 3H8.5L7 6H2V20H22V6H17L15.5 3Z"
@@ -4234,40 +3527,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
-            <defs>
-              <mask
-                height="24"
-                id="t-icon-close-circle-instance-v5-overlap-fill1"
-                mask-type="luminance"
-                maskContentUnits="userSpaceOnUse"
-                maskUnits="userSpaceOnUse"
-                width="24"
-                x="0"
-                y="0"
-              >
-                <rect
-                  fill="#fff"
-                  height="24"
-                  width="24"
-                  x="0"
-                  y="0"
-                />
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </mask>
-            </defs>
             <g
               id="close-circle"
             >
@@ -4275,7 +3534,6 @@ exports[`Upload > Upload statusVue demo works fine 1`] = `
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                 fill="transparent"
                 id="fill1"
-                mask="url(#t-icon-close-circle-instance-v5-overlap-fill1)"
               />
               <path
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
@@ -4509,40 +3767,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
-            <defs>
-              <mask
-                height="24"
-                id="t-icon-close-circle-instance-v4-overlap-fill1"
-                mask-type="luminance"
-                maskContentUnits="userSpaceOnUse"
-                maskUnits="userSpaceOnUse"
-                width="24"
-                x="0"
-                y="0"
-              >
-                <rect
-                  fill="#fff"
-                  height="24"
-                  width="24"
-                  x="0"
-                  y="0"
-                />
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </mask>
-            </defs>
             <g
               id="close-circle"
             >
@@ -4550,7 +3774,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                 fill="transparent"
                 id="fill1"
-                mask="url(#t-icon-close-circle-instance-v4-overlap-fill1)"
               />
               <path
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
@@ -4615,40 +3838,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
-            <defs>
-              <mask
-                height="24"
-                id="t-icon-close-circle-instance-v6-overlap-fill1"
-                mask-type="luminance"
-                maskContentUnits="userSpaceOnUse"
-                maskUnits="userSpaceOnUse"
-                width="24"
-                x="0"
-                y="0"
-              >
-                <rect
-                  fill="#fff"
-                  height="24"
-                  width="24"
-                  x="0"
-                  y="0"
-                />
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </mask>
-            </defs>
             <g
               id="close-circle"
             >
@@ -4656,7 +3845,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                 fill="transparent"
                 id="fill1"
-                mask="url(#t-icon-close-circle-instance-v6-overlap-fill1)"
               />
               <path
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
@@ -5185,40 +4373,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
-            <defs>
-              <mask
-                height="24"
-                id="t-icon-close-circle-instance-v20-overlap-fill1"
-                mask-type="luminance"
-                maskContentUnits="userSpaceOnUse"
-                maskUnits="userSpaceOnUse"
-                width="24"
-                x="0"
-                y="0"
-              >
-                <rect
-                  fill="#fff"
-                  height="24"
-                  width="24"
-                  x="0"
-                  y="0"
-                />
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </mask>
-            </defs>
             <g
               id="close-circle"
             >
@@ -5226,7 +4380,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                 fill="transparent"
                 id="fill1"
-                mask="url(#t-icon-close-circle-instance-v20-overlap-fill1)"
               />
               <path
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
@@ -5333,40 +4486,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
-            <defs>
-              <mask
-                height="24"
-                id="t-icon-close-circle-instance-v22-overlap-fill1"
-                mask-type="luminance"
-                maskContentUnits="userSpaceOnUse"
-                maskUnits="userSpaceOnUse"
-                width="24"
-                x="0"
-                y="0"
-              >
-                <rect
-                  fill="#fff"
-                  height="24"
-                  width="24"
-                  x="0"
-                  y="0"
-                />
-                <path
-                  d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-                <path
-                  d="M15.1813 8.81836L11.9997 12M11.9997 12L8.81738 15.1823M11.9997 12L15.1813 15.1816M11.9997 12L8.81738 8.81768"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </mask>
-            </defs>
             <g
               id="close-circle"
             >
@@ -5374,7 +4493,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
                 fill="transparent"
                 id="fill1"
-                mask="url(#t-icon-close-circle-instance-v22-overlap-fill1)"
               />
               <path
                 d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12Z"
@@ -5640,40 +4758,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
-              <defs>
-                <mask
-                  height="24"
-                  id="t-icon-delete-instance-v28-overlap-fill1"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M12 9V18"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </mask>
-              </defs>
               <g
                 id="delete"
               >
@@ -5681,7 +4765,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                   d="M5 5H19L18.5 22H5.5L5 5Z"
                   fill="transparent"
                   id="fill1"
-                  mask="url(#t-icon-delete-instance-v28-overlap-fill1)"
                 />
                 <path
                   d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -5743,40 +4826,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
-              <defs>
-                <mask
-                  height="24"
-                  id="t-icon-delete-instance-v30-overlap-fill1"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M12 9V18"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </mask>
-              </defs>
               <g
                 id="delete"
               >
@@ -5784,7 +4833,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                   d="M5 5H19L18.5 22H5.5L5 5Z"
                   fill="transparent"
                   id="fill1"
-                  mask="url(#t-icon-delete-instance-v30-overlap-fill1)"
                 />
                 <path
                   d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -5881,40 +4929,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
-              <defs>
-                <mask
-                  height="24"
-                  id="t-icon-delete-instance-v31-overlap-fill1"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M12 9V18"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </mask>
-              </defs>
               <g
                 id="delete"
               >
@@ -5922,7 +4936,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                   d="M5 5H19L18.5 22H5.5L5 5Z"
                   fill="transparent"
                   id="fill1"
-                  mask="url(#t-icon-delete-instance-v31-overlap-fill1)"
                 />
                 <path
                   d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -5988,40 +5001,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
-              <defs>
-                <mask
-                  height="24"
-                  id="t-icon-delete-instance-v33-overlap-fill1"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M12 9V18"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </mask>
-              </defs>
               <g
                 id="delete"
               >
@@ -6029,7 +5008,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                   d="M5 5H19L18.5 22H5.5L5 5Z"
                   fill="transparent"
                   id="fill1"
-                  mask="url(#t-icon-delete-instance-v33-overlap-fill1)"
                 />
                 <path
                   d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -6095,40 +5073,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
-              <defs>
-                <mask
-                  height="24"
-                  id="t-icon-delete-instance-v35-overlap-fill1"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M12 9V18"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </mask>
-              </defs>
               <g
                 id="delete"
               >
@@ -6136,7 +5080,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                   d="M5 5H19L18.5 22H5.5L5 5Z"
                   fill="transparent"
                   id="fill1"
-                  mask="url(#t-icon-delete-instance-v35-overlap-fill1)"
                 />
                 <path
                   d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -6202,40 +5145,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
-              <defs>
-                <mask
-                  height="24"
-                  id="t-icon-delete-instance-v37-overlap-fill1"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M12 9V18"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </mask>
-              </defs>
               <g
                 id="delete"
               >
@@ -6243,7 +5152,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                   d="M5 5H19L18.5 22H5.5L5 5Z"
                   fill="transparent"
                   id="fill1"
-                  mask="url(#t-icon-delete-instance-v37-overlap-fill1)"
                 />
                 <path
                   d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -6321,40 +5229,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
-              <defs>
-                <mask
-                  height="24"
-                  id="t-icon-delete-instance-v39-overlap-fill1"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M12 9V18"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </mask>
-              </defs>
               <g
                 id="delete"
               >
@@ -6362,7 +5236,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                   d="M5 5H19L18.5 22H5.5L5 5Z"
                   fill="transparent"
                   id="fill1"
-                  mask="url(#t-icon-delete-instance-v39-overlap-fill1)"
                 />
                 <path
                   d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
@@ -6432,40 +5305,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
               viewBox="0 0 24 24"
               width="1em"
             >
-              <defs>
-                <mask
-                  height="24"
-                  id="t-icon-delete-instance-v41-overlap-fill1"
-                  mask-type="luminance"
-                  maskContentUnits="userSpaceOnUse"
-                  maskUnits="userSpaceOnUse"
-                  width="24"
-                  x="0"
-                  y="0"
-                >
-                  <rect
-                    fill="#fff"
-                    height="24"
-                    width="24"
-                    x="0"
-                    y="0"
-                  />
-                  <path
-                    d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                  <path
-                    d="M12 9V18"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </mask>
-              </defs>
               <g
                 id="delete"
               >
@@ -6473,7 +5312,6 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
                   d="M5 5H19L18.5 22H5.5L5 5Z"
                   fill="transparent"
                   id="fill1"
-                  mask="url(#t-icon-delete-instance-v41-overlap-fill1)"
                 />
                 <path
                   d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"

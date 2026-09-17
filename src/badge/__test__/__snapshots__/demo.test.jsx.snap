@@ -47,62 +47,6 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
           viewBox="0 0 24 24"
           width="1em"
         >
-          <defs>
-            <mask
-              height="24"
-              id="t-icon-notification-instance-v0-overlap-fill1"
-              mask-type="luminance"
-              maskContentUnits="userSpaceOnUse"
-              maskUnits="userSpaceOnUse"
-              width="24"
-              x="0"
-              y="0"
-            >
-              <rect
-                fill="#fff"
-                height="24"
-                width="24"
-                x="0"
-                y="0"
-              />
-              <g>
-                <path
-                  d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
-            </mask>
-            <mask
-              height="24"
-              id="t-icon-notification-instance-v0-overlap-fill2"
-              mask-type="luminance"
-              maskContentUnits="userSpaceOnUse"
-              maskUnits="userSpaceOnUse"
-              width="24"
-              x="0"
-              y="0"
-            >
-              <rect
-                fill="#fff"
-                height="24"
-                width="24"
-                x="0"
-                y="0"
-              />
-              <g>
-                <path
-                  d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
-            </mask>
-          </defs>
           <g
             id="notification"
           >
@@ -110,19 +54,23 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
               d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
               fill="transparent"
               id="fill1"
-              mask="url(#t-icon-notification-instance-v0-overlap-fill1)"
             />
             <path
               d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
               fill="transparent"
               id="fill2"
-              mask="url(#t-icon-notification-instance-v0-overlap-fill2)"
             />
             <g
               id="stroke1"
             >
               <path
-                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
                 stroke="currentColor"
                 stroke-linecap="square"
                 stroke-width="2"
@@ -225,62 +173,6 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
           viewBox="0 0 24 24"
           width="1em"
         >
-          <defs>
-            <mask
-              height="24"
-              id="t-icon-notification-instance-v1-overlap-fill1"
-              mask-type="luminance"
-              maskContentUnits="userSpaceOnUse"
-              maskUnits="userSpaceOnUse"
-              width="24"
-              x="0"
-              y="0"
-            >
-              <rect
-                fill="#fff"
-                height="24"
-                width="24"
-                x="0"
-                y="0"
-              />
-              <g>
-                <path
-                  d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
-            </mask>
-            <mask
-              height="24"
-              id="t-icon-notification-instance-v1-overlap-fill2"
-              mask-type="luminance"
-              maskContentUnits="userSpaceOnUse"
-              maskUnits="userSpaceOnUse"
-              width="24"
-              x="0"
-              y="0"
-            >
-              <rect
-                fill="#fff"
-                height="24"
-                width="24"
-                x="0"
-                y="0"
-              />
-              <g>
-                <path
-                  d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
-            </mask>
-          </defs>
           <g
             id="notification"
           >
@@ -288,19 +180,23 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
               d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
               fill="transparent"
               id="fill1"
-              mask="url(#t-icon-notification-instance-v1-overlap-fill1)"
             />
             <path
               d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
               fill="transparent"
               id="fill2"
-              mask="url(#t-icon-notification-instance-v1-overlap-fill2)"
             />
             <g
               id="stroke1"
             >
               <path
-                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
                 stroke="currentColor"
                 stroke-linecap="square"
                 stroke-width="2"
@@ -387,62 +283,6 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
-            <defs>
-              <mask
-                height="24"
-                id="t-icon-notification-instance-v2-overlap-fill1"
-                mask-type="luminance"
-                maskContentUnits="userSpaceOnUse"
-                maskUnits="userSpaceOnUse"
-                width="24"
-                x="0"
-                y="0"
-              >
-                <rect
-                  fill="#fff"
-                  height="24"
-                  width="24"
-                  x="0"
-                  y="0"
-                />
-                <g>
-                  <path
-                    d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </mask>
-              <mask
-                height="24"
-                id="t-icon-notification-instance-v2-overlap-fill2"
-                mask-type="luminance"
-                maskContentUnits="userSpaceOnUse"
-                maskUnits="userSpaceOnUse"
-                width="24"
-                x="0"
-                y="0"
-              >
-                <rect
-                  fill="#fff"
-                  height="24"
-                  width="24"
-                  x="0"
-                  y="0"
-                />
-                <g>
-                  <path
-                    d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                    fill="none"
-                    stroke="#000"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </mask>
-            </defs>
             <g
               id="notification"
             >
@@ -450,19 +290,23 @@ exports[`Badge > Badge baseVue demo works fine 1`] = `
                 d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
                 fill="transparent"
                 id="fill1"
-                mask="url(#t-icon-notification-instance-v2-overlap-fill1)"
               />
               <path
                 d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
                 fill="transparent"
                 id="fill2"
-                mask="url(#t-icon-notification-instance-v2-overlap-fill2)"
               />
               <g
                 id="stroke1"
               >
                 <path
-                  d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                  d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+                <path
+                  d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
                   stroke="currentColor"
                   stroke-linecap="square"
                   stroke-width="2"
@@ -571,62 +415,6 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <defs>
-                  <mask
-                    height="24"
-                    id="t-icon-notification-instance-v0-overlap-fill1"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <g>
-                      <path
-                        d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </mask>
-                  <mask
-                    height="24"
-                    id="t-icon-notification-instance-v0-overlap-fill2"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <g>
-                      <path
-                        d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </mask>
-                </defs>
                 <g
                   id="notification"
                 >
@@ -634,19 +422,23 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                     d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
                     fill="transparent"
                     id="fill1"
-                    mask="url(#t-icon-notification-instance-v0-overlap-fill1)"
                   />
                   <path
                     d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
                     fill="transparent"
                     id="fill2"
-                    mask="url(#t-icon-notification-instance-v0-overlap-fill2)"
                   />
                   <g
                     id="stroke1"
                   >
                     <path
-                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
                       stroke="currentColor"
                       stroke-linecap="square"
                       stroke-width="2"
@@ -749,62 +541,6 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <defs>
-                  <mask
-                    height="24"
-                    id="t-icon-notification-instance-v1-overlap-fill1"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <g>
-                      <path
-                        d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </mask>
-                  <mask
-                    height="24"
-                    id="t-icon-notification-instance-v1-overlap-fill2"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <g>
-                      <path
-                        d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </mask>
-                </defs>
                 <g
                   id="notification"
                 >
@@ -812,19 +548,23 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                     d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
                     fill="transparent"
                     id="fill1"
-                    mask="url(#t-icon-notification-instance-v1-overlap-fill1)"
                   />
                   <path
                     d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
                     fill="transparent"
                     id="fill2"
-                    mask="url(#t-icon-notification-instance-v1-overlap-fill2)"
                   />
                   <g
                     id="stroke1"
                   >
                     <path
-                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
                       stroke="currentColor"
                       stroke-linecap="square"
                       stroke-width="2"
@@ -911,62 +651,6 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-notification-instance-v2-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <g>
-                        <path
-                          d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </mask>
-                    <mask
-                      height="24"
-                      id="t-icon-notification-instance-v2-overlap-fill2"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <g>
-                        <path
-                          d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </mask>
-                  </defs>
                   <g
                     id="notification"
                   >
@@ -974,19 +658,23 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                       d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
                       fill="transparent"
                       id="fill1"
-                      mask="url(#t-icon-notification-instance-v2-overlap-fill1)"
                     />
                     <path
                       d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
                       fill="transparent"
                       id="fill2"
-                      mask="url(#t-icon-notification-instance-v2-overlap-fill2)"
                     />
                     <g
                       id="stroke1"
                     >
                       <path
-                        d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                        d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
                         stroke="currentColor"
                         stroke-linecap="square"
                         stroke-width="2"
@@ -1060,62 +748,6 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <defs>
-                  <mask
-                    height="24"
-                    id="t-icon-notification-instance-v3-overlap-fill1"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <g>
-                      <path
-                        d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </mask>
-                  <mask
-                    height="24"
-                    id="t-icon-notification-instance-v3-overlap-fill2"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <g>
-                      <path
-                        d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </mask>
-                </defs>
                 <g
                   id="notification"
                 >
@@ -1123,19 +755,23 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                     d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
                     fill="transparent"
                     id="fill1"
-                    mask="url(#t-icon-notification-instance-v3-overlap-fill1)"
                   />
                   <path
                     d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
                     fill="transparent"
                     id="fill2"
-                    mask="url(#t-icon-notification-instance-v3-overlap-fill2)"
                   />
                   <g
                     id="stroke1"
                   >
                     <path
-                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
                       stroke="currentColor"
                       stroke-linecap="square"
                       stroke-width="2"
@@ -1180,62 +816,6 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                 viewBox="0 0 24 24"
                 width="1em"
               >
-                <defs>
-                  <mask
-                    height="24"
-                    id="t-icon-notification-instance-v4-overlap-fill1"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <g>
-                      <path
-                        d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </mask>
-                  <mask
-                    height="24"
-                    id="t-icon-notification-instance-v4-overlap-fill2"
-                    mask-type="luminance"
-                    maskContentUnits="userSpaceOnUse"
-                    maskUnits="userSpaceOnUse"
-                    width="24"
-                    x="0"
-                    y="0"
-                  >
-                    <rect
-                      fill="#fff"
-                      height="24"
-                      width="24"
-                      x="0"
-                      y="0"
-                    />
-                    <g>
-                      <path
-                        d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </mask>
-                </defs>
                 <g
                   id="notification"
                 >
@@ -1243,19 +823,23 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                     d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
                     fill="transparent"
                     id="fill1"
-                    mask="url(#t-icon-notification-instance-v4-overlap-fill1)"
                   />
                   <path
                     d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
                     fill="transparent"
                     id="fill2"
-                    mask="url(#t-icon-notification-instance-v4-overlap-fill2)"
                   />
                   <g
                     id="stroke1"
                   >
                     <path
-                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                      d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
                       stroke="currentColor"
                       stroke-linecap="square"
                       stroke-width="2"
@@ -1307,33 +891,6 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-shop-instance-v5-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <path
-                        d="M15.5 11V5.5C15.5 3.567 13.933 2 12 2C10.067 2 8.5 3.567 8.5 5.5V11M4 8H20V22H4V8Z"
-                        fill="none"
-                        stroke="#000"
-                        stroke-linecap="square"
-                        stroke-width="2"
-                      />
-                    </mask>
-                  </defs>
                   <g
                     id="shop"
                   >
@@ -1341,7 +898,6 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                       d="M4 8H20V22H4V8Z"
                       fill="transparent"
                       id="fill1"
-                      mask="url(#t-icon-shop-instance-v5-overlap-fill1)"
                     />
                     <path
                       d="M15.5 11V5.5C15.5 3.567 13.933 2 12 2C10.067 2 8.5 3.567 8.5 5.5V11M4 8H20V22H4V8Z"
@@ -1625,41 +1181,11 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                         viewBox="0 0 24 24"
                         width="1em"
                       >
-                        <defs>
-                          <mask
-                            height="24"
-                            id="t-icon-user-instance-v6-overlap-fill1"
-                            mask-type="luminance"
-                            maskContentUnits="userSpaceOnUse"
-                            maskUnits="userSpaceOnUse"
-                            width="24"
-                            x="0"
-                            y="0"
-                          >
-                            <rect
-                              fill="#fff"
-                              height="24"
-                              width="24"
-                              x="0"
-                              y="0"
-                            />
-                            <g>
-                              <path
-                                d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                                fill="none"
-                                stroke="#000"
-                                stroke-linecap="square"
-                                stroke-width="2"
-                              />
-                            </g>
-                          </mask>
-                        </defs>
                         <g
                           id="user"
                         >
                           <g
                             id="fill1"
-                            mask="url(#t-icon-user-instance-v6-overlap-fill1)"
                           >
                             <path
                               d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
@@ -1674,7 +1200,13 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                             id="stroke1"
                           >
                             <path
-                              d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
+                              d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
+                              stroke="currentColor"
+                              stroke-linecap="square"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
                               stroke="currentColor"
                               stroke-linecap="square"
                               stroke-width="2"
@@ -1735,41 +1267,11 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                         viewBox="0 0 24 24"
                         width="1em"
                       >
-                        <defs>
-                          <mask
-                            height="24"
-                            id="t-icon-user-instance-v7-overlap-fill1"
-                            mask-type="luminance"
-                            maskContentUnits="userSpaceOnUse"
-                            maskUnits="userSpaceOnUse"
-                            width="24"
-                            x="0"
-                            y="0"
-                          >
-                            <rect
-                              fill="#fff"
-                              height="24"
-                              width="24"
-                              x="0"
-                              y="0"
-                            />
-                            <g>
-                              <path
-                                d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                                fill="none"
-                                stroke="#000"
-                                stroke-linecap="square"
-                                stroke-width="2"
-                              />
-                            </g>
-                          </mask>
-                        </defs>
                         <g
                           id="user"
                         >
                           <g
                             id="fill1"
-                            mask="url(#t-icon-user-instance-v7-overlap-fill1)"
                           >
                             <path
                               d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
@@ -1784,7 +1286,13 @@ exports[`Badge > Badge mobileVue demo works fine 1`] = `
                             id="stroke1"
                           >
                             <path
-                              d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
+                              d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
+                              stroke="currentColor"
+                              stroke-linecap="square"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
                               stroke="currentColor"
                               stroke-linecap="square"
                               stroke-width="2"
@@ -1854,41 +1362,11 @@ exports[`Badge > Badge sizeVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-user-instance-v0-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <g>
-                        <path
-                          d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </mask>
-                  </defs>
                   <g
                     id="user"
                   >
                     <g
                       id="fill1"
-                      mask="url(#t-icon-user-instance-v0-overlap-fill1)"
                     >
                       <path
                         d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
@@ -1903,7 +1381,13 @@ exports[`Badge > Badge sizeVue demo works fine 1`] = `
                       id="stroke1"
                     >
                       <path
-                        d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
+                        d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
                         stroke="currentColor"
                         stroke-linecap="square"
                         stroke-width="2"
@@ -1964,41 +1448,11 @@ exports[`Badge > Badge sizeVue demo works fine 1`] = `
                   viewBox="0 0 24 24"
                   width="1em"
                 >
-                  <defs>
-                    <mask
-                      height="24"
-                      id="t-icon-user-instance-v1-overlap-fill1"
-                      mask-type="luminance"
-                      maskContentUnits="userSpaceOnUse"
-                      maskUnits="userSpaceOnUse"
-                      width="24"
-                      x="0"
-                      y="0"
-                    >
-                      <rect
-                        fill="#fff"
-                        height="24"
-                        width="24"
-                        x="0"
-                        y="0"
-                      />
-                      <g>
-                        <path
-                          d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
-                          fill="none"
-                          stroke="#000"
-                          stroke-linecap="square"
-                          stroke-width="2"
-                        />
-                      </g>
-                    </mask>
-                  </defs>
                   <g
                     id="user"
                   >
                     <g
                       id="fill1"
-                      mask="url(#t-icon-user-instance-v1-overlap-fill1)"
                     >
                       <path
                         d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
@@ -2013,7 +1467,13 @@ exports[`Badge > Badge sizeVue demo works fine 1`] = `
                       id="stroke1"
                     >
                       <path
-                        d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
+                        d="M16.5 7.5C16.5 9.98528 14.4853 12 12 12C9.51472 12 7.5 9.98528 7.5 7.5C7.5 5.01472 9.51472 3 12 3C14.4853 3 16.5 5.01472 16.5 7.5Z"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21H20Z"
                         stroke="currentColor"
                         stroke-linecap="square"
                         stroke-width="2"
@@ -2067,62 +1527,6 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
           viewBox="0 0 24 24"
           width="1em"
         >
-          <defs>
-            <mask
-              height="24"
-              id="t-icon-notification-instance-v0-overlap-fill1"
-              mask-type="luminance"
-              maskContentUnits="userSpaceOnUse"
-              maskUnits="userSpaceOnUse"
-              width="24"
-              x="0"
-              y="0"
-            >
-              <rect
-                fill="#fff"
-                height="24"
-                width="24"
-                x="0"
-                y="0"
-              />
-              <g>
-                <path
-                  d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
-            </mask>
-            <mask
-              height="24"
-              id="t-icon-notification-instance-v0-overlap-fill2"
-              mask-type="luminance"
-              maskContentUnits="userSpaceOnUse"
-              maskUnits="userSpaceOnUse"
-              width="24"
-              x="0"
-              y="0"
-            >
-              <rect
-                fill="#fff"
-                height="24"
-                width="24"
-                x="0"
-                y="0"
-              />
-              <g>
-                <path
-                  d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
-            </mask>
-          </defs>
           <g
             id="notification"
           >
@@ -2130,19 +1534,23 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
               d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
               fill="transparent"
               id="fill1"
-              mask="url(#t-icon-notification-instance-v0-overlap-fill1)"
             />
             <path
               d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
               fill="transparent"
               id="fill2"
-              mask="url(#t-icon-notification-instance-v0-overlap-fill2)"
             />
             <g
               id="stroke1"
             >
               <path
-                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
                 stroke="currentColor"
                 stroke-linecap="square"
                 stroke-width="2"
@@ -2187,62 +1595,6 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
           viewBox="0 0 24 24"
           width="1em"
         >
-          <defs>
-            <mask
-              height="24"
-              id="t-icon-notification-instance-v1-overlap-fill1"
-              mask-type="luminance"
-              maskContentUnits="userSpaceOnUse"
-              maskUnits="userSpaceOnUse"
-              width="24"
-              x="0"
-              y="0"
-            >
-              <rect
-                fill="#fff"
-                height="24"
-                width="24"
-                x="0"
-                y="0"
-              />
-              <g>
-                <path
-                  d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
-            </mask>
-            <mask
-              height="24"
-              id="t-icon-notification-instance-v1-overlap-fill2"
-              mask-type="luminance"
-              maskContentUnits="userSpaceOnUse"
-              maskUnits="userSpaceOnUse"
-              width="24"
-              x="0"
-              y="0"
-            >
-              <rect
-                fill="#fff"
-                height="24"
-                width="24"
-                x="0"
-                y="0"
-              />
-              <g>
-                <path
-                  d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
-            </mask>
-          </defs>
           <g
             id="notification"
           >
@@ -2250,19 +1602,23 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
               d="M3 19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8V13L3 16V19Z"
               fill="transparent"
               id="fill1"
-              mask="url(#t-icon-notification-instance-v1-overlap-fill1)"
             />
             <path
               d="M12 22.5C13.933 22.5 15.5 20.933 15.5 19H8.5C8.5 20.933 10.067 22.5 12 22.5Z"
               fill="transparent"
               id="fill2"
-              mask="url(#t-icon-notification-instance-v1-overlap-fill2)"
             />
             <g
               id="stroke1"
             >
               <path
-                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
+                d="M5 8V13L3 16V19H21V16L19 13V8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8Z"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+              <path
+                d="M8.5 19H15.5C15.5 20.933 13.933 22.5 12 22.5C10.067 22.5 8.5 20.933 8.5 19Z"
                 stroke="currentColor"
                 stroke-linecap="square"
                 stroke-width="2"
@@ -2314,33 +1670,6 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
             viewBox="0 0 24 24"
             width="1em"
           >
-            <defs>
-              <mask
-                height="24"
-                id="t-icon-shop-instance-v2-overlap-fill1"
-                mask-type="luminance"
-                maskContentUnits="userSpaceOnUse"
-                maskUnits="userSpaceOnUse"
-                width="24"
-                x="0"
-                y="0"
-              >
-                <rect
-                  fill="#fff"
-                  height="24"
-                  width="24"
-                  x="0"
-                  y="0"
-                />
-                <path
-                  d="M15.5 11V5.5C15.5 3.567 13.933 2 12 2C10.067 2 8.5 3.567 8.5 5.5V11M4 8H20V22H4V8Z"
-                  fill="none"
-                  stroke="#000"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </mask>
-            </defs>
             <g
               id="shop"
             >
@@ -2348,7 +1677,6 @@ exports[`Badge > Badge themeVue demo works fine 1`] = `
                 d="M4 8H20V22H4V8Z"
                 fill="transparent"
                 id="fill1"
-                mask="url(#t-icon-shop-instance-v2-overlap-fill1)"
               />
               <path
                 d="M15.5 11V5.5C15.5 3.567 13.933 2 12 2C10.067 2 8.5 3.567 8.5 5.5V11M4 8H20V22H4V8Z"
