@@ -91,7 +91,7 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
   
   <div
     class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    style="z-index: 11500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -130,7 +130,7 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
   
   <div
     class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    style="z-index: 11500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -285,7 +285,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         
         <div
           class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          style="z-index: 11500; transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>
@@ -349,7 +349,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         
         <div
           class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          style="z-index: 11500; transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>
@@ -412,7 +412,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         
         <div
           class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          style="z-index: 11500; transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>
@@ -486,7 +486,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         
         <div
           class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          style="z-index: 1500; transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>
@@ -533,7 +533,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             
             <div
               class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
+              style="z-index: 1600; transition-duration: 300ms; display: none;"
             >
               <!---->
             </div>
@@ -618,7 +618,7 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
   
   <div
     class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    style="z-index: 1500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -665,7 +665,7 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
       
       <div
         class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        style="z-index: 1600; transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -745,7 +745,7 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
   
   <div
     class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    style="z-index: 11500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
