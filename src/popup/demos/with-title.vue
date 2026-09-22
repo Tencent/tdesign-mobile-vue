@@ -21,8 +21,6 @@ const onHide = () => (visible.value = false);
 </script>
 
 <style lang="less" scoped>
-@import '../../_common/style/mobile/_variables';
-
 .popup-demo {
   padding: 0 16px;
 }
@@ -51,6 +49,6 @@ const onHide = () => (visible.value = false);
 }
 
 .btn--confirm {
-  color: @brand-color;
+  color: var(--td-brand-color);
 }
 </style>

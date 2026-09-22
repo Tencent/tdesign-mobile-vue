@@ -6,8 +6,6 @@
 </template>
 
 <style lang="less">
-@import '../../_common/style/mobile/_variables';
-
 .avatar-demo {
   margin-left: 16px;
   margin-bottom: 16px;
@@ -19,7 +17,7 @@
   .external-class-content {
     .t-avatar {
       color: #fff;
-      background-color: @brand-color;
+      background-color: var(--td-brand-color);
       font-weight: 400;
     }
   }
