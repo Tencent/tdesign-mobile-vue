@@ -32,8 +32,6 @@ const onChange1 = (value: any, context: { e: Event }) => {
 };
 </script>
 <style lang="less" scoped>
-@import '../../_common/style/mobile/_variables';
-
 .demo-desc {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.6);
@@ -51,7 +49,7 @@ const onChange1 = (value: any, context: { e: Event }) => {
 }
 
 .card--active {
-  border-color: @brand-color;
+  border-color: var(--td-brand-color);
 }
 
 .card--active::after {
@@ -61,7 +59,7 @@ const onChange1 = (value: any, context: { e: Event }) => {
   left: 0;
   top: 0;
   width: 0;
-  border: 14px solid @brand-color;
+  border: 14px solid var(--td-brand-color);
   border-bottom-color: transparent;
   border-right-color: transparent;
 }

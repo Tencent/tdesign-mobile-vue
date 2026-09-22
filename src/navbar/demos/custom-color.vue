@@ -11,10 +11,8 @@ import { Icon as TIcon } from 'tdesign-icons-vue-next';
 </script>
 
 <style lang="less" scoped>
-@import '../../_common/style/mobile/_variables';
-
 .custom-navbar {
-  --td-navbar-bg-color: @brand-color;
+  --td-navbar-bg-color: var(--td-brand-color);
   --td-navbar-color: #fff;
 }
 </style>

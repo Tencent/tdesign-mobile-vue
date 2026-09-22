@@ -30,6 +30,9 @@
       ],
       "tdesign-mobile-vue/es/locale/*": [
         "./src/locale/*"
+      ],
+      "tdesign-mobile-vue/es/_util/*": [
+        "./src/_util/*"
       ]
     },
     "types": [

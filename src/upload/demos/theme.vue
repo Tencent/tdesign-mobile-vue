@@ -28,8 +28,8 @@
 </template>
 
 <script lang="ts" setup>
+import type { UploadFile, RequestMethodResponse } from 'tdesign-mobile-vue';
 import { Toast } from 'tdesign-mobile-vue';
-import type { UploadFile, RequestMethodResponse } from '../type';
 
 // 示例图片 URL
 const IMAGE_URL = 'https://tdesign.gtimg.com/mobile/demos/upload6.png';
