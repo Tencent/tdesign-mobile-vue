@@ -3,13 +3,13 @@
 exports[`Radio > Radio baseVue demo works fine 1`] = `
 <div>
   <div
-    class="t-radio-group radio-group-demo"
+    class="t-radio-group t-radio-group--vertical radio-group-demo"
     role="radiogroup"
   >
     <!---->
     
     <div
-      class="t-radio t-radio--left t-radio--block"
+      class="t-radio t-radio--left t-radio--block t-radio--vertical"
     >
       <input
         class="t-radio__original"
@@ -41,7 +41,7 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
       />
     </div>
     <div
-      class="t-radio t-radio--left t-radio--block"
+      class="t-radio t-radio--left t-radio--block t-radio--vertical"
     >
       <input
         class="t-radio__original"
@@ -73,7 +73,7 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
       />
     </div>
     <div
-      class="t-radio t-radio--left t-radio--block"
+      class="t-radio t-radio--left t-radio--block t-radio--vertical"
     >
       <input
         checked=""
@@ -116,7 +116,7 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
       />
     </div>
     <div
-      class="t-radio t-radio--left t-radio--block"
+      class="t-radio t-radio--left t-radio--block t-radio--vertical"
     >
       <input
         class="t-radio__original"
@@ -160,13 +160,13 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
 exports[`Radio > Radio cardVue demo works fine 1`] = `
 <div>
   <div
-    class="t-radio-group theme-card"
+    class="t-radio-group t-radio-group--vertical theme-card"
     role="radiogroup"
   >
     <!---->
     
     <div
-      class="t-radio t-radio--left t-radio--block"
+      class="t-radio t-radio--left t-radio--block t-radio--vertical"
     >
       <input
         checked=""
@@ -209,7 +209,7 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
       />
     </div>
     <div
-      class="t-radio t-radio--left t-radio--block"
+      class="t-radio t-radio--left t-radio--block t-radio--vertical"
     >
       <input
         class="t-radio__original"
@@ -241,7 +241,7 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
       />
     </div>
     <div
-      class="t-radio t-radio--left t-radio--block"
+      class="t-radio t-radio--left t-radio--block t-radio--vertical"
     >
       <input
         class="t-radio__original"
@@ -283,7 +283,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
 >
   
   <div
-    class="t-radio-group"
+    class="t-radio-group t-radio-group--vertical"
     data-v-bb126958=""
     role="radiogroup"
   >
@@ -303,7 +303,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         />
       </svg>
       <div
-        class="t-radio t-radio--left t-radio--block"
+        class="t-radio t-radio--left t-radio--block t-radio--vertical"
         data-v-bb126958=""
       >
         <input
@@ -344,7 +344,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     >
       <!--v-if-->
       <div
-        class="t-radio t-radio--left t-radio--block"
+        class="t-radio t-radio--left t-radio--block t-radio--vertical"
         data-v-bb126958=""
       >
         <input
@@ -384,7 +384,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     >
       <!--v-if-->
       <div
-        class="t-radio t-radio--left t-radio--block"
+        class="t-radio t-radio--left t-radio--block t-radio--vertical"
         data-v-bb126958=""
       >
         <input
@@ -429,7 +429,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     横向卡片单选框
   </div>
   <div
-    class="t-radio-group horizontal-box"
+    class="t-radio-group t-radio-group--vertical horizontal-box"
     data-v-bb126958=""
     role="radiogroup"
   >
@@ -449,7 +449,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         />
       </svg>
       <div
-        class="t-radio t-radio--left t-radio--block"
+        class="t-radio t-radio--left t-radio--block t-radio--vertical"
         data-v-bb126958=""
       >
         <input
@@ -485,7 +485,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     >
       <!--v-if-->
       <div
-        class="t-radio t-radio--left t-radio--block"
+        class="t-radio t-radio--left t-radio--block t-radio--vertical"
         data-v-bb126958=""
       >
         <input
@@ -520,7 +520,7 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
     >
       <!--v-if-->
       <div
-        class="t-radio t-radio--left t-radio--block"
+        class="t-radio t-radio--left t-radio--block t-radio--vertical"
         data-v-bb126958=""
       >
         <input
@@ -558,13 +558,15 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
 
 exports[`Radio > Radio horizontalVue demo works fine 1`] = `
 <div
-  class="t-radio-group box"
+  class="t-radio-group t-radio-group--horizontal box"
+  data-v-7683d1f4=""
   role="radiogroup"
 >
   <!---->
   
   <div
-    class="t-radio t-radio--left"
+    class="t-radio t-radio--left t-radio--block t-radio--horizontal"
+    data-v-7683d1f4=""
   >
     <input
       class="t-radio__original"
@@ -594,7 +596,8 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-radio t-radio--left"
+    class="t-radio t-radio--left t-radio--block t-radio--horizontal"
+    data-v-7683d1f4=""
   >
     <input
       class="t-radio__original"
@@ -624,7 +627,8 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
     <!---->
   </div>
   <div
-    class="t-radio t-radio--left"
+    class="t-radio t-radio--left t-radio--block t-radio--horizontal"
+    data-v-7683d1f4=""
   >
     <input
       checked=""
@@ -797,13 +801,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       
       <div>
         <div
-          class="t-radio-group radio-group-demo"
+          class="t-radio-group t-radio-group--vertical radio-group-demo"
           role="radiogroup"
         >
           <!---->
           
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
           >
             <input
               class="t-radio__original"
@@ -835,7 +839,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             />
           </div>
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
           >
             <input
               class="t-radio__original"
@@ -867,7 +871,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             />
           </div>
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
           >
             <input
               checked=""
@@ -910,7 +914,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             />
           </div>
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
           >
             <input
               class="t-radio__original"
@@ -970,13 +974,15 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-radio-group box"
+        class="t-radio-group t-radio-group--horizontal box"
+        data-v-7683d1f4=""
         role="radiogroup"
       >
         <!---->
         
         <div
-          class="t-radio t-radio--left"
+          class="t-radio t-radio--left t-radio--block t-radio--horizontal"
+          data-v-7683d1f4=""
         >
           <input
             class="t-radio__original"
@@ -1006,7 +1012,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-radio t-radio--left"
+          class="t-radio t-radio--left t-radio--block t-radio--horizontal"
+          data-v-7683d1f4=""
         >
           <input
             class="t-radio__original"
@@ -1036,7 +1043,8 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <!---->
         </div>
         <div
-          class="t-radio t-radio--left"
+          class="t-radio t-radio--left t-radio--block t-radio--horizontal"
+          data-v-7683d1f4=""
         >
           <input
             checked=""
@@ -1103,13 +1111,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
     >
       
       <div
-        class="t-radio-group radio-group-demo space"
+        class="t-radio-group t-radio-group--vertical radio-group-demo space"
         data-v-af6326fa=""
         role="radiogroup"
       >
         
         <div
-          class="t-radio t-radio--left t-radio--block"
+          class="t-radio t-radio--left t-radio--block t-radio--vertical"
         >
           <input
             checked=""
@@ -1153,7 +1161,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           />
         </div>
         <div
-          class="t-radio t-radio--left t-radio--block"
+          class="t-radio t-radio--left t-radio--block t-radio--vertical"
         >
           <input
             class="t-radio__original"
@@ -1427,13 +1435,13 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       
       <div>
         <div
-          class="t-radio-group theme-card"
+          class="t-radio-group t-radio-group--vertical theme-card"
           role="radiogroup"
         >
           <!---->
           
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
           >
             <input
               checked=""
@@ -1476,7 +1484,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             />
           </div>
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
           >
             <input
               class="t-radio__original"
@@ -1508,7 +1516,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             />
           </div>
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
           >
             <input
               class="t-radio__original"
@@ -1568,7 +1576,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
       
       
       <div
-        class="t-radio-group"
+        class="t-radio-group t-radio-group--vertical"
         data-v-bb126958=""
         role="radiogroup"
       >
@@ -1588,7 +1596,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             />
           </svg>
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
             data-v-bb126958=""
           >
             <input
@@ -1629,7 +1637,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         >
           <!--v-if-->
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
             data-v-bb126958=""
           >
             <input
@@ -1669,7 +1677,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         >
           <!--v-if-->
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
             data-v-bb126958=""
           >
             <input
@@ -1714,7 +1722,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         横向卡片单选框
       </div>
       <div
-        class="t-radio-group horizontal-box"
+        class="t-radio-group t-radio-group--vertical horizontal-box"
         data-v-bb126958=""
         role="radiogroup"
       >
@@ -1734,7 +1742,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             />
           </svg>
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
             data-v-bb126958=""
           >
             <input
@@ -1770,7 +1778,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         >
           <!--v-if-->
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
             data-v-bb126958=""
           >
             <input
@@ -1805,7 +1813,7 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         >
           <!--v-if-->
           <div
-            class="t-radio t-radio--left t-radio--block"
+            class="t-radio t-radio--left t-radio--block t-radio--vertical"
             data-v-bb126958=""
           >
             <input
@@ -1941,13 +1949,13 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
 
 exports[`Radio > Radio statusVue demo works fine 1`] = `
 <div
-  class="t-radio-group radio-group-demo space"
+  class="t-radio-group t-radio-group--vertical radio-group-demo space"
   data-v-af6326fa=""
   role="radiogroup"
 >
   
   <div
-    class="t-radio t-radio--left t-radio--block"
+    class="t-radio t-radio--left t-radio--block t-radio--vertical"
   >
     <input
       checked=""
@@ -1991,7 +1999,7 @@ exports[`Radio > Radio statusVue demo works fine 1`] = `
     />
   </div>
   <div
-    class="t-radio t-radio--left t-radio--block"
+    class="t-radio t-radio--left t-radio--block t-radio--vertical"
   >
     <input
       class="t-radio__original"
