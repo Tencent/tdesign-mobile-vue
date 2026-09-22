@@ -101,7 +101,7 @@ import {
   UploadRemoveContext,
   SuccessContext,
   ProgressContext,
-} from '../../upload/type';
+} from 'tdesign-mobile-vue';
 
 const props = defineProps({
   disabled: Boolean,
