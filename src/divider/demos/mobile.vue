@@ -14,4 +14,6 @@
 import BaseDemo from './base.vue';
 import ThemeDemo from './theme.vue';
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+@import '../style/index.less';
+</style>
