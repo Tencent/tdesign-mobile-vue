@@ -679,7 +679,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         
         <div
           class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          style="z-index: 11500; transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>
@@ -3330,7 +3330,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       
       <div
         class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        style="z-index: 11500; transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -3975,7 +3975,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     
     <div
       class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      style="z-index: 11500; transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -6626,7 +6626,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
   
   <div
     class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    style="z-index: 11500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>

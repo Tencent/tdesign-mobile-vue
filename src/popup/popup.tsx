@@ -125,6 +125,7 @@ export default defineComponent({
     return () => {
       const renderOverlayContent = (
         <TOverlay
+          zIndex={props.zIndex ?? 11500}
           {...props.overlayProps}
           visible={innerVisible.value && props.showOverlay}
           onClick={handleOverlayClick}

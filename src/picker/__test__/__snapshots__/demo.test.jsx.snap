@@ -59,7 +59,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
   
   <div
     class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    style="z-index: 11500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -275,7 +275,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   
   <div
     class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    style="z-index: 11500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -394,7 +394,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   
   <div
     class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    style="z-index: 11500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -632,7 +632,7 @@ exports[`Picker > Picker customHeightVue demo works fine 1`] = `
   
   <div
     class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    style="z-index: 11500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -892,7 +892,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       
       <div
         class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        style="z-index: 11500; transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -1011,7 +1011,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       
       <div
         class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        style="z-index: 11500; transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -1242,7 +1242,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       
       <div
         class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        style="z-index: 11500; transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -1471,7 +1471,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       
       <div
         class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        style="z-index: 11500; transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -1621,7 +1621,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       
       <div
         class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        style="z-index: 11500; transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -1853,7 +1853,7 @@ exports[`Picker > Picker withTitleVue demo works fine 1`] = `
   
   <div
     class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    style="z-index: 11500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>

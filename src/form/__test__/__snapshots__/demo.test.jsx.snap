@@ -416,7 +416,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           
           <div
             class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
+            style="z-index: 11500; transition-duration: 300ms; display: none;"
           >
             <!---->
           </div>
@@ -956,7 +956,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           
           <div
             class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
+            style="z-index: 11500; transition-duration: 300ms; display: none;"
           >
             <!---->
           </div>
@@ -2346,7 +2346,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 
                 <div
                   class="t-overlay"
-                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                  style="z-index: 11500; transition-duration: 300ms; display: none;"
                 >
                   <!---->
                 </div>
@@ -2886,7 +2886,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 
                 <div
                   class="t-overlay"
-                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                  style="z-index: 11500; transition-duration: 300ms; display: none;"
                 >
                   <!---->
                 </div>
@@ -4137,7 +4137,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           
           <div
             class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
+            style="z-index: 11500; transition-duration: 300ms; display: none;"
           >
             <!---->
           </div>
@@ -4675,7 +4675,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
           
           <div
             class="t-overlay"
-            style="z-index: 1000; transition-duration: 300ms; display: none;"
+            style="z-index: 11500; transition-duration: 300ms; display: none;"
           >
             <!---->
           </div>
