@@ -49,7 +49,7 @@ export default {
   /** 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标、值为 'none' 则表示没有图标 */
   icon: {
     type: [String, Array] as PropType<TdRadioProps['icon']>,
-    default: 'circle',
+    default: 'circle' as TdRadioProps['icon'],
   },
   /** 主文案 */
   label: {
@@ -86,7 +86,7 @@ export default {
   /** 单选按钮的值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdRadioProps['value']>,
-    default: undefined,
+    default: undefined as TdRadioProps['value'],
   },
   /** 选中状态变化时触发 */
   onChange: Function as PropType<TdRadioProps['onChange']>,

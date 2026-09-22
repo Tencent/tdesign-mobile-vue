@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, KeysType } from '../common';
+import type { TNode, KeysType } from '../common';
 
 export interface TdRadioProps<T = RadioValue> {
   /**
@@ -105,6 +105,11 @@ export interface TdRadioGroupProps<T = RadioValue> {
    * @default false
    */
   borderless?: boolean;
+  /**
+   * 单选框按钮排列方式
+   * @default vertical
+   */
+  direction?: 'vertical' | 'horizontal';
   /**
    * 是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled
    */
