@@ -2,7 +2,7 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">Cascader 级联选择器</h1>
     <p class="summary">用于多层级数据的逐级选择。</p>
-    <tdesign-demo-block title="01 基础" summary="基本用法">
+    <tdesign-demo-block title="01 组件类型" summary="基本用法">
       <baseDemo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="选项卡风格">

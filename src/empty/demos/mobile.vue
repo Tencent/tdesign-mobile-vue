@@ -17,8 +17,8 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import baseDemo from './base.vue';
-import imageEmpty from './imageEmpty.vue';
-import buttonEmpty from './buttonEmpty.vue';
+import imageEmpty from './image-empty.vue';
+import buttonEmpty from './button-empty.vue';
 </script>
 
 <style lang="less" scoped></style>

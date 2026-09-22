@@ -19,5 +19,5 @@
 <script lang="ts" setup>
 import themeDemo from './theme.vue';
 import baseDemo from './base.vue';
-import closeAllDemo from './closeAll.vue';
+import closeAllDemo from './close-all.vue';
 </script>

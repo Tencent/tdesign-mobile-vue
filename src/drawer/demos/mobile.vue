@@ -11,6 +11,9 @@
     <tdesign-demo-block title="02 组件样式" summary="带标题抽屉" :padding="true">
       <titleDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="抽屉方向" :padding="true">
+      <placementDemo />
+    </tdesign-demo-block>
     <tdesign-demo-block summary="带底部插槽样式" :padding="true">
       <footerDemo />
     </tdesign-demo-block>
@@ -24,6 +27,7 @@
 import baseDemo from './base.vue';
 import iconDemo from './icon.vue';
 import titleDemo from './title.vue';
+import placementDemo from './placement.vue';
 import footerDemo from './footer.vue';
 import pluginDemo from './plugin.vue';
 </script>

@@ -20,7 +20,7 @@ const onChangeLoading = (value: boolean) => {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--td-text-color-primary);
   font-size: 14px;
   .t-switch {
     margin-right: 10px;

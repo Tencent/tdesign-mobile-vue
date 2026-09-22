@@ -2070,6 +2070,181 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <p
         class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
       >
+        抽屉方向
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot with-padding"
+    >
+      
+      
+      <button
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        tabindex="0"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          左侧抽屉
+          
+        </span>
+        <!---->
+      </button>
+      <button
+        class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
+        tabindex="0"
+        type="button"
+      >
+        <!---->
+        <span
+          class="t-button__content"
+        >
+          
+          右侧抽屉
+          
+        </span>
+        <!---->
+      </button>
+      <!--teleport start-->
+      
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
+      >
+        <!---->
+      </div>
+      <div
+        class="t-popup t-popup--left"
+        style="display: none;"
+      >
+        <!---->
+        
+        <div
+          class="t-drawer"
+        >
+          <!---->
+          <!---->
+          <div
+            class="t-drawer__sidebar"
+          >
+            
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单一
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单二
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单三
+              </div>
+            </div>
+            
+          </div>
+          <!---->
+        </div>
+        
+      </div>
+      
+      <!--teleport end-->
+      <!--teleport start-->
+      
+      <div
+        class="t-overlay"
+        style="z-index: 1000; transition-duration: 300ms; display: none;"
+      >
+        <!---->
+      </div>
+      <div
+        class="t-popup t-popup--right"
+        style="display: none;"
+      >
+        <!---->
+        
+        <div
+          class="t-drawer"
+        >
+          <!---->
+          <!---->
+          <div
+            class="t-drawer__sidebar"
+          >
+            
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单一
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单二
+              </div>
+            </div>
+            <div
+              class="t-drawer__sidebar-item"
+            >
+              <!---->
+              <div
+                class="t-drawer__sidebar-item-title"
+              >
+                菜单三
+              </div>
+            </div>
+            
+          </div>
+          <!---->
+        </div>
+        
+      </div>
+      
+      <!--teleport end-->
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-bf17674a=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
         带底部插槽样式
       </p>
     </div>

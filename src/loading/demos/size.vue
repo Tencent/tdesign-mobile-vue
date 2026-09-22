@@ -22,7 +22,7 @@
 
 .loading-demo__summary {
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--td-text-color-secondary);
   // margin: 8px 16px 0;
   line-height: 22px;
 }
