@@ -31,10 +31,10 @@
 <script setup lang="ts">
 import BaseDemo from './base.vue';
 import ImageDemo from './image.vue';
-import MultiLineDemo from './multiLine.vue';
-import MultiLineGrayDemo from './multiLineGray.vue';
-import MovingTextDemo from './movingText.vue';
-import MovingImageDemo from './movingImage.vue';
+import MultiLineDemo from './multi-line.vue';
+import MultiLineGrayDemo from './multi-line-gray.vue';
+import MovingTextDemo from './moving-text.vue';
+import MovingImageDemo from './moving-image.vue';
 import GrayDemo from './gray.vue';
 import Layout from './layout.vue';
 </script>
