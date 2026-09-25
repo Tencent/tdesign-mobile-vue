@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import Radio from '../radio';
@@ -106,6 +106,46 @@ describe('Radio', () => {
       });
 
       expect(wrapper.element).toMatchSnapshot();
+    });
+
+    it(':direction default vertical', () => {
+      const wrapper = mount(() => (
+        <RadioGroup>
+          <Radio name="radio" value="1" label="单选"></Radio>
+          <Radio name="radio" value="2" label="单选"></Radio>
+        </RadioGroup>
+      ));
+      // 默认值为 vertical
+      expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(false);
+    });
+
+    it(':direction change dynamically', async () => {
+      const direction = ref('vertical');
+      const wrapper = mount(() => (
+        <RadioGroup direction={direction.value}>
+          <Radio name="radio" value="1" label="单选"></Radio>
+          <Radio name="radio" value="2" label="单选"></Radio>
+        </RadioGroup>
+      ));
+      // 初始为 vertical
+      expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(false);
+      expect(wrapper.findAll(`.${name}--horizontal`).length).toBe(0);
+
+      // 动态切换为 horizontal
+      direction.value = 'horizontal';
+      await nextTick();
+      expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(false);
+      expect(wrapper.findAll(`.${name}--horizontal`).length).toBe(2);
+
+      // 动态切换回 vertical
+      direction.value = 'vertical';
+      await nextTick();
+      expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(false);
+      expect(wrapper.findAll(`.${name}--horizontal`).length).toBe(0);
     });
   });
 

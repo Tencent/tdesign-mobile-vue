@@ -1,8 +1,14 @@
 <template>
-  <t-checkbox-group class="box" borderless :default-value="demoCheckboxMax" @change="checkboxGroupChange">
-    <t-checkbox :block="false" value="checkbox1" label="多选标题" />
-    <t-checkbox :block="false" value="checkbox2" label="多选标题" />
-    <t-checkbox :block="false" value="checkbox3" label="上限四字" />
+  <t-checkbox-group
+    class="box"
+    borderless
+    direction="horizontal"
+    :default-value="demoCheckboxMax"
+    @change="checkboxGroupChange"
+  >
+    <t-checkbox value="checkbox1" label="多选标题" />
+    <t-checkbox value="checkbox2" label="多选标题" />
+    <t-checkbox value="checkbox3" label="上限四字" />
   </t-checkbox-group>
 </template>
 <script lang="ts" setup>
@@ -18,8 +24,6 @@ const checkboxGroupChange = (value: any, context: { e: Event }) => {
 <style lang="less" scoped>
 .box {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
   background-color: var(--bg-color-demo, #fff);
 }
 </style>
