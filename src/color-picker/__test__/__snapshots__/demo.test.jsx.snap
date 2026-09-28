@@ -772,7 +772,7 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -1498,7 +1498,7 @@ exports[`ColorPicker > ColorPicker usePopupVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->

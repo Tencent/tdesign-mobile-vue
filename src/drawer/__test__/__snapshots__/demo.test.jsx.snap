@@ -8,7 +8,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -123,7 +123,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -262,7 +262,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -1049,7 +1049,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -1178,7 +1178,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -1948,7 +1948,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -2081,7 +2081,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -2282,7 +2282,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->

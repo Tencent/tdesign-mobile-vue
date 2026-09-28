@@ -34,4 +34,4 @@ The component provides the following CSS variables, which can be used to customi
 Name | Default Value | Description
 -- | -- | --
 --td-overlay-bg-color | @mask-active | -
---td-overlay-zindex | @z-index-overlay | -
+--td-overlay-zIndex | @z-index-overlay | -

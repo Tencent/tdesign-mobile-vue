@@ -23,7 +23,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -115,7 +115,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -203,7 +203,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -293,7 +293,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -373,7 +373,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -449,7 +449,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -542,7 +542,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -681,7 +681,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -816,7 +816,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -947,7 +947,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -1074,7 +1074,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -1213,7 +1213,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -1349,7 +1349,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -1481,7 +1481,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -1653,7 +1653,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -1733,7 +1733,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -1809,7 +1809,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -1914,7 +1914,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -2006,7 +2006,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -2094,7 +2094,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -2198,7 +2198,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -2330,7 +2330,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -2485,7 +2485,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -2624,7 +2624,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -2759,7 +2759,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -2890,7 +2890,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -3017,7 +3017,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -3156,7 +3156,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -3309,7 +3309,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -3406,7 +3406,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -3503,7 +3503,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -3600,7 +3600,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -3713,7 +3713,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -3879,7 +3879,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -3976,7 +3976,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -4073,7 +4073,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -4170,7 +4170,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -4283,7 +4283,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->

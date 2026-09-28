@@ -58,7 +58,7 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -1697,7 +1697,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteSecondVue demo works fine 1`]
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -2855,7 +2855,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -3613,7 +3613,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -4189,7 +4189,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -4572,7 +4572,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -5743,7 +5743,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -6483,7 +6483,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -8135,7 +8135,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -8925,7 +8925,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -9492,7 +9492,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -10058,7 +10058,7 @@ exports[`DateTimePicker > DateTimePicker showWeekVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -10808,7 +10808,7 @@ exports[`DateTimePicker > DateTimePicker stepsVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -11129,7 +11129,7 @@ exports[`DateTimePicker > DateTimePicker withTitleVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -11692,7 +11692,7 @@ exports[`DateTimePicker > DateTimePicker withoutTitleVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -12255,7 +12255,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthDateVue demo works fine 1`] = 
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -12818,7 +12818,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->

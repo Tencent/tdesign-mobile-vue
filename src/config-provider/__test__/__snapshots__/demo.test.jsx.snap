@@ -678,7 +678,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         <!--teleport start-->
         
         <div
-          class="t-overlay"
+          class="t-overlay t-popup-zIndex"
           style="transition-duration: 300ms; display: none;"
         >
           <!---->
@@ -3329,7 +3329,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
+        class="t-overlay t-popup-zIndex"
         style="transition-duration: 300ms; display: none;"
       >
         <!---->
@@ -3974,7 +3974,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
+      class="t-overlay t-popup-zIndex"
       style="transition-duration: 300ms; display: none;"
     >
       <!---->
@@ -6625,7 +6625,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->

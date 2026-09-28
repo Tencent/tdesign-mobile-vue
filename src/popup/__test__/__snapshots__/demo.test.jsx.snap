@@ -90,7 +90,7 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -129,7 +129,7 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
@@ -284,7 +284,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         <!--teleport start-->
         
         <div
-          class="t-overlay"
+          class="t-overlay t-popup-zIndex"
           style="transition-duration: 300ms; display: none;"
         >
           <!---->
@@ -348,7 +348,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         <!--teleport start-->
         
         <div
-          class="t-overlay"
+          class="t-overlay t-popup-zIndex"
           style="transition-duration: 300ms; display: none;"
         >
           <!---->
@@ -411,7 +411,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         <!--teleport start-->
         
         <div
-          class="t-overlay"
+          class="t-overlay t-popup-zIndex"
           style="transition-duration: 300ms; display: none;"
         >
           <!---->
@@ -485,8 +485,8 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         <!--teleport start-->
         
         <div
-          class="t-overlay"
-          style="transition-duration: 300ms; display: none;"
+          class="t-overlay t-popup-zIndex"
+          style="z-index: 1500; transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>
@@ -532,8 +532,8 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             <!--teleport start-->
             
             <div
-              class="t-overlay"
-              style="transition-duration: 300ms; display: none;"
+              class="t-overlay t-popup-zIndex"
+              style="z-index: 1600; transition-duration: 300ms; display: none;"
             >
               <!---->
             </div>
@@ -617,8 +617,8 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="z-index: 1500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -664,8 +664,8 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="z-index: 1600; transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -744,7 +744,7 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
+    class="t-overlay t-popup-zIndex"
     style="transition-duration: 300ms; display: none;"
   >
     <!---->
