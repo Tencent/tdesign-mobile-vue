@@ -29,3 +29,15 @@ theme | String | circular | options: circular/spinner/dots | N
 name | params | default | description
 -- | -- | -- | --
 options | Function | - | required。Typescript: `boolean \| TdLoadingProps`
+
+### CSS Variables
+
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description
+-- | -- | --
+--td-loading-color | @brand-color | -
+--td-loading-full-bg-color | rgba(255, 255, 255, 60%) | -
+--td-loading-line-bg-color | @text-color-primary | -
+--td-loading-text-color | @text-color-primary | -
+--td-loading-text-font | @font-body-small | -
+--td-loading-z-index | @z-index-loading | -

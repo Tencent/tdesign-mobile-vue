@@ -34,3 +34,12 @@ closed | \- | 组件关闭且动画结束后执行
 open | \- | 组件准备展示时触发
 opened | \- | 组件展示且动画结束后执行
 visible-change | `(visible: boolean, trigger: PopupSource) ` | 当浮层隐藏或显示时触发，trigger=document 表示点击弹出层元素触发。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/popup/type.ts)。<br/>`type PopupSource = 'close-btn' \| 'overlay' \| 'document'`<br/>
+
+### CSS Variables
+
+组件提供了下列 CSS 变量，可用于自定义样式。
+名称 | 默认值 | 描述
+-- | -- | --
+--td-popup-bg-color | @bg-color-container | -
+--td-popup-border-radius | @radius-extraLarge | -
+--td-popup-close-btn-color | @text-color-primary | -

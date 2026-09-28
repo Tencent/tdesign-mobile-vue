@@ -14,7 +14,7 @@ images | Array | [] | 图片数组。TS 类型：`Array<string \| ImageInfo>` `i
 index | Number | - | 当前预览图片所在的下标。支持语法糖 `v-model:index` | N
 defaultIndex | Number | - | 当前预览图片所在的下标。非受控属性 | N
 loop | Boolean | true | 是否开启循环滚动 | N
-maxZoom | Number | 3 | 【开发中】图片最大放大比例 | N
+maxZoom | Number | 3 | 图片最大放大比例 | N
 showIndex | Boolean | false | 是否显示页码 | N
 visible | Boolean | false | 隐藏/显示预览。支持语法糖 `v-model` 或 `v-model:visible` | N
 defaultVisible | Boolean | false | 隐藏/显示预览。非受控属性 | N

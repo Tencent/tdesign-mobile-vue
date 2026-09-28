@@ -34,4 +34,4 @@ opened | \- | 遮罩弹出动画效果结束后触发
 名称 | 默认值 | 描述
 -- | -- | --
 --td-overlay-bg-color | @mask-active | -
---td-overlay-zindex | 1000 | -
+--td-overlay-zindex | @z-index-overlay | -

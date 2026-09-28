@@ -31,3 +31,18 @@ name | params | description
 close-btn-click | `(context: { e: MouseEvent })` | \-
 duration-end | \- | \-
 link-click | `(context: { e: MouseEvent })` | \-
+
+### CSS Variables
+
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description
+-- | -- | --
+--td-message-bg-color | @bg-color-container | -
+--td-message-border-radius | @radius-default | -
+--td-message-box-shadow | @shadow-4 | -
+--td-message-close-icon-color | @text-color-placeholder | -
+--td-message-content-color | @text-color-primary | -
+--td-message-error-color | @error-color | -
+--td-message-info-color | @brand-color | -
+--td-message-success-color | @success-color | -
+--td-message-warning-color | @warning-color | -
