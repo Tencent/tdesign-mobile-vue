@@ -22,7 +22,7 @@ exports[`Overlay > Overlay baseVue demo works fine 1`] = `
   </button>
   <div
     class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -86,7 +86,7 @@ exports[`Overlay > Overlay mobileVue demo works fine 1`] = `
         </button>
         <div
           class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          style="transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>

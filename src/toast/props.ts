@@ -24,7 +24,7 @@ export default {
   },
   /** 自定义图标 */
   icon: {
-    type: [String, Function] as PropType<TdToastProps['icon']>,
+    type: Function as PropType<TdToastProps['icon']>,
   },
   /** 弹窗显示文字 */
   message: {
@@ -33,7 +33,6 @@ export default {
   /** 遮罩层属性，透传至 Overlay */
   overlayProps: {
     type: Object as PropType<TdToastProps['overlayProps']>,
-    default: () => ({}),
   },
   /** 弹窗展示位置 */
   placement: {

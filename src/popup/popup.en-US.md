@@ -34,12 +34,3 @@ closed | \- | \-
 open | \- | \-
 opened | \- | \-
 visible-change | `(visible: boolean, trigger: PopupSource) ` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/popup/type.ts)。<br/>`type PopupSource = 'close-btn' \| 'overlay' \| 'document'`<br/>
-
-### CSS Variables
-
-The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description
--- | -- | --
---td-popup-bg-color | @bg-color-container | -
---td-popup-border-radius | @radius-extraLarge | -
---td-popup-close-btn-color | @text-color-primary | -

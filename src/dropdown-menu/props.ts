@@ -35,6 +35,6 @@ export default {
   /** 菜单栏 z-index 层级 */
   zIndex: {
     type: Number,
-    default: 11600,
+    default: 1600,
   },
 };

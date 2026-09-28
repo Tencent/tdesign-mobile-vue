@@ -14,7 +14,7 @@ gap | String / Number / Boolean | 12 | 两条 `message` 之间的间距 | N
 icon | Boolean / Slot / Function | true | 用于自定义消息前面的图标，优先级大于 theme 设定的图标。值为 false 则不显示图标，值为 true 显示 theme 设定图标。TS 类型：`boolean \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 link | String / Object / Slot / Function | - | 链接名称。值为字符串表示链接名称，值为 `Object` 类型，表示透传至 `Link`。TS 类型：`string \| object \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 marquee | Boolean / Object | false | 跑马灯效果。speed 指速度控制；loop 指循环播放次数，值为 -1 表示循环播放，值为 0 表示不循环播放；delay 表示延迟多久开始播放。TS 类型：`boolean \| MessageMarquee` `interface MessageMarquee { speed?: number; loop?: number; delay?: number }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/message/type.ts) | N
-offset | Array | - | 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx']。TS 类型：`Array<string \| number>` | N
+offset | Array | - | 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']。TS 类型：`Array<string \| number>` | N
 single | Boolean | true | 是否保持仅显示一条信息 | N
 theme | String | info | 消息组件风格。可选项：info/success/warning/error。TS 类型：`MessageThemeList` `type MessageThemeList = 'info' \| 'success' \| 'warning' \| 'error'`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/message/type.ts) | N
 visible | Boolean | false | 是否显示，隐藏时默认销毁组件。支持语法糖 `v-model` 或 `v-model:visible` | N
@@ -31,26 +31,3 @@ onLinkClick | Function |  | TS 类型：`(context: { e: MouseEvent }) => void`<b
 close-btn-click | `(context: { e: MouseEvent })` | 当关闭按钮存在时，用户点击关闭按钮触发
 duration-end | \- | 计时结束后触发
 link-click | `(context: { e: MouseEvent })` | 当`link`链接存在时，点击链接文本时触发
-
-### MessagePlugin
-
-插件调用方式（`MessagePlugin.info()` / `MessagePlugin.success()` 等）除了支持上述 Message Props 外，还支持以下参数。
-
-名称 | 类型 | 默认值 | 描述 | 必传
--- | -- | -- | -- | --
-context | Element | document.body | 指定消息组件的挂载容器。默认挂载到 `document.body`。可传入 DOM 元素，将消息渲染到指定容器内 | N
-
-### CSS Variables
-
-组件提供了下列 CSS 变量，可用于自定义样式。
-名称 | 默认值 | 描述
--- | -- | --
---td-message-bg-color | @bg-color-container | -
---td-message-border-radius | @radius-default | -
---td-message-box-shadow | @shadow-4 | -
---td-message-close-icon-color | @text-color-placeholder | -
---td-message-content-color | @text-color-primary | -
---td-message-error-color | @error-color | -
---td-message-info-color | @brand-color | -
---td-message-success-color | @success-color | -
---td-message-warning-color | @warning-color | -

@@ -22,7 +22,7 @@ export default defineComponent({
   },
   props: guideProps,
   setup(props: TdGuideProps, context) {
-    const { current, modelValue, finishButtonProps, hideCounter, hideSkip, steps, zIndex } = toRefs(props);
+    const { current, modelValue, finishButtonProps, hideCounter, hideSkip, hideBack, steps, zIndex } = toRefs(props);
     const [innerCurrent, setInnerCurrent] = useVModel(
       current,
       modelValue,
@@ -392,7 +392,7 @@ export default defineComponent({
                   }}
                 </TButton>
               )}
-              {isLast.value && (
+              {isLast.value && !hideBack.value && (
                 <TButton
                   key="back"
                   class={`${guideClass.value}__back`}

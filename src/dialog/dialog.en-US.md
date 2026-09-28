@@ -45,8 +45,8 @@ overlay-click | `(context: { e: MouseEvent })` | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | \- | N
+style | String / Object | - | Typescript: `string \| Styles`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 `Omit<DialogProps, 'attach'>` | \- | - | extends `Omit<DialogProps, 'attach'>` | N
-style | String / Object | - | Typescript：`string \| Styles`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 
 ### DialogInstance
 
@@ -65,8 +65,6 @@ name | params | default | description
 -- | -- | -- | --
 options | \- | - | Typescript: `DialogOptions`
 
-插件返回值：`DialogInstance`
-
 ### DialogPlugin.confirm
 
 同时也支持 `this.$dialog.confirm`。
@@ -82,18 +80,3 @@ options | \- | - | Typescript: `DialogOptions`
 name | params | default | description
 -- | -- | -- | --
 options | Object | - | Typescript: `Omit<DialogOptions, 'cancelBtn'>`
-
-### CSS Variables
-
-The component provides the following CSS variables, which can be used to customize styles.
-Name | Default Value | Description
--- | -- | --
---td-dialog-body-max-height | 456px | -
---td-dialog-border-radius | @radius-extraLarge | -
---td-dialog-close-color | @text-color-placeholder | -
---td-dialog-close-icon-size | 22px | -
---td-dialog-content-color | @text-color-secondary | -
---td-dialog-content-font | @font-body-large | -
---td-dialog-title-color | @text-color-primary | -
---td-dialog-title-font | @font-title-large | -
---td-dialog-width | 311px | -
