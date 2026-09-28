@@ -10,7 +10,7 @@ closeOnClickOverlay | Boolean | true | \- | N
 direction | String | down | options: down/up | N
 duration | String / Number | 200 | \- | N
 showOverlay | Boolean | true | \- | N
-zIndex | Number | 1600 | \- | N
+zIndex | Number | - | \- | N
 
 
 ### DropdownItem Props

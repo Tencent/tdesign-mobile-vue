@@ -28,8 +28,7 @@ export interface TdDropdownMenuProps {
    */
   showOverlay?: boolean;
   /**
-   * 菜单栏 z-index 层级
-   * @default 1600
+   * 菜单栏 z-index 层级，默认为 1600
    */
   zIndex?: number;
 }

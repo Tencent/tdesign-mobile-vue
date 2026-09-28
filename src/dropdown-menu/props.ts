@@ -32,9 +32,8 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 菜单栏 z-index 层级 */
+  /** 菜单栏 z-index 层级，默认为 1600 */
   zIndex: {
     type: Number,
-    default: 1600,
   },
 };
