@@ -8,10 +8,10 @@ import grayVue from '@/watermark/demos/gray.vue';
 import imageVue from '@/watermark/demos/image.vue';
 import layoutVue from '@/watermark/demos/layout.vue';
 import mobileVue from '@/watermark/demos/mobile.vue';
-import movingImageVue from '@/watermark/demos/movingImage.vue';
-import movingTextVue from '@/watermark/demos/movingText.vue';
-import multiLineVue from '@/watermark/demos/multiLine.vue';
-import multiLineGrayVue from '@/watermark/demos/multiLineGray.vue';
+import movingImageVue from '@/watermark/demos/moving-image.vue';
+import movingTextVue from '@/watermark/demos/moving-text.vue';
+import multiLineVue from '@/watermark/demos/multi-line.vue';
+import multiLineGrayVue from '@/watermark/demos/multi-line-gray.vue';
 
 const mapper = {
   baseVue,

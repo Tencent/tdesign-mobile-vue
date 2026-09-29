@@ -4,7 +4,7 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/message/demos/base.vue';
-import closeAllVue from '@/message/demos/closeAll.vue';
+import closeAllVue from '@/message/demos/close-all.vue';
 import mobileVue from '@/message/demos/mobile.vue';
 import themeVue from '@/message/demos/theme.vue';
 

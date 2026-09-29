@@ -5,7 +5,7 @@
 import { mount } from '@vue/test-utils';
 import areaVue from '@/picker/demos/area.vue';
 import baseVue from '@/picker/demos/base.vue';
-import customHeightVue from '@/picker/demos/customHeight.vue';
+import customHeightVue from '@/picker/demos/custom-height.vue';
 import mobileVue from '@/picker/demos/mobile.vue';
 import withTitleVue from '@/picker/demos/with-title.vue';
 
