@@ -23,8 +23,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -115,8 +115,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -203,8 +203,8 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -293,8 +293,8 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -373,8 +373,8 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -449,8 +449,8 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -542,8 +542,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -681,8 +681,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -816,8 +816,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -947,8 +947,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -1074,8 +1074,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -1213,8 +1213,8 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -1349,8 +1349,8 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -1481,8 +1481,8 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -1653,8 +1653,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -1733,8 +1733,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -1809,8 +1809,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -1914,8 +1914,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -2006,8 +2006,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -2094,8 +2094,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -2198,8 +2198,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -2330,8 +2330,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -2485,8 +2485,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -2624,8 +2624,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -2759,8 +2759,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -2890,8 +2890,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -3017,8 +3017,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -3156,8 +3156,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -3309,8 +3309,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -3406,8 +3406,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -3503,8 +3503,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -3600,8 +3600,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -3713,8 +3713,8 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -3879,8 +3879,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -3976,8 +3976,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -4073,8 +4073,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -4170,8 +4170,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -4283,8 +4283,8 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>

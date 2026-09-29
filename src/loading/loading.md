@@ -30,8 +30,6 @@ theme | String | circular | 加载组件类型。可选项：circular/spinner/do
 -- | -- | -- | --
 options | Function | - | 必需。TS 类型：`boolean \| TdLoadingProps`
 
-插件返回值：`LoadingInstance【interface LoadingInstance { hide: () => void }】`
-
 ### CSS Variables
 
 组件提供了下列 CSS 变量，可用于自定义样式。
@@ -42,4 +40,4 @@ options | Function | - | 必需。TS 类型：`boolean \| TdLoadingProps`
 --td-loading-line-bg-color | @text-color-primary | -
 --td-loading-text-color | @text-color-primary | -
 --td-loading-text-font | @font-body-small | -
---td-loading-z-index | 3500 | -
+--td-loading-z-index | @z-index-loading | -

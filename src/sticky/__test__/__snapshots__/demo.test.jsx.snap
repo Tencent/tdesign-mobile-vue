@@ -36,7 +36,6 @@ exports[`Sticky > Sticky containerVue demo works fine 1`] = `
 <div
   class="sticky-demo"
   data-v-e0d52be3=""
-  id="container"
 >
   <div
     class="t-sticky"
@@ -211,7 +210,6 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
         class="sticky-demo"
         data-v-8783f7c8=""
         data-v-e0d52be3=""
-        id="container"
       >
         <div
           class="t-sticky"

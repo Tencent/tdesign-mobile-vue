@@ -32,7 +32,7 @@ import { reactive } from 'vue';
 import { SwipeActionItem, Toast } from 'tdesign-mobile-vue';
 
 interface InitData {
-  btns: {}[];
+  btns: SwipeActionItem[];
 }
 const handleCollect = () => {
   Toast.success(`收藏成功`);

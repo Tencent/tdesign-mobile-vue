@@ -69,7 +69,7 @@ export default {
   },
   /** 是否显示浮层，非受控属性 */
   defaultVisible: Boolean,
-  /** 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500 */
+  /** 组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500 */
   zIndex: {
     type: Number,
   },

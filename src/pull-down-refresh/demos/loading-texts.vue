@@ -19,7 +19,7 @@ import { ref, defineComponent } from 'vue';
 export default defineComponent({
   setup(props, context) {
     const refreshing = ref(false);
-    const handleRefresh = (value: any) => {
+    const handleRefresh = () => {
       refreshing.value = true;
       setTimeout(() => {
         refreshing.value = false;

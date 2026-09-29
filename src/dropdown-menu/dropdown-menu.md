@@ -10,7 +10,7 @@ closeOnClickOverlay | Boolean | true | 是否在点击遮罩层后关闭菜单 |
 direction | String | down | 菜单展开方向。可选项：down/up | N
 duration | String / Number | 200 | 动画时长 | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
-zIndex | Number | 11600 | 菜单栏 z-index 层级 | N
+zIndex | Number | - | 菜单栏 z-index 层级，默认为 1600 | N
 
 
 ### DropdownItem Props
@@ -23,7 +23,7 @@ icon | Array / Slot / Function | undefined | 自定义菜单子项图标，值�
 keys | Object | - | 用来定义 value / label / disabled 在 `options` 中对应的字段别名。TS 类型：`KeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String | - | 标题 | N
 multiple | Boolean | false | 是否多选 | N
-options | Array | [] | 选项数据。TS 类型：`Array<DropdownOption>` `interface DropdownOption { label: string; disabled: boolean; value: DropdownValue; }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+options | Array | [] | 选项数据。TS 类型：`Array<DropdownOption>` `interface DropdownOption { label: string; disabled?: boolean; value: DropdownValue; }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 optionsColumns | String / Number | 1 | 选项分栏（1-3） | N
 placement | String | left | 复选框和内容相对位置，仅单选菜单栏有效。可选项：left/right | N
 value | String / Number / Array | undefined | 选中值。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N

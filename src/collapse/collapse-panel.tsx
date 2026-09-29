@@ -24,7 +24,7 @@ export default defineComponent({
     const rootClass = computed(() => ({
       [`${collapsePanelClass.value}`]: true,
       [`${collapsePanelClass.value}--${props.placement}`]: true,
-      [`${collapsePanelClass.value}--active`]: isActive.value,
+      [`${collapsePanelClass.value}--expanded`]: isActive.value,
       [`${collapsePanelClass.value}--disabled`]: disabled.value,
     }));
     const isActive = computed(() => findIndex(props.value, parent?.activeValue.value) > -1);

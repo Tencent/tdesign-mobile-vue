@@ -23,7 +23,7 @@
 <script lang="ts" setup>
 import { onMounted, onBeforeUnmount, ref } from 'vue';
 import { AddCircleIcon, StarIcon, JumpIcon, ChevronLeftIcon } from 'tdesign-icons-vue-next';
-import getScrollParent from '../../_util/getScrollParent';
+import getScrollParent from 'tdesign-mobile-vue/es/_util/getScrollParent';
 
 const fabRef = ref();
 const scrolling = ref(false);

@@ -37,7 +37,7 @@ const rowCols = [
 ];
 
 const refreshing = ref(false);
-const handleRefresh = (value: any) => {
+const handleRefresh = () => {
   refreshing.value = true;
   setTimeout(() => {
     refreshing.value = false;

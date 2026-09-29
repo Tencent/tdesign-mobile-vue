@@ -71,6 +71,11 @@ export default defineComponent({
       return { ...(context.attrs.style as Object), ...styles };
     });
 
+    const overlayPropsWithZIndex = computed(() => ({
+      ...props.overlayProps,
+      zIndex: props.overlayProps?.zIndex ?? props.zIndex,
+    }));
+
     const contentClasses = computed(() => ({
       [`${popupClass.value}--${props.placement}`]: true,
     }));
@@ -125,8 +130,9 @@ export default defineComponent({
     return () => {
       const renderOverlayContent = (
         <TOverlay
-          {...props.overlayProps}
+          {...overlayPropsWithZIndex.value}
           visible={innerVisible.value && props.showOverlay}
+          class={`${popupClass.value}-zIndex`}
           onClick={handleOverlayClick}
         />
       );

@@ -28,7 +28,7 @@ const themeList = [
     value: 'paragraph',
     loading: true,
   },
-];
+] as const;
 </script>
 
 <style lang="less" scoped>

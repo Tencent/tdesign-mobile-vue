@@ -6,13 +6,15 @@
 </template>
 
 <script lang="ts" setup>
+import type { DropdownOption, DropdownValue } from 'tdesign-mobile-vue';
+
 import { h } from 'vue';
 import { ChevronDownIcon } from 'tdesign-icons-vue-next';
 
 // [h(ChevronDownIcon, { size: '20px' })] 和 h(ChevronDownIcon, { size: '20px' }) 等效
 const icons = () => [h(ChevronDownIcon, { size: '20px' })];
 
-const product = {
+const product: { value: DropdownValue; options: DropdownOption[] } = {
   value: 'all',
   options: [
     {
@@ -29,7 +31,7 @@ const product = {
     },
   ],
 };
-const sorter = {
+const sorter: { value: DropdownValue; options: DropdownOption[] } = {
   value: 'default',
   options: [
     {

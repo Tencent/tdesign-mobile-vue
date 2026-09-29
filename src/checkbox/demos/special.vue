@@ -2,7 +2,7 @@
   <t-checkbox-group v-model:value="value">
     <div v-for="n in 3" :key="n" :class="`card ${value.indexOf(n) > -1 ? 'card--active' : value.indexOf(n)}`">
       <t-icon v-if="value.indexOf(n) > -1" :aria-hidden="true" class="card__icon" name="check" />
-      <t-checkbox :value="n" borderless content="描述信息描述信息描述信息描述信息描述信息" icon="none" label="多选" />
+      <t-checkbox :value="n" borderless content="描述信息描述信息描述信息描述信息描述信息" :icon="false" label="多选" />
     </div>
   </t-checkbox-group>
 
@@ -11,7 +11,7 @@
   <t-checkbox-group v-model:value="value1" borderless class="horizontal-box">
     <div v-for="n in 3" :key="n" :class="`card ${value1.indexOf(n) > -1 ? 'card--active' : value1.indexOf(n)}`">
       <t-icon v-if="value1.indexOf(n) > -1" :aria-hidden="true" class="card__icon" name="check" />
-      <t-checkbox :value="n" icon="none" label="多选" />
+      <t-checkbox :value="n" :icon="false" label="多选" />
     </div>
   </t-checkbox-group>
 </template>
@@ -23,18 +23,6 @@ const value = ref([1, 2]);
 const value1 = ref([1, 2]);
 </script>
 <style lang="less">
-@import '../../_common/style/mobile/_variables';
-
-:root[theme-mode='light'] {
-  --checkbox-special-demo-border-color: @brand-color-7;
-  --checkbox-special-demo-icon-color: #fff;
-}
-
-:root[theme-mode='dark'] {
-  --checkbox-special-demo-border-color: @brand-color-8;
-  --checkbox-special-demo-icon-color: @gray-color-13;
-}
-
 .card {
   position: relative;
   margin: 16px;
@@ -45,7 +33,7 @@ const value1 = ref([1, 2]);
 }
 
 .card--active {
-  border-color: var(--checkbox-special-demo-border-color);
+  border-color: var(--td-brand-color);
 }
 
 .card--active::after {
@@ -55,13 +43,13 @@ const value1 = ref([1, 2]);
   left: 0;
   top: 0;
   width: 0;
-  border: 14px solid var(--checkbox-special-demo-border-color);
+  border: 14px solid var(--td-brand-color);
   border-bottom-color: transparent;
   border-right-color: transparent;
 }
 
 .card__icon {
-  color: var(--checkbox-special-demo-icon-color);
+  color: var(--td-text-color-anti);
   position: absolute;
   left: 1.5px;
   top: 1.5px;

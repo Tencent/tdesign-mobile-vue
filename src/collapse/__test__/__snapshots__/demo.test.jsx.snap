@@ -7,7 +7,7 @@ exports[`Collapse > Collapse accordionVue demo works fine 1`] = `
   
   
   <div
-    class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+    class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--expanded"
   >
     <div
       class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
@@ -345,7 +345,7 @@ exports[`Collapse > Collapse actionVue demo works fine 1`] = `
 >
   
   <div
-    class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+    class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--expanded"
   >
     <div
       class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
@@ -534,7 +534,7 @@ exports[`Collapse > Collapse cardVue demo works fine 1`] = `
   
   
   <div
-    class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+    class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--expanded"
   >
     <div
       class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
@@ -1118,7 +1118,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
       >
         
         <div
-          class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+          class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--expanded"
         >
           <div
             class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
@@ -1233,7 +1233,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         
         <div
-          class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+          class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--expanded"
         >
           <div
             class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"
@@ -1593,7 +1593,7 @@ exports[`Collapse > Collapse mobileVue demo works fine 1`] = `
         
         
         <div
-          class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--active"
+          class="t-collapse-panel t-collapse-panel--bottom t-collapse-panel--expanded"
         >
           <div
             class="t-cell t-collapse-panel__title t-collapse-panel__header t-collapse-panel__header--bottom t-collapse-panel__header--expanded"

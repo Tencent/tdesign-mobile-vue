@@ -43,8 +43,23 @@ export default defineComponent({
       props.onClick?.({ e });
     };
 
+    const transitionCallbacks = {
+      onEnter: () => {
+        props.onOpen?.();
+      },
+      onAfterEnter: () => {
+        props.onOpened?.();
+      },
+      onLeave: () => {
+        props.onClose?.();
+      },
+      onAfterLeave: () => {
+        props.onClosed?.();
+      },
+    };
+
     return () => (
-      <Transition name={overlayClass.value}>
+      <Transition name={overlayClass.value} {...transitionCallbacks}>
         <div
           v-show={props.visible}
           class={overlayClasses.value}

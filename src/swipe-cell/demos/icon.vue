@@ -20,11 +20,12 @@
 import { reactive, h } from 'vue';
 import { Edit1Icon, DeleteIcon } from 'tdesign-icons-vue-next';
 import { Toast } from 'tdesign-mobile-vue';
+import type { SwipeActionItem } from 'tdesign-mobile-vue';
 
 interface InitData {
-  btns0: {}[];
-  btns1: {}[];
-  btns2: {}[];
+  btns0: SwipeActionItem[];
+  btns1: SwipeActionItem[];
+  btns2: SwipeActionItem[];
 }
 const handleCollect = () => {
   Toast.success(`收藏成功`);
@@ -52,8 +53,8 @@ const initData: InitData = reactive({
     { text: '删除', icon: delIcon, className: 'btn delete-btn', onClick: handleDelete },
   ],
   btns1: [
-    { icon: h(Edit1Icon), className: 'btn edit-btn', onClick: handleEdit },
-    { icon: h(DeleteIcon), className: 'btn delete-btn', onClick: handleDelete },
+    { text: '', icon: h(Edit1Icon), className: 'btn edit-btn', onClick: handleEdit },
+    { text: '', icon: h(DeleteIcon), className: 'btn delete-btn', onClick: handleDelete },
   ],
   btns2: [
     { text: '编辑', icon: editIcon, className: 'btn edit-btn vertical', onClick: handleEdit },

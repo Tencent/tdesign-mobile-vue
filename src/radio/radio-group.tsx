@@ -42,7 +42,7 @@ export default defineComponent({
     provide('rootGroupChange', handleRadioChange);
     return () => {
       return (
-        <div class={radioGroupClass.value} role="radiogroup">
+        <div class={`${radioGroupClass.value} ${radioGroupClass.value}--${props.direction}`} role="radiogroup">
           {props.options &&
             groupOptions.value.map((opt, index) => (
               <TRadio
