@@ -13,10 +13,6 @@ import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
 import { DrawerTriggerSource, DrawerItem } from 'tdesign-mobile-vue';
 
-interface DrawerCloseContext {
-  trigger: DrawerTriggerSource;
-}
-
 const iconSidebar = ref([
   {
     title: '菜单一',
@@ -50,12 +46,12 @@ const itemClick = (index: number, item: DrawerItem, context: { e: MouseEvent }) 
   console.log('itemClick: ', index, item, context);
 };
 
-const onClose = ({ trigger }: DrawerCloseContext) => {
+const onClose = (trigger: DrawerTriggerSource) => {
   console.log('onClose: ', trigger);
 };
 
-const onOverlayClick = ({ visible }: { visible: boolean }) => {
-  console.log('onOverlayClick:', visible);
+const onOverlayClick = (context: { e: MouseEvent }) => {
+  console.log('onOverlayClick:', context.e);
 };
 </script>
 <style lang="less" scoped>

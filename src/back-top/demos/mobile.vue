@@ -14,11 +14,12 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { BackTopProps } from 'tdesign-mobile-vue';
 import BaseDemo from './base.vue';
 import HalfRoundDemo from './half-round.vue';
 
 const container = ref<HTMLElement>();
-const theme = ref('round');
+const theme = ref<BackTopProps['theme']>('round');
 const text = ref('顶部');
 </script>
 

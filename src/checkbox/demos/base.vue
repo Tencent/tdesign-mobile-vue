@@ -3,9 +3,10 @@
 </template>
 <script lang="ts" setup>
 import { ref, watch } from 'vue';
+import type { CheckboxOption } from 'tdesign-mobile-vue';
 
 const current = ref(['checkbox1', 'checkbox2']);
-const options = ref([
+const options = ref<CheckboxOption[]>([
   { label: '多选', value: 'checkbox1' },
   { label: '多选', value: 'checkbox2' },
   {

@@ -8,10 +8,11 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { SwitchValue } from 'tdesign-mobile-vue';
 
 const showLoading = ref(false);
-const onChangeLoading = (value: boolean) => {
-  showLoading.value = value;
+const onChangeLoading = (value: SwitchValue) => {
+  showLoading.value = Boolean(value);
 };
 </script>
 

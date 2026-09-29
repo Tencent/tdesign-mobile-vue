@@ -1569,11 +1569,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block t-checkbox--vertical"
             >
-              <div
-                class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
-              >
-                <!---->
-              </div>
+              <!---->
               <div
                 class="t-checkbox__content"
               >
@@ -1605,11 +1601,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block t-checkbox--vertical"
             >
-              <div
-                class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
-              >
-                <!---->
-              </div>
+              <!---->
               <div
                 class="t-checkbox__content"
               >
@@ -1634,14 +1626,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox t-checkbox--left t-checkbox--block t-checkbox--vertical"
             >
-              <div
-                class="t-checkbox__icon t-checkbox__icon--left"
-              >
-                
-                <!---->
-                <!---->
-                
-              </div>
+              <!---->
               <div
                 class="t-checkbox__content"
               >
@@ -1687,11 +1672,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block t-checkbox--vertical"
             >
-              <div
-                class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
-              >
-                <!---->
-              </div>
+              <!---->
               <div
                 class="t-checkbox__content"
               >
@@ -1723,11 +1704,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block t-checkbox--vertical"
             >
-              <div
-                class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
-              >
-                <!---->
-              </div>
+              <!---->
               <div
                 class="t-checkbox__content"
               >
@@ -1752,14 +1729,7 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox t-checkbox--left t-checkbox--block t-checkbox--vertical"
             >
-              <div
-                class="t-checkbox__icon t-checkbox__icon--left"
-              >
-                
-                <!---->
-                <!---->
-                
-              </div>
+              <!---->
               <div
                 class="t-checkbox__content"
               >
@@ -1901,11 +1871,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
       <div
         class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block t-checkbox--vertical"
       >
-        <div
-          class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
-        >
-          <!---->
-        </div>
+        <!---->
         <div
           class="t-checkbox__content"
         >
@@ -1937,11 +1903,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
       <div
         class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block t-checkbox--vertical"
       >
-        <div
-          class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
-        >
-          <!---->
-        </div>
+        <!---->
         <div
           class="t-checkbox__content"
         >
@@ -1966,14 +1928,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
       <div
         class="t-checkbox t-checkbox--left t-checkbox--block t-checkbox--vertical"
       >
-        <div
-          class="t-checkbox__icon t-checkbox__icon--left"
-        >
-          
-          <!---->
-          <!---->
-          
-        </div>
+        <!---->
         <div
           class="t-checkbox__content"
         >
@@ -2019,11 +1974,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
       <div
         class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block t-checkbox--vertical"
       >
-        <div
-          class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
-        >
-          <!---->
-        </div>
+        <!---->
         <div
           class="t-checkbox__content"
         >
@@ -2055,11 +2006,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
       <div
         class="t-checkbox t-checkbox--left t-checkbox--checked t-checkbox--block t-checkbox--vertical"
       >
-        <div
-          class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
-        >
-          <!---->
-        </div>
+        <!---->
         <div
           class="t-checkbox__content"
         >
@@ -2084,14 +2031,7 @@ exports[`Checkbox > Checkbox specialVue demo works fine 1`] = `
       <div
         class="t-checkbox t-checkbox--left t-checkbox--block t-checkbox--vertical"
       >
-        <div
-          class="t-checkbox__icon t-checkbox__icon--left"
-        >
-          
-          <!---->
-          <!---->
-          
-        </div>
+        <!---->
         <div
           class="t-checkbox__content"
         >

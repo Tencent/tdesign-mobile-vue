@@ -36,7 +36,7 @@ const data = reactive({
     {
       label: '选项一',
       title: '标题一',
-      badgeProps: {},
+      badgeProps: {} as TdSideBarItemProps['badgeProps'],
       items,
     },
     {
@@ -44,13 +44,13 @@ const data = reactive({
       title: '标题二',
       badgeProps: {
         dot: true,
-      },
+      } as TdSideBarItemProps['badgeProps'],
       items: items.slice(0, 9),
     },
     {
       label: '选项三',
       title: '标题三',
-      badgeProps: {},
+      badgeProps: {} as TdSideBarItemProps['badgeProps'],
       items: items.slice(0, 9),
     },
     {
@@ -58,13 +58,13 @@ const data = reactive({
       title: '标题四',
       badgeProps: {
         count: 6,
-      },
+      } as TdSideBarItemProps['badgeProps'],
       items: items.slice(0, 6),
     },
     {
       label: '选项五',
       title: '标题五',
-      badgeProps: {},
+      badgeProps: {} as TdSideBarItemProps['badgeProps'],
       items: items.slice(0, 3),
     },
   ],

@@ -23,7 +23,9 @@
   </div>
 </template>
 <script setup lang="ts">
-const files = [
+import type { UploadFile } from 'tdesign-mobile-vue';
+
+const files: UploadFile[] = [
   {
     url: 'https://tdesign.gtimg.com/mobile/demos/upload6.png',
     name: 'uploaded1.png',
@@ -39,7 +41,7 @@ const files = [
   },
 ];
 
-const failFiles = [
+const failFiles: UploadFile[] = [
   {
     url: 'https://tdesign.gtimg.com/mobile/demos/upload4.png',
     name: 'uploaded1.png',

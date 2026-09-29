@@ -11,8 +11,10 @@
 </template>
 
 <script lang="ts" setup>
-const rowColsAvater = [{ size: '48px', type: 'circle' }];
-const rowColsImage = [{ size: '48px', type: 'rect' }];
+import type { SkeletonRowCol } from 'tdesign-mobile-vue';
+
+const rowColsAvater: SkeletonRowCol = [{ size: '48px', type: 'circle' }];
+const rowColsImage: SkeletonRowCol = [{ size: '48px', type: 'rect' }];
 const rowColsContent = [{ width: '50%' }, { width: '100%' }];
 </script>
 

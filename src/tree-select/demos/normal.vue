@@ -86,7 +86,10 @@ const areaList = {
 };
 
 const generateTree = () => {
-  const { provinces, cities, counties } = areaList;
+  const { provinces, cities, counties } = areaList as Record<
+    'provinces' | 'cities' | 'counties',
+    Record<string, string>
+  >;
   const options: TdTreeSelectProps['options'] = [];
   const eachObj = (obj: Record<string, string>, cb: (item: string) => void) => Object.keys(obj).forEach(cb);
   // @ts-ignore

@@ -11,10 +11,11 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { SoundIcon } from 'tdesign-icons-vue-next';
+import type { NoticeBarChangeSource } from 'tdesign-mobile-vue';
 
 const content = ref<string>('提示文字描述提示文字描述提示文字描述提示文字描述文');
 const content1 = ref(['君不见', '高堂明镜悲白发', '朝如青丝暮成雪', '人生得意须尽欢', '莫使金樽空对月']);
-const onChange = (value: string, options: any) => {
-  console.log(value, options);
+const onChange = (current: number, context: { source: NoticeBarChangeSource }) => {
+  console.log(current, context);
 };
 </script>

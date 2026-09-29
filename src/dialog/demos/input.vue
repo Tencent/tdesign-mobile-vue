@@ -38,12 +38,12 @@ const confirmBtn = {
   content: '确认',
   variant: 'text',
   size: 'large',
-};
+} as const;
 const cancelBtn = {
   content: '取消',
   variant: 'text',
   size: 'large',
-};
+} as const;
 
 const onConfirm = () => {
   console.log('dialog:confirm');
