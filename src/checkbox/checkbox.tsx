@@ -36,6 +36,7 @@ export default defineComponent({
     );
 
     const checkboxGroup: any = inject('checkboxGroup', undefined);
+    const direction = computed(() => checkboxGroup?.direction?.value);
     const disabled = useFormDisabled(checkboxGroup?.disabled);
     const indeterminate = computed<boolean>(() => {
       if (props.checkAll && checkboxGroup != null) return checkboxGroup.checkAllStatus.value === 'indeterminate';
@@ -183,6 +184,7 @@ export default defineComponent({
             [`${checkboxClass.value}--${placement}`]: true,
             [`${checkboxClass.value}--checked`]: isChecked.value,
             [`${checkboxClass.value}--block`]: block,
+            [`${checkboxClass.value}--${direction.value}`]: !!direction.value,
           }}
           onClick={handleChange}
         >
