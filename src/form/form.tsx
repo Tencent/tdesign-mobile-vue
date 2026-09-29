@@ -188,7 +188,7 @@ export default defineComponent({
         }
       });
     };
-    const setValidateMessage = (validateMessage: FormValidateMessage<FormData>) => {
+    const setValidateMessage = <FormData extends Data>(validateMessage: FormValidateMessage<FormData>) => {
       const keys = Object.keys(validateMessage);
       if (!keys.length) return;
       const list = children.value
