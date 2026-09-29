@@ -239,14 +239,14 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-radio-group box"
+            class="t-radio-group t-radio-group--vertical box"
             data-v-0efbfc02=""
             role="radiogroup"
           >
             <!---->
             
             <div
-              class="t-radio t-radio--left"
+              class="t-radio t-radio--left t-radio--vertical"
               data-v-0efbfc02=""
             >
               <input
@@ -277,7 +277,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--left"
+              class="t-radio t-radio--left t-radio--vertical"
               data-v-0efbfc02=""
             >
               <input
@@ -308,7 +308,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--left"
+              class="t-radio t-radio--left t-radio--vertical"
               data-v-0efbfc02=""
             >
               <input
@@ -1054,12 +1054,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                       class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
                     >
                       <div
-                        class="t-radio-group"
+                        class="t-radio-group t-radio-group--vertical"
                         role="radiogroup"
                       >
                         
                         <div
-                          class="t-radio t-radio--right t-radio--block"
+                          class="t-radio t-radio--right t-radio--block t-radio--vertical"
                         >
                           <input
                             class="t-radio__original"
@@ -1089,7 +1089,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                           <!---->
                         </div>
                         <div
-                          class="t-radio t-radio--right t-radio--block"
+                          class="t-radio t-radio--right t-radio--block t-radio--vertical"
                         >
                           <input
                             class="t-radio__original"
@@ -2169,14 +2169,14 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
               >
                 
                 <div
-                  class="t-radio-group box"
+                  class="t-radio-group t-radio-group--vertical box"
                   data-v-0efbfc02=""
                   role="radiogroup"
                 >
                   <!---->
                   
                   <div
-                    class="t-radio t-radio--left"
+                    class="t-radio t-radio--left t-radio--vertical"
                     data-v-0efbfc02=""
                   >
                     <input
@@ -2207,7 +2207,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     <!---->
                   </div>
                   <div
-                    class="t-radio t-radio--left"
+                    class="t-radio t-radio--left t-radio--vertical"
                     data-v-0efbfc02=""
                   >
                     <input
@@ -2238,7 +2238,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                     <!---->
                   </div>
                   <div
-                    class="t-radio t-radio--left"
+                    class="t-radio t-radio--left t-radio--vertical"
                     data-v-0efbfc02=""
                   >
                     <input
@@ -2984,12 +2984,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                             class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
                           >
                             <div
-                              class="t-radio-group"
+                              class="t-radio-group t-radio-group--vertical"
                               role="radiogroup"
                             >
                               
                               <div
-                                class="t-radio t-radio--right t-radio--block"
+                                class="t-radio t-radio--right t-radio--block t-radio--vertical"
                               >
                                 <input
                                   class="t-radio__original"
@@ -3019,7 +3019,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                 <!---->
                               </div>
                               <div
-                                class="t-radio t-radio--right t-radio--block"
+                                class="t-radio t-radio--right t-radio--block t-radio--vertical"
                               >
                                 <input
                                   class="t-radio__original"
@@ -3962,14 +3962,14 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
         >
           
           <div
-            class="t-radio-group box"
+            class="t-radio-group t-radio-group--vertical box"
             data-v-39ff7205=""
             role="radiogroup"
           >
             <!---->
             
             <div
-              class="t-radio t-radio--left"
+              class="t-radio t-radio--left t-radio--vertical"
               data-v-39ff7205=""
             >
               <input
@@ -4000,7 +4000,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--left"
+              class="t-radio t-radio--left t-radio--vertical"
               data-v-39ff7205=""
             >
               <input
@@ -4031,7 +4031,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--left"
+              class="t-radio t-radio--left t-radio--vertical"
               data-v-39ff7205=""
             >
               <input
@@ -4773,12 +4773,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                       class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
                     >
                       <div
-                        class="t-radio-group"
+                        class="t-radio-group t-radio-group--vertical"
                         role="radiogroup"
                       >
                         
                         <div
-                          class="t-radio t-radio--right t-radio--block"
+                          class="t-radio t-radio--right t-radio--block t-radio--vertical"
                         >
                           <input
                             class="t-radio__original"
@@ -4808,7 +4808,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                           <!---->
                         </div>
                         <div
-                          class="t-radio t-radio--right t-radio--block"
+                          class="t-radio t-radio--right t-radio--block t-radio--vertical"
                         >
                           <input
                             class="t-radio__original"

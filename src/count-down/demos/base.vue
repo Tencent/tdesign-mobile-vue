@@ -55,8 +55,6 @@ const time = 96 * 60 * 1000;
 </script>
 
 <style lang="less">
-@import '../../_common/style/mobile/_variables';
-
 .demo-count-down-desc {
   color: var(--td-text-color-secondary, rgba(0, 0, 0, 0.6));
   font-size: 14px;
@@ -68,7 +66,7 @@ const time = 96 * 60 * 1000;
 
 // 覆盖组件内部样式
 .custom .t-count-down__item {
-  color: @error-color;
+  color: var(--td-error-color);
   font-size: 18px;
   line-height: 24px;
   vertical-align: middle;

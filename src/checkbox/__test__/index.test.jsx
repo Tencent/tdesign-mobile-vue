@@ -135,6 +135,46 @@ describe('Checkbox', () => {
       // expect(wrapper.findComponent({ ref: '2' }).vm.isChecked).toBe(true);
       // expect(wrapper.findComponent({ ref: '3' }).vm.isDisabled).toBe(true);
     });
+
+    test(':direction default vertical', () => {
+      const wrapper = mount(() => (
+        <CheckboxGroup>
+          <Checkbox value="1" ref="1" />
+          <Checkbox value="2" ref="2" />
+        </CheckboxGroup>
+      ));
+      // 默认值为 vertical
+      expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(false);
+    });
+
+    test(':direction change dynamically', async () => {
+      const direction = ref('vertical');
+      const wrapper = mount(() => (
+        <CheckboxGroup direction={direction.value}>
+          <Checkbox value="1" ref="1" />
+          <Checkbox value="2" ref="2" />
+        </CheckboxGroup>
+      ));
+      // 初始为 vertical
+      expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(false);
+      expect(wrapper.findAll(`.${name}--horizontal`).length).toBe(0);
+
+      // 动态切换为 horizontal
+      direction.value = 'horizontal';
+      await nextTick();
+      expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(false);
+      expect(wrapper.findAll(`.${name}--horizontal`).length).toBe(2);
+
+      // 动态切换回 vertical
+      direction.value = 'vertical';
+      await nextTick();
+      expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(false);
+      expect(wrapper.findAll(`.${name}--horizontal`).length).toBe(0);
+    });
   });
 
   describe('single checkbox', () => {

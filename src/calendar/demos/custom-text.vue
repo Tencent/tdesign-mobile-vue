@@ -62,9 +62,7 @@ const handleSelect = (val: Date) => {
 };
 </script>
 <style lang="less">
-@import '../../_common/style/mobile/_variables';
-
 .is-holiday:not(.t-calendar__dates-item--selected) {
-  color: @error-color-6;
+  color: var(--td-error-color);
 }
 </style>
