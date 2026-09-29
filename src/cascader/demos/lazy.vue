@@ -61,7 +61,7 @@ const loadOptions = (node: any): Promise<any[]> => {
   });
 };
 
-const onChange = (value: string, options: any): void => {
+const onChange = (value: string | number, options: any): void => {
   note.value = options?.map((item: any) => item.label).join('/');
   visible.value = false;
 };

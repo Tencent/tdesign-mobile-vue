@@ -41,7 +41,7 @@
     "test:e2e-gui": "cypress open --config-file scripts/test/cypress.json",
     "test:demo": "node scripts/test/generate-demo-test.js",
     "lint": "npm run lint:tsc && eslint --ext .vue,.ts,.tsx ./ --max-warnings 0 --ignore-path .gitignore --ignore-path .eslintignore",
-    "lint:tsc": "vue-tsc --emitDeclarationOnly",
+    "lint:tsc": "vue-tsc --noEmit -p tsconfig.build.json",
     "lint:fix": "npm run lint:fix-prettier && npm run lint:fix-eslint",
     "lint:fix-eslint": "eslint --ext .vue,.ts,.tsx ./ --max-warnings 0 --ignore-path .gitignore --ignore-path .eslintignore --fix",
     "lint:fix-prettier": "prettier ./ --ignore-path .gitignore --ignore-path .eslintignore --ignore-path .prettierignore --write './*.{vue,ts,tsx}' --ignore-unknown",
@@ -188,9 +188,9 @@
     "vite-plugin-tdoc": "^2.0.1",
     "vitest": "^3.2.4",
     "vue": "^3.5.1",
-    "vue-eslint-parser": "^8.0.1",
+    "vue-eslint-parser": "^10.4.1",
     "vue-router": "4.0.11",
-    "vue-tsc": "^0.40.0"
+    "vue-tsc": "^3.3.11"
   },
   "config": {
     "commitizen": {

@@ -2,7 +2,7 @@
   <t-checkbox-group v-model:value="value">
     <div v-for="n in 3" :key="n" :class="`card ${value.indexOf(n) > -1 ? 'card--active' : value.indexOf(n)}`">
       <t-icon v-if="value.indexOf(n) > -1" :aria-hidden="true" class="card__icon" name="check" />
-      <t-checkbox :value="n" borderless content="描述信息描述信息描述信息描述信息描述信息" icon="none" label="多选" />
+      <t-checkbox :value="n" borderless content="描述信息描述信息描述信息描述信息描述信息" :icon="false" label="多选" />
     </div>
   </t-checkbox-group>
 
@@ -11,7 +11,7 @@
   <t-checkbox-group v-model:value="value1" borderless class="horizontal-box">
     <div v-for="n in 3" :key="n" :class="`card ${value1.indexOf(n) > -1 ? 'card--active' : value1.indexOf(n)}`">
       <t-icon v-if="value1.indexOf(n) > -1" :aria-hidden="true" class="card__icon" name="check" />
-      <t-checkbox :value="n" icon="none" label="多选" />
+      <t-checkbox :value="n" :icon="false" label="多选" />
     </div>
   </t-checkbox-group>
 </template>
