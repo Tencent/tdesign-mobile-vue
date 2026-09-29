@@ -62,11 +62,9 @@ export interface SwipeActionItem {
   text: string;
   className?: string;
   style?: Styles;
-  sure?: Sure;
+  sure?: string | TNode;
   onClick?: () => void;
   [key: string]: any;
 }
-
-export type Sure = string | TNode;
 
 export type SwipeSource = 'left' | 'right';
