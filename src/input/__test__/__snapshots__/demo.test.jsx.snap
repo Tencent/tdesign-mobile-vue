@@ -493,11 +493,12 @@ exports[`Input > Input layoutVue demo works fine 1`] = `
 
 exports[`Input > Input maxLengthVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="input-demo"
+  data-v-8ca18de4=""
 >
-  
   <div
     class="t-input t-input--layout-horizontal t-input--border"
+    data-v-8ca18de4=""
   >
     <div
       class="t-input__wrap--prefix"
@@ -538,6 +539,7 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
+    data-v-8ca18de4=""
   >
     <div
       class="t-input__wrap--prefix"
@@ -576,7 +578,6 @@ exports[`Input > Input maxLengthVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
-  
 </div>
 `;
 
@@ -751,88 +752,93 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       class="tdesign-mobile-demo-block__slot"
     >
       
-      
       <div
-        class="t-input t-input--layout-horizontal t-input--border"
+        class="input-demo"
+        data-v-8ca18de4=""
       >
         <div
-          class="t-input__wrap--prefix"
+          class="t-input t-input--layout-horizontal t-input--border"
+          data-v-8ca18de4=""
         >
+          <div
+            class="t-input__wrap--prefix"
+          >
+            <!---->
+            <div
+              class="t-input__label"
+            >
+              标签文字
+            </div>
+          </div>
+          <div
+            class="t-input__wrap"
+          >
+            <div
+              class="t-input__content t-input--default"
+            >
+              <input
+                autocomplete="Off"
+                class="t-input__control t-input--default"
+                name=""
+                placeholder="请输入文字"
+                spellcheck="false"
+                style="--td-input-cursor-color: #0052d9;"
+                type="text"
+              />
+              <!---->
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-input__tips t-input--left"
+            >
+              最大输入10个字符
+            </div>
+          </div>
           <!---->
-          <div
-            class="t-input__label"
-          >
-            标签文字
-          </div>
         </div>
         <div
-          class="t-input__wrap"
+          class="t-input t-input--layout-horizontal t-input--border"
+          data-v-8ca18de4=""
         >
           <div
-            class="t-input__content t-input--default"
+            class="t-input__wrap--prefix"
           >
-            <input
-              autocomplete="Off"
-              class="t-input__control t-input--default"
-              name=""
-              placeholder="请输入文字"
-              spellcheck="false"
-              style="--td-input-cursor-color: #0052d9;"
-              type="text"
-            />
             <!---->
-            <!---->
-            <!---->
+            <div
+              class="t-input__label"
+            >
+              标签文字
+            </div>
           </div>
           <div
-            class="t-input__tips t-input--left"
+            class="t-input__wrap"
           >
-            最大输入10个字符
+            <div
+              class="t-input__content t-input--default"
+            >
+              <input
+                autocomplete="Off"
+                class="t-input__control t-input--default"
+                name=""
+                placeholder="请输入文字"
+                spellcheck="false"
+                style="--td-input-cursor-color: #0052d9;"
+                type="text"
+              />
+              <!---->
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-input__tips t-input--left"
+            >
+              最大输入10个字符，汉字算两个
+            </div>
           </div>
-        </div>
-        <!---->
-      </div>
-      <div
-        class="t-input t-input--layout-horizontal t-input--border"
-      >
-        <div
-          class="t-input__wrap--prefix"
-        >
           <!---->
-          <div
-            class="t-input__label"
-          >
-            标签文字
-          </div>
         </div>
-        <div
-          class="t-input__wrap"
-        >
-          <div
-            class="t-input__content t-input--default"
-          >
-            <input
-              autocomplete="Off"
-              class="t-input__control t-input--default"
-              name=""
-              placeholder="请输入文字"
-              spellcheck="false"
-              style="--td-input-cursor-color: #0052d9;"
-              type="text"
-            />
-            <!---->
-            <!---->
-            <!---->
-          </div>
-          <div
-            class="t-input__tips t-input--left"
-          >
-            最大输入10个字符，汉字算两个
-          </div>
-        </div>
-        <!---->
       </div>
-      
       
     </div>
   </div>
@@ -1847,111 +1853,117 @@ exports[`Input > Input mobileVue demo works fine 1`] = `
       class="tdesign-mobile-demo-block__slot"
     >
       
-      
       <div
-        class="t-input t-input--layout-horizontal t-input--border"
+        class="input-demo"
+        data-v-c6218609=""
       >
         <div
-          class="t-input__wrap--prefix"
-        >
-          <!---->
-          <div
-            class="t-input__label"
-          >
-            标签文字
-          </div>
-        </div>
-        <div
-          class="t-input__wrap"
+          class="t-input t-input--layout-horizontal t-input--border"
+          data-v-c6218609=""
         >
           <div
-            class="t-input__content t-input--error"
+            class="t-input__wrap--prefix"
           >
-            <input
-              autocomplete="Off"
-              class="t-input__control t-input--error"
-              name=""
-              placeholder="请输入文字"
-              spellcheck="false"
-              style="--td-input-cursor-color: #0052d9;"
-              type="text"
-              value="已输入文字"
-            />
-            <!---->
             <!---->
             <div
-              class="t-input__wrap--suffix-icon"
+              class="t-input__label"
             >
-              
-              <svg
-                class="t-icon t-icon-close"
-                fill="none"
-                height="1em"
-                style="fill: none; color: rgb(213, 73, 65);"
-                viewBox="0 0 24 24"
-                width="1em"
-              >
-                <g
-                  id="close"
-                >
-                  <path
-                    d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
-                    id="stroke1"
-                    stroke="currentColor"
-                    stroke-linecap="square"
-                    stroke-width="2"
-                  />
-                </g>
-              </svg>
-              
+              标签文字
             </div>
           </div>
           <div
-            class="t-input__tips t-input--left"
+            class="t-input__wrap"
           >
-            辅助说明
+            <div
+              class="t-input__content t-input--error"
+            >
+              <input
+                autocomplete="Off"
+                class="t-input__control t-input--error"
+                name=""
+                placeholder="请输入文字"
+                spellcheck="false"
+                style="--td-input-cursor-color: #0052d9;"
+                type="text"
+                value="已输入文字"
+              />
+              <!---->
+              <!---->
+              <div
+                class="t-input__wrap--suffix-icon"
+              >
+                
+                <svg
+                  class="t-icon t-icon-close"
+                  data-v-c6218609=""
+                  fill="none"
+                  height="1em"
+                  style="fill: none; color: rgb(213, 73, 65);"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="close"
+                  >
+                    <path
+                      d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+                
+              </div>
+            </div>
+            <div
+              class="t-input__tips t-input--left"
+            >
+              辅助说明
+            </div>
           </div>
-        </div>
-        <!---->
-      </div>
-      <div
-        class="t-input t-input--layout-horizontal t-input--border"
-      >
-        <div
-          class="t-input__wrap--prefix"
-        >
           <!---->
-          <div
-            class="t-input__label"
-          >
-            标签文字
-          </div>
         </div>
         <div
-          class="t-input__wrap"
+          class="t-input t-input--layout-horizontal t-input--border"
+          data-v-c6218609=""
         >
           <div
-            class="t-input__content t-input--default"
+            class="t-input__wrap--prefix"
           >
-            <input
-              autocomplete="Off"
-              class="t-input__control t-input--default t-input__control--disabled"
-              disabled=""
-              name=""
-              spellcheck="false"
-              style="--td-input-cursor-color: #0052d9;"
-              type="text"
-              value="不可编辑文字"
-            />
             <!---->
-            <!---->
+            <div
+              class="t-input__label"
+            >
+              标签文字
+            </div>
+          </div>
+          <div
+            class="t-input__wrap"
+          >
+            <div
+              class="t-input__content t-input--default"
+            >
+              <input
+                autocomplete="Off"
+                class="t-input__control t-input--default t-input__control--disabled"
+                disabled=""
+                name=""
+                spellcheck="false"
+                style="--td-input-cursor-color: #0052d9;"
+                type="text"
+                value="不可编辑文字"
+              />
+              <!---->
+              <!---->
+              <!---->
+            </div>
             <!---->
           </div>
           <!---->
         </div>
-        <!---->
       </div>
-      
       
     </div>
   </div>
@@ -3068,11 +3080,12 @@ exports[`Input > Input specialVue demo works fine 1`] = `
 
 exports[`Input > Input statusVue demo works fine 1`] = `
 <div
-  data-v-app=""
+  class="input-demo"
+  data-v-c6218609=""
 >
-  
   <div
     class="t-input t-input--layout-horizontal t-input--border"
+    data-v-c6218609=""
   >
     <div
       class="t-input__wrap--prefix"
@@ -3108,6 +3121,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
           
           <svg
             class="t-icon t-icon-close"
+            data-v-c6218609=""
             fill="none"
             height="1em"
             style="fill: none; color: rgb(213, 73, 65);"
@@ -3139,6 +3153,7 @@ exports[`Input > Input statusVue demo works fine 1`] = `
   </div>
   <div
     class="t-input t-input--layout-horizontal t-input--border"
+    data-v-c6218609=""
   >
     <div
       class="t-input__wrap--prefix"
@@ -3174,7 +3189,6 @@ exports[`Input > Input statusVue demo works fine 1`] = `
     </div>
     <!---->
   </div>
-  
 </div>
 `;
 
