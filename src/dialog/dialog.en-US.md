@@ -45,8 +45,8 @@ overlay-click | `(context: { e: MouseEvent })` | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | \- | N
+style | String / Object | - | Typescript: `string \| Styles`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 `Omit<DialogProps, 'attach'>` | \- | - | extends `Omit<DialogProps, 'attach'>` | N
-style | String / Object | - | Typescript：`string \| Styles`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 
 ### DialogInstance
 
@@ -64,8 +64,6 @@ update | `(props: DialogOptions)` | \- | required
 name | params | default | description
 -- | -- | -- | --
 options | \- | - | Typescript: `DialogOptions`
-
-插件返回值：`DialogInstance`
 
 ### DialogPlugin.confirm
 

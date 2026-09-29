@@ -10,7 +10,7 @@ closeOnClickOverlay | Boolean | true | 是否在点击遮罩层后关闭菜单 |
 direction | String | down | 菜单展开方向。可选项：down/up | N
 duration | String / Number | 200 | 动画时长 | N
 showOverlay | Boolean | true | 是否显示遮罩层 | N
-zIndex | Number | 11600 | 菜单栏 z-index 层级 | N
+zIndex | Number | - | 菜单栏 z-index 层级，默认为 1600 | N
 
 
 ### DropdownItem Props

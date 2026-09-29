@@ -76,7 +76,7 @@ export default {
   width: {
     type: [String, Number] as PropType<TdDialogProps['width']>,
   },
-  /** 对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500 */
+  /** 对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500 */
   zIndex: {
     type: Number,
   },

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, KeysType } from '../common';
+import type { TNode, KeysType } from '../common';
 
 export interface TdDropdownMenuProps {
   /**
@@ -28,8 +28,7 @@ export interface TdDropdownMenuProps {
    */
   showOverlay?: boolean;
   /**
-   * 菜单栏 z-index 层级
-   * @default 11600
+   * 菜单栏 z-index 层级，默认为 1600
    */
   zIndex?: number;
 }

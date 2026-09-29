@@ -8,8 +8,8 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -123,8 +123,8 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -262,8 +262,8 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -1049,8 +1049,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -1178,8 +1178,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -1948,8 +1948,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -2119,8 +2119,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         <!--teleport start-->
         
         <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          class="t-overlay t-popup-zIndex"
+          style="transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>
@@ -2237,8 +2237,8 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -2438,8 +2438,8 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
