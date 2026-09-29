@@ -29,7 +29,7 @@
 <script lang="ts" setup>
 import baseDemo from './base.vue';
 import statusVue from './status.vue';
-import linkSizeVue from './linkSize.vue';
+import linkSizeVue from './link-size.vue';
 import prefixVue from './prefix.vue';
 import suffixVue from './suffix.vue';
 import themeVue from './theme.vue';
