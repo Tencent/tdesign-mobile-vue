@@ -78,18 +78,18 @@ close | `(context: { e: MouseEvent })` | 如果关闭按钮存在，点击关闭
 --td-tag-large-font | @font-body-medium | -
 --td-tag-large-icon-size | 16px | -
 --td-tag-large-padding | 2px 7px | -
---td-tag-mark-border-radius | @tag-round-border-radius | -
+--td-tag-mark-border-radius | @radius-round | -
 --td-tag-medium-font | @font-body-small | -
 --td-tag-medium-icon-size | 14px | -
 --td-tag-medium-padding | 1px 7px | -
 --td-tag-outline-bg-color | @bg-color-container | -
 --td-tag-primary-color | @brand-color | -
 --td-tag-primary-light-color | @brand-color-light | -
---td-tag-round-border-radius | 999px | -
+--td-tag-round-border-radius | @radius-round | -
 --td-tag-small-font | @font-body-extraSmall | -
 --td-tag-small-icon-size | 12px | -
 --td-tag-small-padding | 1px 5px | -
---td-tag-square-border-radius | 4px | -
+--td-tag-square-border-radius | @radius-small | -
 --td-tag-success-color | @success-color | -
 --td-tag-success-light-color | @success-color-1 | -
 --td-tag-warning-color | @warning-color | -
