@@ -1,15 +1,15 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
+import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
+import { ref } from 'vue';
 import SwipeCell from '../swipe-cell';
 import { useSwipe } from '../useSwipe';
-import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import { trigger } from '../../image-viewer/__test__/touch';
-import { ref } from 'vue';
 
 const move = async (target, offsetX = 120, startX = 0, offsetY = 0, startY = 0) => {
   await trigger(target, 'touchstart', startX, startY);
   await trigger(target, 'touchmove', startX + offsetX, startY + offsetY);
-  return async () => await trigger(target, 'touchend', startX + offsetX, startY + offsetY);
+  return async () => trigger(target, 'touchend', startX + offsetX, startY + offsetY);
 };
 
 describe('swipe-cell', () => {
@@ -253,6 +253,58 @@ describe('swipe-cell', () => {
       const $buttons = wrapper.findAll('.t-swipe-cell__content');
       $buttons.at(0).trigger('click');
       expect(onClick).toBeCalledTimes(1);
+    });
+    it(': dragstart & dragend', async () => {
+      const onDragstart = vi.fn();
+      const onDragend = vi.fn();
+      const swipeAction = [
+        { text: '默认', className: 't-button--primary' },
+        { text: '删除', className: 't-button--danger' },
+      ];
+
+      const content = 'content is a string';
+      const wrapper = mount(SwipeCell, {
+        props: {
+          content,
+          right: swipeAction,
+          onDragstart,
+          onDragend,
+        },
+      });
+
+      const $swipeCell = wrapper.find('.t-swipe-cell');
+      const $buttons = wrapper.findAll('.t-swipe-cell__content');
+
+      // 水平滑动，dragstart 触发一次，touchend 后 dragend 触发一次
+      const touchend = await move($swipeCell, -120);
+      expect(onDragstart).toBeCalledTimes(1);
+      expect(onDragend).toBeCalledTimes(0);
+      await touchend();
+      expect(onDragstart).toBeCalledTimes(1);
+      expect(onDragend).toBeCalledTimes(1);
+
+      // 点击操作项，不触发 dragstart / dragend
+      await $buttons.at(0).trigger('click');
+      expect(onDragstart).toBeCalledTimes(1);
+      expect(onDragend).toBeCalledTimes(1);
+
+      // 操作项上轻微移动后抬起（点击场景），不触发 dragstart / dragend
+      const tapEnd = await move($buttons.at(1), -2);
+      await tapEnd();
+      expect(onDragstart).toBeCalledTimes(1);
+      expect(onDragend).toBeCalledTimes(1);
+
+      // 从操作项开始真实水平滑动，也不触发 dragstart / dragend
+      const actionDragEnd = await move($buttons.at(1), -120);
+      await actionDragEnd();
+      expect(onDragstart).toBeCalledTimes(1);
+      expect(onDragend).toBeCalledTimes(1);
+
+      // 垂直滑动，不触发 dragstart / dragend
+      const verticalEnd = await move($swipeCell, 0, 0, -50, 0);
+      await verticalEnd();
+      expect(onDragstart).toBeCalledTimes(1);
+      expect(onDragend).toBeCalledTimes(1);
     });
   });
   describe('slots', () => {

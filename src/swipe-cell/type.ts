@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode, Styles } from '../common';
 
 export interface TdSwipeCellProps {
   /**
@@ -33,19 +33,27 @@ export interface TdSwipeCellProps {
    */
   right?: Array<SwipeActionItem> | TNode;
   /**
-   * 菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态。
+   * 菜单展开或者收回后将菜单的状态传递给父组件，值为数组时表示分别控制左右滑动的展开和收起状态
    */
   onChange?: (value: string) => void;
   /**
    * 操作项点击时触发（插槽写法组件不触发，业务侧自定义内容和事件）
    */
   onClick?: (action: SwipeActionItem, source: SwipeSource) => void;
+  /**
+   * 滑动结束事件
+   */
+  onDragend?: () => void;
+  /**
+   * 滑动开始事件
+   */
+  onDragstart?: () => void;
 }
 
 /** 组件实例方法 */
 export interface SwipeCellInstanceFunctions {
   /**
-   * 显示二次确认内容的函数。<br/>【关于参数】`sure` 表示二次确认的具体内容，同content
+   * 显示二次确认内容的函数。参数: `sure` 表示二次确认的具体内容，同 content; `onClick` 表示点击二次确认内容时执行的回调
    */
   showSure?: (sure: string | TNode, onClick?: SwipeActionItem['onClick']) => void;
 }
@@ -53,7 +61,7 @@ export interface SwipeCellInstanceFunctions {
 export interface SwipeActionItem {
   text: string;
   className?: string;
-  style?: string;
+  style?: Styles;
   sure?: string | TNode;
   onClick?: () => void;
   [key: string]: any;
