@@ -62,7 +62,10 @@ function create(options: Partial<TdDialogProps> | string): DialogInstance {
       // 卸载创建的app
       // 修复调用destroy未清除滚动锁定问题
       nextTick(() => {
-        params.destroyOnClose && app.unmount();
+        if (params.destroyOnClose) {
+          app.unmount();
+          root.remove();
+        }
       });
     },
   });
@@ -75,7 +78,6 @@ function create(options: Partial<TdDialogProps> | string): DialogInstance {
       params.destroyOnClose = true;
       nextTick(() => {
         params.visible = false;
-        root.remove();
       });
     },
     hide() {
