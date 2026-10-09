@@ -19,7 +19,7 @@ import { SoundIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
     color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9)) !important;
   }
   .t-notice-bar__text {
-    color: var(--bg-color-demo, #fff) !important;
+    color: var(--td-bg-color-container) !important;
   }
   background-color: var(--td-bg-color-container);
 }
