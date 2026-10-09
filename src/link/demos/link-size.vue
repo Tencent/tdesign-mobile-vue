@@ -26,7 +26,7 @@ import { JumpIcon } from 'tdesign-icons-vue-next';
 <style scoped>
 .tdesign-mobile-link-demo {
   height: 48px;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
   display: flex;
   justify-content: space-evenly;
   align-items: center;

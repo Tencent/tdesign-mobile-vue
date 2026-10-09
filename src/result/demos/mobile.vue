@@ -45,7 +45,7 @@ const handleClick = () => {
 
 <style lang="less" scoped>
 .tdesign-mobile-demo {
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 
   .padding {
     padding: 0 16px 16px;
@@ -54,7 +54,7 @@ const handleClick = () => {
 
 .result-page {
   height: calc(100vh - 50px);
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 
   .demo-section__wrapper {
     padding: 24px 16px;

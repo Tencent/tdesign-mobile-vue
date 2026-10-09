@@ -21,6 +21,6 @@ import { SoundIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
   .t-notice-bar__text {
     color: var(--bg-color-demo, #fff) !important;
   }
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 </style>

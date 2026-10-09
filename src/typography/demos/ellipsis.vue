@@ -43,7 +43,7 @@ const ellipsisCustomSuffix = {
   position: relative;
   display: flex;
   padding: 0 16px;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 
   &:not(:last-child)::after {
     content: '';

@@ -27,12 +27,12 @@ import special from './special.vue';
 .steps-horizontal-demo-block {
   margin: 16px 0 24px;
   padding: 16px 0;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 .steps-vertical-demo-block {
   margin: 16px 0 24px;
   padding: 16px;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 .steps-demo {
   .tdesign-mobile-demo-block__slot {

@@ -17,11 +17,11 @@ const groupChangeFn = (value: any, context: { e: Event }) => {
 
 <style scoped>
 .radio-group-demo {
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 
 .box {
   padding: 16px;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 </style>

@@ -57,7 +57,7 @@ const onSubmit = (context: { value: string; e: KeyboardEvent }) => {
 </script>
 <style lang="less">
 .example-search {
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
   padding: 8px 16px;
 }
 </style>
