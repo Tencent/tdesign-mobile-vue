@@ -171,8 +171,15 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 clearFilterResultButtonText | String | - | \- | N
 confirmText | String | - | \- | N
+clearFilterResultButtonText | String | - | \- | N
+confirmText | String | - | \- | N
 empty | String / Slot / Function | - | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 filterIcon | Slot / Function | undefined | Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+hideSortTips | Boolean | false | hide sort tips | N
+loadingText | String | - | \- | N
+resetText | String | - | \- | N
+searchResultText | String | - | \- | N
+filterIcon | Slot / Function | undefined | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 hideSortTips | Boolean | false | hide sort tips | N
 loadingText | String | - | \- | N
 resetText | String | - | \- | N

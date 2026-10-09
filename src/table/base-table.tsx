@@ -1,4 +1,4 @@
-import { defineComponent, computed, h, ref, SetupContext, toRefs } from 'vue';
+import { defineComponent, computed, h, ref, SetupContext, toRefs, inject, watch } from 'vue';
 import { get, isFunction, isString } from 'lodash-es';
 import baseTableProps from './base-table-props';
 import useClassName from './hooks/useClassName';
@@ -6,6 +6,8 @@ import useStyle, { formatCSSUnit } from './hooks/useStyle';
 import useFixed, { getRowFixedStyles, getColumnFixedStyles } from './hooks/useFixed';
 import { renderTitle } from './hooks/useTableHeader';
 import useRowspanAndColspan from './hooks/useRowspanAndColspan';
+import usePagination from './hooks/usePagination';
+import usePullRefresh from './hooks/usePullRefresh';
 import {
   formatClassNames,
   formatRowAttributes,
@@ -21,6 +23,7 @@ import TLoading from '../loading';
 import { TdLoadingProps } from '../loading/type';
 import { useConfig } from '../config-provider/useConfig';
 import { useTNodeJSX } from '../hooks/tnode';
+import { tableInternalKey, BaseTableColumns } from './interface';
 
 export default defineComponent({
   name: 'TBaseTable',
@@ -44,6 +47,9 @@ export default defineComponent({
     } = useClassName();
     const { globalConfig, t } = useConfig('table');
     const defaultLoadingContent = h(TLoading, { ...(props.loadingProps as TdLoadingProps) });
+
+    // 内部通信：从 PrimaryTable 注入的上下文
+    const tableInternalCtx = inject(tableInternalKey, null);
     // 表格基础样式类
     const { tableClasses, tableContentStyles, tableElementStyles } = useStyle(props);
     const {
@@ -51,12 +57,38 @@ export default defineComponent({
       tableContentRef,
       isFixedColumn,
       isFixedHeader,
+      isWidthOverflow,
+      tableWidth,
       showColumnShadow,
       refreshTable,
       updateColumnFixedShadow,
     } = useFixed(props);
 
     const { skipSpansMap } = useRowspanAndColspan(data, columns, rowKey, rowspanAndColspan);
+
+    // 分页数据
+    const {
+      dataSource: paginationDataSource,
+      isPaginateData,
+      renderPagination,
+    } = usePagination(props, tableContentRef);
+
+    // 上拉加载数据
+    const {
+      dataSource: pullRefreshDataSource,
+      isPaginateData: isPullRefreshData,
+      pullOffset,
+      isPulling,
+      renderPullRefreshLoading,
+    } = usePullRefresh(props, tableContentRef);
+
+    // 表格展示数据：根据加载模式选择分页数据 / 上拉加载数据 / 原始数据
+    const displayData = computed(() => {
+      if (props.loadingMode === 'pull-refresh') {
+        return isPullRefreshData.value ? pullRefreshDataSource.value : props.data;
+      }
+      return isPaginateData.value ? paginationDataSource.value : props.data;
+    });
 
     const defaultColWidth = props.tableLayout === 'fixed' ? '80px' : undefined;
 
@@ -140,7 +172,7 @@ export default defineComponent({
     const onInnerVirtualScroll = (e: Event) => {
       const target = (e.target || e.srcElement) as HTMLElement;
       updateColumnFixedShadow(target);
-      props.onScroll?.({ params: e });
+      props.onScroll?.({ e });
 
       // 滚动到底部检测
       const threshold = 50;
@@ -187,7 +219,7 @@ export default defineComponent({
 
     const renderTableBody = () => {
       const renderContentEmpty = renderTNodeJSX('empty') || t(globalConfig.value.empty);
-      if (!props.data?.length && renderContentEmpty) {
+      if (!displayData.value?.length && renderContentEmpty) {
         return (
           <tr class={tableBaseClass.emptyRow}>
             <td colspan={props.columns?.length}>
@@ -196,13 +228,13 @@ export default defineComponent({
           </tr>
         );
       }
-      if (props.data?.length) {
-        return props.data?.map((tr_item, tr_index) => {
+      if (displayData.value?.length) {
+        return displayData.value?.map((tr_item, tr_index) => {
           const rowId = get(tr_item, props.rowKey || 'id') as string | number;
           const { style, classes } = getRowFixedStyles(
             rowId,
             tr_index,
-            props.data?.length || 0,
+            displayData.value?.length || 0,
             props.fixedRows as TdBaseTableProps['fixedRows'],
             rowAndColFixedPosition.value,
             tableRowFixedClasses,
@@ -217,7 +249,7 @@ export default defineComponent({
           const trAttributes =
             formatRowAttributes(props.rowAttributes, { row: tr_item, rowIndex: tr_index, type: 'body' }) || {};
 
-          return (
+          const nodes = [
             <tr
               {...trAttributes}
               key={tr_index}
@@ -258,7 +290,7 @@ export default defineComponent({
                   tdClassName(td_item, [tdStyles.classes, customClasses]),
                   {
                     // 合并单元格场景：最后一行移除底部边框
-                    [tableBaseClass.tdLastRow]: isLastRowInSpan(tr_index, rowspan, props.data?.length),
+                    [tableBaseClass.tdLastRow]: isLastRowInSpan(tr_index, rowspan, displayData.value?.length),
                     // 合并单元格场景：第一列移除左边框
                     [tableBaseClass.tdFirstCol]: props.rowspanAndColspan && isFirstColumnInSpan(td_index, rowspan),
                   },
@@ -280,19 +312,113 @@ export default defineComponent({
                   </td>
                 );
               })}
-            </tr>
-          );
+            </tr>,
+          ];
+
+          // 展开行渲染（由 PrimaryTable 通过内部通信注入）
+          if (tableInternalCtx?.renderExpandedRow) {
+            const expandedNode = tableInternalCtx.renderExpandedRow({
+              row: tr_item,
+              index: tr_index,
+              columns: props.columns || [],
+              tableWidth: tableWidth.value,
+              isWidthOverflow: isWidthOverflow.value,
+            });
+            if (expandedNode) {
+              nodes.push(expandedNode as any);
+            }
+          }
+
+          return nodes;
         });
       }
     };
 
+    // 通知 PrimaryTable 叶子列变化（用于拖拽排序）
+    watch(
+      () => columns.value,
+      (newCols) => {
+        if (tableInternalCtx?.onLeafColumnsChange && newCols) {
+          tableInternalCtx.onLeafColumnsChange(newCols as BaseTableColumns);
+        }
+      },
+      { immediate: true, deep: true },
+    );
+
     context.expose({
       refreshTable,
+      tableElement: tableRef,
+      tableHtmlElement: tableElmRef,
+      tableContentElement: tableContentRef,
     });
 
     return () => {
-      const renderLoading = renderTNodeJSX('loading', { defaultNode: defaultLoadingContent });
       const renderFooter = renderTNodeJSX('footerSummary');
+
+      const isPullRefreshMode = props.loadingMode === 'pull-refresh';
+
+      const renderTableHeader = () =>
+        props.showHeader && (
+          <thead ref={theadRef} class={theadClasses.value}>
+            <tr>
+              {props.columns?.map((item_th, index_th) => {
+                const thStyles = getColumnFixedStyles(
+                  item_th,
+                  index_th,
+                  rowAndColFixedPosition.value,
+                  tableColFixedClasses,
+                );
+                const customClasses = formatClassNames(item_th.className, {
+                  col: item_th,
+                  colIndex: index_th,
+                  row: {},
+                  rowIndex: -1,
+                  type: 'th',
+                });
+                return (
+                  <th
+                    key={index_th}
+                    class={thClassName(item_th, [thStyles.classes, customClasses])}
+                    style={thStyles.style}
+                    data-colKey={item_th.colKey}
+                  >
+                    <div class={(item_th.ellipsisTitle || item_th.ellipsis) && ellipsisClasses.value}>
+                      {renderTitle(context.slots, item_th, index_th)}
+                    </div>
+                  </th>
+                );
+              })}
+            </tr>
+          </thead>
+        );
+
+      // pull-refresh 模式下，上拉加载 loading 由 usePullRefresh hook 内部渲染
+      const renderLoading = () => {
+        if (isPullRefreshMode) {
+          return renderPullRefreshLoading();
+        }
+        // 非 pull-refresh 模式，使用外部 loading 控制
+        if (!props.loading) return null;
+        return (
+          <div class={`${classPrefix}-table__loading--full`}>
+            <TLoading {...(props.loadingProps as TdLoadingProps)} />
+          </div>
+        );
+      };
+
+      // 外部传入 loading={true} 时的全屏 loading（pull-refresh 模式下也支持外部控制全屏 loading）
+      const renderFullLoading = () => {
+        if (!props.loading || !isPullRefreshMode) return null;
+        return (
+          <div class={`${classPrefix}-table__loading--full`}>
+            <TLoading {...(props.loadingProps as TdLoadingProps)} />
+          </div>
+        );
+      };
+
+      const renderPaginationNode = () =>
+        props.pagination &&
+        props.loadingMode === 'pagination' && <div class={tableBaseClass.paginationWrap}>{renderPagination()}</div>;
 
       return (
         <div ref={tableRef} class={dynamicBaseTableClasses.value} style="position: relative">
@@ -308,35 +434,27 @@ export default defineComponent({
                   return <col key={col_item.colKey} style={colStyle(col_item)} />;
                 })}
               </colgroup>
-              {props.showHeader && (
-                <thead ref={theadRef} class={theadClasses.value}>
-                  <tr>
-                    {props.columns?.map((item_th, index_th) => {
-                      const thStyles = getColumnFixedStyles(
-                        item_th,
-                        index_th,
-                        rowAndColFixedPosition.value,
-                        tableColFixedClasses,
-                      );
-                      return (
-                        <th
-                          key={index_th}
-                          class={thClassName(item_th, thStyles.classes)}
-                          style={thStyles.style}
-                          data-colKey={item_th.colKey}
-                        >
-                          <div class={(item_th.ellipsisTitle || item_th.ellipsis) && ellipsisClasses.value}>
-                            {renderTitle(context.slots, item_th, index_th)}
-                          </div>
-                        </th>
-                      );
-                    })}
-                  </tr>
-                </thead>
-              )}
-              <tbody class={tbodyClasses.value}>{renderTableBody()}</tbody>
+              {renderTableHeader()}
+              <tbody
+                class={tbodyClasses.value}
+                style={
+                  isPullRefreshMode
+                    ? {
+                        position: 'relative',
+                        zIndex: 1,
+                        backgroundColor: 'inherit',
+                        transform: pullOffset.value > 0 ? `translateY(-${pullOffset.value}px)` : 'translateY(0)',
+                        transition: isPulling.value ? 'none' : 'transform 0.3s ease',
+                      }
+                    : undefined
+                }
+              >
+                {renderTableBody()}
+              </tbody>
             </table>
-            {renderLoading && <div class={loadingClasses.value}>{renderLoading}</div>}
+            {renderLoading()}
+            {renderFullLoading()}
+            {renderPaginationNode()}
           </div>
           {renderFooter && <div class={tableBaseClass.bottomContent}>{renderFooter}</div>}
         </div>
