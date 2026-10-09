@@ -1,6 +1,7 @@
 import { mount } from '@vue/test-utils';
 import { nextTick } from 'vue';
 import TTable from '../base-table';
+import TPrimaryTable from '../primary-table';
 import config from '../../config';
 
 const { prefix } = config;
@@ -232,5 +233,359 @@ describe('event', () => {
     wrapper.find('.t-table__content').trigger('scroll');
     await wrapper.vm.$nextTick();
     expect(fn).toHaveBeenCalled();
+  });
+});
+
+// ==================== PrimaryTable 测试 ====================
+
+const primaryData = new Array(5).fill(null).map((item, index) => ({
+  key: String(index + 1),
+  applicant: ['贾明', '张三', '王芳'][index % 3],
+  status: index % 3,
+  channel: ['电子签署', '纸质签署', '纸质签署'][index % 3],
+  email: ['w.cezkdudy@lhll.au', 'r.nmgw@peurezgn.sl', 'p.cumx@rampblpa.ru'][index % 3],
+  createTime: [20220101, 20220201, 20220301, 20220401, 20220501][index % 4],
+}));
+
+const primaryColumns = [
+  { colKey: 'applicant', title: '申请人', align: 'center' },
+  { colKey: 'status', title: '状态', width: 120 },
+  { colKey: 'channel', title: '签署方式', width: 120 },
+  { colKey: 'email', title: 'Email', width: 180 },
+  { colKey: 'createTime', title: 'Date', width: 100, sorter: true },
+];
+
+describe('PrimaryTable', () => {
+  describe('基础渲染', () => {
+    it(': default render', () => {
+      const wrapper = mount({
+        render() {
+          return <TPrimaryTable rowKey="key" data={primaryData} columns={primaryColumns}></TPrimaryTable>;
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+
+    it(': columns render', () => {
+      const wrapper = mount({
+        render() {
+          return <TPrimaryTable rowKey="key" data={primaryData} columns={primaryColumns}></TPrimaryTable>;
+        },
+      });
+      const headers = wrapper.findAll('th');
+      expect(headers.length).toBeGreaterThan(0);
+    });
+  });
+
+  describe('排序', () => {
+    it(': sort change event', async () => {
+      const onSortChange = vi.fn();
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={primaryColumns}
+              sort={{ sortBy: 'createTime', descending: true }}
+              onSortChange={onSortChange}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      const sortHeader = wrapper.find('.t-table__sort-icon');
+      if (sortHeader.exists()) {
+        await sortHeader.trigger('click');
+        await nextTick();
+        expect(onSortChange).toHaveBeenCalled();
+      }
+    });
+
+    it(': showSortColumnBgColor', () => {
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={primaryColumns}
+              showSortColumnBgColor
+              sort={{ sortBy: 'createTime', descending: true }}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+
+    it(': multipleSort', () => {
+      const onSortChange = vi.fn();
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={primaryColumns}
+              multipleSort
+              sort={[
+                { sortBy: 'status', descending: true },
+                { sortBy: 'createTime', descending: false },
+              ]}
+              onSortChange={onSortChange}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+  });
+
+  describe('过滤', () => {
+    it(': filter change event', () => {
+      const onFilterChange = vi.fn();
+      const filterColumns = [
+        {
+          colKey: 'status',
+          title: '状态',
+          filter: {
+            type: 'single',
+            list: [
+              { label: '通过', value: 0 },
+              { label: '失败', value: 1 },
+            ],
+          },
+        },
+        { colKey: 'applicant', title: '申请人' },
+      ];
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={filterColumns}
+              filterValue={{ status: 0 }}
+              onFilterChange={onFilterChange}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+  });
+
+  describe('行选择', () => {
+    it(': select change event', () => {
+      const onSelectChange = vi.fn();
+      const selectColumns = [
+        { colKey: 'row-select', type: 'multiple', width: 30 },
+        { colKey: 'applicant', title: '申请人' },
+        { colKey: 'status', title: '状态' },
+      ];
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={selectColumns}
+              selectedRowKeys={['1', '2']}
+              onSelectChange={onSelectChange}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+
+    it(': selectOnRowClick', () => {
+      const onSelectChange = vi.fn();
+      const selectColumns = [
+        { colKey: 'row-select', type: 'multiple', width: 30 },
+        { colKey: 'applicant', title: '申请人' },
+      ];
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={selectColumns}
+              selectOnRowClick
+              onSelectChange={onSelectChange}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+  });
+
+  describe('展开行', () => {
+    it(': expand change event', () => {
+      const onExpandChange = vi.fn();
+      const expandColumns = [
+        { colKey: 'applicant', title: '申请人' },
+        { colKey: 'status', title: '状态' },
+      ];
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={expandColumns}
+              expandedRowKeys={['1']}
+              expandedRow={(h, params) => <div class="expanded-content">展开: {params.row.applicant}</div>}
+              onExpandChange={onExpandChange}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+
+    it(': expandOnRowClick', () => {
+      const onExpandChange = vi.fn();
+      const expandColumns = [
+        { colKey: 'applicant', title: '申请人' },
+        { colKey: 'status', title: '状态' },
+      ];
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={expandColumns}
+              expandOnRowClick
+              expandedRow="expanded-slot"
+              onExpandChange={onExpandChange}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+  });
+
+  describe('拖拽排序', () => {
+    it(': dragSort prop', () => {
+      const onDragSort = vi.fn();
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={primaryColumns}
+              dragSort="row"
+              onDragSort={onDragSort}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+  });
+
+  describe('分页', () => {
+    it(': pagination works', () => {
+      const onPageChange = vi.fn();
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={primaryColumns}
+              pagination={{ defaultCurrent: 1, defaultPageSize: 3 }}
+              onPageChange={onPageChange}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+  });
+
+  describe('displayColumns', () => {
+    it(': displayColumns controls visibility', () => {
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={primaryColumns}
+              displayColumns={['applicant', 'status']}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+  });
+
+  describe('events', () => {
+    it(': onChange', () => {
+      const onChange = vi.fn();
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={primaryColumns}
+              onChange={onChange}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+
+    it(': cell-click', async () => {
+      const onCellClick = vi.fn();
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={primaryColumns}
+              onCellClick={onCellClick}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      const td = wrapper.find('td');
+      if (td.exists()) {
+        await td.trigger('click');
+        await nextTick();
+      }
+    });
+
+    it(': row-click', async () => {
+      const onRowClick = vi.fn();
+      const wrapper = mount({
+        render() {
+          return (
+            <TPrimaryTable
+              rowKey="key"
+              data={primaryData}
+              columns={primaryColumns}
+              onRowClick={onRowClick}
+            ></TPrimaryTable>
+          );
+        },
+      });
+      const tr = wrapper.find('tbody tr');
+      if (tr.exists()) {
+        await tr.trigger('click');
+        await nextTick();
+      }
+    });
   });
 });

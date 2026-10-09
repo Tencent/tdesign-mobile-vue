@@ -158,7 +158,14 @@ newsAriaLabel | String | - | 语言配置，“有新的消息”描述文本 | 
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+clearFilterResultButtonText | String | - | 语言配置，过滤功能中，“清空筛选” 描述文本 | N
+confirmText | String | - | 语言配置，“确认” 描述文本 | N
 empty | String / Slot / Function | - | 语言配置，“暂无数据” 描述文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+filterIcon | Slot / Function | undefined | 过滤图标，如果没有配置，会使用组件内置的默认图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+hideSortTips | Boolean | false | 隐藏排序文本提示 | N
+loadingText | String | - | 语言配置，“正在加载中，请稍后” 描述文本 | N
+resetText | String | - | 语言配置，“重置” 描述文本 | N
+searchResultText | String | - | 语言配置，过滤功能中，过滤条件和结果描述文本，示例：'搜索“{result}”，找到 {count} 条结果' | N
 
 ### TypographyConfig
 
