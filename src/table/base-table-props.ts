@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdBaseTableProps } from '../table/type';
+import { TdBaseTableProps } from './type';
 import { PropType } from 'vue';
 
 export default {
@@ -46,6 +46,15 @@ export default {
     type: [Boolean, Function] as PropType<TdBaseTableProps['loading']>,
     default: undefined as TdBaseTableProps['loading'],
   },
+  /** 数据加载模式 */
+  loadingMode: {
+    type: String as PropType<TdBaseTableProps['loadingMode']>,
+    default: 'pull-refresh' as TdBaseTableProps['loadingMode'],
+    validator(val: TdBaseTableProps['loadingMode']): boolean {
+      if (!val) return true;
+      return ['pull-refresh', 'pagination'].includes(val);
+    },
+  },
   /** 透传加载组件全部属性 */
   loadingProps: {
     type: Object as PropType<TdBaseTableProps['loadingProps']>,
@@ -53,6 +62,10 @@ export default {
   /** 表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px */
   maxHeight: {
     type: [String, Number] as PropType<TdBaseTableProps['maxHeight']>,
+  },
+  /** 分页配置，值为空则不显示。具体 API 参考分页组件。当 `data` 数据长度超过分页大小时，会自动对本地数据 `data` 进行排序，如果不希望对于 `data` 进行排序，可以设置 `disableDataPage = true` */
+  pagination: {
+    type: Object as PropType<TdBaseTableProps['pagination']>,
   },
   /** HTML 标签 `tr` 的属性。类型为 Function 时，参数说明：`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body` 表示属性作用于 `tbody` 中的元素；`params.type=foot` 表示属性作用于 `tfoot` 中的元素。<br />示例一：{ draggable: true }，<br />示例二：[{ draggable: true }, { title: '超出省略显示' }]。<br /> 示例三：() => [{ draggable: true }] */
   rowAttributes: {
@@ -104,6 +117,8 @@ export default {
   },
   /** 单元格点击时触发 */
   onCellClick: Function as PropType<TdBaseTableProps['onCellClick']>,
+  /** 分页发生变化时触发。参数 newDataSource 表示分页后的数据。本地数据进行分页时，newDataSource 和源数据 data 会不一样。泛型 T 指表格数据类型 */
+  onPageChange: Function as PropType<TdBaseTableProps['onPageChange']>,
   /** 行点击时触发，泛型 T 指表格数据类型 */
   onRowClick: Function as PropType<TdBaseTableProps['onRowClick']>,
   /** 表格内容滚动时触发 */

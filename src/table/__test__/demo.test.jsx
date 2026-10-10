@@ -12,6 +12,10 @@ import mobileVue from '@/table/demos/mobile.vue';
 import rowspanColspanVue from '@/table/demos/rowspan-colspan.vue';
 import scrollVue from '@/table/demos/scroll.vue';
 import stripeVue from '@/table/demos/stripe.vue';
+import dragSortVue from '@/table/demos/drag-sort.vue';
+import loadingVue from '@/table/demos/loading.vue';
+import selectVue from '@/table/demos/select.vue';
+import filterSortVue from '@/table/demos/filter-sort.vue';
 
 MockDate.set('2020-12-28');
 
@@ -23,6 +27,10 @@ const mapper = {
   rowspanColspanVue,
   scrollVue,
   stripeVue,
+  dragSortVue,
+  loadingVue,
+  selectVue,
+  filterSortVue,
 };
 
 describe('Table', () => {

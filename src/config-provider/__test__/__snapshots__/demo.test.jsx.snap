@@ -450,6 +450,15 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       <!-- 全局配置：空数据呈现，演示 -->
       <div
         class="t-table t-vertical-align-middle t-table--bordered"
+        defaultexpandedrowkeys=""
+        defaultselectedrowkeys=""
+        expandicon="true"
+        expandonrowclick="false"
+        hidesorttips="false"
+        multiplesort="false"
+        reserveselectedrowonpaginate="true"
+        selectonrowclick="false"
+        showsortcolumnbgcolor="false"
         style="position: relative;"
       >
         <div
@@ -481,7 +490,76 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                   data-colkey="type"
                 >
                   <div>
-                    Type
+                    <div
+                      class="t-table__cell--sortable"
+                    >
+                      <div
+                        class="t-table__cell--title"
+                      >
+                        <div>
+                          Type
+                        </div>
+                        <div
+                          class="t-table__filter-icon-wrap"
+                        >
+                          <div
+                            class="t-table__cell--sort-trigger t-table__double-icons"
+                          >
+                            
+                            <span
+                              class="t-icon-sort--default t-table__sort-icon t-table-sort-asc t-negative-rotate-180"
+                            >
+                              <svg
+                                class="t-icon t-icon-chevron-down"
+                                fill="none"
+                                height="1em"
+                                style="fill: none;"
+                                viewBox="0 0 24 24"
+                                width="1em"
+                              >
+                                <g
+                                  id="chevron-down"
+                                >
+                                  <path
+                                    d="M17.5 9.5L12 15L6.5 9.5"
+                                    id="stroke1"
+                                    stroke="currentColor"
+                                    stroke-linecap="square"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                              </svg>
+                            </span>
+                            <span
+                              class="t-icon-sort--default t-table__sort-icon t-table-sort-desc"
+                            >
+                              <svg
+                                class="t-icon t-icon-chevron-down"
+                                fill="none"
+                                height="1em"
+                                style="fill: none;"
+                                viewBox="0 0 24 24"
+                                width="1em"
+                              >
+                                <g
+                                  id="chevron-down"
+                                >
+                                  <path
+                                    d="M17.5 9.5L12 15L6.5 9.5"
+                                    id="stroke1"
+                                    stroke="currentColor"
+                                    stroke-linecap="square"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                              </svg>
+                            </span>
+                            
+                          </div>
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </th>
                 <th
@@ -497,7 +575,141 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
                   data-colkey="property"
                 >
                   <div>
-                    Property
+                    <div
+                      class="t-table__cell--sortable t-table__cell--filterable"
+                    >
+                      <div
+                        class="t-table__cell--title"
+                      >
+                        <div>
+                          Property
+                        </div>
+                        <div
+                          class="t-table__filter-icon-wrap"
+                        >
+                          <div
+                            class="t-table__cell--sort-trigger t-table__double-icons"
+                          >
+                            
+                            <span
+                              class="t-icon-sort--default t-table__sort-icon t-table-sort-asc t-negative-rotate-180"
+                            >
+                              <svg
+                                class="t-icon t-icon-chevron-down"
+                                fill="none"
+                                height="1em"
+                                style="fill: none;"
+                                viewBox="0 0 24 24"
+                                width="1em"
+                              >
+                                <g
+                                  id="chevron-down"
+                                >
+                                  <path
+                                    d="M17.5 9.5L12 15L6.5 9.5"
+                                    id="stroke1"
+                                    stroke="currentColor"
+                                    stroke-linecap="square"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                              </svg>
+                            </span>
+                            <span
+                              class="t-icon-sort--default t-table__sort-icon t-table-sort-desc"
+                            >
+                              <svg
+                                class="t-icon t-icon-chevron-down"
+                                fill="none"
+                                height="1em"
+                                style="fill: none;"
+                                viewBox="0 0 24 24"
+                                width="1em"
+                              >
+                                <g
+                                  id="chevron-down"
+                                >
+                                  <path
+                                    d="M17.5 9.5L12 15L6.5 9.5"
+                                    id="stroke1"
+                                    stroke="currentColor"
+                                    stroke-linecap="square"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                              </svg>
+                            </span>
+                            
+                          </div>
+                          <div
+                            class="t-table__filter-icon"
+                          >
+                            <div>
+                              <svg
+                                class="t-icon t-icon-filter"
+                                fill="none"
+                                height="1em"
+                                style="fill: none;"
+                                viewBox="0 0 24 24"
+                                width="1em"
+                              >
+                                <defs>
+                                  <mask
+                                    height="24"
+                                    id="t-icon-filter-instance-v11-overlap-fill1"
+                                    mask-type="luminance"
+                                    maskContentUnits="userSpaceOnUse"
+                                    maskUnits="userSpaceOnUse"
+                                    width="24"
+                                    x="0"
+                                    y="0"
+                                  >
+                                    <rect
+                                      fill="#fff"
+                                      height="24"
+                                      width="24"
+                                      x="0"
+                                      y="0"
+                                    />
+                                    <path
+                                      clip-rule="evenodd"
+                                      d="M19.5 4H4.5L10.5 12.5V20H13.5V12.5L19.5 4Z"
+                                      fill="none"
+                                      fill-rule="evenodd"
+                                      stroke="#000"
+                                      stroke-linecap="square"
+                                      stroke-width="2"
+                                    />
+                                  </mask>
+                                </defs>
+                                <g
+                                  id="filter"
+                                >
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M19.5 4H4.5L10.5 12.5V20H13.5V12.5L19.5 4Z"
+                                    fill="transparent"
+                                    fill-rule="evenodd"
+                                    id="fill1"
+                                    mask="url(#t-icon-filter-instance-v11-overlap-fill1)"
+                                  />
+                                  <path
+                                    clip-rule="evenodd"
+                                    d="M19.5 4H4.5L10.5 12.5V20H13.5V12.5L19.5 4Z"
+                                    fill-rule="evenodd"
+                                    id="stroke1"
+                                    stroke="currentColor"
+                                    stroke-linecap="square"
+                                    stroke-width="2"
+                                  />
+                                </g>
+                              </svg>
+                            </div>
+                            <!---->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </th>
                 
@@ -505,6 +717,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
             </thead>
             <tbody
               class="t-table__body"
+              style="position: relative; z-index: 1; background-color: inherit; transform: translateY(0); transition: transform 0.3s ease;"
             >
               <tr
                 class="t-table__empty-row"
@@ -521,6 +734,8 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               </tr>
             </tbody>
           </table>
+          <!---->
+          <!---->
           <!---->
         </div>
         <!---->
@@ -7141,6 +7356,15 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
   <!-- 全局配置：空数据呈现，演示 -->
   <div
     class="t-table t-vertical-align-middle t-table--bordered"
+    defaultexpandedrowkeys=""
+    defaultselectedrowkeys=""
+    expandicon="true"
+    expandonrowclick="false"
+    hidesorttips="false"
+    multiplesort="false"
+    reserveselectedrowonpaginate="true"
+    selectonrowclick="false"
+    showsortcolumnbgcolor="false"
     style="position: relative;"
   >
     <div
@@ -7172,7 +7396,76 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
               data-colkey="type"
             >
               <div>
-                Type
+                <div
+                  class="t-table__cell--sortable"
+                >
+                  <div
+                    class="t-table__cell--title"
+                  >
+                    <div>
+                      Type
+                    </div>
+                    <div
+                      class="t-table__filter-icon-wrap"
+                    >
+                      <div
+                        class="t-table__cell--sort-trigger t-table__double-icons"
+                      >
+                        
+                        <span
+                          class="t-icon-sort--default t-table__sort-icon t-table-sort-asc t-negative-rotate-180"
+                        >
+                          <svg
+                            class="t-icon t-icon-chevron-down"
+                            fill="none"
+                            height="1em"
+                            style="fill: none;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <g
+                              id="chevron-down"
+                            >
+                              <path
+                                d="M17.5 9.5L12 15L6.5 9.5"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                        </span>
+                        <span
+                          class="t-icon-sort--default t-table__sort-icon t-table-sort-desc"
+                        >
+                          <svg
+                            class="t-icon t-icon-chevron-down"
+                            fill="none"
+                            height="1em"
+                            style="fill: none;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <g
+                              id="chevron-down"
+                            >
+                              <path
+                                d="M17.5 9.5L12 15L6.5 9.5"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                        </span>
+                        
+                      </div>
+                      <!---->
+                    </div>
+                  </div>
+                </div>
               </div>
             </th>
             <th
@@ -7188,7 +7481,141 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
               data-colkey="property"
             >
               <div>
-                Property
+                <div
+                  class="t-table__cell--sortable t-table__cell--filterable"
+                >
+                  <div
+                    class="t-table__cell--title"
+                  >
+                    <div>
+                      Property
+                    </div>
+                    <div
+                      class="t-table__filter-icon-wrap"
+                    >
+                      <div
+                        class="t-table__cell--sort-trigger t-table__double-icons"
+                      >
+                        
+                        <span
+                          class="t-icon-sort--default t-table__sort-icon t-table-sort-asc t-negative-rotate-180"
+                        >
+                          <svg
+                            class="t-icon t-icon-chevron-down"
+                            fill="none"
+                            height="1em"
+                            style="fill: none;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <g
+                              id="chevron-down"
+                            >
+                              <path
+                                d="M17.5 9.5L12 15L6.5 9.5"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                        </span>
+                        <span
+                          class="t-icon-sort--default t-table__sort-icon t-table-sort-desc"
+                        >
+                          <svg
+                            class="t-icon t-icon-chevron-down"
+                            fill="none"
+                            height="1em"
+                            style="fill: none;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <g
+                              id="chevron-down"
+                            >
+                              <path
+                                d="M17.5 9.5L12 15L6.5 9.5"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                        </span>
+                        
+                      </div>
+                      <div
+                        class="t-table__filter-icon"
+                      >
+                        <div>
+                          <svg
+                            class="t-icon t-icon-filter"
+                            fill="none"
+                            height="1em"
+                            style="fill: none;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <defs>
+                              <mask
+                                height="24"
+                                id="t-icon-filter-instance-v4-overlap-fill1"
+                                mask-type="luminance"
+                                maskContentUnits="userSpaceOnUse"
+                                maskUnits="userSpaceOnUse"
+                                width="24"
+                                x="0"
+                                y="0"
+                              >
+                                <rect
+                                  fill="#fff"
+                                  height="24"
+                                  width="24"
+                                  x="0"
+                                  y="0"
+                                />
+                                <path
+                                  clip-rule="evenodd"
+                                  d="M19.5 4H4.5L10.5 12.5V20H13.5V12.5L19.5 4Z"
+                                  fill="none"
+                                  fill-rule="evenodd"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                              </mask>
+                            </defs>
+                            <g
+                              id="filter"
+                            >
+                              <path
+                                clip-rule="evenodd"
+                                d="M19.5 4H4.5L10.5 12.5V20H13.5V12.5L19.5 4Z"
+                                fill="transparent"
+                                fill-rule="evenodd"
+                                id="fill1"
+                                mask="url(#t-icon-filter-instance-v4-overlap-fill1)"
+                              />
+                              <path
+                                clip-rule="evenodd"
+                                d="M19.5 4H4.5L10.5 12.5V20H13.5V12.5L19.5 4Z"
+                                fill-rule="evenodd"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                        </div>
+                        <!---->
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </th>
             
@@ -7196,6 +7623,7 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
         </thead>
         <tbody
           class="t-table__body"
+          style="position: relative; z-index: 1; background-color: inherit; transform: translateY(0); transition: transform 0.3s ease;"
         >
           <tr
             class="t-table__empty-row"
@@ -7212,6 +7640,8 @@ exports[`ConfigProvider > ConfigProvider tableEnVue demo works fine 1`] = `
           </tr>
         </tbody>
       </table>
+      <!---->
+      <!---->
       <!---->
     </div>
     <!---->
