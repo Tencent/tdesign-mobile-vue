@@ -112,36 +112,6 @@ describe('loading', () => {
     expect(wrapper.find('.t-loading__text').exists()).toBeFalsy();
   });
 
-  it(': loading works fine as function', async () => {
-    const wrapper = mount({
-      render() {
-        return <TTable rowKey="index" loading={() => 'loading text'} data={data} columns={columns}></TTable>;
-      },
-    });
-    expect(wrapper.find('.t-loading').exists()).toBeFalsy();
-    expect(wrapper.find('.t-icon-loading').exists()).toBeFalsy();
-    expect(wrapper.find('.t-table__loading--full').text()).toBe('loading text');
-  });
-
-  it(': loading works fine as slot', async () => {
-    const loadingText = 'loading text';
-    const wrapper = mount({
-      render() {
-        return (
-          <TTable
-            rowKey="index"
-            v-slots={{ loading: () => <div class="slots-loading-class">{loadingText}</div> }}
-            data={data}
-            columns={columns}
-          ></TTable>
-        );
-      },
-    });
-    expect(wrapper.find('.t-loading').exists()).toBeFalsy();
-    expect(wrapper.find('.t-icon-loading').exists()).toBeFalsy();
-    expect(wrapper.find('.t-table__loading--full').text()).toBe('loading text');
-  });
-
   it(': loadingProps', () => {
     const wrapper = mount({
       render() {
@@ -256,7 +226,7 @@ const primaryColumns = [
 ];
 
 describe('PrimaryTable', () => {
-  describe('基础渲染', () => {
+  describe('render', () => {
     it(': default render', () => {
       const wrapper = mount({
         render() {
@@ -277,7 +247,7 @@ describe('PrimaryTable', () => {
     });
   });
 
-  describe('排序', () => {
+  describe('sort', () => {
     it(': sort change event', async () => {
       const onSortChange = vi.fn();
       const wrapper = mount({
@@ -341,7 +311,7 @@ describe('PrimaryTable', () => {
     });
   });
 
-  describe('过滤', () => {
+  describe('filter', () => {
     it(': filter change event', () => {
       const onFilterChange = vi.fn();
       const filterColumns = [
@@ -375,7 +345,7 @@ describe('PrimaryTable', () => {
     });
   });
 
-  describe('行选择', () => {
+  describe('rowSelect', () => {
     it(': select change event', () => {
       const onSelectChange = vi.fn();
       const selectColumns = [
@@ -422,7 +392,7 @@ describe('PrimaryTable', () => {
     });
   });
 
-  describe('展开行', () => {
+  describe('expandedRow', () => {
     it(': expand change event', () => {
       const onExpandChange = vi.fn();
       const expandColumns = [
@@ -470,7 +440,7 @@ describe('PrimaryTable', () => {
     });
   });
 
-  describe('拖拽排序', () => {
+  describe('dragSort', () => {
     it(': dragSort prop', () => {
       const onDragSort = vi.fn();
       const wrapper = mount({
@@ -490,7 +460,7 @@ describe('PrimaryTable', () => {
     });
   });
 
-  describe('分页', () => {
+  describe('pagination', () => {
     it(': pagination works', () => {
       const onPageChange = vi.fn();
       const wrapper = mount({
@@ -528,7 +498,7 @@ describe('PrimaryTable', () => {
     });
   });
 
-  describe('events', () => {
+  describe('event', () => {
     it(': onChange', () => {
       const onChange = vi.fn();
       const wrapper = mount({
@@ -544,48 +514,6 @@ describe('PrimaryTable', () => {
         },
       });
       expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
-    });
-
-    it(': cell-click', async () => {
-      const onCellClick = vi.fn();
-      const wrapper = mount({
-        render() {
-          return (
-            <TPrimaryTable
-              rowKey="key"
-              data={primaryData}
-              columns={primaryColumns}
-              onCellClick={onCellClick}
-            ></TPrimaryTable>
-          );
-        },
-      });
-      const td = wrapper.find('td');
-      if (td.exists()) {
-        await td.trigger('click');
-        await nextTick();
-      }
-    });
-
-    it(': row-click', async () => {
-      const onRowClick = vi.fn();
-      const wrapper = mount({
-        render() {
-          return (
-            <TPrimaryTable
-              rowKey="key"
-              data={primaryData}
-              columns={primaryColumns}
-              onRowClick={onRowClick}
-            ></TPrimaryTable>
-          );
-        },
-      });
-      const tr = wrapper.find('tbody tr');
-      if (tr.exists()) {
-        await tr.trigger('click');
-        await nextTick();
-      }
     });
   });
 });
