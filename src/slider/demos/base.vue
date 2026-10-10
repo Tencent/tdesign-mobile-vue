@@ -6,7 +6,7 @@
 
 <style lang="less" scoped>
 .wrapper {
-  background: var(--bg-color-demo, #fff);
+  background: var(--td-bg-color-container);
   padding: 18px 0;
 }
 </style>

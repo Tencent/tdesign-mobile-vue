@@ -45,7 +45,7 @@ import scrollDemo from './scrolling.vue';
 
 <style>
 .tdesign-mobile-demo {
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 
 .notice-bar-demo-block {

@@ -33,7 +33,7 @@ import { Icon as TIcon } from 'tdesign-icons-vue-next';
   font-weight: 600;
   color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));
   padding: 0px 20px 16px;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 
 .t-icon-home {

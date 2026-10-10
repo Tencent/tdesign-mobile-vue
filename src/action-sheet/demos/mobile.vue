@@ -28,7 +28,7 @@ import StatusVue from './status.vue';
 
 <style lang="less">
 .tdesign-mobile-demo {
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 
 .action-sheet-grid-demo {

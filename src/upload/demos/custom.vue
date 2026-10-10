@@ -54,7 +54,7 @@ const onValidate = (context: any) => {
 
 <style lang="less" scoped>
 .upload-demo {
-  background: var(--bg-color-demo, #fff);
+  background: var(--td-bg-color-container);
 
   .upload-title {
     font-size: 16px;

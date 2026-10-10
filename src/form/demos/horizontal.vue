@@ -326,7 +326,7 @@ onMounted(() => {
   width: 100%;
 }
 .button-group {
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
   box-sizing: border-box;
   padding: 16px;
   display: flex;

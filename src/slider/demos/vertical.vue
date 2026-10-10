@@ -53,7 +53,7 @@ const handleLabel = (value: any) => {
 </script>
 <style lang="less" scoped>
 .wrapper {
-  background: var(--bg-color-demo, #fff);
+  background: var(--td-bg-color-container);
   padding: 18px 0;
   margin-bottom: 16px;
 }
