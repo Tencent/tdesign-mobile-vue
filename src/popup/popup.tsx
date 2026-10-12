@@ -72,8 +72,8 @@ export default defineComponent({
     });
 
     const overlayPropsWithZIndex = computed(() => ({
+      zIndex: props.zIndex,
       ...props.overlayProps,
-      zIndex: props.overlayProps?.zIndex ?? props.zIndex,
     }));
 
     const contentClasses = computed(() => ({

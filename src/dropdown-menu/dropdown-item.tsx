@@ -98,7 +98,6 @@ export default defineComponent({
             zIndex: menuProps.zIndex,
             top: `${bottom}px`,
           });
-      const { duration } = menuProps;
       props[`on${val ? 'Open' : 'Close'}`]?.();
       // 动画状态控制
       if (val) {
@@ -107,14 +106,6 @@ export default defineComponent({
       nextTick(() => {
         state.isShowItems = val;
       });
-      if (!val) {
-        setTimeout(() => {
-          state.wrapperVisible = false;
-        }, Number(duration));
-      }
-      setTimeout(() => {
-        props[`on${val ? 'Opened' : 'Closed'}`]?.();
-      }, Number(duration));
     };
 
     // 根据父组件状态，判断当前是否展开
@@ -198,6 +189,15 @@ export default defineComponent({
         collapseMenu();
         emitEvents('menuClosed', 'overlay');
       }
+    };
+
+    const onPopupOpened = () => {
+      props.onOpened?.();
+    };
+
+    const onPopupClosed = () => {
+      state.wrapperVisible = false;
+      props.onClosed?.();
     };
     const { showOverlay, duration, isShowItems, wrapperVisible, expandStyle, multiple, options } = toRefs(state);
 
@@ -296,6 +296,8 @@ export default defineComponent({
               overlayProps={{ customStyle: 'position: absolute' }}
               attach={`#${popupId}`}
               onVisibleChange={onVisibleChange}
+              onOpened={onPopupOpened}
+              onClosed={onPopupClosed}
             >
               <div ref={popupContent} class={`${dropdownItemClass.value}__content`}>
                 <div class={`${dropdownItemClass.value}__body`}>{content || defaultSlot()}</div>
