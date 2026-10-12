@@ -6,8 +6,14 @@ import { getColumnDataByKey, getColumnIndexByKey } from '../../_common/js/table/
 import swapDragArrayElement from '../../_common/js/utils/swapDragArrayElement';
 import { hasClass } from '../../shared/dom';
 import useClassName from './useClassName';
-import type { BaseTableColumns, PrimaryTableRef } from '../interface';
+import type { PrimaryTableRef } from '../interface';
 import type { DragSortContext, PaginationProps, TableRowData, TdPrimaryTableProps } from '../type';
+
+/** 拖拽排序 hook 内部仅需 colKey 和 children（用于列数据查找），显式声明避免泛型递归过深 */
+interface DragColumn {
+  colKey?: string;
+  children?: DragColumn[];
+}
 
 export const EXPANDED_SUFFIX = '__expanded';
 export const DATA_ID_ATTR = 'data-id';
@@ -24,8 +30,8 @@ function useDragSort(props: TdPrimaryTableProps, options: DragSortOptions) {
 
   const { tableDraggableClasses, tableExpandClasses, tableBaseClass, tableFullRowClasses } = useClassName();
 
-  const columns = ref<BaseTableColumns>(props.columns || []);
-  const dragCol = computed(() => columns.value.find((item: any) => item.colKey === 'drag'));
+  const columns = ref<DragColumn[]>((props.columns || []) as unknown as DragColumn[]);
+  const dragCol = computed(() => columns.value.find((item) => item.colKey === 'drag'));
   const isRowDraggable = computed(() => dragSort === 'row');
   const isRowHandlerDraggable = computed(
     () => ['row-handler', 'row-handler-col'].includes(dragSort || '') && !!dragCol.value,
@@ -37,8 +43,8 @@ function useDragSort(props: TdPrimaryTableProps, options: DragSortOptions) {
   const dragColInstance = ref<Sortable | null>(null);
   const trIdList = ref<string[]>([]);
   const lastColIdList = ref<string[]>([]);
-  const dragColumns = ref<BaseTableColumns>([]);
-  const originalColumns = ref<BaseTableColumns>([]);
+  const dragColumns = ref<DragColumn[]>([]);
+  const originalColumns = ref<DragColumn[]>([]);
   const scrollRef = ref<{ el: HTMLElement; prevOverflowY: string } | null>(null);
 
   const updateLastRowList = () => {
@@ -346,9 +352,10 @@ function useDragSort(props: TdPrimaryTableProps, options: DragSortOptions) {
   watch(
     () => props.columns,
     (newColumns) => {
+      const cols = (newColumns || []) as unknown as DragColumn[];
       lastColIdList.value = (newColumns || []).map((t) => t.colKey);
-      dragColumns.value = newColumns || [];
-      originalColumns.value = newColumns || [];
+      dragColumns.value = cols;
+      originalColumns.value = cols;
     },
     { immediate: true },
   );
@@ -372,7 +379,7 @@ function useDragSort(props: TdPrimaryTableProps, options: DragSortOptions) {
     updateLastRowList();
   };
 
-  const setDragSortColumns = (cols: BaseTableColumns) => {
+  const setDragSortColumns = (cols: DragColumn[]) => {
     columns.value = cols;
   };
 
