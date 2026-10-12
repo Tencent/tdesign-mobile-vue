@@ -63,7 +63,7 @@ export function getRowFixedStyles(
 }
 
 export default function useFixed(props: TdBaseTableProps) {
-  const { columns, tableLayout, tableContentWidth, fixedRows, bordered } = toRefs(props);
+  const { columns, tableLayout, tableContentWidth, fixedRows, bordered, maxHeight } = toRefs(props);
   const data = ref<TableRowData[]>([]);
   const tableContentRef = ref<HTMLDivElement>();
   const isFixedHeader = ref(false);
@@ -299,6 +299,40 @@ export default function useFixed(props: TdBaseTableProps) {
     tableElmWidth.value = width;
   };
 
+  // 更新固定表头、横向溢出状态及表格宽度
+  const updateFixedHeader = () => {
+    const tRef = tableContentRef.value;
+    if (!tRef) return;
+    const isHeightOverflow = tRef.scrollHeight > tRef.clientHeight;
+    isFixedHeader.value = isHeightOverflow;
+    isWidthOverflow.value = tRef.scrollWidth > tRef.clientWidth;
+    const pos = tRef.getBoundingClientRect();
+    virtualScrollHeaderPos.value = { top: pos?.top || 0, left: pos?.left || 0 };
+  };
+
+  // 表格实际宽度（用于展开行通栏铺满、固定列计算等场景）
+  const updateTableWidth = () => {
+    const rect = tableContentRef.value?.getBoundingClientRect();
+    if (!rect) return;
+    // 固定表头出现纵向滚动条时，需扣除滚动条宽度（CSS 固定 6px）
+    const reduceWidth = isFixedHeader.value ? 6 : 0;
+    tableWidth.value = rect.width - reduceWidth - (props.bordered ? 1 : 0);
+  };
+
+  // 防抖更新固定表头/表格宽度，避免频繁触发
+  let fixedHeaderTimer: ReturnType<typeof setTimeout>;
+  watch(
+    [tableContentRef, maxHeight, data, columns, bordered],
+    () => {
+      clearTimeout(fixedHeaderTimer);
+      fixedHeaderTimer = setTimeout(() => {
+        updateFixedHeader();
+        updateTableWidth();
+      }, 30);
+    },
+    { immediate: true },
+  );
+
   watch(
     [data, columns, bordered, tableLayout, tableContentWidth, isFixedHeader, isWidthOverflow, isFixedColumn, fixedRows],
     updateFixedStatus,
@@ -319,6 +353,8 @@ export default function useFixed(props: TdBaseTableProps) {
   );
 
   const refreshTable: BaseTableInstanceFunctions['refreshTable'] = () => {
+    updateFixedHeader();
+    updateTableWidth();
     if (isFixedColumn.value || isFixedHeader.value) {
       updateFixedStatus();
       updateColumnFixedShadow(tableContentRef.value, { skipScrollLimit: true });

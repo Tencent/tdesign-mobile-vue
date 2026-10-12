@@ -145,3 +145,12 @@ export const isLastRowInSpan = (rowIndex: number, rowspan?: number, totalDataLen
 export const isFirstColumnInSpan = (colIndex: number, rowspan?: number): boolean => {
   return colIndex === 0;
 };
+
+/**
+ * 是否启用行拖拽
+ */
+export const enableRowDrag = (dragSort: any): boolean => {
+  if (!dragSort) return false;
+  const validType = ['row', 'row-handler', 'row-handler-col'];
+  return validType.includes(dragSort);
+};
