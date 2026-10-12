@@ -21,3 +21,9 @@ import themeDemo from './theme.vue';
 import baseDemo from './base.vue';
 import closeAllDemo from './close-all.vue';
 </script>
+
+<style lang="less" scoped>
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
+}
+</style>

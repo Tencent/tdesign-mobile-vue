@@ -5,19 +5,7 @@
 
 
 :root[theme-mode="dark"] {
-  --bg-color-demo: #181818;
-  --bg-color-demo-secondary: #2c2c2c;
   --bg-color-scroll: #434343;
-
-  body{
-    background-color: var(--bg-color-demo);
-  }
-  .tdesign-demo-topnav {
-    background-color: var(--bg-color-demo);
-  }
-  .tdesign-demo-main .tdesign-mobile-demo {
-    background-color: var(--bg-color-demo);
-  }
 }
 
   html::-webkit-scrollbar, body::-webkit-scrollbar {
@@ -27,7 +15,7 @@
   }
 
   html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
-    background: var(--bg-color-demo);
+    background: var(--td-bg-color-page);
   }
 
   html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
@@ -42,7 +30,7 @@
 
 
 body {
-  background-color: #F6F6F6;
+  background-color: var(--td-bg-color-page);
   color: var(--bg-color-tab);
 }
 
@@ -133,7 +121,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 50px;
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 
   &-title{
     font-size: 18px;

@@ -10,7 +10,7 @@ import BaseDemo from './base.vue';
 
 <style lang="less">
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 
   &-block__slot {
     margin-top: 0;

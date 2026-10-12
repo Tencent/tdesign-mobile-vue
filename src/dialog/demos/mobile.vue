@@ -34,7 +34,7 @@ import pluginDemo from './plugin.vue';
 
 <style lang="less">
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 
   .btn-gap {
     width: 100%;

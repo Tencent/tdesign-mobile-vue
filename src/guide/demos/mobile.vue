@@ -29,6 +29,6 @@ import CustomPopover from './custom-popover.vue';
 
 <style scoped>
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 </style>

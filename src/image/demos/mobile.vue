@@ -22,6 +22,6 @@ import StatusDemo from './status.vue';
 
 <style scoped>
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 </style>

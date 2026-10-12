@@ -30,10 +30,10 @@ const handleClick = (t = 'base') => {
 </script>
 <style lang="less">
 body {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 .indexes-demo {
   margin: 0 16px;

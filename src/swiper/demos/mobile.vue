@@ -38,10 +38,10 @@ import current from './current.vue';
 <style lang="less">
 html,
 body {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 .t-swiper {
   margin-bottom: 24px;

@@ -25,6 +25,6 @@ const text = ref('顶部');
 
 <style lang="less" scoped>
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 </style>
