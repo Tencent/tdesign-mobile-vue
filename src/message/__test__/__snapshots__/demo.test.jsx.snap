@@ -144,20 +144,24 @@ exports[`Message > Message closeAllVue demo works fine 1`] = `
 exports[`Message > Message mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
+  data-v-63d93d26=""
 >
   <h1
     class="title"
+    data-v-63d93d26=""
   >
     Message 消息通知
   </h1>
   <p
     class="summary"
+    data-v-63d93d26=""
     style="margin: 8px 16px 0px;"
   >
     用于轻量级反馈或提示，不会打断用户操作。
   </p>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-63d93d26=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -279,6 +283,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-63d93d26=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -300,6 +305,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       
       <div
         class="button-demo"
+        data-v-63d93d26=""
       >
         <button
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -367,6 +373,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
+    data-v-63d93d26=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -388,6 +395,7 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
       
       <div
         class="button-demo button-demo-closeall"
+        data-v-63d93d26=""
       >
         <button
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"

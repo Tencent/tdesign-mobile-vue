@@ -7,7 +7,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
   <h1
     class="title"
   >
-    ConfigProvider 全局配置
+    ConfigProvider 全局特性配置
   </h1>
   <p
     class="summary"
