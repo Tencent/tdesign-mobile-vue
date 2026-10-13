@@ -44,6 +44,7 @@ import scrollDemo from './scrolling.vue';
 </script>
 
 <style>
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
   background-color: var(--td-bg-color-container);
 }

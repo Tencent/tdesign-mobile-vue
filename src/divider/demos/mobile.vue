@@ -14,6 +14,10 @@
 import BaseDemo from './base.vue';
 import ThemeDemo from './theme.vue';
 </script>
-<style lang="less" scoped>
-@import '../style/index.less';
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
+}
 </style>

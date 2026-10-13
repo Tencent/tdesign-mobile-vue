@@ -23,7 +23,8 @@ const theme = ref<BackTopProps['theme']>('round');
 const text = ref('顶部');
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
   background-color: var(--td-bg-color-container);
 }

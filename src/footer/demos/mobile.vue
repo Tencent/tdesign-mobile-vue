@@ -20,7 +20,8 @@ import linksDemo from './links.vue';
 import logoDemo from './logo.vue';
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
   background-color: var(--td-bg-color-container);
 }

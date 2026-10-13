@@ -22,7 +22,8 @@ import customClose from './custom-close.vue';
 import nestedDemo from './nested.vue';
 </script>
 
-<style scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
   background-color: var(--td-bg-color-container);
 }

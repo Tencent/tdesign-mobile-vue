@@ -20,7 +20,8 @@ import ShapeDemo from './shape.vue';
 import StatusDemo from './status.vue';
 </script>
 
-<style scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
   background-color: var(--td-bg-color-container);
 }

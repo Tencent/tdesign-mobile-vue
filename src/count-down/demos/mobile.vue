@@ -16,7 +16,8 @@ import baseDemo from './base.vue';
 import sizeDemo from './size.vue';
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
   background-color: var(--td-bg-color-container);
 }

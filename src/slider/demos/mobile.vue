@@ -36,7 +36,8 @@ import capsuleDemo from './capsule.vue';
 import verticalDemo from './vertical.vue';
 </script>
 
-<style scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
   background: #f6f6f6;
 }

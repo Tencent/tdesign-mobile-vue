@@ -47,7 +47,6 @@ const rowCols = [{ size: '163.5px', borderRadius: '12px' }, 1, { width: '61%' }]
 
 <style lang="less" scoped>
 .tdesign-mobile-demo {
-  background-color: var(--td-bg-color-container);
   min-height: 100%;
   box-sizing: border-box;
 }
@@ -56,5 +55,12 @@ const rowCols = [{ size: '163.5px', borderRadius: '12px' }, 1, { width: '61%' }]
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
+}
+</style>
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
 }
 </style>

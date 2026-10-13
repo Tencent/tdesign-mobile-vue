@@ -57,11 +57,15 @@ import attach from './attach.vue';
 </script>
 
 <style scoped lang="less">
-.tdesign-mobile-demo {
-  background-color: var(--td-bg-color-container);
-}
 .loading-demo--flex {
   display: flex;
   align-items: center;
+}
+</style>
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
 }
 </style>

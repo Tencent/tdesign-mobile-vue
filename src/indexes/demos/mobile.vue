@@ -32,6 +32,7 @@ const handleClick = (t = 'base') => {
 body {
   background-color: var(--td-bg-color-container);
 }
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
   background-color: var(--td-bg-color-container);
 }
