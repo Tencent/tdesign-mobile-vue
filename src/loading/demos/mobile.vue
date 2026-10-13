@@ -62,3 +62,10 @@ import attach from './attach.vue';
   align-items: center;
 }
 </style>
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
+}
+</style>

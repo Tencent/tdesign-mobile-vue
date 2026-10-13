@@ -7,6 +7,6 @@
 
 <style scoped>
 .radio-group-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 </style>

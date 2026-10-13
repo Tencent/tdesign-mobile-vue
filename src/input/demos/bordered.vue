@@ -15,7 +15,7 @@ import { ErrorCircleFilledIcon } from 'tdesign-icons-vue-next';
 
 <style lang="less" scoped>
 .input-demo {
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
   padding: 16px 16px 24px;
 
   --td-input-vertical-padding: 12px;

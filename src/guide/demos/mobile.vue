@@ -27,8 +27,9 @@ import PopoverDialog from './popover-dialog.vue';
 import CustomPopover from './custom-popover.vue';
 </script>
 
-<style scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 </style>

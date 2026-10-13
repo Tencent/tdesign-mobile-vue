@@ -50,7 +50,7 @@ const clickFormat = (val: ColorFormat) => {
 .format-item {
   border-radius: 6px;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
   padding: 16px;
   line-height: 100%;
   width: 100%;

@@ -37,7 +37,8 @@ const handleClick = (t = 'base') => {
   margin-bottom: 16px;
 }
 
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 </style>

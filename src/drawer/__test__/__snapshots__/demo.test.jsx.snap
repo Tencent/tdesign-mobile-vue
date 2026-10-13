@@ -1009,23 +1009,19 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
 exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-bf17674a=""
 >
   <h1
     class="title"
-    data-v-bf17674a=""
   >
     Drawer 抽屉
   </h1>
   <p
     class="summary"
-    data-v-bf17674a=""
   >
     用作一组平行关系页面/内容的切换器，相较于Tab，同屏可展示更多的选项数量。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-bf17674a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1158,7 +1154,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-bf17674a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1924,7 +1919,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-bf17674a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2061,7 +2055,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-bf17674a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2080,7 +2073,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       <div
         class="placement-demo"
         data-v-870900a7=""
-        data-v-bf17674a=""
       >
         
         <button
@@ -2217,7 +2209,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-bf17674a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2370,7 +2361,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-bf17674a=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2392,7 +2382,6 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       
       <button
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        data-v-bf17674a=""
         tabindex="0"
         type="button"
       >

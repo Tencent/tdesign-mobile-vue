@@ -13,7 +13,7 @@
 <style scoped>
 .tdesign-mobile-typography-demo {
   padding: 0 16px;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
   display: flex;
   gap: 24px;
 }
