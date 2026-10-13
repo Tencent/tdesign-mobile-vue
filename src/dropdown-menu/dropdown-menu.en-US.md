@@ -10,7 +10,7 @@ closeOnClickOverlay | Boolean | true | \- | N
 direction | String | down | options: down/up | N
 duration | String / Number | 200 | \- | N
 showOverlay | Boolean | true | \- | N
-zIndex | Number | 11600 | \- | N
+zIndex | Number | - | \- | N
 
 
 ### DropdownItem Props
@@ -23,7 +23,7 @@ icon | Array / Slot / Function | undefined | Typescript: `TNode \| TNode[] \| un
 keys | Object | - | Typescript: `KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String | - | \- | N
 multiple | Boolean | false | \- | N
-options | Array | [] | Typescript: `Array<DropdownOption>` `interface DropdownOption { label: string; disabled: boolean; value: DropdownValue; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+options | Array | [] | Typescript: `Array<DropdownOption>` `interface DropdownOption { label: string; disabled?: boolean; value: DropdownValue; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 optionsColumns | String / Number | 1 | \- | N
 placement | String | left | options: left/right | N
 value | String / Number / Array | undefined | `v-model` and `v-model:value` is supported。Typescript: `DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N

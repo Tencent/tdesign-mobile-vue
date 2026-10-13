@@ -31,12 +31,27 @@ export interface TdOverlayProps {
    */
   visible?: boolean;
   /**
-   * 遮罩的层级
-   * @default 1000
+   * 遮罩的层级，默认为 1000
    */
   zIndex?: number;
   /**
    * 遮罩层的点击事件
    */
   onClick?: (context: { e: MouseEvent }) => void;
+  /**
+   * 遮罩执行消失动画效果前触发
+   */
+  onClose?: () => void;
+  /**
+   * 遮罩消失动画效果结束后触发
+   */
+  onClosed?: () => void;
+  /**
+   * 遮罩执行弹出动画效果前触发
+   */
+  onOpen?: () => void;
+  /**
+   * 遮罩弹出动画效果结束后触发
+   */
+  onOpened?: () => void;
 }

@@ -10,8 +10,6 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from 'vue';
-
 const resultList = [
   {
     title: '成功状态',
@@ -33,7 +31,7 @@ const resultList = [
     theme: 'default',
     description: '描述文字',
   },
-];
+] as const;
 
 const props = defineProps({
   theme: String,

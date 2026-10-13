@@ -1,11 +1,14 @@
 <template>
-  <div id="container" class="sticky-demo">
-    <t-sticky container="#container" @scroll="onScroll">
+  <div ref="container" class="sticky-demo">
+    <t-sticky :container="container" @scroll="onScroll">
       <t-button size="large" class="common-button green-button">指定容器</t-button>
     </t-sticky>
   </div>
 </template>
 <script setup lang="ts">
+import { ref } from 'vue';
+
+const container = ref<HTMLElement>();
 const onScroll = (context: { scrollTop: number; isFixed: boolean }) => {
   console.log(context);
 };

@@ -12,14 +12,16 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import type { PropType } from 'vue';
 import { ArrowUpIcon } from 'tdesign-icons-vue-next';
 
+type ClickHandler = (e: MouseEvent) => void;
+
 defineProps({
-  handleBack: Function,
-  handleNext: Function,
-  handleSkip: Function,
-  handleFinish: Function,
+  handleBack: Function as PropType<ClickHandler>,
+  handleNext: Function as PropType<ClickHandler>,
+  handleSkip: Function as PropType<ClickHandler>,
+  handleFinish: Function as PropType<ClickHandler>,
   current: Number,
   total: Number,
 });

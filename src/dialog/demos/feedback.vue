@@ -45,8 +45,8 @@ const isShowDialog3 = ref(false);
 const content =
   '这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案，这里是辅助内容文案';
 
-const onConfirm = (e: string) => {
-  console.log('dialog:confirm', e);
+const onConfirm = (context: { e: MouseEvent }) => {
+  console.log('dialog:confirm', context.e);
 };
 
 const onClickOverlay = () => {

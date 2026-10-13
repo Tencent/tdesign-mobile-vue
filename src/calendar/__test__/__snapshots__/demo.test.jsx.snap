@@ -6,8 +6,8 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -13577,8 +13577,8 @@ exports[`Calendar > Calendar customTextSingleVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -14674,8 +14674,8 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -15788,8 +15788,8 @@ exports[`Calendar > Calendar disabledVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -16647,8 +16647,8 @@ exports[`Calendar > Calendar localTextVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -17550,8 +17550,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <!--teleport start-->
             
             <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
+              class="t-overlay t-popup-zIndex"
+              style="transition-duration: 300ms; display: none;"
             >
               <!---->
             </div>
@@ -31122,8 +31122,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <!--teleport start-->
             
             <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
+              class="t-overlay t-popup-zIndex"
+              style="transition-duration: 300ms; display: none;"
             >
               <!---->
             </div>
@@ -31999,8 +31999,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               <!--teleport start-->
               
               <div
-                class="t-overlay"
-                style="z-index: 1000; transition-duration: 300ms; display: none;"
+                class="t-overlay t-popup-zIndex"
+                style="transition-duration: 300ms; display: none;"
               >
                 <!---->
               </div>
@@ -33115,8 +33115,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               <!--teleport start-->
               
               <div
-                class="t-overlay"
-                style="z-index: 1000; transition-duration: 300ms; display: none;"
+                class="t-overlay t-popup-zIndex"
+                style="transition-duration: 300ms; display: none;"
               >
                 <!---->
               </div>
@@ -34253,8 +34253,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 <!--teleport start-->
                 
                 <div
-                  class="t-overlay"
-                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                  class="t-overlay t-popup-zIndex"
+                  style="transition-duration: 300ms; display: none;"
                 >
                   <!---->
                 </div>
@@ -34888,8 +34888,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 <!--teleport start-->
                 
                 <div
-                  class="t-overlay"
-                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                  class="t-overlay t-popup-zIndex"
+                  style="transition-duration: 300ms; display: none;"
                 >
                   <!---->
                 </div>
@@ -35829,8 +35829,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 <!--teleport start-->
                 
                 <div
-                  class="t-overlay"
-                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                  class="t-overlay t-popup-zIndex"
+                  style="transition-duration: 300ms; display: none;"
                 >
                   <!---->
                 </div>
@@ -36713,8 +36713,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 <!--teleport start-->
                 
                 <div
-                  class="t-overlay"
-                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                  class="t-overlay t-popup-zIndex"
+                  style="transition-duration: 300ms; display: none;"
                 >
                   <!---->
                 </div>
@@ -40121,8 +40121,8 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -40982,8 +40982,8 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -41875,8 +41875,8 @@ exports[`Calendar > Calendar switchModeVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>

@@ -71,6 +71,7 @@ export default defineComponent({
       `${radioClass.value}--${finalPlacement.value}`,
       {
         [`${radioClass.value}--block`]: props.block,
+        [`${radioClass.value}--${rootGroupProps.direction}`]: !!rootGroupProps.direction,
       },
     ]);
 

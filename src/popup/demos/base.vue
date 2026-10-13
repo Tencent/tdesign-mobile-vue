@@ -1,6 +1,14 @@
 <template>
   <div class="popup-demo">
-    <t-button v-for="p in placement" :key="p" block variant="outline" theme="primary" size="large" @click="onClick(p)">
+    <t-button
+      v-for="p in placement"
+      :key="p.value"
+      block
+      variant="outline"
+      theme="primary"
+      size="large"
+      @click="onClick(p)"
+    >
       {{ p.text }}
     </t-button>
     <t-popup
@@ -14,6 +22,7 @@
 
 <script lang="ts" setup>
 import { nextTick, ref } from 'vue';
+import type { PopupProps } from 'tdesign-mobile-vue';
 
 const visible = ref(false);
 const placement = [
@@ -23,7 +32,7 @@ const placement = [
   { value: 'bottom', text: '底部弹出' },
   { value: 'right', text: '右侧弹出' },
 ];
-const currentPlacement = ref('top');
+const currentPlacement = ref<PopupProps['placement']>('top');
 const onClick = (item: any) => {
   currentPlacement.value = item.value;
   nextTick(() => (visible.value = true));

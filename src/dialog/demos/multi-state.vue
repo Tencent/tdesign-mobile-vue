@@ -79,25 +79,26 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { ButtonProps } from 'tdesign-mobile-vue';
 
 const isShowDialog4 = ref(false);
 const confirmBtn = {
   content: '确认',
   variant: 'text',
   size: 'large',
-};
+} as const;
 const cancelBtn = {
   content: '取消',
   variant: 'text',
   size: 'large',
-};
+} as const;
 
 const isShowDialog5 = ref(false);
 
 const isShowDialog6 = ref(false);
 
 const isShowDialog7 = ref(false);
-const actions = [
+const actions: ButtonProps[] = [
   { content: '次要按钮', theme: 'light' },
   { content: '次要按钮', theme: 'light' },
   { content: '主要按钮', theme: 'primary' },

@@ -18,6 +18,7 @@
 
 <script lang="ts" setup>
 import { ref, h } from 'vue';
+import type { BaseTableCol } from 'tdesign-mobile-vue';
 
 const data: any[] = [];
 const total = 20;
@@ -39,7 +40,7 @@ for (let i = 0; i < total; i++) {
 const stripe = ref(true);
 const showHeader = ref(true);
 
-const columns = ref([
+const columns = ref<BaseTableCol[]>([
   { colKey: 'applicant', title: '标题', fixed: 'left' },
   {
     colKey: 'status',

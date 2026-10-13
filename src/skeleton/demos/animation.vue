@@ -18,7 +18,7 @@ const animationList = [
     value: 'flashed',
     loading: true,
   },
-];
+] as const;
 </script>
 <style lang="less" scoped>
 .demo-section__desc {

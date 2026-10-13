@@ -2,12 +2,12 @@
 
 exports[`Radio > props > : checked 1`] = `
 <div
-  class="t-radio-group"
+  class="t-radio-group t-radio-group--vertical"
   role="radiogroup"
 >
   
   <div
-    class="t-radio t-radio--left t-radio--block"
+    class="t-radio t-radio--left t-radio--block t-radio--vertical"
   >
     <input
       class="t-radio__original"
@@ -39,7 +39,7 @@ exports[`Radio > props > : checked 1`] = `
     />
   </div>
   <div
-    class="t-radio t-radio--left t-radio--block"
+    class="t-radio t-radio--left t-radio--block t-radio--vertical"
   >
     <input
       checked=""
@@ -88,12 +88,12 @@ exports[`Radio > props > : checked 1`] = `
 
 exports[`Radio > props > : keys 1`] = `
 <div
-  class="t-radio-group"
+  class="t-radio-group t-radio-group--vertical"
   role="radiogroup"
 >
   
   <div
-    class="t-radio t-radio--left t-radio--block"
+    class="t-radio t-radio--left t-radio--block t-radio--vertical"
   >
     <input
       class="t-radio__original"
@@ -126,7 +126,7 @@ exports[`Radio > props > : keys 1`] = `
     />
   </div>
   <div
-    class="t-radio t-radio--left t-radio--block"
+    class="t-radio t-radio--left t-radio--block t-radio--vertical"
   >
     <input
       class="t-radio__original"

@@ -119,6 +119,21 @@ describe('guide', () => {
         },
       });
     });
+
+    it(': hideBack', async () => {
+      const props = {
+        mode: 'dialog',
+        modelValue: 0,
+        hideBack: true,
+      };
+
+      createEmptyDomUnderBody('test-container');
+      await mountBaseGuide(props, `#test-container`);
+
+      expect(document.querySelector('.t-guide__tooltip')).toBeTruthy();
+      expect(document.querySelector('.t-guide__back')).toBeFalsy();
+      expect(document.querySelector('.t-guide__finish')).toBeTruthy();
+    });
   });
 
   describe('event', () => {

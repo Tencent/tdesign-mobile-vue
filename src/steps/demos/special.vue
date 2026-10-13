@@ -35,12 +35,12 @@ const options = reactive({
 });
 const count1 = ref(4);
 const count = ref(4);
-const onFirstChange = (current: number) => {
-  count1.value = current + 1;
-  options.first = current;
+const onFirstChange = (current: string | number) => {
+  count1.value = Number(current) + 1;
+  options.first = Number(current);
 };
-const onSecondChange = (current: number) => {
-  options.second = current;
+const onSecondChange = (current: string | number) => {
+  options.second = Number(current);
 };
 
 const toNext = () => {
@@ -48,7 +48,7 @@ const toNext = () => {
   options.first = count1.value - 1;
 };
 
-const getTitle = (type: 'first' | 'second' | 'third', index: number) => {
+const getTitle = (type: 'first' | 'second', index: number) => {
   if (index === options[type]) {
     return '当前步骤';
   }

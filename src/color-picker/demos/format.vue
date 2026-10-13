@@ -21,13 +21,16 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { ColorPickerProps } from 'tdesign-mobile-vue';
 
-const curFormat = ref('CSS');
-const lineList = [
+type ColorFormat = ColorPickerProps['format'];
+
+const curFormat = ref<ColorFormat>('CSS');
+const lineList: ColorFormat[][] = [
   ['CSS', 'HEX', 'RGB'],
   ['HSL', 'HSV', 'CMYK'],
 ];
-const clickFormat = (val: string) => {
+const clickFormat = (val: ColorFormat) => {
   curFormat.value = val;
 };
 </script>

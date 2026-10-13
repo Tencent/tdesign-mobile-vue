@@ -6,8 +6,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { TabValue } from 'tdesign-mobile-vue';
 
-const currentValue = ref('1');
+const currentValue = ref<TabValue>('1');
 const list = [
   {
     value: '1',
@@ -48,7 +49,7 @@ const list = [
   },
 ];
 
-const onChange = (value: string) => {
+const onChange = (value: string | number) => {
   currentValue.value = value;
   console.log(`change to ${value}`);
 };

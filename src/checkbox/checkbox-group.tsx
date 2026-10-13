@@ -119,7 +119,7 @@ export default defineComponent({
         );
       };
       return (
-        <div class={`${checkboxGroupClass.value}`}>
+        <div class={`${checkboxGroupClass.value} ${checkboxGroupClass.value}--${props.direction}`}>
           {!(props.options && props.options.length) ? renderTNodeJSX('default') : checkboxNode()}
         </div>
       );

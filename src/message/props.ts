@@ -50,7 +50,7 @@ export default {
     type: [Boolean, Object] as PropType<TdMessageProps['marquee']>,
     default: false as TdMessageProps['marquee'],
   },
-  /** 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx'] */
+  /** 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px'] */
   offset: {
     type: Array as PropType<TdMessageProps['offset']>,
   },

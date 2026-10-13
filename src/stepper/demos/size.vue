@@ -11,7 +11,7 @@ import { ref } from 'vue';
 
 const value = ref(3);
 
-const handleChange = ($event: number) => {
+const handleChange = ($event: string | number) => {
   console.log(`change to ${$event}`);
 };
 </script>

@@ -11,9 +11,10 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { SliderValue } from 'tdesign-mobile-vue';
 
-const value = ref(10);
-const onChange = (e: number) => {
+const value = ref<SliderValue>(10);
+const onChange = (e: SliderValue) => {
   value.value = e;
 };
 

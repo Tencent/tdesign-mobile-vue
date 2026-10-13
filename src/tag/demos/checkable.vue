@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts" setup>
-const variants = ['light', 'dark', 'outline', 'light-outline'];
+const variants = ['light', 'dark', 'outline', 'light-outline'] as const;
 </script>
 
 <style lang="less">

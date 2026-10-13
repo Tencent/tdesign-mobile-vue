@@ -1,6 +1,12 @@
 import { describe, it, expect, vi } from 'vitest';
-import Overlay from '../overlay';
+import { nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
+import Overlay from '../overlay';
+
+const waitFrame = () =>
+  new Promise((resolve) => {
+    setTimeout(resolve, 100);
+  });
 
 describe('Overlay', () => {
   describe('props', () => {
@@ -59,7 +65,8 @@ describe('Overlay', () => {
           visible: true,
         },
       });
-      expect(getComputedStyle(wrapper.find('.t-overlay').element)['z-index']).toEqual('1000');
+      // 未传 zIndex 时不写内联样式，默认层级由样式表 @z-index-overlay 提供
+      expect(wrapper.find('.t-overlay').attributes('style') ?? '').not.toContain('z-index');
       await wrapper.setProps({
         zIndex: 99,
       });
@@ -106,6 +113,36 @@ describe('Overlay', () => {
       expect(onClick).toHaveBeenCalledWith({
         e: expect.any(MouseEvent),
       });
+    });
+
+    it(': open / opened / close / closed', async () => {
+      const onOpen = vi.fn();
+      const onOpened = vi.fn();
+      const onClose = vi.fn();
+      const onClosed = vi.fn();
+      const wrapper = mount(Overlay, {
+        // 单测环境全局 stub 了 transition，这里放开以验证真实的过渡钩子
+        global: { stubs: { transition: false } },
+        props: {
+          visible: false,
+          onOpen,
+          onOpened,
+          onClose,
+          onClosed,
+        },
+      });
+
+      await wrapper.setProps({ visible: true });
+      await nextTick();
+      await waitFrame();
+      expect(onOpen).toHaveBeenCalledTimes(1);
+      expect(onOpened).toHaveBeenCalledTimes(1);
+
+      await wrapper.setProps({ visible: false });
+      await nextTick();
+      await waitFrame();
+      expect(onClose).toHaveBeenCalledTimes(1);
+      expect(onClosed).toHaveBeenCalledTimes(1);
     });
   });
 });

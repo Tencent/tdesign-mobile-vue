@@ -17,8 +17,6 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmits } from 'vue';
-
 const props = defineProps({
   container: {
     type: Function,

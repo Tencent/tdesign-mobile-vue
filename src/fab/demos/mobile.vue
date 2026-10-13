@@ -41,7 +41,7 @@ const btnProps = {
   size: 'large',
   theme: 'primary',
   variant: 'outline',
-};
+} as const;
 const rowCols = [{ size: '163.5px', borderRadius: '12px' }, 1, { width: '61%' }];
 </script>
 
