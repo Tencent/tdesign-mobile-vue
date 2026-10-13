@@ -294,17 +294,29 @@ describe('swipe-cell', () => {
       expect(onDragstart).toBeCalledTimes(1);
       expect(onDragend).toBeCalledTimes(1);
 
-      // 从操作项开始真实水平滑动，也不触发 dragstart / dragend
+      // 从操作项开始真实水平滑动，同样触发 dragstart / dragend
       const actionDragEnd = await move($buttons.at(1), -120);
-      await actionDragEnd();
-      expect(onDragstart).toBeCalledTimes(1);
+      expect(onDragstart).toBeCalledTimes(2);
       expect(onDragend).toBeCalledTimes(1);
+      await actionDragEnd();
+      expect(onDragstart).toBeCalledTimes(2);
+      expect(onDragend).toBeCalledTimes(2);
 
       // 垂直滑动，不触发 dragstart / dragend
       const verticalEnd = await move($swipeCell, 0, 0, -50, 0);
       await verticalEnd();
-      expect(onDragstart).toBeCalledTimes(1);
-      expect(onDragend).toBeCalledTimes(1);
+      expect(onDragstart).toBeCalledTimes(2);
+      expect(onDragend).toBeCalledTimes(2);
+
+      // 禁用状态开始手势后恢复启用，不应继承上一次 dragging 状态
+      await wrapper.setProps({ disabled: true });
+      const disabledEnd = await move($swipeCell, -120);
+      await disabledEnd();
+      await wrapper.setProps({ disabled: false });
+      const nextDragEnd = await move($swipeCell, -120);
+      expect(onDragstart).toBeCalledTimes(3);
+      await nextDragEnd();
+      expect(onDragend).toBeCalledTimes(3);
     });
   });
   describe('slots', () => {
