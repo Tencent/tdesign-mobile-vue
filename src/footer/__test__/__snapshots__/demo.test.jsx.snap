@@ -158,23 +158,19 @@ exports[`Footer > Footer logoVue demo works fine 1`] = `
 exports[`Footer > Footer mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-f0823d4b=""
 >
   <h1
     class="title"
-    data-v-f0823d4b=""
   >
     Footer 页脚
   </h1>
   <p
     class="summary"
-    data-v-f0823d4b=""
   >
     用于展示网站的版权声明、联系信息、重要页面链接和其他相关内容等信息。
   </p>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-f0823d4b=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -192,7 +188,6 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
       
       <div
         class="t-footer"
-        data-v-f0823d4b=""
       >
         <!---->
         <!---->
@@ -207,7 +202,6 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-f0823d4b=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -301,7 +295,6 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-f0823d4b=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -319,7 +312,6 @@ exports[`Footer > Footer mobileVue demo works fine 1`] = `
       
       <div
         class="t-footer"
-        data-v-f0823d4b=""
       >
         <a
           class="t-footer__logo"

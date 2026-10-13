@@ -99,23 +99,19 @@ exports[`Guide > Guide dialogVue demo works fine 1`] = `
 exports[`Guide > Guide mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-051cd1e9=""
 >
   <h1
     class="title"
-    data-v-051cd1e9=""
   >
     Guide 引导
   </h1>
   <p
     class="summary"
-    data-v-051cd1e9=""
   >
     逐步骤进行指引或解释说明的组件，常用于用户不熟悉的或需进行特别强调的页面。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-051cd1e9=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -137,7 +133,6 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
       
       <div
         class="guide-demo"
-        data-v-051cd1e9=""
         data-v-4e055ece=""
       >
         <button
@@ -161,7 +156,6 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-051cd1e9=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -179,7 +173,6 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
       
       <div
         class="guide-demo"
-        data-v-051cd1e9=""
         data-v-230fbba9=""
       >
         <button
@@ -205,7 +198,6 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-051cd1e9=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -223,7 +215,6 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
       
       <div
         class="guide-demo"
-        data-v-051cd1e9=""
         data-v-365702ae=""
       >
         <button
@@ -249,7 +240,6 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-051cd1e9=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -267,7 +257,6 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
       
       <div
         class="guide-demo"
-        data-v-051cd1e9=""
         data-v-45f2f5e4=""
       >
         <button
@@ -293,7 +282,6 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-051cd1e9=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -311,7 +299,6 @@ exports[`Guide > Guide mobileVue demo works fine 1`] = `
       
       <div
         class="guide-demo"
-        data-v-051cd1e9=""
         data-v-760ff522=""
       >
         <button

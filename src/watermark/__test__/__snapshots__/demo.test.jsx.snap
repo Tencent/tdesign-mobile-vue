@@ -93,23 +93,19 @@ exports[`Watermark > Watermark layoutVue demo works fine 1`] = `
 exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-a0609333=""
 >
   <h1
     class="title"
-    data-v-a0609333=""
   >
     Watermark 水印
   </h1>
   <p
     class="summary"
-    data-v-a0609333=""
   >
     给页面的某个区域加上水印。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-a0609333=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -131,7 +127,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
       
       <div
         class="t-watermark"
-        data-v-a0609333=""
       >
         
         <div
@@ -147,7 +142,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-a0609333=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -165,7 +159,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
       
       <div
         class="t-watermark"
-        data-v-a0609333=""
       >
         
         <div
@@ -181,7 +174,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-a0609333=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -199,7 +191,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
       
       <div
         class="t-watermark"
-        data-v-a0609333=""
       >
         
         <div
@@ -215,7 +206,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-a0609333=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -233,7 +223,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
       
       <div
         class="t-watermark"
-        data-v-a0609333=""
       >
         
         <div
@@ -249,7 +238,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-a0609333=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -267,7 +255,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
       
       <div
         class="t-watermark"
-        data-v-a0609333=""
       >
         
         <div
@@ -283,7 +270,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-a0609333=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -301,7 +287,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
       
       <div
         class="t-watermark"
-        data-v-a0609333=""
       >
         
         <div
@@ -317,7 +302,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-a0609333=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -335,7 +319,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
       
       <div
         class="t-watermark"
-        data-v-a0609333=""
       >
         
         <div
@@ -351,7 +334,6 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-a0609333=""
   >
     <div
       class="tdesign-mobile-demo-block__header"

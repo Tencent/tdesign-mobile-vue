@@ -3,23 +3,19 @@
 exports[`Popover > Popover mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-75adf482=""
 >
   <h1
     class="title"
-    data-v-75adf482=""
   >
     Popover 弹出气泡
   </h1>
   <p
     class="summary"
-    data-v-75adf482=""
   >
     用于文字提示的气泡框。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-75adf482=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -165,7 +161,6 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-75adf482=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -378,7 +373,6 @@ exports[`Popover > Popover mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-75adf482=""
   >
     <!--v-if-->
     <div

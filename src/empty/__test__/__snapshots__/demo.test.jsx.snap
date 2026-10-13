@@ -151,23 +151,19 @@ exports[`Empty > Empty imageEmptyVue demo works fine 1`] = `
 exports[`Empty > Empty mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-64b6325d=""
 >
   <h1
     class="title"
-    data-v-64b6325d=""
   >
     Empty 空状态
   </h1>
   <p
     class="summary"
-    data-v-64b6325d=""
   >
     用于空状态时的占位提示。
   </p>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-64b6325d=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -185,7 +181,6 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
       
       <div
         class="t-empty"
-        data-v-64b6325d=""
       >
         <div
           class="t-empty__thumb"
@@ -220,7 +215,6 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-64b6325d=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -238,7 +232,6 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
       
       <div
         class="t-empty"
-        data-v-64b6325d=""
       >
         <div
           class="t-empty__thumb"
@@ -299,7 +292,6 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-64b6325d=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -317,7 +309,6 @@ exports[`Empty > Empty mobileVue demo works fine 1`] = `
       
       <div
         class="t-empty"
-        data-v-64b6325d=""
       >
         <div
           class="t-empty__thumb"

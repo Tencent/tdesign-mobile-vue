@@ -456,23 +456,19 @@ exports[`Skeleton > Skeleton imageGroupVue demo works fine 1`] = `
 exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-2e493447=""
 >
   <h1
     class="title"
-    data-v-2e493447=""
   >
     Skeleton 骨架屏
   </h1>
   <p
     class="summary"
-    data-v-2e493447=""
   >
     用于等待加载内容所展示的占位图形组合，有动态效果加载效果，减少用户等待焦虑。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-2e493447=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -689,7 +685,6 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-2e493447=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -830,7 +825,6 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-2e493447=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -848,7 +842,6 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
       
       <div
         class="t-skeleton"
-        data-v-2e493447=""
       >
         
         
@@ -932,7 +925,6 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-2e493447=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -950,7 +942,6 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
       
       <div
         class="group"
-        data-v-2e493447=""
         data-v-ad78cd75=""
       >
         <div
@@ -1047,7 +1038,6 @@ exports[`Skeleton > Skeleton mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-2e493447=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
