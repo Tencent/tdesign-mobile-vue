@@ -93,6 +93,7 @@ export default function generateLlmsPlugin() {
         readComponentDoc,
         readDemoCode: readVueDemo,
         isDemoSlot,
+        demoSectionHeading: '## 示例代码',
         transformers: [],
       });
 
