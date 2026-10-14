@@ -343,7 +343,7 @@ export default defineComponent({
         if (!props.arrow) {
           return null;
         }
-        return <ChevronRightIcon size="24px" style={{ color: 'rgba(0, 0, 0, .4)' }} />;
+        return <ChevronRightIcon size="24px" class="t-form__item-arrow" />;
       };
       const renderLabelContent = () => {
         if (Number(labelWidth.value) === 0) {
