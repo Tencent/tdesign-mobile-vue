@@ -364,7 +364,11 @@ exports[`CountDown > CountDown mobileVue demo works fine 1`] = `
       >
         01 组件类型
       </h2>
-      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        基础倒计时
+      </p>
     </div>
     <div
       class="tdesign-mobile-demo-block__slot with-padding"
