@@ -23,9 +23,6 @@
     <tdesign-demo-block summary="outside模式">
       <outside />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="卡片式">
-      <card />
-    </tdesign-demo-block>
   </div>
 </template>
 <script lang="ts" setup>
