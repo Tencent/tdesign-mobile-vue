@@ -343,7 +343,7 @@ export default defineComponent({
         if (!props.arrow) {
           return null;
         }
-        return <ChevronRightIcon size="24px" class="t-form__item-arrow" />;
+        return <ChevronRightIcon class={`${formItemClass.value}-arrow`} />;
       };
       const renderLabelContent = () => {
         if (Number(labelWidth.value) === 0) {

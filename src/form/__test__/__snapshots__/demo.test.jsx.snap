@@ -868,10 +868,10 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
     </div>
     <svg
-      class="t-icon t-icon-chevron-right"
+      class="t-icon t-icon-chevron-right t-form__item-arrow"
       fill="none"
       height="1em"
-      style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
@@ -1138,10 +1138,10 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
     </div>
     <svg
-      class="t-icon t-icon-chevron-right"
+      class="t-icon t-icon-chevron-right t-form__item-arrow"
       fill="none"
       height="1em"
-      style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
@@ -2798,10 +2798,10 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
           </div>
           <svg
-            class="t-icon t-icon-chevron-right"
+            class="t-icon t-icon-chevron-right t-form__item-arrow"
             fill="none"
             height="1em"
-            style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -3068,10 +3068,10 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
           </div>
           <svg
-            class="t-icon t-icon-chevron-right"
+            class="t-icon t-icon-chevron-right t-form__item-arrow"
             fill="none"
             height="1em"
-            style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+            style="fill: none;"
             viewBox="0 0 24 24"
             width="1em"
           >
@@ -4589,10 +4589,10 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
       </div>
     </div>
     <svg
-      class="t-icon t-icon-chevron-right"
+      class="t-icon t-icon-chevron-right t-form__item-arrow"
       fill="none"
       height="1em"
-      style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
@@ -4857,10 +4857,10 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
       </div>
     </div>
     <svg
-      class="t-icon t-icon-chevron-right"
+      class="t-icon t-icon-chevron-right t-form__item-arrow"
       fill="none"
       height="1em"
-      style="fill: none; font-size: 24px; color: rgba(0, 0, 0, 0.4);"
+      style="fill: none;"
       viewBox="0 0 24 24"
       width="1em"
     >
