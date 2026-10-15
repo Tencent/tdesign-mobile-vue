@@ -154,7 +154,7 @@ exports[`Toast > Toast mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    一种轻量级反馈或提示，不会打断用户操作。
+    用于轻量级反馈或提示，不会打断用户操作。
   </p>
   <div
     class="tdesign-mobile-demo-block"

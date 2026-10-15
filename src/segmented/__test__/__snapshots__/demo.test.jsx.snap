@@ -1175,7 +1175,7 @@ exports[`Segmented > Segmented mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    用于切换不同的内容区域，一次只显示一个区域的内容。
+    用于展示多个选项并允许用户选择其中单个选项。
   </p>
   <div
     class="tdesign-mobile-demo-block"

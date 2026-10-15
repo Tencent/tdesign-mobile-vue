@@ -17515,7 +17515,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
     class="summary"
     data-v-81cd7482=""
   >
-    按照日历形式展示数据或日期的容器
+    按照日历形式展示数据或日期的容器。
   </p>
   <div
     class="tdesign-mobile-demo-block"
