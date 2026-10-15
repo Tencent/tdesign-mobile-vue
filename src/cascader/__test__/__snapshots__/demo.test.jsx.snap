@@ -950,7 +950,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        01 基础
+        01 组件类型
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"

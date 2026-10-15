@@ -54,6 +54,7 @@ import size from './size.vue';
 import service from './service.vue';
 import fullscreen from './fullscreen.vue';
 import attach from './attach.vue';
+import delay from './delay.vue';
 </script>
 
 <style scoped lang="less">

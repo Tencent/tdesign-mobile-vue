@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Segmented 分段控制器</h1>
-    <p class="summary">用于切换不同的内容区域，一次只显示一个区域的内容。</p>
+    <p class="summary">用于展示多个选项并允许用户选择其中单个选项。</p>
     <tdesign-demo-block title="01 组件类型" summary="基础">
       <base-demo />
     </tdesign-demo-block>
