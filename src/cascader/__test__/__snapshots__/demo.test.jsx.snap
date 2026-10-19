@@ -109,6 +109,8 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
       <div
         class="t-cascader__content"
       >
+        <!---->
+        
         <div
           class="t-cascader__steps"
         >
@@ -234,6 +236,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
           </div>
           
         </div>
+        
       </div>
     </div>
     
@@ -342,6 +345,8 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
       <div
         class="t-cascader__content"
       >
+        <!---->
+        
         <div
           class="t-cascader__steps"
         >
@@ -467,6 +472,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
           </div>
           
         </div>
+        
       </div>
     </div>
     
@@ -586,6 +592,8 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
       <div
         class="t-cascader__content"
       >
+        <!---->
+        
         <div
           class="t-cascader__steps"
         >
@@ -711,6 +719,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
           </div>
           
         </div>
+        
       </div>
     </div>
     
@@ -830,6 +839,8 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
       <div
         class="t-cascader__content"
       >
+        <!---->
+        
         <div
           class="t-cascader__steps"
         >
@@ -924,6 +935,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
           </div>
           
         </div>
+        
       </div>
     </div>
     
@@ -1074,6 +1086,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           <div
             class="t-cascader__content"
           >
+            <!---->
+            
             <div
               class="t-cascader__steps"
             >
@@ -1199,6 +1213,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            
           </div>
         </div>
         
@@ -1332,6 +1347,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
             class="t-cascader__content"
           >
             <!---->
+            
+            <!---->
             <!---->
             <!---->
             <div
@@ -1419,6 +1436,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            
           </div>
         </div>
         
@@ -1555,6 +1573,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           <div
             class="t-cascader__content"
           >
+            <!---->
+            
             <div
               class="t-cascader__steps"
             >
@@ -1680,6 +1700,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            
           </div>
         </div>
         
@@ -1812,6 +1833,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           <div
             class="t-cascader__content"
           >
+            <!---->
+            
             <div
               class="t-cascader__steps"
             >
@@ -1937,6 +1960,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            
           </div>
         </div>
         
@@ -2069,6 +2093,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           <div
             class="t-cascader__content"
           >
+            <!---->
+            
             <div
               class="t-cascader__steps"
             >
@@ -2198,6 +2224,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            
           </div>
         </div>
         
@@ -2330,6 +2357,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           <div
             class="t-cascader__content"
           >
+            <!---->
+            
             <div
               class="t-cascader__steps"
             >
@@ -2424,6 +2453,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            
           </div>
         </div>
         
@@ -2545,6 +2575,8 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
           <div
             class="t-cascader__content"
           >
+            <!---->
+            
             <div
               class="t-cascader__steps"
             >
@@ -2670,6 +2702,415 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
               </div>
               
             </div>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      <!--teleport end-->
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        支持搜索
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="t-cell"
+      >
+        <div
+          class="t-cell__left"
+        >
+          <!---->
+          <!---->
+        </div>
+        <div
+          class="t-cell__title"
+        >
+          <div
+            class="t-cell__title-text"
+          >
+            地址
+            <!---->
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-cell__note"
+        >
+          请选择地址
+        </div>
+        <div
+          class="t-cell__right t-cell__right--middle"
+        >
+          <div
+            class="t-cell__right-icon"
+          >
+            <svg
+              class="t-icon t-icon-chevron-right"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="chevron-right"
+              >
+                <path
+                  d="M9.5 17.5L15 12L9.5 6.5"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <!--teleport start-->
+      
+      <div
+        class="t-overlay t-popup-zIndex"
+        style="transition-duration: 300ms; display: none;"
+      >
+        <!---->
+      </div>
+      <div
+        class="t-popup t-popup--bottom"
+        style="display: none;"
+      >
+        <!---->
+        
+        <div
+          class="t-cascader"
+        >
+          <div
+            class="t-cascader__title"
+          >
+            请选择地址
+          </div>
+          <div
+            class="t-cascader__close-btn"
+          >
+            <svg
+              class="t-icon t-icon-close"
+              fill="none"
+              height="1em"
+              style="fill: none; font-size: 24px;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="close"
+              >
+                <path
+                  d="M16.9503 7.05029L12.0005 12M12.0005 12L7.05078 16.9498M12.0005 12L16.9503 16.9498M12.0005 12L7.05078 7.05029"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+          <!---->
+          <div
+            class="t-cascader__content"
+          >
+            <div
+              class="t-cascader__filter"
+            >
+              <div>
+                <div
+                  class="t-search"
+                >
+                  <div
+                    class="t-search__input-box t-search__input-box--square"
+                  >
+                    <svg
+                      class="t-icon t-icon-search"
+                      fill="none"
+                      height="1em"
+                      style="fill: none;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-search-instance-v21-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M15.8027 15.8037L21.106 21.107"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                        <mask
+                          height="24"
+                          id="t-icon-search-instance-v21-overlap-stroke2"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
+                      <g
+                        id="search"
+                      >
+                        <path
+                          d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                          fill="transparent"
+                          id="fill1"
+                          mask="url(#t-icon-search-instance-v21-overlap-fill1)"
+                        />
+                        <path
+                          d="M15.8027 15.8037L21.106 21.107"
+                          id="stroke2"
+                          mask="url(#t-icon-search-instance-v21-overlap-stroke2)"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M15.8033 15.8033C12.8744 18.7322 8.12563 18.7322 5.1967 15.8033C2.26777 12.8744 2.26777 8.12563 5.1967 5.1967C8.12563 2.26777 12.8744 2.26777 15.8033 5.1967C18.7322 8.12563 18.7322 12.8744 15.8033 15.8033Z"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                    <input
+                      class="t-input__keyword"
+                      enterkeyhint="search"
+                      placeholder="搜索省/市/区"
+                      style="--td-search-cursor-color: #0052d9;"
+                      type="search"
+                      value=""
+                    />
+                    <!---->
+                  </div>
+                  <!---->
+                </div>
+                <!---->
+              </div>
+            </div>
+            
+            <div
+              class="t-cascader__steps"
+            >
+              
+              <div
+                class="t-cascader__step"
+              >
+                <div
+                  class="t-cascader__step-dot t-cascader__step-dot--last"
+                />
+                <div
+                  class="t-cascader__step-label t-cascader__step-label--active"
+                >
+                  选择选项
+                </div>
+                <svg
+                  class="t-icon t-icon-chevron-right t-cascader__step-arrow"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="chevron-right"
+                  >
+                    <path
+                      d="M9.5 17.5L15 12L9.5 6.5"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+              
+            </div>
+            <!---->
+            <!---->
+            <div
+              class="t-cascader__options-container"
+              style="width: 200vw; transform: translateX(-000vw);"
+            >
+              
+              <div
+                class="t-cascader__options"
+              >
+                <div
+                  class="t-cascader-radio-group-0 slide-enter-from slide-enter-active"
+                >
+                  <div
+                    class="t-radio-group t-radio-group--vertical"
+                    role="radiogroup"
+                  >
+                    
+                    <div
+                      class="t-radio t-radio--right t-radio--block t-radio--vertical"
+                    >
+                      <input
+                        class="t-radio__original"
+                        name=""
+                        type="radio"
+                        value="110000"
+                      />
+                      <div
+                        class="t-radio__icon t-radio__icon--right"
+                      >
+                        <div
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                      <div
+                        class="t-radio__content"
+                      >
+                        <div
+                          class="t-radio__title"
+                          style=""
+                        >
+                          北京市
+                        </div>
+                        <!---->
+                      </div>
+                      <!---->
+                    </div>
+                    <div
+                      class="t-radio t-radio--right t-radio--block t-radio--vertical"
+                    >
+                      <input
+                        class="t-radio__original"
+                        name=""
+                        type="radio"
+                        value="310000"
+                      />
+                      <div
+                        class="t-radio__icon t-radio__icon--right"
+                      >
+                        <div
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                      <div
+                        class="t-radio__content"
+                      >
+                        <div
+                          class="t-radio__title"
+                          style=""
+                        >
+                          上海市
+                        </div>
+                        <!---->
+                      </div>
+                      <!---->
+                    </div>
+                    <div
+                      class="t-radio t-radio--right t-radio--block t-radio--vertical"
+                    >
+                      <input
+                        class="t-radio__original"
+                        name=""
+                        type="radio"
+                        value="440000"
+                      />
+                      <div
+                        class="t-radio__icon t-radio__icon--right"
+                      >
+                        <div
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                      <div
+                        class="t-radio__content"
+                      >
+                        <div
+                          class="t-radio__title"
+                          style=""
+                        >
+                          广东省
+                        </div>
+                        <!---->
+                      </div>
+                      <!---->
+                    </div>
+                    
+                    <!---->
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
           </div>
         </div>
         
@@ -2793,6 +3234,8 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
         class="t-cascader__content"
       >
         <!---->
+        
+        <!---->
         <!---->
         <!---->
         <div
@@ -2880,6 +3323,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
           </div>
           
         </div>
+        
       </div>
     </div>
     
@@ -2999,6 +3443,8 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
       <div
         class="t-cascader__content"
       >
+        <!---->
+        
         <div
           class="t-cascader__steps"
         >
@@ -3128,6 +3574,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
           </div>
           
         </div>
+        
       </div>
     </div>
     
@@ -3247,6 +3694,8 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
       <div
         class="t-cascader__content"
       >
+        <!---->
+        
         <div
           class="t-cascader__steps"
         >
@@ -3372,6 +3821,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
           </div>
           
         </div>
+        
       </div>
     </div>
     

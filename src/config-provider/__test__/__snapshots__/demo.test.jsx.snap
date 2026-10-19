@@ -4077,7 +4077,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
               <div
                 class="t-comment__folds-item"
               >
-                Expand replies
+                <!---->
                 <svg
                   class="t-icon t-icon-chevron-down-s"
                   fill="none"
@@ -7645,7 +7645,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
           <div
             class="t-comment__folds-item"
           >
-            Expand replies
+            <!---->
             <svg
               class="t-icon t-icon-chevron-down-s"
               fill="none"
