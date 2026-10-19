@@ -23,6 +23,9 @@
     <tdesign-demo-block summary="选择任意一项">
       <checkStrictlyDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="支持搜索">
+      <filterableDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 <script lang="ts" setup>
@@ -33,4 +36,5 @@ import withValueDemo from './with-value.vue';
 import withTitleDemo from './with-title.vue';
 import lazyDemo from './lazy.vue';
 import checkStrictlyDemo from './check-strictly.vue';
+import filterableDemo from './filterable.vue';
 </script>
