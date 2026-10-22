@@ -135,9 +135,7 @@ export default defineComponent({
       if (diffY.value > 0) {
         preventDefault(e, false);
       }
-      if (nextDistance >= 0 && nextDistance < maxBarHeight.value) {
-        distance.value = nextDistance;
-      }
+      distance.value = Math.max(0, Math.min(maxBarHeight.value, nextDistance));
     };
 
     const onTouchEnd = (e: TouchEvent) => {
