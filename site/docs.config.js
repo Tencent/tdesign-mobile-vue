@@ -425,6 +425,14 @@ export const docs = [
         componentEn: () => import('@/tag/tag.en-US.md'),
       },
       {
+        title: 'Comment 评论',
+        titleEn: 'Comment',
+        name: 'comment',
+        path: '/mobile-vue/components/comment',
+        component: () => import('@/comment/comment.md'),
+        componentEn: () => import('@/comment/comment.en-US.md'),
+      },
+      {
         title: 'Collapse 折叠面板',
         titleEn: 'Collapse',
         name: 'collapse',
