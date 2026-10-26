@@ -283,6 +283,65 @@ describe('dropdown-menu', () => {
       expect(onChange).toHaveBeenCalledTimes(1);
     });
 
+    it(': keepLabelActive', async () => {
+      // keepLabelActive 仅在 multiple = true 且有选中项时生效，保持标题高亮（含菜单收起态）
+      const value1 = ref(['option_1']);
+      const value2 = ref(['option_1']);
+      const value3 = ref([]);
+      const items = [
+        {
+          value: value1,
+          label: '保持高亮',
+          options,
+          multiple: true,
+          keepLabelActive: true,
+        },
+        {
+          value: value2,
+          label: '不保持高亮',
+          options,
+          multiple: true,
+          keepLabelActive: false,
+        },
+        {
+          value: value3,
+          label: '无选中项',
+          options,
+          multiple: true,
+          keepLabelActive: true,
+        },
+      ];
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              {{
+                default: items.map((item) => {
+                  return (
+                    <DropdownItem
+                      value={item.value.value}
+                      label={item.label}
+                      multiple={item.multiple}
+                      options={item.options}
+                      keepLabelActive={item.keepLabelActive}
+                    />
+                  );
+                }),
+              }}
+            </DropdownMenu>
+          );
+        },
+      });
+      await sleep(0);
+      const $menuLabels = wrapper.findAll(`.${name}__item`);
+      // 菜单收起态下：multiple + keepLabelActive + 有选中项 → 保持高亮
+      expect($menuLabels[0].classes()).toContain(`${name}__item--active`);
+      // keepLabelActive = false → 收起态不高亮
+      expect($menuLabels[1].classes()).not.toContain(`${name}__item--active`);
+      // keepLabelActive = true 但无选中项 → 不高亮
+      expect($menuLabels[2].classes()).not.toContain(`${name}__item--active`);
+    });
+
     it(': resetSelect confirmSelect', async () => {
       let value1 = ref(['option_1']);
       const items = [
