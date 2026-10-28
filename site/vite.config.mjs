@@ -5,6 +5,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 
 import changelog2Json from './web/plugins/changelog-to-json';
 import tdocPlugin from './web/plugins/plugin-tdoc';
+import generateLlms from './web/plugins/generate-llms';
 
 const resolvePath = (r) => path.resolve(__dirname, r);
 
@@ -68,6 +69,7 @@ export default ({ mode }) => {
       }),
       tdocPlugin(),
       changelog2Json(),
+      generateLlms(),
       disableTreeShakingPlugin(['style/', 'toast/']),
     ],
   });
