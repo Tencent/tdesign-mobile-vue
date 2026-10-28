@@ -8,7 +8,7 @@ import Input from '../../input';
 import { ConfigProvider } from '../../config-provider';
 import Radio, { RadioGroup } from '../../radio';
 import config from '../../config';
-import { useFormDisabled } from '../hooks';
+import { useFormDisabled, useReadonly } from '../hooks';
 
 const { prefix } = config;
 
@@ -90,6 +90,20 @@ describe('form', () => {
       expect(input.element.hasAttribute('disabled')).toBeFalsy();
       await wrapper.setProps({ disabled: true });
       expect(input.element.hasAttribute('disabled')).toBeTruthy();
+    });
+
+    it(':id', async () => {
+      const form = wrapper.find('form');
+      expect(form.element.hasAttribute('id')).toBeFalsy();
+      await wrapper.setProps({ id: 'my-form' });
+      expect(form.element.getAttribute('id')).toBe('my-form');
+    });
+
+    it(':readonly', async () => {
+      const input = wrapper.find('input');
+      expect(input.element.hasAttribute('readonly')).toBeFalsy();
+      await wrapper.setProps({ readonly: true });
+      expect(input.element.hasAttribute('readonly')).toBeTruthy();
     });
 
     it(':resetType', async () => {
@@ -702,6 +716,36 @@ describe('form', () => {
       await wrapper.setProps({ disabled: true });
       extendedDisabled.value = false;
       expect(actualDisabled.value).toBeFalsy();
+    });
+
+    it('useReadonly', async () => {
+      const extendedReadonly = ref(false);
+      let actualReadonly = ref(false);
+
+      const wrapper = mount(Form, {
+        props: {
+          readonly: false,
+        },
+        slots: {
+          default: {
+            setup() {
+              actualReadonly = useReadonly(extendedReadonly);
+              return () => null;
+            },
+          },
+        },
+      });
+
+      expect(actualReadonly.value).toBeFalsy();
+
+      // 组件组优先级高于表单
+      extendedReadonly.value = true;
+      expect(actualReadonly.value).toBeTruthy();
+
+      // 组件组为 false 时，以组件组的值为准
+      await wrapper.setProps({ readonly: true });
+      extendedReadonly.value = false;
+      expect(actualReadonly.value).toBeFalsy();
     });
   });
 });

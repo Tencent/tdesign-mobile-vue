@@ -11,7 +11,7 @@ import {
 } from './type';
 import props from './props';
 import { FormInjectionKey, FormItemContext } from './const';
-import { FormDisabledProvider } from './hooks';
+import { FormDisabledProvider, FormReadonlyProvider } from './hooks';
 import { renderContent } from '../shared';
 import { preventDefault } from '../shared/dom';
 import { FormItemValidateResult } from './form-item';
@@ -42,6 +42,7 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const {
       disabled,
+      readonly,
       showErrorMessage,
       labelWidth,
       labelAlign,
@@ -60,6 +61,10 @@ export default defineComponent({
 
     provide<FormDisabledProvider>('formDisabled', {
       disabled,
+    });
+
+    provide<FormReadonlyProvider>('formReadonly', {
+      readonly,
     });
 
     provide(
@@ -201,7 +206,13 @@ export default defineComponent({
 
     return () => {
       return (
-        <form ref={formRef} class={formClass.value} onSubmit={(e) => onSubmit(e)} onReset={(e) => onReset(e)}>
+        <form
+          id={props.id}
+          ref={formRef}
+          class={formClass.value}
+          onSubmit={(e) => onSubmit(e)}
+          onReset={(e) => onReset(e)}
+        >
           {renderTNodeJSX('default')}
         </form>
       );

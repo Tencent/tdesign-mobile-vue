@@ -10,6 +10,7 @@ import useLengthLimit from '../hooks/useLengthLimit';
 import { TdSearchProps } from './type';
 import { ENTER_REG } from '../_common/js/common';
 import TCell from '../cell/cell';
+import { useFormDisabled, useReadonly } from '../form/hooks';
 
 type EnterKeyHint = 'search' | 'done' | 'enter' | 'go' | 'next' | 'previous' | 'send';
 
@@ -20,6 +21,8 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const classPrefix = usePrefixClass();
     const searchClass = usePrefixClass('search');
+    const isDisabled = useFormDisabled();
+    const isReadonly = useReadonly();
 
     const isShowResultList = ref(false);
     const inputRef = ref<HTMLInputElement>();
@@ -120,6 +123,8 @@ export default defineComponent({
         if (
           props.clearable &&
           searchValue.value &&
+          !isDisabled.value &&
+          !isReadonly.value &&
           (props.clearTrigger === 'always' || (props.clearTrigger === 'focus' && focused.value))
         ) {
           return (
@@ -189,8 +194,8 @@ export default defineComponent({
                 style={props.cursorColor ? { '--td-search-cursor-color': props.cursorColor } : undefined}
                 autofocus={props.focus}
                 placeholder={props.placeholder}
-                readonly={props.readonly}
-                disabled={props.disabled}
+                readonly={isReadonly.value}
+                disabled={isDisabled.value}
                 onKeypress={handleSearch}
                 onFocus={handleFocus}
                 onBlur={handleBlur}

@@ -38,8 +38,11 @@ export default {
     type: String,
     default: '#0052d9',
   },
-  /** 禁用状态 */
-  disabled: Boolean,
+  /** 是否禁用。优先级：Search.disabled > Form.disabled */
+  disabled: {
+    type: Boolean,
+    default: undefined,
+  },
   /** 是否聚焦 */
   focus: Boolean,
   /** 左侧图标 */
