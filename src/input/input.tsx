@@ -166,18 +166,6 @@ export default defineComponent({
     };
 
     watch(
-      () => props.autofocus,
-      (v) => {
-        if (v === true) {
-          nextTick(() => {
-            focus();
-          });
-        }
-      },
-      { immediate: true },
-    );
-
-    watch(
       () => props.type,
       (v) => {
         renderType.value = v;
@@ -252,6 +240,7 @@ export default defineComponent({
         autocomplete: props.autocomplete ? 'On' : 'Off',
         placeholder: props.placeholder,
         readonly: props.readonly,
+        autofocus: props.autofocus,
         // maxlength: props.maxlength,
         pattern: props.pattern,
         inputmode: props.inputmode,

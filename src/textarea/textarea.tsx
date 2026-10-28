@@ -9,6 +9,7 @@ import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import useVModel from '../hooks/useVModel';
+import { extendAPI } from '../shared';
 
 const { prefix } = config;
 
@@ -103,10 +104,12 @@ export default defineComponent({
       props.onBlur?.(innerValue.value, { e });
     };
 
+    const focus = () => textareaRef.value?.focus();
+    const blur = () => textareaRef.value?.blur();
+
+    extendAPI({ focus, blur });
+
     onMounted(() => {
-      if (props.autofocus) {
-        textareaRef.value?.focus();
-      }
       textareaValueChangeHandle();
       adjustTextareaHeight();
     });

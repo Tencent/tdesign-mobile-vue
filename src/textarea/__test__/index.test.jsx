@@ -71,6 +71,17 @@ describe('Textarea.vue', () => {
     expect(indicator.exists()).toBeTruthy();
     expect(indicator.text()).toBe(`0/${maxcharacter}`);
   });
+
+  it(': autofocus', async () => {
+    const onFocus = vi.fn();
+    const wrapper = mount(<Textarea autofocus onFocus={onFocus} />);
+    const textarea = wrapper.find('textarea');
+    expect(textarea.element.hasAttribute('autofocus')).toBeTruthy();
+
+    // 模拟浏览器因 autofocus 属性而聚焦
+    await textarea.trigger('focus');
+    expect(onFocus).toBeCalled();
+  });
 });
 
 describe(':event', () => {
