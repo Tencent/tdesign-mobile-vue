@@ -46,14 +46,40 @@ describe('tree-select', () => {
     });
 
     it(':keys', () => {
-      const testKeys = (keys, result) => {
-        const wrapper = mount(<TreeSelect options={options} value={defaultValue} keys={keys} />);
-        expect(wrapper.find('.t-tree-select__item--active').exists()).toBe(result);
-      };
+      const alias = { label: 'name', value: 'id', children: 'nodes', disabled: 'myDisabled' };
 
-      const keys = { label: 'myLabel', value: 'myValue', disabled: 'myDisabled' };
-      testKeys(undefined, true);
-      testKeys(keys, false);
+      // label/value/children 别名同时生效（同时存在 children 与别名时优先使用别名）
+      const wrapper = mount(
+        <TreeSelect
+          options={[
+            {
+              name: 'Parent',
+              id: 'parent',
+              nodes: [{ name: 'Leaf', id: 'leaf' }],
+              children: [{ name: 'Unmapped', id: 'unmapped' }],
+            },
+          ]}
+          value={['parent', 'leaf']}
+          keys={alias}
+        />,
+      );
+      expect(wrapper.findAll('.t-tree-select__column')).toHaveLength(2);
+      expect(wrapper.text()).toContain('Leaf');
+      expect(wrapper.text()).not.toContain('Unmapped');
+
+      // 别名无法匹配默认字段时，无激活项
+      const unmapped = mount(<TreeSelect options={options} value={defaultValue} keys={alias} />);
+      expect(unmapped.find('.t-tree-select__item--active').exists()).toBe(false);
+
+      // 未配置 children 别名时回退到默认 children 字段
+      const fallback = mount(
+        <TreeSelect
+          options={[{ name: 'Parent', id: 'parent', children: [{ name: 'Leaf', id: 'leaf' }] }]}
+          value={['parent', 'leaf']}
+          keys={{ label: 'name', value: 'id' }}
+        />,
+      );
+      expect(fallback.findAll('.t-tree-select__column')).toHaveLength(2);
     });
   });
 
