@@ -36,6 +36,7 @@ export default defineComponent({
       barRect: {},
       childCount: 0,
       itemsLabel: [],
+      itemsActive: [],
     });
 
     // 子成员处理
@@ -95,7 +96,7 @@ export default defineComponent({
       `${dropdownMenuClass.value}__item`,
       {
         [`${dropdownMenuClass.value}__item--disabled`]: item.disabled,
-        [`${dropdownMenuClass.value}__item--active`]: idx === state.activeId,
+        [`${dropdownMenuClass.value}__item--active`]: idx === state.activeId || state.itemsActive[idx],
       },
     ]);
     const styleIcon = computed(() => (item: any, idx: number) => [

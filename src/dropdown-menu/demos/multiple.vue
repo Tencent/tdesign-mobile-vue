@@ -3,6 +3,7 @@
     <t-dropdown-item
       v-model="value1"
       label="单列多选"
+      keep-label-active
       :options="multipleSelect.options"
       multiple
       options-columns="1"
@@ -20,6 +21,7 @@
     <t-dropdown-item
       v-model="value3"
       label="三列多选"
+      keep-label-active
       :options="tripleColumnsOptions"
       :default-value="['option_1', 'option_2', 'option_3']"
       multiple
@@ -94,5 +96,5 @@ options.push({
 
 const value1 = ref(['option_1']);
 const value2 = ref(['option_1', 'option_2']);
-const value3 = ref(['option_1', 'option_2', 'option_3']);
+const value3 = ref([]);
 </script>

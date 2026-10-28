@@ -7,6 +7,7 @@ export type DropdownMenuState = {
   barRect: any;
   childCount: number;
   itemsLabel: any[];
+  itemsActive: boolean[];
 };
 
 export type DropdownMenuControl = {
