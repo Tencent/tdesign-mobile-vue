@@ -11,7 +11,7 @@
     @reset="onReset"
     @submit="onSubmit"
   >
-    <t-form-item label="用户名" name="name" help="输入用户名">
+    <t-form-item label="用户名" name="name">
       <t-input v-model="formData.name" borderless placeholder="请输入内容"></t-input>
     </t-form-item>
     <t-form-item label="密码" name="password">
@@ -150,7 +150,7 @@ const files = ref([
 const formData = reactive({
   name: '',
   password: '',
-  gender: '',
+  gender: 'man',
   birth: '',
   place: '',
   age: 3,

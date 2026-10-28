@@ -7,7 +7,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
 >
   
   <div
-    class="t-form__item t-form__item--bordered t-form--left t-form-item__name t-form__item-with-help"
+    class="t-form__item t-form__item--bordered t-form--left t-form-item__name"
     data-v-0efbfc02=""
   >
     <div
@@ -79,17 +79,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
-    <div
-      class="t-form__item-tips"
-      style="margin-left: 81px;"
-    >
-      <div
-        class="t-form__item-help t-form__controls--left"
-      >
-        输入用户名
-      </div>
-      <!---->
-    </div>
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--left t-form-item__password"
@@ -265,17 +255,28 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 data-v-0efbfc02=""
               >
                 <input
+                  checked=""
                   class="t-radio__original"
                   name="radio"
                   type="radio"
                   value="man"
                 />
                 <div
-                  class="t-radio__icon t-radio__icon--left"
+                  class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
                 >
-                  <div
-                    class="t-radio__icon-circle"
-                  />
+                  <svg
+                    class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
+                      fill="currentColor"
+                    />
+                  </svg>
                   <!---->
                 </div>
                 <div
@@ -389,7 +390,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           style="margin-left: 81px;"
         >
           <div
-            class="t-form__controls-content t-form__controls--right"
+            class="t-form__controls-content t-form__controls--left"
           >
             
             <div
@@ -414,7 +415,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 >
                   <input
                     autocomplete="Off"
-                    class="t-input__control t-input--right t-input--default"
+                    class="t-input__control t-input--default"
                     name=""
                     placeholder="请输入内容"
                     spellcheck="false"
@@ -932,7 +933,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           style="margin-left: 81px;"
         >
           <div
-            class="t-form__controls-content t-form__controls--right"
+            class="t-form__controls-content t-form__controls--left"
           >
             
             <div
@@ -957,7 +958,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 >
                   <input
                     autocomplete="Off"
-                    class="t-input__control t-input--right t-input--default"
+                    class="t-input__control t-input--default"
                     name=""
                     placeholder="请输入内容"
                     spellcheck="false"
@@ -1205,7 +1206,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           style="margin-left: 81px;"
         >
           <div
-            class="t-form__controls-content t-form__controls--right"
+            class="t-form__controls-content t-form__controls--left"
           >
             
             <div
@@ -1302,7 +1303,7 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
           style="margin-left: 81px;"
         >
           <div
-            class="t-form__controls-content t-form__controls--right"
+            class="t-form__controls-content t-form__controls--left"
           >
             
             <div
@@ -1970,7 +1971,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
       >
         
         <div
-          class="t-form__item t-form__item--bordered t-form--left t-form-item__name t-form__item-with-help"
+          class="t-form__item t-form__item--bordered t-form--left t-form-item__name"
           data-v-0efbfc02=""
         >
           <div
@@ -2042,17 +2043,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
             </div>
             <!---->
           </div>
-          <div
-            class="t-form__item-tips"
-            style="margin-left: 81px;"
-          >
-            <div
-              class="t-form__item-help t-form__controls--left"
-            >
-              输入用户名
-            </div>
-            <!---->
-          </div>
+          <!---->
         </div>
         <div
           class="t-form__item t-form__item--bordered t-form--left t-form-item__password"
@@ -2228,17 +2219,28 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       data-v-0efbfc02=""
                     >
                       <input
+                        checked=""
                         class="t-radio__original"
                         name="radio"
                         type="radio"
                         value="man"
                       />
                       <div
-                        class="t-radio__icon t-radio__icon--left"
+                        class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
                       >
-                        <div
-                          class="t-radio__icon-circle"
-                        />
+                        <svg
+                          class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
+                          fill="none"
+                          height="1em"
+                          style="fill: none;"
+                          viewBox="0 0 24 24"
+                          width="1em"
+                        >
+                          <path
+                            d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
+                            fill="currentColor"
+                          />
+                        </svg>
                         <!---->
                       </div>
                       <div
@@ -2352,7 +2354,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 style="margin-left: 81px;"
               >
                 <div
-                  class="t-form__controls-content t-form__controls--right"
+                  class="t-form__controls-content t-form__controls--left"
                 >
                   
                   <div
@@ -2377,7 +2379,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       >
                         <input
                           autocomplete="Off"
-                          class="t-input__control t-input--right t-input--default"
+                          class="t-input__control t-input--default"
                           name=""
                           placeholder="请输入内容"
                           spellcheck="false"
@@ -2895,7 +2897,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 style="margin-left: 81px;"
               >
                 <div
-                  class="t-form__controls-content t-form__controls--right"
+                  class="t-form__controls-content t-form__controls--left"
                 >
                   
                   <div
@@ -2920,7 +2922,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       >
                         <input
                           autocomplete="Off"
-                          class="t-input__control t-input--right t-input--default"
+                          class="t-input__control t-input--default"
                           name=""
                           placeholder="请输入内容"
                           spellcheck="false"
@@ -3168,7 +3170,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 style="margin-left: 81px;"
               >
                 <div
-                  class="t-form__controls-content t-form__controls--right"
+                  class="t-form__controls-content t-form__controls--left"
                 >
                   
                   <div
@@ -3265,7 +3267,7 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                 style="margin-left: 81px;"
               >
                 <div
-                  class="t-form__controls-content t-form__controls--right"
+                  class="t-form__controls-content t-form__controls--left"
                 >
                   
                   <div
@@ -3802,7 +3804,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
 >
   
   <div
-    class="t-form__item t-form__item--bordered t-form--top t-form-item__name t-form__item-with-help"
+    class="t-form__item t-form__item--bordered t-form--top t-form-item__name"
     data-v-39ff7205=""
   >
     <div
@@ -3872,16 +3874,7 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
       </div>
       <!---->
     </div>
-    <div
-      class="t-form__item-tips"
-    >
-      <div
-        class="t-form__item-help t-form__controls--left"
-      >
-        输入用户名
-      </div>
-      <!---->
-    </div>
+    <!---->
   </div>
   <div
     class="t-form__item t-form__item--bordered t-form--top t-form-item__password"
@@ -4053,17 +4046,28 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 data-v-39ff7205=""
               >
                 <input
+                  checked=""
                   class="t-radio__original"
                   name="radio"
                   type="radio"
                   value="man"
                 />
                 <div
-                  class="t-radio__icon t-radio__icon--left"
+                  class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
                 >
-                  <div
-                    class="t-radio__icon-circle"
-                  />
+                  <svg
+                    class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
+                      fill="currentColor"
+                    />
+                  </svg>
                   <!---->
                 </div>
                 <div
