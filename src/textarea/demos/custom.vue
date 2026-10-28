@@ -8,7 +8,7 @@
 <style lang="less" scoped>
 .textarea-example {
   padding: 16px 16px 24px;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 .textarea-example__label {
   display: block;

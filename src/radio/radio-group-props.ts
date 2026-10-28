@@ -12,6 +12,15 @@ export default {
   allowUncheck: Boolean,
   /** 是否开启无边框模式；优先级低于 Radio */
   borderless: Boolean,
+  /** 单选框按钮排列方式 */
+  direction: {
+    type: String as PropType<TdRadioGroupProps['direction']>,
+    default: 'vertical' as TdRadioGroupProps['direction'],
+    validator(val: TdRadioGroupProps['direction']): boolean {
+      if (!val) return true;
+      return ['vertical', 'horizontal'].includes(val);
+    },
+  },
   /** 是否禁用全部子单选框。优先级：Radio.disabled > RadioGroup.disabled > Form.disabled */
   disabled: {
     type: Boolean,
@@ -20,7 +29,7 @@ export default {
   /** 自定义选中图标和非选中图标。示例：[选中态图标地址，非选中态图标地址]。使用 String 时，值为 circle 表示填充型图标、值为 line 表示描边型图标、值为 dot 表示圆点图标 */
   icon: {
     type: [String, Array] as PropType<TdRadioGroupProps['icon']>,
-    default: 'circle',
+    default: 'circle' as TdRadioGroupProps['icon'],
   },
   /** 用来定义 value / label / disabled 在 `options` 中对应的字段别名 */
   keys: {
@@ -52,11 +61,11 @@ export default {
   /** 选中的值 */
   value: {
     type: [String, Number, Boolean] as PropType<TdRadioGroupProps['value']>,
-    default: undefined,
+    default: undefined as TdRadioGroupProps['value'],
   },
   modelValue: {
     type: [String, Number, Boolean] as PropType<TdRadioGroupProps['value']>,
-    default: undefined,
+    default: undefined as TdRadioGroupProps['value'],
   },
   /** 选中的值，非受控属性 */
   defaultValue: {

@@ -45,7 +45,7 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 【开发中】最大放大比例 */
+  /** 图片最大放大比例 */
   maxZoom: {
     type: Number,
     default: 3,

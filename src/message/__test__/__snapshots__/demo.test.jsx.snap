@@ -10,10 +10,9 @@ exports[`Message > Message baseVue demo works fine 1`] = `
     data-v-3044d6da=""
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-3044d6da=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -27,10 +26,9 @@ exports[`Message > Message baseVue demo works fine 1`] = `
       <!---->
     </button>
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-3044d6da=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -44,10 +42,9 @@ exports[`Message > Message baseVue demo works fine 1`] = `
       <!---->
     </button>
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-3044d6da=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -61,10 +58,9 @@ exports[`Message > Message baseVue demo works fine 1`] = `
       <!---->
     </button>
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-3044d6da=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -78,10 +74,9 @@ exports[`Message > Message baseVue demo works fine 1`] = `
       <!---->
     </button>
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-3044d6da=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -114,9 +109,8 @@ exports[`Message > Message closeAllVue demo works fine 1`] = `
   class="button-demo button-demo-closeall"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -130,9 +124,8 @@ exports[`Message > Message closeAllVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -190,10 +183,9 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         data-v-3044d6da=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-3044d6da=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -207,10 +199,9 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-3044d6da=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -224,10 +215,9 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-3044d6da=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -241,10 +231,9 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-3044d6da=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -258,10 +247,9 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-3044d6da=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -314,9 +302,8 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         class="button-demo"
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -330,9 +317,8 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -346,9 +332,8 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -362,9 +347,8 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -406,9 +390,8 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
         class="button-demo button-demo-closeall"
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -422,9 +405,8 @@ exports[`Message > Message mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -449,9 +431,8 @@ exports[`Message > Message themeVue demo works fine 1`] = `
   class="button-demo"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -465,9 +446,8 @@ exports[`Message > Message themeVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -481,9 +461,8 @@ exports[`Message > Message themeVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -497,9 +476,8 @@ exports[`Message > Message themeVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->

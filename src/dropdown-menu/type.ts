@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode, KeysType } from '../common';
+import type { TNode, KeysType } from '../common';
 
 export interface TdDropdownMenuProps {
   /**
@@ -28,8 +28,7 @@ export interface TdDropdownMenuProps {
    */
   showOverlay?: boolean;
   /**
-   * 菜单栏 z-index 层级
-   * @default 11600
+   * 菜单栏 z-index 层级，默认为 1600
    */
   zIndex?: number;
 }
@@ -48,6 +47,11 @@ export interface TdDropdownItemProps {
    * 自定义菜单子项图标，值为 `undefined` 表示使用默认图标。[面板打开时的图标，面板关闭时的图标]
    */
   icon?: TNode | TNode[] | undefined;
+  /**
+   * 是否保持标题高亮（含菜单收起态），仅多选场景生效
+   * @default false
+   */
+  keepLabelActive?: boolean;
   /**
    * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
    */
@@ -121,7 +125,7 @@ export interface TdDropdownItemProps {
 
 export interface DropdownOption {
   label: string;
-  disabled: boolean;
+  disabled?: boolean;
   value: DropdownValue;
 }
 

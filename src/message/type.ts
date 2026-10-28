@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdMessageProps {
   /**
@@ -45,7 +45,7 @@ export interface TdMessageProps {
    */
   marquee?: boolean | MessageMarquee;
   /**
-   * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10rpx', '8rpx']
+   * 相对于 placement 的偏移量，示例：[-10, 20] 或 ['10px', '8px']
    */
   offset?: Array<string | number>;
   /**

@@ -125,14 +125,14 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
     class="t-tree-select__column t-tree-select__column--right"
   >
     <div
-      class="t-radio-group t-tree-select__radio"
+      class="t-radio-group t-radio-group--vertical t-tree-select__radio"
       role="radiogroup"
     >
       <!---->
       
       
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           checked=""
@@ -182,7 +182,7 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -214,7 +214,7 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -246,7 +246,7 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -278,7 +278,7 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -310,7 +310,7 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -342,7 +342,7 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -374,7 +374,7 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -406,7 +406,7 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -438,7 +438,7 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -636,14 +636,14 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
           class="t-tree-select__column t-tree-select__column--right"
         >
           <div
-            class="t-radio-group t-tree-select__radio"
+            class="t-radio-group t-radio-group--vertical t-tree-select__radio"
             role="radiogroup"
           >
             <!---->
             
             
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 checked=""
@@ -693,7 +693,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -725,7 +725,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -757,7 +757,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -789,7 +789,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -821,7 +821,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -853,7 +853,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -885,7 +885,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -917,7 +917,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -949,7 +949,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1130,12 +1130,12 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
           class="t-tree-select__column t-tree-select__column--right"
         >
           <div
-            class="t-checkbox-group t-tree-select__checkbox"
+            class="t-checkbox-group t-checkbox-group--vertical t-tree-select__checkbox"
           >
             
             
             <div
-              class="t-checkbox t-checkbox--right t-checkbox--checked t-checkbox--block t-tree-select__checkbox-item"
+              class="t-checkbox t-checkbox--right t-checkbox--checked t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
@@ -1180,7 +1180,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-checkbox t-checkbox--right t-checkbox--checked t-checkbox--block t-tree-select__checkbox-item"
+              class="t-checkbox t-checkbox--right t-checkbox--checked t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
@@ -1225,7 +1225,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+              class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
@@ -1256,7 +1256,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+              class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
@@ -1287,7 +1287,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+              class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
@@ -1318,7 +1318,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+              class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
@@ -1349,7 +1349,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+              class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
@@ -1380,7 +1380,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+              class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
@@ -1411,7 +1411,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+              class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
@@ -1442,7 +1442,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+              class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
             >
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
@@ -1565,14 +1565,14 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
           class="t-tree-select__column t-tree-select__column--right"
         >
           <div
-            class="t-radio-group t-tree-select__radio"
+            class="t-radio-group t-radio-group--vertical t-tree-select__radio"
             role="radiogroup"
           >
             <!---->
             
             
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 checked=""
@@ -1622,7 +1622,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1655,7 +1655,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1687,7 +1687,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1719,7 +1719,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1751,7 +1751,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1783,7 +1783,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1815,7 +1815,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1847,7 +1847,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1879,7 +1879,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1911,7 +1911,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1943,7 +1943,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -1975,7 +1975,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -2007,7 +2007,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -2039,7 +2039,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -2071,7 +2071,7 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <!---->
             </div>
             <div
-              class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+              class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
             >
               <input
                 class="t-radio__original"
@@ -2239,12 +2239,12 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
     class="t-tree-select__column t-tree-select__column--right"
   >
     <div
-      class="t-checkbox-group t-tree-select__checkbox"
+      class="t-checkbox-group t-checkbox-group--vertical t-tree-select__checkbox"
     >
       
       
       <div
-        class="t-checkbox t-checkbox--right t-checkbox--checked t-checkbox--block t-tree-select__checkbox-item"
+        class="t-checkbox t-checkbox--right t-checkbox--checked t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
@@ -2289,7 +2289,7 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-checkbox t-checkbox--right t-checkbox--checked t-checkbox--block t-tree-select__checkbox-item"
+        class="t-checkbox t-checkbox--right t-checkbox--checked t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
@@ -2334,7 +2334,7 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+        class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
@@ -2365,7 +2365,7 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+        class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
@@ -2396,7 +2396,7 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+        class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
@@ -2427,7 +2427,7 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+        class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
@@ -2458,7 +2458,7 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+        class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
@@ -2489,7 +2489,7 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+        class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
@@ -2520,7 +2520,7 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+        class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
@@ -2551,7 +2551,7 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-checkbox t-checkbox--right t-checkbox--block t-tree-select__checkbox-item"
+        class="t-checkbox t-checkbox--right t-checkbox--block t-checkbox--vertical t-tree-select__checkbox-item"
       >
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
@@ -2653,14 +2653,14 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
     class="t-tree-select__column t-tree-select__column--right"
   >
     <div
-      class="t-radio-group t-tree-select__radio"
+      class="t-radio-group t-radio-group--vertical t-tree-select__radio"
       role="radiogroup"
     >
       <!---->
       
       
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           checked=""
@@ -2710,7 +2710,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -2743,7 +2743,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -2775,7 +2775,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -2807,7 +2807,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -2839,7 +2839,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -2871,7 +2871,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -2903,7 +2903,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -2935,7 +2935,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -2967,7 +2967,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -2999,7 +2999,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -3031,7 +3031,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -3063,7 +3063,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -3095,7 +3095,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -3127,7 +3127,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"
@@ -3159,7 +3159,7 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <!---->
       </div>
       <div
-        class="t-radio t-radio--right t-radio--block t-tree-select__radio-item"
+        class="t-radio t-radio--right t-radio--block t-radio--vertical t-tree-select__radio-item"
       >
         <input
           class="t-radio__original"

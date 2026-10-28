@@ -44,7 +44,7 @@ export default defineComponent({
           label: item[keys?.label || 'label'],
           value: item[keys?.value || 'value'],
           disabled: item[keys?.disabled || 'disabled'],
-          children: item.children,
+          children: item[keys?.children || 'children'],
           level: leafLevel.value,
         }));
         const thisValue = (innerValue.value as TreeSelectValueGroup)?.[level];

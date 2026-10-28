@@ -32,6 +32,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
 import { merge } from 'lodash-es';
+import type { CalendarValue, DateValue } from 'tdesign-mobile-vue';
 import enConfig from 'tdesign-mobile-vue/es/locale/en_US';
 
 // 全局特性配置，可以引入英文默认配置 enConfig，还可以在默认配置的基础上进行自定义配置
@@ -55,9 +56,9 @@ const format = (val: Date) => {
   return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
 };
 
-const handleCalendarConfirm = (val: Date) => {
+const handleCalendarConfirm = (val: CalendarValue) => {
   console.log(val);
-  calendarDateNote.value = format(val);
+  calendarDateNote.value = format(val as Date);
 };
 const handleCalendarSelect = (val: Date) => {
   console.log(val);
@@ -66,11 +67,11 @@ const onCalendarClose = (trigger: string) => {
   console.log('closed by', trigger);
 };
 
-const onChange = (value: string) => {
+const onChange = (value: DateValue) => {
   console.log('change: ', value);
 };
 
-const onPick = (value: string) => {
+const onPick = (value: DateValue) => {
   console.log('pick: ', value);
 };
 
@@ -79,17 +80,17 @@ const onCancel = () => {
   visible.value = false;
 };
 
-const onConfirm = (value: string) => {
+const onConfirm = (value: DateValue) => {
   console.log('confirm: ', value);
-  pickerValue.value = value;
-  pickerValueText.value = value;
+  pickerValue.value = String(value);
+  pickerValueText.value = String(value);
   visible.value = false;
 };
 </script>
 
 <style lang="less" scoped>
 .rate-demo-cell {
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
   padding: 12px 16px;
   line-height: 1;
   display: flex;

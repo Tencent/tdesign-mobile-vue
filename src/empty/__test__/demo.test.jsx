@@ -4,8 +4,8 @@
 
 import { mount } from '@vue/test-utils';
 import baseVue from '@/empty/demos/base.vue';
-import buttonEmptyVue from '@/empty/demos/buttonEmpty.vue';
-import imageEmptyVue from '@/empty/demos/imageEmpty.vue';
+import buttonEmptyVue from '@/empty/demos/button-empty.vue';
+import imageEmptyVue from '@/empty/demos/image-empty.vue';
 import mobileVue from '@/empty/demos/mobile.vue';
 
 const mapper = {

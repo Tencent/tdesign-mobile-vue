@@ -309,16 +309,17 @@ export default function useDrag(
   const onTouchend = () => {
     clearTimeout(longPressTimer);
 
+    // 未进入拖拽状态，说明是普通点击（tap），不应屏蔽后续 click 触发的预览
+    if (!dragging.value) {
+      longPressTarget = null;
+      return;
+    }
+
     // 拖拽刚结束，300ms 内置 true，屏蔽误触预览
     dragEnded.value = true;
     dragEndedTimer = window.setTimeout(() => {
       dragEnded.value = false;
     }, TIMEOUT_DURATION);
-
-    if (!dragging.value) {
-      longPressTarget = null;
-      return;
-    }
 
     // 没有实际移动
     if (!hasMoved) {

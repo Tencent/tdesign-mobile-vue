@@ -17,7 +17,8 @@
     <tdesign-demo-block title="02 组件状态" summary="加载状态">
       <statusDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block title="02 组件样式" summary="开关尺寸">
+
+    <tdesign-demo-block title="03 组件样式" summary="开关尺寸">
       <sizeDemo />
     </tdesign-demo-block>
   </div>

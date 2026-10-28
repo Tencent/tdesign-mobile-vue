@@ -8,7 +8,7 @@ import { TdGuideProps } from './type';
 import { PropType } from 'vue';
 
 export default {
-  /** 透传 返回 的全部属性，示例：`{ content: '返回', theme: 'default' }` */
+  /** 透传 返回按钮 的全部属性，示例：`{ content: '返回', theme: 'default' }` */
   backButtonProps: {
     type: Object as PropType<TdGuideProps['backButtonProps']>,
   },
@@ -29,10 +29,12 @@ export default {
   defaultCurrent: {
     type: Number,
   },
-  /** 透传 完成 的全部属性，示例：`{ content: '完成', theme: 'primary' }` */
+  /** 透传 完成按钮 的全部属性，示例：`{ content: '完成', theme: 'primary' }` */
   finishButtonProps: {
     type: Object as PropType<TdGuideProps['finishButtonProps']>,
   },
+  /** 是否隐藏返回按钮 */
+  hideBack: Boolean,
   /** 是否隐藏计数 */
   hideCounter: Boolean,
   /** 是否隐藏跳过按钮 */
@@ -64,7 +66,7 @@ export default {
   skipButtonProps: {
     type: Object as PropType<TdGuideProps['skipButtonProps']>,
   },
-  /** 用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等。 */
+  /** 用于定义每个步骤的内容，包括高亮的节点、相对位置和具体的文案内容等 */
   steps: {
     type: Array as PropType<TdGuideProps['steps']>,
   },

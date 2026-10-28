@@ -28,11 +28,11 @@ import {
   UploadRemoveContext,
   SuccessContext,
   ProgressContext,
+  UploadFailContext,
 } from 'tdesign-mobile-vue';
 
-const onFail = ({ file, e }: { file: UploadFile; e: ProgressEvent }): any => {
+const onFail = ({ file, e }: UploadFailContext) => {
   console.log('[onFail] ', { file, e });
-  return null;
 };
 const gridConfig = {
   column: 4,
@@ -80,7 +80,7 @@ const files = ref([
 </script>
 <style scoped lang="less">
 .upload-demo {
-  background: var(--bg-color-demo, #fff);
+  background: var(--td-bg-color-container);
   .upload-title {
     font-size: 16px;
     color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));

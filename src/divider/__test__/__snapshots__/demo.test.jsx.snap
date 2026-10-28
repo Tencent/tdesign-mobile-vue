@@ -115,23 +115,19 @@ exports[`Divider > Divider baseVue demo works fine 1`] = `
 exports[`Divider > Divider mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-57625aa4=""
 >
   <h1
     class="title"
-    data-v-57625aa4=""
   >
     Divider 分割线
   </h1>
   <p
     class="summary"
-    data-v-57625aa4=""
   >
     用于分割、组织、细化有一定逻辑的组织元素内容和页面结构。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-57625aa4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -148,7 +144,6 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
     >
       
       <div
-        data-v-57625aa4=""
         data-v-99a2d095=""
       >
         <div
@@ -262,7 +257,6 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-57625aa4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -279,7 +273,6 @@ exports[`Divider > Divider mobileVue demo works fine 1`] = `
     >
       
       <div
-        data-v-57625aa4=""
         data-v-b8ad2a87=""
       >
         <div

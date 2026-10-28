@@ -1,7 +1,11 @@
 {
   "extends": "./tsconfig",
   "compilerOptions": {
-    "rootDir": "src"
+    "rootDir": "src",
+    "paths": {
+      "tdesign-mobile-vue": ["./src"],
+      "tdesign-mobile-vue/es/locale/*": ["./src/locale/*"]
+    }
   },
   "include": ["src/**/*", "globals.d.ts"],
   "exclude": ["node_modules", "src/**/demos", "src/_common", "src/**/__test__", "dist", "es", "esm", "lib", "cjs", "site"]

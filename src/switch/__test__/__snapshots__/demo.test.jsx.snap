@@ -773,7 +773,7 @@ exports[`Switch > Switch mobileVue demo works fine 1`] = `
       <h2
         class="tdesign-mobile-demo-block__title"
       >
-        02 组件样式
+        03 组件样式
       </h2>
       <p
         class="tdesign-mobile-demo-block__summary"

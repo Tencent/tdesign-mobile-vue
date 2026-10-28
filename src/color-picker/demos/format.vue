@@ -21,13 +21,16 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { ColorPickerProps } from 'tdesign-mobile-vue';
 
-const curFormat = ref('CSS');
-const lineList = [
+type ColorFormat = ColorPickerProps['format'];
+
+const curFormat = ref<ColorFormat>('CSS');
+const lineList: ColorFormat[][] = [
   ['CSS', 'HEX', 'RGB'],
   ['HSL', 'HSV', 'CMYK'],
 ];
-const clickFormat = (val: string) => {
+const clickFormat = (val: ColorFormat) => {
   curFormat.value = val;
 };
 </script>
@@ -47,7 +50,7 @@ const clickFormat = (val: string) => {
 .format-item {
   border-radius: 6px;
   height: 100%;
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
   padding: 16px;
   line-height: 100%;
   width: 100%;

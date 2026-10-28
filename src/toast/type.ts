@@ -5,7 +5,7 @@
  * */
 
 import { OverlayProps } from '../overlay';
-import { TNode, Styles, AttachNode } from '../common';
+import type { TNode, Styles, AttachNode } from '../common';
 
 export interface TdToastProps {
   /**
@@ -21,14 +21,13 @@ export interface TdToastProps {
   /**
    * 自定义图标
    */
-  icon?: string | TNode;
+  icon?: TNode;
   /**
    * 弹窗显示文字
    */
   message?: string | TNode;
   /**
    * 遮罩层属性，透传至 Overlay
-   * @default {}
    */
   overlayProps?: OverlayProps;
   /**

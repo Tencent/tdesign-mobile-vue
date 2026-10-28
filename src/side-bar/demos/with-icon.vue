@@ -38,7 +38,7 @@ const data = reactive({
       label: '选项一',
       title: '标题一',
       icon: () => h(AppIcon, { size: '18px' }),
-      badgeProps: {},
+      badgeProps: {} as TdSideBarItemProps['badgeProps'],
       items,
     },
     {
@@ -47,14 +47,14 @@ const data = reactive({
       icon: () => h(AppIcon, { size: '18px' }),
       badgeProps: {
         dot: true,
-      },
+      } as TdSideBarItemProps['badgeProps'],
       items: items.slice(0, 9),
     },
     {
       label: '选项三',
       title: '标题三',
       icon: () => h(AppIcon, { size: '18px' }),
-      badgeProps: {},
+      badgeProps: {} as TdSideBarItemProps['badgeProps'],
       items: items.slice(0, 9),
     },
     {
@@ -63,14 +63,14 @@ const data = reactive({
       icon: () => h(AppIcon, { size: '18px' }),
       badgeProps: {
         count: 6,
-      },
+      } as TdSideBarItemProps['badgeProps'],
       items: items.slice(0, 6),
     },
     {
       label: '选项五',
       title: '标题五',
       icon: () => h(AppIcon, { size: '18px' }),
-      badgeProps: {},
+      badgeProps: {} as TdSideBarItemProps['badgeProps'],
       items: items.slice(0, 3),
     },
   ],
@@ -124,7 +124,7 @@ const onScroll = (e: WheelEvent | Event) => {
 .side-bar-wrapper {
   display: flex;
   height: 100vh;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
   .content {
     flex: 1;
     overflow-y: scroll;

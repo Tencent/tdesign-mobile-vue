@@ -86,7 +86,7 @@ const address = ref();
 const visible = ref(false);
 const note = ref('请选择地址');
 
-const onChange = (value: string, options: any) => {
+const onChange = (value: string | number, options: any) => {
   note.value = options?.map((item: any) => item[keys.label]).join('/');
   visible.value = false;
 };

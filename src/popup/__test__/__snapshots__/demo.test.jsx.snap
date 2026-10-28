@@ -7,10 +7,9 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
 >
   
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-c0baf305=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -24,10 +23,9 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-c0baf305=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -41,10 +39,9 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-c0baf305=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -58,10 +55,9 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-c0baf305=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -75,10 +71,9 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
     <!---->
   </button>
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-c0baf305=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -95,8 +90,8 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -117,9 +112,8 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
   class="popup-demo"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -135,8 +129,8 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -164,23 +158,19 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
 exports[`Popup > Popup mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-12934826=""
 >
   <h1
     class="title"
-    data-v-12934826=""
   >
     Popup 弹窗层
   </h1>
   <p
     class="summary"
-    data-v-12934826=""
   >
     由其他控件触发，屏幕滑出或弹出一块自定义内容区域。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-12934826=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -202,15 +192,13 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       
       <div
         class="popup-demo"
-        data-v-12934826=""
         data-v-c0baf305=""
       >
         
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-c0baf305=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -224,10 +212,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-c0baf305=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -241,10 +228,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-c0baf305=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -258,10 +244,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-c0baf305=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -275,10 +260,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
           <!---->
         </button>
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-c0baf305=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -295,8 +279,8 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         <!--teleport start-->
         
         <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          class="t-overlay t-popup-zIndex"
+          style="transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>
@@ -315,7 +299,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-12934826=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -337,14 +320,12 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       
       <div
         class="popup-demo"
-        data-v-12934826=""
         data-v-342d27ca=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-342d27ca=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -360,8 +341,8 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         <!--teleport start-->
         
         <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          class="t-overlay t-popup-zIndex"
+          style="transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>
@@ -403,12 +384,10 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       </div>
       <div
         class="popup-demo"
-        data-v-12934826=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -424,8 +403,8 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         <!--teleport start-->
         
         <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          class="t-overlay t-popup-zIndex"
+          style="transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>
@@ -453,7 +432,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-12934826=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -475,14 +453,12 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       
       <div
         class="popup-nested-demo"
-        data-v-12934826=""
         data-v-4d689919=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-4d689919=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -499,8 +475,8 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         <!--teleport start-->
         
         <div
-          class="t-overlay"
-          style="z-index: 1000; transition-duration: 300ms; display: none;"
+          class="t-overlay t-popup-zIndex"
+          style="z-index: 1500; transition-duration: 300ms; display: none;"
         >
           <!---->
         </div>
@@ -527,10 +503,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
               这是第一层 Popup，点击下方按钮可打开子弹窗。
             </p>
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
               data-v-4d689919=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -547,8 +522,8 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             <!--teleport start-->
             
             <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
+              class="t-overlay t-popup-zIndex"
+              style="z-index: 1600; transition-duration: 300ms; display: none;"
             >
               <!---->
             </div>
@@ -575,10 +550,9 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
                   这是第二层 Popup，通过将 attach 指向父 Popup 内部的 DOM 容器，实现正确的嵌套层级。
                 </p>
                 <button
-                  aria-disabled="false"
                   class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
                   data-v-4d689919=""
-                  role="button"
+                  tabindex="0"
                   type="button"
                 >
                   <!---->
@@ -614,10 +588,9 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
   data-v-4d689919=""
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-4d689919=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -634,8 +607,8 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="z-index: 1500; transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>
@@ -662,10 +635,9 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
         这是第一层 Popup，点击下方按钮可打开子弹窗。
       </p>
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
         data-v-4d689919=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -682,8 +654,8 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
       <!--teleport start-->
       
       <div
-        class="t-overlay"
-        style="z-index: 1000; transition-duration: 300ms; display: none;"
+        class="t-overlay t-popup-zIndex"
+        style="z-index: 1600; transition-duration: 300ms; display: none;"
       >
         <!---->
       </div>
@@ -710,10 +682,9 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
             这是第二层 Popup，通过将 attach 指向父 Popup 内部的 DOM 容器，实现正确的嵌套层级。
           </p>
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
             data-v-4d689919=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -745,10 +716,9 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
   data-v-342d27ca=""
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-342d27ca=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -764,8 +734,8 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
   <!--teleport start-->
   
   <div
-    class="t-overlay"
-    style="z-index: 1000; transition-duration: 300ms; display: none;"
+    class="t-overlay t-popup-zIndex"
+    style="transition-duration: 300ms; display: none;"
   >
     <!---->
   </div>

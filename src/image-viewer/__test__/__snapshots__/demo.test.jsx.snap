@@ -6,9 +6,8 @@ exports[`ImageViewer > ImageViewer alignVue demo works fine 1`] = `
 >
   
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -32,9 +31,8 @@ exports[`ImageViewer > ImageViewer baseVue demo works fine 1`] = `
 >
   
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -93,9 +91,8 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
       
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -137,9 +134,8 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
       
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -181,9 +177,8 @@ exports[`ImageViewer > ImageViewer mobileVue demo works fine 1`] = `
       
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -210,9 +205,8 @@ exports[`ImageViewer > ImageViewer operationVue demo works fine 1`] = `
 >
   
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->

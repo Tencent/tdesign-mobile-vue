@@ -1033,10 +1033,9 @@ exports[`Loading > Loading serviceVue demo works fine 1`] = `
     data-v-3c7f36de=""
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-small t-button--base t-button--default t-button--rectangle t-loading__btn"
       data-v-3c7f36de=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -1050,10 +1049,9 @@ exports[`Loading > Loading serviceVue demo works fine 1`] = `
       <!---->
     </button>
     <button
-      aria-disabled="false"
       class="t-button t-button--size-small t-button--base t-button--default t-button--rectangle"
       data-v-3c7f36de=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->

@@ -632,7 +632,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                   />
                 </g>
               </svg>
-              <!---->
+              
             </div>
             <div
               class="t-swipe-cell__content btn delete-btn"
@@ -705,7 +705,7 @@ exports[`SwipeCell > SwipeCell iconVue demo works fine 1`] = `
                   />
                 </g>
               </svg>
-              <!---->
+              
             </div>
             
             <div
@@ -1389,7 +1389,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
   <h1
     class="title"
   >
-    Swipecell 滑动操作
+    SwipeCell 滑动操作
   </h1>
   <p
     class="summary"
@@ -2394,7 +2394,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                   />
                 </g>
               </svg>
-              <!---->
+              
             </div>
             <div
               class="t-swipe-cell__content btn delete-btn"
@@ -2467,7 +2467,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
                   />
                 </g>
               </svg>
-              <!---->
+              
             </div>
             
             <div

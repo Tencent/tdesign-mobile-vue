@@ -45,7 +45,7 @@
 
 <script lang="ts" setup>
 import baseDemo from './base.vue';
-import maxlength from './maxLength.vue';
+import maxlength from './maxlength.vue';
 import suffix from './suffix.vue';
 import prefix from './prefix.vue';
 import special from './special.vue';

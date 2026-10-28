@@ -22,6 +22,7 @@
 </template>
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { SliderValue } from 'tdesign-mobile-vue';
 
 const value = ref(10);
 const rangeValue = ref([20, 80]);
@@ -34,16 +35,16 @@ const marks = {
   100: '100',
 };
 
-const onChange = (e: number) => {
+const onChange = (e: SliderValue) => {
   console.log(`[onChange] ${e}`);
 };
 
-const onDragend = (value: number, e: TouchEvent) => {
-  console.log('[onDragend] ', value, e);
+const onDragend = (value: SliderValue, context: { e: TouchEvent }) => {
+  console.log('[onDragend] ', value, context.e);
 };
 
-const onDragstart = (e: TouchEvent) => {
-  console.log('[onDragstart] ', e);
+const onDragstart = (context: { e: TouchEvent }) => {
+  console.log('[onDragstart] ', context.e);
 };
 
 const handleLabel = (value: any) => {
@@ -52,7 +53,7 @@ const handleLabel = (value: any) => {
 </script>
 <style lang="less" scoped>
 .wrapper {
-  background: var(--bg-color-demo, #fff);
+  background: var(--td-bg-color-container);
   padding: 18px 0;
   margin-bottom: 16px;
 }

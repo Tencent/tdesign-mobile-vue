@@ -16,5 +16,5 @@
 import BaseDemo from './base.vue';
 import titleDemo from './with-title.vue';
 import AreaDemo from './area.vue';
-import CustomHeightDemo from './customHeight.vue';
+import CustomHeightDemo from './custom-height.vue';
 </script>

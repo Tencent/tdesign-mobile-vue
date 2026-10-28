@@ -955,10 +955,9 @@ exports[`Result > Result mobileVue demo works fine 1`] = `
         data-v-f5693a74=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-f5693a74=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->

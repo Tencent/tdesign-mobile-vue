@@ -21,7 +21,13 @@ import operationDemo from './operation.vue';
 
 <style scoped>
 .tdesign-mobile-demo {
-  background-color: #fff;
   min-height: 100%;
+}
+</style>
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
 }
 </style>

@@ -8,10 +8,11 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { SwitchValue } from 'tdesign-mobile-vue';
 
 const showLoading = ref(false);
-const onChangeLoading = (value: boolean) => {
-  showLoading.value = value;
+const onChangeLoading = (value: SwitchValue) => {
+  showLoading.value = Boolean(value);
 };
 </script>
 
@@ -20,7 +21,7 @@ const onChangeLoading = (value: boolean) => {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--td-text-color-primary);
   font-size: 14px;
   .t-switch {
     margin-right: 10px;

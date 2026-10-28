@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Fab 悬浮按钮</h1>
-    <p class="summary">当功能使用图标即可表示清楚时，可使用纯图标悬浮按钮，例如：添加、发布。</p>
+    <p class="summary">当功能使用图标即可表意清楚时，可使用纯图标悬浮按钮，例如：添加、发布。</p>
     <tdesign-demo-block title="01 组件类型" summary="纯图标悬浮按钮" :padding="true">
       <t-button v-bind="btnProps" @click="changeType('base')">纯图标悬浮按钮</t-button>
     </tdesign-demo-block>
@@ -41,13 +41,12 @@ const btnProps = {
   size: 'large',
   theme: 'primary',
   variant: 'outline',
-};
+} as const;
 const rowCols = [{ size: '163.5px', borderRadius: '12px' }, 1, { width: '61%' }];
 </script>
 
 <style lang="less" scoped>
 .tdesign-mobile-demo {
-  background-color: #fff;
   min-height: 100%;
   box-sizing: border-box;
 }
@@ -56,5 +55,12 @@ const rowCols = [{ size: '163.5px', borderRadius: '12px' }, 1, { width: '61%' }]
   display: flex;
   justify-content: space-between;
   margin-top: 24px;
+}
+</style>
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
 }
 </style>

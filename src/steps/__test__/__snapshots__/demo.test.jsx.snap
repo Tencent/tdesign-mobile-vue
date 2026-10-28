@@ -2732,10 +2732,9 @@ exports[`Steps > Steps mobileVue demo works fine 1`] = `
             
           </div>
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-            role="button"
             style="margin-top: 32px; width: 100%;"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -3136,10 +3135,9 @@ exports[`Steps > Steps specialVue demo works fine 1`] = `
       
     </div>
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
-      role="button"
       style="margin-top: 32px; width: 100%;"
+      tabindex="0"
       type="button"
     >
       <!---->

@@ -6,8 +6,8 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -13492,9 +13492,8 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
           class="t-calendar__footer"
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -13578,8 +13577,8 @@ exports[`Calendar > Calendar customTextSingleVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -14589,9 +14588,8 @@ exports[`Calendar > Calendar customTextSingleVue demo works fine 1`] = `
           class="t-calendar__footer"
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -14676,8 +14674,8 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -15707,9 +15705,8 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
           class="t-calendar__footer"
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -15791,8 +15788,8 @@ exports[`Calendar > Calendar disabledVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -16566,9 +16563,8 @@ exports[`Calendar > Calendar disabledVue demo works fine 1`] = `
           class="t-calendar__footer"
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -16651,8 +16647,8 @@ exports[`Calendar > Calendar localTextVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -17426,9 +17422,8 @@ exports[`Calendar > Calendar localTextVue demo works fine 1`] = `
           class="t-calendar__footer"
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -17520,7 +17515,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
     class="summary"
     data-v-81cd7482=""
   >
-    按照日历形式展示数据或日期的容器
+    按照日历形式展示数据或日期的容器。
   </p>
   <div
     class="tdesign-mobile-demo-block"
@@ -17555,8 +17550,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <!--teleport start-->
             
             <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
+              class="t-overlay t-popup-zIndex"
+              style="transition-duration: 300ms; display: none;"
             >
               <!---->
             </div>
@@ -31041,9 +31036,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                   class="t-calendar__footer"
                 >
                   <button
-                    aria-disabled="false"
                     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-                    role="button"
+                    tabindex="0"
                     type="button"
                   >
                     <!---->
@@ -31128,8 +31122,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             <!--teleport start-->
             
             <div
-              class="t-overlay"
-              style="z-index: 1000; transition-duration: 300ms; display: none;"
+              class="t-overlay t-popup-zIndex"
+              style="transition-duration: 300ms; display: none;"
             >
               <!---->
             </div>
@@ -31903,9 +31897,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                   class="t-calendar__footer"
                 >
                   <button
-                    aria-disabled="false"
                     class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-                    role="button"
+                    tabindex="0"
                     type="button"
                   >
                     <!---->
@@ -32006,8 +31999,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               <!--teleport start-->
               
               <div
-                class="t-overlay"
-                style="z-index: 1000; transition-duration: 300ms; display: none;"
+                class="t-overlay t-popup-zIndex"
+                style="transition-duration: 300ms; display: none;"
               >
                 <!---->
               </div>
@@ -33017,9 +33010,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                     class="t-calendar__footer"
                   >
                     <button
-                      aria-disabled="false"
                       class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-                      role="button"
+                      tabindex="0"
                       type="button"
                     >
                       <!---->
@@ -33123,8 +33115,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               <!--teleport start-->
               
               <div
-                class="t-overlay"
-                style="z-index: 1000; transition-duration: 300ms; display: none;"
+                class="t-overlay t-popup-zIndex"
+                style="transition-duration: 300ms; display: none;"
               >
                 <!---->
               </div>
@@ -34154,9 +34146,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                     class="t-calendar__footer"
                   >
                     <button
-                      aria-disabled="false"
                       class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-                      role="button"
+                      tabindex="0"
                       type="button"
                     >
                       <!---->
@@ -34262,8 +34253,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 <!--teleport start-->
                 
                 <div
-                  class="t-overlay"
-                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                  class="t-overlay t-popup-zIndex"
+                  style="transition-duration: 300ms; display: none;"
                 >
                   <!---->
                 </div>
@@ -34787,9 +34778,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-calendar__footer"
                     >
                       <button
-                        aria-disabled="false"
                         class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-                        role="button"
+                        tabindex="0"
                         type="button"
                       >
                         <!---->
@@ -34898,8 +34888,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 <!--teleport start-->
                 
                 <div
-                  class="t-overlay"
-                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                  class="t-overlay t-popup-zIndex"
+                  style="transition-duration: 300ms; display: none;"
                 >
                   <!---->
                 </div>
@@ -35673,9 +35663,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-calendar__footer"
                     >
                       <button
-                        aria-disabled="false"
                         class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-                        role="button"
+                        tabindex="0"
                         type="button"
                       >
                         <!---->
@@ -35840,8 +35829,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 <!--teleport start-->
                 
                 <div
-                  class="t-overlay"
-                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                  class="t-overlay t-popup-zIndex"
+                  style="transition-duration: 300ms; display: none;"
                 >
                   <!---->
                 </div>
@@ -36615,9 +36604,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-calendar__footer"
                     >
                       <button
-                        aria-disabled="false"
                         class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-                        role="button"
+                        tabindex="0"
                         type="button"
                       >
                         <!---->
@@ -36725,8 +36713,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 <!--teleport start-->
                 
                 <div
-                  class="t-overlay"
-                  style="z-index: 1000; transition-duration: 300ms; display: none;"
+                  class="t-overlay t-popup-zIndex"
+                  style="transition-duration: 300ms; display: none;"
                 >
                   <!---->
                 </div>
@@ -37500,9 +37488,8 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                       class="t-calendar__footer"
                     >
                       <button
-                        aria-disabled="false"
                         class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-                        role="button"
+                        tabindex="0"
                         type="button"
                       >
                         <!---->
@@ -40134,8 +40121,8 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -40909,9 +40896,8 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
           class="t-calendar__footer"
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -40996,8 +40982,8 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -41771,9 +41757,8 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
           class="t-calendar__footer"
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -41890,8 +41875,8 @@ exports[`Calendar > Calendar switchModeVue demo works fine 1`] = `
     <!--teleport start-->
     
     <div
-      class="t-overlay"
-      style="z-index: 1000; transition-duration: 300ms; display: none;"
+      class="t-overlay t-popup-zIndex"
+      style="transition-duration: 300ms; display: none;"
     >
       <!---->
     </div>
@@ -42415,9 +42400,8 @@ exports[`Calendar > Calendar switchModeVue demo works fine 1`] = `
           class="t-calendar__footer"
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle t-button--block"
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->

@@ -85,10 +85,9 @@ exports[`Qrcode > Qrcode downloadVue demo works fine 1`] = `
   >
     
     <button
-      aria-disabled="false"
       class="t-button t-button--size-medium t-button--base t-button--light t-button--round"
       data-v-848000e9=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -102,10 +101,9 @@ exports[`Qrcode > Qrcode downloadVue demo works fine 1`] = `
       <!---->
     </button>
     <button
-      aria-disabled="false"
       class="t-button t-button--size-medium t-button--base t-button--default t-button--round"
       data-v-848000e9=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -143,10 +141,9 @@ exports[`Qrcode > Qrcode downloadVue demo works fine 1`] = `
     data-v-848000e9=""
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
       data-v-848000e9=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -703,10 +700,9 @@ exports[`Qrcode > Qrcode mobileVue demo works fine 1`] = `
           data-v-55577f76=""
         >
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle button"
             data-v-55577f76=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -724,10 +720,9 @@ exports[`Qrcode > Qrcode mobileVue demo works fine 1`] = `
             data-v-55577f76=""
           />
           <button
-            aria-disabled="false"
             class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle button"
             data-v-55577f76=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -780,10 +775,9 @@ exports[`Qrcode > Qrcode sizeVue demo works fine 1`] = `
     data-v-55577f76=""
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle button"
       data-v-55577f76=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -801,10 +795,9 @@ exports[`Qrcode > Qrcode sizeVue demo works fine 1`] = `
       data-v-55577f76=""
     />
     <button
-      aria-disabled="false"
       class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle button"
       data-v-55577f76=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->

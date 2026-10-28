@@ -14,16 +14,18 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { BackTopProps } from 'tdesign-mobile-vue';
 import BaseDemo from './base.vue';
 import HalfRoundDemo from './half-round.vue';
 
 const container = ref<HTMLElement>();
-const theme = ref('round');
+const theme = ref<BackTopProps['theme']>('round');
 const text = ref('顶部');
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 </style>

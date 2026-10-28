@@ -11,9 +11,10 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+import type { SliderValue } from 'tdesign-mobile-vue';
 
-const value = ref(10);
-const onChange = (e: number) => {
+const value = ref<SliderValue>(10);
+const onChange = (e: SliderValue) => {
   value.value = e;
 };
 
@@ -24,7 +25,7 @@ const handleLabel = (value: any) => {
 
 <style lang="less" scoped>
 .wrapper {
-  background: var(--bg-color-demo, #fff);
+  background: var(--td-bg-color-container);
   margin-top: 16px;
   padding: 18px 0;
 }

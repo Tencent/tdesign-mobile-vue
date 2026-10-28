@@ -13,8 +13,9 @@
 </template>
 <script setup lang="ts">
 import enConfig from 'tdesign-mobile-vue/es/locale/en_US';
+import type { UploadFile } from 'tdesign-mobile-vue';
 
-const files = [
+const files: UploadFile[] = [
   {
     url: 'https://tdesign.gtimg.com/mobile/demos/upload6.png',
     name: 'uploaded1.png',
@@ -39,7 +40,7 @@ const files = [
 
 <style scoped lang="less">
 .upload-demo {
-  background: var(--bg-color-demo, #fff);
+  background: var(--td-bg-color-container);
 
   & + & {
     margin-top: 16px;

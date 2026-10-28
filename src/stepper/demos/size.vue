@@ -11,7 +11,7 @@ import { ref } from 'vue';
 
 const value = ref(3);
 
-const handleChange = ($event: number) => {
+const handleChange = ($event: string | number) => {
   console.log(`change to ${$event}`);
 };
 </script>
@@ -22,6 +22,6 @@ const handleChange = ($event: number) => {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 </style>

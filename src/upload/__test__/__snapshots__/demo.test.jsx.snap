@@ -2382,9 +2382,8 @@ exports[`Upload > Upload mobileVue demo works fine 1`] = `
             class="t-upload__list-trigger"
           >
             <button
-              aria-disabled="false"
               class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-              role="button"
+              tabindex="0"
               type="button"
             >
               
@@ -5551,9 +5550,8 @@ exports[`Upload > Upload themeVue demo works fine 1`] = `
         class="t-upload__list-trigger"
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-medium t-button--base t-button--primary t-button--rectangle"
-          role="button"
+          tabindex="0"
           type="button"
         >
           

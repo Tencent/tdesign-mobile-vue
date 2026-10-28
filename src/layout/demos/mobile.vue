@@ -18,8 +18,14 @@ import OffsetDemo from './offset.vue';
 
 <style lang="less" scoped>
 .tdesign-mobile-demo {
-  // background-color: #fff;
   min-height: 100%;
   box-sizing: border-box;
+}
+</style>
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
 }
 </style>

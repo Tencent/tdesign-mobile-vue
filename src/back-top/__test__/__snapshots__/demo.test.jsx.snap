@@ -6,10 +6,9 @@ exports[`BackTop > BackTop baseVue demo works fine 1`] = `
   data-v-db5fce21=""
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
     data-v-db5fce21=""
-    role="button"
+    tabindex="0"
     type="button"
   >
     <!---->
@@ -33,10 +32,9 @@ exports[`BackTop > BackTop halfRoundVue demo works fine 1`] = `
     data-v-37c0a853=""
   >
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
       data-v-37c0a853=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -260,23 +258,19 @@ exports[`BackTop > BackTop halfRoundVue demo works fine 1`] = `
 exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-9970a0e7=""
 >
   <h1
     class="title"
-    data-v-9970a0e7=""
   >
     BackTop 返回顶部
   </h1>
   <p
     class="summary"
-    data-v-9970a0e7=""
   >
     用于当页面过长往下滑动时，帮助用户快速回到页面顶部。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-9970a0e7=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -298,14 +292,12 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
       
       <div
         class="button-group"
-        data-v-9970a0e7=""
         data-v-db5fce21=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-db5fce21=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -322,7 +314,6 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-9970a0e7=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -344,10 +335,9 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
         data-v-37c0a853=""
       >
         <button
-          aria-disabled="false"
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
           data-v-37c0a853=""
-          role="button"
+          tabindex="0"
           type="button"
         >
           <!---->
@@ -570,7 +560,6 @@ exports[`BackTop > BackTop mobileVue demo works fine 1`] = `
   </div>
   <div
     class="t-back-top t-back-top--fixed t-back-top--round"
-    data-v-9970a0e7=""
     style="display: none;"
   >
     <svg

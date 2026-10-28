@@ -2,7 +2,7 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">Watermark 水印</h1>
     <p class="summary">给页面的某个区域加上水印。</p>
-    <tdesign-demo-block title="01 组件类型" summary="文本水印">
+    <tdesign-demo-block title="01 组件类型" summary="文字水印">
       <BaseDemo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="图片水印">
@@ -31,10 +31,17 @@
 <script setup lang="ts">
 import BaseDemo from './base.vue';
 import ImageDemo from './image.vue';
-import MultiLineDemo from './multiLine.vue';
-import MultiLineGrayDemo from './multiLineGray.vue';
-import MovingTextDemo from './movingText.vue';
-import MovingImageDemo from './movingImage.vue';
+import MultiLineDemo from './multi-line.vue';
+import MultiLineGrayDemo from './multi-line-gray.vue';
+import MovingTextDemo from './moving-text.vue';
+import MovingImageDemo from './moving-image.vue';
 import GrayDemo from './gray.vue';
 import Layout from './layout.vue';
 </script>
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
+}
+</style>

@@ -44,12 +44,12 @@ exports[`Link > Link baseVue demo works fine 1`] = `
 exports[`Link > Link linkSizeVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-link-demo"
-  data-v-81744b9c=""
+  data-v-019c4688=""
 >
   <a
     aria-disabled="false"
     class="t-link t-link--primary t-link--small"
-    data-v-81744b9c=""
+    data-v-019c4688=""
     target=""
   >
     <!---->
@@ -66,7 +66,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-jump"
-        data-v-81744b9c=""
+        data-v-019c4688=""
         fill="none"
         height="1em"
         style="fill: none;"
@@ -98,7 +98,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
   <a
     aria-disabled="false"
     class="t-link t-link--primary t-link--medium"
-    data-v-81744b9c=""
+    data-v-019c4688=""
     target=""
   >
     <!---->
@@ -115,7 +115,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-jump"
-        data-v-81744b9c=""
+        data-v-019c4688=""
         fill="none"
         height="1em"
         style="fill: none;"
@@ -147,7 +147,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
   <a
     aria-disabled="false"
     class="t-link t-link--primary t-link--large"
-    data-v-81744b9c=""
+    data-v-019c4688=""
     target=""
   >
     <!---->
@@ -164,7 +164,7 @@ exports[`Link > Link linkSizeVue demo works fine 1`] = `
       
       <svg
         class="t-icon t-icon-jump"
-        data-v-81744b9c=""
+        data-v-019c4688=""
         fill="none"
         height="1em"
         style="fill: none;"
@@ -1142,12 +1142,12 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
       
       <div
         class="tdesign-mobile-link-demo"
-        data-v-81744b9c=""
+        data-v-019c4688=""
       >
         <a
           aria-disabled="false"
           class="t-link t-link--primary t-link--small"
-          data-v-81744b9c=""
+          data-v-019c4688=""
           target=""
         >
           <!---->
@@ -1164,7 +1164,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-81744b9c=""
+              data-v-019c4688=""
               fill="none"
               height="1em"
               style="fill: none;"
@@ -1196,7 +1196,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="false"
           class="t-link t-link--primary t-link--medium"
-          data-v-81744b9c=""
+          data-v-019c4688=""
           target=""
         >
           <!---->
@@ -1213,7 +1213,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-81744b9c=""
+              data-v-019c4688=""
               fill="none"
               height="1em"
               style="fill: none;"
@@ -1245,7 +1245,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
         <a
           aria-disabled="false"
           class="t-link t-link--primary t-link--large"
-          data-v-81744b9c=""
+          data-v-019c4688=""
           target=""
         >
           <!---->
@@ -1262,7 +1262,7 @@ exports[`Link > Link mobileVue demo works fine 1`] = `
             
             <svg
               class="t-icon t-icon-jump"
-              data-v-81744b9c=""
+              data-v-019c4688=""
               fill="none"
               height="1em"
               style="fill: none;"

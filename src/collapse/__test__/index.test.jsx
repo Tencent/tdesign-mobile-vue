@@ -1,4 +1,4 @@
-import { ref, reactive } from 'vue';
+import { ref, reexpanded } from 'vue';
 import { mount } from '@vue/test-utils';
 import { Collapse, CollapsePanel } from '../index';
 
@@ -23,14 +23,14 @@ describe('Collapse', () => {
       const panel1 = wrapper.findComponent({ ref: '1' });
       const panel2 = wrapper.findComponent({ ref: '2' });
 
-      expect(panel1.classes()).not.toContain('t-collapse-panel--active');
-      expect(panel2.classes()).not.toContain('t-collapse-panel--active');
+      expect(panel1.classes()).not.toContain('t-collapse-panel--expanded');
+      expect(panel2.classes()).not.toContain('t-collapse-panel--expanded');
 
       defaultExpandAll.value = true;
       await wrapper.vm.$nextTick();
 
-      expect(panel1.classes()).toContain('t-collapse-panel--active');
-      expect(panel2.classes()).toContain('t-collapse-panel--active');
+      expect(panel1.classes()).toContain('t-collapse-panel--expanded');
+      expect(panel2.classes()).toContain('t-collapse-panel--expanded');
     });
 
     test('default-value', async () => {
@@ -48,8 +48,8 @@ describe('Collapse', () => {
       const panel1 = wrapper.findComponent({ ref: '1' });
       const panel2 = wrapper.findComponent({ ref: '2' });
 
-      expect(panel1.classes()).toContain('t-collapse-panel--active');
-      expect(panel2.classes()).not.toContain('t-collapse-panel--active');
+      expect(panel1.classes()).toContain('t-collapse-panel--expanded');
+      expect(panel2.classes()).not.toContain('t-collapse-panel--expanded');
     });
 
     test('value', async () => {

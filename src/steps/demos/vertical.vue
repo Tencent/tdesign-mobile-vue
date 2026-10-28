@@ -71,17 +71,17 @@ const options = reactive({
   four: 1,
 });
 const count = ref(4);
-const onFirstChange = (current: number) => {
-  options.first = current;
+const onFirstChange = (current: string | number) => {
+  options.first = Number(current);
 };
-const onSecondChange = (current: number) => {
-  options.second = current;
+const onSecondChange = (current: string | number) => {
+  options.second = Number(current);
 };
-const onThirdChange = (current: number) => {
-  options.third = current;
+const onThirdChange = (current: string | number) => {
+  options.third = Number(current);
 };
-const onFourChange = (current: number) => {
-  options.four = current;
+const onFourChange = (current: string | number) => {
+  options.four = Number(current);
 };
 
 const getTitle = (type: 'first' | 'second' | 'third' | 'four', index: number) => {

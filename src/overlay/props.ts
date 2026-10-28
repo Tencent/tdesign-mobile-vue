@@ -30,11 +30,18 @@ export default {
   },
   /** 是否展示 */
   visible: Boolean,
-  /** 遮罩的层级 */
+  /** 遮罩的层级，默认为 1000 */
   zIndex: {
     type: Number,
-    default: 1000,
   },
   /** 遮罩层的点击事件 */
   onClick: Function as PropType<TdOverlayProps['onClick']>,
+  /** 遮罩执行消失动画效果前触发 */
+  onClose: Function as PropType<TdOverlayProps['onClose']>,
+  /** 遮罩消失动画效果结束后触发 */
+  onClosed: Function as PropType<TdOverlayProps['onClosed']>,
+  /** 遮罩执行弹出动画效果前触发 */
+  onOpen: Function as PropType<TdOverlayProps['onOpen']>,
+  /** 遮罩弹出动画效果结束后触发 */
+  onOpened: Function as PropType<TdOverlayProps['onOpened']>,
 };

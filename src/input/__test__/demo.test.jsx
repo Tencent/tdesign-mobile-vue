@@ -10,7 +10,7 @@ import borderedVue from '@/input/demos/bordered.vue';
 import customVue from '@/input/demos/custom.vue';
 import labelVue from '@/input/demos/label.vue';
 import layoutVue from '@/input/demos/layout.vue';
-import maxLengthVue from '@/input/demos/maxLength.vue';
+import maxLengthVue from '@/input/demos/maxlength.vue';
 import mobileVue from '@/input/demos/mobile.vue';
 import prefixVue from '@/input/demos/prefix.vue';
 import specialVue from '@/input/demos/special.vue';

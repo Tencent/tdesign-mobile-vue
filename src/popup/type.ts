@@ -5,7 +5,7 @@
  * */
 
 import { OverlayProps } from '../overlay';
-import { TNode, AttachNode } from '../common';
+import type { TNode, AttachNode } from '../common';
 
 export interface TdPopupProps {
   /**
@@ -70,7 +70,7 @@ export interface TdPopupProps {
    */
   modelValue?: boolean;
   /**
-   * 组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500
+   * 组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500
    */
   zIndex?: number;
   /**

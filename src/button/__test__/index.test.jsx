@@ -211,5 +211,103 @@ describe('button', () => {
       });
       expect($button.classes().includes(`${name}--block`)).toBeFalsy();
     });
+
+    it(':tag', async () => {
+      // 默认渲染为 button 标签
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+        },
+      });
+      expect(wrapper.element.tagName.toLowerCase()).toBe('button');
+
+      // tag = 'a'
+      await wrapper.setProps({
+        tag: 'a',
+      });
+      expect(wrapper.element.tagName.toLowerCase()).toBe('a');
+
+      // tag = 'div'
+      await wrapper.setProps({
+        tag: 'div',
+      });
+      expect(wrapper.element.tagName.toLowerCase()).toBe('div');
+    });
+
+    it(':href', async () => {
+      // 不传 tag，仅传 href 时默认使用 a 标签渲染
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+          href: 'https://tdesign.tencent.com',
+        },
+      });
+      expect(wrapper.element.tagName.toLowerCase()).toBe('a');
+      expect(wrapper.element.getAttribute('href')).toBe('https://tdesign.tencent.com');
+
+      // 显式指定 tag 时优先使用 tag
+      await wrapper.setProps({
+        tag: 'div',
+      });
+      expect(wrapper.element.tagName.toLowerCase()).toBe('div');
+    });
+
+    it(':form', async () => {
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+          form: 'form-id',
+        },
+      });
+      // 原生 button 输出 form 属性
+      expect(wrapper.element.getAttribute('form')).toBe('form-id');
+
+      // 非原生标签（a/div）不输出 form 属性
+      await wrapper.setProps({ tag: 'div' });
+      expect(wrapper.element.hasAttribute('form')).toBeFalsy();
+    });
+
+    it('native button: role/type', async () => {
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+          type: 'submit',
+        },
+      });
+      // 原生 button 隐含 role=button，不再冗余输出 role 属性
+      expect(wrapper.element.tagName.toLowerCase()).toBe('button');
+      expect(wrapper.element.hasAttribute('role')).toBeFalsy();
+      // 原生 button 输出 type 属性
+      expect(wrapper.element.getAttribute('type')).toBe('submit');
+    });
+
+    it('custom tag: role/type', async () => {
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+          tag: 'div',
+          type: 'submit',
+        },
+      });
+      // 非原生标签显式输出 role=button
+      expect(wrapper.element.getAttribute('role')).toBe('button');
+      // 非原生标签不输出 type 属性
+      expect(wrapper.element.hasAttribute('type')).toBeFalsy();
+    });
+
+    it(':tag disabled', async () => {
+      // 非原生标签禁用时：不设置 disabled，改用 aria-disabled + tabindex="-1"
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+          tag: 'a',
+          disabled: true,
+        },
+      });
+      expect(wrapper.element.tagName.toLowerCase()).toBe('a');
+      expect(wrapper.element.hasAttribute('disabled')).toBeFalsy();
+      expect(wrapper.element.getAttribute('aria-disabled')).toBe('true');
+      expect(wrapper.element.getAttribute('tabindex')).toBe('-1');
+    });
   });
 });

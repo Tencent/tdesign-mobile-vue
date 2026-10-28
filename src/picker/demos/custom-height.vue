@@ -1,37 +1,39 @@
 <script setup lang="ts">
 import { reactive } from 'vue';
-import { PickerValue } from 'tdesign-mobile-vue';
+import { PickerColumn, PickerValue } from 'tdesign-mobile-vue';
 
-const cityOptions = () => {
+const cityOptions = (): PickerColumn[] => {
   return [
-    {
-      label: '北京市',
-      value: '北京市',
-    },
-    {
-      label: '上海市',
-      value: '上海市',
-    },
-    {
-      label: '广州市',
-      value: '广州市',
-    },
-    {
-      label: '深圳市',
-      value: '深圳市',
-    },
-    {
-      label: '杭州市',
-      value: '杭州市',
-    },
-    {
-      label: '成都市',
-      value: '成都市',
-    },
-    {
-      label: '长沙市',
-      value: '长沙市',
-    },
+    [
+      {
+        label: '北京市',
+        value: '北京市',
+      },
+      {
+        label: '上海市',
+        value: '上海市',
+      },
+      {
+        label: '广州市',
+        value: '广州市',
+      },
+      {
+        label: '深圳市',
+        value: '深圳市',
+      },
+      {
+        label: '杭州市',
+        value: '杭州市',
+      },
+      {
+        label: '成都市',
+        value: '成都市',
+      },
+      {
+        label: '长沙市',
+        value: '长沙市',
+      },
+    ],
   ];
 };
 

@@ -19,10 +19,10 @@
 import { ref } from 'vue';
 
 const number = ref(0);
-const onChange = ($event: number) => {
+const onChange = ($event: string | number) => {
   console.log(`change to ${$event}`);
 };
-const onBlur = ($event: number) => {
+const onBlur = ($event: string | number) => {
   console.log(`blur to ${$event}`);
 };
 const onOverlimit = ($type: string) => {
@@ -36,6 +36,6 @@ const onOverlimit = ($type: string) => {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 </style>

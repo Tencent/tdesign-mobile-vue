@@ -45,7 +45,7 @@ export interface TdImageViewerProps {
    */
   loop?: boolean;
   /**
-   * 【开发中】最大放大比例
+   * 图片最大放大比例
    * @default 3
    */
   maxZoom?: number;

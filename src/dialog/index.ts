@@ -14,7 +14,6 @@ const DialogPropsDefault = {
   confirmBtn: '',
   cancelBtn: '',
   visible: false,
-  zIndex: 2500,
   showOverlay: true,
   width: '320px',
   closeOnOverlayClick: false,

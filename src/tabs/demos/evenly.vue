@@ -69,11 +69,11 @@ const tabPanelsNext = [
     label: '选项',
   },
 ];
-const onChange = ($event: number, label: string) => {
+const onChange = ($event: string | number, label: string) => {
   console.log(`change to ${$event}`, label);
 };
 
-const onNextChange = ($event: number) => {
+const onNextChange = ($event: string | number) => {
   console.log(`changeNext to ${$event}`);
 };
 </script>

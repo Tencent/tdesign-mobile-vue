@@ -6,7 +6,9 @@
 </template>
 
 <script lang="ts" setup>
-const product = {
+import type { DropdownOption, DropdownValue } from 'tdesign-mobile-vue';
+
+const product: { value: DropdownValue; options: DropdownOption[] } = {
   value: 'all',
   options: [
     {
@@ -23,7 +25,7 @@ const product = {
     },
   ],
 };
-const sorter = {
+const sorter: { value: DropdownValue; options: DropdownOption[] } = {
   value: 'default',
   options: [
     {

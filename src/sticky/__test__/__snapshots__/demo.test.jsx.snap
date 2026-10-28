@@ -12,10 +12,9 @@ exports[`Sticky > Sticky baseVue demo works fine 1`] = `
   >
     
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle common-button"
       data-v-1c640d71=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->
@@ -37,7 +36,6 @@ exports[`Sticky > Sticky containerVue demo works fine 1`] = `
 <div
   class="sticky-demo"
   data-v-e0d52be3=""
-  id="container"
 >
   <div
     class="t-sticky"
@@ -50,10 +48,9 @@ exports[`Sticky > Sticky containerVue demo works fine 1`] = `
     >
       
       <button
-        aria-disabled="false"
         class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle common-button green-button"
         data-v-e0d52be3=""
-        role="button"
+        tabindex="0"
         type="button"
       >
         <!---->
@@ -119,10 +116,9 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle common-button"
             data-v-1c640d71=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -171,10 +167,9 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
         >
           
           <button
-            aria-disabled="false"
             class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle common-button"
             data-v-dc78acf3=""
-            role="button"
+            tabindex="0"
             type="button"
           >
             <!---->
@@ -215,7 +210,6 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
         class="sticky-demo"
         data-v-8783f7c8=""
         data-v-e0d52be3=""
-        id="container"
       >
         <div
           class="t-sticky"
@@ -228,10 +222,9 @@ exports[`Sticky > Sticky mobileVue demo works fine 1`] = `
           >
             
             <button
-              aria-disabled="false"
               class="t-button t-button--size-large t-button--base t-button--default t-button--rectangle common-button green-button"
               data-v-e0d52be3=""
-              role="button"
+              tabindex="0"
               type="button"
             >
               <!---->
@@ -266,10 +259,9 @@ exports[`Sticky > Sticky offsetVue demo works fine 1`] = `
   >
     
     <button
-      aria-disabled="false"
       class="t-button t-button--size-large t-button--base t-button--danger t-button--rectangle common-button"
       data-v-dc78acf3=""
-      role="button"
+      tabindex="0"
       type="button"
     >
       <!---->

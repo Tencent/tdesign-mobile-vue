@@ -6,9 +6,8 @@ exports[`fab > slots > : icon 1`] = `
   style="right: 16px; bottom: 32px;"
 >
   <button
-    aria-disabled="false"
     class="t-button t-button--size-large t-button--base t-button--primary t-button--circle t-fab__button"
-    role="button"
+    tabindex="0"
     type="button"
   >
     
