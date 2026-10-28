@@ -9,7 +9,7 @@ import InputProps from './props';
 import { InputValue } from './type';
 import { extendAPI } from '../shared';
 import { FormItemInjectionKey } from '../form/const';
-import { useFormDisabled } from '../form/hooks';
+import { useFormDisabled, useReadonly } from '../form/hooks';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
@@ -38,6 +38,7 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const inputClass = usePrefixClass('input');
     const isDisabled = useFormDisabled();
+    const isReadonly = useReadonly();
 
     const inputRef = ref();
 
@@ -68,7 +69,7 @@ export default defineComponent({
       },
     ]);
     const showClear = computed(() => {
-      if (isDisabled.value || props.readonly === true) return false;
+      if (isDisabled.value || isReadonly.value) return false;
 
       if (props.clearable && innerValue.value && String(innerValue.value).length > 0) {
         return props.clearTrigger === 'always' || (props.clearTrigger === 'focus' && focused.value);
@@ -253,7 +254,7 @@ export default defineComponent({
         disabled: isDisabled.value,
         autocomplete: props.autocomplete ? 'On' : 'Off',
         placeholder: props.placeholder,
-        readonly: props.readonly,
+        readonly: isReadonly.value,
         autofocus: props.autofocus,
         // maxlength: props.maxlength,
         pattern: props.pattern,

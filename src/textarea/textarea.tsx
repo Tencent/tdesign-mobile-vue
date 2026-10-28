@@ -4,7 +4,7 @@ import props from './props';
 import { TextareaValue } from './type';
 import calcTextareaHeight from '../_common/js/utils/calcTextareaHeight';
 import { FormItemInjectionKey } from '../form/const';
-import { useFormDisabled } from '../form/hooks';
+import { useFormDisabled, useReadonly } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import useVModel from '../hooks/useVModel';
@@ -16,6 +16,7 @@ export default defineComponent({
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
     const isDisabled = useFormDisabled();
+    const isReadonly = useReadonly();
     const formItem = inject(FormItemInjectionKey, undefined);
 
     const textareaClass = usePrefixClass('textarea');
@@ -32,7 +33,7 @@ export default defineComponent({
       `${textareaClass.value}__placeholder`,
       {
         [`${textareaClass.value}--disabled`]: isDisabled.value,
-        [`${textareaClass.value}--readonly`]: props.readonly,
+        [`${textareaClass.value}--readonly`]: isReadonly.value,
       },
     ]);
 
@@ -146,7 +147,7 @@ export default defineComponent({
         // maxlength: props.maxlength,
         disabled: isDisabled.value,
         placeholder: props.placeholder,
-        readonly: props.readonly,
+        readonly: isReadonly.value,
         autofocus: props.autofocus,
         onFocus: handleFocus,
         onBlur: handleBlur,

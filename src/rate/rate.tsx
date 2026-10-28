@@ -4,7 +4,7 @@ import { onClickOutside } from '@vueuse/core';
 import props from './props';
 import { TdRateProps } from './type';
 import useVModel from '../hooks/useVModel';
-import { useFormDisabled } from '../form/hooks';
+import { useFormDisabled, useReadonly } from '../form/hooks';
 import { usePrefixClass, useConfig } from '../hooks/useClass';
 
 export default defineComponent({
@@ -14,6 +14,7 @@ export default defineComponent({
     const rateClass = usePrefixClass('rate');
     const { t, globalConfig } = useConfig('rate');
     const isDisabled = useFormDisabled();
+    const isReadonly = useReadonly();
 
     const rateWrapper = ref<HTMLElement>();
     const { value, modelValue } = toRefs(props);
@@ -124,7 +125,7 @@ export default defineComponent({
     };
 
     const onClick = (event: MouseEvent) => {
-      if (isDisabled.value) return;
+      if (isDisabled.value || isReadonly.value) return;
       // if (Date.now() - touchStartTime.value > 200) return;
       getRect(event, 'tap');
     };
@@ -135,19 +136,19 @@ export default defineComponent({
     };
 
     const onTouchstart = (e: TouchEvent) => {
-      if (isDisabled.value) return;
+      if (isDisabled.value || isReadonly.value) return;
       touchStartTime.value = Date.now();
       touchEnd.value = false;
     };
 
     const onTouchmove = (e: TouchEvent) => {
-      if (isDisabled.value) return;
+      if (isDisabled.value || isReadonly.value) return;
       if (Date.now() - touchStartTime.value <= 200) return;
       onTouch(e, 'move');
     };
 
     const onTouchEnd = (e: TouchEvent) => {
-      if (isDisabled.value) return;
+      if (isDisabled.value || isReadonly.value) return;
       touchEnd.value = true;
       hideTips();
     };

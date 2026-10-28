@@ -3,7 +3,7 @@ import { AddIcon, RemoveIcon } from 'tdesign-icons-vue-next';
 import props from './props';
 import { formatNumber } from '../shared';
 import { TdStepperProps } from './type';
-import { useFormDisabled } from '../form/hooks';
+import { useFormDisabled, useReadonly } from '../form/hooks';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 
@@ -17,10 +17,11 @@ export default defineComponent({
     const [stepperValue, setStepperValue] = useVModel(value, modelValue, props.defaultValue, props.onChange);
 
     const disabled = useFormDisabled();
+    const isReadonly = useReadonly();
     const inputStyle = computed(() => (props.inputWidth ? { width: `${props.inputWidth}px` } : ''));
 
     const isDisabled = (type: 'minus' | 'plus') => {
-      if (disabled.value) return true;
+      if (disabled.value || isReadonly.value) return true;
       if (type === 'minus' && Number(stepperValue.value) <= min.value) {
         return true;
       }
@@ -97,7 +98,7 @@ export default defineComponent({
               `${stepperClass.value}__minus--${props.theme}`,
               `${stepperClass.value}__icon--${props.size}`,
               `${
-                disabled.value || Number(stepperValue.value) <= props.min
+                disabled.value || isReadonly.value || Number(stepperValue.value) <= props.min
                   ? `${stepperClass.value}--${props.theme}-disabled`
                   : ''
               }`,
@@ -118,7 +119,7 @@ export default defineComponent({
             inputmode={integer.value ? 'numeric' : 'decimal'}
             style={inputStyle.value}
             disabled={props.disableInput || disabled.value}
-            readonly={props.disableInput}
+            readonly={props.disableInput || isReadonly.value}
             onFocus={handleFocus}
             onBlur={handleBlur}
             onInput={handleInput}
@@ -130,7 +131,7 @@ export default defineComponent({
               `${stepperClass.value}__plus--${props.theme}`,
               `${stepperClass.value}__icon--${props.size}`,
               `${
-                disabled.value || Number(stepperValue.value) >= props.max
+                disabled.value || isReadonly.value || Number(stepperValue.value) >= props.max
                   ? `${stepperClass.value}--${props.theme}-disabled`
                   : ''
               }`,
