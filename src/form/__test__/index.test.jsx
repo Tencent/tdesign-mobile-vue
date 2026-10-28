@@ -395,11 +395,11 @@ describe('form', () => {
       it('type', async () => {
         rules.value = { name: [{ required: true, type: 'error' }] };
         await validate();
-        expect(form.find(`.${prefix}-form__controls`).classes(`${name}__item--error`)).toBeTruthy();
+        expect(form.find(`.${prefix}-form__item-tips`).classes(`${name}__item--error`)).toBeTruthy();
 
         rules.value = { name: [{ required: true, type: 'warning' }] };
         await validate();
-        expect(form.find(`.${prefix}-form__controls`).classes(`${name}__item--warning`)).toBeTruthy();
+        expect(form.find(`.${prefix}-form__item-tips`).classes(`${name}__item--warning`)).toBeTruthy();
       });
       it('url', async () => {
         rules.value = { name: [{ url: true }] };
@@ -590,14 +590,14 @@ describe('form', () => {
     it('setValidateMessage', async () => {
       await form.vm.$.exposed.validate();
       expect(wrapper.findAll(`.${name}__item-extra`)[0].text()).eq('姓名必填');
-      expect(wrapper.findAll(`.${name}__controls`)[0].classes(`${name}__item--error`)).toBeTruthy();
+      expect(wrapper.findAll(`.${name}__item-tips`)[0].classes(`${name}__item--error`)).toBeTruthy();
 
       form.vm.$.exposed.setValidateMessage({
         name: [{ type: 'warning', message: '自定义用户名校验信息提示' }],
       });
       await nextTick();
       expect(wrapper.findAll(`.${name}__item-extra`)[0].text()).eq('自定义用户名校验信息提示');
-      expect(wrapper.findAll('.t-form__controls')[0].classes(`${name}__item--warning`)).toBeTruthy();
+      expect(wrapper.findAll('.t-form__item-tips')[0].classes(`${name}__item--warning`)).toBeTruthy();
     });
 
     it('reset', async () => {

@@ -11,7 +11,7 @@
     @reset="onReset"
     @submit="onSubmit"
   >
-    <t-form-item label="用户名" name="name" help="输入用户名">
+    <t-form-item label="用户名" name="name">
       <t-input v-model="formData.name" borderless placeholder="请输入内容"></t-input>
     </t-form-item>
     <t-form-item label="密码" name="password">
@@ -28,14 +28,8 @@
         <t-radio :block="false" name="radio" value="secret" label="保密" />
       </t-radio-group>
     </t-form-item>
-    <t-form-item arrow label="生日" name="birth" content-align="right">
-      <t-input
-        v-model="formData.birth"
-        borderless
-        align="right"
-        placeholder="请输入内容"
-        @click="visible = true"
-      ></t-input>
+    <t-form-item arrow label="生日" name="birth">
+      <t-input v-model="formData.birth" borderless placeholder="请输入内容" @click="visible = true"></t-input>
       <t-popup v-model="visible" placement="bottom">
         <t-date-time-picker
           :value="formData.birth"
@@ -50,14 +44,8 @@
         />
       </t-popup>
     </t-form-item>
-    <t-form-item arrow label="籍贯" name="place" content-align="right">
-      <t-input
-        v-model="formData.place"
-        borderless
-        align="right"
-        placeholder="请输入内容"
-        @click="showCascader"
-      ></t-input>
+    <t-form-item arrow label="籍贯" name="place">
+      <t-input v-model="formData.place" borderless placeholder="请输入内容" @click="showCascader"></t-input>
       <t-cascader
         v-model:visible="visibleCascader"
         :value="address"
@@ -66,10 +54,10 @@
         @change="onChangeCascader"
       />
     </t-form-item>
-    <t-form-item label="年限" name="age" content-align="right">
+    <t-form-item label="年限" name="age">
       <t-stepper v-model="formData.age" theme="filled" @change="onChangeStepper" />
     </t-form-item>
-    <t-form-item label="自我评价" name="description" content-align="right">
+    <t-form-item label="自我评价" name="description">
       <t-rate v-model="formData.description" variant="filled" allow-half :gap="rateGap" />
     </t-form-item>
     <t-form-item label="个人简介" name="resume">
@@ -165,7 +153,7 @@ const files = ref([
 const formData = reactive({
   name: '',
   password: '',
-  gender: '',
+  gender: 'man',
   birth: '',
   place: '',
   age: 3,
