@@ -8,6 +8,7 @@ import { useFormDisabled } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import useVModel from '../hooks/useVModel';
+import { extendAPI } from '../shared';
 
 export default defineComponent({
   name: 'TTextarea',
@@ -101,10 +102,12 @@ export default defineComponent({
       props.onBlur?.(innerValue.value, { e });
     };
 
+    const focus = () => textareaRef.value?.focus();
+    const blur = () => textareaRef.value?.blur();
+
+    extendAPI({ focus, blur });
+
     onMounted(() => {
-      if (props.autofocus) {
-        textareaRef.value?.focus();
-      }
       textareaValueChangeHandle();
       adjustTextareaHeight();
     });
@@ -144,6 +147,7 @@ export default defineComponent({
         disabled: isDisabled.value,
         placeholder: props.placeholder,
         readonly: props.readonly,
+        autofocus: props.autofocus,
         onFocus: handleFocus,
         onBlur: handleBlur,
         onInput: handleInput,
