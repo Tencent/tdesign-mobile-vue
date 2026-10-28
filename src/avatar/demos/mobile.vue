@@ -36,8 +36,9 @@ import action from './action.vue';
 import badgeAvatar from './badge-avatar.vue';
 import size from './size.vue';
 </script>
-<style scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 </style>

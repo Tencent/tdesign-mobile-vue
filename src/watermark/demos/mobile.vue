@@ -38,3 +38,10 @@ import MovingImageDemo from './moving-image.vue';
 import GrayDemo from './gray.vue';
 import Layout from './layout.vue';
 </script>
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
+}
+</style>

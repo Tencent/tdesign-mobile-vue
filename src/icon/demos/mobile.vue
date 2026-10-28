@@ -32,7 +32,6 @@ import single from './single.vue';
 .tdesign-demo-topnav,
 .tdesign-mobile-demo {
   color: var(--td-text-color-primary);
-  --bg-color-demo: var(--td-bg-color-container);
 }
 
 .t-demo-iconfont {

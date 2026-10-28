@@ -507,23 +507,19 @@ exports[`Button > Button iconVue demo works fine 1`] = `
 exports[`Button > Button mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-e07177be=""
 >
   <h1
     class="title"
-    data-v-e07177be=""
   >
     Button 按钮
   </h1>
   <p
     class="summary"
-    data-v-e07177be=""
   >
     按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -640,7 +636,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -659,7 +654,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       <div
         class="row"
         data-v-c0b784f5=""
-        data-v-e07177be=""
       >
         <button
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
@@ -944,7 +938,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -963,7 +956,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       <div
         class="row"
         data-v-3efbf598=""
-        data-v-e07177be=""
       >
         <button
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--ghost"
@@ -1019,7 +1011,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1038,7 +1029,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       <div
         class="row"
         data-v-8e466c6d=""
-        data-v-e07177be=""
       >
         <button
           class="t-button t-button--size-large t-button--base t-button--light t-button--rectangle"
@@ -1078,7 +1068,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1097,7 +1086,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       <div
         class="row"
         data-v-df7bddf2=""
-        data-v-e07177be=""
       >
         <button
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle t-button--block"
@@ -1121,7 +1109,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1238,7 +1225,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1261,7 +1247,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       <div
         class="row"
         data-v-78d504d8=""
-        data-v-e07177be=""
       >
         <button
           class="t-button t-button--size-large t-button--base t-button--primary t-button--rectangle"
@@ -1333,7 +1318,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1643,7 +1627,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-e07177be=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1662,7 +1645,6 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
       <div
         class="section-theme"
         data-v-0e2e31f3=""
-        data-v-e07177be=""
       >
         <div
           class="row"

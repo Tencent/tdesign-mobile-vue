@@ -21,4 +21,9 @@ import imageEmpty from './image-empty.vue';
 import buttonEmpty from './button-empty.vue';
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
+}
+</style>

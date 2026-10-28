@@ -19,3 +19,10 @@ import baseDemo from './base.vue';
 import linksDemo from './links.vue';
 import logoDemo from './logo.vue';
 </script>
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
+}
+</style>

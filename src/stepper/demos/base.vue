@@ -15,6 +15,6 @@ const decimal = ref(3.5);
 <style lang="less">
 .stepper-example {
   padding: 16px;
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
 }
 </style>

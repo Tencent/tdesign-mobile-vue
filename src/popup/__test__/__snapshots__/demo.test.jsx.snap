@@ -158,23 +158,19 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
 exports[`Popup > Popup mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-12934826=""
 >
   <h1
     class="title"
-    data-v-12934826=""
   >
     Popup 弹窗层
   </h1>
   <p
     class="summary"
-    data-v-12934826=""
   >
     由其他控件触发，屏幕滑出或弹出一块自定义内容区域。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-12934826=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -196,7 +192,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       
       <div
         class="popup-demo"
-        data-v-12934826=""
         data-v-c0baf305=""
       >
         
@@ -304,7 +299,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-12934826=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -326,7 +320,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       
       <div
         class="popup-demo"
-        data-v-12934826=""
         data-v-342d27ca=""
       >
         <button
@@ -391,7 +384,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       </div>
       <div
         class="popup-demo"
-        data-v-12934826=""
       >
         <button
           class="t-button t-button--size-large t-button--outline t-button--primary t-button--rectangle t-button--block"
@@ -440,7 +432,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-12934826=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -462,7 +453,6 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
       
       <div
         class="popup-nested-demo"
-        data-v-12934826=""
         data-v-4d689919=""
       >
         <button

@@ -32,8 +32,9 @@ import footerDemo from './footer.vue';
 import pluginDemo from './plugin.vue';
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 </style>
