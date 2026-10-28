@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Fab 悬浮按钮</h1>
-    <p class="summary">当功能使用图标即可表示清楚时，可使用纯图标悬浮按钮，例如：添加、发布。</p>
+    <p class="summary">当功能使用图标即可表意清楚时，可使用纯图标悬浮按钮，例如：添加、发布。</p>
     <tdesign-demo-block title="01 组件类型" summary="纯图标悬浮按钮" :padding="true">
       <t-button v-bind="btnProps" @click="changeType('base')">纯图标悬浮按钮</t-button>
     </tdesign-demo-block>

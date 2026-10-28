@@ -33,6 +33,7 @@ import control from './control.vue';
 import vertical from './vertical.vue';
 import outside from './outside.vue';
 import current from './current.vue';
+import card from './card.vue';
 </script>
 
 <style lang="less">

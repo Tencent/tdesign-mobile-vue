@@ -2,7 +2,7 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">Watermark 水印</h1>
     <p class="summary">给页面的某个区域加上水印。</p>
-    <tdesign-demo-block title="01 组件类型" summary="文本水印">
+    <tdesign-demo-block title="01 组件类型" summary="文字水印">
       <BaseDemo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="图片水印">

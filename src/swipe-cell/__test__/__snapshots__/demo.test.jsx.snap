@@ -1389,7 +1389,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
   <h1
     class="title"
   >
-    Swipecell 滑动操作
+    SwipeCell 滑动操作
   </h1>
   <p
     class="summary"

@@ -516,7 +516,7 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
   <p
     class="summary"
   >
-    按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
+    用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。
   </p>
   <div
     class="tdesign-mobile-demo-block"

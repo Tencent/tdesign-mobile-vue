@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Toast 轻提示</h1>
-    <p class="summary">一种轻量级反馈或提示，不会打断用户操作。</p>
+    <p class="summary">用于轻量级反馈或提示，不会打断用户操作。</p>
     <tdesign-demo-block title="01 组件类型" summary="基础提示">
       <baseDemo />
     </tdesign-demo-block>
