@@ -5,6 +5,12 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.17.1 `2026-10-29`
+
+### 🚧 Others
+
+- build: 对齐构建工具链版本，修复 tree-shaking 失效 @anlyyao ([#2393](https://github.com/Tencent/tdesign-mobile-vue/pull/2393))
+
 ## 🌈 1.17.0 `2026-10-29`
 
 ### 🚀 Features
