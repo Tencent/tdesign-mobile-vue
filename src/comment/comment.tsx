@@ -5,6 +5,7 @@ import Avatar from '../avatar';
 import { usePrefixClass } from '../hooks/useClass';
 import { useResizeObserver } from '../hooks/useResizeObserver';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
+import { useConfig } from '../config-provider/useConfig';
 import type { CommentActionItem, CommentFold, CommentFoldState } from './type';
 import CommentProps from './props';
 
@@ -12,11 +13,6 @@ const DEFAULT_COMMENT_FOLDS = {
   state: 'collapsed',
   total: 0,
   step: 3,
-  content: {
-    collapsed: '展开回复',
-    partial: ['展开更多回复', '收起'], // [主文案, 副文案]
-    expanded: '收起',
-  },
 } as unknown as CommentFold;
 
 export default defineComponent({
@@ -26,6 +22,7 @@ export default defineComponent({
     const renderTNodeJSX = useTNodeJSX();
     const renderContent = useContent();
     const commentClass = usePrefixClass('comment');
+    const { globalConfig } = useConfig('comment');
 
     const { folds, defaultFolds } = toRefs(props);
 
@@ -36,6 +33,16 @@ export default defineComponent({
 
     const isControlled = computed(() => folds.value !== undefined);
     const commentFolds = computed(() => folds.value || defaultFolds.value || DEFAULT_COMMENT_FOLDS);
+
+    // 折叠/展开文案，优先使用业务传入的 content，其次回退到全局国际化配置
+    const foldsContent = computed(() => {
+      const userContent = commentFolds.value.content || {};
+      return {
+        collapsed: userContent.collapsed ?? globalConfig.value.collapsedText,
+        partial: userContent.partial ?? [globalConfig.value.expandMoreText, globalConfig.value.collapseText],
+        expanded: userContent.expanded ?? globalConfig.value.collapseText,
+      };
+    });
 
     // 当前实际使用的折叠状态
     const curFoldsState = computed<CommentFoldState>(() => {
@@ -151,19 +158,19 @@ export default defineComponent({
     };
 
     const renderFoldsContent = () => {
-      const { content } = commentFolds.value;
+      const content = foldsContent.value;
       if (curFoldsState.value === 'collapsed') {
         // 全收起
         return (
           <div class={`${commentClass.value}__folds-item`} onClick={(e: Event) => handleClickFold(e, true)}>
-            {content?.collapsed}
+            {content.collapsed}
             <ChevronDownSIcon size="16px" />
           </div>
         );
       }
       if (curFoldsState.value === 'partial') {
         // 半展开
-        const partialContent = content?.partial as any;
+        const partialContent = content.partial as any;
         return (
           <>
             <div class={`${commentClass.value}__folds-item`} onClick={(e: Event) => handleClickFold(e, true)}>
@@ -180,7 +187,7 @@ export default defineComponent({
       // 全展开
       return (
         <div class={`${commentClass.value}__folds-item`} onClick={(e: Event) => handleClickFold(e, false)}>
-          {content?.expanded}
+          {content.expanded}
           <ChevronUpSIcon size="16px" />
         </div>
       );

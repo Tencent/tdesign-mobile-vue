@@ -1,7 +1,8 @@
-import { h } from 'vue';
+import { h, defineComponent } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Comment from '../comment';
+import ConfigProvider from '../../config-provider';
 
 const DEFAULT_FOLDS_CONTENT = {
   collapsed: '展开回复',
@@ -151,6 +152,170 @@ describe('comment', () => {
       });
       await wrapper.find('.t-comment__folds-item').trigger('click');
       expect(onFolds.mock.calls[0][0].fold.state).toBe('collapsed');
+    });
+  });
+
+  describe('i18n', () => {
+    // 不传 folds.content 时，默认使用全局配置（zh_CN 语言包）中的 comment 文案
+    it(': falls back to global config default locale text when folds.content is not provided', () => {
+      let wrapper = mount(Comment, {
+        props: { folds: { state: 'collapsed', total: 5, step: 3 } },
+        slots: { reply: () => h('div', { class: 'reply-item' }, '回复') },
+      });
+      expect(wrapper.find('.t-comment__folds').text()).toContain('展开回复');
+
+      wrapper = mount(Comment, {
+        props: { folds: { state: 'partial', total: 5, step: 3 } },
+        slots: { reply: () => h('div', { class: 'reply-item' }, '回复') },
+      });
+      const items = wrapper.findAll('.t-comment__folds-item');
+      expect(items).toHaveLength(2);
+      expect(items[0].text()).toContain('展开更多回复');
+      expect(items[1].text()).toContain('收起');
+
+      wrapper = mount(Comment, {
+        props: { folds: { state: 'expanded', total: 5, step: 3 } },
+        slots: { reply: () => h('div', { class: 'reply-item' }, '回复') },
+      });
+      expect(wrapper.find('.t-comment__folds').text()).toContain('收起');
+    });
+
+    // ConfigProvider 的 globalConfig.comment 可以覆盖默认文案
+    it(': ConfigProvider globalConfig.comment overrides default locale text', () => {
+      const wrapper = mount(
+        defineComponent({
+          setup() {
+            return () =>
+              h(
+                ConfigProvider,
+                {
+                  globalConfig: {
+                    comment: {
+                      collapsedText: 'Expand replies',
+                      expandMoreText: 'More replies',
+                      collapseText: 'Collapse',
+                    },
+                  },
+                },
+                () =>
+                  h(
+                    Comment,
+                    { folds: { state: 'collapsed', total: 5, step: 3 } },
+                    { reply: () => h('div', { class: 'reply-item' }, 'reply') },
+                  ),
+              );
+          },
+        }),
+      );
+      expect(wrapper.find('.t-comment__folds').text()).toContain('Expand replies');
+    });
+
+    // folds.content 的优先级高于 ConfigProvider 的全局配置
+    it(': folds.content takes priority over ConfigProvider global config', () => {
+      const wrapper = mount(
+        defineComponent({
+          setup() {
+            return () =>
+              h(
+                ConfigProvider,
+                {
+                  globalConfig: {
+                    comment: {
+                      collapsedText: 'Expand replies',
+                      expandMoreText: 'More replies',
+                      collapseText: 'Collapse',
+                    },
+                  },
+                },
+                () =>
+                  h(
+                    Comment,
+                    {
+                      folds: {
+                        state: 'collapsed',
+                        total: 5,
+                        step: 3,
+                        content: { collapsed: '自定义展开文案' },
+                      },
+                    },
+                    { reply: () => h('div', { class: 'reply-item' }, 'reply') },
+                  ),
+              );
+          },
+        }),
+      );
+      const text = wrapper.find('.t-comment__folds').text();
+      expect(text).toContain('自定义展开文案');
+      expect(text).not.toContain('Expand replies');
+    });
+
+    // folds.content.partial 作为数组整体覆盖，不与全局配置做字段级合并
+    it(': folds.content.partial fully overrides global config partial pair', () => {
+      const wrapper = mount(
+        defineComponent({
+          setup() {
+            return () =>
+              h(
+                ConfigProvider,
+                {
+                  globalConfig: {
+                    comment: {
+                      expandMoreText: 'More replies',
+                      collapseText: 'Collapse',
+                    },
+                  },
+                },
+                () =>
+                  h(
+                    Comment,
+                    {
+                      folds: {
+                        state: 'partial',
+                        total: 5,
+                        step: 3,
+                        content: { partial: ['自定义更多回复', '自定义收起'] },
+                      },
+                    },
+                    { reply: () => h('div', { class: 'reply-item' }, 'reply') },
+                  ),
+              );
+          },
+        }),
+      );
+      const items = wrapper.findAll('.t-comment__folds-item');
+      expect(items[0].text()).toContain('自定义更多回复');
+      expect(items[1].text()).toContain('自定义收起');
+    });
+
+    // ConfigProvider 全局配置支持字段级深合并，未覆盖的字段回退到默认语言包
+    it(': ConfigProvider global config deep-merges with default locale, unset fields fall back to defaults', () => {
+      const wrapper = mount(
+        defineComponent({
+          setup() {
+            return () =>
+              h(
+                ConfigProvider,
+                {
+                  globalConfig: {
+                    comment: {
+                      collapsedText: '仅覆盖折叠文案',
+                    },
+                  },
+                },
+                () =>
+                  h(
+                    Comment,
+                    { folds: { state: 'partial', total: 5, step: 3 } },
+                    { reply: () => h('div', { class: 'reply-item' }, 'reply') },
+                  ),
+              );
+          },
+        }),
+      );
+      const items = wrapper.findAll('.t-comment__folds-item');
+      // expandMoreText/collapseText 未被覆盖，回退到默认语言包中的中文文案
+      expect(items[0].text()).toContain('展开更多回复');
+      expect(items[1].text()).toContain('收起');
     });
   });
 
