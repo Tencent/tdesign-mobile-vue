@@ -1,0 +1,3796 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Comment > Comment baseVue demo works fine 1`] = `
+<div
+  class="mobile-comment"
+>
+  <div
+    class="t-comment"
+  >
+    <div
+      class="t-comment__inner"
+    >
+      <div
+        class="t-avatar__wrapper t-comment__avatar"
+      >
+        <div
+          class="t-avatar__badge"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__content"
+            >
+              
+              <div
+                class="t-avatar t-avatar--medium t-avatar--circle"
+                style="height: 32px; width: 32px; font-size: 14px;"
+              >
+                <div
+                  class="t-image t-image--square"
+                >
+                  <div
+                    class="t-image__mask"
+                  >
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
+                    >
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                        
+                      </div>
+                      <!---->
+                      <!---->
+                    </div>
+                  </div>
+                  <picture>
+                    <!---->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
+                </div>
+              </div>
+              
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-comment__detail"
+      >
+        <div
+          class="t-comment__author"
+        >
+          
+          <div
+            class="mobile-comment__author"
+          >
+            <div>
+              Name1 名称
+            </div>
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--primary t-tag--round t-tag--light t-tag--medium mobile-comment__author-tag"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-tag__text"
+              >
+                
+                 作者 
+                
+              </span>
+              <!---->
+            </span>
+          </div>
+          
+        </div>
+        <div
+          class="t-comment__content"
+        >
+          这是一段很长很长很长很长很长很长的评论内容。
+        </div>
+        <div
+          class="t-comment__bottom"
+        >
+          <div
+            class="t-comment__date"
+          >
+            今天16:38·广东
+          </div>
+          <div
+            class="t-comment__actions"
+          >
+            
+            <div
+              class="t-comment-block"
+            >
+              
+              <div>
+                <div
+                  class="mobile-comment__reply-button"
+                >
+                  回复
+                </div>
+              </div>
+              
+            </div>
+            <div
+              class="t-comment-block"
+            >
+              
+              <div>
+                <div
+                  class="mobile-comment__actions"
+                >
+                  <button
+                    class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                    tabindex="0"
+                    type="button"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-thumb-up"
+                      fill="none"
+                      height="1em"
+                      style="fill: none; font-size: 14px;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-thumb-up-instance-v0-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
+                      <g
+                        id="thumb-up"
+                      >
+                        <path
+                          d="M8 11L11.5 2.5L11.9932 2.5822C13.4398 2.82329 14.5 4.07486 14.5 5.54138V9H20.8195C21.4375 9 21.9075 9.55487 21.8059 10.1644L20.1393 20.1644C20.0589 20.6466 19.6417 21 19.1529 21H8V11Z"
+                          fill="transparent"
+                          id="fill1"
+                          mask="url(#t-icon-thumb-up-instance-v0-overlap-fill1)"
+                        />
+                        <path
+                          d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                    
+                    <span
+                      class="t-button__content"
+                    >
+                      
+                      6
+                      
+                    </span>
+                    <!---->
+                  </button>
+                  <button
+                    class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                    tabindex="0"
+                    type="button"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-uncomfortable-1"
+                      fill="none"
+                      height="1em"
+                      style="fill: none; font-size: 14px;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-uncomfortable-1-instance-v1-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
+                      <g
+                        id="uncomfortable-1"
+                      >
+                        <path
+                          d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                          fill="transparent"
+                          id="fill1"
+                          mask="url(#t-icon-uncomfortable-1-instance-v1-overlap-fill1)"
+                        />
+                        <path
+                          d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                          id="stroke2"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                    
+                    <span
+                      class="t-button__content"
+                    >
+                      <!---->
+                    </span>
+                    <!---->
+                  </button>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-comment__reply"
+    >
+      <div
+        class="t-comment__reply-body"
+      >
+        <div
+          class="t-comment__reply-inner"
+        >
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Comment > Comment collapseVue demo works fine 1`] = `
+<div
+  class="mobile-comment"
+>
+  <div
+    class="t-comment"
+  >
+    <div
+      class="t-comment__inner"
+    >
+      <div
+        class="t-avatar__wrapper t-comment__avatar"
+      >
+        <div
+          class="t-avatar__badge"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__content"
+            >
+              
+              <div
+                class="t-avatar t-avatar--medium t-avatar--circle"
+                style="height: 32px; width: 32px; font-size: 14px;"
+              >
+                <div
+                  class="t-image t-image--square"
+                >
+                  <div
+                    class="t-image__mask"
+                  >
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
+                    >
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                        
+                      </div>
+                      <!---->
+                      <!---->
+                    </div>
+                  </div>
+                  <picture>
+                    <!---->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
+                </div>
+              </div>
+              
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-comment__detail"
+      >
+        <div
+          class="t-comment__author"
+        >
+          
+          <div
+            class="mobile-comment__author"
+          >
+            <div>
+              Name1 名称
+            </div>
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--primary t-tag--round t-tag--light t-tag--medium mobile-comment__author-tag"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-tag__text"
+              >
+                
+                 作者 
+                
+              </span>
+              <!---->
+            </span>
+          </div>
+          
+        </div>
+        <div
+          class="t-comment__content"
+        >
+          这是一段很长很长很长很长很长很长的评论内容。
+        </div>
+        <div
+          class="t-comment__bottom"
+        >
+          <div
+            class="t-comment__date"
+          >
+            今天16:38·广东
+          </div>
+          <div
+            class="t-comment__actions"
+          >
+            
+            <div
+              class="t-comment-block"
+            >
+              
+              <div>
+                <div
+                  class="mobile-comment__reply-button"
+                >
+                  回复
+                </div>
+              </div>
+              
+            </div>
+            <div
+              class="t-comment-block"
+            >
+              
+              <div>
+                <div
+                  class="mobile-comment__actions"
+                >
+                  <button
+                    class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                    tabindex="0"
+                    type="button"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-thumb-up"
+                      fill="none"
+                      height="1em"
+                      style="fill: none; font-size: 14px;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-thumb-up-instance-v0-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
+                      <g
+                        id="thumb-up"
+                      >
+                        <path
+                          d="M8 11L11.5 2.5L11.9932 2.5822C13.4398 2.82329 14.5 4.07486 14.5 5.54138V9H20.8195C21.4375 9 21.9075 9.55487 21.8059 10.1644L20.1393 20.1644C20.0589 20.6466 19.6417 21 19.1529 21H8V11Z"
+                          fill="transparent"
+                          id="fill1"
+                          mask="url(#t-icon-thumb-up-instance-v0-overlap-fill1)"
+                        />
+                        <path
+                          d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                    
+                    <span
+                      class="t-button__content"
+                    >
+                      
+                      6
+                      
+                    </span>
+                    <!---->
+                  </button>
+                  <button
+                    class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                    tabindex="0"
+                    type="button"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-uncomfortable-1"
+                      fill="none"
+                      height="1em"
+                      style="fill: none; font-size: 14px;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-uncomfortable-1-instance-v1-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
+                      <g
+                        id="uncomfortable-1"
+                      >
+                        <path
+                          d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                          fill="transparent"
+                          id="fill1"
+                          mask="url(#t-icon-uncomfortable-1-instance-v1-overlap-fill1)"
+                        />
+                        <path
+                          d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                          id="stroke2"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                    
+                    <span
+                      class="t-button__content"
+                    >
+                      <!---->
+                    </span>
+                    <!---->
+                  </button>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-comment__reply"
+    >
+      <div
+        class="t-comment__reply-body"
+      >
+        <div
+          class="t-comment__reply-inner"
+        >
+          
+          
+          <div
+            class="t-comment"
+          >
+            <div
+              class="t-comment__inner"
+            >
+              <div
+                class="t-avatar__wrapper t-comment__avatar"
+              >
+                <div
+                  class="t-avatar__badge"
+                >
+                  <div
+                    class="t-badge"
+                  >
+                    <div
+                      class="t-badge__content"
+                    >
+                      
+                      <div
+                        class="t-avatar t-avatar--medium t-avatar--circle"
+                        style="height: 20px; width: 20px; font-size: 9.5px;"
+                      >
+                        <div
+                          class="t-image t-image--square"
+                        >
+                          <div
+                            class="t-image__mask"
+                          >
+                            <div
+                              class="t-loading"
+                              style="font-size: 20px;"
+                            >
+                              <div
+                                class="t-loading__dots"
+                                style="animation-duration: 800ms; width: 20px; height: 20px;"
+                              >
+                                
+                                <div
+                                  class="t-loading__dot"
+                                  style="animation-duration: 0.8s; animation-delay: 0s;"
+                                />
+                                <div
+                                  class="t-loading__dot"
+                                  style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                                />
+                                <div
+                                  class="t-loading__dot"
+                                  style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                                />
+                                
+                              </div>
+                              <!---->
+                              <!---->
+                            </div>
+                          </div>
+                          <picture>
+                            <!---->
+                            <img
+                              alt=""
+                              class="t-image__img"
+                              src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                              style="object-fit: fill; object-position: center;"
+                            />
+                          </picture>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-comment__detail"
+              >
+                <div
+                  class="t-comment__author"
+                >
+                  
+                  <div
+                    class="mobile-comment__author"
+                  >
+                    <div>
+                      Name1 名称
+                    </div>
+                  </div>
+                  
+                </div>
+                <div
+                  class="t-comment__content"
+                >
+                  
+                  <span>
+                    这是一段很长很长很长很长很长很长的评论内容。
+                  </span>
+                  
+                </div>
+                <div
+                  class="t-comment__bottom"
+                >
+                  <div
+                    class="t-comment__date"
+                  >
+                    
+                    今天16:38·广东
+                    
+                  </div>
+                  <div
+                    class="t-comment__actions"
+                  >
+                    
+                    <div
+                      class="t-comment-block"
+                    >
+                      
+                      <div>
+                        <div
+                          class="mobile-comment__reply-button"
+                        >
+                          回复
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <div
+                      class="t-comment-block"
+                    >
+                      
+                      <div>
+                        <div
+                          class="mobile-comment__actions"
+                        >
+                          <button
+                            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                            tabindex="0"
+                            type="button"
+                          >
+                            
+                            <svg
+                              class="t-icon t-icon-thumb-up"
+                              fill="none"
+                              height="1em"
+                              style="fill: none; font-size: 14px;"
+                              viewBox="0 0 24 24"
+                              width="1em"
+                            >
+                              <defs>
+                                <mask
+                                  height="24"
+                                  id="t-icon-thumb-up-instance-v2-overlap-fill1"
+                                  mask-type="luminance"
+                                  maskContentUnits="userSpaceOnUse"
+                                  maskUnits="userSpaceOnUse"
+                                  width="24"
+                                  x="0"
+                                  y="0"
+                                >
+                                  <rect
+                                    fill="#fff"
+                                    height="24"
+                                    width="24"
+                                    x="0"
+                                    y="0"
+                                  />
+                                  <path
+                                    d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                    fill="none"
+                                    stroke="#000"
+                                    stroke-linecap="square"
+                                    stroke-width="2"
+                                  />
+                                </mask>
+                              </defs>
+                              <g
+                                id="thumb-up"
+                              >
+                                <path
+                                  d="M8 11L11.5 2.5L11.9932 2.5822C13.4398 2.82329 14.5 4.07486 14.5 5.54138V9H20.8195C21.4375 9 21.9075 9.55487 21.8059 10.1644L20.1393 20.1644C20.0589 20.6466 19.6417 21 19.1529 21H8V11Z"
+                                  fill="transparent"
+                                  id="fill1"
+                                  mask="url(#t-icon-thumb-up-instance-v2-overlap-fill1)"
+                                />
+                                <path
+                                  d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                  id="stroke1"
+                                  stroke="currentColor"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </svg>
+                            
+                            <span
+                              class="t-button__content"
+                            >
+                              
+                              6
+                              
+                            </span>
+                            <!---->
+                          </button>
+                          <button
+                            class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                            tabindex="0"
+                            type="button"
+                          >
+                            
+                            <svg
+                              class="t-icon t-icon-uncomfortable-1"
+                              fill="none"
+                              height="1em"
+                              style="fill: none; font-size: 14px;"
+                              viewBox="0 0 24 24"
+                              width="1em"
+                            >
+                              <defs>
+                                <mask
+                                  height="24"
+                                  id="t-icon-uncomfortable-1-instance-v3-overlap-fill1"
+                                  mask-type="luminance"
+                                  maskContentUnits="userSpaceOnUse"
+                                  maskUnits="userSpaceOnUse"
+                                  width="24"
+                                  x="0"
+                                  y="0"
+                                >
+                                  <rect
+                                    fill="#fff"
+                                    height="24"
+                                    width="24"
+                                    x="0"
+                                    y="0"
+                                  />
+                                  <path
+                                    d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                    fill="none"
+                                    stroke="#000"
+                                    stroke-linecap="square"
+                                    stroke-width="2"
+                                  />
+                                  <path
+                                    d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                    fill="none"
+                                    stroke="#000"
+                                    stroke-linecap="square"
+                                    stroke-width="2"
+                                  />
+                                </mask>
+                              </defs>
+                              <g
+                                id="uncomfortable-1"
+                              >
+                                <path
+                                  d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                  fill="transparent"
+                                  id="fill1"
+                                  mask="url(#t-icon-uncomfortable-1-instance-v3-overlap-fill1)"
+                                />
+                                <path
+                                  d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                  id="stroke1"
+                                  stroke="currentColor"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                  id="stroke2"
+                                  stroke="currentColor"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                              </g>
+                            </svg>
+                            
+                            <span
+                              class="t-button__content"
+                            >
+                              <!---->
+                            </span>
+                            <!---->
+                          </button>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="t-comment__reply"
+            >
+              <div
+                class="t-comment__reply-body"
+              >
+                <div
+                  class="t-comment__reply-inner"
+                >
+                  <!---->
+                </div>
+              </div>
+              <!---->
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+      <div
+        class="t-comment__folds"
+      >
+        <div
+          class="t-comment__folds-item"
+        >
+          展开5条回复
+          <svg
+            class="t-icon t-icon-chevron-down-s"
+            fill="none"
+            height="1em"
+            style="fill: none; font-size: 16px;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <g
+              id="chevron-down-s"
+            >
+              <path
+                d="M15.5354 10.7345L11.9999 14.27L8.46436 10.7345"
+                id="stroke1"
+                stroke="currentColor"
+                stroke-linecap="square"
+                stroke-width="2"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`Comment > Comment imageVue demo works fine 1`] = `
+<div
+  class="mobile-comment"
+>
+  <div
+    class="t-comment"
+  >
+    <div
+      class="t-comment__inner"
+    >
+      <div
+        class="t-avatar__wrapper t-comment__avatar"
+      >
+        <div
+          class="t-avatar__badge"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__content"
+            >
+              
+              <div
+                class="t-avatar t-avatar--medium t-avatar--circle"
+                style="height: 32px; width: 32px; font-size: 14px;"
+              >
+                <div
+                  class="t-image t-image--square"
+                >
+                  <div
+                    class="t-image__mask"
+                  >
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
+                    >
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                        
+                      </div>
+                      <!---->
+                      <!---->
+                    </div>
+                  </div>
+                  <picture>
+                    <!---->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
+                </div>
+              </div>
+              
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-comment__detail"
+      >
+        <div
+          class="t-comment__author"
+        >
+          
+          <div
+            class="mobile-comment__author"
+          >
+            <div>
+              Name1 名称
+            </div>
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--primary t-tag--round t-tag--light t-tag--medium mobile-comment__author-tag"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-tag__text"
+              >
+                
+                 作者 
+                
+              </span>
+              <!---->
+            </span>
+          </div>
+          
+        </div>
+        <div
+          class="t-comment__content"
+        >
+          
+          <div
+            class="mobile-comment__images"
+          >
+            
+            <div
+              class="mobile-comment__images-item"
+            >
+              <div
+                class="t-image t-image--round"
+                style="width: 78px; height: 78px;"
+              >
+                <div
+                  class="t-image__mask"
+                >
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
+                  >
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                      
+                    </div>
+                    <!---->
+                    <!---->
+                  </div>
+                </div>
+                <picture>
+                  <!---->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+                    style="object-fit: cover; object-position: center;"
+                  />
+                </picture>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        <div
+          class="t-comment__bottom"
+        >
+          <div
+            class="t-comment__date"
+          >
+            今天16:38·广东
+          </div>
+          <div
+            class="t-comment__actions"
+          >
+            
+            <div
+              class="t-comment-block"
+            >
+              
+              <div>
+                <div
+                  class="mobile-comment__reply-button"
+                >
+                  回复
+                </div>
+              </div>
+              
+            </div>
+            <div
+              class="t-comment-block"
+            >
+              
+              <div>
+                <div
+                  class="mobile-comment__actions"
+                >
+                  <button
+                    class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                    tabindex="0"
+                    type="button"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-thumb-up"
+                      fill="none"
+                      height="1em"
+                      style="fill: none; font-size: 14px;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-thumb-up-instance-v0-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
+                      <g
+                        id="thumb-up"
+                      >
+                        <path
+                          d="M8 11L11.5 2.5L11.9932 2.5822C13.4398 2.82329 14.5 4.07486 14.5 5.54138V9H20.8195C21.4375 9 21.9075 9.55487 21.8059 10.1644L20.1393 20.1644C20.0589 20.6466 19.6417 21 19.1529 21H8V11Z"
+                          fill="transparent"
+                          id="fill1"
+                          mask="url(#t-icon-thumb-up-instance-v0-overlap-fill1)"
+                        />
+                        <path
+                          d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                    
+                    <span
+                      class="t-button__content"
+                    >
+                      
+                      6
+                      
+                    </span>
+                    <!---->
+                  </button>
+                  <button
+                    class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                    tabindex="0"
+                    type="button"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-uncomfortable-1"
+                      fill="none"
+                      height="1em"
+                      style="fill: none; font-size: 14px;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-uncomfortable-1-instance-v1-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
+                      <g
+                        id="uncomfortable-1"
+                      >
+                        <path
+                          d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                          fill="transparent"
+                          id="fill1"
+                          mask="url(#t-icon-uncomfortable-1-instance-v1-overlap-fill1)"
+                        />
+                        <path
+                          d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                          id="stroke2"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                    
+                    <span
+                      class="t-button__content"
+                    >
+                      <!---->
+                    </span>
+                    <!---->
+                  </button>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-comment__reply"
+    >
+      <div
+        class="t-comment__reply-body"
+      >
+        <div
+          class="t-comment__reply-inner"
+        >
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`Comment > Comment mixedVue demo works fine 1`] = `
+<div
+  class="mobile-comment"
+>
+  <div
+    class="t-comment"
+  >
+    <div
+      class="t-comment__inner"
+    >
+      <div
+        class="t-avatar__wrapper t-comment__avatar"
+      >
+        <div
+          class="t-avatar__badge"
+        >
+          <div
+            class="t-badge"
+          >
+            <div
+              class="t-badge__content"
+            >
+              
+              <div
+                class="t-avatar t-avatar--medium t-avatar--circle"
+                style="height: 32px; width: 32px; font-size: 14px;"
+              >
+                <div
+                  class="t-image t-image--square"
+                >
+                  <div
+                    class="t-image__mask"
+                  >
+                    <div
+                      class="t-loading"
+                      style="font-size: 20px;"
+                    >
+                      <div
+                        class="t-loading__dots"
+                        style="animation-duration: 800ms; width: 20px; height: 20px;"
+                      >
+                        
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                        />
+                        <div
+                          class="t-loading__dot"
+                          style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                        />
+                        
+                      </div>
+                      <!---->
+                      <!---->
+                    </div>
+                  </div>
+                  <picture>
+                    <!---->
+                    <img
+                      alt=""
+                      class="t-image__img"
+                      src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                      style="object-fit: fill; object-position: center;"
+                    />
+                  </picture>
+                </div>
+              </div>
+              
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-comment__detail"
+      >
+        <div
+          class="t-comment__author"
+        >
+          
+          <div
+            class="mobile-comment__author"
+          >
+            <div>
+              Name1 名称
+            </div>
+            <span
+              aria-disabled="false"
+              class="t-tag t-tag--primary t-tag--round t-tag--light t-tag--medium mobile-comment__author-tag"
+              role="button"
+            >
+              <!---->
+              <span
+                class="t-tag__text"
+              >
+                
+                 作者 
+                
+              </span>
+              <!---->
+            </span>
+          </div>
+          
+        </div>
+        <div
+          class="t-comment__content"
+        >
+          
+          <div
+            class="mobile-comment__text"
+          >
+            这是一段很长很长很长很长很长很长的评论内容。
+          </div>
+          <div
+            class="mobile-comment__images"
+          >
+            
+            <div
+              class="mobile-comment__images-item"
+            >
+              <div
+                class="t-image t-image--round"
+                style="width: 78px; height: 78px;"
+              >
+                <div
+                  class="t-image__mask"
+                >
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
+                  >
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                      
+                    </div>
+                    <!---->
+                    <!---->
+                  </div>
+                </div>
+                <picture>
+                  <!---->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+                    style="object-fit: cover; object-position: center;"
+                  />
+                </picture>
+              </div>
+              <!--v-if-->
+            </div>
+            <div
+              class="mobile-comment__images-item"
+            >
+              <div
+                class="t-image t-image--round"
+                style="width: 78px; height: 78px;"
+              >
+                <div
+                  class="t-image__mask"
+                >
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
+                  >
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                      
+                    </div>
+                    <!---->
+                    <!---->
+                  </div>
+                </div>
+                <picture>
+                  <!---->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+                    style="object-fit: cover; object-position: center;"
+                  />
+                </picture>
+              </div>
+              <!--v-if-->
+            </div>
+            <div
+              class="mobile-comment__images-item"
+            >
+              <div
+                class="t-image t-image--round"
+                style="width: 78px; height: 78px;"
+              >
+                <div
+                  class="t-image__mask"
+                >
+                  <div
+                    class="t-loading"
+                    style="font-size: 20px;"
+                  >
+                    <div
+                      class="t-loading__dots"
+                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                    >
+                      
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                      />
+                      <div
+                        class="t-loading__dot"
+                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                      />
+                      
+                    </div>
+                    <!---->
+                    <!---->
+                  </div>
+                </div>
+                <picture>
+                  <!---->
+                  <img
+                    alt=""
+                    class="t-image__img"
+                    src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+                    style="object-fit: cover; object-position: center;"
+                  />
+                </picture>
+              </div>
+              <div
+                class="mobile-comment__images-badge"
+              >
+                 共9张 
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+        <div
+          class="t-comment__bottom"
+        >
+          <div
+            class="t-comment__date"
+          >
+            今天16:38·广东
+          </div>
+          <div
+            class="t-comment__actions"
+          >
+            
+            <div
+              class="t-comment-block"
+            >
+              
+              <div>
+                <div
+                  class="mobile-comment__reply-button"
+                >
+                  回复
+                </div>
+              </div>
+              
+            </div>
+            <div
+              class="t-comment-block"
+            >
+              
+              <div>
+                <div
+                  class="mobile-comment__actions"
+                >
+                  <button
+                    class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                    tabindex="0"
+                    type="button"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-thumb-up"
+                      fill="none"
+                      height="1em"
+                      style="fill: none; font-size: 14px;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-thumb-up-instance-v0-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
+                      <g
+                        id="thumb-up"
+                      >
+                        <path
+                          d="M8 11L11.5 2.5L11.9932 2.5822C13.4398 2.82329 14.5 4.07486 14.5 5.54138V9H20.8195C21.4375 9 21.9075 9.55487 21.8059 10.1644L20.1393 20.1644C20.0589 20.6466 19.6417 21 19.1529 21H8V11Z"
+                          fill="transparent"
+                          id="fill1"
+                          mask="url(#t-icon-thumb-up-instance-v0-overlap-fill1)"
+                        />
+                        <path
+                          d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                    
+                    <span
+                      class="t-button__content"
+                    >
+                      
+                      6
+                      
+                    </span>
+                    <!---->
+                  </button>
+                  <button
+                    class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                    tabindex="0"
+                    type="button"
+                  >
+                    
+                    <svg
+                      class="t-icon t-icon-uncomfortable-1"
+                      fill="none"
+                      height="1em"
+                      style="fill: none; font-size: 14px;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <defs>
+                        <mask
+                          height="24"
+                          id="t-icon-uncomfortable-1-instance-v1-overlap-fill1"
+                          mask-type="luminance"
+                          maskContentUnits="userSpaceOnUse"
+                          maskUnits="userSpaceOnUse"
+                          width="24"
+                          x="0"
+                          y="0"
+                        >
+                          <rect
+                            fill="#fff"
+                            height="24"
+                            width="24"
+                            x="0"
+                            y="0"
+                          />
+                          <path
+                            d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                            fill="none"
+                            stroke="#000"
+                            stroke-linecap="square"
+                            stroke-width="2"
+                          />
+                        </mask>
+                      </defs>
+                      <g
+                        id="uncomfortable-1"
+                      >
+                        <path
+                          d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                          fill="transparent"
+                          id="fill1"
+                          mask="url(#t-icon-uncomfortable-1-instance-v1-overlap-fill1)"
+                        />
+                        <path
+                          d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                          id="stroke1"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                          id="stroke2"
+                          stroke="currentColor"
+                          stroke-linecap="square"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                    
+                    <span
+                      class="t-button__content"
+                    >
+                      <!---->
+                    </span>
+                    <!---->
+                  </button>
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="t-comment__reply"
+    >
+      <div
+        class="t-comment__reply-body"
+      >
+        <div
+          class="t-comment__reply-inner"
+        >
+          <!---->
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+  <!---->
+</div>
+`;
+
+exports[`Comment > Comment mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+>
+  <h1
+    class="title"
+  >
+    Comment 评论
+  </h1>
+  <p
+    class="summary"
+  >
+    评论用于对页面内容的反馈、评价、讨论等，如对文章的评价，对话题的讨论等。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        基础评论
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="mobile-comment"
+      >
+        <div
+          class="t-comment"
+        >
+          <div
+            class="t-comment__inner"
+          >
+            <div
+              class="t-avatar__wrapper t-comment__avatar"
+            >
+              <div
+                class="t-avatar__badge"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      class="t-avatar t-avatar--medium t-avatar--circle"
+                      style="height: 32px; width: 32px; font-size: 14px;"
+                    >
+                      <div
+                        class="t-image t-image--square"
+                      >
+                        <div
+                          class="t-image__mask"
+                        >
+                          <div
+                            class="t-loading"
+                            style="font-size: 20px;"
+                          >
+                            <div
+                              class="t-loading__dots"
+                              style="animation-duration: 800ms; width: 20px; height: 20px;"
+                            >
+                              
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0s;"
+                              />
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                              />
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                              />
+                              
+                            </div>
+                            <!---->
+                            <!---->
+                          </div>
+                        </div>
+                        <picture>
+                          <!---->
+                          <img
+                            alt=""
+                            class="t-image__img"
+                            src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                            style="object-fit: fill; object-position: center;"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div
+              class="t-comment__detail"
+            >
+              <div
+                class="t-comment__author"
+              >
+                
+                <div
+                  class="mobile-comment__author"
+                >
+                  <div>
+                    Name1 名称
+                  </div>
+                  <span
+                    aria-disabled="false"
+                    class="t-tag t-tag--primary t-tag--round t-tag--light t-tag--medium mobile-comment__author-tag"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-tag__text"
+                    >
+                      
+                       作者 
+                      
+                    </span>
+                    <!---->
+                  </span>
+                </div>
+                
+              </div>
+              <div
+                class="t-comment__content"
+              >
+                这是一段很长很长很长很长很长很长的评论内容。
+              </div>
+              <div
+                class="t-comment__bottom"
+              >
+                <div
+                  class="t-comment__date"
+                >
+                  今天16:38·广东
+                </div>
+                <div
+                  class="t-comment__actions"
+                >
+                  
+                  <div
+                    class="t-comment-block"
+                  >
+                    
+                    <div>
+                      <div
+                        class="mobile-comment__reply-button"
+                      >
+                        回复
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div
+                    class="t-comment-block"
+                  >
+                    
+                    <div>
+                      <div
+                        class="mobile-comment__actions"
+                      >
+                        <button
+                          class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                          tabindex="0"
+                          type="button"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-thumb-up"
+                            fill="none"
+                            height="1em"
+                            style="fill: none; font-size: 14px;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <defs>
+                              <mask
+                                height="24"
+                                id="t-icon-thumb-up-instance-v0-overlap-fill1"
+                                mask-type="luminance"
+                                maskContentUnits="userSpaceOnUse"
+                                maskUnits="userSpaceOnUse"
+                                width="24"
+                                x="0"
+                                y="0"
+                              >
+                                <rect
+                                  fill="#fff"
+                                  height="24"
+                                  width="24"
+                                  x="0"
+                                  y="0"
+                                />
+                                <path
+                                  d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                              </mask>
+                            </defs>
+                            <g
+                              id="thumb-up"
+                            >
+                              <path
+                                d="M8 11L11.5 2.5L11.9932 2.5822C13.4398 2.82329 14.5 4.07486 14.5 5.54138V9H20.8195C21.4375 9 21.9075 9.55487 21.8059 10.1644L20.1393 20.1644C20.0589 20.6466 19.6417 21 19.1529 21H8V11Z"
+                                fill="transparent"
+                                id="fill1"
+                                mask="url(#t-icon-thumb-up-instance-v0-overlap-fill1)"
+                              />
+                              <path
+                                d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                          
+                          <span
+                            class="t-button__content"
+                          >
+                            
+                            6
+                            
+                          </span>
+                          <!---->
+                        </button>
+                        <button
+                          class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                          tabindex="0"
+                          type="button"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-uncomfortable-1"
+                            fill="none"
+                            height="1em"
+                            style="fill: none; font-size: 14px;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <defs>
+                              <mask
+                                height="24"
+                                id="t-icon-uncomfortable-1-instance-v1-overlap-fill1"
+                                mask-type="luminance"
+                                maskContentUnits="userSpaceOnUse"
+                                maskUnits="userSpaceOnUse"
+                                width="24"
+                                x="0"
+                                y="0"
+                              >
+                                <rect
+                                  fill="#fff"
+                                  height="24"
+                                  width="24"
+                                  x="0"
+                                  y="0"
+                                />
+                                <path
+                                  d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                              </mask>
+                            </defs>
+                            <g
+                              id="uncomfortable-1"
+                            >
+                              <path
+                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                fill="transparent"
+                                id="fill1"
+                                mask="url(#t-icon-uncomfortable-1-instance-v1-overlap-fill1)"
+                              />
+                              <path
+                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                id="stroke2"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                          
+                          <span
+                            class="t-button__content"
+                          >
+                            <!---->
+                          </span>
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-comment__reply"
+          >
+            <div
+              class="t-comment__reply-body"
+            >
+              <div
+                class="t-comment__reply-inner"
+              >
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        图片评论
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="mobile-comment"
+      >
+        <div
+          class="t-comment"
+        >
+          <div
+            class="t-comment__inner"
+          >
+            <div
+              class="t-avatar__wrapper t-comment__avatar"
+            >
+              <div
+                class="t-avatar__badge"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      class="t-avatar t-avatar--medium t-avatar--circle"
+                      style="height: 32px; width: 32px; font-size: 14px;"
+                    >
+                      <div
+                        class="t-image t-image--square"
+                      >
+                        <div
+                          class="t-image__mask"
+                        >
+                          <div
+                            class="t-loading"
+                            style="font-size: 20px;"
+                          >
+                            <div
+                              class="t-loading__dots"
+                              style="animation-duration: 800ms; width: 20px; height: 20px;"
+                            >
+                              
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0s;"
+                              />
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                              />
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                              />
+                              
+                            </div>
+                            <!---->
+                            <!---->
+                          </div>
+                        </div>
+                        <picture>
+                          <!---->
+                          <img
+                            alt=""
+                            class="t-image__img"
+                            src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                            style="object-fit: fill; object-position: center;"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div
+              class="t-comment__detail"
+            >
+              <div
+                class="t-comment__author"
+              >
+                
+                <div
+                  class="mobile-comment__author"
+                >
+                  <div>
+                    Name1 名称
+                  </div>
+                  <span
+                    aria-disabled="false"
+                    class="t-tag t-tag--primary t-tag--round t-tag--light t-tag--medium mobile-comment__author-tag"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-tag__text"
+                    >
+                      
+                       作者 
+                      
+                    </span>
+                    <!---->
+                  </span>
+                </div>
+                
+              </div>
+              <div
+                class="t-comment__content"
+              >
+                
+                <div
+                  class="mobile-comment__images"
+                >
+                  
+                  <div
+                    class="mobile-comment__images-item"
+                  >
+                    <div
+                      class="t-image t-image--round"
+                      style="width: 78px; height: 78px;"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+                          style="object-fit: cover; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              <div
+                class="t-comment__bottom"
+              >
+                <div
+                  class="t-comment__date"
+                >
+                  今天16:38·广东
+                </div>
+                <div
+                  class="t-comment__actions"
+                >
+                  
+                  <div
+                    class="t-comment-block"
+                  >
+                    
+                    <div>
+                      <div
+                        class="mobile-comment__reply-button"
+                      >
+                        回复
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div
+                    class="t-comment-block"
+                  >
+                    
+                    <div>
+                      <div
+                        class="mobile-comment__actions"
+                      >
+                        <button
+                          class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                          tabindex="0"
+                          type="button"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-thumb-up"
+                            fill="none"
+                            height="1em"
+                            style="fill: none; font-size: 14px;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <defs>
+                              <mask
+                                height="24"
+                                id="t-icon-thumb-up-instance-v2-overlap-fill1"
+                                mask-type="luminance"
+                                maskContentUnits="userSpaceOnUse"
+                                maskUnits="userSpaceOnUse"
+                                width="24"
+                                x="0"
+                                y="0"
+                              >
+                                <rect
+                                  fill="#fff"
+                                  height="24"
+                                  width="24"
+                                  x="0"
+                                  y="0"
+                                />
+                                <path
+                                  d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                              </mask>
+                            </defs>
+                            <g
+                              id="thumb-up"
+                            >
+                              <path
+                                d="M8 11L11.5 2.5L11.9932 2.5822C13.4398 2.82329 14.5 4.07486 14.5 5.54138V9H20.8195C21.4375 9 21.9075 9.55487 21.8059 10.1644L20.1393 20.1644C20.0589 20.6466 19.6417 21 19.1529 21H8V11Z"
+                                fill="transparent"
+                                id="fill1"
+                                mask="url(#t-icon-thumb-up-instance-v2-overlap-fill1)"
+                              />
+                              <path
+                                d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                          
+                          <span
+                            class="t-button__content"
+                          >
+                            
+                            6
+                            
+                          </span>
+                          <!---->
+                        </button>
+                        <button
+                          class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                          tabindex="0"
+                          type="button"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-uncomfortable-1"
+                            fill="none"
+                            height="1em"
+                            style="fill: none; font-size: 14px;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <defs>
+                              <mask
+                                height="24"
+                                id="t-icon-uncomfortable-1-instance-v3-overlap-fill1"
+                                mask-type="luminance"
+                                maskContentUnits="userSpaceOnUse"
+                                maskUnits="userSpaceOnUse"
+                                width="24"
+                                x="0"
+                                y="0"
+                              >
+                                <rect
+                                  fill="#fff"
+                                  height="24"
+                                  width="24"
+                                  x="0"
+                                  y="0"
+                                />
+                                <path
+                                  d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                              </mask>
+                            </defs>
+                            <g
+                              id="uncomfortable-1"
+                            >
+                              <path
+                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                fill="transparent"
+                                id="fill1"
+                                mask="url(#t-icon-uncomfortable-1-instance-v3-overlap-fill1)"
+                              />
+                              <path
+                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                id="stroke2"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                          
+                          <span
+                            class="t-button__content"
+                          >
+                            <!---->
+                          </span>
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-comment__reply"
+          >
+            <div
+              class="t-comment__reply-body"
+            >
+              <div
+                class="t-comment__reply-inner"
+              >
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+        </div>
+        <!---->
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        文字+图片评论
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="mobile-comment"
+      >
+        <div
+          class="t-comment"
+        >
+          <div
+            class="t-comment__inner"
+          >
+            <div
+              class="t-avatar__wrapper t-comment__avatar"
+            >
+              <div
+                class="t-avatar__badge"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      class="t-avatar t-avatar--medium t-avatar--circle"
+                      style="height: 32px; width: 32px; font-size: 14px;"
+                    >
+                      <div
+                        class="t-image t-image--square"
+                      >
+                        <div
+                          class="t-image__mask"
+                        >
+                          <div
+                            class="t-loading"
+                            style="font-size: 20px;"
+                          >
+                            <div
+                              class="t-loading__dots"
+                              style="animation-duration: 800ms; width: 20px; height: 20px;"
+                            >
+                              
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0s;"
+                              />
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                              />
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                              />
+                              
+                            </div>
+                            <!---->
+                            <!---->
+                          </div>
+                        </div>
+                        <picture>
+                          <!---->
+                          <img
+                            alt=""
+                            class="t-image__img"
+                            src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                            style="object-fit: fill; object-position: center;"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div
+              class="t-comment__detail"
+            >
+              <div
+                class="t-comment__author"
+              >
+                
+                <div
+                  class="mobile-comment__author"
+                >
+                  <div>
+                    Name1 名称
+                  </div>
+                  <span
+                    aria-disabled="false"
+                    class="t-tag t-tag--primary t-tag--round t-tag--light t-tag--medium mobile-comment__author-tag"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-tag__text"
+                    >
+                      
+                       作者 
+                      
+                    </span>
+                    <!---->
+                  </span>
+                </div>
+                
+              </div>
+              <div
+                class="t-comment__content"
+              >
+                
+                <div
+                  class="mobile-comment__text"
+                >
+                  这是一段很长很长很长很长很长很长的评论内容。
+                </div>
+                <div
+                  class="mobile-comment__images"
+                >
+                  
+                  <div
+                    class="mobile-comment__images-item"
+                  >
+                    <div
+                      class="t-image t-image--round"
+                      style="width: 78px; height: 78px;"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+                          style="object-fit: cover; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                    <!--v-if-->
+                  </div>
+                  <div
+                    class="mobile-comment__images-item"
+                  >
+                    <div
+                      class="t-image t-image--round"
+                      style="width: 78px; height: 78px;"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+                          style="object-fit: cover; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                    <!--v-if-->
+                  </div>
+                  <div
+                    class="mobile-comment__images-item"
+                  >
+                    <div
+                      class="t-image t-image--round"
+                      style="width: 78px; height: 78px;"
+                    >
+                      <div
+                        class="t-image__mask"
+                      >
+                        <div
+                          class="t-loading"
+                          style="font-size: 20px;"
+                        >
+                          <div
+                            class="t-loading__dots"
+                            style="animation-duration: 800ms; width: 20px; height: 20px;"
+                          >
+                            
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                            />
+                            <div
+                              class="t-loading__dot"
+                              style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                            />
+                            
+                          </div>
+                          <!---->
+                          <!---->
+                        </div>
+                      </div>
+                      <picture>
+                        <!---->
+                        <img
+                          alt=""
+                          class="t-image__img"
+                          src="https://tdesign.gtimg.com/mobile/demos/swiper1.png"
+                          style="object-fit: cover; object-position: center;"
+                        />
+                      </picture>
+                    </div>
+                    <div
+                      class="mobile-comment__images-badge"
+                    >
+                       共9张 
+                    </div>
+                  </div>
+                  
+                </div>
+                
+              </div>
+              <div
+                class="t-comment__bottom"
+              >
+                <div
+                  class="t-comment__date"
+                >
+                  今天16:38·广东
+                </div>
+                <div
+                  class="t-comment__actions"
+                >
+                  
+                  <div
+                    class="t-comment-block"
+                  >
+                    
+                    <div>
+                      <div
+                        class="mobile-comment__reply-button"
+                      >
+                        回复
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div
+                    class="t-comment-block"
+                  >
+                    
+                    <div>
+                      <div
+                        class="mobile-comment__actions"
+                      >
+                        <button
+                          class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                          tabindex="0"
+                          type="button"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-thumb-up"
+                            fill="none"
+                            height="1em"
+                            style="fill: none; font-size: 14px;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <defs>
+                              <mask
+                                height="24"
+                                id="t-icon-thumb-up-instance-v4-overlap-fill1"
+                                mask-type="luminance"
+                                maskContentUnits="userSpaceOnUse"
+                                maskUnits="userSpaceOnUse"
+                                width="24"
+                                x="0"
+                                y="0"
+                              >
+                                <rect
+                                  fill="#fff"
+                                  height="24"
+                                  width="24"
+                                  x="0"
+                                  y="0"
+                                />
+                                <path
+                                  d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                              </mask>
+                            </defs>
+                            <g
+                              id="thumb-up"
+                            >
+                              <path
+                                d="M8 11L11.5 2.5L11.9932 2.5822C13.4398 2.82329 14.5 4.07486 14.5 5.54138V9H20.8195C21.4375 9 21.9075 9.55487 21.8059 10.1644L20.1393 20.1644C20.0589 20.6466 19.6417 21 19.1529 21H8V11Z"
+                                fill="transparent"
+                                id="fill1"
+                                mask="url(#t-icon-thumb-up-instance-v4-overlap-fill1)"
+                              />
+                              <path
+                                d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                          
+                          <span
+                            class="t-button__content"
+                          >
+                            
+                            6
+                            
+                          </span>
+                          <!---->
+                        </button>
+                        <button
+                          class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                          tabindex="0"
+                          type="button"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-uncomfortable-1"
+                            fill="none"
+                            height="1em"
+                            style="fill: none; font-size: 14px;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <defs>
+                              <mask
+                                height="24"
+                                id="t-icon-uncomfortable-1-instance-v5-overlap-fill1"
+                                mask-type="luminance"
+                                maskContentUnits="userSpaceOnUse"
+                                maskUnits="userSpaceOnUse"
+                                width="24"
+                                x="0"
+                                y="0"
+                              >
+                                <rect
+                                  fill="#fff"
+                                  height="24"
+                                  width="24"
+                                  x="0"
+                                  y="0"
+                                />
+                                <path
+                                  d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                              </mask>
+                            </defs>
+                            <g
+                              id="uncomfortable-1"
+                            >
+                              <path
+                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                fill="transparent"
+                                id="fill1"
+                                mask="url(#t-icon-uncomfortable-1-instance-v5-overlap-fill1)"
+                              />
+                              <path
+                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                id="stroke2"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                          
+                          <span
+                            class="t-button__content"
+                          >
+                            <!---->
+                          </span>
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-comment__reply"
+          >
+            <div
+              class="t-comment__reply-body"
+            >
+              <div
+                class="t-comment__reply-inner"
+              >
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+        </div>
+        <!---->
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件样式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        展开+收起
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="mobile-comment"
+      >
+        <div
+          class="t-comment"
+        >
+          <div
+            class="t-comment__inner"
+          >
+            <div
+              class="t-avatar__wrapper t-comment__avatar"
+            >
+              <div
+                class="t-avatar__badge"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      class="t-avatar t-avatar--medium t-avatar--circle"
+                      style="height: 32px; width: 32px; font-size: 14px;"
+                    >
+                      <div
+                        class="t-image t-image--square"
+                      >
+                        <div
+                          class="t-image__mask"
+                        >
+                          <div
+                            class="t-loading"
+                            style="font-size: 20px;"
+                          >
+                            <div
+                              class="t-loading__dots"
+                              style="animation-duration: 800ms; width: 20px; height: 20px;"
+                            >
+                              
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0s;"
+                              />
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                              />
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                              />
+                              
+                            </div>
+                            <!---->
+                            <!---->
+                          </div>
+                        </div>
+                        <picture>
+                          <!---->
+                          <img
+                            alt=""
+                            class="t-image__img"
+                            src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                            style="object-fit: fill; object-position: center;"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div
+              class="t-comment__detail"
+            >
+              <div
+                class="t-comment__author"
+              >
+                
+                <div
+                  class="mobile-comment__author"
+                >
+                  <div>
+                    Name1 名称
+                  </div>
+                  <span
+                    aria-disabled="false"
+                    class="t-tag t-tag--primary t-tag--round t-tag--light t-tag--medium mobile-comment__author-tag"
+                    role="button"
+                  >
+                    <!---->
+                    <span
+                      class="t-tag__text"
+                    >
+                      
+                       作者 
+                      
+                    </span>
+                    <!---->
+                  </span>
+                </div>
+                
+              </div>
+              <div
+                class="t-comment__content"
+              >
+                这是一段很长很长很长很长很长很长的评论内容。
+              </div>
+              <div
+                class="t-comment__bottom"
+              >
+                <div
+                  class="t-comment__date"
+                >
+                  今天16:38·广东
+                </div>
+                <div
+                  class="t-comment__actions"
+                >
+                  
+                  <div
+                    class="t-comment-block"
+                  >
+                    
+                    <div>
+                      <div
+                        class="mobile-comment__reply-button"
+                      >
+                        回复
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div
+                    class="t-comment-block"
+                  >
+                    
+                    <div>
+                      <div
+                        class="mobile-comment__actions"
+                      >
+                        <button
+                          class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                          tabindex="0"
+                          type="button"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-thumb-up"
+                            fill="none"
+                            height="1em"
+                            style="fill: none; font-size: 14px;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <defs>
+                              <mask
+                                height="24"
+                                id="t-icon-thumb-up-instance-v6-overlap-fill1"
+                                mask-type="luminance"
+                                maskContentUnits="userSpaceOnUse"
+                                maskUnits="userSpaceOnUse"
+                                width="24"
+                                x="0"
+                                y="0"
+                              >
+                                <rect
+                                  fill="#fff"
+                                  height="24"
+                                  width="24"
+                                  x="0"
+                                  y="0"
+                                />
+                                <path
+                                  d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                              </mask>
+                            </defs>
+                            <g
+                              id="thumb-up"
+                            >
+                              <path
+                                d="M8 11L11.5 2.5L11.9932 2.5822C13.4398 2.82329 14.5 4.07486 14.5 5.54138V9H20.8195C21.4375 9 21.9075 9.55487 21.8059 10.1644L20.1393 20.1644C20.0589 20.6466 19.6417 21 19.1529 21H8V11Z"
+                                fill="transparent"
+                                id="fill1"
+                                mask="url(#t-icon-thumb-up-instance-v6-overlap-fill1)"
+                              />
+                              <path
+                                d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                          
+                          <span
+                            class="t-button__content"
+                          >
+                            
+                            6
+                            
+                          </span>
+                          <!---->
+                        </button>
+                        <button
+                          class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                          tabindex="0"
+                          type="button"
+                        >
+                          
+                          <svg
+                            class="t-icon t-icon-uncomfortable-1"
+                            fill="none"
+                            height="1em"
+                            style="fill: none; font-size: 14px;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <defs>
+                              <mask
+                                height="24"
+                                id="t-icon-uncomfortable-1-instance-v7-overlap-fill1"
+                                mask-type="luminance"
+                                maskContentUnits="userSpaceOnUse"
+                                maskUnits="userSpaceOnUse"
+                                width="24"
+                                x="0"
+                                y="0"
+                              >
+                                <rect
+                                  fill="#fff"
+                                  height="24"
+                                  width="24"
+                                  x="0"
+                                  y="0"
+                                />
+                                <path
+                                  d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                                <path
+                                  d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                  fill="none"
+                                  stroke="#000"
+                                  stroke-linecap="square"
+                                  stroke-width="2"
+                                />
+                              </mask>
+                            </defs>
+                            <g
+                              id="uncomfortable-1"
+                            >
+                              <path
+                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                fill="transparent"
+                                id="fill1"
+                                mask="url(#t-icon-uncomfortable-1-instance-v7-overlap-fill1)"
+                              />
+                              <path
+                                d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                id="stroke1"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                              <path
+                                d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                id="stroke2"
+                                stroke="currentColor"
+                                stroke-linecap="square"
+                                stroke-width="2"
+                              />
+                            </g>
+                          </svg>
+                          
+                          <span
+                            class="t-button__content"
+                          >
+                            <!---->
+                          </span>
+                          <!---->
+                        </button>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-comment__reply"
+          >
+            <div
+              class="t-comment__reply-body"
+            >
+              <div
+                class="t-comment__reply-inner"
+              >
+                
+                
+                <div
+                  class="t-comment"
+                >
+                  <div
+                    class="t-comment__inner"
+                  >
+                    <div
+                      class="t-avatar__wrapper t-comment__avatar"
+                    >
+                      <div
+                        class="t-avatar__badge"
+                      >
+                        <div
+                          class="t-badge"
+                        >
+                          <div
+                            class="t-badge__content"
+                          >
+                            
+                            <div
+                              class="t-avatar t-avatar--medium t-avatar--circle"
+                              style="height: 20px; width: 20px; font-size: 9.5px;"
+                            >
+                              <div
+                                class="t-image t-image--square"
+                              >
+                                <div
+                                  class="t-image__mask"
+                                >
+                                  <div
+                                    class="t-loading"
+                                    style="font-size: 20px;"
+                                  >
+                                    <div
+                                      class="t-loading__dots"
+                                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                                    >
+                                      
+                                      <div
+                                        class="t-loading__dot"
+                                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                                      />
+                                      <div
+                                        class="t-loading__dot"
+                                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                                      />
+                                      <div
+                                        class="t-loading__dot"
+                                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                                      />
+                                      
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                  </div>
+                                </div>
+                                <picture>
+                                  <!---->
+                                  <img
+                                    alt=""
+                                    class="t-image__img"
+                                    src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                                    style="object-fit: fill; object-position: center;"
+                                  />
+                                </picture>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-comment__detail"
+                    >
+                      <div
+                        class="t-comment__author"
+                      >
+                        
+                        <div
+                          class="mobile-comment__author"
+                        >
+                          <div>
+                            Name1 名称
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div
+                        class="t-comment__content"
+                      >
+                        
+                        <span>
+                          这是一段很长很长很长很长很长很长的评论内容。
+                        </span>
+                        
+                      </div>
+                      <div
+                        class="t-comment__bottom"
+                      >
+                        <div
+                          class="t-comment__date"
+                        >
+                          
+                          今天16:38·广东
+                          
+                        </div>
+                        <div
+                          class="t-comment__actions"
+                        >
+                          
+                          <div
+                            class="t-comment-block"
+                          >
+                            
+                            <div>
+                              <div
+                                class="mobile-comment__reply-button"
+                              >
+                                回复
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <div
+                            class="t-comment-block"
+                          >
+                            
+                            <div>
+                              <div
+                                class="mobile-comment__actions"
+                              >
+                                <button
+                                  class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  
+                                  <svg
+                                    class="t-icon t-icon-thumb-up"
+                                    fill="none"
+                                    height="1em"
+                                    style="fill: none; font-size: 14px;"
+                                    viewBox="0 0 24 24"
+                                    width="1em"
+                                  >
+                                    <defs>
+                                      <mask
+                                        height="24"
+                                        id="t-icon-thumb-up-instance-v8-overlap-fill1"
+                                        mask-type="luminance"
+                                        maskContentUnits="userSpaceOnUse"
+                                        maskUnits="userSpaceOnUse"
+                                        width="24"
+                                        x="0"
+                                        y="0"
+                                      >
+                                        <rect
+                                          fill="#fff"
+                                          height="24"
+                                          width="24"
+                                          x="0"
+                                          y="0"
+                                        />
+                                        <path
+                                          d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                          fill="none"
+                                          stroke="#000"
+                                          stroke-linecap="square"
+                                          stroke-width="2"
+                                        />
+                                      </mask>
+                                    </defs>
+                                    <g
+                                      id="thumb-up"
+                                    >
+                                      <path
+                                        d="M8 11L11.5 2.5L11.9932 2.5822C13.4398 2.82329 14.5 4.07486 14.5 5.54138V9H20.8195C21.4375 9 21.9075 9.55487 21.8059 10.1644L20.1393 20.1644C20.0589 20.6466 19.6417 21 19.1529 21H8V11Z"
+                                        fill="transparent"
+                                        id="fill1"
+                                        mask="url(#t-icon-thumb-up-instance-v8-overlap-fill1)"
+                                      />
+                                      <path
+                                        d="M3 21V11M8 11V21H19.1529C19.6417 21 20.0589 20.6466 20.1393 20.1644L21.8059 10.1644C21.9075 9.55487 21.4375 9 20.8195 9H14.5V5.54138C14.5 4.07486 13.4398 2.82329 11.9932 2.5822L11.5 2.5L8 11Z"
+                                        id="stroke1"
+                                        stroke="currentColor"
+                                        stroke-linecap="square"
+                                        stroke-width="2"
+                                      />
+                                    </g>
+                                  </svg>
+                                  
+                                  <span
+                                    class="t-button__content"
+                                  >
+                                    
+                                    6
+                                    
+                                  </span>
+                                  <!---->
+                                </button>
+                                <button
+                                  class="t-button t-button--size-medium t-button--text t-button--default t-button--rectangle mobile-comment__actions-button"
+                                  tabindex="0"
+                                  type="button"
+                                >
+                                  
+                                  <svg
+                                    class="t-icon t-icon-uncomfortable-1"
+                                    fill="none"
+                                    height="1em"
+                                    style="fill: none; font-size: 14px;"
+                                    viewBox="0 0 24 24"
+                                    width="1em"
+                                  >
+                                    <defs>
+                                      <mask
+                                        height="24"
+                                        id="t-icon-uncomfortable-1-instance-v9-overlap-fill1"
+                                        mask-type="luminance"
+                                        maskContentUnits="userSpaceOnUse"
+                                        maskUnits="userSpaceOnUse"
+                                        width="24"
+                                        x="0"
+                                        y="0"
+                                      >
+                                        <rect
+                                          fill="#fff"
+                                          height="24"
+                                          width="24"
+                                          x="0"
+                                          y="0"
+                                        />
+                                        <path
+                                          d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                          fill="none"
+                                          stroke="#000"
+                                          stroke-linecap="square"
+                                          stroke-width="2"
+                                        />
+                                        <path
+                                          d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                          fill="none"
+                                          stroke="#000"
+                                          stroke-linecap="square"
+                                          stroke-width="2"
+                                        />
+                                      </mask>
+                                    </defs>
+                                    <g
+                                      id="uncomfortable-1"
+                                    >
+                                      <path
+                                        d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                        fill="transparent"
+                                        id="fill1"
+                                        mask="url(#t-icon-uncomfortable-1-instance-v9-overlap-fill1)"
+                                      />
+                                      <path
+                                        d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z"
+                                        id="stroke1"
+                                        stroke="currentColor"
+                                        stroke-linecap="square"
+                                        stroke-width="2"
+                                      />
+                                      <path
+                                        d="M16 8.5L14 9.62501L14 10L16 11.5M8 8.5L10 9.62501L10 10L8.00001 11.5M8.53516 16C9.22678 14.8044 10.5195 14 12 14C13.4806 14 14.7733 14.8044 15.4649 16"
+                                        id="stroke2"
+                                        stroke="currentColor"
+                                        stroke-linecap="square"
+                                        stroke-width="2"
+                                      />
+                                    </g>
+                                  </svg>
+                                  
+                                  <span
+                                    class="t-button__content"
+                                  >
+                                    <!---->
+                                  </span>
+                                  <!---->
+                                </button>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="t-comment__reply"
+                  >
+                    <div
+                      class="t-comment__reply-body"
+                    >
+                      <div
+                        class="t-comment__reply-inner"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+            <div
+              class="t-comment__folds"
+            >
+              <div
+                class="t-comment__folds-item"
+              >
+                展开5条回复
+                <svg
+                  class="t-icon t-icon-chevron-down-s"
+                  fill="none"
+                  height="1em"
+                  style="fill: none; font-size: 16px;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="chevron-down-s"
+                  >
+                    <path
+                      d="M15.5354 10.7345L11.9999 14.27L8.46436 10.7345"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;

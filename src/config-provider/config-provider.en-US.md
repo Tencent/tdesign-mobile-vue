@@ -16,6 +16,7 @@ actionSheet | Object | - | ActionSheet global configs。Typescript: `ActionSheet
 calendar | Object | - | Calendar global configs。Typescript: `CalendarConfig` | N
 cascader | Object | - | Cascader global configs。Typescript: `CascaderConfig` | N
 classPrefix | String | t | \- | N
+comment | Object | - | Comment global configs。Typescript: `CommentConfig` | N
 dateTimePicker | Object | - | DateTimePicker global configs。Typescript: `DateTimePickerConfig` | N
 dropdownMenu | Object | - | DropdownMenu global configs。Typescript: `DropdownMenuConfig` | N
 form | Object | - | Form global configs。Typescript: `FormConfig` | N
@@ -52,6 +53,14 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 placeholder | String | - | \- | N
 title | String | - | \- | N
+
+### CommentConfig
+
+name | type | default | description | required
+-- | -- | -- | -- | --
+collapseText | String | - | \- | N
+collapsedText | String | - | \- | N
+expandMoreText | String | - | \- | N
 
 ### DateTimePickerConfig
 

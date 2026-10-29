@@ -3831,6 +3831,278 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       </div>
       
       <!--teleport end-->
+      <div
+        class="comment-demo"
+        data-v-075292d6=""
+      >
+        <div
+          class="t-comment"
+          data-v-075292d6=""
+        >
+          <div
+            class="t-comment__inner"
+          >
+            <div
+              class="t-avatar__wrapper t-comment__avatar"
+            >
+              <div
+                class="t-avatar__badge"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    <div
+                      class="t-avatar t-avatar--medium t-avatar--circle"
+                      style="height: 32px; width: 32px; font-size: 14px;"
+                    >
+                      <div
+                        class="t-image t-image--square"
+                      >
+                        <div
+                          class="t-image__mask"
+                        >
+                          <div
+                            class="t-loading"
+                            style="font-size: 20px;"
+                          >
+                            <div
+                              class="t-loading__dots"
+                              style="animation-duration: 800ms; width: 20px; height: 20px;"
+                            >
+                              
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0s;"
+                              />
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                              />
+                              <div
+                                class="t-loading__dot"
+                                style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                              />
+                              
+                            </div>
+                            <!---->
+                            <!---->
+                          </div>
+                        </div>
+                        <picture>
+                          <!---->
+                          <img
+                            alt=""
+                            class="t-image__img"
+                            src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                            style="object-fit: fill; object-position: center;"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <!---->
+                </div>
+              </div>
+            </div>
+            <div
+              class="t-comment__detail"
+            >
+              <div
+                class="t-comment__author"
+              >
+                Name1
+              </div>
+              <div
+                class="t-comment__content"
+              >
+                This is a comment content.
+              </div>
+              <div
+                class="t-comment__bottom"
+              >
+                <div
+                  class="t-comment__date"
+                >
+                  Today 16:38
+                </div>
+                <div
+                  class="t-comment__actions"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-comment__reply"
+          >
+            <div
+              class="t-comment__reply-body"
+            >
+              <div
+                class="t-comment__reply-inner"
+              >
+                
+                
+                <div
+                  class="t-comment"
+                  data-v-075292d6=""
+                >
+                  <div
+                    class="t-comment__inner"
+                  >
+                    <div
+                      class="t-avatar__wrapper t-comment__avatar"
+                    >
+                      <div
+                        class="t-avatar__badge"
+                      >
+                        <div
+                          class="t-badge"
+                        >
+                          <div
+                            class="t-badge__content"
+                          >
+                            
+                            <div
+                              class="t-avatar t-avatar--medium t-avatar--circle"
+                              style="height: 20px; width: 20px; font-size: 9.5px;"
+                            >
+                              <div
+                                class="t-image t-image--square"
+                              >
+                                <div
+                                  class="t-image__mask"
+                                >
+                                  <div
+                                    class="t-loading"
+                                    style="font-size: 20px;"
+                                  >
+                                    <div
+                                      class="t-loading__dots"
+                                      style="animation-duration: 800ms; width: 20px; height: 20px;"
+                                    >
+                                      
+                                      <div
+                                        class="t-loading__dot"
+                                        style="animation-duration: 0.8s; animation-delay: 0s;"
+                                      />
+                                      <div
+                                        class="t-loading__dot"
+                                        style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                                      />
+                                      <div
+                                        class="t-loading__dot"
+                                        style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                                      />
+                                      
+                                    </div>
+                                    <!---->
+                                    <!---->
+                                  </div>
+                                </div>
+                                <picture>
+                                  <!---->
+                                  <img
+                                    alt=""
+                                    class="t-image__img"
+                                    src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                                    style="object-fit: fill; object-position: center;"
+                                  />
+                                </picture>
+                              </div>
+                            </div>
+                            
+                          </div>
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="t-comment__detail"
+                    >
+                      <div
+                        class="t-comment__author"
+                      >
+                        Name1
+                      </div>
+                      <div
+                        class="t-comment__content"
+                      >
+                        This is a reply content.
+                      </div>
+                      <div
+                        class="t-comment__bottom"
+                      >
+                        <div
+                          class="t-comment__date"
+                        >
+                          Today 16:38
+                        </div>
+                        <div
+                          class="t-comment__actions"
+                        >
+                          <!---->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="t-comment__reply"
+                  >
+                    <div
+                      class="t-comment__reply-body"
+                    >
+                      <div
+                        class="t-comment__reply-inner"
+                      >
+                        <!---->
+                      </div>
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+            <div
+              class="t-comment__folds"
+            >
+              <div
+                class="t-comment__folds-item"
+              >
+                Expand replies
+                <svg
+                  class="t-icon t-icon-chevron-down-s"
+                  fill="none"
+                  height="1em"
+                  style="fill: none; font-size: 16px;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <g
+                    id="chevron-down-s"
+                  >
+                    <path
+                      d="M15.5354 10.7345L11.9999 14.27L8.46436 10.7345"
+                      id="stroke1"
+                      stroke="currentColor"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       
       
       
@@ -7127,6 +7399,278 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
   </div>
   
   <!--teleport end-->
+  <div
+    class="comment-demo"
+    data-v-075292d6=""
+  >
+    <div
+      class="t-comment"
+      data-v-075292d6=""
+    >
+      <div
+        class="t-comment__inner"
+      >
+        <div
+          class="t-avatar__wrapper t-comment__avatar"
+        >
+          <div
+            class="t-avatar__badge"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                <div
+                  class="t-avatar t-avatar--medium t-avatar--circle"
+                  style="height: 32px; width: 32px; font-size: 14px;"
+                >
+                  <div
+                    class="t-image t-image--square"
+                  >
+                    <div
+                      class="t-image__mask"
+                    >
+                      <div
+                        class="t-loading"
+                        style="font-size: 20px;"
+                      >
+                        <div
+                          class="t-loading__dots"
+                          style="animation-duration: 800ms; width: 20px; height: 20px;"
+                        >
+                          
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0s;"
+                          />
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                          />
+                          <div
+                            class="t-loading__dot"
+                            style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                          />
+                          
+                        </div>
+                        <!---->
+                        <!---->
+                      </div>
+                    </div>
+                    <picture>
+                      <!---->
+                      <img
+                        alt=""
+                        class="t-image__img"
+                        src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                        style="object-fit: fill; object-position: center;"
+                      />
+                    </picture>
+                  </div>
+                </div>
+                
+              </div>
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div
+          class="t-comment__detail"
+        >
+          <div
+            class="t-comment__author"
+          >
+            Name1
+          </div>
+          <div
+            class="t-comment__content"
+          >
+            This is a comment content.
+          </div>
+          <div
+            class="t-comment__bottom"
+          >
+            <div
+              class="t-comment__date"
+            >
+              Today 16:38
+            </div>
+            <div
+              class="t-comment__actions"
+            >
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="t-comment__reply"
+      >
+        <div
+          class="t-comment__reply-body"
+        >
+          <div
+            class="t-comment__reply-inner"
+          >
+            
+            
+            <div
+              class="t-comment"
+              data-v-075292d6=""
+            >
+              <div
+                class="t-comment__inner"
+              >
+                <div
+                  class="t-avatar__wrapper t-comment__avatar"
+                >
+                  <div
+                    class="t-avatar__badge"
+                  >
+                    <div
+                      class="t-badge"
+                    >
+                      <div
+                        class="t-badge__content"
+                      >
+                        
+                        <div
+                          class="t-avatar t-avatar--medium t-avatar--circle"
+                          style="height: 20px; width: 20px; font-size: 9.5px;"
+                        >
+                          <div
+                            class="t-image t-image--square"
+                          >
+                            <div
+                              class="t-image__mask"
+                            >
+                              <div
+                                class="t-loading"
+                                style="font-size: 20px;"
+                              >
+                                <div
+                                  class="t-loading__dots"
+                                  style="animation-duration: 800ms; width: 20px; height: 20px;"
+                                >
+                                  
+                                  <div
+                                    class="t-loading__dot"
+                                    style="animation-duration: 0.8s; animation-delay: 0s;"
+                                  />
+                                  <div
+                                    class="t-loading__dot"
+                                    style="animation-duration: 0.8s; animation-delay: 0.26666666666666666s;"
+                                  />
+                                  <div
+                                    class="t-loading__dot"
+                                    style="animation-duration: 0.8s; animation-delay: 0.5333333333333333s;"
+                                  />
+                                  
+                                </div>
+                                <!---->
+                                <!---->
+                              </div>
+                            </div>
+                            <picture>
+                              <!---->
+                              <img
+                                alt=""
+                                class="t-image__img"
+                                src="https://tdesign.gtimg.com/mobile/demos/avatar1.png"
+                                style="object-fit: fill; object-position: center;"
+                              />
+                            </picture>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <!---->
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="t-comment__detail"
+                >
+                  <div
+                    class="t-comment__author"
+                  >
+                    Name1
+                  </div>
+                  <div
+                    class="t-comment__content"
+                  >
+                    This is a reply content.
+                  </div>
+                  <div
+                    class="t-comment__bottom"
+                  >
+                    <div
+                      class="t-comment__date"
+                    >
+                      Today 16:38
+                    </div>
+                    <div
+                      class="t-comment__actions"
+                    >
+                      <!---->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-comment__reply"
+              >
+                <div
+                  class="t-comment__reply-body"
+                >
+                  <div
+                    class="t-comment__reply-inner"
+                  >
+                    <!---->
+                  </div>
+                </div>
+                <!---->
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+        <div
+          class="t-comment__folds"
+        >
+          <div
+            class="t-comment__folds-item"
+          >
+            Expand replies
+            <svg
+              class="t-icon t-icon-chevron-down-s"
+              fill="none"
+              height="1em"
+              style="fill: none; font-size: 16px;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <g
+                id="chevron-down-s"
+              >
+                <path
+                  d="M15.5354 10.7345L11.9999 14.27L8.46436 10.7345"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   
   
 </div>

@@ -34,6 +34,10 @@ export interface GlobalConfigProvider {
    */
   classPrefix?: string;
   /**
+   * 评论组件全局配置
+   */
+  comment?: CommentConfig;
+  /**
    * 时间选择器全局配置
    */
   dateTimePicker?: DateTimePickerConfig;
@@ -132,6 +136,24 @@ export interface CascaderConfig {
    * @default ''
    */
   title?: string;
+}
+
+export interface CommentConfig {
+  /**
+   * 语言配置，“收起”描述文本
+   * @default ''
+   */
+  collapseText?: string;
+  /**
+   * 语言配置，折叠状态下“展开回复”描述文本
+   * @default ''
+   */
+  collapsedText?: string;
+  /**
+   * 语言配置，半展开状态下“展开更多回复”描述文本
+   * @default ''
+   */
+  expandMoreText?: string;
 }
 
 export interface DateTimePickerConfig {

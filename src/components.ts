@@ -41,6 +41,7 @@ export * from './avatar';
 export * from './badge';
 export * from './cell';
 export * from './collapse';
+export * from './comment';
 export * from './count-down';
 export * from './empty';
 export * from './footer';
