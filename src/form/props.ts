@@ -33,6 +33,11 @@ export default {
   errorMessage: {
     type: Object as PropType<TdFormProps['errorMessage']>,
   },
+  /** 表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件 */
+  id: {
+    type: String,
+    default: undefined,
+  },
   /** 表单字段标签对齐方式：左对齐、右对齐、顶部对齐 */
   labelAlign: {
     type: String as PropType<TdFormProps['labelAlign']>,
@@ -45,12 +50,17 @@ export default {
   /** 可以整体设置label标签宽度，默认为81px */
   labelWidth: {
     type: [String, Number] as PropType<TdFormProps['labelWidth']>,
-    default: '81px',
+    default: '81px' as TdFormProps['labelWidth'],
   },
   /** 是否阻止表单提交默认事件（表单提交默认事件会刷新页面），设置为 `true` 可以避免刷新 */
   preventSubmitDefault: {
     type: Boolean,
     default: true,
+  },
+  /** 是否整个表单只读 */
+  readonly: {
+    type: Boolean,
+    default: undefined,
   },
   /** 是否显示必填符号（*），默认显示 */
   requiredMark: {

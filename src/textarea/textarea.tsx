@@ -4,10 +4,11 @@ import props from './props';
 import { TextareaValue } from './type';
 import calcTextareaHeight from '../_common/js/utils/calcTextareaHeight';
 import { FormItemInjectionKey } from '../form/const';
-import { useFormDisabled } from '../form/hooks';
+import { useFormDisabled, useReadonly } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 import { useTNodeJSX } from '../hooks/tnode';
 import useVModel from '../hooks/useVModel';
+import { extendAPI } from '../shared';
 
 export default defineComponent({
   name: 'TTextarea',
@@ -15,6 +16,7 @@ export default defineComponent({
   setup(props, context) {
     const renderTNodeJSX = useTNodeJSX();
     const isDisabled = useFormDisabled();
+    const isReadonly = useReadonly();
     const formItem = inject(FormItemInjectionKey, undefined);
 
     const textareaClass = usePrefixClass('textarea');
@@ -31,7 +33,7 @@ export default defineComponent({
       `${textareaClass.value}__placeholder`,
       {
         [`${textareaClass.value}--disabled`]: isDisabled.value,
-        [`${textareaClass.value}--readonly`]: props.readonly,
+        [`${textareaClass.value}--readonly`]: isReadonly.value,
       },
     ]);
 
@@ -101,10 +103,12 @@ export default defineComponent({
       props.onBlur?.(innerValue.value, { e });
     };
 
+    const focus = () => textareaRef.value?.focus();
+    const blur = () => textareaRef.value?.blur();
+
+    extendAPI({ focus, blur });
+
     onMounted(() => {
-      if (props.autofocus) {
-        textareaRef.value?.focus();
-      }
       textareaValueChangeHandle();
       adjustTextareaHeight();
     });
@@ -143,7 +147,8 @@ export default defineComponent({
         // maxlength: props.maxlength,
         disabled: isDisabled.value,
         placeholder: props.placeholder,
-        readonly: props.readonly,
+        readonly: isReadonly.value,
+        autofocus: props.autofocus,
         onFocus: handleFocus,
         onBlur: handleBlur,
         onInput: handleInput,

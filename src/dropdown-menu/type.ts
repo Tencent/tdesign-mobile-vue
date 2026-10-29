@@ -48,6 +48,11 @@ export interface TdDropdownItemProps {
    */
   icon?: TNode | TNode[] | undefined;
   /**
+   * 是否保持标题高亮（含菜单收起态），仅多选场景生效
+   * @default false
+   */
+  keepLabelActive?: boolean;
+  /**
    * 用来定义 value / label / disabled 在 `options` 中对应的字段别名
    */
   keys?: KeysType;

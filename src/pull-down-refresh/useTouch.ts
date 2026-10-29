@@ -49,9 +49,7 @@ export function getScrollParent(node: Element): Element | null {
   let res = node;
   while (res && isElement(res)) {
     const style = window.getComputedStyle(res);
-    const isScrollableY = /auto|scroll/i.test(style.overflowY);
-    const canScrollY = ['hidden', 'visible'].includes(style.overflowY) && res.scrollHeight > res.clientHeight;
-    if (isScrollableY || canScrollY) {
+    if (/auto|scroll/i.test(style.overflowY)) {
       return res;
     }
     res = res.parentNode as Element;
@@ -62,5 +60,9 @@ export function getScrollParent(node: Element): Element | null {
 // 确保可滚动的父元素此时处于未滚动状态
 export const isReachTop = (e: TouchEvent) => {
   const scrollParent = getScrollParent(e.target as Element);
-  return !scrollParent || !scrollParent.scrollTop;
+  if (!scrollParent) {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    return scrollTop <= 0;
+  }
+  return !scrollParent.scrollTop;
 };

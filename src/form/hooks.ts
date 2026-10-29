@@ -6,6 +6,10 @@ export interface FormDisabledProvider {
   disabled: Ref<TdFormProps['disabled']>;
 }
 
+export interface FormReadonlyProvider {
+  readonly: Ref<TdFormProps['readonly']>;
+}
+
 /**
  * 用于实现 form 的全局禁用状态hook
  * 禁用优先级: 组件 > 组件组 > 表单(propsDisabled.value > extend?.value > disabled?.value)
@@ -27,6 +31,32 @@ export function useFormDisabled(extend?: Ref<boolean>) {
     // 表单
     if (isBoolean(disabled?.value)) {
       return disabled.value;
+    }
+    return false;
+  });
+}
+
+/**
+ * 用于实现 form 的全局只读状态hook
+ * 只读优先级: 组件 > 组件组 > 表单(propsReadonly.value > extend?.value > readonly?.value)
+ * @returns
+ */
+export function useReadonly(extend?: Ref<boolean>) {
+  const ctx = getCurrentInstance();
+  const propsReadonly = computed(() => ctx?.props.readonly as boolean);
+  const { readonly } = inject<FormReadonlyProvider>('formReadonly', Object.create(null));
+  return computed(() => {
+    // 组件
+    if (isBoolean(propsReadonly.value)) {
+      return propsReadonly.value;
+    }
+    // 组件组
+    if (isBoolean(extend?.value)) {
+      return extend.value;
+    }
+    // 表单
+    if (isBoolean(readonly?.value)) {
+      return readonly.value;
     }
     return false;
   });

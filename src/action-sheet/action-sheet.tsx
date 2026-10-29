@@ -61,7 +61,7 @@ export default defineComponent({
       const root = () => {
         const description = () => {
           if (props.description) {
-            return <p class={`${actionSheetClass.value}__description`}>{props.description}</p>;
+            return <div class={`${actionSheetClass.value}__description`}>{props.description}</div>;
           }
           return null;
         };

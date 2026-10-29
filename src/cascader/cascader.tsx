@@ -3,7 +3,7 @@ import { defineComponent, toRefs, computed, ref, toRaw, reactive, watch, onMount
 import { get as lodashGet } from 'lodash-es';
 import TPopup from '../popup';
 import { Tabs } from '../tabs';
-import { RadioValue, RadioGroup as TRadioGroup } from '../radio';
+import { RadioValue, RadioGroup as TRadioGroup, RadioOption } from '../radio';
 import props from './props';
 import { TreeOptionData } from '../common';
 import { useConfig } from '../config-provider/useConfig';
@@ -384,7 +384,7 @@ export default defineComponent({
                           <TRadioGroup
                             value={selectedValue[index] || ''}
                             keys={props.keys}
-                            options={options}
+                            options={options as RadioOption[]}
                             placement="right"
                             icon="line"
                             borderless

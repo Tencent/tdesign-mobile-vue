@@ -128,7 +128,6 @@ export default defineComponent({
       return type === 'error' ? `${formItemClass.value}--error` : `${formItemClass.value}--warning`;
     });
 
-    const contentClasses = computed(() => [`${formClass.value}__controls`, errorClasses.value]);
     const contentSlotClasses = computed(() => [
       `${formClass.value}__controls-content`,
       `${formClass.value}__controls--${contentAlign.value}`,
@@ -373,20 +372,29 @@ export default defineComponent({
         );
       };
 
+      const helpNode = renderHelpNode();
+      const extraNodeContent = renderExtraNode();
+
       return (
-        <div class={[...formItemClasses.value, renderHelpNode() ? `${formClass.value}__item-with-help` : '']}>
-          <div class={[`${formItemClass.value}-wrap`, `${formItemClass.value}--${labelAlign.value}`]}>
-            <div class={labelClasses.value} style={labelStyle.value}>
-              <label for={props.for}>{renderLabelContent()}</label>
-              {hasColon.value && globalConfig.value.colonText}
+        <div class={[...formItemClasses.value, helpNode ? `${formClass.value}__item-with-help` : '']}>
+          <div class={`${formItemClass.value}-main`}>
+            <div class={[`${formItemClass.value}-wrap`, `${formItemClass.value}--${labelAlign.value}`]}>
+              <div class={labelClasses.value} style={labelStyle.value}>
+                <label for={props.for}>{renderLabelContent()}</label>
+                {hasColon.value && globalConfig.value.colonText}
+              </div>
+              <div class={`${formClass.value}__controls`} style={contentStyle.value}>
+                <div class={contentSlotClasses.value}>{renderTNodeJSX('default')}</div>
+              </div>
             </div>
-            <div class={contentClasses.value} style={contentStyle.value}>
-              <div class={contentSlotClasses.value}>{renderTNodeJSX('default')}</div>
-              {renderHelpNode()}
-              {renderExtraNode()}
-            </div>
+            {renderRightIconContent()}
           </div>
-          {renderRightIconContent()}
+          {(helpNode || extraNodeContent) && (
+            <div class={[`${formItemClass.value}-tips`, errorClasses.value]} style={contentStyle.value}>
+              {helpNode}
+              {extraNodeContent}
+            </div>
+          )}
         </div>
       );
     };

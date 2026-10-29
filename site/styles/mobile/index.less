@@ -5,44 +5,37 @@
 
 
 :root[theme-mode="dark"] {
-  --bg-color-demo: #181818;
-  --bg-color-demo-secondary: #2c2c2c;
   --bg-color-scroll: #434343;
-
-  body{
-    background-color: var(--bg-color-demo);
-  }
-  .tdesign-demo-topnav {
-    background-color: var(--bg-color-demo);
-  }
-  .tdesign-demo-main .tdesign-mobile-demo {
-    background-color: var(--bg-color-demo);
-  }
 }
 
-  html::-webkit-scrollbar, body::-webkit-scrollbar {
-    width: 16px;
-    height: 16px;
-    background: transparent;
-  }
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  background: transparent;
+}
 
-  html::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
-    background: var(--bg-color-demo);
-  }
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: var(--td-bg-color-page);
+}
 
-  html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    border: 4px solid transparent;
-    background-clip: content-box;
-    background-color: var(--bg-color-scroll);
-  }
-  html::-webkit-scrollbar-corner, body::-webkit-scrollbar-corner {
-    width: 0;
-  }
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+  background-color: var(--bg-color-scroll);
+}
+
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner {
+  width: 0;
+}
 
 
 body {
-  background-color: #F6F6F6;
+  background-color: var(--td-bg-color-page);
   color: var(--bg-color-tab);
 }
 
@@ -68,21 +61,24 @@ body {
   box-sizing: border-box;
   width: 100%;
   padding: 24px;
-  & p{
-    padding-top:16px;
+
+  & p {
+    padding-top: 16px;
     opacity: 1;
-    color: rgba(0,0,0,0.4);
+    color: rgba(0, 0, 0, 0.4);
     font-size: 14px;
     font-weight: 400;
     font-family: "PingFang SC";
     line-height: 22px;
   }
-  &-navlink{
+
+  &-navlink {
     position: relative;
     display: flex;
     width: 100%;
     padding-left: 20px;
   }
+
   &-navs {
     position: relative;
     display: flex;
@@ -92,32 +88,40 @@ body {
     font-size: 14px;
     line-height: 40px;
     background: #f7f8fa;
+
     & a {
       text-decoration: none;
       color: #323233
     }
   }
+
   .tdesign-mobile-logo {
     padding-bottom: 24px;
+
     img {
       width: 126px;
     }
   }
+
   .t-collapse {
     margin-bottom: 12px;
     background-color: #fff;
+
     &-panel {
-      &--active{
+      &--active {
         .t-collapse-panel__title {
-          color: rgba(0,0,0,0.4)
+          color: rgba(0, 0, 0, 0.4)
         }
       }
+
       &__body {
         padding: 0;
+
         &-slot {
           padding: 0;
         }
       }
+
       &__content {
         padding-top: 0;
         padding-bottom: 0;
@@ -133,14 +137,15 @@ body {
   align-items: center;
   justify-content: center;
   height: 50px;
-  background-color: #fff;
+  background-color: var(--td-bg-color-page);
 
-  &-title{
+  &-title {
     font-size: 18px;
     font-weight: 500;
     color: var(--td-text-color-primary);
   }
-  &__back{
+
+  &__back {
     position: absolute;
     left: 16px;
     font-size: 24px;
@@ -148,5 +153,3 @@ body {
     color: var(--td-text-color-primary);
   }
 }
-
-

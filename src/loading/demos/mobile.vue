@@ -54,11 +54,19 @@ import size from './size.vue';
 import service from './service.vue';
 import fullscreen from './fullscreen.vue';
 import attach from './attach.vue';
+import delay from './delay.vue';
 </script>
 
 <style scoped lang="less">
 .loading-demo--flex {
   display: flex;
   align-items: center;
+}
+</style>
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
 }
 </style>

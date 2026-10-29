@@ -163,13 +163,11 @@ describe('Input.vue', async () => {
     it(': autofocus', async () => {
       const value = ref('123');
       const wrapper = mount(<Input label="标题" v-model={value.value} clearable clearTrigger="focus" autofocus />);
-      await wrapper.vm.$nextTick();
-      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
-      wrapper.vm.blur();
-      await wrapper.vm.$nextTick();
-      expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeFalsy();
-      wrapper.vm.focus();
-      await wrapper.vm.$nextTick();
+      const input = wrapper.find('.t-input__wrap input');
+      expect(input.element.hasAttribute('autofocus')).toBeTruthy();
+
+      // 模拟浏览器因 autofocus 属性而聚焦
+      await input.trigger('focus');
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
     });
 

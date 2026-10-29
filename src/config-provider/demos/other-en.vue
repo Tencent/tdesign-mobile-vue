@@ -26,11 +26,31 @@
         @cancel="onCancel"
       />
     </t-popup>
+
+    <div class="comment-demo">
+      <t-comment
+        :avatar="{ shape: 'circle', size: '32px', image: 'https://tdesign.gtimg.com/mobile/demos/avatar1.png' }"
+        author="Name1"
+        content="This is a comment content."
+        datetime="Today 16:38"
+        :folds="commentFold"
+        @folds="handleUpdateFold"
+      >
+        <t-comment
+          v-for="(item, index) in visibleReplies"
+          :key="`${item.author}-${index}`"
+          :avatar="{ shape: 'circle', size: '20px', image: item.avatar }"
+          :author="item.author"
+          :content="item.content"
+          :datetime="item.datetime"
+        />
+      </t-comment>
+    </div>
   </t-config-provider>
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { merge } from 'lodash-es';
 import type { CalendarValue, DateValue } from 'tdesign-mobile-vue';
 import enConfig from 'tdesign-mobile-vue/es/locale/en_US';
@@ -50,6 +70,37 @@ const rateValue = ref(0);
 
 const visibleCalendar = ref(false);
 const calendarDateNote = ref('');
+
+const REPLY_COUNT = 6;
+// 不传 folds.content，折叠/展开文案走全局国际化配置
+const commentFold = ref<Record<string, any>>({
+  state: 'collapsed',
+  total: REPLY_COUNT,
+  step: 3,
+});
+
+const replyInfo = ref(
+  new Array(REPLY_COUNT).fill({}).map((_, index) => ({
+    author: `Name${index + 1}`,
+    avatar: 'https://tdesign.gtimg.com/mobile/demos/avatar1.png',
+    content: 'This is a reply content.',
+    datetime: 'Today 16:38',
+  })),
+);
+
+const visibleReplies = computed(() => {
+  if (commentFold.value.state === 'collapsed') {
+    return replyInfo.value.slice(0, 1);
+  }
+  if (commentFold.value.state === 'partial') {
+    return replyInfo.value.slice(0, 3);
+  }
+  return replyInfo.value;
+});
+
+const handleUpdateFold = (context: { fold: Record<string, any> }) => {
+  commentFold.value = context.fold;
+};
 
 const format = (val: Date) => {
   const date = new Date(val);
@@ -90,7 +141,7 @@ const onConfirm = (value: DateValue) => {
 
 <style lang="less" scoped>
 .rate-demo-cell {
-  background-color: var(--bg-color-demo, #fff);
+  background-color: var(--td-bg-color-container);
   padding: 12px 16px;
   line-height: 1;
   display: flex;
@@ -106,5 +157,11 @@ const onConfirm = (value: DateValue) => {
   &--space {
     margin-bottom: 16px;
   }
+}
+
+.comment-demo {
+  margin-top: 16px;
+  padding: 12px 0;
+  background-color: var(--td-bg-color-container);
 }
 </style>

@@ -43,6 +43,7 @@ export default defineComponent({
     onBeforeMount(() => {
       itemId.value = menuState.childCount;
       menuState.childCount += 1;
+      updateKeepLabelActive();
     });
 
     const state = reactive({
@@ -129,6 +130,14 @@ export default defineComponent({
     };
     // 初始值更新一次选中项
     updateSelectValue(passInValue.value || null);
+
+    const updateKeepLabelActive = () => {
+      menuState.itemsActive[itemId.value] = Boolean(
+        props.multiple && props.keepLabelActive && Array.isArray(checkSelect.value) && checkSelect.value.length > 0,
+      );
+    };
+
+    watch([checkSelect, () => props.keepLabelActive, () => props.multiple], updateKeepLabelActive);
     // 跟踪 modelValue 更新选项
     watch(
       () => passInValue.value,

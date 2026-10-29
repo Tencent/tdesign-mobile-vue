@@ -80,7 +80,7 @@ const files = ref([
 </script>
 <style scoped lang="less">
 .upload-demo {
-  background: var(--bg-color-demo, #fff);
+  background: var(--td-bg-color-container);
   .upload-title {
     font-size: 16px;
     color: var(--td-text-color-primary, rgba(0, 0, 0, 0.9));

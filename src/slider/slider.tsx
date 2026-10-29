@@ -5,7 +5,7 @@ import props from './props';
 import useVModel from '../hooks/useVModel';
 import { trimSingleValue, trimValue } from './tool';
 import type { SliderValue } from './type';
-import { useFormDisabled } from '../form/hooks';
+import { useFormDisabled, useReadonly } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
 
 type dataType = {
@@ -35,6 +35,7 @@ export default defineComponent({
   setup(props) {
     const sliderClass = usePrefixClass('slider');
     const isDisabled = useFormDisabled();
+    const isReadonly = useReadonly();
     const sliderLine = ref<HTMLElement>();
     const leftDot = ref<HTMLElement>();
     const rightDot = ref<HTMLElement>();
@@ -165,7 +166,7 @@ export default defineComponent({
     };
 
     const onSingleDotMove = (e: TouchEvent) => {
-      if (isDisabled.value) return;
+      if (isDisabled.value || isReadonly.value) return;
       e.preventDefault();
       const [touch] = e.changedTouches;
       const currentLeft = getDelta(touch);
@@ -223,7 +224,7 @@ export default defineComponent({
     };
 
     const onTouchMoveLeft = (e: TouchEvent) => {
-      if (isDisabled.value) return;
+      if (isDisabled.value || isReadonly.value) return;
       e.preventDefault();
       const [touch] = e.changedTouches;
 
@@ -236,7 +237,7 @@ export default defineComponent({
     };
 
     const onTouchMoveRight = (e: TouchEvent) => {
-      if (isDisabled.value) return;
+      if (isDisabled.value || isReadonly.value) return;
       e.preventDefault();
       const [touch] = e.changedTouches;
       const currentRight = getDelta(touch);
@@ -249,7 +250,7 @@ export default defineComponent({
 
     const handleSingleClick = (e: MouseEvent) => {
       e.stopPropagation();
-      if (isDisabled.value) return;
+      if (isDisabled.value || isReadonly.value) return;
       if (!sliderLine.value) return;
       const currentLeft = getDelta(e);
       const value = convertPosToValue(currentLeft);
@@ -258,7 +259,7 @@ export default defineComponent({
 
     const handleRangeClick = (e: MouseEvent) => {
       e.stopPropagation();
-      if (isDisabled.value) return;
+      if (isDisabled.value || isReadonly.value) return;
       const halfBlock = props.theme === 'capsule' ? Number(state.blockSize) / 2 : 0;
       const currentLeft = getDelta(e);
       if (currentLeft < 0 || currentLeft > state.maxRange + Number(state.blockSize)) return;

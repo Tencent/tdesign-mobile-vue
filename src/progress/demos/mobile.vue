@@ -23,8 +23,9 @@ import LineDemo from './line.vue';
 import PlumpDemo from './plump.vue';
 import CircleDemo from './circle.vue';
 </script>
-<style lang="less" scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 </style>

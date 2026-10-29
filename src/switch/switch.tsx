@@ -4,7 +4,7 @@ import TLoading from '../loading';
 import useToggle from '../hooks/useToggle';
 import props from './props';
 import { SwitchValue, TdSwitchProps } from './type';
-import { useFormDisabled } from '../form/hooks';
+import { useFormDisabled, useReadonly } from '../form/hooks';
 import useVModel from '../hooks/useVModel';
 import { usePrefixClass } from '../hooks/useClass';
 
@@ -15,6 +15,7 @@ export default defineComponent({
     const switchClass = usePrefixClass('switch');
 
     const disabled = useFormDisabled();
+    const isReadonly = useReadonly();
     const switchValues = props.customValue || [true, false];
 
     const { value, modelValue } = toRefs(props);
@@ -49,7 +50,7 @@ export default defineComponent({
 
     function handleToggle(event: Event) {
       event.preventDefault();
-      if (disabled.value || props.loading) {
+      if (disabled.value || isReadonly.value || props.loading) {
         return;
       }
 

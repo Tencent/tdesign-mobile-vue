@@ -1428,23 +1428,19 @@ exports[`Avatar > Avatar imageAvatarVue demo works fine 1`] = `
 exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-30e67835=""
 >
   <h1
     class="title"
-    data-v-30e67835=""
   >
     Avatar 头像
   </h1>
   <p
     class="summary"
-    data-v-30e67835=""
   >
     用于展示用户头像信息，除了纯展示也可点击进入个人详情等操作。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-30e67835=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1466,7 +1462,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-demo"
-        data-v-30e67835=""
       >
         <div
           class="t-avatar__wrapper avatar-example"
@@ -1606,7 +1601,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-30e67835=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1624,7 +1618,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-demo"
-        data-v-30e67835=""
       >
         <div
           aria-label="字符头像"
@@ -1689,7 +1682,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-30e67835=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1707,7 +1699,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-demo"
-        data-v-30e67835=""
       >
         <div
           class="t-avatar__wrapper avatar-example"
@@ -1899,7 +1890,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-30e67835=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1917,7 +1907,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-demo"
-        data-v-30e67835=""
       >
         <div
           class="t-avatar__wrapper avatar-example"
@@ -2138,7 +2127,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-30e67835=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2160,7 +2148,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-group-demo"
-        data-v-30e67835=""
       >
         <div
           class="t-avatar-group t-avatar-group-offset-left t-avatar-group-offset-left-medium"
@@ -2536,7 +2523,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-30e67835=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -2554,7 +2540,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="avatar-group-demo"
-        data-v-30e67835=""
       >
         <div
           class="t-avatar-group t-avatar-group-offset-right t-avatar-group-offset-right-medium"
@@ -2991,7 +2976,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-30e67835=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -3013,7 +2997,6 @@ exports[`Avatar > Avatar mobileVue demo works fine 1`] = `
       
       <div
         class="tdesign-demo-avatar"
-        data-v-30e67835=""
       >
         <div
           class="avatar-demo"

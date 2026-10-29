@@ -40,7 +40,7 @@ const files: UploadFile[] = [
 
 <style scoped lang="less">
 .upload-demo {
-  background: var(--bg-color-demo, #fff);
+  background: var(--td-bg-color-container);
 
   & + & {
     margin-top: 16px;

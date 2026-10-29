@@ -1,6 +1,6 @@
 <template>
   <div class="tdesign-mobile-demo">
-    <h1 class="title">ConfigProvider 全局配置</h1>
+    <h1 class="title">ConfigProvider 全局特性配置</h1>
     <p class="summary">全局特性配置包含各个组件的文本语言配置及其他通用配置，可以减少重复的通用配置。</p>
     <tdesign-demo-block title="01 配置示例" summary="Upload">
       <uploadEn />

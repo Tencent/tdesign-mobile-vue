@@ -96,7 +96,7 @@ onBeforeUnmount(() => {
   align-items: center;
   justify-content: center;
   border-radius: 16px 0 0 16px;
-  background: #fff;
+  background: var(--td-bg-color-container);
 
   border: 1px solid #dcdcdc;
   border-right: 0;

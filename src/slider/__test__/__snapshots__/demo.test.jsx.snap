@@ -476,23 +476,19 @@ exports[`Slider > Slider labelVue demo works fine 1`] = `
 exports[`Slider > Slider mobileVue demo works fine 1`] = `
 <div
   class="tdesign-mobile-demo"
-  data-v-556740d4=""
 >
   <h1
     class="title"
-    data-v-556740d4=""
   >
     Slider 滑动选择器
   </h1>
   <p
     class="summary"
-    data-v-556740d4=""
   >
     用于选择横轴上的数值、区间、档位。
   </p>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-556740d4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -514,7 +510,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
       
       <div
         class="wrapper"
-        data-v-556740d4=""
         data-v-9dfa151c=""
       >
         <div
@@ -548,7 +543,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-556740d4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -567,7 +561,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
       <div
         class="wrapper"
         data-v-212b7a0e=""
-        data-v-556740d4=""
       >
         <div
           class="t-slider t-slider--range"
@@ -608,7 +601,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-556740d4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -740,7 +732,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
-    data-v-556740d4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -852,7 +843,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-556740d4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1001,7 +991,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-556740d4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"
@@ -1210,7 +1199,6 @@ exports[`Slider > Slider mobileVue demo works fine 1`] = `
   </div>
   <div
     class="tdesign-mobile-demo-block"
-    data-v-556740d4=""
   >
     <div
       class="tdesign-mobile-demo-block__header"

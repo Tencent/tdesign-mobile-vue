@@ -16,6 +16,7 @@ actionSheet | Object | - | 动作面板全局配置。TS 类型：`ActionSheetCo
 calendar | Object | - | 日历组件全局配置。TS 类型：`CalendarConfig` | N
 cascader | Object | - | 级联选择器全局配置。TS 类型：`CascaderConfig` | N
 classPrefix | String | t | CSS 类名前缀 | N
+comment | Object | - | 评论组件全局配置。TS 类型：`CommentConfig` | N
 dateTimePicker | Object | - | 时间选择器全局配置。TS 类型：`DateTimePickerConfig` | N
 dropdownMenu | Object | - | 下拉菜单全局配置。TS 类型：`DropdownMenuConfig` | N
 form | Object | - | 表单组件全局配置。TS 类型：`FormConfig` | N
@@ -52,6 +53,14 @@ weekdays | Array | - | 星期文本描述，默认值：['日', '一', '二', '�
 -- | -- | -- | -- | --
 placeholder | String | - | 语言配置，未选中时的提示文案“选择选项”描述文本 | N
 title | String | - | 语言配置，组件标题“选择地址”描述文本 | N
+
+### CommentConfig
+
+名称 | 类型 | 默认值 | 描述 | 必传
+-- | -- | -- | -- | --
+collapseText | String | - | 语言配置，“收起”描述文本 | N
+collapsedText | String | - | 语言配置，折叠状态下“展开回复”描述文本 | N
+expandMoreText | String | - | 语言配置，半展开状态下“展开更多回复”描述文本 | N
 
 ### DateTimePickerConfig
 

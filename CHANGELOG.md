@@ -5,6 +5,62 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.17.0 `2026-10-29`
+
+### 🚀 Features
+
+- `Comment`: 新增 `Comment` 评论组件 @boomLL ([#2376](https://github.com/Tencent/tdesign-mobile-vue/pull/2376))
+- `CheckboxGroup`: 新增 `direction` 属性，表示复选框按钮排列方式 @anlyyao ([#2337](https://github.com/Tencent/tdesign-mobile-vue/pull/2337))
+- `DropdownItem`: 新增 `keepLabelActive` 属性， 表示标题是否保持高亮（含菜单收起态），仅多选场景生效 @anlyyao ([#2372](https://github.com/Tencent/tdesign-mobile-vue/pull/2372))
+- `Form`: 
+  - `FormProps` 支持 `FormData` 泛型 @anlyyao ([#2344](https://github.com/Tencent/tdesign-mobile-vue/pull/2344))
+  - 新增 `readonly` 和 `id` 属性 @anlyyao ([#2388](https://github.com/Tencent/tdesign-mobile-vue/pull/2388))
+- `Guide`: 新增 `hideBack` 属性，可隐藏最后一步的「返回」按钮 @anlyyao ([#2340](https://github.com/Tencent/tdesign-mobile-vue/pull/2340))
+- `Overlay`: 新增 onOpen / onOpened / onClose / onClosed 过渡事件 @anlyyao ([#2340](https://github.com/Tencent/tdesign-mobile-vue/pull/2340))
+- `RadioGroup`: 新增 `direction` 属性，表示单选框按钮排列方式 @anlyyao ([#2337](https://github.com/Tencent/tdesign-mobile-vue/pull/2337))
+- `SwipeCell`: 新增 `dragstart` 和 `dragend` 事件 @liweijie0812 ([#2345](https://github.com/Tencent/tdesign-mobile-vue/pull/2345))
+
+### 🐞 Bug Fixes
+
+- `ActionSheet`: 支持列表项超出滚动 @Jesse205 ([common#2742](https://github.com/Tencent/tdesign-common/pull/2742))
+- `Button`: 修复短按时无悬浮样式 @Jesse205 ([#2322](https://github.com/Tencent/tdesign-mobile-vue/pull/2322))
+- `Collapse`: 修复面板展开时底部线框样式错误 @anlyyao ([#2323](https://github.com/Tencent/tdesign-mobile-vue/pull/2323))
+- `Dialog`: 修复在关闭后无法移除根元素 @Jesse205 ([#2357](https://github.com/Tencent/tdesign-mobile-vue/pull/2357))
+- `Form`: 
+  - 修复全局 `requiredMarkPosition` 配置不生效 @Jesse205 ([#2325](https://github.com/Tencent/tdesign-mobile-vue/pull/2325))
+  - 修正 `setValidateMessage` 误引用全局 `FormData` 类型 @anlyyao ([#2344](https://github.com/Tencent/tdesign-mobile-vue/pull/2344))
+  - 表单项右侧箭头颜色随主题自适应 @yzh1002 ([#2364](https://github.com/Tencent/tdesign-mobile-vue/pull/2364))
+  - 调整 `FormItem` 结构使 `arrow` 仅与标签和输入框居中对齐 @anlyyao ([#2385](https://github.com/Tencent/tdesign-mobile-vue/pull/2385))
+  - 修复 `contentAlign` 属性无效 @anlyyao ([#2388](https://github.com/Tencent/tdesign-mobile-vue/pull/2388))
+- `Input`: 
+  - 修复 `password` 类型输入框 `placeholder` 被字间距拉伸 @anlyyao ([common#2718](https://github.com/Tencent/tdesign-common/pull/2718))
+  - 移除 JS focus() 聚焦逻辑，改用原生 `autofocus` @Runc2333 ([#1874](https://github.com/Tencent/tdesign-mobile-vue/pull/1874))
+- `PullDownRefresh`: 
+  - 修复下拉过快导致不触发刷新 @Jesse205 ([#2375](https://github.com/Tencent/tdesign-mobile-vue/pull/2375))
+  - 修复 `disabled` 为 `false` 时，仍能触发下拉刷新问题 @boomLL ([#2374](https://github.com/Tencent/tdesign-mobile-vue/pull/2374))
+- `Rate`: 
+  - 修复深色模式下的提示文本颜色 @liweijie0812 ([common#2706](https://github.com/Tencent/tdesign-common/pull/2706))
+  - 修复评分提示层被相邻 `Slider` 滑块遮挡的问题 @dvd233 ([common#2737](https://github.com/Tencent/tdesign-common/pull/2737))
+- `Slider`: 修复胶囊模式下滑轨圆角样式错误 @anlyyao ([common#2736](https://github.com/Tencent/tdesign-common/pull/2736))
+- `Tag`: 修复圆角样式值错误 @anlyyao ([common#2716](https://github.com/Tencent/tdesign-common/pull/2716))
+- `Textarea`: 
+  - 修复 `placeholder` 占位内容字号错误 @anlyyao ([common#2717](https://github.com/Tencent/tdesign-common/pull/2717))
+  - 移除 JS focus() 聚焦逻辑，改用原生 `autofocus` @Runc2333 ([#1874](https://github.com/Tencent/tdesign-mobile-vue/pull/1874))
+- `TreeSelect`: 修复 `keys.children` 配置子节点字段别名不生效的问题。 @dvd233 ([#2359](https://github.com/Tencent/tdesign-mobile-vue/pull/2359))
+
+### 📈 Performance
+
+- `Dialog`: plugin 模式移除写死的 zIndex 默认值（原 2500），层级统一由样式表提供（@z-index-popup = 1500） @anlyyao ([#2340](https://github.com/Tencent/tdesign-mobile-vue/pull/2340))
+- `DropdownMenu`: 
+  - 规范层级默认值，由 11600 调整为 1600，由样式表提供（@z-index-dropdown-menu = 1600） @anlyyao ([#2340](https://github.com/Tencent/tdesign-mobile-vue/pull/2340))
+  - 改用 `Popup` 的 `opened/closed` 事件替代定时器控制关闭时机，确保关闭时机与动画实际结束对齐 @anlyyao ([#2350](https://github.com/Tencent/tdesign-mobile-vue/pull/2350))
+- `Message`: 规范层级默认值，由 15000 调整为 5000，由样式表提供（@z-index-message = 5000） @anlyyao ([#2340](https://github.com/Tencent/tdesign-mobile-vue/pull/2340))
+- `Overlay`: zIndex 移除内联默认值 1000，层级改由样式表 @z-index-overlay（1000）提供 @anlyyao ([#2340](https://github.com/Tencent/tdesign-mobile-vue/pull/2340))
+- `Popup`: 规范层级默认值，由 11500 调整为 1500，由样式表提供（@z-index-popup = 1500） @anlyyao ([#2340](https://github.com/Tencent/tdesign-mobile-vue/pull/2340))
+- `Toast`: 规范层级默认值，由 12001 调整为 2000，由样式表提供（@z-index-toast = 2000） @anlyyao ([#2340](https://github.com/Tencent/tdesign-mobile-vue/pull/2340))
+- `Style`: 修正灰阶色值。深色主题：`--td-gray-color-11` 由 `#383838` 修正为 `#393939`；浅色主题：`--td-gray-color-3` 由 `#e7e7e7` 修正为 `#e8e8e8`，`--td-gray-color-4` 由 `#dcdcdc` 修正为 `#ddd`，`--td-gray-color-5` 由 `#c5c5c5` 修正为 `#c6c6c6`，`--td-gray-color-11` 由 `#383838` 修正为 `#393939` @anlyyao ([common#2715](https://github.com/Tencent/tdesign-common/pull/2715))
+- `Build`: 升级  @typescript/native-preview 至 7.0.0-dev.20260707.2 并移除声明构建配置中的 `@/*` 路径别名，修复发布后类型提示降级为 any 的问题 @anlyyao ([#2331](https://github.com/Tencent/tdesign-mobile-vue/pull/2331))
+
 ## 🌈 1.16.2 `2026-09-10`
 
 ### 🚀 Features

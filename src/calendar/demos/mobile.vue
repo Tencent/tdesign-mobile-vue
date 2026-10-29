@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Calendar 日历</h1>
-    <p class="summary">按照日历形式展示数据或日期的容器</p>
+    <p class="summary">按照日历形式展示数据或日期的容器。</p>
 
     <tdesign-demo-block title="01 组件类型" summary="基础日历">
       <div class="Calendar-demo">

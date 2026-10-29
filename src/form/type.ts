@@ -6,7 +6,7 @@
 
 import { IsEmailOptions } from 'validator/es/lib/isEmail';
 import { IsURLOptions } from 'validator/es/lib/isURL';
-import { TNode, FormResetEvent, FormSubmitEvent } from '../common';
+import type { TNode, FormResetEvent, FormSubmitEvent } from '../common';
 
 export interface TdFormProps<FormData extends Data = Data> {
   /**
@@ -33,6 +33,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    */
   errorMessage?: FormErrorMessage;
   /**
+   * 表单原生的id属性，支持用于配合非表单内的按钮通过form属性来触发表单事件
+   */
+  id?: string;
+  /**
    * 表单字段标签对齐方式：左对齐、右对齐、顶部对齐
    * @default right
    */
@@ -47,6 +51,10 @@ export interface TdFormProps<FormData extends Data = Data> {
    * @default true
    */
   preventSubmitDefault?: boolean;
+  /**
+   * 是否整个表单只读
+   */
+  readonly?: boolean;
   /**
    * 是否显示必填符号（*），默认显示
    */
@@ -127,8 +135,7 @@ export interface TdFormItemProps {
    */
   arrow?: boolean;
   /**
-   * 表单内容对齐方式：左对齐、右对齐
-   * @default left
+   * 表单内容对齐方式：左对齐、右对齐，优先级高于 Form.contentAlign
    */
   contentAlign?: 'left' | 'right';
   /**
@@ -241,7 +248,7 @@ export interface FormRule {
    */
   url?: boolean | IsURLOptions;
   /**
-   * 自定义校验规则，示例：`{ validator: (val) => val.length > 0, message: '请输入内容'}`
+   * 自定义校验规则，context 中 formData 为当前完整表单值，name为该字段的标识，示例：`{ validator: (val) => val.length > 0, message: '请输入内容'}`
    */
   validator?: CustomValidator;
   /**
@@ -368,7 +375,7 @@ export interface FormValidateParams {
   trigger?: ValidateTriggerType;
 }
 
-export type ValidateTriggerType = 'blur' | 'change' | 'all';
+export type ValidateTriggerType = 'blur' | 'change' | 'submit' | 'all';
 
 export type Data = { [key: string]: any };
 
@@ -378,7 +385,10 @@ export interface IsDateOptions {
   delimiters: string[];
 }
 
-export type CustomValidator = (val: ValueType) => CustomValidateResolveType | Promise<CustomValidateResolveType>;
+export type CustomValidator = (
+  val: ValueType,
+  context?: { formData: Data; name: string },
+) => CustomValidateResolveType | Promise<CustomValidateResolveType>;
 
 export type CustomValidateResolveType = boolean | CustomValidateObj;
 

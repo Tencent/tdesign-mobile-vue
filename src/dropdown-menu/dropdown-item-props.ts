@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdDropdownItemProps } from '../dropdown-menu/type';
+import { TdDropdownItemProps } from './type';
 import { PropType } from 'vue';
 
 export default {
@@ -19,6 +19,8 @@ export default {
     type: [Array, Function] as PropType<TdDropdownItemProps['icon']>,
     default: undefined as TdDropdownItemProps['icon'],
   },
+  /** 是否保持标题高亮（含菜单收起态），仅多选场景生效 */
+  keepLabelActive: Boolean,
   /** 用来定义 value / label / disabled 在 `options` 中对应的字段别名 */
   keys: {
     type: Object as PropType<TdDropdownItemProps['keys']>,

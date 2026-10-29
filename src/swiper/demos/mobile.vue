@@ -33,16 +33,19 @@ import control from './control.vue';
 import vertical from './vertical.vue';
 import outside from './outside.vue';
 import current from './current.vue';
+import card from './card.vue';
 </script>
 
 <style lang="less">
 html,
 body {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
+
 .t-swiper {
   margin-bottom: 24px;
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="tdesign-mobile-demo">
     <h1 class="title">Button 按钮</h1>
-    <p class="summary">按钮用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。</p>
+    <p class="summary">用于开启一个闭环的操作任务，如“删除”对象、“购买”商品等。</p>
     <tdesign-demo-block title="01 组件类型" summary="基础按钮">
       <BaseButtonDemo />
     </tdesign-demo-block>
@@ -52,8 +52,9 @@ import shapeDemo from './shape.vue';
 import themeDemo from './theme.vue';
 </script>
 
-<style scoped>
+<style lang="less">
+.tdesign-demo-topnav,
 .tdesign-mobile-demo {
-  background-color: #fff;
+  background-color: var(--td-bg-color-container);
 }
 </style>

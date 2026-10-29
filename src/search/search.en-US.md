@@ -12,7 +12,7 @@ center | Boolean | false | \- | N
 clearTrigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean | true | \- | N
 cursorColor | String | #0052d9 | `1.12.2` | N
-disabled | Boolean | - | \- | N
+disabled | Boolean | undefined | make search to be disabled. Priority: Search.disabled > Form.disabled | N
 focus | Boolean | false | \- | N
 leftIcon | String / Slot / Function | 'search' | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | The maximum number of characters that the user can enter. One Chinese character represents two characters in length. Use either `maxcharacter` or `maxlength` | N

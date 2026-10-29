@@ -118,7 +118,7 @@ exports[`Watermark > Watermark mobileVue demo works fine 1`] = `
       <p
         class="tdesign-mobile-demo-block__summary"
       >
-        文本水印
+        文字水印
       </p>
     </div>
     <div

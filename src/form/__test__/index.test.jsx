@@ -8,7 +8,7 @@ import Input from '../../input';
 import { ConfigProvider } from '../../config-provider';
 import Radio, { RadioGroup } from '../../radio';
 import config from '../../config';
-import { useFormDisabled } from '../hooks';
+import { useFormDisabled, useReadonly } from '../hooks';
 
 const { prefix } = config;
 
@@ -90,6 +90,20 @@ describe('form', () => {
       expect(input.element.hasAttribute('disabled')).toBeFalsy();
       await wrapper.setProps({ disabled: true });
       expect(input.element.hasAttribute('disabled')).toBeTruthy();
+    });
+
+    it(':id', async () => {
+      const form = wrapper.find('form');
+      expect(form.element.hasAttribute('id')).toBeFalsy();
+      await wrapper.setProps({ id: 'my-form' });
+      expect(form.element.getAttribute('id')).toBe('my-form');
+    });
+
+    it(':readonly', async () => {
+      const input = wrapper.find('input');
+      expect(input.element.hasAttribute('readonly')).toBeFalsy();
+      await wrapper.setProps({ readonly: true });
+      expect(input.element.hasAttribute('readonly')).toBeTruthy();
     });
 
     it(':resetType', async () => {
@@ -395,11 +409,11 @@ describe('form', () => {
       it('type', async () => {
         rules.value = { name: [{ required: true, type: 'error' }] };
         await validate();
-        expect(form.find(`.${prefix}-form__controls`).classes(`${name}__item--error`)).toBeTruthy();
+        expect(form.find(`.${prefix}-form__item-tips`).classes(`${name}__item--error`)).toBeTruthy();
 
         rules.value = { name: [{ required: true, type: 'warning' }] };
         await validate();
-        expect(form.find(`.${prefix}-form__controls`).classes(`${name}__item--warning`)).toBeTruthy();
+        expect(form.find(`.${prefix}-form__item-tips`).classes(`${name}__item--warning`)).toBeTruthy();
       });
       it('url', async () => {
         rules.value = { name: [{ url: true }] };
@@ -590,14 +604,14 @@ describe('form', () => {
     it('setValidateMessage', async () => {
       await form.vm.$.exposed.validate();
       expect(wrapper.findAll(`.${name}__item-extra`)[0].text()).eq('姓名必填');
-      expect(wrapper.findAll(`.${name}__controls`)[0].classes(`${name}__item--error`)).toBeTruthy();
+      expect(wrapper.findAll(`.${name}__item-tips`)[0].classes(`${name}__item--error`)).toBeTruthy();
 
       form.vm.$.exposed.setValidateMessage({
         name: [{ type: 'warning', message: '自定义用户名校验信息提示' }],
       });
       await nextTick();
       expect(wrapper.findAll(`.${name}__item-extra`)[0].text()).eq('自定义用户名校验信息提示');
-      expect(wrapper.findAll('.t-form__controls')[0].classes(`${name}__item--warning`)).toBeTruthy();
+      expect(wrapper.findAll('.t-form__item-tips')[0].classes(`${name}__item--warning`)).toBeTruthy();
     });
 
     it('reset', async () => {
@@ -702,6 +716,36 @@ describe('form', () => {
       await wrapper.setProps({ disabled: true });
       extendedDisabled.value = false;
       expect(actualDisabled.value).toBeFalsy();
+    });
+
+    it('useReadonly', async () => {
+      const extendedReadonly = ref(false);
+      let actualReadonly = ref(false);
+
+      const wrapper = mount(Form, {
+        props: {
+          readonly: false,
+        },
+        slots: {
+          default: {
+            setup() {
+              actualReadonly = useReadonly(extendedReadonly);
+              return () => null;
+            },
+          },
+        },
+      });
+
+      expect(actualReadonly.value).toBeFalsy();
+
+      // 组件组优先级高于表单
+      extendedReadonly.value = true;
+      expect(actualReadonly.value).toBeTruthy();
+
+      // 组件组为 false 时，以组件组的值为准
+      await wrapper.setProps({ readonly: true });
+      extendedReadonly.value = false;
+      expect(actualReadonly.value).toBeFalsy();
     });
   });
 });
