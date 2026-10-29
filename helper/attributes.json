@@ -221,75 +221,87 @@
   },
   "t-table/bordered": {
     "type": "Boolean",
-    "description": "show table bordered\n\n是否显示表格边框\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "show table bordered\n\n是否显示表格边框\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/cell-empty-content": {
     "type": "String|TNode",
-    "description": "单元格数据为空时呈现的内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "单元格数据为空时呈现的内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/columns": {
     "type": "Array",
-    "description": "table column configs\n\n列配置，泛型 T 指表格数据类型\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "table column configs\n\n列配置，泛型 T 指表格数据类型\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/data": {
     "type": "Array",
-    "description": "table data\n\n数据源，泛型 T 指表格数据类型\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "table data\n\n数据源，泛型 T 指表格数据类型\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/empty": {
     "type": "String|TNode",
-    "description": "empty text or empty element\n\n空表格呈现样式，支持全局配置 `GlobalConfigProvider`\n\ndefault: ''\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "empty text or empty element\n\n空表格呈现样式，支持全局配置 `GlobalConfigProvider`\n\ndefault: ''\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/fixed-rows": {
     "type": "Array",
-    "description": "固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/footer-summary": {
     "type": "String|TNode",
-    "description": "footer summary content\n\n表尾总结行\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "footer summary content\n\n表尾总结行\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/height": {
     "type": "String|Number",
-    "description": "table height\n\n表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "table height\n\n表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/loading": {
     "type": "Boolean|TNode",
-    "description": "loading state table\n\n加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "loading state table\n\n加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/loading-mode": {
+    "type": "String",
+    "options": [
+      "pull-refresh",
+      "pagination"
+    ],
+    "description": "Data Loading Mode\n\n数据加载模式\n\ndefault: pull-refresh\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/loading-props": {
     "type": "Object",
-    "description": "透传加载组件全部属性\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "透传加载组件全部属性\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/max-height": {
     "type": "String|Number",
-    "description": "table max height\n\n表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "table max height\n\n表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/pagination": {
+    "type": "Object",
+    "description": "you can use all props of pagination component with paginationProps\n\n分页配置，值为空则不显示。具体 API 参考分页组件。当 `data` 数据长度超过分页大小时，会自动对本地数据 `data` 进行排序，如果不希望对于 `data` 进行排序，可以设置 `disableDataPage = true`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/row-attributes": {
     "type": "Object|Array|Function",
-    "description": "`tr` attributes\n\nHTML 标签 `tr` 的属性。类型为 Function 时，参数说明：`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body` 表示属性作用于 `tbody` 中的元素；`params.type=foot` 表示属性作用于 `tfoot` 中的元素。<br />示例一：{ draggable: true }，<br />示例二：[{ draggable: true }, { title: '超出省略显示' }]。<br /> 示例三：() => [{ draggable: true }]\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "`tr` attributes\n\nHTML 标签 `tr` 的属性。类型为 Function 时，参数说明：`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body` 表示属性作用于 `tbody` 中的元素；`params.type=foot` 表示属性作用于 `tfoot` 中的元素。<br />示例一：{ draggable: true }，<br />示例二：[{ draggable: true }, { title: '超出省略显示' }]。<br /> 示例三：() => [{ draggable: true }]\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/row-class-name": {
     "type": "String|Object|Array|Function",
-    "description": "table `th` classname\n\n行类名，泛型 T 指表格数据类型。`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body`  表示类名作用于 `tbody` 中的元素；`params.type= tfoot` 表示类名作用于 `tfoot` 中的元素\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "table `th` classname\n\n行类名，泛型 T 指表格数据类型。`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body`  表示类名作用于 `tbody` 中的元素；`params.type= tfoot` 表示类名作用于 `tfoot` 中的元素\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/row-key": {
     "type": "String",
-    "description": "unique key for each row data\n\n唯一标识一行数据的字段名，来源于 `data` 中的字段。如果是字段嵌套多层，可以设置形如 `item.a.id` 的方法\n\ndefault: 'id'\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "unique key for each row data\n\n唯一标识一行数据的字段名，来源于 `data` 中的字段。如果是字段嵌套多层，可以设置形如 `item.a.id` 的方法\n\ndefault: 'id'\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/rowspan-and-colspan": {
     "type": "Function",
-    "description": "rowspan and colspan\n\n用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "rowspan and colspan\n\n用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/show-header": {
     "type": "Boolean",
-    "description": "show table header\n\n是否显示表头\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "show table header\n\n是否显示表头\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/stripe": {
     "type": "Boolean",
-    "description": "show stripe style\n\n是否显示斑马纹\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "show stripe style\n\n是否显示斑马纹\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/table-content-width": {
     "type": "String",
-    "description": "表格内容的总宽度，注意不是表格可见宽度。主要应用于 `table-layout: auto` 模式下的固定列显示。`tableContentWidth` 内容宽度的值必须大于表格可见宽度\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "表格内容的总宽度，注意不是表格可见宽度。主要应用于 `table-layout: auto` 模式下的固定列显示。`tableContentWidth` 内容宽度的值必须大于表格可见宽度\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/table-layout": {
     "type": "String",
@@ -297,7 +309,7 @@
       "auto",
       "fixed"
     ],
-    "description": "table-layout css properties, [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout). set value to be `fixed` on `resizable=true` please\n\n表格布局方式\n\ndefault: fixed\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "table-layout css properties, [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout). set value to be `fixed` on `resizable=true` please\n\n表格布局方式\n\ndefault: fixed\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/vertical-align": {
     "type": "String",
@@ -306,23 +318,23 @@
       "middle",
       "bottom"
     ],
-    "description": "vertical align\n\n行内容上下方向对齐\n\ndefault: middle\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-props)"
+    "description": "vertical align\n\n行内容上下方向对齐\n\ndefault: middle\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
   },
   "t-table/cell-click": {
     "type": "event",
-    "description": "trigger on cell clicked\n\n单元格点击时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-events)"
+    "description": "trigger on cell clicked\n\n单元格点击时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
   },
   "t-table/row-click": {
     "type": "event",
-    "description": "trigger on row click\n\n行点击时触发，泛型 T 指表格数据类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-events)"
+    "description": "trigger on row click\n\n行点击时触发，泛型 T 指表格数据类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
   },
   "t-table/scroll": {
     "type": "event",
-    "description": "trigger on table content scroll\n\n表格内容滚动时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-events)"
+    "description": "trigger on table content scroll\n\n表格内容滚动时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
   },
   "t-table/scroll-to-bottom": {
     "type": "event",
-    "description": "表格内容滚动到底部时触发，可用于实现滚动加载\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#basetable-events)"
+    "description": "表格内容滚动到底部时触发，可用于实现滚动加载\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
   },
   "t-button/block": {
     "type": "Boolean",
@@ -336,9 +348,17 @@
     "type": "Boolean",
     "description": "disable the button, make it can not be clicked\n\n禁用状态。优先级：Button.disabled > Form.disabled\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/button?tab=api#button-props)"
   },
+  "t-button/form": {
+    "type": "String",
+    "description": " native `form` attribute，which supports triggering events for a form with a specified id through the use of the form attribute\n\n原生的form属性，支持用于通过 form 属性触发对应 id 的 form 的表单事件\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/button?tab=api#button-props)"
+  },
   "t-button/ghost": {
     "type": "Boolean",
     "description": "make background-color to be transparent\n\n是否为幽灵按钮（镂空按钮）\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/button?tab=api#button-props)"
+  },
+  "t-button/href": {
+    "type": "String",
+    "description": "跳转地址。href 存在时，按钮标签默认使用 `<a>` 渲染；如果指定了 `tag` 则使用指定的标签渲染\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/button?tab=api#button-props)"
   },
   "t-button/icon": {
     "type": "TNode",
@@ -375,6 +395,15 @@
   "t-button/suffix": {
     "type": "TNode",
     "description": "右侧内容，可用于定义右侧图标\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/button?tab=api#button-props)"
+  },
+  "t-button/tag": {
+    "type": "String",
+    "options": [
+      "button",
+      "a",
+      "div"
+    ],
+    "description": "HTML Tag Element\n\n渲染按钮的 HTML 标签，默认使用标签 `<button>` 渲染，可以自定义为 `<a>` `<div>` 等。透传全部 HTML 属性，如：`href/target/data-*` 等。⚠️ 禁用按钮 `<button disabled>`无法显示 Popup 浮层信息，可通过修改 `tag=div` 解决这个问题\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/button?tab=api#button-props)"
   },
   "t-button/theme": {
     "type": "String",
@@ -503,6 +532,18 @@
     "type": "Boolean|TNode",
     "description": "关闭按钮\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
   },
+  "t-cascader/filter": {
+    "type": "Function",
+    "description": " 自定义过滤函数。返回 true 表示匹配，未设置时使用内置匹配规则：对路径中所有 label 拼接后做大小写不敏感的 includes 匹配\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
+  },
+  "t-cascader/filter-placeholder": {
+    "type": "String",
+    "description": "搜索框占位符描述文本\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
+  },
+  "t-cascader/filterable": {
+    "type": "Boolean",
+    "description": "是否可搜索，开启后顶部会展示一个搜索框 \n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
+  },
   "t-cascader/header": {
     "type": "TNode",
     "description": "头部\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
@@ -528,8 +569,8 @@
     "description": "遮罩层的属性，透传至 overlay\n\ndefault: {}\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
   },
   "t-cascader/placeholder": {
-    "type": "String|TNode",
-    "description": "未选中时的提示文案\n\ndefault: '选择选项'\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
+    "type": "String",
+    "description": "未选中时的提示文案。组件内置默认值为：'选择选项'\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
   },
   "t-cascader/sub-titles": {
     "type": "Array",
@@ -780,6 +821,14 @@
     "type": "Boolean",
     "description": "是否开启无边框模式。优先级低于 Checkbox.borderless\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/checkbox?tab=api#checkboxgroup-props)"
   },
+  "t-checkbox-group/direction": {
+    "type": "String",
+    "options": [
+      "vertical",
+      "horizontal"
+    ],
+    "description": "Radio option arrangement\n\n复选框按钮排列方式\n\ndefault: vertical\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/checkbox?tab=api#checkboxgroup-props)"
+  },
   "t-checkbox-group/disabled": {
     "type": "Boolean",
     "description": "是否禁用组件。优先级：Form.disabled < CheckboxGroup.disabled < Checkbox.disabled\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/checkbox?tab=api#checkboxgroup-props)"
@@ -956,6 +1005,34 @@
     "type": "event",
     "description": "调色板控制器的值变化时触发，`context.color` 指调色板控制器的值\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-events)"
   },
+  "t-comment/actions": {
+    "type": "event",
+    "description": "点击任一操作项（如回复/点赞/不喜欢）时触发并返回当前操作项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-events)"
+  },
+  "t-comment/author": {
+    "type": "String|TNode",
+    "description": "作者\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
+  },
+  "t-comment/avatar": {
+    "type": "String|Object|TNode",
+    "description": "头像\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
+  },
+  "t-comment/content": {
+    "type": "String|TNode",
+    "description": "内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
+  },
+  "t-comment/datetime": {
+    "type": "String|TNode",
+    "description": "时间\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
+  },
+  "t-comment/folds": {
+    "type": "event",
+    "description": "用户点击“展开回复/收起”时触发，并返回点击后的 fold 配置\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-events)"
+  },
+  "t-comment/reply": {
+    "type": "String|TNode",
+    "description": "回复\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/comment?tab=api#comment-props)"
+  },
   "t-config-provider/global-config": {
     "type": "Object",
     "description": "global config\n\n全局配置\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/config-provider?tab=api#configprovider-props)"
@@ -1010,13 +1087,9 @@
     "type": "event",
     "description": "倒计时结束时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/count-down?tab=api#countdown-events)"
   },
-  "t-date-time-picker/auto-close": {
-    "type": "Boolean",
-    "description": "自动关闭；在确认、取消、点击遮罩层自动关闭，不需要手动设置 visible\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
-  },
   "t-date-time-picker/cancel-btn": {
     "type": "String",
-    "description": "取消按钮文字\n\ndefault: 取消\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
+    "description": "取消按钮文字\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
   },
   "t-date-time-picker/confirm-btn": {
     "type": "String",
@@ -1026,21 +1099,17 @@
     "type": "String|Number",
     "description": "选择器的最大可选时间，默认为当前时间+10年\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
   },
-  "t-date-time-picker/filter": {
-    "type": "Function",
-    "description": "列选项过滤函数，支持自定义列内容。(type 值可为: year, month, date, hour, minute, second)\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
-  },
   "t-date-time-picker/footer": {
     "type": "TNode",
     "description": "底部内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
   },
   "t-date-time-picker/format": {
     "type": "String",
-    "description": "用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss' [详细文档](https://day.js.org/docs/en/display/format)\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
+    "description": "用于格式化 pick、change、confirm 事件返回的值，全局配置默认为：'YYYY-MM-DD HH:mm:ss'。当值为 'time-stamp' 时，表示事件参数与 v-model 返回毫秒级时间戳数值（number） [详细文档](https://day.js.org/docs/en/display/format)\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
   },
   "t-date-time-picker/header": {
-    "type": "Boolean|TNode",
-    "description": "头部内容。值为 true 显示空白头部，值为 false 不显示任何内容\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
+    "type": "TNode",
+    "description": "头部内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
   },
   "t-date-time-picker/mode": {
     "type": "String|Array",
@@ -1064,11 +1133,7 @@
   },
   "t-date-time-picker/title": {
     "type": "String",
-    "description": "title of picker\n\n标题\n\ndefault: '选择时间'\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
-  },
-  "t-date-time-picker/use-popup": {
-    "type": "Boolean",
-    "description": "是否使用弹出层包裹\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
+    "description": "title of picker\n\n标题\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/date-time-picker?tab=api#datetimepicker-props)"
   },
   "t-date-time-picker/value": {
     "type": "String|Number",
@@ -1164,7 +1229,7 @@
   },
   "t-dialog/z-index": {
     "type": "Number",
-    "description": "对话框层级，Web 侧样式默认为 2500，移动端和小程序样式默认为 1500\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props)"
+    "description": "对话框层级，Web 侧样式默认为 2500，移动端样式默认 1500，小程序样式默认为 11500\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dialog?tab=api#dialog-props)"
   },
   "t-dialog/cancel": {
     "type": "event",
@@ -1215,10 +1280,6 @@
     ],
     "description": "分隔线类型有两种：水平和垂直\n\ndefault: horizontal\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/divider?tab=api#divider-props)"
   },
-  "t-divider/size": {
-    "type": "String|Number",
-    "description": "Spacing size\n\n间距大小\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/divider?tab=api#divider-props)"
-  },
   "t-drawer/attach": {
     "type": "String|Function",
     "description": "抽屉挂载的节点，默认挂在组件本身的位置。数据类型为 String 时，会被当作选择器处理，进行节点查询。示例：'body' 或 () => document.body\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/drawer?tab=api#drawer-props)"
@@ -1265,7 +1326,7 @@
   },
   "t-drawer/z-index": {
     "type": "Number",
-    "description": "抽屉层级，样式默认为 1500\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/drawer?tab=api#drawer-props)"
+    "description": "抽屉层级，Web 侧样式默认为 1500，移动端样式默认 1500，小程序样式默认为 11500\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/drawer?tab=api#drawer-props)"
   },
   "t-drawer/close": {
     "type": "event",
@@ -1290,6 +1351,10 @@
   "t-dropdown-item/icon": {
     "type": "Array|TNode",
     "description": "自定义菜单子项图标，值为 `undefined` 表示使用默认图标。[面板打开时的图标，面板关闭时的图标]\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
+  },
+  "t-dropdown-item/keep-label-active": {
+    "type": "Boolean",
+    "description": "是否保持标题高亮（含菜单收起态），仅多选场景生效\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-item?tab=api#dropdownitem-props)"
   },
   "t-dropdown-item/keys": {
     "type": "Object",
@@ -1373,7 +1438,7 @@
   },
   "t-dropdown-menu/z-index": {
     "type": "Number",
-    "description": "菜单栏 z-index 层级\n\ndefault: 11600\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownmenu-props)"
+    "description": "菜单栏 z-index 层级，默认为 1600\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/dropdown-menu?tab=api#dropdownmenu-props)"
   },
   "t-empty/action": {
     "type": "TNode",
@@ -1405,7 +1470,7 @@
   },
   "t-fab/magnet": {
     "type": "String|Boolean",
-    "description": "是否吸附。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/fab?tab=api#fab-props)"
+    "description": "是否吸附，仅在拖拽场景下生效。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/fab?tab=api#fab-props)"
   },
   "t-fab/style": {
     "type": "String|Object",
@@ -1559,7 +1624,7 @@
       "left",
       "right"
     ],
-    "description": "表单内容对齐方式，优先级高于 Form.contentAlign\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form?tab=api#formitem-props)"
+    "description": "表单内容对齐方式：左对齐、右对齐，优先级高于 Form.contentAlign\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form?tab=api#formitem-props)"
   },
   "t-form-item/for": {
     "type": "String",
@@ -1665,6 +1730,10 @@
   "t-guide/back-button-props": {
     "type": "Object",
     "description": "透传 返回按钮 的全部属性，示例：`{ content: '返回', theme: 'default' }`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
+  },
+  "t-guide/counter": {
+    "type": "TNode",
+    "description": "用于自定义渲染计数部分\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/guide?tab=api#guide-props)"
   },
   "t-guide/current": {
     "type": "Number",
@@ -1914,7 +1983,7 @@
   },
   "t-image-viewer/max-zoom": {
     "type": "Number",
-    "description": "【开发中】最大放大比例\n\ndefault: 3\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props)"
+    "description": "图片最大放大比例\n\ndefault: 3\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/image-viewer?tab=api#imageviewer-props)"
   },
   "t-image-viewer/show-index": {
     "type": "Boolean",
@@ -2497,7 +2566,7 @@
   },
   "t-overlay/z-index": {
     "type": "Number",
-    "description": "遮罩的层级\n\ndefault: 1000\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/overlay?tab=api#overlay-props)"
+    "description": "遮罩的层级，默认为 1000\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/overlay?tab=api#overlay-props)"
   },
   "t-overlay/click": {
     "type": "event",
@@ -2556,7 +2625,7 @@
     "description": "用来定义 value / label / disabled 在 `columns ` 中对应的字段别名\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/picker?tab=api#picker-props)"
   },
   "t-picker/option": {
-    "type": "TNode",
+    "type": "Function",
     "description": "自定义选项内容。参数为 `option: PickerColumnItem, index: number`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/picker?tab=api#picker-props)"
   },
   "t-picker/render-label": {
@@ -2706,7 +2775,7 @@
   },
   "t-popup/z-index": {
     "type": "Number",
-    "description": "组件层级，Web 侧样式默认为 5500，移动端和小程序样式默认为 1500\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/popup?tab=api#popup-props)"
+    "description": "组件层级，Web 侧样式默认为 5500，移动端默认为 1500，小程序端默认 11500\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/popup?tab=api#popup-props)"
   },
   "t-popup/close": {
     "type": "event",
@@ -2727,6 +2796,339 @@
   "t-popup/visible-change": {
     "type": "event",
     "description": "当浮层隐藏或显示时触发，trigger=document 表示点击弹出层元素触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/popup?tab=api#popup-events)"
+  },
+  "t-primary-table/columns": {
+    "type": "Array",
+    "description": "table column configs\n\n列配置，泛型 T 指表格数据类型\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/display-columns": {
+    "type": "Array",
+    "description": "列配置功能中，当前显示的列\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/display-columns": {
+    "type": "Array",
+    "description": "列配置功能中，当前显示的列\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/drag-sort": {
+    "type": "event",
+    "description": "trigger on drag sort\n\n拖拽排序时触发，`data` 表示排序前的数据，`newData` 表示拖拽排序结束后的新数据，`sort=row` 表示行拖拽事件触发，`sort=col` 表示列拖拽事件触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-table/drag-sort": {
+    "type": "event",
+    "description": "trigger on drag sort\n\n拖拽排序时触发，`data` 表示排序前的数据，`newData` 表示拖拽排序结束后的新数据，`sort=row` 表示行拖拽事件触发，`sort=col` 表示列拖拽事件触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/drag-sort-options": {
+    "type": "Object",
+    "description": "drag sort params\n\n拖拽排序扩展参数，具体参数见 [Sortable](https://github.com/SortableJS/Sortable)\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/drag-sort-options": {
+    "type": "Object",
+    "description": "drag sort params\n\n拖拽排序扩展参数，具体参数见 [Sortable](https://github.com/SortableJS/Sortable)\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/expand-icon": {
+    "type": "Boolean|TNode",
+    "description": "to show expand icon. expand icon is set in first column\n\n用于控制是否显示「展开图标列」，值为 `false` 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。`expandedRow` 存在时，该参数有效。支持全局配置 `GlobalConfigProvider`\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/expand-icon": {
+    "type": "Boolean|TNode",
+    "description": "to show expand icon. expand icon is set in first column\n\n用于控制是否显示「展开图标列」，值为 `false` 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。`expandedRow` 存在时，该参数有效。支持全局配置 `GlobalConfigProvider`\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/expand-on-row-click": {
+    "type": "Boolean",
+    "description": "expand row on click\n\n是否允许点击行展开\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/expand-on-row-click": {
+    "type": "Boolean",
+    "description": "expand row on click\n\n是否允许点击行展开\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/expanded-row": {
+    "type": "String|TNode",
+    "description": "table expanded row, to show more detail information\n\n展开行内容，泛型 T 指表格数据类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/expanded-row": {
+    "type": "String|TNode",
+    "description": "table expanded row, to show more detail information\n\n展开行内容，泛型 T 指表格数据类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/expanded-row-keys": {
+    "type": "Array",
+    "description": "expanded row keys, row key value is from data[rowKey]\n\n展开行\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/expanded-row-keys": {
+    "type": "Array",
+    "description": "expanded row keys, row key value is from data[rowKey]\n\n展开行\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/filter-icon": {
+    "type": "TNode",
+    "description": "filter icon\n\n自定义过滤图标，支持全局配置 `GlobalConfigProvider`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/filter-icon": {
+    "type": "TNode",
+    "description": "filter icon\n\n自定义过滤图标，支持全局配置 `GlobalConfigProvider`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/filter-row": {
+    "type": "String|TNode",
+    "description": "filter value\n\n自定义过滤状态行及清空筛选等\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/filter-row": {
+    "type": "String|TNode",
+    "description": "filter value\n\n自定义过滤状态行及清空筛选等\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/filter-value": {
+    "type": "Object",
+    "description": "filter value\n\n过滤数据的值\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/filter-value": {
+    "type": "Object",
+    "description": "filter value\n\n过滤数据的值\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/hide-sort-tips": {
+    "type": "Boolean",
+    "description": "hide sort tips\n\n隐藏排序文本提示，支持全局配置 `GlobalConfigProvider`，默认全局配置值为 `false`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/hide-sort-tips": {
+    "type": "Boolean",
+    "description": "hide sort tips\n\n隐藏排序文本提示，支持全局配置 `GlobalConfigProvider`，默认全局配置值为 `false`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/indeterminate-selected-row-keys": {
+    "type": "Array",
+    "description": "indeterminate selected row keys, row key is from data[rowKey]\n\n半选状态行。选中行请更为使用 `selectedRowKeys` 控制\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/indeterminate-selected-row-keys": {
+    "type": "Array",
+    "description": "indeterminate selected row keys, row key is from data[rowKey]\n\n半选状态行。选中行请更为使用 `selectedRowKeys` 控制\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/multiple-sort": {
+    "type": "Boolean",
+    "description": "support multiple column fields sort\n\n是否支持多列排序\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/multiple-sort": {
+    "type": "Boolean",
+    "description": "support multiple column fields sort\n\n是否支持多列排序\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/reserve-selected-row-on-paginate": {
+    "type": "Boolean",
+    "description": "Controls whether selected rows are retained across pagination. When enabled, selections persist across all pages, allowing batch operations on multi-page data. If set to `false`, selections are confined to the current page and do not extend to other pages.\n\n行选中功能，是否在分页时保留上一页选中结果不清空。分页场景下，会全选所有页数据，保留跨分页数据。值为 `false` 则表示全部选中操作停留在当前页，不跨分页。\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/reserve-selected-row-on-paginate": {
+    "type": "Boolean",
+    "description": "Controls whether selected rows are retained across pagination. When enabled, selections persist across all pages, allowing batch operations on multi-page data. If set to `false`, selections are confined to the current page and do not extend to other pages.\n\n行选中功能，是否在分页时保留上一页选中结果不清空。分页场景下，会全选所有页数据，保留跨分页数据。值为 `false` 则表示全部选中操作停留在当前页，不跨分页。\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/select-on-row-click": {
+    "type": "Boolean",
+    "description": "select row data on row click\n\n是否在点击整行时选中\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/select-on-row-click": {
+    "type": "Boolean",
+    "description": "select row data on row click\n\n是否在点击整行时选中\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/selected-row-keys": {
+    "type": "Array",
+    "description": "selected row keys, row key is from data[rowKey]\n\n选中行。半选状态行请更为使用 `indeterminateSelectedRowKeys` 控制\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/selected-row-keys": {
+    "type": "Array",
+    "description": "selected row keys, row key is from data[rowKey]\n\n选中行。半选状态行请更为使用 `indeterminateSelectedRowKeys` 控制\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/show-sort-column-bg-color": {
+    "type": "Boolean",
+    "description": "column shows sort bg color\n\n当前排序列是否显示背景色\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/show-sort-column-bg-color": {
+    "type": "Boolean",
+    "description": "column shows sort bg color\n\n当前排序列是否显示背景色\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/sort": {
+    "type": "Object|Array",
+    "description": "sort configs\n\n排序控制。sortBy 排序字段；descending 是否进行降序排列。值为数组时，表示正进行多字段排序\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/sort": {
+    "type": "Object|Array",
+    "description": "sort configs\n\n排序控制。sortBy 排序字段；descending 是否进行降序排列。值为数组时，表示正进行多字段排序\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/sort-icon": {
+    "type": "TNode",
+    "description": "sort icon\n\n自定义排序图标，支持全局配置 `GlobalConfigProvider`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-table/sort-icon": {
+    "type": "TNode",
+    "description": "sort icon\n\n自定义排序图标，支持全局配置 `GlobalConfigProvider`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/cell-click": {
+    "type": "event",
+    "description": "trigger on cell clicked\n\n单元格点击时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/change": {
+    "type": "event",
+    "description": "分页、排序、过滤等内容变化时触发，泛型 T 指表格数据类型，`currentData` 表示变化后的数据\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-table/change": {
+    "type": "event",
+    "description": "分页、排序、过滤等内容变化时触发，泛型 T 指表格数据类型，`currentData` 表示变化后的数据\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/column-change": {
+    "type": "event",
+    "description": "确认操作之前列配置发生变化时触发。`context.columns` 表示已选中的列；`context.currentColumn` 表示本次变化操作的列，值不存在表示全选操作；`context.type` 表示当前操作属于选中列或是取消列\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-table/column-change": {
+    "type": "event",
+    "description": "确认操作之前列配置发生变化时触发。`context.columns` 表示已选中的列；`context.currentColumn` 表示本次变化操作的列，值不存在表示全选操作；`context.type` 表示当前操作属于选中列或是取消列\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/data-change": {
+    "type": "event",
+    "description": "trigger on data changing\n\n本地数据排序导致 `data` 变化时触发，第一个参数指变化后的数据，第二个参数 `context.trigger` 表示触发本次变化的来源\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-table/data-change": {
+    "type": "event",
+    "description": "trigger on data changing\n\n本地数据排序导致 `data` 变化时触发，第一个参数指变化后的数据，第二个参数 `context.trigger` 表示触发本次变化的来源\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/display-columns-change": {
+    "type": "event",
+    "description": "确认列配置时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-table/display-columns-change": {
+    "type": "event",
+    "description": "确认列配置时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/expand-change": {
+    "type": "event",
+    "description": "trigger on expand row keys changing\n\n展开行发生变化时触发，泛型 T 指表格数据类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-table/expand-change": {
+    "type": "event",
+    "description": "trigger on expand row keys changing\n\n展开行发生变化时触发，泛型 T 指表格数据类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/filter-change": {
+    "type": "event",
+    "description": "trigger on filter value changing\n\n过滤参数发生变化时触发，泛型 T 指表格数据类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-table/filter-change": {
+    "type": "event",
+    "description": "trigger on filter value changing\n\n过滤参数发生变化时触发，泛型 T 指表格数据类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/select-change": {
+    "type": "event",
+    "description": "trigger on select changing\n\n选中行发生变化时触发，泛型 T 指表格数据类型。两个参数，第一个参数为选中行 keys，第二个参数为更多参数，具体如下：`type = uncheck` 表示当前行操作为「取消行选中」；`type = check` 表示当前行操作为「行选中」； `currentRowKey` 表示当前操作行的 rowKey 值； `currentRowData` 表示当前操作行的行数据\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-table/select-change": {
+    "type": "event",
+    "description": "trigger on select changing\n\n选中行发生变化时触发，泛型 T 指表格数据类型。两个参数，第一个参数为选中行 keys，第二个参数为更多参数，具体如下：`type = uncheck` 表示当前行操作为「取消行选中」；`type = check` 表示当前行操作为「行选中」； `currentRowKey` 表示当前操作行的 rowKey 值； `currentRowData` 表示当前操作行的行数据\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/sort-change": {
+    "type": "event",
+    "description": "trigger on sort changing\n\n排序发生变化时触发。其中 sortBy 表示当前排序的字段，sortType 表示排序的方式，currentDataSource 表示 sorter 排序后的结果，col 表示列配置。sort 值类型为数组时表示多字段排序\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-table/sort-change": {
+    "type": "event",
+    "description": "trigger on sort changing\n\n排序发生变化时触发。其中 sortBy 表示当前排序的字段，sortType 表示排序的方式，currentDataSource 表示 sorter 排序后的结果，col 表示列配置。sort 值类型为数组时表示多字段排序\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/bordered": {
+    "type": "Boolean",
+    "description": "show table bordered\n\n是否显示表格边框\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/cell-empty-content": {
+    "type": "String|TNode",
+    "description": "单元格数据为空时呈现的内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/data": {
+    "type": "Array",
+    "description": "table data\n\n数据源，泛型 T 指表格数据类型\n\ndefault: []\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/empty": {
+    "type": "String|TNode",
+    "description": "empty text or empty element\n\n空表格呈现样式，支持全局配置 `GlobalConfigProvider`\n\ndefault: ''\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/fixed-rows": {
+    "type": "Array",
+    "description": "固定行（冻结行），示例：[M, N]，表示冻结表头 M 行和表尾 N 行。M 和 N 值为 0 时，表示不冻结行\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/footer-summary": {
+    "type": "String|TNode",
+    "description": "footer summary content\n\n表尾总结行\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/height": {
+    "type": "String|Number",
+    "description": "table height\n\n表格高度，超出后会出现滚动条。示例：100,  '30%',  '300'。值为数字类型，会自动加上单位 px。如果不是绝对固定表格高度，建议使用 `maxHeight`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/loading": {
+    "type": "Boolean|TNode",
+    "description": "loading state table\n\n加载中状态。值为 `true` 会显示默认加载中样式，可以通过 Function 和 插槽 自定义加载状态呈现内容和样式。值为 `false` 则会取消加载状态\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/loading-mode": {
+    "type": "String",
+    "options": [
+      "pull-refresh",
+      "pagination"
+    ],
+    "description": "Data Loading Mode\n\n数据加载模式\n\ndefault: pull-refresh\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/loading-props": {
+    "type": "Object",
+    "description": "透传加载组件全部属性\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/max-height": {
+    "type": "String|Number",
+    "description": "table max height\n\n表格最大高度，超出后会出现滚动条。示例：100, '30%', '300'。值为数字类型，会自动加上单位 px\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/pagination": {
+    "type": "Object",
+    "description": "you can use all props of pagination component with paginationProps\n\n分页配置，值为空则不显示。具体 API 参考分页组件。当 `data` 数据长度超过分页大小时，会自动对本地数据 `data` 进行排序，如果不希望对于 `data` 进行排序，可以设置 `disableDataPage = true`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/row-attributes": {
+    "type": "Object|Array|Function",
+    "description": "`tr` attributes\n\nHTML 标签 `tr` 的属性。类型为 Function 时，参数说明：`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body` 表示属性作用于 `tbody` 中的元素；`params.type=foot` 表示属性作用于 `tfoot` 中的元素。<br />示例一：{ draggable: true }，<br />示例二：[{ draggable: true }, { title: '超出省略显示' }]。<br /> 示例三：() => [{ draggable: true }]\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/row-class-name": {
+    "type": "String|Object|Array|Function",
+    "description": "table `th` classname\n\n行类名，泛型 T 指表格数据类型。`params.row` 表示行数据；`params.rowIndex` 表示行下标；`params.type=body`  表示类名作用于 `tbody` 中的元素；`params.type= tfoot` 表示类名作用于 `tfoot` 中的元素\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/row-key": {
+    "type": "String",
+    "description": "unique key for each row data\n\n唯一标识一行数据的字段名，来源于 `data` 中的字段。如果是字段嵌套多层，可以设置形如 `item.a.id` 的方法\n\ndefault: 'id'\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/rowspan-and-colspan": {
+    "type": "Function",
+    "description": "rowspan and colspan\n\n用于自定义合并单元格，泛型 T 指表格数据类型。示例：`({ row, col, rowIndex, colIndex }) => { rowspan: 2, colspan: 3 }`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/show-header": {
+    "type": "Boolean",
+    "description": "show table header\n\n是否显示表头\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/stripe": {
+    "type": "Boolean",
+    "description": "show stripe style\n\n是否显示斑马纹\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/table-content-width": {
+    "type": "String",
+    "description": "表格内容的总宽度，注意不是表格可见宽度。主要应用于 `table-layout: auto` 模式下的固定列显示。`tableContentWidth` 内容宽度的值必须大于表格可见宽度\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/table-layout": {
+    "type": "String",
+    "options": [
+      "auto",
+      "fixed"
+    ],
+    "description": "table-layout css properties, [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout). set value to be `fixed` on `resizable=true` please\n\n表格布局方式\n\ndefault: fixed\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/vertical-align": {
+    "type": "String",
+    "options": [
+      "top",
+      "middle",
+      "bottom"
+    ],
+    "description": "vertical align\n\n行内容上下方向对齐\n\ndefault: middle\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-props)"
+  },
+  "t-primary-table/row-click": {
+    "type": "event",
+    "description": "trigger on row click\n\n行点击时触发，泛型 T 指表格数据类型\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/scroll": {
+    "type": "event",
+    "description": "trigger on table content scroll\n\n表格内容滚动时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
+  },
+  "t-primary-table/scroll-to-bottom": {
+    "type": "event",
+    "description": "表格内容滚动到底部时触发，可用于实现滚动加载\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table?tab=api#primarytable-events)"
   },
   "t-progress/color": {
     "type": "String|Object|Array",
@@ -2962,6 +3364,14 @@
   "t-radio-group/borderless": {
     "type": "Boolean",
     "description": "是否开启无边框模式；优先级低于 Radio\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/radio?tab=api#radiogroup-props)"
+  },
+  "t-radio-group/direction": {
+    "type": "String",
+    "options": [
+      "vertical",
+      "horizontal"
+    ],
+    "description": "Radio option arrangement\n\n单选框按钮排列方式\n\ndefault: vertical\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/radio?tab=api#radiogroup-props)"
   },
   "t-radio-group/disabled": {
     "type": "Boolean",
@@ -3567,8 +3977,8 @@
     "description": "是否循环播放\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/swiper?tab=api#swiper-props)"
   },
   "t-swiper/navigation": {
-    "type": "Object|TNode",
-    "description": "导航器全部配置\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/swiper?tab=api#swiper-props)"
+    "type": "Boolean|Object|TNode",
+    "description": "导航器全部配置\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/swiper?tab=api#swiper-props)"
   },
   "t-swiper/next-margin": {
     "type": "String|Number",
@@ -4129,7 +4539,7 @@
   },
   "t-upload/add-content": {
     "type": "String|TNode",
-    "description": "添加按钮内容。值为空，使用默认图标渲染；值为 slot 则表示使用插槽渲染；其他值无效\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props)"
+    "description": "添加按钮内容\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props)"
   },
   "t-upload/allow-upload-duplicate-file": {
     "type": "Boolean",
@@ -4154,6 +4564,10 @@
   "t-upload/disabled": {
     "type": "Boolean",
     "description": "make upload to be disabled\n\n是否禁用组件\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props)"
+  },
+  "t-upload/draggable": {
+    "type": "Boolean",
+    "description": "是否支持拖拽排序\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-props)"
   },
   "t-upload/files": {
     "type": "Array",
@@ -4246,6 +4660,14 @@
   "t-upload/click-upload": {
     "type": "event",
     "description": "点击上传区域时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-events)"
+  },
+  "t-upload/drag": {
+    "type": "event",
+    "description": "拖拽开始时触发，`context.file` 为拖拽文件\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-events)"
+  },
+  "t-upload/drop": {
+    "type": "event",
+    "description": "拖拽结束后触发，返回上传的文件列表（拖拽后的文件顺序）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/upload?tab=api#upload-events)"
   },
   "t-upload/fail": {
     "type": "event",
