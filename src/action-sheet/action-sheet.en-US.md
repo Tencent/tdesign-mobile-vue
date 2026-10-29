@@ -45,3 +45,4 @@ Name | Default Value | Description
 --td-action-sheet-dot-color | @text-color-disabled | -
 --td-action-sheet-dot-size | 8px | -
 --td-action-sheet-gap-color | @bg-color-page | -
+--td-action-sheet-max-height | 54% | -
