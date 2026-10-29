@@ -71,38 +71,9 @@
   },
   "t-table": {
     "attributes": [
-      "columns",
-      "display-columns",
-      "drag-sort",
-      "drag-sort-options",
-      "expand-icon",
-      "expand-on-row-click",
-      "expanded-row",
-      "expanded-row-keys",
-      "filter-icon",
-      "filter-row",
-      "filter-value",
-      "hide-sort-tips",
-      "indeterminate-selected-row-keys",
-      "multiple-sort",
-      "reserve-selected-row-on-paginate",
-      "select-on-row-click",
-      "selected-row-keys",
-      "show-sort-column-bg-color",
-      "sort",
-      "sort-icon",
-      "cell-click",
-      "change",
-      "column-change",
-      "data-change",
-      "display-columns-change",
-      "drag-sort",
-      "expand-change",
-      "filter-change",
-      "select-change",
-      "sort-change",
       "bordered",
       "cell-empty-content",
+      "columns",
       "data",
       "empty",
       "fixed-rows",
@@ -127,7 +98,7 @@
       "scroll",
       "scroll-to-bottom"
     ],
-    "description": "PrimaryTable\n\n主表格\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table)"
+    "description": "BaseTable\n\n基础表格\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/table)"
   },
   "t-button": {
     "attributes": [
