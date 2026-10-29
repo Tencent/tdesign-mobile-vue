@@ -3,13 +3,6 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Comment from '../comment';
 
-// Mock ResizeObserver for jsdom
-global.ResizeObserver = vi.fn().mockImplementation(() => ({
-  observe: vi.fn(),
-  disconnect: vi.fn(),
-  unobserve: vi.fn(),
-}));
-
 const DEFAULT_FOLDS_CONTENT = {
   collapsed: '展开回复',
   partial: ['展开更多回复', '收起'],

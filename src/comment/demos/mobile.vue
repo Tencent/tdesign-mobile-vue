@@ -23,3 +23,10 @@ import imageVue from './image.vue';
 import mixedVue from './mixed.vue';
 import collapseVue from './collapse.vue';
 </script>
+
+<style lang="less">
+.tdesign-demo-topnav,
+.tdesign-mobile-demo {
+  background-color: var(--td-bg-color-container);
+}
+</style>

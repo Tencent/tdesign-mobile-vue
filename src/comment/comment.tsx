@@ -1,8 +1,9 @@
-import { computed, defineComponent, h, nextTick, onBeforeUnmount, onMounted, ref, toRefs, watch } from 'vue';
+import { computed, defineComponent, h, nextTick, onMounted, ref, toRefs, watch } from 'vue';
 import { isFunction, isObject } from 'lodash-es';
 import { ChevronDownSIcon, ChevronUpSIcon } from 'tdesign-icons-vue-next';
 import Avatar from '../avatar';
 import { usePrefixClass } from '../hooks/useClass';
+import { useResizeObserver } from '../hooks/useResizeObserver';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import type { CommentActionItem, CommentFold, CommentFoldState } from './type';
 import CommentProps from './props';
@@ -32,7 +33,6 @@ export default defineComponent({
     const foldSteps = ref(0);
     const replyBodyRef = ref<HTMLDivElement>(null);
     const replyInnerRef = ref<HTMLDivElement>(null);
-    let resizeObserver: ResizeObserver | null = null;
 
     const isControlled = computed(() => folds.value !== undefined);
     const commentFolds = computed(() => folds.value || defaultFolds.value || DEFAULT_COMMENT_FOLDS);
@@ -206,33 +206,22 @@ export default defineComponent({
       );
     };
 
+    // 根据回复区内容高度同步设置容器高度
+    const updateReplyBodyHeight = () => {
+      const body = replyBodyRef.value;
+      const inner = replyInnerRef.value;
+      if (body && inner) {
+        body.style.height = `${inner.scrollHeight}px`;
+      }
+    };
+
     // 首次渲染后同步设置高度，避免闪烁
     onMounted(() => {
-      nextTick(() => {
-        const body = replyBodyRef.value;
-        const inner = replyInnerRef.value;
-        if (body && inner) {
-          body.style.height = `${inner.scrollHeight}px`;
-        }
-      });
-
-      // 监听回复区内容高度变化，驱动过渡动画
-      resizeObserver = new ResizeObserver(() => {
-        const body = replyBodyRef.value;
-        const inner = replyInnerRef.value;
-        if (body && inner) {
-          body.style.height = `${inner.scrollHeight}px`;
-        }
-      });
-
-      if (replyInnerRef.value) {
-        resizeObserver.observe(replyInnerRef.value);
-      }
+      nextTick(updateReplyBodyHeight);
     });
 
-    onBeforeUnmount(() => {
-      resizeObserver?.disconnect();
-    });
+    // 监听回复区内容高度变化，驱动过渡动画
+    useResizeObserver(replyInnerRef, updateReplyBodyHeight);
 
     return () => (
       <div class={`${commentClass.value}`}>
