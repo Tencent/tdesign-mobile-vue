@@ -1,4 +1,5 @@
 import { mount } from '@vue/test-utils';
+import { ref, nextTick } from 'vue';
 import { vi } from 'vitest';
 import Checkbox, { CheckboxGroup } from '../index';
 import config from '../../config';
@@ -56,6 +57,29 @@ describe('Checkbox', () => {
       });
     });
 
+    it('checked[boolean]', async () => {
+      const checked = ref(false);
+      const wrapper = mount({
+        setup() {
+          return () => <Checkbox v-model:checked={checked.value}>选项</Checkbox>;
+        },
+      });
+
+      // 初始受控值 false，未选中
+      expect(wrapper.classes()).not.toContain(`${name}--checked`);
+
+      // 点击触发 update:checked，受控值更新后选中态同步
+      await wrapper.find(`.${name}`).trigger('click');
+      expect(checked.value).toBe(true);
+      await nextTick();
+      expect(wrapper.classes()).toContain(`${name}--checked`);
+
+      // 外部回改受控值，选中态跟随
+      checked.value = false;
+      await nextTick();
+      expect(wrapper.classes()).not.toContain(`${name}--checked`);
+    });
+
     it('defaultChecked[boolean]', async () => {
       const wrapper = mount(() => <Checkbox defaultChecked>选项</Checkbox>);
       expect(wrapper.classes()).toContain('t-checkbox--checked');
@@ -82,6 +106,24 @@ describe('Checkbox', () => {
       await wrapper.find(`.${name}`).trigger('click');
       expect(wrapper.classes()).toContain(`${name}--checked`);
       expect(onChange).toHaveBeenCalledTimes(1);
+    });
+
+    it('disabled[boolean]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(() => (
+        <Checkbox disabled onChange={onChange}>
+          选项
+        </Checkbox>
+      ));
+
+      // 禁用态：图标与主文案带禁用修饰类
+      expect(wrapper.find(`.${name}__icon--disabled`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}__title--disabled`).exists()).toBe(true);
+
+      // 点击不切换选中态，也不触发 change
+      await wrapper.find(`.${name}`).trigger('click');
+      expect(wrapper.classes()).not.toContain(`${name}--checked`);
+      expect(onChange).toHaveBeenCalledTimes(0);
     });
 
     it('icon[array]', async () => {
@@ -120,11 +162,24 @@ describe('Checkbox', () => {
       expect(wrapper.find('.t-icon-minus-circle-filled').exists()).toBe(true);
     });
 
+    it('label[string]', async () => {
+      const wrapper = mount(() => <Checkbox label="主文案" />);
+      expect(wrapper.find(`.${name}__title`).text()).toBe('主文案');
+    });
+
+    it('label[function]', async () => {
+      const wrapper = mount(() => <Checkbox label={() => <span class="custom-label">函数主文案</span>} />);
+      expect(wrapper.find('.custom-label').text()).toBe('函数主文案');
+    });
+
     // -webkit-line-clamp 依赖 webkit 私有样式，jsdom/cssstyle 会丢弃该样式，无法断言行数
     it.todo('maxContentRow[number]');
 
     // -webkit-line-clamp 依赖 webkit 私有样式，jsdom/cssstyle 会丢弃该样式，无法断言行数
     it.todo('maxLabelRow[number]');
+
+    // name 在 props.ts 中声明（HTML 元素原生属性），但组件实现未读取该属性（无输入类元素可透传），待组件支持后再补
+    it.todo('name[string]');
 
     it('placement[right]', async () => {
       const wrapper = mount(() => <Checkbox placement="right">选项</Checkbox>);

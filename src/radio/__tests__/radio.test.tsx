@@ -20,6 +20,37 @@ const createIconText = (text: string) => {
 
 describe('Radio', () => {
   describe('props', () => {
+    it('allowUncheck[boolean]', async () => {
+      const checked = ref(false);
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => <Radio v-model:checked={checked.value} allowUncheck label="选项一" onChange={onChange} />;
+        },
+      });
+
+      await wrapper.trigger('click');
+      expect(checked.value).toBe(true);
+      expect(wrapper.find(`.${name}__icon--checked`).exists()).toBe(true);
+
+      // 单选开启 allowUncheck 后，选中态再次点击取消选中
+      await wrapper.trigger('click');
+      expect(checked.value).toBe(false);
+      expect(wrapper.find(`.${name}__icon--checked`).exists()).toBe(false);
+
+      // 默认不允许取消：选中后再次点击保持选中
+      const checked2 = ref(false);
+      const wrapper2 = mount({
+        setup() {
+          return () => <Radio v-model:checked={checked2.value} label="选项二" />;
+        },
+      });
+      await wrapper2.trigger('click');
+      await wrapper2.trigger('click');
+      expect(checked2.value).toBe(true);
+      expect(wrapper2.find(`.${name}__icon--checked`).exists()).toBe(true);
+    });
+
     it('block[boolean]', async () => {
       const wrapper = mount(Radio, {
         props: {
@@ -111,6 +142,26 @@ describe('Radio', () => {
       expect(onChange).toHaveBeenCalledTimes(1);
     });
 
+    it('disabled[boolean]', async () => {
+      const checked = ref(false);
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => <Radio v-model:checked={checked.value} disabled label="选项一" onChange={onChange} />;
+        },
+      });
+
+      // 禁用态图标与标题呈禁用样式
+      expect(wrapper.find(`.${name}__icon--disabled`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}__title--disabled`).exists()).toBe(true);
+
+      // 点击禁用组件不切换选中态，也不触发 change
+      await wrapper.trigger('click');
+      expect(checked.value).toBe(false);
+      expect(onChange).not.toHaveBeenCalled();
+      expect(wrapper.find(`.${name}__icon--checked`).exists()).toBe(false);
+    });
+
     it('icon[dot]', async () => {
       const wrapper = mount(Radio, {
         props: {
@@ -176,6 +227,16 @@ describe('Radio', () => {
       const $label = wrapper.find(`.${name}__title`);
       expect($label.exists()).toBe(true);
       // jsdom/cssstyle 不支持 -webkit-line-clamp，行数样式无法在 DOM 断言，仅验证行数元素通道
+    });
+
+    it('name[string]', () => {
+      const wrapper = mount(Radio, {
+        props: {
+          name: 'radio-name',
+        },
+      });
+      // 原生属性透传到 input
+      expect(wrapper.find('input').attributes('name')).toBe('radio-name');
     });
 
     it('placement[left/right]', async () => {

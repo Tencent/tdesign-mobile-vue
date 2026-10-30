@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { ref } from 'vue';
+import { ref, nextTick } from 'vue';
 import { Tabs, TabPanel } from '../index';
 import type { TdTabsProps } from '../type';
 import TTabNav from '../tab-nav-item';
@@ -250,6 +250,25 @@ describe('Tabs', () => {
       expect(wrapper.find('.t-tabs__nav--split').exists()).toBeTruthy();
     });
 
+    it('sticky[boolean]', () => {
+      // 默认不开启粘性布局，内部 Sticky 被禁用
+      const wrapper = mount(<Tabs list={list} />);
+      expect(wrapper.findComponent(Sticky).props('disabled')).toBe(true);
+
+      const stickyWrapper = mount(<Tabs sticky list={list} />);
+      expect(stickyWrapper.findComponent(Sticky).props('disabled')).toBe(false);
+      // 粘性布局开启后导航区域被 TSticky 包装
+      expect(stickyWrapper.findComponent(Sticky).find(`.${name}__nav`).exists()).toBe(true);
+    });
+
+    it('stickyProps[object]', () => {
+      const wrapper = mount(<Tabs sticky list={list} stickyProps={{ offsetTop: 50, zIndex: 100 }} />);
+      // stickyProps 透传至内部 TSticky
+      const $sticky = wrapper.findComponent(Sticky);
+      expect($sticky.props('offsetTop')).toBe(50);
+      expect($sticky.props('zIndex')).toBe(100);
+    });
+
     it('swipeable[boolean]', async () => {
       const currentValue = ref('3');
       const onClick = vi.fn((value) => {
@@ -326,6 +345,29 @@ describe('Tabs', () => {
       $tabNavItems.forEach((item) => {
         expect($tabs.attributes('class').includes(`${prefix}-tabs-item-${theme}`)).toBeTruthy();
       });
+    });
+
+    it('value[string]', async () => {
+      const value = ref('2');
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => <Tabs value={value.value} list={list} onChange={onChange} />;
+        },
+      });
+      const $items = wrapper.findAll(`.${name}__item`);
+      expect($items[1].classes()).toContain(`${name}__item--active`);
+
+      // 受控模式：外部修改 value 后激活项切换
+      value.value = '1';
+      await nextTick();
+      expect($items[0].classes()).toContain(`${name}__item--active`);
+      expect($items[1].classes()).not.toContain(`${name}__item--active`);
+
+      // 外部值未响应时，点击仅抛出 change，激活项保持
+      await $items[1].trigger('click');
+      expect(onChange).toHaveBeenCalledWith('2', '标签页二');
+      expect($items[0].classes()).toContain(`${name}__item--active`);
     });
 
     it('panel disabled[boolean]', async () => {

@@ -176,6 +176,18 @@ describe('Picker', () => {
       expect(onConfirm).toHaveBeenCalledWith(['summer'], { index: [1], label: ['夏'], e: expect.any(MouseEvent) });
     });
 
+    it('option[function]', () => {
+      // 自定义选项渲染：option 函数接收 (option, index) 参数，替换默认 label 渲染
+      const wrapper = mountPicker({
+        option: (option, index) => `${option.label}-${index}`,
+      });
+      const itemContainers = wrapper.findAll('.t-picker-item__item');
+      expect(itemContainers).toHaveLength(seasonOptions.length);
+      itemContainers.forEach((container, index) => {
+        expect(container.text()).toBe(`${seasonOptions[index].label}-${index}`);
+      });
+    });
+
     it('renderLabel[function]', () => {
       const renderLabel = (item) => `${item.label} ${item.value}`;
       const wrapper = mountPicker({ renderLabel });

@@ -104,6 +104,9 @@ describe('CheckboxGroup', () => {
       expect(wrapper.findComponent({ ref: '3' }).find(`.${name}__icon--disabled`).exists()).toBe(true);
     });
 
+    // name 在 checkbox-group-props.ts 中声明（统一设置内部复选框 HTML 属性），但组件实现未读取该属性（未透传给子项），待组件支持后再补
+    it.todo('name[string]');
+
     it('options[array]', () => {
       const defaultValue = ref(['1']);
       const options = [
@@ -139,6 +142,30 @@ describe('CheckboxGroup', () => {
       await wrapper.findComponent({ ref: '1' }).find(`.${name}--left`).trigger('click');
       expect(wrapper.findComponent({ ref: '1' }).classes()).not.toContain(`${name}--checked`);
       expect(onChange).toHaveBeenCalledTimes(0);
+    });
+
+    it('modelValue[array]', async () => {
+      const checked = ref<string[]>(['1']);
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <CheckboxGroup v-model={checked.value}>
+              <Checkbox value="1" ref="1" />
+              <Checkbox value="2" ref="2" />
+            </CheckboxGroup>
+          );
+        },
+      });
+
+      // 受控初值同步子项选中态
+      expect(wrapper.findComponent({ ref: '1' }).classes()).toContain(`${name}--checked`);
+      expect(wrapper.findComponent({ ref: '2' }).classes()).not.toContain(`${name}--checked`);
+
+      // 外部更新受控值，子项选中态跟随变化
+      checked.value = ['2'];
+      await nextTick();
+      expect(wrapper.findComponent({ ref: '1' }).classes()).not.toContain(`${name}--checked`);
+      expect(wrapper.findComponent({ ref: '2' }).classes()).toContain(`${name}--checked`);
     });
   });
 

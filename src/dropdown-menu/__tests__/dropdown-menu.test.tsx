@@ -3,6 +3,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { ref } from 'vue';
 import { DropdownMenu, DropdownItem } from '../index';
 import { sleep } from '../../shared/util';
+import Popup from '../../popup';
 
 const prefix = 't';
 const name = `${prefix}-dropdown-menu`;
@@ -22,6 +23,35 @@ options.push({
 });
 
 describe('DropdownMenu', () => {
+  describe('props', () => {
+    // duration 仅透传给内部 Popup 控制过渡动画时长，此处断言透传结果
+    const mountMenuWithDuration = async (duration) => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu duration={duration}>
+              <DropdownItem label="菜单" options={options} />
+            </DropdownMenu>
+          );
+        },
+      });
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      return wrapper;
+    };
+
+    it('duration[number]', async () => {
+      const wrapper = await mountMenuWithDuration(500);
+      expect(wrapper.findComponent(Popup).props('duration')).toBe(500);
+    });
+
+    it('duration[string]', async () => {
+      // 字符串时长传入后按 Number 转换透传给 Popup
+      const wrapper = await mountMenuWithDuration('600');
+      expect(wrapper.findComponent(Popup).props('duration')).toBe(600);
+    });
+  });
+
   describe('scenarios', () => {
     it('multiple item with footer buttons', async () => {
       // 底部 button 仅在 multiple/optionsLayout === 'tree' 时有效

@@ -18,6 +18,80 @@ config.global.stubs = {
 
 describe('Dialog', () => {
   describe('props', () => {
+    it('actions[array]', async () => {
+      const onClose = vi.fn();
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          actions: [{ content: '一等奖' }, { content: '再来一次', theme: 'danger' }],
+          onClose,
+        },
+      });
+
+      // actions 渲染为底部自定义操作按钮，替代默认取消/确认按钮
+      const $buttons = wrapper.findAllComponents(Button);
+      expect($buttons).toHaveLength(2);
+      expect($buttons[0].text()).toBe('一等奖');
+      expect($buttons[1].text()).toBe('再来一次');
+      // 按钮属性透传（主题）
+      expect($buttons[1].classes()).toContain(`${prefix}-button--danger`);
+
+      // 点击操作按钮按 cancel 通道关闭
+      await $buttons[0].trigger('click');
+      expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
+    });
+
+    it('beforeClose[function]', async () => {
+      let resolveFn: () => void;
+      const beforeClose = vi.fn(
+        () =>
+          new Promise<void>((resolve) => {
+            resolveFn = resolve;
+          }),
+      );
+      const onConfirm = vi.fn();
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          confirmBtn: '确认',
+          beforeClose,
+          onConfirm,
+        },
+      });
+
+      const $confirm = wrapper.findAllComponents(Button).at(0);
+      await $confirm.trigger('click');
+
+      // Promise 未决时：确认按钮进入加载态，尚未确认关闭
+      expect(beforeClose).toHaveBeenCalledWith('confirm', { e: expect.any(MouseEvent) });
+      expect($confirm.classes()).toContain(`${prefix}-button--loading`);
+      expect(onConfirm).not.toHaveBeenCalled();
+
+      // Promise resolve 后放行关闭，并退出加载态
+      resolveFn();
+      await sleep(0);
+      await nextTick();
+      expect(onConfirm).toHaveBeenCalledTimes(1);
+      expect($confirm.classes()).not.toContain(`${prefix}-button--loading`);
+
+      // Promise reject 时拦截关闭：不触发 confirm，也不保持加载态
+      const onConfirm2 = vi.fn();
+      const wrapper2 = mount(Dialog, {
+        props: {
+          visible: true,
+          confirmBtn: '确认',
+          beforeClose: () => Promise.reject(),
+          onConfirm: onConfirm2,
+        },
+      });
+      const $confirm2 = wrapper2.findAllComponents(Button).at(0);
+      await $confirm2.trigger('click');
+      await sleep(0);
+      await nextTick();
+      expect(onConfirm2).not.toHaveBeenCalled();
+      expect($confirm2.classes()).not.toContain(`${prefix}-button--loading`);
+    });
+
     it('buttonLayout[horizontal/vertical]', async () => {
       const confirmBtn = {
         content: '确认',

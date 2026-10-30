@@ -15,6 +15,12 @@ const sizeList = ['small', 'medium', 'large'];
 
 describe('Avatar', () => {
   describe('props', () => {
+    it('alt[string]', async () => {
+      const wrapper = mount(() => <Avatar image={IMAGE} alt="头像替代文本" />);
+      // alt 作为图片加载失败时的替代文本透传给内部 img 标签
+      expect(wrapper.find('img').attributes('alt')).toBe('头像替代文本');
+    });
+
     it('badgeProps[object]', async () => {
       const wrapper = mount(() => <Avatar image={IMAGE} badgeProps={{ count: 10 }}></Avatar>);
       expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
@@ -35,6 +41,16 @@ describe('Avatar', () => {
     it('icon[function]', async () => {
       const wrapper = mount(() => <Avatar icon={userIconFunc} />);
       expect(wrapper.findComponent(UserIcon).exists()).toBeTruthy();
+    });
+
+    it('image[string]', async () => {
+      const wrapper = mount(() => <Avatar image={IMAGE} />);
+      // jsdom 不触发图片 onload，断言 image 已作为地址透传给内部 img 的 src
+      expect(wrapper.find('img').attributes('src')).toBe(IMAGE);
+
+      // 未设置 image 时不渲染图片节点
+      const wrapper2 = mount(() => <Avatar />);
+      expect(wrapper2.find('img').exists()).toBe(false);
     });
 
     it('imageProps[object]', async () => {

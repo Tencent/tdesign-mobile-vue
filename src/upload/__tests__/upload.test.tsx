@@ -135,11 +135,84 @@ describe('Upload', () => {
       expect(wrapper.find('input').attributes('accept')).toBe('image/*');
     });
 
+    it('action[string]', async () => {
+      useMockXMLHttpRequest();
+      try {
+        const customAction = 'https://tdesign.gtimg.com/api/upload-demo';
+        const wrapper = mount(Upload, {
+          props: { action: customAction },
+        });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        await sleep(0);
+        // 上传请求发往 action 指定的地址
+        expect(mockXHRInstances[0].open).toHaveBeenCalledWith('POST', customAction, true);
+        expect(mockXHRInstances[0].send).toHaveBeenCalled();
+      } finally {
+        restoreXMLHttpRequest();
+      }
+    });
+
     it('addBtn[false] hides add area', async () => {
       const wrapper = mount(Upload, {
         props: { addBtn: false },
       });
       expect(wrapper.find('.t-upload__item--add').exists()).toBe(false);
+    });
+
+    it('allowUploadDuplicateFile[boolean]', async () => {
+      const onValidate = vi.fn();
+      const uploadMethod = vi.fn(requestMethod);
+      const wrapper = mount(Upload, {
+        props: { requestMethod: uploadMethod, onValidate },
+      });
+      triggerUploadFile(wrapper, [mockFileFoo]);
+      await sleep(0);
+      expect(uploadMethod).toHaveBeenCalledTimes(1);
+
+      // 默认过滤同名文件：再次选择同名文件触发校验提示且不再上传
+      triggerUploadFile(wrapper, [mockFileFoo]);
+      await sleep(0);
+      const sameNameCall = onValidate.mock.calls.find((c) => c[0]?.type === 'FILTER_FILE_SAME_NAME');
+      expect(sameNameCall).toBeTruthy();
+      expect(uploadMethod).toHaveBeenCalledTimes(1);
+
+      // 允许重复上传：同名文件可再次发起请求
+      const onValidate2 = vi.fn();
+      const uploadMethod2 = vi.fn(requestMethod);
+      const wrapper2 = mount(Upload, {
+        props: { requestMethod: uploadMethod2, allowUploadDuplicateFile: true, onValidate: onValidate2 },
+      });
+      triggerUploadFile(wrapper2, [mockFileFoo]);
+      await sleep(0);
+      triggerUploadFile(wrapper2, [mockFileFoo]);
+      await sleep(0);
+      expect(onValidate2).not.toHaveBeenCalledWith(expect.objectContaining({ type: 'FILTER_FILE_SAME_NAME' }));
+      expect(uploadMethod2).toHaveBeenCalledTimes(2);
+    });
+
+    it('autoUpload[boolean]', async () => {
+      const uploadMethod = vi.fn(requestMethod);
+      const onChange = vi.fn();
+      const wrapper = mount(Upload, {
+        props: { autoUpload: false, requestMethod: uploadMethod, onChange },
+      });
+      triggerUploadFile(wrapper, [mockFileFoo]);
+      await sleep(0);
+      // 非自动上传：文件仅以 waiting 状态加入列表，不发起上传
+      expect(uploadMethod).not.toHaveBeenCalled();
+      expect(onChange).toHaveBeenLastCalledWith(
+        [expect.objectContaining({ name: 'foo.png', status: 'waiting' })],
+        expect.objectContaining({ trigger: 'add' }),
+      );
+
+      // 默认自动上传：选择文件后立即请求
+      const autoMethod = vi.fn(requestMethod);
+      const wrapper2 = mount(Upload, {
+        props: { requestMethod: autoMethod },
+      });
+      triggerUploadFile(wrapper2, [mockFileBar]);
+      await sleep(0);
+      expect(autoMethod).toHaveBeenCalledTimes(1);
     });
 
     it('beforeAllFilesUpload[function] returning false should be intercepted', async () => {
@@ -310,6 +383,20 @@ describe('Upload', () => {
       expect(defaultFiles.value.length).toBe(0);
     });
 
+    it('format[function]', async () => {
+      const format = vi.fn((file) => ({ name: `formatted-${file.name}` }));
+      const onSelectChange = vi.fn();
+      const wrapper = mount(Upload, {
+        props: { requestMethod, format, onSelectChange },
+      });
+      triggerUploadFile(wrapper, [mockFileFoo]);
+      await sleep(0);
+      // format 接收原始 File，返回值合并进 UploadFile
+      expect(format).toHaveBeenCalledWith(mockFileFoo);
+      const selected = onSelectChange.mock.calls[0][1].currentSelectedFiles;
+      expect(selected[0]).toMatchObject({ name: 'formatted-foo.png', raw: mockFileFoo });
+    });
+
     it('formatRequest[function]', async () => {
       useMockXMLHttpRequest();
       try {
@@ -325,6 +412,32 @@ describe('Upload', () => {
       } finally {
         restoreXMLHttpRequest();
       }
+    });
+
+    it('formatResponse[function]', async () => {
+      const formatResponse = vi.fn((response) => ({ ...response, url: 'https://tdesign.gtimg.com/formatted.png' }));
+      const onSuccess = vi.fn();
+      const wrapper = mount(Upload, {
+        props: {
+          requestMethod: () => Promise.resolve({ status: 'success', response: { url: 'https://x.png' } }),
+          formatResponse,
+          onSuccess,
+        },
+      });
+      triggerUploadFile(wrapper, [mockFileFoo]);
+      await sleep(0);
+      // 原始响应经 formatResponse 解析
+      expect(formatResponse).toHaveBeenCalledWith(
+        { url: 'https://x.png' },
+        expect.objectContaining({ currentFiles: [expect.objectContaining({ name: 'foo.png' })] }),
+      );
+      // 返回值的 url / response 写入上传成功的文件
+      expect(onSuccess).toHaveBeenCalledTimes(1);
+      const { fileList } = onSuccess.mock.calls[0][0];
+      expect(fileList[0]).toMatchObject({
+        url: 'https://tdesign.gtimg.com/formatted.png',
+        response: { url: 'https://tdesign.gtimg.com/formatted.png' },
+      });
     });
 
     it('headers[object]', async () => {
@@ -465,6 +578,23 @@ describe('Upload', () => {
       expect(wrapper.find('input').attributes('multiple')).toBeDefined();
     });
 
+    it('name[string]', async () => {
+      useMockXMLHttpRequest();
+      try {
+        const wrapper = mount(Upload, {
+          props: { action, name: 'customFile' },
+        });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        await sleep(0);
+        const { requestParams } = mockXHRInstances[0].upload;
+        // 文件字段使用 name 别名，默认 file 字段不再存在
+        expect(requestParams.customFile).toBe(mockFileFoo);
+        expect(requestParams.file).toBeUndefined();
+      } finally {
+        restoreXMLHttpRequest();
+      }
+    });
+
     it('preview[false] should not open viewer', async () => {
       const wrapper = mount(Upload, {
         props: {
@@ -489,6 +619,27 @@ describe('Upload', () => {
       triggerUploadFile(wrapper, [mockFileFoo]);
       await sleep(0);
       expect(wrapper.findComponent(CloseIcon).exists()).toBe(false);
+    });
+
+    it('requestMethod[function]', async () => {
+      const uploadMethod = vi.fn(requestMethod);
+      const onSuccess = vi.fn();
+      const wrapper = mount(Upload, {
+        props: { requestMethod: uploadMethod, onSuccess },
+      });
+      triggerUploadFile(wrapper, [mockFileFoo]);
+      await sleep(0);
+      // 自定义上传函数接管请求，单文件场景入参为待上传文件对象
+      expect(uploadMethod).toHaveBeenCalledTimes(1);
+      expect(uploadMethod.mock.calls[0][0]).toMatchObject({ name: 'foo.png', raw: mockFileFoo });
+      // 返回值 response.url 作为上传成功后的文件地址
+      expect(onSuccess).toHaveBeenCalledTimes(1);
+      const { fileList } = onSuccess.mock.calls[0][0];
+      expect(fileList[0]).toMatchObject({
+        name: 'foo.png',
+        url: 'https://tdesign.gtimg.com/site/source/figma-pc.png',
+        status: 'success',
+      });
     });
 
     it('sizeLimit[object]', () => {

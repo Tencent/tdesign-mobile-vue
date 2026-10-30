@@ -25,6 +25,22 @@ describe('StepItem', () => {
       expect(wrapper.find('.custom-step-icon').exists()).toBeTruthy();
     });
 
+    it('status[default/process/finish/error]', () => {
+      const statusList = ['process', 'finish', 'error', 'default'];
+      const wrapper = mount(() => (
+        <Steps current={0}>
+          {statusList.map((status) => (
+            <StepItem key={status} title="标题" content="内容" status={status} />
+          ))}
+        </Steps>
+      ));
+      const $items = wrapper.findAll('.t-step-item');
+      // 显式 status 优先于分组按 current 推导的状态
+      statusList.forEach((status, index) => {
+        expect($items[index].classes()).toContain(`t-step-item--${status}`);
+      });
+    });
+
     it('title[string] & content[string]', async () => {
       const current = ref(1);
       const stepItems = ref(items.slice());

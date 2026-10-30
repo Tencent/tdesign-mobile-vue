@@ -1,4 +1,4 @@
-import { ref, h } from 'vue';
+import { ref, h, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { HomeIcon } from 'tdesign-icons-vue-next';
@@ -107,6 +107,29 @@ describe('Segmented', () => {
       // 点击非禁用项应触发 change 事件
       await $items[1].trigger('click');
       expect(onChange).toBeCalledTimes(1);
+    });
+
+    it('value[string]', async () => {
+      const value = ref('选项一');
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => <Segmented value={value.value} options={['选项一', '选项二', '选项三']} onChange={onChange} />;
+        },
+      });
+      const $items = wrapper.findAll(`.${name}__item`);
+      expect($items[0].classes()).toContain(`${name}__item--active`);
+
+      // 受控模式：外部修改 value 后激活项切换
+      value.value = '选项三';
+      await nextTick();
+      expect($items[2].classes()).toContain(`${name}__item--active`);
+      expect($items[0].classes()).not.toContain(`${name}__item--active`);
+
+      // 外部值未响应时，点击仅抛出 change，激活项保持
+      await $items[1].trigger('click');
+      expect(onChange).toHaveBeenCalledWith({ value: '选项二', selectedOption: { value: '选项二', label: '选项二' } });
+      expect($items[2].classes()).toContain(`${name}__item--active`);
     });
   });
 

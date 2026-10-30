@@ -1,4 +1,4 @@
-import { h } from 'vue';
+import { h, ref, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
@@ -17,6 +17,44 @@ describe('CheckTag', () => {
     it('checked[boolean]', async () => {
       const wrapper = mount(() => <TCheckTag modelValue={true}>{TEXT}</TCheckTag>);
       expect(wrapper.classes()).toContain('t-tag--checked');
+    });
+
+    it('modelValue[boolean]', async () => {
+      const checked = ref(false);
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <TCheckTag v-model={checked.value} onChange={onChange}>
+              {TEXT}
+            </TCheckTag>
+          );
+        },
+      });
+      expect(wrapper.classes()).not.toContain('t-tag--checked');
+
+      // v-model 双向绑定：点击后选中态与外部值同步取反
+      await wrapper.trigger('click');
+      expect(checked.value).toBe(true);
+      expect(wrapper.classes()).toContain('t-tag--checked');
+      expect(onChange).toHaveBeenLastCalledWith(true);
+
+      // 外部受控更新
+      checked.value = false;
+      await nextTick();
+      expect(wrapper.classes()).not.toContain('t-tag--checked');
+    });
+
+    it('closable[boolean]', () => {
+      const wrapper = mount(() => <TCheckTag closable>{TEXT}</TCheckTag>);
+      // 可关闭标签渲染关闭图标与对应类名
+      expect(wrapper.classes()).toContain('t-tag--closable');
+      expect(wrapper.find('.t-tag__icon-close').exists()).toBe(true);
+
+      // 默认不渲染关闭图标
+      const wrapper2 = mount(() => <TCheckTag>{TEXT}</TCheckTag>);
+      expect(wrapper2.classes()).not.toContain('t-tag--closable');
+      expect(wrapper2.find('.t-tag__icon-close').exists()).toBe(false);
     });
 
     it('content[array]', async () => {

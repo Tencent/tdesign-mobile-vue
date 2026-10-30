@@ -254,6 +254,13 @@ describe('Input', () => {
       expect(input.element.getAttribute('maxlength')).toBe(null);
     });
 
+    it('name[string]', async () => {
+      const wrapper = mount(<Input label="标题" name="username" />);
+      const input = wrapper.find('.t-input__wrap input');
+      // name 透传给原生 input 元素
+      expect(input.attributes('name')).toBe('username');
+    });
+
     it('placeholder[string]', async () => {
       const wrapper = mount(<Input placeholder="请输入" />);
       const input = wrapper.find('.t-input__wrap input');
@@ -275,6 +282,20 @@ describe('Input', () => {
     it('status[default/success/warning/error]', async () => {
       const wrapper = mount(<Input status="error" />);
       expect(wrapper.find('.t-input--error').exists()).toBeTruthy();
+    });
+
+    it('suffix[string]', async () => {
+      const wrapper = mount(<Input label="标题" suffix="个/元" />);
+      const suffix = wrapper.find(`.${name}__wrap--suffix`);
+      expect(suffix.exists()).toBeTruthy();
+      expect(suffix.text()).toBe('个/元');
+    });
+
+    it('suffix[function]', async () => {
+      const wrapper = mount(<Input label="标题" suffix={() => <span class="custom-suffix">后置内容</span>} />);
+      const suffix = wrapper.find(`.${name}__wrap--suffix`);
+      expect(suffix.exists()).toBeTruthy();
+      expect(suffix.find('.custom-suffix').text()).toBe('后置内容');
     });
 
     it('tips[string]', async () => {

@@ -59,6 +59,31 @@ describe('Skeleton', () => {
       expect($rows.length).toBe(2);
     });
 
+    it('rowCol[array]', async () => {
+      const wrapper = mount(Skeleton, {
+        props: {
+          rowCol: [1, 1, 2],
+        },
+      });
+      // 数字项表示该行的列数：3 行，列数依次为 1/1/2
+      const $rows = wrapper.findAll(`.${name}__row`);
+      expect($rows).toHaveLength(3);
+      expect($rows[0].findAll(`.${name}__col`)).toHaveLength(1);
+      expect($rows[1].findAll(`.${name}__col`)).toHaveLength(1);
+      expect($rows[2].findAll(`.${name}__col`)).toHaveLength(2);
+
+      // 对象配置驱动列的类型与尺寸
+      const wrapper2 = mount(Skeleton, {
+        props: {
+          rowCol: [{ type: 'rect', width: '100px', height: '20px' }],
+        },
+      });
+      const $col = wrapper2.find(`.${name}__col`);
+      expect($col.classes()).toContain(`${name}--type-rect`);
+      expect($col.attributes('style')).toContain('width: 100px');
+      expect($col.attributes('style')).toContain('height: 20px');
+    });
+
     it('theme[avatar/image/text/paragraph]', async () => {
       const wrapper = mount(Skeleton);
       // theme 默认取 'text', 此时 rowCol = [1, [{ width: '24%', height: '16px', marginRight: '16px' },{ width: '76%', height: '16px' }]

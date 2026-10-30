@@ -162,6 +162,53 @@ describe('Rate', () => {
         expect(getComputedStyle(items[i].element, null).fontSize).toBe('20px');
       }
     });
+
+    it('value[number]', async () => {
+      const onChange = vi.fn();
+      const original = window.HTMLElement.prototype.getBoundingClientRect;
+      // mock 容器宽度，使点击坐标可换算为确定分值
+      window.HTMLElement.prototype.getBoundingClientRect = () => ({ left: 0, right: 343, width: 343 });
+
+      try {
+        const wrapper = mount(Rate, {
+          props: {
+            value: 3,
+            onChange,
+          },
+        });
+        expect(wrapper.findAll(`.${name}__wrapper .${name}__icon--selected`)).toHaveLength(3);
+
+        // 受控模式：外部未更新 value 时，点击仅抛出 onChange，选中态保持不变
+        await wrapper.findAll(`.${name}__icon`)[4].trigger('click', { pageX: 300 });
+        expect(onChange).toHaveBeenCalledWith(5);
+        expect(wrapper.findAll(`.${name}__wrapper .${name}__icon--selected`)).toHaveLength(3);
+      } finally {
+        window.HTMLElement.prototype.getBoundingClientRect = original;
+      }
+    });
+
+    it('defaultValue[number]', async () => {
+      const onChange = vi.fn();
+      const original = window.HTMLElement.prototype.getBoundingClientRect;
+      window.HTMLElement.prototype.getBoundingClientRect = () => ({ left: 0, right: 343, width: 343 });
+
+      try {
+        const wrapper = mount(Rate, {
+          props: {
+            defaultValue: 2,
+            onChange,
+          },
+        });
+        expect(wrapper.findAll(`.${name}__wrapper .${name}__icon--selected`)).toHaveLength(2);
+
+        // 非受控模式：点击后内部值自行更新
+        await wrapper.findAll(`.${name}__icon`)[4].trigger('click', { pageX: 300 });
+        expect(onChange).toHaveBeenCalledWith(5);
+        expect(wrapper.findAll(`.${name}__wrapper .${name}__icon--selected`)).toHaveLength(5);
+      } finally {
+        window.HTMLElement.prototype.getBoundingClientRect = original;
+      }
+    });
   });
 
   describe('scenarios', () => {

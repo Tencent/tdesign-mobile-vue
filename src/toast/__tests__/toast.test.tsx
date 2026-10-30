@@ -81,6 +81,23 @@ describe('Toast', () => {
       expect(wrapper.findComponent(Overlay).vm.duration).toEqual(1000);
     });
 
+    it('placement[top/middle/bottom]', () => {
+      const topMap = {
+        top: '25%',
+        middle: '50%',
+        bottom: '75%',
+      };
+      Object.entries(topMap).forEach(([placement, top]) => {
+        const wrapper = mount(Toast, {
+          props: {
+            placement,
+          },
+        });
+        // 展示位置映射为内容层 top 定位
+        expect(wrapper.find('.t-toast__content').attributes('style')).toContain(`top: ${top}`);
+      });
+    });
+
     it('preventScrollThrough[boolean]', async () => {
       mount(Toast, {
         props: {

@@ -93,6 +93,86 @@ describe('Swiper', () => {
   // });
 
   describe('props', () => {
+    it('autoplay[boolean] & interval[number]', async () => {
+      vi.useFakeTimers();
+      try {
+        const current = ref(0);
+        const onChange = vi.fn();
+        mount({
+          setup() {
+            return () => (
+              <Swiper v-model={current.value} autoplay interval={200} onChange={onChange}>
+                {list.map((item) => (
+                  <SwiperItem>
+                    <img src={item.image} />
+                  </SwiperItem>
+                ))}
+              </Swiper>
+            );
+          },
+        });
+
+        // 未到 interval 不切换
+        await vi.advanceTimersByTimeAsync(199);
+        expect(onChange).toHaveBeenCalledTimes(0);
+        // 到达 interval 后自动切换到下一张
+        await vi.advanceTimersByTimeAsync(1);
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenLastCalledWith(1, { source: 'autoplay' });
+        expect(current.value).toBe(1);
+
+        // autoplay = false 时不自动播放
+        const onChange2 = vi.fn();
+        mount({
+          setup() {
+            return () => (
+              <Swiper autoplay={false} interval={200} onChange={onChange2}>
+                {list.map((item) => (
+                  <SwiperItem>
+                    <img src={item.image} />
+                  </SwiperItem>
+                ))}
+              </Swiper>
+            );
+          },
+        });
+        await vi.advanceTimersByTimeAsync(1000);
+        expect(onChange2).toHaveBeenCalledTimes(0);
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('current[number]', async () => {
+      const current = ref(1);
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Swiper current={current.value} autoplay={false}>
+              {list.map((item) => (
+                <SwiperItem>
+                  <img src={item.image} />
+                </SwiperItem>
+              ))}
+            </Swiper>
+          );
+        },
+      });
+      // 等待 SwiperItem 注册与导航器渲染
+      await nextTick();
+      await nextTick();
+      const getDots = () => wrapper.findAll(`.${classPrefix}-nav__dots-item`);
+      expect(getDots()).toHaveLength(list.length);
+      expect(getDots()[1].classes()).toContain(`${classPrefix}-nav__dots-item--active`);
+
+      // 受控跳页：外部修改 current 后激活项切换
+      current.value = 2;
+      await nextTick();
+      await nextTick();
+      expect(getDots()[2].classes()).toContain(`${classPrefix}-nav__dots-item--active`);
+      expect(getDots()[1].classes()).not.toContain(`${classPrefix}-nav__dots-item--active`);
+    });
+
     it('height[number] & direction[string]', async () => {
       const current = ref(1);
       const height = 200;
@@ -144,6 +224,55 @@ describe('Swiper', () => {
       // expect($pagination.attributes('class').includes(`t-swiper__pagination-${navigation.type}`));
       // const $dots = wrapper.findAll(`.${classPrefix}-dot`);
       // expect($dots).toHaveLength(list.length);
+    });
+
+    it('loop[boolean]', async () => {
+      vi.useFakeTimers();
+      try {
+        // 循环模式（默认）：最后一页后回到第一页
+        const current = ref(0);
+        const onChange = vi.fn();
+        mount({
+          setup() {
+            return () => (
+              <Swiper v-model={current.value} autoplay loop interval={100} onChange={onChange}>
+                {list.map((item) => (
+                  <SwiperItem>
+                    <img src={item.image} />
+                  </SwiperItem>
+                ))}
+              </Swiper>
+            );
+          },
+        });
+        await vi.advanceTimersByTimeAsync(300);
+        expect(onChange).toHaveBeenCalledTimes(3);
+        expect(onChange).toHaveBeenLastCalledWith(0, { source: 'autoplay' });
+        expect(current.value).toBe(0);
+
+        // 非循环模式：到达最后一页后停止切换
+        const current2 = ref(0);
+        const onChange2 = vi.fn();
+        mount({
+          setup() {
+            return () => (
+              <Swiper v-model={current2.value} autoplay loop={false} interval={100} onChange={onChange2}>
+                {list.map((item) => (
+                  <SwiperItem>
+                    <img src={item.image} />
+                  </SwiperItem>
+                ))}
+              </Swiper>
+            );
+          },
+        });
+        await vi.advanceTimersByTimeAsync(300);
+        expect(onChange2).toHaveBeenCalledTimes(2);
+        expect(onChange2).toHaveBeenLastCalledWith(2, { source: 'autoplay' });
+        expect(current2.value).toBe(2);
+      } finally {
+        vi.useRealTimers();
+      }
     });
 
     it('navigation[minShowNum]', async () => {

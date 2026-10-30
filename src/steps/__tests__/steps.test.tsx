@@ -28,6 +28,28 @@ const itemStatus: Pick<TdStepItemProps, 'title' | 'content' | 'status'>[] = [
 ];
 describe('Steps', () => {
   describe('props', () => {
+    it('current[number]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(() => (
+        <Steps current={1} onChange={onChange}>
+          <StepItem title="步骤1" content="描述1" />
+          <StepItem title="步骤2" content="描述2" />
+          <StepItem title="步骤3" content="描述3" />
+        </Steps>
+      ));
+      const $items = wrapper.findAll('.t-step-item');
+      // current 之前的项为 finish，当前项为 process，之后为 default
+      expect($items[0].classes()).toContain('t-step-item--finish');
+      expect($items[1].classes()).toContain('t-step-item--process');
+      expect($items[2].classes()).toContain('t-step-item--default');
+
+      // 受控模式：外部未更新 current 时，点击仅抛出 change，高亮保持
+      await $items[2].find('.t-step-item__circle').trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect($items[1].classes()).toContain('t-step-item--process');
+      expect($items[2].classes()).not.toContain('t-step-item--process');
+    });
+
     it('defaultCurrent[number]', () => {
       const wrapper = mount(() => (
         <Steps defaultCurrent={1}>

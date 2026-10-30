@@ -7,6 +7,17 @@ import NavBar from '../navbar';
 const iconFunc = () => h(TIconApp);
 describe('Navbar', () => {
   describe('props', () => {
+    it('animation[boolean]', async () => {
+      // animation = true（默认）：显示态类名带动画后缀
+      const navbar = mount(<NavBar title="标题" />);
+      expect(navbar.element.className).toContain('t-navbar--visible-animation');
+
+      // animation = false：显示态类名不带动画后缀
+      await navbar.setProps({ animation: false });
+      expect(navbar.element.className).toContain('t-navbar--visible');
+      expect(navbar.element.className).not.toContain('t-navbar--visible-animation');
+    });
+
     it('capsule[function]', () => {
       const navbar = mount(<NavBar title="标题" capsule={iconFunc} />);
       expect(navbar.find('.t-icon-app').exists()).toBeTruthy();

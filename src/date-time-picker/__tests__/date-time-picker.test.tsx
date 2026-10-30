@@ -87,6 +87,41 @@ describe('DateTimePicker', () => {
       expect(wrapper.find('.dtp-footer').exists()).toBeTruthy();
     });
 
+    it('format[string]', async () => {
+      const onPick = vi.fn();
+      const onConfirm = vi.fn();
+      const wrapper = mount(DateTimePicker, {
+        props: {
+          value: defaultDateTime,
+          mode: 'date',
+          format: 'YYYY/MM/DD',
+          onPick,
+          onConfirm,
+        },
+      });
+
+      // 滚动日期列（13 日 → 15 日），pick 事件按 format 输出
+      simulateMoveOption(wrapper.findAll(`.${prefix}-picker-item`)[2].element, 2);
+      expect(onPick).toHaveBeenLastCalledWith('2023/10/15');
+
+      // confirm 事件同样按 format 输出
+      await wrapper.find(`.${prefix}-picker__confirm`).trigger('click');
+      expect(onConfirm).toHaveBeenLastCalledWith('2023/10/15');
+
+      // format = 'time-stamp'：confirm 返回毫秒级时间戳
+      const onStampConfirm = vi.fn();
+      const wrapper2 = mount(DateTimePicker, {
+        props: {
+          value: defaultDateTime,
+          mode: 'date',
+          format: 'time-stamp',
+          onConfirm: onStampConfirm,
+        },
+      });
+      await wrapper2.find(`.${prefix}-picker__confirm`).trigger('click');
+      expect(onStampConfirm).toHaveBeenLastCalledWith(new Date(Y, M - 1, D).getTime());
+    });
+
     it('header[function]', async () => {
       const wrapper = mount(DateTimePicker, {
         props: {
@@ -259,6 +294,34 @@ describe('DateTimePicker', () => {
       expect($title.text()).toBe(newTitle || '选择时间');
       expect($confirmButton.text()).toBe(newConfirmBtn || '确定');
       expect($cancelButton.text()).toBe(newCancelBtn || '取消');
+    });
+
+    it('value[string]', async () => {
+      const value = ref(defaultDateTime);
+      const wrapper = mount({
+        setup() {
+          return () => <DateTimePicker v-model:value={value.value} mode="date" />;
+        },
+      });
+
+      const getActiveTexts = () =>
+        wrapper
+          .findAll(`.${prefix}-picker-item`)
+          .map((column) => column.find(`.${prefix}-picker-item__item--active`).text());
+
+      // 受控初值 2023-10-13 同步到年/月/日三列选中态
+      expect(getActiveTexts()).toEqual(['2023 年', '10 月', '13 日']);
+
+      // 外部更新受控值，各列选中态跟随
+      value.value = '2021-05-01';
+      await nextTick();
+      await nextTick();
+      expect(getActiveTexts()).toEqual(['2021 年', '5 月', '1 日']);
+
+      // 滚动日期列后确认，受控值经 update:value 回写为新日期
+      simulateMoveOption(wrapper.findAll(`.${prefix}-picker-item`)[2].element, 2);
+      await wrapper.find(`.${prefix}-picker__confirm`).trigger('click');
+      expect(value.value).toBe('2021-05-03 00:00:00');
     });
   });
 

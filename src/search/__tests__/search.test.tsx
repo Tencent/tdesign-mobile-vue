@@ -1,7 +1,7 @@
 import { ref, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
+import { CloseCircleFilledIcon as TIconClear, SearchIcon as TSearchIcon } from 'tdesign-icons-vue-next';
 import Search from '../search';
 
 const prefix = 't';
@@ -47,6 +47,25 @@ describe('Search', () => {
       expect(wrapper2.findComponent(TIconClear).exists()).toBe(true);
     });
 
+    it('clearable[boolean]', async () => {
+      // 默认可清空：输入框有值即显示清空按钮
+      const wrapper = mount(Search, {
+        props: {
+          value: '关键字',
+        },
+      });
+      expect(wrapper.findComponent(TIconClear).exists()).toBe(true);
+
+      // clearable = false 时不渲染清空按钮
+      const wrapper2 = mount(Search, {
+        props: {
+          value: '关键字',
+          clearable: false,
+        },
+      });
+      expect(wrapper2.findComponent(TIconClear).exists()).toBe(false);
+    });
+
     it('cursorColor[string]', () => {
       const wrapper = mount(Search, {
         props: {
@@ -64,6 +83,29 @@ describe('Search', () => {
         },
       });
       expect(wrapper.find('input').attributes('disabled')).toBeDefined();
+    });
+
+    it('leftIcon[string]', async () => {
+      // leftIcon 默认值 'search' 渲染搜索图标
+      const wrapper = mount(Search, {});
+      expect(wrapper.findComponent(TSearchIcon).exists()).toBe(true);
+
+      // 值非 'search' 时按 TNode 字符串直接渲染
+      const wrapper2 = mount(Search, {
+        props: {
+          leftIcon: '自定义左侧图标',
+        },
+      });
+      expect(wrapper2.find(`.${name}__input-box`).text()).toContain('自定义左侧图标');
+    });
+
+    it('leftIcon[function]', async () => {
+      const wrapper = mount(Search, {
+        props: {
+          leftIcon: () => '函数左侧图标',
+        },
+      });
+      expect(wrapper.find(`.${name}__input-box`).text()).toContain('函数左侧图标');
     });
 
     it('maxcharacter[number]', async () => {

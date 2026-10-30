@@ -278,6 +278,24 @@ describe('Button', () => {
       expect($button.classes()).toContain(`${name}--${theme}`);
     });
 
+    it('type[submit/reset/button]', async () => {
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+        },
+      });
+      // type 默认 button，作为原生 button 标签的 type 属性输出
+      expect(wrapper.element.getAttribute('type')).toBe('button');
+
+      // 遍历枚举值，均输出到原生 type 属性
+      await wrapper.setProps({ type: 'submit' });
+      expect(wrapper.element.getAttribute('type')).toBe('submit');
+      await wrapper.setProps({ type: 'reset' });
+      expect(wrapper.element.getAttribute('type')).toBe('reset');
+      await wrapper.setProps({ type: 'button' });
+      expect(wrapper.element.getAttribute('type')).toBe('button');
+    });
+
     it('variant[base/outline/dashed/text]', async () => {
       const wrapper = mount(Button, {
         props: {

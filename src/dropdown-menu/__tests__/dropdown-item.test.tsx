@@ -34,6 +34,29 @@ const numberOptions = [
 
 describe('DropdownItem', () => {
   describe('props', () => {
+    it('footer[function]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem
+                label="菜单"
+                multiple
+                options={options}
+                footer={() => <div class="custom-footer">自定义底部</div>}
+              />
+            </DropdownMenu>
+          );
+        },
+      });
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      // 自定义 footer 渲染在面板底部，并替换默认的重置/确认按钮
+      expect(wrapper.find('.custom-footer').text()).toBe('自定义底部');
+      expect(wrapper.find(`.${prefix}-dropdown-item__reset-btn`).exists()).toBe(false);
+      expect(wrapper.find(`.${prefix}-dropdown-item__confirm-btn`).exists()).toBe(false);
+    });
+
     it('keepLabelActive[boolean]', async () => {
       // keepLabelActive 仅在 multiple = true 且有选中项时生效，保持标题高亮（含菜单收起态）
       const value1 = ref(['option_1']);
@@ -198,6 +221,61 @@ describe('DropdownItem', () => {
         expect(item.attributes('class').includes(`${name}__item--disabled`)).toEqual(items[index].disabled);
         expect(item.text()).toEqual(items[index].label);
         await item.trigger('click', { item, index });
+      });
+    });
+
+    it('multiple[boolean]', async () => {
+      // 单选：面板渲染 Radio 列表，无底部操作栏
+      const singleWrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem label="菜单" options={options} />
+            </DropdownMenu>
+          );
+        },
+      });
+      await singleWrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      expect(singleWrapper.find(`.${prefix}-dropdown-item__radio-group`).exists()).toBe(true);
+      expect(singleWrapper.find(`.${prefix}-dropdown-item__checkbox-group`).exists()).toBe(false);
+      expect(singleWrapper.find(`.${prefix}-dropdown-item__footer`).exists()).toBe(false);
+
+      // 多选：面板渲染 Checkbox 列表与重置/确认操作栏
+      const multipleWrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem label="菜单" multiple options={options} />
+            </DropdownMenu>
+          );
+        },
+      });
+      await multipleWrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      expect(multipleWrapper.find(`.${prefix}-dropdown-item__checkbox-group`).exists()).toBe(true);
+      expect(multipleWrapper.find(`.${prefix}-dropdown-item__radio-group`).exists()).toBe(false);
+      expect(multipleWrapper.find(`.${prefix}-dropdown-item__reset-btn`).exists()).toBe(true);
+      expect(multipleWrapper.find(`.${prefix}-dropdown-item__confirm-btn`).exists()).toBe(true);
+    });
+
+    it('options[array]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem label="菜单" options={options} />
+            </DropdownMenu>
+          );
+        },
+      });
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      // 选项按 options 顺序渲染为单选列表，label 与选项一致
+      const $radios = wrapper.findAll(`.${prefix}-dropdown-item__radio-item`);
+      expect($radios).toHaveLength(options.length);
+      options.forEach((option, index) => {
+        expect($radios[index].text()).toBe(option.label);
       });
     });
 

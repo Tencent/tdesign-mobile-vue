@@ -86,6 +86,31 @@ describe('Comment', () => {
 
     // modelValue 在 props.ts 中声明（CommentFold 结构），但组件未消费该属性，受控折叠请使用 folds
     it.todo('modelValue[object]');
+
+    it('defaultFolds[object]', async () => {
+      const wrapper = mount(Comment, {
+        props: { defaultFolds: { state: 'collapsed', total: 5, step: 3, content: DEFAULT_FOLDS_CONTENT } },
+        slots: { reply: () => h('div', { class: 'reply-item' }, '回复') },
+      });
+      // 非受控初始态取 defaultFolds.state
+      expect(wrapper.find('.t-comment__folds').text()).toContain('展开回复');
+
+      // step = 3：第一次展开进入 partial（“展开更多回复/收起”两项）
+      await wrapper.find('.t-comment__folds-item').trigger('click');
+      let $items = wrapper.findAll('.t-comment__folds-item');
+      expect($items).toHaveLength(2);
+      expect($items[0].text()).toContain('展开更多回复');
+
+      // 第二次展开达到 step 步进上限，进入 expanded
+      await $items[0].trigger('click');
+      $items = wrapper.findAll('.t-comment__folds-item');
+      expect($items).toHaveLength(1);
+      expect($items[0].text()).toContain('收起');
+
+      // expanded 态点击收起，回到 collapsed
+      await $items[0].trigger('click');
+      expect(wrapper.find('.t-comment__folds-item').text()).toContain('展开回复');
+    });
   });
 
   describe('events', () => {

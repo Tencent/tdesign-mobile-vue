@@ -71,6 +71,25 @@ describe('ImageViewer', () => {
       expect(wrapper2.find('.t-image-viewer__nav-delete').findComponent(DeleteIcon).exists()).toBe(false);
     });
 
+    it('image[function]', async () => {
+      const wrapper = mount(
+        <ImageViewer
+          v-model:images={images.value}
+          visible={true}
+          image={(h, params) => <div class="custom-image">{params.index}</div>}
+        />,
+      );
+      await nextTick();
+
+      // 自定义渲染函数接管默认 img 渲染，每张预加载图片均收到 index 参数
+      const $customImages = wrapper.findAll('.custom-image');
+      expect($customImages.length).toBe(images.value.length);
+      $customImages.forEach(($image, index) => {
+        expect($image.text()).toBe(String(index));
+      });
+      expect(wrapper.find('.t-image-viewer__img').exists()).toBe(false);
+    });
+
     it('images[array]', async () => {
       const emptyImages = mount(<ImageViewer visible={true} />);
       expect(emptyImages.find('.t-swiper-item').exists()).toBe(false);

@@ -2,6 +2,8 @@ import { mount } from '@vue/test-utils';
 import type { VueWrapper } from '@vue/test-utils';
 import { vi } from 'vitest';
 import { QRCode, TdQRCodeProps } from '../index';
+import QRCodeCanvas from '../components/qrcode-canvas';
+import QRCodeSVG from '../components/qrcode-svg';
 
 describe('QRCode', () => {
   describe('props', () => {
@@ -82,9 +84,10 @@ describe('QRCode', () => {
 
     const level: TdQRCodeProps['level'][] = ['L', 'M', 'Q', 'H'];
     level.forEach((item) => {
-      it(`:level[string]-[${item}]`, async () => {
+      it(`level[${item}]`, async () => {
         await wrapper.setProps({ level: item });
-        expect(wrapper.find('.t-qrcode').attributes('level')).eq(item);
+        // 容错级别透传给二维码生成组件
+        expect(wrapper.findComponent(QRCodeCanvas).props('level')).eq(item);
       });
     });
 
@@ -101,7 +104,7 @@ describe('QRCode', () => {
 
     const status: TdQRCodeProps['status'][] = ['expired', 'loading', 'scanned'];
     status.forEach((item) => {
-      it(`:status[string]-[${item}]`, async () => {
+      it(`status[${item}]`, async () => {
         await wrapper.setProps({ status: item });
         expect(wrapper.find('.t-qrcode').find('.t-mask').exists()).eq(true);
         expect(wrapper.find('.t-qrcode').find(`.t-${item}`).exists()).eq(true);
@@ -112,6 +115,30 @@ describe('QRCode', () => {
       const statusRender = vi.fn();
       await wrapper.setProps({ status: 'expired', statusRender });
       expect(statusRender).toBeCalled();
+    });
+
+    it('type[canvas]', async () => {
+      // canvas 模式（默认）：渲染 canvas 元素，根节点无 svg 类名
+      expect(wrapper.find('.t-qrcode').classes('t-qrcode-svg')).eq(false);
+      expect(wrapper.find('.t-qrcode').find('canvas').exists()).eq(true);
+      expect(wrapper.find('.t-qrcode').find('svg').exists()).eq(false);
+    });
+
+    it('type[svg]', async () => {
+      await wrapper.setProps({ type: 'svg' });
+      // svg 模式：根节点添加 svg 类名，渲染 svg 元素
+      expect(wrapper.find('.t-qrcode').classes('t-qrcode-svg')).eq(true);
+      expect(wrapper.find('.t-qrcode').find('svg').exists()).eq(true);
+      expect(wrapper.find('.t-qrcode').find('canvas').exists()).eq(false);
+    });
+
+    it('value[string]', async () => {
+      // value 为二维码编码内容，透传给二维码生成组件
+      expect(wrapper.findComponent(QRCodeCanvas).props('value')).eq('https://tdesign.tencent.com/');
+
+      // 更换编码内容后同步到二维码生成组件
+      await wrapper.setProps({ value: 'https://github.com/Tencent/tdesign-mobile-vue' });
+      expect(wrapper.findComponent(QRCodeCanvas).props('value')).eq('https://github.com/Tencent/tdesign-mobile-vue');
     });
   });
 });

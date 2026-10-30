@@ -75,6 +75,49 @@ describe('TreeSelect', () => {
       testMultiple(false, RadioGroup);
     });
 
+    it('options[array]', () => {
+      // 携带 label 的多级选项数据
+      const labeledOptions = [
+        {
+          label: '一级一',
+          value: '1',
+          children: [
+            {
+              label: '二级一',
+              value: '1-1',
+              children: [
+                { label: '三级一', value: '1-1-1' },
+                { label: '三级二', value: '1-1-2' },
+              ],
+            },
+            { label: '二级二', value: '1-2', disabled: true, children: [{ label: '三级三', value: '1-2-1' }] },
+            { label: '二级三', value: '1-3', children: [{ label: '三级四', value: '1-3-1' }] },
+          ],
+        },
+        { label: '一级二', value: '2', children: [{ label: '二级四', value: '2-1', children: [] }] },
+      ];
+      const wrapper = mount(<TreeSelect options={labeledOptions} value={['1', '1-1', '1-1-1']} />);
+
+      // 选中路径外的层级取第一项，多级选项渲染为三列
+      expect(wrapper.findAll('.t-tree-select__column')).toHaveLength(3);
+      // 第一级渲染为侧边栏
+      const $sideBarItems = wrapper.findAllComponents(SideBarItem);
+      expect($sideBarItems).toHaveLength(2);
+      expect($sideBarItems[0].text()).toContain('一级一');
+      expect($sideBarItems[0].find('.t-side-bar-item__line').exists()).toBe(true);
+      // 中间层级渲染为普通选项，选中项激活、禁用项带禁用类
+      const $middleItems = wrapper.findAll('.t-tree-select__item');
+      expect($middleItems).toHaveLength(3);
+      expect($middleItems[0].text()).toContain('二级一');
+      expect($middleItems[0].element.classList.contains('t-tree-select__item--active')).toBe(true);
+      expect($middleItems[1].element.classList.contains('t-tree-select__item--disabled')).toBe(true);
+      // 叶子层级渲染为单选组
+      const radios = wrapper.findAllComponents(Radio);
+      expect(radios).toHaveLength(2);
+      expect(radios[0].text()).toContain('三级一');
+      expect(radios[0].find('.t-radio__icon--checked').exists()).toBe(true);
+    });
+
     it('value[string]', () => {
       const wrapper = mount(<TreeSelect options={options} value={defaultValue} />);
       const radioGroup = wrapper.findComponent(RadioGroup);

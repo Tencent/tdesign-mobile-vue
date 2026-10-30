@@ -107,6 +107,36 @@ describe('Indexes', () => {
       });
       expect(wrapper1.findAll(`.${componentName}__sidebar-item`).length).toBe(26);
     });
+
+    it('showFullIndex[boolean]', () => {
+      const wordList = ['Admin', 'Beta'];
+      const mountIndexes = (showFullIndex?: boolean) =>
+        mount({
+          setup() {
+            return () => (
+              <Indexes indexList={wordList} showFullIndex={showFullIndex}>
+                {{
+                  default: () =>
+                    wordList.map((item, index) => (
+                      <template key={index}>
+                        <IndexesAnchor index={item}></IndexesAnchor>
+                        <TCell className="indexes-cell">{item}</TCell>
+                      </template>
+                    )),
+                }}
+              </Indexes>
+            );
+          },
+        });
+
+      // 默认只显示首字符
+      const $defaultItems = mountIndexes().findAll(`.${componentName}__sidebar-item`);
+      expect($defaultItems.map((item) => item.text())).toEqual(['A', 'B']);
+
+      // showFullIndex = true：显示完整索引文本
+      const $fullItems = mountIndexes(true).findAll(`.${componentName}__sidebar-item`);
+      expect($fullItems.map((item) => item.text())).toEqual(['Admin', 'Beta']);
+    });
   });
   describe('events', () => {
     it('select', async () => {

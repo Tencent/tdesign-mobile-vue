@@ -4,6 +4,28 @@ import { useConfig } from '../useConfig';
 import ConfigProvider from '../index';
 
 describe('ConfigProvider', () => {
+  describe('props', () => {
+    it('globalConfig[object]', () => {
+      const ChildComponent = {
+        setup() {
+          const { globalConfig, classPrefix } = useConfig('calendar');
+          return () => (
+            <div class="t-child">{`${globalConfig.value.title}|${globalConfig.value.confirm}|${classPrefix.value}`}</div>
+          );
+        },
+      };
+
+      const wrapper = mount(() => (
+        <ConfigProvider globalConfig={{ classPrefix: 'tdesign', calendar: { title: '自定义日历标题' } }}>
+          <ChildComponent />
+        </ConfigProvider>
+      ));
+
+      // 注入的配置覆盖默认语言包对应字段，未覆盖字段（confirm）回退默认值
+      expect(wrapper.find('.t-child').text()).toBe('自定义日历标题|确认|tdesign');
+    });
+  });
+
   describe('slots', () => {
     it('default', () => {
       const wrapper = mount(() => <ConfigProvider>tdesign</ConfigProvider>, {});

@@ -253,6 +253,19 @@ describe('Cascader', () => {
       expect(wrapper.find('.cascader-middle').exists()).toBeTruthy();
     });
 
+    it('options[array]', async () => {
+      const wrapper = mount(<Cascader options={options} />);
+      // 首级选项渲染为 Radio 列表
+      const $radios = wrapper.findAllComponents(Radio);
+      expect($radios).toHaveLength(options.length);
+      expect($radios[0].text()).toContain('北京市');
+      expect($radios[1].text()).toContain('天津市');
+
+      // 空数据源不渲染任何选项
+      const wrapper2 = mount(<Cascader options={[]} />);
+      expect(wrapper2.findAllComponents(Radio)).toHaveLength(0);
+    });
+
     it('overlayProps[object]', async () => {
       const wrapper = mount(<Cascader options={options} visible overlayProps={{ zIndex: 6000 }} />);
       expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 6000');

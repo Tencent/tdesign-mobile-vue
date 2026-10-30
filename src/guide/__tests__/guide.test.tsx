@@ -246,6 +246,42 @@ describe('Guide', () => {
       );
       expect(document.querySelector('.t-guide__skip').textContent).toContain('跳过引导');
     });
+
+    it('steps[array]', async () => {
+      const steps = [
+        { element: '.guide-element-1', title: '第一步标题', body: '第一步描述内容' },
+        { element: '.guide-element-2', title: '第二步标题', body: '第二步描述内容' },
+      ];
+
+      createEmptyDomUnderBody('test-container');
+      await mountBaseGuide({ mode: 'dialog', modelValue: 0 }, `#test-container`, steps);
+      // steps 第一项的 title/body 驱动引导内容渲染
+      expect(document.querySelector('.t-guide__title').textContent).toBe('第一步标题');
+      expect(document.querySelector('.t-guide__desc').textContent).toBe('第一步描述内容');
+      // 第一步非最后一步，渲染下一步/跳过按钮
+      expect(document.querySelector('.t-guide__next')).toBeTruthy();
+      expect(document.querySelector('.t-guide__finish')).toBeFalsy();
+
+      createEmptyDomUnderBody('test-container-2');
+      await mountBaseGuide({ mode: 'dialog', modelValue: 1 }, `#test-container-2`, steps);
+      // 切换到第二项后渲染对应的 title/body，且为最后一步，渲染完成/返回按钮
+      // （两个实例均 teleport 到 body，取最后一个实例的节点）
+      const titles = document.querySelectorAll('.t-guide__title');
+      const descs = document.querySelectorAll('.t-guide__desc');
+      expect(titles[titles.length - 1].textContent).toBe('第二步标题');
+      expect(descs[descs.length - 1].textContent).toBe('第二步描述内容');
+      expect(document.querySelector('.t-guide__finish')).toBeTruthy();
+      expect(document.querySelector('.t-guide__back')).toBeTruthy();
+    });
+
+    it('zIndex[number]', async () => {
+      createEmptyDomUnderBody('test-container');
+      await mountBaseGuide({ mode: 'dialog', modelValue: 0, zIndex: 5000 }, `#test-container`);
+      // 提示层使用 zIndex，高亮层与其覆盖层依次递减
+      expect(document.querySelector('.t-guide__wrapper').getAttribute('style')).toContain('z-index: 5000');
+      expect(document.querySelector('.t-guide__highlight').getAttribute('style')).toContain('z-index: 4999');
+      expect(document.querySelector('.t-guide__overlay').getAttribute('style')).toContain('z-index: 4998');
+    });
   });
 
   describe('events', () => {

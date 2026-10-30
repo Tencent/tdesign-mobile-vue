@@ -1,12 +1,66 @@
 import { mount } from '@vue/test-utils';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, afterEach } from 'vitest';
 import { nextTick } from 'vue';
 import Loading, { LoadingPlugin } from '../index';
 import Spinner from '../icon/spinner';
 import Gradient from '../icon/gradient';
 
+// attach/fullscreen 用例会 teleport 到 body，统一清理残留节点
+afterEach(() => {
+  document.body.innerHTML = '';
+});
+
+const mountAttachContainer = (id: string) => {
+  const container = document.createElement('div');
+  container.id = id;
+  document.body.appendChild(container);
+  return container;
+};
+
 describe('Loading', () => {
   describe('props', () => {
+    it('attach[string]', async () => {
+      mountAttachContainer('loading-attach');
+      const wrapper = mount(<Loading attach="#loading-attach" />);
+      await nextTick();
+
+      // 字符串选择器：Loading 挂载到目标容器，且带全屏遮罩类名
+      expect(document.querySelector('#loading-attach .t-loading')).toBeTruthy();
+      expect(document.querySelector('#loading-attach .t-loading--full')).toBeTruthy();
+      expect(wrapper.find('.t-loading').exists()).toBe(false);
+    });
+
+    it('attach[function]', async () => {
+      const container = mountAttachContainer('loading-attach-fn');
+      const wrapper = mount(<Loading attach={() => container} />);
+      await nextTick();
+
+      // 函数返回挂载节点：同样 teleport 到目标容器
+      expect(container.querySelector('.t-loading')).toBeTruthy();
+      expect(wrapper.find('.t-loading').exists()).toBe(false);
+    });
+
+    it('content[string]', () => {
+      const wrapper = mount(<Loading content="加载中..." />);
+      // content 作为子元素渲染在 loading 根节点内
+      expect(wrapper.text()).toContain('加载中...');
+    });
+
+    it('content[function]', () => {
+      const wrapper = mount(<Loading content={() => <div class="custom-content">自定义内容</div>} />);
+      expect(wrapper.find('.custom-content').text()).toBe('自定义内容');
+    });
+
+    it('default[string]', () => {
+      // default prop 与默认插槽同名，此处验证 prop 传入通道
+      const wrapper = mount(Loading, {
+        props: {
+          default: '默认子元素',
+        },
+      });
+      expect(wrapper.text()).toContain('默认子元素');
+    });
+
     it('delay[number]', () => {
       const wrapper = mount(() => <Loading delay={1000}></Loading>);
       const loading = wrapper.find('.t-loading');
@@ -22,6 +76,16 @@ describe('Loading', () => {
         },
       });
       expect(wrapper.find('.t-loading__gradient').attributes('style')).toContain('1200ms');
+    });
+
+    it('fullscreen[boolean]', async () => {
+      const wrapper = mount(<Loading fullscreen />);
+      // 全屏加载带 fullscreen 类名
+      expect(wrapper.find('.t-loading--fullscreen').exists()).toBe(true);
+
+      // fullscreen 模式下 loading = false 不渲染
+      await wrapper.setProps({ loading: false });
+      expect(wrapper.find('.t-loading').exists()).toBe(false);
     });
 
     it('indicator[boolean]', () => {

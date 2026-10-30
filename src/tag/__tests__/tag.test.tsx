@@ -15,6 +15,37 @@ const shapeList: TdTagProps['shape'][] = ['mark', 'round', 'square'];
 
 describe('Tag', () => {
   describe('props', () => {
+    it('closable[boolean]', () => {
+      const wrapper = mount(() => <Tag closable>{TEXT}</Tag>);
+      // 可关闭标签渲染关闭图标与对应类名
+      expect(wrapper.classes()).toContain('t-tag--closable');
+      expect(wrapper.find('.t-tag__icon-close').exists()).toBe(true);
+
+      const wrapper2 = mount(() => <Tag>{TEXT}</Tag>);
+      expect(wrapper2.classes()).not.toContain('t-tag--closable');
+      expect(wrapper2.find('.t-tag__icon-close').exists()).toBe(false);
+    });
+
+    it('content[string]', async () => {
+      const wrapper = mount(() => <Tag content="prop 内容" />);
+      // content prop 通道渲染标签文本，与默认插槽区分
+      expect(wrapper.find('.t-tag__text').text()).toBe('prop 内容');
+    });
+    it('content[function]', async () => {
+      const wrapper = mount(() => <Tag content={() => '函数内容'} />);
+      expect(wrapper.find('.t-tag__text').text()).toBe('函数内容');
+    });
+
+    it('default[string]', async () => {
+      const wrapper = mount(Tag, {
+        props: {
+          default: 'default prop 内容',
+        },
+      });
+      // default prop 通道优先于 content prop 渲染标签文本
+      expect(wrapper.find('.t-tag__text').text()).toBe('default prop 内容');
+    });
+
     it('disabled[boolean]', async () => {
       const wrapper = mount(() => <Tag disabled>{TEXT}</Tag>);
       expect(wrapper.classes()).toContain('t-tag--disabled');

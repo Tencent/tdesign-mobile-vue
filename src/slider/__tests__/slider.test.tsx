@@ -14,6 +14,33 @@ const move = async (target, distance) => {
 
 describe('Slider', () => {
   describe('props', () => {
+    it('disabled[boolean]', async () => {
+      const onChange = vi.fn();
+      const left = 16;
+      const right = 359;
+      const original = window.HTMLElement.prototype.getBoundingClientRect;
+      window.HTMLElement.prototype.getBoundingClientRect = () => ({ left, right });
+
+      const wrapper = mount(Slider, {
+        props: {
+          value: 0,
+          disabled: true,
+          onChange,
+        },
+      });
+
+      // 禁用态根节点、轨道呈禁用样式
+      expect(wrapper.find(`.${classPrefix}`).classes()).toContain(`${classPrefix}--disabled`);
+      expect(wrapper.find(`.${classPrefix}__bar`).classes()).toContain(`${classPrefix}__bar--disabled`);
+
+      // 点击轨道不触发 change
+      await wrapper.find('.t-slider__line').trigger('click', { clientX: 200 });
+      expect(onChange).toHaveBeenCalledTimes(0);
+
+      // // restore
+      window.HTMLElement.prototype.getBoundingClientRect = original;
+    });
+
     it('label[boolean]', async () => {
       const value = 0;
       const wrapper = mount(Slider, {
@@ -98,6 +125,96 @@ describe('Slider', () => {
       expect(wrapper.find('.t-slider__scale-item').exists()).toBeTruthy();
       expect(wrapper.text()).toContain('小');
       expect(wrapper.text()).toContain('大');
+    });
+
+    it('max[number]', async () => {
+      const onChange = vi.fn();
+      const left = 16;
+      const right = 359;
+      const original = window.HTMLElement.prototype.getBoundingClientRect;
+      window.HTMLElement.prototype.getBoundingClientRect = () => ({ left, right });
+
+      const wrapper = mount(Slider, {
+        props: {
+          value: 0,
+          max: 50,
+          showExtremeValue: true,
+          onChange,
+        },
+      });
+
+      // 极值文本按 max 渲染
+      expect(wrapper.find(`.${classPrefix}__value--max`).text()).toBe('50');
+
+      // 点击轨道按 max=50 换算：clientX 200 → (184/343)*50 ≈ 26.8，步进取整 27
+      await wrapper.find('.t-slider__line').trigger('click', { clientX: 200 });
+      expect(onChange).toHaveBeenCalledWith(27);
+
+      // // restore
+      window.HTMLElement.prototype.getBoundingClientRect = original;
+    });
+
+    it('min[number]', async () => {
+      const onChange = vi.fn();
+      const left = 16;
+      const right = 359;
+      const original = window.HTMLElement.prototype.getBoundingClientRect;
+      window.HTMLElement.prototype.getBoundingClientRect = () => ({ left, right });
+
+      const wrapper = mount(Slider, {
+        props: {
+          value: 10,
+          min: 10,
+          showExtremeValue: true,
+          onChange,
+        },
+      });
+
+      // 极值文本按 min 渲染
+      expect(wrapper.find(`.${classPrefix}__value--min`).text()).toBe('10');
+
+      // 点击轨道按 min=10 换算：(184/343)*90 + 10 ≈ 58.3，步进取整 58
+      await wrapper.find('.t-slider__line').trigger('click', { clientX: 200 });
+      expect(onChange).toHaveBeenCalledWith(58);
+
+      // // restore
+      window.HTMLElement.prototype.getBoundingClientRect = original;
+    });
+
+    it('range[boolean]', async () => {
+      const left = 16;
+      const right = 359;
+      const original = window.HTMLElement.prototype.getBoundingClientRect;
+      window.HTMLElement.prototype.getBoundingClientRect = () => ({ left, right });
+
+      try {
+        const wrapper = mount(Slider, {
+          props: {
+            value: [10, 60],
+            range: true,
+          },
+        });
+        await nextTick();
+        expect(wrapper.find(`.${classPrefix}`).classes()).toContain(`${classPrefix}--range`);
+        // 双滑块模式渲染左右两个滑块
+        expect(wrapper.find(`.${classPrefix}__dot--left`).exists()).toBe(true);
+        expect(wrapper.find(`.${classPrefix}__dot--right`).exists()).toBe(true);
+        // 轨道按范围值定位：left = 343*10%，right = 343*(100-60)%
+        const style = wrapper.find('.t-slider__line--default').attributes('style');
+        expect(style).toContain('left: 34px');
+        expect(style).toContain('right: 137px');
+
+        // 默认单滑块模式无左右滑块
+        const single = mount(Slider, {
+          props: {
+            value: 10,
+          },
+        });
+        expect(single.find(`.${classPrefix}__dot--left`).exists()).toBe(false);
+        expect(single.find(`.${classPrefix}__dot--right`).exists()).toBe(false);
+      } finally {
+        window.HTMLElement.prototype.getBoundingClientRect = original;
+      }
     });
 
     it('showExtremeValue[boolean]', async () => {

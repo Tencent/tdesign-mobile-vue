@@ -20,6 +20,19 @@ describe('Badge', () => {
       expect(inner.attributes('style')).toContain('background: red');
     });
 
+    it('content[string]', () => {
+      const wrapper = mount(() => <Badge content={TEXT} />);
+      // content 作为徽标主体内容渲染
+      expect(wrapper.find(`.${name}__content-text`).text()).toEqual(TEXT);
+      // count 默认 0 且未开启 showZero 时不渲染角标，但 content 内容区不受影响
+      expect(wrapper.find(`.${name}--basic`).exists()).toEqual(false);
+    });
+
+    it('content[function]', () => {
+      const wrapper = mount(() => <Badge content={() => TEXT} />);
+      expect(wrapper.find(`.${name}__content-text`).text()).toEqual(TEXT);
+    });
+
     it('count[number]', () => {
       const wrapper = mount(() => (
         <Badge count={5}>

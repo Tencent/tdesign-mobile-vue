@@ -71,5 +71,32 @@ describe('SideBarItem', () => {
 
       testLabel('tdesign mobile vue');
     });
+
+    it('value[number]', () => {
+      const wrapper = mount(
+        <SideBar value={1}>
+          <SideBarItem value={0} label="第一项" />
+          <SideBarItem value={1} label="第二项" />
+        </SideBar>,
+      );
+      const $items = wrapper.findAll('.t-side-bar-item');
+      // value 与分组当前值匹配的子项为选中态
+      expect($items[0].classes()).not.toContain('t-side-bar-item--active');
+      expect($items[1].classes()).toContain('t-side-bar-item--active');
+      expect($items[1].find('.t-side-bar-item__line').exists()).toBe(true);
+      expect($items[0].find('.t-side-bar-item__line').exists()).toBe(false);
+    });
+
+    it('value[string]', () => {
+      const wrapper = mount(
+        <SideBar value="b">
+          <SideBarItem value="a" label="第一项" />
+          <SideBarItem value="b" label="第二项" />
+        </SideBar>,
+      );
+      const $items = wrapper.findAll('.t-side-bar-item');
+      expect($items[0].classes()).not.toContain('t-side-bar-item--active');
+      expect($items[1].classes()).toContain('t-side-bar-item--active');
+    });
   });
 });

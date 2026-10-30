@@ -60,6 +60,54 @@ describe('PullDownRefresh', () => {
       trigger(track, 'touchend', 50, 170);
       expect(wrapper.element).toMatchSnapshot();
     });
+
+    it('refreshTimeout[number]', async () => {
+      vi.useFakeTimers();
+      try {
+        const onTimeout = vi.fn();
+        const status = ref(false);
+        // 受控模式：onChange 回写 status，加载态在超时窗口内保持
+        const onChange = vi.fn((value) => {
+          status.value = value;
+        });
+        const wrapper = mount(() => (
+          <PullDownRefresh
+            value={status.value}
+            refreshTimeout={1000}
+            onChange={onChange}
+            onRefresh={() => {}}
+            onTimeout={onTimeout}
+          />
+        ));
+
+        const track = wrapper.find('.t-pull-down-refresh__track');
+        const maxBar = wrapper.find('.t-pull-down-refresh__tips');
+        await nextTick();
+        maxBar.trigger('resize', { height: 80 });
+
+        // 下拉松手进入加载态
+        trigger(track, 'touchstart', 50, 0);
+        trigger(track, 'touchmove', 50, 70);
+        trigger(track, 'touchmove', 50, 200);
+        trigger(track, 'touchend', 50, 200);
+        await nextTick();
+        expect(onChange).toHaveBeenCalledWith(true);
+        expect(onTimeout).not.toHaveBeenCalled();
+
+        // 未超过 refreshTimeout：加载态保持
+        vi.advanceTimersByTime(999);
+        expect(onTimeout).not.toHaveBeenCalled();
+
+        // 到达 refreshTimeout：触发 onTimeout，并复位加载状态（onChange(false)）
+        vi.advanceTimersByTime(1);
+        expect(onTimeout).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenLastCalledWith(false);
+
+        wrapper.unmount();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
   });
 
   describe('events', () => {

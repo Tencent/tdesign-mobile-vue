@@ -105,6 +105,52 @@ describe('Calendar', () => {
       });
     });
 
+    it('maxDate[Date]', async () => {
+      // minDate ~ maxDate 跨 1/2/3 三个月，平铺渲染 3 个完整月份
+      const wrapper = mount(
+        <Calendar visible={true} value={value} minDate={minDate} maxDate={new Date(2022, 2, 15)} />,
+      );
+      expect(wrapper.findAll(`.${name}__month`)).toHaveLength(3);
+      const $dates = wrapper.findAll(`.${name}__dates-item`);
+      // 3 个整月：31 + 28 + 31
+      expect($dates).toHaveLength(90);
+      // maxDate 当天可选，次日及之后禁用
+      expect($dates[31 + 28 + 14].classes()).not.toContain(`${name}__dates-item--disabled`);
+      expect($dates[31 + 28 + 15].classes()).toContain(`${name}__dates-item--disabled`);
+    });
+
+    it('maxDate[number]', async () => {
+      const wrapper = mount(
+        <Calendar visible={true} value={value} minDate={minDate} maxDate={new Date(2022, 0, 20).getTime()} />,
+      );
+      const $dates = wrapper.findAll(`.${name}__dates-item`);
+      expect($dates).toHaveLength(31);
+      // 时间戳入参与 Date 入参一致：20 日（含）之前可选，之后禁用
+      expect($dates[19].classes()).not.toContain(`${name}__dates-item--disabled`);
+      expect($dates[20].classes()).toContain(`${name}__dates-item--disabled`);
+    });
+
+    it('minDate[Date]', async () => {
+      const wrapper = mount(
+        <Calendar visible={true} value={value} minDate={new Date(2022, 0, 10)} maxDate={maxDate} />,
+      );
+      const $dates = wrapper.findAll(`.${name}__dates-item`);
+      // minDate 不裁剪当月渲染天数，仅影响可选范围：10 日（含）之前禁用
+      expect($dates).toHaveLength(31);
+      expect($dates[8].classes()).toContain(`${name}__dates-item--disabled`);
+      expect($dates[9].classes()).not.toContain(`${name}__dates-item--disabled`);
+    });
+
+    it('minDate[number]', async () => {
+      const wrapper = mount(
+        <Calendar visible={true} value={value} minDate={new Date(2022, 0, 10).getTime()} maxDate={maxDate} />,
+      );
+      const $dates = wrapper.findAll(`.${name}__dates-item`);
+      // 时间戳入参与 Date 入参一致：月初至 9 日均禁用
+      expect($dates[0].classes()).toContain(`${name}__dates-item--disabled`);
+      expect($dates[9].classes()).not.toContain(`${name}__dates-item--disabled`);
+    });
+
     it('readonly[boolean]', async () => {
       const onSelect = vi.fn();
       const wrapper = mount(

@@ -1,4 +1,4 @@
-import { h, nextTick } from 'vue';
+import { h, nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import type { VueWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
@@ -49,6 +49,17 @@ describe('Message', () => {
       const closeBtn = () => h(TIconApp);
       const wrapper = mount(<Message visible closeBtn={closeBtn} />);
       expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+    });
+
+    it('content[string]', () => {
+      const wrapper = mount(<Message visible content="这是一条消息通知" />);
+      expect(wrapper.find(`.${name}__text`).text()).toBe('这是一条消息通知');
+    });
+
+    it('content[function]', () => {
+      const wrapper = mount(<Message visible content={() => <span class="custom-content">自定义消息</span>} />);
+      const $text = wrapper.find(`.${name}__text`);
+      expect($text.find('.custom-content').text()).toBe('自定义消息');
     });
 
     it('duration[number]', () => {
@@ -157,6 +168,37 @@ describe('Message', () => {
       const second = await mountStackedMessage({ gap: 20, single: true });
       expect(getMessageTop(second)).toBe(getMessageTop(first));
       expect(getMessageTop(first)).toBe(0);
+    });
+
+    it('theme[info/success/warning/error]', () => {
+      const themeList: TdMessageProps['theme'][] = ['info', 'success', 'warning', 'error'];
+      themeList.forEach((theme) => {
+        const wrapper = mount(<Message visible theme={theme} />);
+        expect(wrapper.find(`.${name}`).classes()).toContain(`${name}--${theme}`);
+      });
+    });
+
+    it('visible[boolean]', async () => {
+      const wrapper = mount(<Message visible={false} />);
+      expect(wrapper.find(`.${name}`).exists()).toBe(false);
+
+      await wrapper.setProps({ visible: true });
+      expect(wrapper.find(`.${name}`).exists()).toBe(true);
+    });
+
+    it('modelValue[boolean]', async () => {
+      const show = ref(false);
+      const wrapper = mount({
+        setup() {
+          return () => <Message v-model={show.value} />;
+        },
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBe(false);
+
+      // v-model 受控通道控制消息显隐
+      show.value = true;
+      await nextTick();
+      expect(wrapper.find(`.${name}`).exists()).toBe(true);
     });
     it('zIndex[number]', () => {
       const wrapper = mount(<Message visible zIndex={99} />);

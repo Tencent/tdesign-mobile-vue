@@ -122,6 +122,33 @@ describe('Watermark', () => {
       expect($mark.attributes('style')).toContain('background-image');
     });
 
+    it('x[number]', () => {
+      const wrapper = mount(() => (
+        <Watermark x={24} width={100} height={40} watermarkContent={[{ text: '水印文字' }]}>
+          tdesign
+        </Watermark>
+      ));
+      // 水平间距参与水印层背景尺寸计算：background-size = x + width
+      const $mark = wrapper.find('.t-watermark > div');
+      expect($mark.attributes('style')).toContain('background-size: 124px');
+    });
+
+    it('y[number]', () => {
+      // 垂直间距参与水印画布高度计算，通过 createElement 捕获内部 canvas 断言
+      const createElementSpy = vi.spyOn(document, 'createElement');
+      mount(() => (
+        <Watermark x={24} y={48} width={100} height={40} watermarkContent={[{ text: '水印文字' }]}>
+          tdesign
+        </Watermark>
+      ));
+      const canvas = createElementSpy.mock.results
+        .map((result) => result.value)
+        .find((el) => el instanceof HTMLCanvasElement);
+      // 画布高度 = y + height
+      expect(canvas.style.height).toBe('88px');
+      createElementSpy.mockRestore();
+    });
+
     it('zIndex[number]', () => {
       const wrapper = mount(() => (
         <Watermark zIndex={100} watermarkContent={[{ text: '水印文字' }]}>

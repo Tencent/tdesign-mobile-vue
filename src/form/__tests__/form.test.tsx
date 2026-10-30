@@ -334,11 +334,59 @@ describe('Form', () => {
       expect(wrapper.find(`.${name}__controls--right`).exists()).toBeTruthy();
     });
 
+    it('data[object]', async () => {
+      const formData = ref({ name: '' });
+      const rules = { name: [{ required: true }] };
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form rules={rules} data={formData.value}>
+              <FormItem label="姓名" name="name">
+                <Input v-model={formData.value.name} />
+              </FormItem>
+            </Form>
+          );
+        },
+      });
+
+      const form = wrapper.findComponent(Form);
+      // FormItem 校验取值来源于 Form.data：name 为空时校验不通过
+      expect(await form.vm.$.exposed.validate()).not.toBe(true);
+
+      // data 中字段更新后，校验按最新值执行
+      formData.value.name = 'TDesign';
+      expect(await form.vm.$.exposed.validate()).toBe(true);
+    });
+
     it('disabled[boolean]', async () => {
       const input = wrapper.find('input');
       expect(input.element.hasAttribute('disabled')).toBeFalsy();
       await wrapper.setProps({ disabled: true });
       expect(input.element.hasAttribute('disabled')).toBeTruthy();
+    });
+
+    it('errorMessage[object]', async () => {
+      const formData = { name: '' };
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form
+              rules={{ name: [{ required: true }] }}
+              data={formData}
+              // eslint-disable-next-line no-template-curly-in-string
+              errorMessage={{ required: '${name}为必填项，请检查' }}
+            >
+              <FormItem label="姓名" name="name">
+                <Input v-model={formData.name} />
+              </FormItem>
+            </Form>
+          );
+        },
+      });
+
+      await wrapper.findComponent(Form).vm.$.exposed.validate();
+      // 规则未配置 message 时，使用 Form.errorMessage 模板渲染错误信息（label 作为 ${name}）
+      expect(wrapper.find(`.${name}__item-extra`).text()).toBe('姓名为必填项，请检查');
     });
 
     it('id[string]', async () => {
@@ -396,6 +444,26 @@ describe('Form', () => {
       expect(input.element.hasAttribute('readonly')).toBeFalsy();
       await wrapper.setProps({ readonly: true });
       expect(input.element.hasAttribute('readonly')).toBeTruthy();
+    });
+
+    it('requiredMark[boolean]', async () => {
+      const mountForm = (requiredMark) =>
+        mount({
+          setup() {
+            return () => (
+              <Form requiredMark={requiredMark} rules={{ name: [{ required: true }] }} data={{ name: '' }}>
+                <FormItem label="姓名" name="name">
+                  <Input />
+                </FormItem>
+              </Form>
+            );
+          },
+        });
+
+      // requiredMark = false：即使规则必填，整个表单不显示星号
+      expect(mountForm(false).find(`.${name}__label--required`).exists()).toBe(false);
+      // requiredMark = true：表单项显示星号
+      expect(mountForm(true).find(`.${name}__label--required`).exists()).toBe(true);
     });
 
     it('requiredMarkPosition[left/right]', async () => {

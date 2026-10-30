@@ -93,6 +93,14 @@ describe('SwipeCell', () => {
       expect(wrapper.text()).toBe(content);
     });
 
+    it('default[string]', async () => {
+      const content = 'default prop content';
+      const wrapper = mount(<SwipeCell default={content} />);
+
+      // default prop 通道优先于 content prop 渲染单元格内容
+      expect(wrapper.text()).toBe(content);
+    });
+
     it('content[function]', async () => {
       const content = 'content is a string';
       const wrapper = mount(<SwipeCell content={() => <div class="swipe-cell__content">{content}</div>} />);

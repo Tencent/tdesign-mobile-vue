@@ -39,6 +39,32 @@ describe('ColorPicker', () => {
       testEnableAlpha(true);
     });
 
+    it('fixed[boolean]', () => {
+      // 弹层在 position:fixed 区域时，触控纵坐标需改用 clientY 计算
+      const testFixed = (fixed: boolean, expectedValue: number) => {
+        const onPaletteBarChange = vi.fn();
+        const wrapper = mountColorPicker({ type: 'multiple', fixed, onPaletteBarChange });
+        mockBoundingClientRect({
+          left: 0,
+          top: 0,
+          width: 100,
+          height: 100,
+        });
+        const el = wrapper.find('.t-color-picker__saturation').element;
+        // pageY = 90、clientY = 10 两个坐标差异明显，用于区分两种取值来源
+        makeTouch(el, 'touchend', { pageX: 50, pageY: 90, clientY: 10 });
+
+        expect(onPaletteBarChange).toHaveBeenCalledTimes(1);
+        const { color } = onPaletteBarChange.mock.lastCall[0];
+        expect(color.saturation).toBe(0.5);
+        expect(color.value).toBeCloseTo(expectedValue);
+      };
+      // 非 fixed：按 pageY 计算，value = 1 - 90/100 = 0.1
+      testFixed(false, 0.1);
+      // fixed：按 clientY 计算，value = 1 - 10/100 = 0.9
+      testFixed(true, 0.9);
+    });
+
     it('format[RGB/HEX]', () => {
       const testFormat = (format, target) => {
         const wrapper = mountColorPicker({ format, type: 'multiple' });
@@ -59,6 +85,20 @@ describe('ColorPicker', () => {
       testSwatchColors([], 0);
       testSwatchColors(undefined, 10);
       testSwatchColors(['red', 'blur'], 2);
+    });
+
+    it('type[base/multiple]', () => {
+      // base 仅展示系统预设内容；multiple 额外渲染色板（饱和度面板）
+      const testType = (type, target) => {
+        const wrapper = mountColorPicker({ type });
+        // 未传 type 时默认 base
+        expect(wrapper.find('.t-color-picker__body').classes()).toContain(`t-color-picker__body--${type || 'base'}`);
+        const dom = wrapper.findAll('.t-color-picker__saturation');
+        expect(dom).toHaveLength(target);
+      };
+      testType(undefined, 0);
+      testType('base', 0);
+      testType('multiple', 1);
     });
 
     // 受控色值 v-model 联动
@@ -91,17 +131,6 @@ describe('ColorPicker', () => {
         '0',
         '100%',
       ]);
-    });
-
-    it('multiple[boolean]', () => {
-      const testCurrentProp = (type, target) => {
-        const wrapper = mountColorPicker({ type });
-        const dom = wrapper.findAll('.t-color-picker__saturation');
-        expect(dom).toHaveLength(target);
-      };
-      testCurrentProp(undefined, 0);
-      testCurrentProp('base', 0);
-      testCurrentProp('multiple', 1);
     });
   });
 

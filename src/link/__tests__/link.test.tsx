@@ -40,6 +40,25 @@ describe('Link', () => {
       expect(wrapper.find('.t-link--content')).toBeTruthy();
     });
 
+    it('default[string]', () => {
+      // default prop 与默认插槽同名，此处验证 prop 传入通道
+      const wrapper = mount(Link, {
+        props: {
+          default: '默认内容',
+        },
+      });
+      expect(wrapper.find('.t-link__content').text()).toBe('默认内容');
+    });
+
+    it('default[function]', () => {
+      const wrapper = mount(Link, {
+        props: {
+          default: () => <span class="default-content">函数默认内容</span>,
+        },
+      });
+      expect(wrapper.find('.t-link__content').find('.default-content').text()).toBe('函数默认内容');
+    });
+
     it('disabled[boolean]', () => {
       const fn = vi.fn();
       const wrapper = mount({
@@ -94,6 +113,27 @@ describe('Link', () => {
         },
       });
       expect(wrapperDefault.find('.t-link--medium').exists()).toBeTruthy();
+    });
+
+    it('suffixIcon[function]', () => {
+      const wrapper = mount(Link, {
+        props: {
+          suffixIcon: () => <Icon />,
+        },
+      });
+      expect(wrapper.find('.t-link__suffix-icon').exists()).toBeTruthy();
+      expect(wrapper.findComponent(Icon).exists()).toBeTruthy();
+    });
+
+    it('target[string]', () => {
+      const wrapper = mount(Link, {
+        props: {
+          href: 'https://tdesign.tencent.com',
+          target: '_self',
+        },
+      });
+      // target 透传给原生 a 元素
+      expect(wrapper.attributes('target')).toBe('_self');
     });
 
     it('theme[default/primary/danger/warning/success]', () => {

@@ -57,6 +57,29 @@ describe('ActionSheet', () => {
       expect(wrapper.findComponent(MenuGrid).props().count).toEqual(3);
     });
 
+    it('description[string]', async () => {
+      // 设置描述文字：渲染描述节点，且根节点不带 --no-description 修饰类
+      const wrapper = mount(ActionSheet, {
+        props: {
+          items: ['选项'],
+          visible: true,
+          description: '动作面板描述文字',
+        },
+      });
+      expect(wrapper.find(`.${name}__description`).text()).toEqual('动作面板描述文字');
+      expect(wrapper.find(`.${name}--no-description`).exists()).toEqual(false);
+
+      // 不设置描述：不渲染描述节点，根节点带 --no-description 修饰类
+      const wrapper2 = mount(ActionSheet, {
+        props: {
+          items: ['选项'],
+          visible: true,
+        },
+      });
+      expect(wrapper2.find(`.${name}__description`).exists()).toEqual(false);
+      expect(wrapper2.find(`.${name}--no-description`).exists()).toEqual(true);
+    });
+
     it('items[array]', async () => {
       const wrapper = mount(ActionSheet, {
         props: {
