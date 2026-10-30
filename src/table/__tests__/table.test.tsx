@@ -222,7 +222,8 @@ describe('Table', () => {
     it.todo('rowspanAndColspan[function]');
     // 固定行/汇总行/行属性需要更完整的表格数据场景
     it.todo('fixedRows[object]');
-    it.todo('footerSummary[string/function]');
+    it.todo('footerSummary[string]');
+    it.todo('footerSummary[function]');
     it.todo('rowAttributes[object/function/array]');
   });
 

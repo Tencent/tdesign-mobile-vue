@@ -144,7 +144,8 @@ describe('Collapse', () => {
     });
 
     // expandIcon 自定义展开图标/关闭展开图标，与面板图标渲染联动
-    it.todo('expandIcon[boolean/function]');
+    it.todo('expandIcon[boolean]');
+    it.todo('expandIcon[function]');
   });
 
   describe('events', () => {

@@ -35,7 +35,9 @@ describe('Message', () => {
     it.todo('single[boolean]');
 
     // gap 多条消息堆叠间距，需多条消息实例场景
-    it.todo('gap[string/number/boolean]');
+    it.todo('gap[string]');
+    it.todo('gap[number]');
+    it.todo('gap[boolean]');
     // marquee 跑马灯滚动行为
     // it(' marquee', async () => {
     //   const wrapper = mount(<Message visible />);

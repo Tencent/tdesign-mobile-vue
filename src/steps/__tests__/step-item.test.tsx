@@ -44,5 +44,23 @@ describe('StepItem', () => {
         expect(item.find(`.t-step-item__description`).text()).toEqual(stepItems.value[index].content);
       });
     });
+
+    it('icon[function]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem title="标题" content="内容" icon={() => <span class="custom-step-icon">图标</span>} />
+        </Steps>
+      ));
+      expect(wrapper.find('.custom-step-icon').exists()).toBeTruthy();
+    });
+
+    it('titleRight[function]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem title="标题" titleRight={() => <span class="title-right">右侧文字</span>} />
+        </Steps>
+      ));
+      expect(wrapper.find('.title-right').exists()).toBeTruthy();
+    });
   });
 });

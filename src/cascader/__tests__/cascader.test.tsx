@@ -213,6 +213,11 @@ describe('Cascader', () => {
       await nextTick();
     });
 
+    it('defaultValue[string]', async () => {
+      const wrapper = mount(<Cascader visible={true} options={options} defaultValue="110000" theme="step" />);
+      expect(wrapper.find(`.${name}__steps`).exists()).toBeTruthy();
+    });
+
     it('title[string]', async () => {
       const title = TEXT;
       const wrapper = mount(<Cascader options={options} title={title} />);

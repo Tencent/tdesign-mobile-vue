@@ -208,5 +208,11 @@ describe('Sticky', () => {
       expect(onScrollParameterFn).toHaveBeenCalledWith(false);
       expect(onScrollParameterFn).toHaveBeenCalledWith(true);
     });
+
+    // disabled 关闭吸顶功能，依赖滚动交互
+    it.todo('disabled[boolean]');
+    // container 自定义滚动容器，依赖真实容器滚动
+    it.todo('container[string]');
+    it.todo('container[object]');
   });
 });

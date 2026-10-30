@@ -148,6 +148,7 @@ describe('TreeSelect', () => {
     // customStyle/filterable/height 过滤搜索与容器样式
     it.todo('customStyle[object]');
     it.todo('filterable[boolean]');
-    it.todo('height[string/number]');
+    it.todo('height[string]');
+    it.todo('height[number]');
   });
 });

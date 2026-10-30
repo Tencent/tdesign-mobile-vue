@@ -95,7 +95,8 @@ describe('CollapsePanel', () => {
     });
 
     // expandIcon/headerLeftIcon 自定义图标渲染
-    it.todo('expandIcon[boolean/function]');
+    it.todo('expandIcon[boolean]');
+    it.todo('expandIcon[function]');
     it.todo('headerLeftIcon[function]');
   });
 

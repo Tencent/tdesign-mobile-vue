@@ -353,7 +353,11 @@ describe('DropdownItem', () => {
     // placement 菜单弹出方向
     it.todo('placement[string]');
     // 受控值 v-model 联动
-    it.todo('modelValue[string/number/array]');
-    it.todo('defaultValue[string/number/array]');
+    it.todo('modelValue[string]');
+    it.todo('modelValue[number]');
+    it.todo('modelValue[array]');
+    it.todo('defaultValue[string]');
+    it.todo('defaultValue[number]');
+    it.todo('defaultValue[array]');
   });
 });

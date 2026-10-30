@@ -82,6 +82,39 @@ describe('Loading', () => {
       });
       expect(wrapper.find('.t-loading__text').exists()).toBeTruthy();
     });
+
+    it('size[string]', () => {
+      const wrapper = mount(<Loading size="20px" />);
+      expect(wrapper.find('.t-loading').attributes('style')).toContain('font-size: 20px');
+    });
+
+    it('size[number]', () => {
+      const wrapper = mount(<Loading size={20} />);
+      expect(wrapper.find('.t-loading').exists()).toBeTruthy();
+    });
+
+    it('duration[number]', () => {
+      const wrapper = mount(Loading, {
+        props: {
+          duration: 1200,
+        },
+      });
+      expect(wrapper.find('.t-loading__gradient').attributes('style')).toContain('1200ms');
+    });
+
+    it('indicator[boolean]', () => {
+      const wrapper = mount(Loading, {
+        props: {
+          indicator: false,
+        },
+      });
+      expect(wrapper.find('.t-loading__gradient').exists()).toBeFalsy();
+    });
+
+    it('layout[string]', () => {
+      const wrapper = mount(<Loading text="t" layout="vertical" />);
+      expect(wrapper.find('.t-loading--vertical').exists()).toBeTruthy();
+    });
   });
 
   describe('slots', () => {

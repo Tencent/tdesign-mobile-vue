@@ -1,6 +1,6 @@
 import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { ref, h } from 'vue';
+import { ref, h, nextTick } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
 import Drawer, { DrawerPlugin } from '../index';
 import { sleep } from '../../shared/util';
@@ -161,6 +161,21 @@ describe('Drawer', () => {
 
       await wrapper.setProps({ visible: false });
       expect(wrapper.find('.t-drawer__sidebar').exists()).toBeFalsy();
+    });
+
+    it('attach', async () => {
+      const div = document.createElement('div');
+      div.id = 'drawer-container';
+      document.body.appendChild(div);
+
+      mount(Drawer, {
+        props: {
+          visible: true,
+          attach: '#drawer-container',
+        },
+      });
+      await nextTick();
+      expect(document.querySelector('#drawer-container .t-drawer')).toBeTruthy();
     });
   });
 

@@ -73,6 +73,12 @@ describe('Calendar', () => {
       expect($confirmBtn.text()).toEqual('确认完成');
     });
 
+    it('defaultValue[Date]', async () => {
+      const wrapper = mount(<Calendar visible={true} defaultValue={value} />);
+      // defaultValue 指定初始选中日期
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+    });
+
     it('usePopup[boolean]', async () => {
       const wrapper = mount(<Calendar usePopup={false} value={value} />);
       // 非弹窗模式直接渲染日历模板

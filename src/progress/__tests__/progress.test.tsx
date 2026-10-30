@@ -141,6 +141,7 @@ describe('Progress', () => {
     });
 
     // size 进度条粗细尺寸
-    it.todo('size[string/number]');
+    it.todo('size[string]');
+    it.todo('size[number]');
   });
 });

@@ -49,6 +49,22 @@ describe('SideBarItem', () => {
       testDisabled(false, false);
     });
 
+    it('badgeProps[object]', () => {
+      const testBadge = (badgeProps, result) => {
+        const wrapper = mount(
+          <SideBar>
+            <SideBarItem value={0} badgeProps={badgeProps} />
+          </SideBar>,
+        );
+        expect(wrapper.findComponent(Badge).exists()).toBe(result);
+      };
+
+      testBadge(undefined, false);
+      testBadge(null, false);
+      testBadge('', false);
+      testBadge({ dot: true }, true);
+    });
+
     it('label[string]', () => {
       const testLabel = (label) => {
         expect(document.body.textContent.includes(label)).toBe(false);

@@ -89,6 +89,22 @@ pnpm run test:snap-update
 it('handles the reported edge case', () => {});
 ```
 
+## it 标题命名规则
+
+Props 用例标题格式为 `it('propName[类型]', ...)`，每个声明类型一个独立用例：
+
+- 声明为单一类型时直接标注：`it('text[string]')`、`it('disabled[boolean]')`、`it('count[number]')`。
+- 声明为多类型联合（如 `[String, Function]`）时，拆成独立用例分别验证各类型通道：
+  `it('content[string]')` + `it('content[function]')`，不合并写成 `[string/function]`。
+- 同一 Prop 需按不同取值区分时，用无冒号的取值标注：`it('placement[top]')`、`it('theme[default]')`。
+- 枚举类 Prop 在单个用例中遍历全部枚举值时，用斜杠分隔的枚举值列表：`it('theme[list/grid]')`、`it('align[center/left]')`。
+- 事件用例直接使用事件名称：`it('change')`、`it('visibleChange')`。
+- 实例方法用例直接使用方法名：`it('clearValidate')`。
+- 插槽用例标题格式为 `it(':slotName[slot]', ...)`：`it(':icon[slot]')`、`it(':default[slot]')`。
+- 多 Prop 组合验证用 `&` 连接：`it(':title[string] & :content[string]')`。
+- 未实现的 API 用 `it.todo('propName[type]')` 标注，并逐类型拆分。
+- 标题中不使用 `:` 开头（事件/实例方法）、不使用 `=` 连接、不使用 `others`/`misc` 等模糊名称。
+
 详情见 [TDesign 单元测试规范](https://github.com/Tencent/tdesign-mobile-vue/wiki/TDesign-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95%E8%A7%84%E8%8C%83)。
 
 ## 测试示例

@@ -94,6 +94,9 @@ describe('Checkbox', () => {
       $label.exists() && expect($label.attributes('style')).toContain('-webkit-line-clamp: 1');
     });
 
+    // checkAll checkbox 与 Vue Test Utils 存在已知兼容性问题（devtoolsRawSetupState），以 todo 标注
+    it.todo('checkAll[boolean]');
+
     // contentDisabled 点击内容区域不触发切换，依赖事件来源区分
     it.todo('contentDisabled[boolean]');
     // readonly/disabled 与分组的联动行为在 group 场景验证

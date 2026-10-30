@@ -159,8 +159,10 @@ describe('Picker', () => {
     });
 
     // header/footer 自定义头部底部内容
-    it.todo('header[string/function]');
-    it.todo('footer[string/function]');
+    it.todo('header[string]');
+    it.todo('header[function]');
+    it.todo('footer[string]');
+    it.todo('footer[function]');
     // keys 自定义选项字段别名
     it.todo('keys[object]');
     // swipeDuration/wheelConfig 滚轮惯性与手势配置，依赖真实触摸

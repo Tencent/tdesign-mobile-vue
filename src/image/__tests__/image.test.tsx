@@ -164,8 +164,10 @@ describe('Image', () => {
       expect($image.attributes('src')).toBe(IMAGE);
     });
     // TODO: loading/error 仅设置 prop 时组件不渲染（mask 以 slots 为门槛），待组件修复后补充 prop 通道用例
-    it.todo(':loading[string/function]');
-    it.todo(':error[string/function]');
+    it.todo(':loading[string]');
+    it.todo(':loading[function]');
+    it.todo(':error[string]');
+    it.todo(':error[function]');
   });
 
   describe('events', () => {

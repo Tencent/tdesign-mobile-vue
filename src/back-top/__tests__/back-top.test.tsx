@@ -60,6 +60,20 @@ describe('BackTop', () => {
       const wrapper = mount(<BackTop icon={() => <TIconApp />} />);
       expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
     });
+
+    it('visibilityHeight[number]', async () => {
+      const wrapper = mount(<BackTop visibilityHeight={0} />);
+      expect(wrapper.find('.t-back-top').exists()).toBeTruthy();
+    });
+
+    it('container[function]', async () => {
+      const div = document.createElement('div');
+      div.id = 'back-top-container';
+      document.body.appendChild(div);
+
+      const wrapper = mount(<BackTop container={() => document.querySelector('#back-top-container')} />);
+      expect(wrapper.find('.t-back-top').exists()).toBeTruthy();
+    });
   });
 
   describe('events', () => {

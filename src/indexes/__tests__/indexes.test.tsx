@@ -284,9 +284,12 @@ describe('Indexes', () => {
     });
 
     // current/modelValue/defaultCurrent 当前锚点受控，依赖滚动联动
-    it.todo('current[string/number]');
-    it.todo('modelValue[string/number]');
-    it.todo('defaultCurrent[string/number]');
+    it.todo('current[string]');
+    it.todo('current[number]');
+    it.todo('modelValue[string]');
+    it.todo('modelValue[number]');
+    it.todo('defaultCurrent[string]');
+    it.todo('defaultCurrent[number]');
     // sticky/stickyOffset 锚点吸顶，依赖真实滚动布局
     it.todo('sticky[boolean]');
     it.todo('stickyOffset[number]');

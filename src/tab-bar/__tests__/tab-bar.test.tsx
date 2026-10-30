@@ -180,5 +180,16 @@ describe('TabBar', () => {
       expect(onChange).toHaveBeenLastCalledWith(['3', '3-1']);
       expect(wrapper.find('[name="label_3"]').find('.t-tab-bar-item__spread-item').exists()).toBe(false);
     });
+
+    it('badgeProps[object]', () => {
+      const wrapper = mount(
+        <TabBar defaultValue={0}>
+          <TabBarItem badgeProps={{ count: 5 }}>标签一</TabBarItem>
+        </TabBar>,
+      );
+      const item = wrapper.findComponent(TabBarItem);
+      expect(item.exists()).toBeTruthy();
+      expect(item.props('badgeProps')).toEqual({ count: 5 });
+    });
   });
 });
