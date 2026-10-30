@@ -9,6 +9,42 @@ const name = `${prefix}-search`;
 
 describe('Search', () => {
   describe('props', () => {
+    // autocompleteOptions 联想词列表依赖输入联想交互流程
+    it.todo('autocompleteOptions[array]');
+
+    it('center[boolean]', async () => {
+      const wrapper = mount(Search, {
+        props: {
+          center: true,
+        },
+      });
+      expect(wrapper.find(`.${name}__input-box .${name}--center`).exists()).toBeTruthy();
+
+      const wrapper2 = mount(Search, {});
+      expect(wrapper2.find(`.${name}--center`).exists()).toBeFalsy();
+    });
+
+    // clearTrigger 控制清空按钮出现时机，依赖 focus/clear 交互组合
+    it.todo('clearTrigger[string]');
+
+    // cursorColor 为 CSS 变量注入，jsdom 无法断言样式
+    it.todo('cursorColor[string]');
+
+    it('disabled[boolean]', async () => {
+      const wrapper = mount(Search, {
+        props: {
+          disabled: true,
+        },
+      });
+      expect(wrapper.find('input').attributes('disabled')).toBeDefined();
+    });
+
+    // maxcharacter 字数限制依赖输入事件截断行为
+    it.todo('maxcharacter[number]');
+
+    // maxlength 经 useLengthLimit 逻辑截断，不透传原生属性（见 search.tsx 注释），依赖输入事件
+    it.todo('maxlength[number]');
+
     it('placeholder[string]', async () => {
       const placeholder = 'placeholder content';
       const wrapper = mount(Search, {
@@ -18,6 +54,30 @@ describe('Search', () => {
       });
       const $input = wrapper.find('.t-input__keyword');
       expect($input.attributes('placeholder')).toEqual(placeholder);
+    });
+
+    it('readonly[boolean]', async () => {
+      const wrapper = mount(Search, {
+        props: {
+          readonly: true,
+        },
+      });
+      expect(wrapper.find('input').attributes('readonly')).toBeDefined();
+    });
+
+    it('resultList[array]', async () => {
+      const resultList = ['第一个结果', '第二个结果'];
+      const wrapper = mount(Search, {
+        props: {
+          resultList,
+          value: '关键字',
+        },
+      });
+      await wrapper.find('input').trigger('input');
+      const $list = wrapper.find(`.${name}__result-list`);
+      expect($list.exists()).toBeTruthy();
+      expect($list.text()).toContain('第一个结果');
+      expect($list.text()).toContain('第二个结果');
     });
 
     it('shape[square/round]', async () => {
@@ -37,40 +97,6 @@ describe('Search', () => {
       // shape = 'round'
       expect($inputBox.classes().includes(`${name}__input-box--round`)).toBeTruthy();
     });
-    it('center[boolean]', async () => {
-      const wrapper = mount(Search, {
-        props: {
-          center: true,
-        },
-      });
-      expect(wrapper.find(`.${name}__input-box .${name}--center`).exists()).toBeTruthy();
-
-      const wrapper2 = mount(Search, {});
-      expect(wrapper2.find(`.${name}--center`).exists()).toBeFalsy();
-    });
-
-    it('disabled[boolean]', async () => {
-      const wrapper = mount(Search, {
-        props: {
-          disabled: true,
-        },
-      });
-      expect(wrapper.find('input').attributes('disabled')).toBeDefined();
-    });
-
-    it('readonly[boolean]', async () => {
-      const wrapper = mount(Search, {
-        props: {
-          readonly: true,
-        },
-      });
-      expect(wrapper.find('input').attributes('readonly')).toBeDefined();
-    });
-
-    // maxlength 经 useLengthLimit 逻辑截断，不透传原生属性（见 search.tsx 注释），依赖输入事件
-    it.todo('maxlength[number]');
-    // maxcharacter 字数限制依赖输入事件截断行为
-    it.todo('maxcharacter[number]');
 
     it('modelValue[string]', async () => {
       const value = ref('受控值');
@@ -85,28 +111,6 @@ describe('Search', () => {
         },
       });
       expect(wrapper.find('input').element.value).toBe('非受控值');
-    });
-
-    // clearTrigger 控制清空按钮出现时机，依赖 focus/clear 交互组合
-    it.todo('clearTrigger[string]');
-    // cursorColor 为 CSS 变量注入，jsdom 无法断言样式
-    it.todo('cursorColor[string]');
-    // autocompleteOptions 联想词列表依赖输入联想交互流程
-    it.todo('autocompleteOptions[array]');
-
-    it('resultList[array]', async () => {
-      const resultList = ['第一个结果', '第二个结果'];
-      const wrapper = mount(Search, {
-        props: {
-          resultList,
-          value: '关键字',
-        },
-      });
-      await wrapper.find('input').trigger('input');
-      const $list = wrapper.find(`.${name}__result-list`);
-      expect($list.exists()).toBeTruthy();
-      expect($list.text()).toContain('第一个结果');
-      expect($list.text()).toContain('第二个结果');
     });
   });
 

@@ -71,50 +71,6 @@ describe('Picker', () => {
       testCancelBtn('Cancel');
     });
 
-    it('confirmBtn[string]', () => {
-      const testConfirmBtn = (confirmBtn) => {
-        const wrapper = mountPicker({ confirmBtn });
-        const textContainer = wrapper.find('.t-picker__confirm');
-        expect(textContainer.text()).toBe(confirmBtn || '确认');
-      };
-
-      testConfirmBtn();
-      testConfirmBtn('Confirm');
-    });
-
-    it('title[string]', () => {
-      const testTitle = (title) => {
-        const wrapper = mountPicker({ title });
-        const textContainer = wrapper.find('.t-picker__title');
-        expect(textContainer.text()).toBe(title || '');
-      };
-
-      testTitle();
-      testTitle('Choose Season');
-    });
-
-    it('renderLabel[function]', () => {
-      const renderLabel = (item) => `${item.label} ${item.value}`;
-      const wrapper = mountPicker({ renderLabel });
-      const itemContainers = wrapper.findAll('.t-picker-item__item');
-      expect(itemContainers).toHaveLength(seasonOptions.length);
-
-      itemContainers.forEach((container, index) => expect(container.text()).toBe(renderLabel(seasonOptions[index])));
-    });
-
-    it('defaultValue[array]', () => {
-      const selector = '.t-picker-item__item--active';
-      // valid option value
-      let wrapper = mountPicker({ defaultValue: [seasonOptions[1].value] });
-      let textContainer = wrapper.find(selector);
-      expect(textContainer.text()).toBe(seasonOptions[1].label);
-
-      // invalid option value
-      wrapper = mountPicker({ defaultValue: ['NOT_EXIST'] });
-      textContainer = wrapper.find(selector);
-      expect(textContainer.text()).toBe(seasonOptions[0].label);
-    });
-
     it('columns[array]', () => {
       const testColumns = (columns, isValidColumns = true) => {
         const wrapper = mountPicker({ columns });
@@ -147,6 +103,52 @@ describe('Picker', () => {
       expect(itemContainers).toHaveLength(seasonOptions.length);
     });
 
+    it('confirmBtn[string]', () => {
+      const testConfirmBtn = (confirmBtn) => {
+        const wrapper = mountPicker({ confirmBtn });
+        const textContainer = wrapper.find('.t-picker__confirm');
+        expect(textContainer.text()).toBe(confirmBtn || '确认');
+      };
+
+      testConfirmBtn();
+      testConfirmBtn('Confirm');
+    });
+
+    it.todo('footer[string]');
+
+    it.todo('footer[function]');
+
+    // header/footer 自定义头部底部内容
+    it.todo('header[string]');
+
+    it.todo('header[function]');
+
+    // keys 自定义选项字段别名
+    it.todo('keys[object]');
+
+    it('renderLabel[function]', () => {
+      const renderLabel = (item) => `${item.label} ${item.value}`;
+      const wrapper = mountPicker({ renderLabel });
+      const itemContainers = wrapper.findAll('.t-picker-item__item');
+      expect(itemContainers).toHaveLength(seasonOptions.length);
+
+      itemContainers.forEach((container, index) => expect(container.text()).toBe(renderLabel(seasonOptions[index])));
+    });
+
+    // swipeDuration/wheelConfig 滚轮惯性与手势配置，依赖真实触摸
+    it.todo('swipeDuration[number]');
+
+    it('title[string]', () => {
+      const testTitle = (title) => {
+        const wrapper = mountPicker({ title });
+        const textContainer = wrapper.find('.t-picker__title');
+        expect(textContainer.text()).toBe(title || '');
+      };
+
+      testTitle();
+      testTitle('Choose Season');
+    });
+
     it('value[array]', async () => {
       const value = ref([seasonOptions[1].value]);
       const wrapper = mount(<Picker v-model={value.value} {...commonProps} />);
@@ -158,15 +160,19 @@ describe('Picker', () => {
       expect(value.value).toStrictEqual([seasonOptions[3].value]);
     });
 
-    // header/footer 自定义头部底部内容
-    it.todo('header[string]');
-    it.todo('header[function]');
-    it.todo('footer[string]');
-    it.todo('footer[function]');
-    // keys 自定义选项字段别名
-    it.todo('keys[object]');
-    // swipeDuration/wheelConfig 滚轮惯性与手势配置，依赖真实触摸
-    it.todo('swipeDuration[number]');
+    it('defaultValue[array]', () => {
+      const selector = '.t-picker-item__item--active';
+      // valid option value
+      let wrapper = mountPicker({ defaultValue: [seasonOptions[1].value] });
+      let textContainer = wrapper.find(selector);
+      expect(textContainer.text()).toBe(seasonOptions[1].label);
+
+      // invalid option value
+      wrapper = mountPicker({ defaultValue: ['NOT_EXIST'] });
+      textContainer = wrapper.find(selector);
+      expect(textContainer.text()).toBe(seasonOptions[0].label);
+    });
+
     it.todo('wheelConfig[object]');
   });
 

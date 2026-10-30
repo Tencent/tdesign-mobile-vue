@@ -5,32 +5,6 @@ import Fab from '../fab';
 
 describe('Fab', () => {
   describe('props', () => {
-    it('icon[function]', async () => {
-      const icon = () => <TIconApp />;
-      const wrapper = mount(Fab, {
-        props: { icon },
-      });
-      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
-    });
-
-    it('text[string]', async () => {
-      const text = 'fab';
-      const wrapper = mount(Fab, {
-        props: { text },
-      });
-      const textContainer = wrapper.find('.t-button__content');
-      expect(textContainer.text()).toBe(text);
-    });
-
-    it('style[string]', () => {
-      const style = 'right: 32px; bottom: 48px;';
-      const wrapper = mount(Fab, {
-        props: { style },
-      });
-      expect(getComputedStyle(wrapper.element, null).right).toBe('32px');
-      expect(getComputedStyle(wrapper.element, null).bottom).toBe('48px');
-    });
-
     it('buttonProps[object]', () => {
       const icon = () => <TIconApp />;
       const buttonProps = {
@@ -45,6 +19,32 @@ describe('Fab', () => {
       expect($btn.classes()).toContain(`t-button--danger`);
       expect($btn.classes()).toContain(`t-button--circle`);
       expect($btn.classes()).toContain(`t-button--size-large`);
+    });
+
+    it('icon[function]', async () => {
+      const icon = () => <TIconApp />;
+      const wrapper = mount(Fab, {
+        props: { icon },
+      });
+      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+    });
+
+    it('style[string]', () => {
+      const style = 'right: 32px; bottom: 48px;';
+      const wrapper = mount(Fab, {
+        props: { style },
+      });
+      expect(getComputedStyle(wrapper.element, null).right).toBe('32px');
+      expect(getComputedStyle(wrapper.element, null).bottom).toBe('48px');
+    });
+
+    it('text[string]', async () => {
+      const text = 'fab';
+      const wrapper = mount(Fab, {
+        props: { text },
+      });
+      const textContainer = wrapper.find('.t-button__content');
+      expect(textContainer.text()).toBe(text);
     });
   });
 

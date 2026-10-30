@@ -14,21 +14,6 @@ const move = async (target, offsetX = 120, startX = 0, offsetY = 0, startY = 0) 
 
 describe('SwipeCell', () => {
   describe('props', () => {
-    it('content[string]', async () => {
-      const content = 'content is a string';
-      const wrapper = mount(<SwipeCell content={content} />);
-
-      expect(wrapper.text()).toBe(content);
-    });
-
-    it('content[function]', async () => {
-      const content = 'content is a string';
-      const wrapper = mount(<SwipeCell content={() => <div class="swipe-cell__content">{content}</div>} />);
-
-      const $content = wrapper.find('.swipe-cell__content');
-      expect($content.text()).toBe(content);
-    });
-
     // it(' disabled', async () => {
     // const swipeAction = [{ text: '编辑', className: 't-button--primary',style: 'width: 60px' }];
 
@@ -59,6 +44,62 @@ describe('SwipeCell', () => {
 
     // console.log(wrapper.find('.t-swipe-cell__wrapper').element.style.transform);
     // expect(wrapper.vm.initData.moving).toBe(false);
+
+    // it(' opened', async () => {
+    //   const onClick = vi.fn();
+    //   const onChange = vi.fn();
+    //   const swipeAction = [
+    //     { text: '默认' },
+    //     { text: '删除' },
+    //   ];
+
+    //   const content = 'content is a string';
+    //   const wrapper = mount(SwipeCell, {
+    //     props: {
+    //       content,
+    //       left: swipeAction,
+    //       right: swipeAction,
+    //       onClick,
+    //       onChange,
+    //     },
+    //   });
+
+    //   wrapper.vm.initData.leftWidth = 120;
+    //   await wrapper.setProps({ opened: [true, false] });
+    //   expect(onChange).toBeCalledTimes(1);
+    //   expect(onChange).toHaveBeenCalledWith('left');
+
+    //   const $buttons = wrapper.findAll('.t-swipe-cell__content');
+    //   $buttons.at(0).trigger('click');
+    //   expect(onClick).toBeCalledTimes(1);
+    //   expect(onChange).toBeCalledTimes(2);
+    //   expect(onChange).toHaveBeenCalledWith(undefined);
+
+    //   wrapper.vm.initData.rightWidth = 120;
+    //   await wrapper.setProps({ opened: [false, true] });
+    //   expect(onChange).toBeCalledTimes(3);
+    //   expect(onChange).toHaveBeenCalledWith('right');
+
+    //   $buttons.at(0).trigger('click');
+    //   expect(onClick).toBeCalledTimes(2);
+    //   expect(onChange).toBeCalledTimes(4);
+    //   expect(onChange).toHaveBeenCalledWith(undefined);
+    // });
+
+    it('content[string]', async () => {
+      const content = 'content is a string';
+      const wrapper = mount(<SwipeCell content={content} />);
+
+      expect(wrapper.text()).toBe(content);
+    });
+
+    it('content[function]', async () => {
+      const content = 'content is a string';
+      const wrapper = mount(<SwipeCell content={() => <div class="swipe-cell__content">{content}</div>} />);
+
+      const $content = wrapper.find('.swipe-cell__content');
+      expect($content.text()).toBe(content);
+    });
 
     // wrapper.unmount();
     // touchend = await move($target);
@@ -116,46 +157,11 @@ describe('SwipeCell', () => {
       // expect(wrapper.vm.initData.moving).toBe(false);
       // expect(wrapper.vm.showSureLeft).toBe(false);
     });
-    // it(' opened', async () => {
-    //   const onClick = vi.fn();
-    //   const onChange = vi.fn();
-    //   const swipeAction = [
-    //     { text: '默认' },
-    //     { text: '删除' },
-    //   ];
 
-    //   const content = 'content is a string';
-    //   const wrapper = mount(SwipeCell, {
-    //     props: {
-    //       content,
-    //       left: swipeAction,
-    //       right: swipeAction,
-    //       onClick,
-    //       onChange,
-    //     },
-    //   });
-
-    //   wrapper.vm.initData.leftWidth = 120;
-    //   await wrapper.setProps({ opened: [true, false] });
-    //   expect(onChange).toBeCalledTimes(1);
-    //   expect(onChange).toHaveBeenCalledWith('left');
-
-    //   const $buttons = wrapper.findAll('.t-swipe-cell__content');
-    //   $buttons.at(0).trigger('click');
-    //   expect(onClick).toBeCalledTimes(1);
-    //   expect(onChange).toBeCalledTimes(2);
-    //   expect(onChange).toHaveBeenCalledWith(undefined);
-
-    //   wrapper.vm.initData.rightWidth = 120;
-    //   await wrapper.setProps({ opened: [false, true] });
-    //   expect(onChange).toBeCalledTimes(3);
-    //   expect(onChange).toHaveBeenCalledWith('right');
-
-    //   $buttons.at(0).trigger('click');
-    //   expect(onClick).toBeCalledTimes(2);
-    //   expect(onChange).toBeCalledTimes(4);
-    //   expect(onChange).toHaveBeenCalledWith(undefined);
-    // });
+    it('left[function]', async () => {
+      const wrapper = mount(<SwipeCell left={() => <div class="custom-left-btn">左侧操作</div>} content="内容" />);
+      expect(wrapper.find('.custom-left-btn').exists()).toBeTruthy();
+    });
 
     it('right[array]', async () => {
       const onClick = vi.fn();
@@ -208,11 +214,6 @@ describe('SwipeCell', () => {
       // await touchend();
       // expect(wrapper.vm.initData.moving).toBe(false);
       // expect(wrapper.vm.showSureRight).toBe(false);
-    });
-
-    it('left[function]', async () => {
-      const wrapper = mount(<SwipeCell left={() => <div class="custom-left-btn">左侧操作</div>} content="内容" />);
-      expect(wrapper.find('.custom-left-btn').exists()).toBeTruthy();
     });
 
     it('right[function]', async () => {

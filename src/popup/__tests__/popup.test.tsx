@@ -13,22 +13,20 @@ describe('Popup', () => {
   // test props api
   describe('props', () => {
     const onOpen = vi.fn();
-    it('visible[boolean]', async () => {
-      const wrapper = mount(Popup, {
+
+    it('attach', async () => {
+      const div = document.createElement('div');
+      div.id = 'popup-container';
+      document.body.appendChild(div);
+
+      mount(Popup, {
         props: {
-          visible: false,
-          onOpen,
+          visible: true,
+          attach: '#popup-container',
         },
       });
-
-      // expect(wrapper.find('.t-popup').isVisible()).toBe(false);
-      // expect(wrapper.find('.t-overlay').attributes('style')).toContain('display: none');
-      // await wrapper.setProps({
-      //   visible: true,
-      // });
-      // expect(wrapper.vm.currentVisible).toBe(true);
-      // expect(wrapper.find('.t-popup').isVisible()).toBe(true);
-      // expect(onOpen).toBeCalledTimes(1);
+      await nextTick();
+      expect(document.querySelector('#popup-container .t-popup')).toBeTruthy();
     });
 
     it('closeBtn[boolean]', async () => {
@@ -62,74 +60,6 @@ describe('Popup', () => {
       expect(wrapper.find('.t-popup__close').text()).toEqual(temp);
     });
 
-    it('placement[top/left/right/bottom/center]', async () => {
-      const placementList: TdPopupProps['placement'][] = ['top', 'left', 'right', 'bottom', 'center'];
-      placementList.forEach((placement) => {
-        const wrapper = mount(() => <Popup visible={true} placement={placement} />);
-        const $popup = wrapper.find('.t-popup');
-        expect($popup.classes()).toContain(`t-popup--${placement}`);
-      });
-    });
-
-    it('zIndex[number]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          zIndex: 15000,
-          visible: true,
-        },
-      });
-      expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 15000');
-      await wrapper.setProps({
-        zIndex: 17000,
-      });
-      // 更新后内容已 teleport 到 body；此前用例的 popup 也会挂载到 body，断言存在任一匹配实例
-      const popups = Array.from(document.querySelectorAll<HTMLElement>('.t-popup'));
-      expect(popups.some((el) => el.getAttribute('style')?.includes('z-index: 17000'))).toBe(true);
-    });
-
-    it('transitionName[string]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          placement: 'top',
-        },
-      });
-      // expect(wrapper.vm.contentTransitionName).toBe(`slide-${wrapper.vm.placement}`);
-      // await wrapper.setProps({
-      //   transitionName: 'slide-fade',
-      // });
-      // expect(wrapper.vm.contentTransitionName).toBe(wrapper.vm.transitionName);
-    });
-
-    it('showOverlay[boolean]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          visible: true,
-        },
-      });
-      expect(wrapper.find('.t-overlay').isVisible()).toBeTruthy();
-
-      const wrapper2 = mount(Popup, {
-        props: {
-          visible: true,
-          showOverlay: false,
-        },
-      });
-      // 遮罩 DOM 由 Overlay v-show 控制，隐藏态不可见
-      const overlay = wrapper2.find('.t-overlay');
-      expect(overlay.exists()).toBe(true);
-      expect(overlay.isVisible()).toBe(false);
-    });
-
-    it('overlayProps[object]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          visible: true,
-          overlayProps: { zIndex: 2000 },
-        },
-      });
-      expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 2000');
-    });
-
     it('closeOnOverlayClick[boolean]', async () => {
       const onClose = vi.fn();
       const wrapper = mount(Popup, {
@@ -156,6 +86,28 @@ describe('Popup', () => {
       expect(wrapper.find('.t-popup').exists()).toBeFalsy();
     });
 
+    // duration 透传 Transition 动画时长，jsdom 中无动画渲染可断言
+    it.todo('duration[number]');
+
+    it('overlayProps[object]', async () => {
+      const wrapper = mount(Popup, {
+        props: {
+          visible: true,
+          overlayProps: { zIndex: 2000 },
+        },
+      });
+      expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 2000');
+    });
+
+    it('placement[top/left/right/bottom/center]', async () => {
+      const placementList: TdPopupProps['placement'][] = ['top', 'left', 'right', 'bottom', 'center'];
+      placementList.forEach((placement) => {
+        const wrapper = mount(() => <Popup visible={true} placement={placement} />);
+        const $popup = wrapper.find('.t-popup');
+        expect($popup.classes()).toContain(`t-popup--${placement}`);
+      });
+    });
+
     it('preventScrollThrough[boolean]', async () => {
       mount(Popup, {
         props: {
@@ -166,19 +118,55 @@ describe('Popup', () => {
       expect(document.body.classList.contains('t-popup--lock')).toBe(true);
     });
 
-    it('attach', async () => {
-      const div = document.createElement('div');
-      div.id = 'popup-container';
-      document.body.appendChild(div);
-
-      mount(Popup, {
+    it('showOverlay[boolean]', async () => {
+      const wrapper = mount(Popup, {
         props: {
           visible: true,
-          attach: '#popup-container',
         },
       });
-      await nextTick();
-      expect(document.querySelector('#popup-container .t-popup')).toBeTruthy();
+      expect(wrapper.find('.t-overlay').isVisible()).toBeTruthy();
+
+      const wrapper2 = mount(Popup, {
+        props: {
+          visible: true,
+          showOverlay: false,
+        },
+      });
+      // 遮罩 DOM 由 Overlay v-show 控制，隐藏态不可见
+      const overlay = wrapper2.find('.t-overlay');
+      expect(overlay.exists()).toBe(true);
+      expect(overlay.isVisible()).toBe(false);
+    });
+
+    it('transitionName[string]', async () => {
+      const wrapper = mount(Popup, {
+        props: {
+          placement: 'top',
+        },
+      });
+      // expect(wrapper.vm.contentTransitionName).toBe(`slide-${wrapper.vm.placement}`);
+      // await wrapper.setProps({
+      //   transitionName: 'slide-fade',
+      // });
+      // expect(wrapper.vm.contentTransitionName).toBe(wrapper.vm.transitionName);
+    });
+
+    it('visible[boolean]', async () => {
+      const wrapper = mount(Popup, {
+        props: {
+          visible: false,
+          onOpen,
+        },
+      });
+
+      // expect(wrapper.find('.t-popup').isVisible()).toBe(false);
+      // expect(wrapper.find('.t-overlay').attributes('style')).toContain('display: none');
+      // await wrapper.setProps({
+      //   visible: true,
+      // });
+      // expect(wrapper.vm.currentVisible).toBe(true);
+      // expect(wrapper.find('.t-popup').isVisible()).toBe(true);
+      // expect(onOpen).toBeCalledTimes(1);
     });
 
     it('defaultVisible[boolean]', async () => {
@@ -190,8 +178,21 @@ describe('Popup', () => {
       expect(wrapper.find('.t-popup').exists()).toBeTruthy();
     });
 
-    // duration 透传 Transition 动画时长，jsdom 中无动画渲染可断言
-    it.todo('duration[number]');
+    it('zIndex[number]', async () => {
+      const wrapper = mount(Popup, {
+        props: {
+          zIndex: 15000,
+          visible: true,
+        },
+      });
+      expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 15000');
+      await wrapper.setProps({
+        zIndex: 17000,
+      });
+      // 更新后内容已 teleport 到 body；此前用例的 popup 也会挂载到 body，断言存在任一匹配实例
+      const popups = Array.from(document.querySelectorAll<HTMLElement>('.t-popup'));
+      expect(popups.some((el) => el.getAttribute('style')?.includes('z-index: 17000'))).toBe(true);
+    });
   });
 
   // test events

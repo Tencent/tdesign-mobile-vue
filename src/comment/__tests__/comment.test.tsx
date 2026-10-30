@@ -13,6 +13,35 @@ const DEFAULT_FOLDS_CONTENT = {
 
 describe('Comment', () => {
   describe('props', () => {
+    it('actions[array]', () => {
+      // array
+      const actions = [
+        { key: 'reply', placement: 'start', content: '回复' },
+        { key: 'like', placement: 'end', content: '点赞' },
+      ];
+      const wrapper = mount(Comment, {
+        props: { actions },
+      });
+      const blocks = wrapper.findAll('.t-comment-block');
+      expect(blocks).toHaveLength(2);
+      expect(blocks[0].text()).toBe('回复');
+      expect(blocks[1].text()).toBe('点赞');
+    });
+
+    it('actions[function]', () => {
+      const wrapper = mount(Comment, {
+        props: { actions: () => h('span', { class: 'custom-action' }, '操作') },
+      });
+      expect(wrapper.find('.custom-action').exists()).toBe(true);
+    });
+
+    it('author[string]', () => {
+      const wrapper = mount(Comment, {
+        props: { author: '张三' },
+      });
+      expect(wrapper.find('.t-comment__author').text()).toBe('张三');
+    });
+
     it('avatar[string]', () => {
       const wrapper = mount(Comment, {
         props: { avatar: 'https://example.com/avatar.png' },
@@ -25,13 +54,6 @@ describe('Comment', () => {
         props: { avatar: { image: 'https://example.com/avatar.png', shape: 'circle' } },
       });
       expect(wrapper.find('.t-comment__avatar').exists()).toBe(true);
-    });
-
-    it('author[string]', () => {
-      const wrapper = mount(Comment, {
-        props: { author: '张三' },
-      });
-      expect(wrapper.find('.t-comment__author').text()).toBe('张三');
     });
 
     it('content[string]', () => {
@@ -60,28 +82,6 @@ describe('Comment', () => {
         props: { datetime: () => '昨天20:00' },
       });
       expect(wrapper.find('.t-comment__date').text()).toBe('昨天20:00');
-    });
-
-    it('actions[array]', () => {
-      // array
-      const actions = [
-        { key: 'reply', placement: 'start', content: '回复' },
-        { key: 'like', placement: 'end', content: '点赞' },
-      ];
-      const wrapper = mount(Comment, {
-        props: { actions },
-      });
-      const blocks = wrapper.findAll('.t-comment-block');
-      expect(blocks).toHaveLength(2);
-      expect(blocks[0].text()).toBe('回复');
-      expect(blocks[1].text()).toBe('点赞');
-    });
-
-    it('actions[function]', () => {
-      const wrapper = mount(Comment, {
-        props: { actions: () => h('span', { class: 'custom-action' }, '操作') },
-      });
-      expect(wrapper.find('.custom-action').exists()).toBe(true);
     });
 
     // modelValue（visible）显隐受控，与 visible 通道一致

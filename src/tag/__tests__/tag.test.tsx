@@ -15,6 +15,40 @@ const shapeList: TdTagProps['shape'][] = ['mark', 'round', 'square'];
 
 describe('Tag', () => {
   describe('props', () => {
+    it('disabled[boolean]', async () => {
+      const wrapper = mount(() => <Tag disabled>{TEXT}</Tag>);
+      expect(wrapper.classes()).toContain('t-tag--disabled');
+    });
+
+    it('icon[function]', async () => {
+      const wrapper = mount(() => <Tag icon={iconFunc}>{TEXT}</Tag>);
+      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+    });
+
+    it('maxWidth[string]', async () => {
+      const wrapper = mount(() => <Tag maxWidth="130px">{TEXT}</Tag>);
+      expect(getComputedStyle(wrapper.element, null).maxWidth).toBe('130px');
+    });
+
+    it('maxWidth[number]', async () => {
+      const wrapper = mount(() => <Tag maxWidth={130}>{TEXT}</Tag>);
+      expect(getComputedStyle(wrapper.element, null).maxWidth).toBe('130px');
+    });
+
+    it('shape[square/round/mark]', async () => {
+      shapeList.forEach((s) => {
+        const wrapper = mount(() => <Tag shape={s}>{TEXT}</Tag>);
+        expect(wrapper.classes()).toContain(`t-tag--${s}`);
+      });
+    });
+
+    it('size[small/medium/large/extra-large]', async () => {
+      sizeList.forEach((s) => {
+        const wrapper = mount(() => <Tag size={s}>{TEXT}</Tag>);
+        expect(wrapper.classes()).toContain(`t-tag--${s}`);
+      });
+    });
+
     it('theme[default/primary/warning/danger/success]', async () => {
       themeList.forEach((t) => {
         const wrapper = mount(() => <Tag theme={t}>{TEXT}</Tag>);
@@ -27,40 +61,6 @@ describe('Tag', () => {
         const wrapper = mount(() => <Tag variant={v}>{TEXT}</Tag>);
         expect(wrapper.classes()).toContain(`t-tag--${v}`);
       });
-    });
-
-    it('size[small/medium/large/extra-large]', async () => {
-      sizeList.forEach((s) => {
-        const wrapper = mount(() => <Tag size={s}>{TEXT}</Tag>);
-        expect(wrapper.classes()).toContain(`t-tag--${s}`);
-      });
-    });
-
-    it('shape[square/round/mark]', async () => {
-      shapeList.forEach((s) => {
-        const wrapper = mount(() => <Tag shape={s}>{TEXT}</Tag>);
-        expect(wrapper.classes()).toContain(`t-tag--${s}`);
-      });
-    });
-
-    it('icon[function]', async () => {
-      const wrapper = mount(() => <Tag icon={iconFunc}>{TEXT}</Tag>);
-      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
-    });
-
-    it('disabled[boolean]', async () => {
-      const wrapper = mount(() => <Tag disabled>{TEXT}</Tag>);
-      expect(wrapper.classes()).toContain('t-tag--disabled');
-    });
-
-    it('maxWidth[string]', async () => {
-      const wrapper = mount(() => <Tag maxWidth="130px">{TEXT}</Tag>);
-      expect(getComputedStyle(wrapper.element, null).maxWidth).toBe('130px');
-    });
-
-    it('maxWidth[number]', async () => {
-      const wrapper = mount(() => <Tag maxWidth={130}>{TEXT}</Tag>);
-      expect(getComputedStyle(wrapper.element, null).maxWidth).toBe('130px');
     });
   });
 

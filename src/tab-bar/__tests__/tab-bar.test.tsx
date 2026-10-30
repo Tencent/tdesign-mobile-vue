@@ -67,21 +67,42 @@ describe('TabBar', () => {
       expect(wrapper.classes()).not.toContain('t-tab-bar--fixed');
     });
 
-    it('defaultValue[string]', async () => {
-      const wrapper = mount({
-        render: () => (
-          <TabBar defaultValue={'2'}>
-            {list.map((item) => {
-              return <TabBarItem {...item}>{item.text}</TabBarItem>;
-            })}
-          </TabBar>
-        ),
-      });
+    it('placeholder[boolean]', () => {
+      const wrapper = mount(
+        <TabBar fixed placeholder>
+          <TabBarItem>首页</TabBarItem>
+        </TabBar>,
+      );
+      expect(wrapper.find('.t-tab-bar__placeholder').exists()).toBeTruthy();
+    });
 
-      expect(wrapper.findAll('.t-tab-bar-item')).toHaveLength(list.length);
-      const $checked = wrapper.findAll('.t-tab-bar-item__content--checked');
-      expect($checked).toHaveLength(1);
-      expect($checked[0].text()).toContain('标签二');
+    it('safeAreaInsetBottom[boolean]', () => {
+      const wrapper = mount(<TabBar safeAreaInsetBottom></TabBar>);
+      expect(wrapper.classes()).toContain('t-tab-bar--safe');
+    });
+
+    it('shape[normal/round]', () => {
+      const wrapper = mount(<TabBar shape="round"></TabBar>);
+      expect(wrapper.classes()).toContain('t-tab-bar--round');
+    });
+
+    it('split[boolean]', () => {
+      const wrapper = mount(
+        <TabBar split>
+          <TabBarItem>首页</TabBarItem>
+          <TabBarItem>我的</TabBarItem>
+        </TabBar>,
+      );
+      expect(wrapper.find('.t-tab-bar-item--split').exists()).toBeTruthy();
+    });
+
+    it('theme[normal/tag]', () => {
+      const wrapper = mount(
+        <TabBar theme="tag">
+          <TabBarItem>首页</TabBarItem>
+        </TabBar>,
+      );
+      expect(wrapper.find('.t-tab-bar-item__content--tag').exists()).toBeTruthy();
     });
 
     it('value[string]', async () => {
@@ -102,42 +123,21 @@ describe('TabBar', () => {
       expect($checked[0].text()).toContain('标签一');
     });
 
-    it('shape[normal/round]', () => {
-      const wrapper = mount(<TabBar shape="round"></TabBar>);
-      expect(wrapper.classes()).toContain('t-tab-bar--round');
-    });
+    it('defaultValue[string]', async () => {
+      const wrapper = mount({
+        render: () => (
+          <TabBar defaultValue={'2'}>
+            {list.map((item) => {
+              return <TabBarItem {...item}>{item.text}</TabBarItem>;
+            })}
+          </TabBar>
+        ),
+      });
 
-    it('theme[normal/tag]', () => {
-      const wrapper = mount(
-        <TabBar theme="tag">
-          <TabBarItem>首页</TabBarItem>
-        </TabBar>,
-      );
-      expect(wrapper.find('.t-tab-bar-item__content--tag').exists()).toBeTruthy();
-    });
-
-    it('split[boolean]', () => {
-      const wrapper = mount(
-        <TabBar split>
-          <TabBarItem>首页</TabBarItem>
-          <TabBarItem>我的</TabBarItem>
-        </TabBar>,
-      );
-      expect(wrapper.find('.t-tab-bar-item--split').exists()).toBeTruthy();
-    });
-
-    it('safeAreaInsetBottom[boolean]', () => {
-      const wrapper = mount(<TabBar safeAreaInsetBottom></TabBar>);
-      expect(wrapper.classes()).toContain('t-tab-bar--safe');
-    });
-
-    it('placeholder[boolean]', () => {
-      const wrapper = mount(
-        <TabBar fixed placeholder>
-          <TabBarItem>首页</TabBarItem>
-        </TabBar>,
-      );
-      expect(wrapper.find('.t-tab-bar__placeholder').exists()).toBeTruthy();
+      expect(wrapper.findAll('.t-tab-bar-item')).toHaveLength(list.length);
+      const $checked = wrapper.findAll('.t-tab-bar-item__content--checked');
+      expect($checked).toHaveLength(1);
+      expect($checked[0].text()).toContain('标签二');
     });
 
     it('zIndex[number]', () => {

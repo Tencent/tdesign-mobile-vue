@@ -7,6 +7,11 @@ import NavBar from '../navbar';
 const iconFunc = () => h(TIconApp);
 describe('Navbar', () => {
   describe('props', () => {
+    it('capsule[function]', () => {
+      const navbar = mount(<NavBar title="标题" capsule={iconFunc} />);
+      expect(navbar.find('.t-icon-app').exists()).toBeTruthy();
+    });
+
     it('fixed[boolean]', async () => {
       const navbar = mount(<NavBar title="标题" />);
       expect(navbar.element.className).toContain('t-navbar--fixed');
@@ -15,13 +20,41 @@ describe('Navbar', () => {
       expect(navbar.element.className).not.toContain('t-navbar--fixed');
     });
 
+    it('left[function]', () => {
+      const test = () => '左侧内容';
+      const navbar = mount(<NavBar title="标题" left={test} />);
+      expect(navbar.text()).toContain('左侧内容');
+    });
+
     it('leftArrow[boolean]', () => {
       const navbar = mount(<NavBar title="标题" leftArrow />);
       expect(navbar.find('.t-navbar__left-arrow').exists()).toBeTruthy();
     });
 
+    it('placeholder[boolean]', () => {
+      const navbar = mount(<NavBar title="标题" fixed placeholder />);
+      expect(navbar.find('.t-navbar__placeholder').exists()).toBeTruthy();
+    });
+
+    it('right[function]', () => {
+      const test = () => '右侧内容';
+      const navbar = mount(<NavBar title="标题" right={test} />);
+      expect(navbar.text()).toContain('右侧内容');
+    });
+
+    it('safeAreaInsetTop[boolean]', () => {
+      const navbar = mount(<NavBar title="标题" safeAreaInsetTop />);
+      expect(navbar.find('.t-safe-area-top').exists()).toBeTruthy();
+    });
+
     it('title[string]', () => {
       const navbar = mount(<NavBar title="标题" />);
+      expect(navbar.text()).toContain('标题');
+    });
+
+    it('title[function]', () => {
+      const test = () => '标题';
+      const navbar = mount(<NavBar title={test} />);
       expect(navbar.text()).toContain('标题');
     });
 
@@ -35,26 +68,10 @@ describe('Navbar', () => {
       expect(navbar.text()).toContain('测试标题');
     });
 
-    it('visibleAnimation[boolean]', () => {
-      const navbar = mount(<NavBar title="标题" visible={false} />);
-      const el = navbar.element;
-      expect(el.className).toContain('t-navbar--hide-animation');
-    });
-
     it('visible[boolean]', () => {
       const navbar = mount(<NavBar title="标题" visible={false} animation={false} />);
       const el = navbar.element;
       expect(el.className).toContain('t-navbar--hide');
-    });
-
-    it('placeholder[boolean]', () => {
-      const navbar = mount(<NavBar title="标题" fixed placeholder />);
-      expect(navbar.find('.t-navbar__placeholder').exists()).toBeTruthy();
-    });
-
-    it('safeAreaInsetTop[boolean]', () => {
-      const navbar = mount(<NavBar title="标题" safeAreaInsetTop />);
-      expect(navbar.find('.t-safe-area-top').exists()).toBeTruthy();
     });
 
     it('zIndex[number]', () => {
@@ -62,27 +79,10 @@ describe('Navbar', () => {
       expect(navbar.attributes('style')).toContain('z-index: 100');
     });
 
-    it('left[function]', () => {
-      const test = () => '左侧内容';
-      const navbar = mount(<NavBar title="标题" left={test} />);
-      expect(navbar.text()).toContain('左侧内容');
-    });
-
-    it('capsule[function]', () => {
-      const navbar = mount(<NavBar title="标题" capsule={iconFunc} />);
-      expect(navbar.find('.t-icon-app').exists()).toBeTruthy();
-    });
-
-    it('right[function]', () => {
-      const test = () => '右侧内容';
-      const navbar = mount(<NavBar title="标题" right={test} />);
-      expect(navbar.text()).toContain('右侧内容');
-    });
-
-    it('title[function]', () => {
-      const test = () => '标题';
-      const navbar = mount(<NavBar title={test} />);
-      expect(navbar.text()).toContain('标题');
+    it('visibleAnimation[boolean]', () => {
+      const navbar = mount(<NavBar title="标题" visible={false} />);
+      const el = navbar.element;
+      expect(el.className).toContain('t-navbar--hide-animation');
     });
   });
 

@@ -22,6 +22,30 @@ describe('Switch', () => {
       expect(value.value).toBe(0);
     });
 
+    it('disabled[boolean]', async () => {
+      const wrapper = mount(Switch, {
+        props: {
+          disabled: true,
+        },
+      });
+      expect(wrapper.classes()).toContain('t-switch--disabled');
+
+      await wrapper.setProps({
+        disabled: false,
+      });
+      expect(wrapper.classes()).not.toContain('t-switch--disabled');
+    });
+
+    it('icon[array]', async () => {
+      const wrapper = mount(Switch, {
+        props: {
+          value: true,
+          icon: [<CheckIcon key="on" />, <CloseIcon key="off" />],
+        },
+      });
+      expect(wrapper.find('.t-switch__dot').findComponent(CheckIcon).exists()).toBeTruthy();
+    });
+
     it('label[Array<string>]', async () => {
       const wrapper = mount(Switch, {
         props: {
@@ -61,18 +85,14 @@ describe('Switch', () => {
       expect(text === 'open').toBe(true);
     });
 
-    it('disabled[boolean]', async () => {
+    it('loading[boolean]', async () => {
       const wrapper = mount(Switch, {
         props: {
-          disabled: true,
+          loading: true,
         },
       });
+      expect(wrapper.find('.t-switch__loading').exists()).toBeTruthy();
       expect(wrapper.classes()).toContain('t-switch--disabled');
-
-      await wrapper.setProps({
-        disabled: false,
-      });
-      expect(wrapper.classes()).not.toContain('t-switch--disabled');
     });
 
     it('size[small/medium/large]', async () => {
@@ -84,26 +104,6 @@ describe('Switch', () => {
       });
 
       expect(wrapper.classes()).toContain('t-switch--small');
-    });
-
-    it('icon[array]', async () => {
-      const wrapper = mount(Switch, {
-        props: {
-          value: true,
-          icon: [<CheckIcon key="on" />, <CloseIcon key="off" />],
-        },
-      });
-      expect(wrapper.find('.t-switch__dot').findComponent(CheckIcon).exists()).toBeTruthy();
-    });
-
-    it('loading[boolean]', async () => {
-      const wrapper = mount(Switch, {
-        props: {
-          loading: true,
-        },
-      });
-      expect(wrapper.find('.t-switch__loading').exists()).toBeTruthy();
-      expect(wrapper.classes()).toContain('t-switch--disabled');
     });
 
     it('defaultValue[boolean]', async () => {

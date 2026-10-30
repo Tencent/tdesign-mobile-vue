@@ -28,32 +28,52 @@ const itemStatus: Pick<TdStepItemProps, 'title' | 'content' | 'status'>[] = [
 ];
 describe('Steps', () => {
   describe('props', () => {
-    it('theme[default/dot]', async () => {
-      const current = ref(0);
-      const theme = 'dot';
+    it('defaultCurrent[number]', () => {
+      const wrapper = mount(() => (
+        <Steps defaultCurrent={1}>
+          <StepItem title="步骤1" content="描述1" />
+          <StepItem title="步骤2" content="描述2" />
+        </Steps>
+      ));
+      // currentStatus 默认 process，defaultCurrent 项为 process 态，之前的项为 finish 态
+      expect(wrapper.findAll('.t-step-item')[0].classes()).toContain('t-step-item--finish');
+      expect(wrapper.findAll('.t-step-item')[1].classes()).toContain('t-step-item--process');
+    });
+
+    it('currentStatus[default/process/finish/error]', () => {
+      const wrapper = mount(() => (
+        <Steps current={0} currentStatus="error">
+          <StepItem title="步骤1" content="描述1" />
+          <StepItem title="步骤2" content="描述2" />
+        </Steps>
+      ));
+      expect(wrapper.findAll('.t-step-item')[0].classes()).toContain('t-step-item--error');
+    });
+
+    it('layout[horizontal/vertical]', () => {
+      const current = ref(1);
       const layout = 'vertical';
-      const onChange = vi.fn();
-      const event = {};
       const wrapper = mount({
         setup() {
           return () => (
-            <Steps v-model={current.value} theme={theme} layout={layout} onChange={onChange}>
+            <Steps v-model={current.value} readonly={true} layout={layout}>
               {{
                 default: () =>
-                  items.map((item, index) => {
-                    return <StepItem title={item.title} content={item.content} />;
+                  itemStatus.map((item, index) => {
+                    return <StepItem title={item.title} content={item.content} status={item.status} />;
                   }),
               }}
             </Steps>
           );
         },
       });
+      expect(wrapper.element).toMatchSnapshot();
       const $stepItems = wrapper.findAllComponents(StepItem);
-      expect($stepItems.length).toEqual(items.length);
-      $stepItems.map(async (item, index) => {
-        expect(item.find(`.t-step-item__dot`).text()).toEqual('');
-        expect(item.find(`.t-step-item__title`).text()).toEqual(items[index].title);
-        expect(item.find(`.t-step-item__description`).text()).toEqual(items[index].content);
+      expect($stepItems.length).toEqual(itemStatus.length);
+
+      $stepItems.forEach((item, index) => {
+        const classes = item.find(`.t-step-item`).classes();
+        expect(classes.includes(`t-step-item--${itemStatus[index].status}`)).toBeTruthy();
       });
     });
 
@@ -88,55 +108,6 @@ describe('Steps', () => {
       expect(onChange).toHaveBeenCalledTimes(0);
     });
 
-    it('layout[horizontal/vertical]', () => {
-      const current = ref(1);
-      const layout = 'vertical';
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Steps v-model={current.value} readonly={true} layout={layout}>
-              {{
-                default: () =>
-                  itemStatus.map((item, index) => {
-                    return <StepItem title={item.title} content={item.content} status={item.status} />;
-                  }),
-              }}
-            </Steps>
-          );
-        },
-      });
-      expect(wrapper.element).toMatchSnapshot();
-      const $stepItems = wrapper.findAllComponents(StepItem);
-      expect($stepItems.length).toEqual(itemStatus.length);
-
-      $stepItems.forEach((item, index) => {
-        const classes = item.find(`.t-step-item`).classes();
-        expect(classes.includes(`t-step-item--${itemStatus[index].status}`)).toBeTruthy();
-      });
-    });
-
-    it('defaultCurrent[number]', () => {
-      const wrapper = mount(() => (
-        <Steps defaultCurrent={1}>
-          <StepItem title="步骤1" content="描述1" />
-          <StepItem title="步骤2" content="描述2" />
-        </Steps>
-      ));
-      // currentStatus 默认 process，defaultCurrent 项为 process 态，之前的项为 finish 态
-      expect(wrapper.findAll('.t-step-item')[0].classes()).toContain('t-step-item--finish');
-      expect(wrapper.findAll('.t-step-item')[1].classes()).toContain('t-step-item--process');
-    });
-
-    it('currentStatus[default/process/finish/error]', () => {
-      const wrapper = mount(() => (
-        <Steps current={0} currentStatus="error">
-          <StepItem title="步骤1" content="描述1" />
-          <StepItem title="步骤2" content="描述2" />
-        </Steps>
-      ));
-      expect(wrapper.findAll('.t-step-item')[0].classes()).toContain('t-step-item--error');
-    });
-
     it('sequence[positive/reverse]', () => {
       const wrapper = mount(() => (
         <Steps sequence="reverse">
@@ -145,6 +116,35 @@ describe('Steps', () => {
         </Steps>
       ));
       expect(wrapper.find('.t-steps--reverse').exists()).toBeTruthy();
+    });
+
+    it('theme[default/dot]', async () => {
+      const current = ref(0);
+      const theme = 'dot';
+      const layout = 'vertical';
+      const onChange = vi.fn();
+      const event = {};
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Steps v-model={current.value} theme={theme} layout={layout} onChange={onChange}>
+              {{
+                default: () =>
+                  items.map((item, index) => {
+                    return <StepItem title={item.title} content={item.content} />;
+                  }),
+              }}
+            </Steps>
+          );
+        },
+      });
+      const $stepItems = wrapper.findAllComponents(StepItem);
+      expect($stepItems.length).toEqual(items.length);
+      $stepItems.map(async (item, index) => {
+        expect(item.find(`.t-step-item__dot`).text()).toEqual('');
+        expect(item.find(`.t-step-item__title`).text()).toEqual(items[index].title);
+        expect(item.find(`.t-step-item__description`).text()).toEqual(items[index].content);
+      });
     });
   });
 

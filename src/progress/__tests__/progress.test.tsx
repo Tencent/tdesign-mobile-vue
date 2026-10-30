@@ -102,17 +102,6 @@ describe('Progress', () => {
       expect(getComputedStyle(wrapper.find('.t-progress__bar').element).height).toEqual('12px');
     });
 
-    it('trackColor[string]', async () => {
-      const wrapper = mount(Progress, {
-        props: { trackColor: 'orange' },
-      });
-      expect(getComputedStyle(wrapper.find('.t-progress__bar').element).backgroundColor).toEqual('orange');
-      await wrapper.setProps({
-        trackColor: 'white',
-      });
-      expect(getComputedStyle(wrapper.find('.t-progress__bar').element).backgroundColor).toEqual('white');
-    });
-
     it('theme[line/plump/circle]', async () => {
       // 默认 line（thin 形态）
       const wrapper = mount(Progress, {
@@ -131,6 +120,17 @@ describe('Progress', () => {
         props: { percentage: 50, theme: 'circle' },
       });
       expect(wrapper3.find('.t-progress--circle').exists()).toBe(true);
+    });
+
+    it('trackColor[string]', async () => {
+      const wrapper = mount(Progress, {
+        props: { trackColor: 'orange' },
+      });
+      expect(getComputedStyle(wrapper.find('.t-progress__bar').element).backgroundColor).toEqual('orange');
+      await wrapper.setProps({
+        trackColor: 'white',
+      });
+      expect(getComputedStyle(wrapper.find('.t-progress__bar').element).backgroundColor).toEqual('white');
     });
   });
 

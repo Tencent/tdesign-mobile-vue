@@ -9,21 +9,6 @@ const TEXT = 'tdesign-mobile-vue';
 
 describe('Divider', () => {
   describe('props', () => {
-    it('default[string]', async () => {
-      const wrapper = mount(() => <Divider default={TEXT}></Divider>);
-      expect(wrapper.text()).toBe(TEXT);
-    });
-
-    it('default[function]', async () => {
-      const wrapper = mount(() => <Divider default={() => TEXT}></Divider>);
-      expect(wrapper.text()).toBe(TEXT);
-    });
-
-    it('dashed[boolean]', async () => {
-      const wrapper = mount(() => <Divider dashed />);
-      expect(wrapper.find(`.${name}`).classes()).toContain(`${name}--dashed`);
-    });
-
     it('align[left/right/center]', async () => {
       const wrapper = mount(Divider, {
         props: {
@@ -45,6 +30,21 @@ describe('Divider', () => {
       });
       // align = 'left'
       expect($divider.find(`.${name}`).classes()).toContain(`${name}--${align}`);
+    });
+
+    it('dashed[boolean]', async () => {
+      const wrapper = mount(() => <Divider dashed />);
+      expect(wrapper.find(`.${name}`).classes()).toContain(`${name}--dashed`);
+    });
+
+    it('default[string]', async () => {
+      const wrapper = mount(() => <Divider default={TEXT}></Divider>);
+      expect(wrapper.text()).toBe(TEXT);
+    });
+
+    it('default[function]', async () => {
+      const wrapper = mount(() => <Divider default={() => TEXT}></Divider>);
+      expect(wrapper.text()).toBe(TEXT);
     });
 
     it('layout[horizontal/vertical]', async () => {

@@ -93,11 +93,50 @@ describe('Upload', () => {
       expect(wrapper.find('input').attributes('accept')).toBe('image/*');
     });
 
-    it('multiple[boolean]', () => {
+    it('addBtn[false] hides add area', async () => {
       const wrapper = mount(Upload, {
-        props: { multiple: true },
+        props: { addBtn: false },
       });
-      expect(wrapper.find('input').attributes('multiple')).toBeDefined();
+      expect(wrapper.find('.t-upload__item--add').exists()).toBe(false);
+    });
+
+    it('beforeAllFilesUpload[function] returning false should be intercepted', async () => {
+      const onValidate = vi.fn();
+      const beforeAllFilesUpload = vi.fn(() => false);
+      const wrapper = mount(Upload, {
+        props: {
+          requestMethod,
+          beforeAllFilesUpload,
+          onValidate,
+        },
+      });
+      triggerUploadFile(wrapper, [mockFileFoo]);
+      await sleep(0);
+      expect(beforeAllFilesUpload).toHaveBeenCalled();
+      const args = onValidate.mock.calls.find((c) => c[0]?.type === 'BEFORE_ALL_FILES_UPLOAD');
+      expect(args).toBeTruthy();
+    });
+
+    it('beforeUpload[function]', async () => {
+      const canUpload = ref(false);
+      const beforeUpload = vi.fn(() => canUpload.value);
+
+      const wrapper = mount(Upload, {
+        props: {
+          requestMethod,
+          beforeUpload,
+        },
+      });
+
+      triggerUploadFile(wrapper, [mockFileFoo]);
+      await nextTick();
+      expect(beforeUpload).toHaveBeenCalled();
+      expect(beforeUpload).toHaveReturnedWith(false);
+
+      canUpload.value = true;
+      triggerUploadFile(wrapper, [mockFileBar]);
+      await nextTick();
+      expect(beforeUpload).toHaveReturnedWith(true);
     });
 
     it('capture[string]', () => {
@@ -106,6 +145,9 @@ describe('Upload', () => {
       });
       expect(wrapper.find('input').attributes('capture')).toBe('camera');
     });
+
+    // 以下为请求配置类属性，依赖 XHR 上传链路，单测环境以 todo 标注
+    it.todo('data[object/function]');
 
     it('disabled[boolean]', async () => {
       const onSelectChange = vi.fn();
@@ -124,6 +166,11 @@ describe('Upload', () => {
       expect(onSelectChange).not.toHaveBeenCalled();
     });
 
+    it.todo('draggable[boolean]');
+
+    // fileListDisplay 在 props.ts 声明但组件未实现渲染逻辑
+    it.todo('fileListDisplay[function]');
+
     it('files[array]', async () => {
       const files = ref([]);
       const wrapper = mount(<Upload requestMethod={requestMethod} v-model={files.value} />);
@@ -141,6 +188,24 @@ describe('Upload', () => {
       triggerUploadFile(wrapper, [mockFileFoo]);
       expect(defaultFiles.value.length).toBe(0);
     });
+
+    it.todo('formatRequest[function]');
+
+    it.todo('headers[object]');
+
+    it('imageProps should be passed down', async () => {
+      const wrapper = mount(Upload, {
+        props: {
+          requestMethod,
+          imageProps: { fit: 'cover' },
+        },
+      });
+      triggerUploadFile(wrapper, [mockFileFoo]);
+      await sleep(0);
+      expect(wrapper.find('.t-upload__image').exists()).toBe(true);
+    });
+
+    it.todo('isBatchUpload[boolean]');
 
     it('max should reject extra files', async () => {
       const onValidate = vi.fn();
@@ -172,23 +237,15 @@ describe('Upload', () => {
       expect(wrapper.find('.t-upload__item--add').exists()).toBe(false);
     });
 
-    it('addBtn[false] hides add area', async () => {
-      const wrapper = mount(Upload, {
-        props: { addBtn: false },
-      });
-      expect(wrapper.find('.t-upload__item--add').exists()).toBe(false);
-    });
+    it.todo('method[string]');
 
-    it('removeBtn[false] should hide delete icon', async () => {
+    it.todo('mockProgressDuration[number]');
+
+    it('multiple[boolean]', () => {
       const wrapper = mount(Upload, {
-        props: {
-          requestMethod,
-          removeBtn: false,
-        },
+        props: { multiple: true },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
-      expect(wrapper.findComponent(CloseIcon).exists()).toBe(false);
+      expect(wrapper.find('input').attributes('multiple')).toBeDefined();
     });
 
     it('preview[false] should not open viewer', async () => {
@@ -205,16 +262,16 @@ describe('Upload', () => {
       expect(document.querySelector('.t-image-viewer__modal')).toBeNull();
     });
 
-    it('imageProps should be passed down', async () => {
+    it('removeBtn[false] should hide delete icon', async () => {
       const wrapper = mount(Upload, {
         props: {
           requestMethod,
-          imageProps: { fit: 'cover' },
+          removeBtn: false,
         },
       });
       triggerUploadFile(wrapper, [mockFileFoo]);
       await sleep(0);
-      expect(wrapper.find('.t-upload__image').exists()).toBe(true);
+      expect(wrapper.findComponent(CloseIcon).exists()).toBe(false);
     });
 
     it('sizeLimit[object]', () => {
@@ -253,6 +310,10 @@ describe('Upload', () => {
       const args = onValidate.mock.calls.find((c) => c[0]?.type === 'FILE_OVER_SIZE_LIMIT');
       expect(args).toBeTruthy();
     });
+
+    it.todo('uploadAllFilesInOneRequest[boolean]');
+
+    it.todo('useMockProgress[boolean]');
 
     it('theme[list] renders list structure', async () => {
       const wrapper = mount(Upload, {
@@ -348,6 +409,35 @@ describe('Upload', () => {
       expect(wrapper.find('.t-upload__file-name').text()).toBe('doc.pdf');
     });
 
+    it.todo('defaultValue[array]');
+
+    it.todo('withCredentials[boolean]');
+
+    it('onFail[function]', async () => {
+      const onFail = vi.fn();
+      const formatResponse = vi.fn(() => ({
+        url: 'https://tdesign.gtimg.com/site/source/figma-pc.png',
+      }));
+
+      const wrapper = mount(Upload, {
+        props: {
+          requestMethod: () =>
+            new Promise((resolve) => {
+              resolve({
+                status: 'fail',
+                error: 'bar',
+              });
+            }),
+          onFail,
+          formatResponse,
+        },
+      });
+
+      triggerUploadFile(wrapper, [mockFileFoo]);
+      await sleep(0);
+      expect(onFail).toHaveBeenCalled();
+    });
+
     it('renders correct file type icon by extension/mime', async () => {
       const wrapper = mount(Upload, {
         props: {
@@ -384,86 +474,6 @@ describe('Upload', () => {
       expect(wrapper.findComponent(FileZipFilledIcon).exists()).toBe(true);
       expect(wrapper.findComponent(File1Icon).exists()).toBe(true);
     });
-
-    it('beforeUpload[function]', async () => {
-      const canUpload = ref(false);
-      const beforeUpload = vi.fn(() => canUpload.value);
-
-      const wrapper = mount(Upload, {
-        props: {
-          requestMethod,
-          beforeUpload,
-        },
-      });
-
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await nextTick();
-      expect(beforeUpload).toHaveBeenCalled();
-      expect(beforeUpload).toHaveReturnedWith(false);
-
-      canUpload.value = true;
-      triggerUploadFile(wrapper, [mockFileBar]);
-      await nextTick();
-      expect(beforeUpload).toHaveReturnedWith(true);
-    });
-
-    it('beforeAllFilesUpload[function] returning false should be intercepted', async () => {
-      const onValidate = vi.fn();
-      const beforeAllFilesUpload = vi.fn(() => false);
-      const wrapper = mount(Upload, {
-        props: {
-          requestMethod,
-          beforeAllFilesUpload,
-          onValidate,
-        },
-      });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
-      expect(beforeAllFilesUpload).toHaveBeenCalled();
-      const args = onValidate.mock.calls.find((c) => c[0]?.type === 'BEFORE_ALL_FILES_UPLOAD');
-      expect(args).toBeTruthy();
-    });
-
-    it('onFail[function]', async () => {
-      const onFail = vi.fn();
-      const formatResponse = vi.fn(() => ({
-        url: 'https://tdesign.gtimg.com/site/source/figma-pc.png',
-      }));
-
-      const wrapper = mount(Upload, {
-        props: {
-          requestMethod: () =>
-            new Promise((resolve) => {
-              resolve({
-                status: 'fail',
-                error: 'bar',
-              });
-            }),
-          onFail,
-          formatResponse,
-        },
-      });
-
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
-      expect(onFail).toHaveBeenCalled();
-    });
-
-    // fileListDisplay 在 props.ts 声明但组件未实现渲染逻辑
-    it.todo('fileListDisplay[function]');
-
-    // 以下为请求配置类属性，依赖 XHR 上传链路，单测环境以 todo 标注
-    it.todo('data[object/function]');
-    it.todo('draggable[boolean]');
-    it.todo('formatRequest[function]');
-    it.todo('headers[object]');
-    it.todo('isBatchUpload[boolean]');
-    it.todo('method[string]');
-    it.todo('mockProgressDuration[number]');
-    it.todo('uploadAllFilesInOneRequest[boolean]');
-    it.todo('useMockProgress[boolean]');
-    it.todo('defaultValue[array]');
-    it.todo('withCredentials[boolean]');
   });
 
   describe('slots', () => {

@@ -20,6 +20,15 @@ describe('Watermark', () => {
   });
 
   describe('props', () => {
+    it('alpha[number]', () => {
+      const wrapper = mount(() => (
+        <Watermark alpha={0.5} watermarkContent={[{ text: '水印文字' }]}>
+          tdesign
+        </Watermark>
+      ));
+      expect(wrapper.classes()).toContain('t-watermark');
+    });
+
     it('content[string]', () => {
       const wrapper = mount(() => <Watermark content="水印覆盖的内容" />);
       expect(wrapper.classes()).toContain('t-watermark');
@@ -31,44 +40,19 @@ describe('Watermark', () => {
       expect(wrapper.text()).toContain('函数水印内容');
     });
 
-    it('watermarkContent', () => {
-      // canvas 绘制内容在 jsdom 中无法断言，验证属性透传不崩溃
-      const wrapper = mount(() => <Watermark watermarkContent={[{ text: '水印文字' }]}>tdesign</Watermark>);
-      expect(wrapper.classes()).toContain('t-watermark');
-    });
-
-    it('alpha[number]', () => {
+    it('isRepeat[boolean]', () => {
       const wrapper = mount(() => (
-        <Watermark alpha={0.5} watermarkContent={[{ text: '水印文字' }]}>
+        <Watermark isRepeat={false} watermarkContent={[{ text: '水印文字' }]}>
           tdesign
         </Watermark>
       ));
-      expect(wrapper.classes()).toContain('t-watermark');
-    });
-
-    it('width[number] & height[number]', () => {
-      const wrapper = mount(() => (
-        <Watermark width={120} height={64} watermarkContent={[{ text: '水印文字' }]}>
-          tdesign
-        </Watermark>
-      ));
-      // 尺寸参与 canvas 绘制，jsdom 下验证注入的水印层背景图生成
       const $mark = wrapper.find('.t-watermark > div');
-      expect($mark.attributes('style')).toContain('background-image');
+      expect($mark.attributes('style')).toContain('background-repeat: no-repeat');
     });
 
-    it('rotate[number]', () => {
+    it('layout[rectangular/hexagonal]', () => {
       const wrapper = mount(() => (
-        <Watermark rotate={-30} watermarkContent={[{ text: '水印文字' }]}>
-          tdesign
-        </Watermark>
-      ));
-      expect(wrapper.classes()).toContain('t-watermark');
-    });
-
-    it('offset[array]', () => {
-      const wrapper = mount(() => (
-        <Watermark offset={[10, 20]} watermarkContent={[{ text: '水印文字' }]}>
+        <Watermark layout="hexagonal" watermarkContent={[{ text: '水印文字' }]}>
           tdesign
         </Watermark>
       ));
@@ -84,25 +68,6 @@ describe('Watermark', () => {
       expect(wrapper.classes()).toContain('t-watermark');
     });
 
-    it('layout[rectangular/hexagonal]', () => {
-      const wrapper = mount(() => (
-        <Watermark layout="hexagonal" watermarkContent={[{ text: '水印文字' }]}>
-          tdesign
-        </Watermark>
-      ));
-      expect(wrapper.classes()).toContain('t-watermark');
-    });
-
-    it('isRepeat[boolean]', () => {
-      const wrapper = mount(() => (
-        <Watermark isRepeat={false} watermarkContent={[{ text: '水印文字' }]}>
-          tdesign
-        </Watermark>
-      ));
-      const $mark = wrapper.find('.t-watermark > div');
-      expect($mark.attributes('style')).toContain('background-repeat: no-repeat');
-    });
-
     it('movable[boolean] & moveInterval[number]', () => {
       const wrapper = mount(() => (
         <Watermark movable moveInterval={1000} watermarkContent={[{ text: '水印文字' }]}>
@@ -113,6 +78,15 @@ describe('Watermark', () => {
       expect($mark.attributes('style')).toContain('animation: watermark infinite');
     });
 
+    it('offset[array]', () => {
+      const wrapper = mount(() => (
+        <Watermark offset={[10, 20]} watermarkContent={[{ text: '水印文字' }]}>
+          tdesign
+        </Watermark>
+      ));
+      expect(wrapper.classes()).toContain('t-watermark');
+    });
+
     it('removable[boolean]', () => {
       const wrapper = mount(() => (
         <Watermark removable={false} watermarkContent={[{ text: '水印文字' }]}>
@@ -120,6 +94,32 @@ describe('Watermark', () => {
         </Watermark>
       ));
       expect(wrapper.classes()).toContain('t-watermark');
+    });
+
+    it('rotate[number]', () => {
+      const wrapper = mount(() => (
+        <Watermark rotate={-30} watermarkContent={[{ text: '水印文字' }]}>
+          tdesign
+        </Watermark>
+      ));
+      expect(wrapper.classes()).toContain('t-watermark');
+    });
+
+    it('watermarkContent', () => {
+      // canvas 绘制内容在 jsdom 中无法断言，验证属性透传不崩溃
+      const wrapper = mount(() => <Watermark watermarkContent={[{ text: '水印文字' }]}>tdesign</Watermark>);
+      expect(wrapper.classes()).toContain('t-watermark');
+    });
+
+    it('width[number] & height[number]', () => {
+      const wrapper = mount(() => (
+        <Watermark width={120} height={64} watermarkContent={[{ text: '水印文字' }]}>
+          tdesign
+        </Watermark>
+      ));
+      // 尺寸参与 canvas 绘制，jsdom 下验证注入的水印层背景图生成
+      const $mark = wrapper.find('.t-watermark > div');
+      expect($mark.attributes('style')).toContain('background-image');
     });
 
     it('zIndex[number]', () => {

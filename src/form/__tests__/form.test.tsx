@@ -36,188 +36,6 @@ describe('Form', () => {
         },
       });
     });
-    it('labelAlign[left/right/top]', async () => {
-      expect(wrapper.find(`.${name}__label`).classes(`${name}__label--right`)).toBeTruthy();
-
-      await wrapper.setProps({ labelAlign: 'top' });
-      expect(wrapper.find(`.${name}__label`).classes(`${name}__label--top`)).toBeTruthy();
-
-      await wrapper.setProps({ labelAlign: 'left' });
-      expect(wrapper.find(`.${name}__label`).classes(`${name}__label--left`)).toBeTruthy();
-    });
-
-    it('labelWidth[number]', async () => {
-      expect(wrapper.find(`.${name}__label`).element.style.width).eq('81px');
-      expect(wrapper.find(`.${name}__controls`).element.style.marginLeft).eq('81px');
-
-      await wrapper.setProps({ labelWidth: 100 });
-      expect(wrapper.find(`.${name}__label`).element.style.width).eq('100px');
-      expect(wrapper.find(`.${name}__controls`).element.style.marginLeft).eq('100px');
-    });
-
-    it('labelWidth[string]', async () => {
-      await wrapper.setProps({ labelWidth: '100px' });
-      expect(wrapper.find(`.${name}__label`).element.style.width).eq('100px');
-      expect(wrapper.find(`.${name}__controls`).element.style.marginLeft).eq('100px');
-    });
-
-    it('showErrorMessage[boolean]', async () => {
-      const rules = {
-        name: [{ required: true, message: '姓名必填' }],
-      };
-      const formData = {
-        name: '',
-      };
-
-      const showErrorMessage = true;
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Form rules={rules} data={formData} showErrorMessage={showErrorMessage}>
-              <FormItem label="name" name="name">
-                <Input v-model={formData.name} />
-              </FormItem>
-            </Form>
-          );
-        },
-      });
-      const form = wrapper.findComponent(Form);
-      await form.vm.$.exposed.validate();
-
-      expect(form.find(`.${name}__item-extra`).text()).eq('姓名必填');
-      await wrapper.setProps({ showErrorMessage: false });
-      await form.vm.$.exposed.validate();
-      expect(form.find(`.${name}__item-extra`).exists()).toBeFalsy();
-    });
-
-    it('disabled[boolean]', async () => {
-      const input = wrapper.find('input');
-      expect(input.element.hasAttribute('disabled')).toBeFalsy();
-      await wrapper.setProps({ disabled: true });
-      expect(input.element.hasAttribute('disabled')).toBeTruthy();
-    });
-
-    it('id[string]', async () => {
-      const form = wrapper.find('form');
-      expect(form.element.hasAttribute('id')).toBeFalsy();
-      await wrapper.setProps({ id: 'my-form' });
-      expect(form.element.getAttribute('id')).toBe('my-form');
-    });
-
-    it('readonly[boolean]', async () => {
-      const input = wrapper.find('input');
-      expect(input.element.hasAttribute('readonly')).toBeFalsy();
-      await wrapper.setProps({ readonly: true });
-      expect(input.element.hasAttribute('readonly')).toBeTruthy();
-    });
-
-    it('resetType[empty/initial]', async () => {
-      const rules = {
-        name: [{ required: true }],
-      };
-      const formData = ref({
-        name: 'defaultName',
-      });
-
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Form rules={rules} data={formData.value}>
-              <FormItem label="name" name="name">
-                <Input v-model={formData.value.name} />
-              </FormItem>
-            </Form>
-          );
-        },
-      });
-
-      const form = wrapper.findComponent(Form);
-
-      expect(formData.value.name).eq('defaultName');
-      await form.vm.$.exposed.reset();
-      expect(formData.value.name).eq('');
-
-      await wrapper.setProps({ resetType: 'initial' });
-      await form.vm.$.exposed.reset();
-      expect(formData.value.name).eq('defaultName');
-    });
-
-    it('colon[boolean]', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Form colon>
-              <FormItem label="姓名" name="name">
-                <Input placeholder="请输入内容" />
-              </FormItem>
-            </Form>
-          );
-        },
-      });
-      // colon 开启时 label 后渲染全局配置的冒号字符（默认全角冒号）
-      expect(wrapper.find(`.${name}__label`).text()).toContain('：');
-    });
-
-    it('contentAlign[left/right]', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Form contentAlign="right">
-              <FormItem label="姓名" name="name">
-                <Input placeholder="请输入内容" />
-              </FormItem>
-            </Form>
-          );
-        },
-      });
-      expect(wrapper.find(`.${name}__controls--right`).exists()).toBeTruthy();
-    });
-
-    it('preventSubmitDefault[boolean]', async () => {
-      const event = new Event('submit', { bubbles: true, cancelable: true });
-      const spy = vi.spyOn(event, 'preventDefault');
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Form>
-              <FormItem label="姓名" name="name">
-                <Input placeholder="请输入内容" />
-              </FormItem>
-            </Form>
-          );
-        },
-      });
-      wrapper.element.dispatchEvent(event);
-      expect(spy).toHaveBeenCalled();
-    });
-
-    // scrollToFirstError 滚动定位依赖真实布局尺寸
-    it.todo('scrollToFirstError[string]');
-    // submitWithWarningMessage 校验警告态提交行为
-    it.todo('submitWithWarningMessage[boolean]');
-
-    it('requiredMarkPosition[left/right]', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Form>
-              <FormItem required-mark />
-            </Form>
-          );
-        },
-      });
-      const labelEl = wrapper.find(`.${name}__label`);
-
-      expect(labelEl.classes(`${name}__label--required-right`)).toBe(false);
-
-      await wrapper.setProps({ requiredMarkPosition: 'right' });
-      await nextTick();
-      expect(labelEl.classes(`${name}__label--required-right`)).toBe(true);
-
-      await wrapper.setProps({ requiredMarkPosition: 'left' });
-      await nextTick();
-      expect(labelEl.classes(`${name}__label--required-right`)).toBe(false);
-    });
 
     describe('rules', () => {
       let wrapper;
@@ -484,6 +302,190 @@ describe('Form', () => {
         expectToSuccess(res);
       });
     });
+
+    it('colon[boolean]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form colon>
+              <FormItem label="姓名" name="name">
+                <Input placeholder="请输入内容" />
+              </FormItem>
+            </Form>
+          );
+        },
+      });
+      // colon 开启时 label 后渲染全局配置的冒号字符（默认全角冒号）
+      expect(wrapper.find(`.${name}__label`).text()).toContain('：');
+    });
+
+    it('contentAlign[left/right]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form contentAlign="right">
+              <FormItem label="姓名" name="name">
+                <Input placeholder="请输入内容" />
+              </FormItem>
+            </Form>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}__controls--right`).exists()).toBeTruthy();
+    });
+
+    it('disabled[boolean]', async () => {
+      const input = wrapper.find('input');
+      expect(input.element.hasAttribute('disabled')).toBeFalsy();
+      await wrapper.setProps({ disabled: true });
+      expect(input.element.hasAttribute('disabled')).toBeTruthy();
+    });
+
+    it('id[string]', async () => {
+      const form = wrapper.find('form');
+      expect(form.element.hasAttribute('id')).toBeFalsy();
+      await wrapper.setProps({ id: 'my-form' });
+      expect(form.element.getAttribute('id')).toBe('my-form');
+    });
+
+    it('labelAlign[left/right/top]', async () => {
+      expect(wrapper.find(`.${name}__label`).classes(`${name}__label--right`)).toBeTruthy();
+
+      await wrapper.setProps({ labelAlign: 'top' });
+      expect(wrapper.find(`.${name}__label`).classes(`${name}__label--top`)).toBeTruthy();
+
+      await wrapper.setProps({ labelAlign: 'left' });
+      expect(wrapper.find(`.${name}__label`).classes(`${name}__label--left`)).toBeTruthy();
+    });
+
+    it('labelWidth[number]', async () => {
+      expect(wrapper.find(`.${name}__label`).element.style.width).eq('81px');
+      expect(wrapper.find(`.${name}__controls`).element.style.marginLeft).eq('81px');
+
+      await wrapper.setProps({ labelWidth: 100 });
+      expect(wrapper.find(`.${name}__label`).element.style.width).eq('100px');
+      expect(wrapper.find(`.${name}__controls`).element.style.marginLeft).eq('100px');
+    });
+
+    it('labelWidth[string]', async () => {
+      await wrapper.setProps({ labelWidth: '100px' });
+      expect(wrapper.find(`.${name}__label`).element.style.width).eq('100px');
+      expect(wrapper.find(`.${name}__controls`).element.style.marginLeft).eq('100px');
+    });
+
+    it('preventSubmitDefault[boolean]', async () => {
+      const event = new Event('submit', { bubbles: true, cancelable: true });
+      const spy = vi.spyOn(event, 'preventDefault');
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form>
+              <FormItem label="姓名" name="name">
+                <Input placeholder="请输入内容" />
+              </FormItem>
+            </Form>
+          );
+        },
+      });
+      wrapper.element.dispatchEvent(event);
+      expect(spy).toHaveBeenCalled();
+    });
+
+    it('readonly[boolean]', async () => {
+      const input = wrapper.find('input');
+      expect(input.element.hasAttribute('readonly')).toBeFalsy();
+      await wrapper.setProps({ readonly: true });
+      expect(input.element.hasAttribute('readonly')).toBeTruthy();
+    });
+
+    it('requiredMarkPosition[left/right]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form>
+              <FormItem required-mark />
+            </Form>
+          );
+        },
+      });
+      const labelEl = wrapper.find(`.${name}__label`);
+
+      expect(labelEl.classes(`${name}__label--required-right`)).toBe(false);
+
+      await wrapper.setProps({ requiredMarkPosition: 'right' });
+      await nextTick();
+      expect(labelEl.classes(`${name}__label--required-right`)).toBe(true);
+
+      await wrapper.setProps({ requiredMarkPosition: 'left' });
+      await nextTick();
+      expect(labelEl.classes(`${name}__label--required-right`)).toBe(false);
+    });
+
+    it('resetType[empty/initial]', async () => {
+      const rules = {
+        name: [{ required: true }],
+      };
+      const formData = ref({
+        name: 'defaultName',
+      });
+
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form rules={rules} data={formData.value}>
+              <FormItem label="name" name="name">
+                <Input v-model={formData.value.name} />
+              </FormItem>
+            </Form>
+          );
+        },
+      });
+
+      const form = wrapper.findComponent(Form);
+
+      expect(formData.value.name).eq('defaultName');
+      await form.vm.$.exposed.reset();
+      expect(formData.value.name).eq('');
+
+      await wrapper.setProps({ resetType: 'initial' });
+      await form.vm.$.exposed.reset();
+      expect(formData.value.name).eq('defaultName');
+    });
+
+    // scrollToFirstError 滚动定位依赖真实布局尺寸
+    it.todo('scrollToFirstError[string]');
+
+    it('showErrorMessage[boolean]', async () => {
+      const rules = {
+        name: [{ required: true, message: '姓名必填' }],
+      };
+      const formData = {
+        name: '',
+      };
+
+      const showErrorMessage = true;
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form rules={rules} data={formData} showErrorMessage={showErrorMessage}>
+              <FormItem label="name" name="name">
+                <Input v-model={formData.name} />
+              </FormItem>
+            </Form>
+          );
+        },
+      });
+      const form = wrapper.findComponent(Form);
+      await form.vm.$.exposed.validate();
+
+      expect(form.find(`.${name}__item-extra`).text()).eq('姓名必填');
+      await wrapper.setProps({ showErrorMessage: false });
+      await form.vm.$.exposed.validate();
+      expect(form.find(`.${name}__item-extra`).exists()).toBeFalsy();
+    });
+
+    // submitWithWarningMessage 校验警告态提交行为
+    it.todo('submitWithWarningMessage[boolean]');
   });
   describe('events', () => {
     it('submit', async () => {

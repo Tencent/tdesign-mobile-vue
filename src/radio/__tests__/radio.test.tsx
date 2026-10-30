@@ -20,29 +20,30 @@ const createIconText = (text: string) => {
 
 describe('Radio', () => {
   describe('props', () => {
-    it('label[string]', async () => {
+    it('block[boolean]', async () => {
       const wrapper = mount(Radio, {
         props: {
-          label: TEXT,
+          block: true,
         },
       });
-      const $label = wrapper.find(`.${name}__title`);
-      expect($label.text()).toEqual(TEXT);
-      const label = 'new label content';
-      await wrapper.setProps({
-        label,
-      });
-      expect($label.text()).toEqual(label);
+      expect(wrapper.find(`.${name}--block`).exists()).toBeTruthy();
     });
 
-    it('label[function]', async () => {
+    it('borderless[boolean]', async () => {
       const wrapper = mount(Radio, {
         props: {
-          label: () => '函数标签',
+          checked: true,
         },
       });
-      const $label = wrapper.find(`.${name}__title`);
-      expect($label.text()).toEqual('函数标签');
+      expect(wrapper.find(`.${name}__border`).exists()).toBeTruthy();
+
+      const wrapper2 = mount(Radio, {
+        props: {
+          checked: true,
+          borderless: true,
+        },
+      });
+      expect(wrapper2.find(`.${name}__border`).exists()).toBeFalsy();
     });
 
     it('checked[boolean]', async () => {
@@ -75,18 +76,17 @@ describe('Radio', () => {
       expect($secondRadio.vm.checked).toBeFalsy();
     });
 
-    it('placement[left/right]', async () => {
-      const iconList: TdRadioProps['icon'] = [createIconText('line'), createIconText('dot')];
+    it('defaultChecked[boolean]', async () => {
       const wrapper = mount(Radio, {
         props: {
-          placement: 'right',
-          icon: iconList,
-          checked: true,
+          defaultChecked: true,
         },
       });
-
-      expect(wrapper.element).toMatchSnapshot();
+      expect(wrapper.find(`.${name}__icon--checked`).exists()).toBeTruthy();
     });
+
+    // contentDisabled 点击内容区域不触发切换，依赖事件来源区分
+    it.todo('contentDisabled[boolean]');
 
     it('icon[dot]', async () => {
       const wrapper = mount(Radio, {
@@ -117,39 +117,29 @@ describe('Radio', () => {
       expect(wrapper.find(`.${name}__icon`).exists()).toBeTruthy();
     });
 
-    it('block[boolean]', async () => {
+    it('label[string]', async () => {
       const wrapper = mount(Radio, {
         props: {
-          block: true,
+          label: TEXT,
         },
       });
-      expect(wrapper.find(`.${name}--block`).exists()).toBeTruthy();
+      const $label = wrapper.find(`.${name}__title`);
+      expect($label.text()).toEqual(TEXT);
+      const label = 'new label content';
+      await wrapper.setProps({
+        label,
+      });
+      expect($label.text()).toEqual(label);
     });
 
-    it('borderless[boolean]', async () => {
+    it('label[function]', async () => {
       const wrapper = mount(Radio, {
         props: {
-          checked: true,
+          label: () => '函数标签',
         },
       });
-      expect(wrapper.find(`.${name}__border`).exists()).toBeTruthy();
-
-      const wrapper2 = mount(Radio, {
-        props: {
-          checked: true,
-          borderless: true,
-        },
-      });
-      expect(wrapper2.find(`.${name}__border`).exists()).toBeFalsy();
-    });
-
-    it('defaultChecked[boolean]', async () => {
-      const wrapper = mount(Radio, {
-        props: {
-          defaultChecked: true,
-        },
-      });
-      expect(wrapper.find(`.${name}__icon--checked`).exists()).toBeTruthy();
+      const $label = wrapper.find(`.${name}__title`);
+      expect($label.text()).toEqual('函数标签');
     });
 
     it('maxLabelRow[number] & maxContentRow[number]', async () => {
@@ -165,8 +155,19 @@ describe('Radio', () => {
       // jsdom/cssstyle 不支持 -webkit-line-clamp，行数样式无法在 DOM 断言，仅验证行数元素通道
     });
 
-    // contentDisabled 点击内容区域不触发切换，依赖事件来源区分
-    it.todo('contentDisabled[boolean]');
+    it('placement[left/right]', async () => {
+      const iconList: TdRadioProps['icon'] = [createIconText('line'), createIconText('dot')];
+      const wrapper = mount(Radio, {
+        props: {
+          placement: 'right',
+          icon: iconList,
+          checked: true,
+        },
+      });
+
+      expect(wrapper.element).toMatchSnapshot();
+    });
+
     // readonly 与分组的联动行为在 group 场景验证
     it.todo('readonly[boolean]');
   });

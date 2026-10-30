@@ -21,11 +21,17 @@ describe('NoticeBar', () => {
       expect(wrapper.text()).toContain('君不见');
     });
 
-    it('operation[string]', async () => {
-      const wrapper = mount(<NoticeBar visible />);
-      await wrapper.setProps({ operation: '测试' });
+    it('content[function]', async () => {
+      const temp = () => '测试';
+      const wrapper = mount(<NoticeBar visible content={temp} />);
       expect(wrapper.text()).toContain('测试');
-      expect(wrapper.find('.t-notice-bar__operation').exists()).toBe(true);
+    });
+
+    it('direction[horizontal/vertical]', async () => {
+      const content = ['君不见', '高堂明镜悲白发', '朝如青丝暮成雪', '人生得意须尽欢', '莫使金樽空对月'];
+      const wrapper = mount(<NoticeBar visible marquee direction="vertical" content={content} />);
+      await nextTick();
+      expect(wrapper.find('.t-notice-bar__content--vertical').exists()).toBe(true);
     });
 
     it('marquee[boolean]', async () => {
@@ -58,6 +64,19 @@ describe('NoticeBar', () => {
       // expect(wrapper4.vm.scroll.loop).toBe(1);
       await wrapper4.find('.t-notice-bar__content').trigger('transitionend');
       // expect(wrapper4.vm.scroll.loop).toBe(0);
+    });
+
+    it('operation[string]', async () => {
+      const wrapper = mount(<NoticeBar visible />);
+      await wrapper.setProps({ operation: '测试' });
+      expect(wrapper.text()).toContain('测试');
+      expect(wrapper.find('.t-notice-bar__operation').exists()).toBe(true);
+    });
+
+    it('operation[function]', async () => {
+      const temp = () => '测试';
+      const wrapper = mount(<NoticeBar visible operation={temp} />);
+      expect(wrapper.text()).toContain('测试');
     });
 
     it('prefixIcon[boolean]', async () => {
@@ -104,25 +123,6 @@ describe('NoticeBar', () => {
     it('defaultVisible[boolean]', async () => {
       const wrapper = mount(<NoticeBar defaultVisible />);
       expect(wrapper.find('.t-notice-bar').exists()).toBe(true);
-    });
-
-    it('direction[horizontal/vertical]', async () => {
-      const content = ['君不见', '高堂明镜悲白发', '朝如青丝暮成雪', '人生得意须尽欢', '莫使金樽空对月'];
-      const wrapper = mount(<NoticeBar visible marquee direction="vertical" content={content} />);
-      await nextTick();
-      expect(wrapper.find('.t-notice-bar__content--vertical').exists()).toBe(true);
-    });
-
-    it('content[function]', async () => {
-      const temp = () => '测试';
-      const wrapper = mount(<NoticeBar visible content={temp} />);
-      expect(wrapper.text()).toContain('测试');
-    });
-
-    it('operation[function]', async () => {
-      const temp = () => '测试';
-      const wrapper = mount(<NoticeBar visible operation={temp} />);
-      expect(wrapper.text()).toContain('测试');
     });
   });
 

@@ -51,24 +51,6 @@ describe('Grid', () => {
       });
     });
 
-    it('theme[default/card]', async () => {
-      const themeList: TdGridProps['theme'][] = ['default', 'card'];
-      themeList.forEach((t) => {
-        const wrapper = mount(() => {
-          return (
-            <Grid theme={t}>
-              <GridItem />
-            </Grid>
-          );
-        });
-        if (t === 'card') {
-          expect(wrapper.find(`.t-grid--card`).exists()).toBe(true);
-        } else {
-          expect(wrapper.find(`.t-grid--card`).exists()).toBe(false);
-        }
-      });
-    });
-
     it('border[boolean]', async () => {
       const wrapper = mount({
         setup() {
@@ -132,5 +114,23 @@ describe('Grid', () => {
 
     // hover 点击态样式依赖交互反馈
     it.todo('hover[boolean]');
+
+    it('theme[default/card]', async () => {
+      const themeList: TdGridProps['theme'][] = ['default', 'card'];
+      themeList.forEach((t) => {
+        const wrapper = mount(() => {
+          return (
+            <Grid theme={t}>
+              <GridItem />
+            </Grid>
+          );
+        });
+        if (t === 'card') {
+          expect(wrapper.find(`.t-grid--card`).exists()).toBe(true);
+        } else {
+          expect(wrapper.find(`.t-grid--card`).exists()).toBe(false);
+        }
+      });
+    });
   });
 });

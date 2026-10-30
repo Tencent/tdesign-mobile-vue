@@ -12,13 +12,10 @@ const sleep = (duration) =>
 
 describe('CountDown', () => {
   describe('props', () => {
-    it('time[number]', async () => {
-      const wrapper = mount(<CountDown time={2000}></CountDown>);
-      expect(wrapper.text()).toContain('00:00:02');
+    it('autoStart[boolean]', async () => {
+      const wrapper = mount(<CountDown time={100000} autoStart={false}></CountDown>);
       await sleep(1000);
-      expect(wrapper.text()).toContain('00:00:01');
-      await sleep(500);
-      expect(wrapper.text()).toContain('00:00:00');
+      expect(wrapper.text()).toContain('00:01:40');
     });
 
     it('content[string]', async () => {
@@ -46,20 +43,9 @@ describe('CountDown', () => {
       expect(wrapper3.find('.t-count-down__split').exists()).toBe(false);
     });
 
-    it('splitWithUnit[boolean]', async () => {
-      const wrapper = mount(<CountDown time={100000} splitWithUnit />);
-      expect(wrapper.find('.t-count-down__split--text').exists()).toBeTruthy();
-    });
-
     it('millisecond[boolean]', async () => {
       const wrapper = mount(<CountDown time={100000} millisecond={true}></CountDown>);
       expect(wrapper.text()).toContain('00:01:40:000');
-    });
-
-    it('autoStart[boolean]', async () => {
-      const wrapper = mount(<CountDown time={100000} autoStart={false}></CountDown>);
-      await sleep(1000);
-      expect(wrapper.text()).toContain('00:01:40');
     });
 
     it('size[small/medium/large]', async () => {
@@ -69,11 +55,25 @@ describe('CountDown', () => {
       expect(wrapper1.find('.t-count-down').exists()).toBe(true);
     });
 
+    it('splitWithUnit[boolean]', async () => {
+      const wrapper = mount(<CountDown time={100000} splitWithUnit />);
+      expect(wrapper.find('.t-count-down__split--text').exists()).toBeTruthy();
+    });
+
     it('theme[default/round/square]', async () => {
       const wrapper = mount(<CountDown time={100000}></CountDown>);
       expect(wrapper.find('.t-count-down--default').exists()).toBe(true);
       const wrapper1 = mount(<CountDown time={100000}></CountDown>);
       expect(wrapper1.find('.t-count-down').exists()).toBe(true);
+    });
+
+    it('time[number]', async () => {
+      const wrapper = mount(<CountDown time={2000}></CountDown>);
+      expect(wrapper.text()).toContain('00:00:02');
+      await sleep(1000);
+      expect(wrapper.text()).toContain('00:00:01');
+      await sleep(500);
+      expect(wrapper.text()).toContain('00:00:00');
     });
   });
 

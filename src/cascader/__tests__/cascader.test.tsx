@@ -173,26 +173,18 @@ describe('Cascader', () => {
   });
 
   describe('props', () => {
-    it('visible[boolean]', async () => {
-      const onPick = vi.fn();
-      const wrapper = mount(Cascader, {
-        props: {
-          visible: false,
-          options: itemList,
-          onPick,
-        },
-      });
-      expect(wrapper.find(`.${name}`).isVisible()).toBe(false);
-      await wrapper.setProps({
-        visible: true,
-      });
-      // expect(wrapper.find(`.${name}`).isVisible()).toBe(true);
+    // checkStrictly 父子节点选中解耦，依赖多级选择交互
+    it.todo('checkStrictly[boolean]');
 
-      const $radios = wrapper.findAllComponents(Radio);
+    it('closeBtn[boolean]', async () => {
+      const wrapper = mount(<Cascader options={options} />);
+      // 默认
+      expect(wrapper.findComponent(CloseIcon).exists()).toBeTruthy();
+    });
 
-      // 模拟点击 第1项，禁用态，点击不会触发pick事件
-      await $radios[0].find(`.${prefix}-radio`).trigger('click');
-      expect(onPick).toHaveBeenCalledTimes(0);
+    it('header[function]', async () => {
+      const wrapper = mount(<Cascader options={options} header={() => <div class="cascader-header">头部内容</div>} />);
+      expect(wrapper.find('.cascader-header').exists()).toBeTruthy();
     });
 
     it('keys[object]', async () => {
@@ -204,6 +196,68 @@ describe('Cascader', () => {
       // 内容 teleport 到 body，从 document 查询；keys 别名（name/id/sub）正确解析选中路径
       expect(document.querySelector(`.${prefix}-tabs`).textContent).toContain('天津市');
       expect(document.querySelector(`.${prefix}-tabs`).textContent).toContain('蓟州区');
+    });
+
+    // load 异步动态加载子级选项
+    it.todo('load[function]');
+
+    it('middleContent[function]', async () => {
+      const wrapper = mount(
+        <Cascader options={options} middleContent={() => <div class="cascader-middle">中间内容</div>} />,
+      );
+      expect(wrapper.find('.cascader-middle').exists()).toBeTruthy();
+    });
+
+    it('overlayProps[object]', async () => {
+      const wrapper = mount(<Cascader options={options} visible overlayProps={{ zIndex: 6000 }} />);
+      expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 6000');
+    });
+
+    it('placeholder[string]', async () => {
+      const wrapper = mount(<Cascader options={options} placeholder={defaultPlaceholder} />);
+      const $placeholder = wrapper.find(`.${name}__step-label`);
+      expect($placeholder.text()).toEqual(defaultPlaceholder);
+    });
+
+    it('subTitles[array]', async () => {
+      const wrapper = mount(<Cascader options={options} subTitles={subTitles} />);
+      const $subTitles = wrapper.find(`.${name}__options-title`);
+      expect($subTitles.exists()).toBeTruthy();
+    });
+
+    it('theme[step/tab]', async () => {
+      const themeList: TdCascaderProps['theme'][] = ['step', 'tab'];
+      themeList.forEach((theme, index) => {
+        const wrapper = mount(() => (
+          <Cascader visible={true} options={options} value={address.value} theme={theme}></Cascader>
+        ));
+        if (theme === 'step') {
+          expect(wrapper.find(`.${name}__steps`).exists()).toBeTruthy();
+          expect(wrapper.findComponent(TTabs).exists()).toBeFalsy();
+        }
+        if (theme === 'tab') {
+          expect(wrapper.find(`.${name}__steps`).exists()).toBeFalsy();
+          expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
+        }
+      });
+    });
+
+    it('title[string]', async () => {
+      const title = TEXT;
+      const wrapper = mount(<Cascader options={options} title={title} />);
+      const $title = wrapper.find(`.${name}__title`);
+
+      const newTitle = 'Cascader 级联选择器';
+      expect($title.text()).toBe(TEXT);
+      // await wrapper.setProps({
+      //   title: newTitle,
+      // });
+    });
+
+    it('title[function]', async () => {
+      const wrapper = mount(<Cascader options={options} title={() => 'Cascader 级联选择器'} />);
+      const $title = wrapper.find(`.${name}__title`);
+      expect($title.text()).toBe('Cascader 级联选择器');
     });
 
     it('value[string]', async () => {
@@ -259,79 +313,26 @@ describe('Cascader', () => {
       expect($steps.textContent).toContain('北京市');
     });
 
-    it('title[string]', async () => {
-      const title = TEXT;
-      const wrapper = mount(<Cascader options={options} title={title} />);
-      const $title = wrapper.find(`.${name}__title`);
-
-      const newTitle = 'Cascader 级联选择器';
-      expect($title.text()).toBe(TEXT);
-      // await wrapper.setProps({
-      //   title: newTitle,
-      // });
-    });
-
-    it('title[function]', async () => {
-      const wrapper = mount(<Cascader options={options} title={() => 'Cascader 级联选择器'} />);
-      const $title = wrapper.find(`.${name}__title`);
-      expect($title.text()).toBe('Cascader 级联选择器');
-    });
-
-    it('placeholder[string]', async () => {
-      const wrapper = mount(<Cascader options={options} placeholder={defaultPlaceholder} />);
-      const $placeholder = wrapper.find(`.${name}__step-label`);
-      expect($placeholder.text()).toEqual(defaultPlaceholder);
-    });
-
-    it('subTitles[array]', async () => {
-      const wrapper = mount(<Cascader options={options} subTitles={subTitles} />);
-      const $subTitles = wrapper.find(`.${name}__options-title`);
-      expect($subTitles.exists()).toBeTruthy();
-    });
-
-    it('closeBtn[boolean]', async () => {
-      const wrapper = mount(<Cascader options={options} />);
-      // 默认
-      expect(wrapper.findComponent(CloseIcon).exists()).toBeTruthy();
-    });
-
-    it('header[function]', async () => {
-      const wrapper = mount(<Cascader options={options} header={() => <div class="cascader-header">头部内容</div>} />);
-      expect(wrapper.find('.cascader-header').exists()).toBeTruthy();
-    });
-
-    it('middleContent[function]', async () => {
-      const wrapper = mount(
-        <Cascader options={options} middleContent={() => <div class="cascader-middle">中间内容</div>} />,
-      );
-      expect(wrapper.find('.cascader-middle').exists()).toBeTruthy();
-    });
-
-    it('overlayProps[object]', async () => {
-      const wrapper = mount(<Cascader options={options} visible overlayProps={{ zIndex: 6000 }} />);
-      expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 6000');
-    });
-
-    // checkStrictly 父子节点选中解耦，依赖多级选择交互
-    it.todo('checkStrictly[boolean]');
-    // load 异步动态加载子级选项
-    it.todo('load[function]');
-
-    it('theme[step/tab]', async () => {
-      const themeList: TdCascaderProps['theme'][] = ['step', 'tab'];
-      themeList.forEach((theme, index) => {
-        const wrapper = mount(() => (
-          <Cascader visible={true} options={options} value={address.value} theme={theme}></Cascader>
-        ));
-        if (theme === 'step') {
-          expect(wrapper.find(`.${name}__steps`).exists()).toBeTruthy();
-          expect(wrapper.findComponent(TTabs).exists()).toBeFalsy();
-        }
-        if (theme === 'tab') {
-          expect(wrapper.find(`.${name}__steps`).exists()).toBeFalsy();
-          expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
-        }
+    it('visible[boolean]', async () => {
+      const onPick = vi.fn();
+      const wrapper = mount(Cascader, {
+        props: {
+          visible: false,
+          options: itemList,
+          onPick,
+        },
       });
+      expect(wrapper.find(`.${name}`).isVisible()).toBe(false);
+      await wrapper.setProps({
+        visible: true,
+      });
+      // expect(wrapper.find(`.${name}`).isVisible()).toBe(true);
+
+      const $radios = wrapper.findAllComponents(Radio);
+
+      // 模拟点击 第1项，禁用态，点击不会触发pick事件
+      await $radios[0].find(`.${prefix}-radio`).trigger('click');
+      expect(onPick).toHaveBeenCalledTimes(0);
     });
   });
 

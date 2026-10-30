@@ -14,32 +14,6 @@ const images = ref([
 
 describe('ImageViewer', () => {
   describe('props', () => {
-    it('closeBtn[boolean]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} closeBtn={false} />);
-
-      expect(wrapper.findComponent(CloseIcon).exists()).toBeFalsy();
-    });
-
-    it('closeBtn[function]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} closeBtn={() => '自定义关闭'} />);
-
-      expect(wrapper.text()).toContain('自定义关闭');
-    });
-
-    it('images[array]', async () => {
-      const emptyImages = mount(<ImageViewer visible={true} />);
-      expect(emptyImages.find('.t-swiper-item').exists()).toBe(false);
-
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} />);
-
-      await nextTick();
-      expect(wrapper.findAll('.t-swiper-item').length).toBe(images.value.length);
-
-      images.value.pop();
-      await nextTick();
-      expect(wrapper.findAll('.t-swiper-item').length).toBe(images.value.length);
-    });
-
     // it('maxZoom', async () => {
     //   const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} maxZoom={2} />);
 
@@ -63,29 +37,52 @@ describe('ImageViewer', () => {
     //   trigger(target, 'touchend', 50, 50);
     // });
 
-    it('visible[boolean]', async () => {
-      const visible = ref(false);
-      const wrapper = mount(<ImageViewer v-model:images={images.value} v-model:visible={visible.value} />);
+    it('closeBtn[boolean]', async () => {
+      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} closeBtn={false} />);
 
-      expect(wrapper.findComponent(Swiper).exists()).toBe(false);
-      visible.value = true;
+      expect(wrapper.findComponent(CloseIcon).exists()).toBeFalsy();
     });
 
-    it('defaultVisible[boolean]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} defaultVisible />);
+    it('closeBtn[function]', async () => {
+      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} closeBtn={() => '自定义关闭'} />);
 
-      expect(wrapper.findComponent(Swiper).exists()).toBe(true);
+      expect(wrapper.text()).toContain('自定义关闭');
     });
 
-    it('showIndex[boolean]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} showIndex />);
+    it('cover[function]', async () => {
+      const wrapper = mount(
+        <ImageViewer
+          v-model:images={images.value}
+          visible={true}
+          cover={() => <div class="custom-cover">自定义封面</div>}
+        />,
+      );
 
-      expect(wrapper.find('.t-image-viewer__nav-index').exists()).toBe(true);
-      expect(wrapper.find('.t-image-viewer__nav-index').text()).toBe(`1/${images.value.length}`);
+      expect(wrapper.find('.t-image-viewer__cover .custom-cover').exists()).toBe(true);
+    });
 
-      const wrapper2 = mount(<ImageViewer v-model:images={images.value} visible={true} showIndex={false} />);
+    it('deleteBtn[boolean]', async () => {
+      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} deleteBtn={true} />);
 
-      expect(wrapper2.find('.t-image-viewer__nav-index').exists()).toBe(false);
+      expect(wrapper.find('.t-image-viewer__nav-delete').findComponent(DeleteIcon).exists()).toBe(true);
+
+      const wrapper2 = mount(<ImageViewer v-model:images={images.value} visible={true} />);
+
+      expect(wrapper2.find('.t-image-viewer__nav-delete').findComponent(DeleteIcon).exists()).toBe(false);
+    });
+
+    it('images[array]', async () => {
+      const emptyImages = mount(<ImageViewer visible={true} />);
+      expect(emptyImages.find('.t-swiper-item').exists()).toBe(false);
+
+      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} />);
+
+      await nextTick();
+      expect(wrapper.findAll('.t-swiper-item').length).toBe(images.value.length);
+
+      images.value.pop();
+      await nextTick();
+      expect(wrapper.findAll('.t-swiper-item').length).toBe(images.value.length);
     });
 
     it('index[number]', async () => {
@@ -101,30 +98,33 @@ describe('ImageViewer', () => {
       expect(wrapper.find('.t-image-viewer__nav-index').text()).toBe(`2/${images.value.length}`);
     });
 
-    it('deleteBtn[boolean]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} deleteBtn={true} />);
-
-      expect(wrapper.find('.t-image-viewer__nav-delete').findComponent(DeleteIcon).exists()).toBe(true);
-
-      const wrapper2 = mount(<ImageViewer v-model:images={images.value} visible={true} />);
-
-      expect(wrapper2.find('.t-image-viewer__nav-delete').findComponent(DeleteIcon).exists()).toBe(false);
-    });
-
-    it('cover[function]', async () => {
-      const wrapper = mount(
-        <ImageViewer
-          v-model:images={images.value}
-          visible={true}
-          cover={() => <div class="custom-cover">自定义封面</div>}
-        />,
-      );
-
-      expect(wrapper.find('.t-image-viewer__cover .custom-cover').exists()).toBe(true);
-    });
-
     // loop 透传 Swiper 循环滚动行为，需真实滑动交互验证
     it.todo('loop[boolean]');
+
+    it('showIndex[boolean]', async () => {
+      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} showIndex />);
+
+      expect(wrapper.find('.t-image-viewer__nav-index').exists()).toBe(true);
+      expect(wrapper.find('.t-image-viewer__nav-index').text()).toBe(`1/${images.value.length}`);
+
+      const wrapper2 = mount(<ImageViewer v-model:images={images.value} visible={true} showIndex={false} />);
+
+      expect(wrapper2.find('.t-image-viewer__nav-index').exists()).toBe(false);
+    });
+
+    it('visible[boolean]', async () => {
+      const visible = ref(false);
+      const wrapper = mount(<ImageViewer v-model:images={images.value} v-model:visible={visible.value} />);
+
+      expect(wrapper.findComponent(Swiper).exists()).toBe(false);
+      visible.value = true;
+    });
+
+    it('defaultVisible[boolean]', async () => {
+      const wrapper = mount(<ImageViewer v-model:images={images.value} defaultVisible />);
+
+      expect(wrapper.findComponent(Swiper).exists()).toBe(true);
+    });
   });
 
   describe('slots', () => {

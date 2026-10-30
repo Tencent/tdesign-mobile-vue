@@ -15,9 +15,31 @@ const sizeList = ['small', 'medium', 'large'];
 
 describe('Avatar', () => {
   describe('props', () => {
+    it('badgeProps[object]', async () => {
+      const wrapper = mount(() => <Avatar image={IMAGE} badgeProps={{ count: 10 }}></Avatar>);
+      expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
+      const badge = wrapper.find('.t-badge > .t-badge--basic');
+      expect(badge.exists()).toBeTruthy();
+      expect(badge.text()).toBe('10');
+    });
+
+    it('hideOnLoadFailed[boolean]', async () => {
+      // hideOnLoadFailed 开启时不渲染图片，改为图标/文本兜底
+      const wrapper = mount(() => <Avatar image={IMAGE} hideOnLoadFailed />);
+      expect(wrapper.find('img').exists()).toBeFalsy();
+
+      const wrapper2 = mount(() => <Avatar image={IMAGE} />);
+      expect(wrapper2.find('img').exists()).toBeTruthy();
+    });
+
     it('icon[function]', async () => {
       const wrapper = mount(() => <Avatar icon={userIconFunc} />);
       expect(wrapper.findComponent(UserIcon).exists()).toBeTruthy();
+    });
+
+    it('imageProps[object]', async () => {
+      const wrapper = mount(() => <Avatar image={IMAGE} imageProps={{ alt: '头像' }} />);
+      expect(wrapper.find('img').attributes('alt')).toBe('头像');
     });
 
     it('shape[circle/round]', async () => {
@@ -34,28 +56,6 @@ describe('Avatar', () => {
         const size = wrapper.find(`.t-avatar--${s}`);
         expect(size.exists()).toBeTruthy();
       });
-    });
-
-    it('badgeProps[object]', async () => {
-      const wrapper = mount(() => <Avatar image={IMAGE} badgeProps={{ count: 10 }}></Avatar>);
-      expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
-      const badge = wrapper.find('.t-badge > .t-badge--basic');
-      expect(badge.exists()).toBeTruthy();
-      expect(badge.text()).toBe('10');
-    });
-
-    it('imageProps[object]', async () => {
-      const wrapper = mount(() => <Avatar image={IMAGE} imageProps={{ alt: '头像' }} />);
-      expect(wrapper.find('img').attributes('alt')).toBe('头像');
-    });
-
-    it('hideOnLoadFailed[boolean]', async () => {
-      // hideOnLoadFailed 开启时不渲染图片，改为图标/文本兜底
-      const wrapper = mount(() => <Avatar image={IMAGE} hideOnLoadFailed />);
-      expect(wrapper.find('img').exists()).toBeFalsy();
-
-      const wrapper2 = mount(() => <Avatar image={IMAGE} />);
-      expect(wrapper2.find('img').exists()).toBeTruthy();
     });
   });
 

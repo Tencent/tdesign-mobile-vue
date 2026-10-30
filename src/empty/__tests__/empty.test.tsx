@@ -4,6 +4,16 @@ import Empty from '../empty';
 
 describe('Empty', () => {
   describe('props', () => {
+    it('action[function]', () => {
+      const wrapper = mount(Empty, {
+        props: {
+          action: () => 'some function action',
+        },
+      });
+      const dom = wrapper.find('.t-empty__actions');
+      expect(dom?.element?.innerHTML).toBe('some function action');
+    });
+
     it('description[string]', () => {
       const description = '描述内容';
       const wrapper = mount(Empty, {
@@ -23,16 +33,6 @@ describe('Empty', () => {
       });
       const dom = wrapper.find('.t-empty__description');
       expect(dom?.element?.innerHTML).toBe('函数描述内容');
-    });
-
-    it('action[function]', () => {
-      const wrapper = mount(Empty, {
-        props: {
-          action: () => 'some function action',
-        },
-      });
-      const dom = wrapper.find('.t-empty__actions');
-      expect(dom?.element?.innerHTML).toBe('some function action');
     });
 
     it('icon[string]', () => {

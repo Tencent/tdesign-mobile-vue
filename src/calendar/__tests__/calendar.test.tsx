@@ -31,29 +31,8 @@ const dayFormat = (date, character) => {
 
 describe('Calendar', () => {
   describe('props', () => {
-    it('visible[boolean]', async () => {
-      const wrapper = mount(Calendar, {
-        props: {
-          visible: false,
-        },
-      });
-      await wrapper.setProps({
-        visible: true,
-      });
-    });
-
-    it('title[string]', async () => {
-      const title = '';
-      const wrapper = mount(<Calendar title={title} />);
-      const $title = wrapper.find(`.${name}__title`);
-      expect($title.text()).toEqual(title || '请选择日期');
-    });
-
-    it('title[function]', async () => {
-      const wrapper = mount(<Calendar title={() => '自定义标题'} />);
-      const $title = wrapper.find(`.${name}__title`);
-      expect($title.text()).toEqual('自定义标题');
-    });
+    // allowSameDay 范围选择可选中同一天，依赖交互行为
+    it.todo('allowSameDay[boolean]');
 
     it('confirmBtn[string]', async () => {
       const wrapper = mount(<Calendar visible={true} value={value} confirmBtn={confirmBtn} />);
@@ -73,28 +52,46 @@ describe('Calendar', () => {
       expect($confirmBtn.text()).toEqual('确认完成');
     });
 
-    // 实现仅消费 value，defaultValue 声明后未在任何路径读取（template.tsx 只读 props.value），待组件支持后再补
-    it.todo('defaultValue[Date]');
-
-    it('usePopup[boolean]', async () => {
-      const wrapper = mount(<Calendar usePopup={false} value={value} />);
-      // 非弹窗模式直接渲染日历模板
-      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
-      expect(wrapper.findComponent({ name: 'TPopup' }).exists()).toBeFalsy();
-    });
-
-    // readonly 点击日期不改变选中值，依赖交互行为
-    it.todo('readonly[boolean]');
-    // allowSameDay 范围选择可选中同一天，依赖交互行为
-    it.todo('allowSameDay[boolean]');
-    // switchMode 年月切换视图，依赖交互行为
-    it.todo('switchMode[string]');
-
     it('firstDayOfWeek[number]', async () => {
       const firstDayOfWeek = 1;
       const wrapper = mount(<Calendar visible={true} value={value} firstDayOfWeek={firstDayOfWeek} />);
       const $firstDay = wrapper.find(`.${name}__days-item`);
       expect($firstDay.text()).toEqual(raw.split('')[firstDayOfWeek]);
+    });
+
+    it('format[function]', async () => {
+      const suffix = '¥60'; // 每一个日期后均自定义 suffix = '¥60'
+      const format = (day) => {
+        day.suffix = suffix;
+        return day;
+      };
+      const wrapper = mount(
+        <Calendar visible={true} value={value} format={format} minDate={minDate} maxDate={maxDate} />,
+      );
+      // expect(wrapper.element).toMatchSnapshot();
+      const $dates = wrapper.findAll(`.${name}__dates-item-suffix`);
+      $dates.forEach((item) => {
+        expect(item.text()).toEqual(suffix);
+      });
+    });
+
+    // readonly 点击日期不改变选中值，依赖交互行为
+    it.todo('readonly[boolean]');
+
+    // switchMode 年月切换视图，依赖交互行为
+    it.todo('switchMode[string]');
+
+    it('title[string]', async () => {
+      const title = '';
+      const wrapper = mount(<Calendar title={title} />);
+      const $title = wrapper.find(`.${name}__title`);
+      expect($title.text()).toEqual(title || '请选择日期');
+    });
+
+    it('title[function]', async () => {
+      const wrapper = mount(<Calendar title={() => '自定义标题'} />);
+      const $title = wrapper.find(`.${name}__title`);
+      expect($title.text()).toEqual('自定义标题');
     });
 
     it('type[single/multiple/range]', async () => {
@@ -135,19 +132,24 @@ describe('Calendar', () => {
       // TODO: && type = 'multiple'
     });
 
-    it('format[function]', async () => {
-      const suffix = '¥60'; // 每一个日期后均自定义 suffix = '¥60'
-      const format = (day) => {
-        day.suffix = suffix;
-        return day;
-      };
-      const wrapper = mount(
-        <Calendar visible={true} value={value} format={format} minDate={minDate} maxDate={maxDate} />,
-      );
-      // expect(wrapper.element).toMatchSnapshot();
-      const $dates = wrapper.findAll(`.${name}__dates-item-suffix`);
-      $dates.forEach((item) => {
-        expect(item.text()).toEqual(suffix);
+    it('usePopup[boolean]', async () => {
+      const wrapper = mount(<Calendar usePopup={false} value={value} />);
+      // 非弹窗模式直接渲染日历模板
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+      expect(wrapper.findComponent({ name: 'TPopup' }).exists()).toBeFalsy();
+    });
+
+    // 实现仅消费 value，defaultValue 声明后未在任何路径读取（template.tsx 只读 props.value），待组件支持后再补
+    it.todo('defaultValue[Date]');
+
+    it('visible[boolean]', async () => {
+      const wrapper = mount(Calendar, {
+        props: {
+          visible: false,
+        },
+      });
+      await wrapper.setProps({
+        visible: true,
       });
     });
   });

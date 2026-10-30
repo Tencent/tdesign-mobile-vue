@@ -8,65 +8,6 @@ import Link from '../link';
 describe('Link', () => {
   // test props api
   describe('props', () => {
-    it('size[small/medium/large]', () => {
-      const wrapper = mount({
-        render() {
-          return <Link size={'large'}>text</Link>;
-        },
-      });
-      expect(wrapper.find('.t-link--large').exists()).toBeTruthy();
-      const wrapperDefault = mount({
-        render() {
-          return <Link>text</Link>;
-        },
-      });
-      expect(wrapperDefault.find('.t-link--medium').exists()).toBeTruthy();
-    });
-    it('theme[default/primary/danger/warning/success]', () => {
-      const wrapper = mount({
-        render() {
-          return <Link theme={'primary'}>text</Link>;
-        },
-      });
-      expect(wrapper.find('.t-link--primary').exists()).toBeTruthy();
-      const wrapperDefault = mount({
-        render() {
-          return <Link>text</Link>;
-        },
-      });
-      expect(wrapperDefault.find('.t-link--default').exists()).toBeTruthy();
-    });
-    it('hover[boolean]', () => {
-      const wrapper = mount({
-        render() {
-          return <Link hover={true}>text</Link>;
-        },
-      });
-      expect(wrapper.find('.t-link--hover').exists()).toBeTruthy();
-    });
-    it('underline[boolean]', () => {
-      const wrapper = mount({
-        render() {
-          return <Link underline={true}>text</Link>;
-        },
-      });
-      expect(wrapper.find('.t-link--underline').exists()).toBeTruthy();
-    });
-    it('disabled[boolean]', () => {
-      const fn = vi.fn();
-      const wrapper = mount({
-        render() {
-          return (
-            <Link disabled={true} onClick={fn}>
-              text
-            </Link>
-          );
-        },
-      });
-      wrapper.trigger('click');
-      expect(fn).not.toHaveBeenCalled();
-      expect(wrapper.find('.t-link--disabled').exists()).toBeTruthy();
-    });
     it('content[string]', () => {
       const wrapper = mount({
         render() {
@@ -81,6 +22,7 @@ describe('Link', () => {
       });
       expect(wrapper.find('.t-link--content')).toBeTruthy();
     });
+
     it('content[function]', () => {
       const renderContent = function () {
         return 'foo';
@@ -97,6 +39,32 @@ describe('Link', () => {
       });
       expect(wrapper.find('.t-link--content')).toBeTruthy();
     });
+
+    it('disabled[boolean]', () => {
+      const fn = vi.fn();
+      const wrapper = mount({
+        render() {
+          return (
+            <Link disabled={true} onClick={fn}>
+              text
+            </Link>
+          );
+        },
+      });
+      wrapper.trigger('click');
+      expect(fn).not.toHaveBeenCalled();
+      expect(wrapper.find('.t-link--disabled').exists()).toBeTruthy();
+    });
+
+    it('hover[boolean]', () => {
+      const wrapper = mount({
+        render() {
+          return <Link hover={true}>text</Link>;
+        },
+      });
+      expect(wrapper.find('.t-link--hover').exists()).toBeTruthy();
+    });
+
     it('href[string]', () => {
       const wrapper = mount(() => (
         <Link href="https://tdesign.tencent.com" target="_blank">
@@ -111,6 +79,45 @@ describe('Link', () => {
     it('prefixIcon[function]', () => {
       const wrapper = mount(() => <Link prefixIcon={() => <Icon />}>text</Link>);
       expect(wrapper.findComponent(Icon).exists()).toBeTruthy();
+    });
+
+    it('size[small/medium/large]', () => {
+      const wrapper = mount({
+        render() {
+          return <Link size={'large'}>text</Link>;
+        },
+      });
+      expect(wrapper.find('.t-link--large').exists()).toBeTruthy();
+      const wrapperDefault = mount({
+        render() {
+          return <Link>text</Link>;
+        },
+      });
+      expect(wrapperDefault.find('.t-link--medium').exists()).toBeTruthy();
+    });
+
+    it('theme[default/primary/danger/warning/success]', () => {
+      const wrapper = mount({
+        render() {
+          return <Link theme={'primary'}>text</Link>;
+        },
+      });
+      expect(wrapper.find('.t-link--primary').exists()).toBeTruthy();
+      const wrapperDefault = mount({
+        render() {
+          return <Link>text</Link>;
+        },
+      });
+      expect(wrapperDefault.find('.t-link--default').exists()).toBeTruthy();
+    });
+
+    it('underline[boolean]', () => {
+      const wrapper = mount({
+        render() {
+          return <Link underline={true}>text</Link>;
+        },
+      });
+      expect(wrapper.find('.t-link--underline').exists()).toBeTruthy();
     });
   });
 

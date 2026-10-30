@@ -10,20 +10,6 @@ const imageUrl = 'https://tdesign.gtimg.com/mobile/demos/avatar_1.png';
 
 describe('Result', () => {
   describe('props', () => {
-    it('title[string]', async () => {
-      const wrapper = mount(() => <Result title="标题"></Result>);
-      const title = wrapper.find('.t-result__title');
-      expect(title.exists()).toBeTruthy();
-      expect(title.text()).toBe('标题');
-    });
-
-    it('title[function]', async () => {
-      const wrapper = mount(() => <Result title={() => '函数标题'}></Result>);
-      const title = wrapper.find('.t-result__title');
-      expect(title.exists()).toBeTruthy();
-      expect(title.text()).toBe('函数标题');
-    });
-
     it('description[string]', async () => {
       const wrapper = mount(() => <Result description="描述"></Result>);
       const description = wrapper.find('.t-result__description');
@@ -59,6 +45,20 @@ describe('Result', () => {
       expect(wrapper3.findComponent(CloseCircleIcon).exists()).toBeTruthy();
 
       expect(wrapper4.classes()).toContain('t-result--theme-default');
+    });
+
+    it('title[string]', async () => {
+      const wrapper = mount(() => <Result title="标题"></Result>);
+      const title = wrapper.find('.t-result__title');
+      expect(title.exists()).toBeTruthy();
+      expect(title.text()).toBe('标题');
+    });
+
+    it('title[function]', async () => {
+      const wrapper = mount(() => <Result title={() => '函数标题'}></Result>);
+      const title = wrapper.find('.t-result__title');
+      expect(title.exists()).toBeTruthy();
+      expect(title.text()).toBe('函数标题');
     });
   });
 

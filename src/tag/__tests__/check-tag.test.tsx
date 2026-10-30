@@ -14,6 +14,11 @@ const shapeList: TdCheckTagProps['shape'][] = ['mark', 'round', 'square'];
 
 describe('CheckTag', () => {
   describe('props', () => {
+    it('checked[boolean]', async () => {
+      const wrapper = mount(() => <TCheckTag modelValue={true}>{TEXT}</TCheckTag>);
+      expect(wrapper.classes()).toContain('t-tag--checked');
+    });
+
     it('content[array]', async () => {
       const content = ['已选中态', '未选中态'];
       const wrapper = mount(() => <TCheckTag content={content}>{TEXT}</TCheckTag>);
@@ -28,11 +33,6 @@ describe('CheckTag', () => {
       expect(wrapper.text()).toContain('自定义内容');
     });
 
-    it('checked[boolean]', async () => {
-      const wrapper = mount(() => <TCheckTag modelValue={true}>{TEXT}</TCheckTag>);
-      expect(wrapper.classes()).toContain('t-tag--checked');
-    });
-
     it('disabled[boolean]', async () => {
       const wrapper = mount(() => <TCheckTag disabled>{TEXT}</TCheckTag>);
       expect(wrapper.classes()).toContain('t-tag--disabled');
@@ -43,16 +43,16 @@ describe('CheckTag', () => {
       expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
     });
 
-    it('size[small/medium/large/extra-large]', async () => {
-      sizeList.forEach((s) => {
-        const wrapper = mount(() => <TCheckTag size={s}>{TEXT}</TCheckTag>);
+    it('shape[square/round/mark]', async () => {
+      shapeList.forEach((s) => {
+        const wrapper = mount(() => <TCheckTag shape={s}>{TEXT}</TCheckTag>);
         expect(wrapper.classes()).toContain(`t-tag--${s}`);
       });
     });
 
-    it('shape[square/round/mark]', async () => {
-      shapeList.forEach((s) => {
-        const wrapper = mount(() => <TCheckTag shape={s}>{TEXT}</TCheckTag>);
+    it('size[small/medium/large/extra-large]', async () => {
+      sizeList.forEach((s) => {
+        const wrapper = mount(() => <TCheckTag size={s}>{TEXT}</TCheckTag>);
         expect(wrapper.classes()).toContain(`t-tag--${s}`);
       });
     });

@@ -10,35 +10,18 @@ const simulateEvent = (target, text, event) => {
 
 describe('Textarea', () => {
   describe('props', () => {
-    it('value[string]', async () => {
-      const value = ref('文本');
-      const wrapper = mount(() => <Textarea value={value.value} />);
-      expect(wrapper.classes()).toContain('t-textarea');
-      const textarea = wrapper.find('textarea');
-      expect(textarea.exists()).toBeTruthy();
-      expect(textarea.element.value).toBe('文本');
-    });
+    // allowInputOverMax 依赖超限输入截断行为
+    it.todo('allowInputOverMax[boolean]');
 
-    it('value[number]', async () => {
-      const value = ref(123);
-      const wrapper = mount(() => <Textarea value={value.value} />);
+    it('autofocus[boolean]', async () => {
+      const onFocus = vi.fn();
+      const wrapper = mount(<Textarea autofocus onFocus={onFocus} />);
       const textarea = wrapper.find('textarea');
-      expect(textarea.exists()).toBeTruthy();
-      expect(textarea.element.value).toBe('123');
-    });
+      expect(textarea.element.hasAttribute('autofocus')).toBeTruthy();
 
-    it('maxcharacter[number]', async () => {
-      const value = ref('');
-      const maxcharacter = 2;
-      const onChange = vi.fn();
-      const wrapper = mount(
-        <Textarea label="标题" v-model={value.value} maxcharacter={maxcharacter} onChange={onChange} />,
-      );
-      expect(onChange).toBeCalledTimes(1);
-      const el = wrapper.find('textarea').element;
-      await simulateEvent(el, '一个汉字等于两个字符，超出会被剪切', 'input');
-      expect(onChange).toBeCalledTimes(2);
-      expect(onChange).toHaveBeenCalledWith('一');
+      // 模拟浏览器因 autofocus 属性而聚焦
+      await textarea.trigger('focus');
+      expect(onFocus).toBeCalled();
     });
 
     it('autosize[boolean]', async () => {
@@ -63,18 +46,16 @@ describe('Textarea', () => {
       expect(onChange).toBeCalledTimes(2);
     });
 
-    it('placeholder[string]', async () => {
-      const wrapper = mount(<Textarea placeholder="请输入" />);
-      const input = wrapper.find('textarea');
-      expect(input.attributes('placeholder')).toBe('请输入');
+    it('bordered[boolean]', async () => {
+      const wrapper = mount(<Textarea bordered />);
+      expect(wrapper.find('.t-textarea--border').exists()).toBeTruthy();
+
+      const wrapper2 = mount(<Textarea />);
+      expect(wrapper2.find('.t-textarea--border').exists()).toBeFalsy();
     });
 
-    it('label[string]', async () => {
-      const wrapper = mount(<Textarea label="标题" />);
-      const label = wrapper.find('.t-textarea__label');
-      expect(label.exists()).toBeTruthy();
-      expect(label.text()).toBe('标题');
-    });
+    // cursorColor 为 CSS 变量注入，jsdom 无法断言样式
+    it.todo('cursorColor[string]');
 
     it('disabled[boolean]', async () => {
       const value = ref('文本');
@@ -93,23 +74,11 @@ describe('Textarea', () => {
       expect(indicator.text()).toBe(`0/${maxcharacter}`);
     });
 
-    it('autofocus[boolean]', async () => {
-      const onFocus = vi.fn();
-      const wrapper = mount(<Textarea autofocus onFocus={onFocus} />);
-      const textarea = wrapper.find('textarea');
-      expect(textarea.element.hasAttribute('autofocus')).toBeTruthy();
-
-      // 模拟浏览器因 autofocus 属性而聚焦
-      await textarea.trigger('focus');
-      expect(onFocus).toBeCalled();
-    });
-
-    it('bordered[boolean]', async () => {
-      const wrapper = mount(<Textarea bordered />);
-      expect(wrapper.find('.t-textarea--border').exists()).toBeTruthy();
-
-      const wrapper2 = mount(<Textarea />);
-      expect(wrapper2.find('.t-textarea--border').exists()).toBeFalsy();
+    it('label[string]', async () => {
+      const wrapper = mount(<Textarea label="标题" />);
+      const label = wrapper.find('.t-textarea__label');
+      expect(label.exists()).toBeTruthy();
+      expect(label.text()).toBe('标题');
     });
 
     it('layout[vertical/horizontal]', async () => {
@@ -117,27 +86,60 @@ describe('Textarea', () => {
       expect(wrapper.find('.t-textarea--layout-vertical').exists()).toBeTruthy();
     });
 
-    it('readonly[boolean]', async () => {
-      const wrapper = mount(<Textarea readonly />);
-      expect(wrapper.find('textarea').attributes('readonly')).toBeDefined();
+    it('maxcharacter[number]', async () => {
+      const value = ref('');
+      const maxcharacter = 2;
+      const onChange = vi.fn();
+      const wrapper = mount(
+        <Textarea label="标题" v-model={value.value} maxcharacter={maxcharacter} onChange={onChange} />,
+      );
+      expect(onChange).toBeCalledTimes(1);
+      const el = wrapper.find('textarea').element;
+      await simulateEvent(el, '一个汉字等于两个字符，超出会被剪切', 'input');
+      expect(onChange).toBeCalledTimes(2);
+      expect(onChange).toHaveBeenCalledWith('一');
     });
+
+    // maxlength 经字数限制逻辑处理，依赖输入事件
+    it.todo('maxlength[number]');
 
     it('name[string]', async () => {
       const wrapper = mount(<Textarea name="remark" />);
       expect(wrapper.find('textarea').attributes('name')).toBe('remark');
     });
 
+    it('placeholder[string]', async () => {
+      const wrapper = mount(<Textarea placeholder="请输入" />);
+      const input = wrapper.find('textarea');
+      expect(input.attributes('placeholder')).toBe('请输入');
+    });
+
+    it('readonly[boolean]', async () => {
+      const wrapper = mount(<Textarea readonly />);
+      expect(wrapper.find('textarea').attributes('readonly')).toBeDefined();
+    });
+
+    it('value[string]', async () => {
+      const value = ref('文本');
+      const wrapper = mount(() => <Textarea value={value.value} />);
+      expect(wrapper.classes()).toContain('t-textarea');
+      const textarea = wrapper.find('textarea');
+      expect(textarea.exists()).toBeTruthy();
+      expect(textarea.element.value).toBe('文本');
+    });
+
+    it('value[number]', async () => {
+      const value = ref(123);
+      const wrapper = mount(() => <Textarea value={value.value} />);
+      const textarea = wrapper.find('textarea');
+      expect(textarea.exists()).toBeTruthy();
+      expect(textarea.element.value).toBe('123');
+    });
+
     it('defaultValue[string]', async () => {
       const wrapper = mount(<Textarea defaultValue="默认文本" />);
       expect(wrapper.find('textarea').element.value).toBe('默认文本');
     });
-
-    // allowInputOverMax 依赖超限输入截断行为
-    it.todo('allowInputOverMax[boolean]');
-    // cursorColor 为 CSS 变量注入，jsdom 无法断言样式
-    it.todo('cursorColor[string]');
-    // maxlength 经字数限制逻辑处理，依赖输入事件
-    it.todo('maxlength[number]');
   });
 
   describe('events', () => {

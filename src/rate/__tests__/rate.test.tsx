@@ -16,29 +16,6 @@ const name = `${prefix}-rate`;
 
 describe('Rate', () => {
   describe('props', () => {
-    it('count[number]', async () => {
-      const wrapper = mount(() => <Rate count={10} />);
-      const items = wrapper.findAll(`.${name}__icon`);
-      expect(items.length).toBe(10);
-    });
-
-    it('gap[number]', async () => {
-      const wrapper = mount(() => <Rate gap={10} />);
-      const items = wrapper.findAll(`.${name}__icon`);
-      for (let i = 0; i < items.length - 1; i++) {
-        expect(getComputedStyle(items[i].element, null).marginRight).toBe('10px');
-      }
-      expect(getComputedStyle(items[items.length - 1].element, null).marginRight).toBe('0px');
-    });
-
-    it('gap[string]', async () => {
-      const wrapper = mount(() => <Rate gap="10" />);
-      const items = wrapper.findAll(`.${name}__icon`);
-      for (let i = 0; i < items.length - 1; i++) {
-        expect(getComputedStyle(items[i].element, null).marginRight).toBe('10px');
-      }
-    });
-
     it('allowHalf[boolean]', async () => {
       const value = ref(0);
       const texts = ['很差', '差', '一般', '好评', '优秀'];
@@ -61,44 +38,10 @@ describe('Rate', () => {
       expect(onChange).toHaveBeenCalledTimes(2);
     });
 
-    it('showText & texts', async () => {
-      const defaultValue = 3;
-      const showText = true;
-      const texts = ['很差', '差', '一般', '好评', '优秀'];
-      const onChange = vi.fn();
-      const wrapper = mount(Rate, {
-        props: {
-          defaultValue,
-          showText,
-          texts,
-          onChange,
-        },
-      });
-      const $text = wrapper.find(`.${name}__text`);
-      expect($text.text()).toEqual(texts[defaultValue - 1]);
-    });
-
-    it('icon & color', async () => {
-      const wrapper = mount(Rate, {
-        props: {
-          value: 3,
-          icon: [markRaw(ThumbUpIcon), markRaw(ThumbDownIcon)],
-          color: ['#ED7B2F', '#E3E6EB'],
-        },
-      });
-      const $selectIcon = wrapper.findComponent(ThumbUpIcon);
-      expect($selectIcon.exists()).toBeTruthy();
-
-      const $unselectIcon = wrapper.findComponent(ThumbDownIcon);
-      expect($unselectIcon.exists()).toBeTruthy();
-    });
-
-    it('size[string]', async () => {
-      const wrapper = mount(<Rate size={'20px'} icon={[() => markRaw(ThumbUpIcon), () => markRaw(ThumbDownIcon)]} />);
+    it('count[number]', async () => {
+      const wrapper = mount(() => <Rate count={10} />);
       const items = wrapper.findAll(`.${name}__icon`);
-      for (let i = 0; i < items.length; i++) {
-        expect(getComputedStyle(items[i].element, null).fontSize).toBe('20px');
-      }
+      expect(items.length).toBe(10);
     });
 
     it('disabled[boolean]', async () => {
@@ -123,6 +66,38 @@ describe('Rate', () => {
       expect(onChange).toHaveBeenCalledTimes(1);
       await move($target);
       expect(onChange).toHaveBeenCalledTimes(1);
+    });
+
+    it('gap[number]', async () => {
+      const wrapper = mount(() => <Rate gap={10} />);
+      const items = wrapper.findAll(`.${name}__icon`);
+      for (let i = 0; i < items.length - 1; i++) {
+        expect(getComputedStyle(items[i].element, null).marginRight).toBe('10px');
+      }
+      expect(getComputedStyle(items[items.length - 1].element, null).marginRight).toBe('0px');
+    });
+
+    it('gap[string]', async () => {
+      const wrapper = mount(() => <Rate gap="10" />);
+      const items = wrapper.findAll(`.${name}__icon`);
+      for (let i = 0; i < items.length - 1; i++) {
+        expect(getComputedStyle(items[i].element, null).marginRight).toBe('10px');
+      }
+    });
+
+    it('icon & color', async () => {
+      const wrapper = mount(Rate, {
+        props: {
+          value: 3,
+          icon: [markRaw(ThumbUpIcon), markRaw(ThumbDownIcon)],
+          color: ['#ED7B2F', '#E3E6EB'],
+        },
+      });
+      const $selectIcon = wrapper.findComponent(ThumbUpIcon);
+      expect($selectIcon.exists()).toBeTruthy();
+
+      const $unselectIcon = wrapper.findComponent(ThumbDownIcon);
+      expect($unselectIcon.exists()).toBeTruthy();
     });
 
     it('placement[default]', async () => {
@@ -161,6 +136,31 @@ describe('Rate', () => {
       await icons[0].trigger('click');
       const tips = wrapper.find(`.${name}__tips`);
       expect(tips.exists()).toBeFalsy();
+    });
+
+    it('showText & texts', async () => {
+      const defaultValue = 3;
+      const showText = true;
+      const texts = ['很差', '差', '一般', '好评', '优秀'];
+      const onChange = vi.fn();
+      const wrapper = mount(Rate, {
+        props: {
+          defaultValue,
+          showText,
+          texts,
+          onChange,
+        },
+      });
+      const $text = wrapper.find(`.${name}__text`);
+      expect($text.text()).toEqual(texts[defaultValue - 1]);
+    });
+
+    it('size[string]', async () => {
+      const wrapper = mount(<Rate size={'20px'} icon={[() => markRaw(ThumbUpIcon), () => markRaw(ThumbDownIcon)]} />);
+      const items = wrapper.findAll(`.${name}__icon`);
+      for (let i = 0; i < items.length; i++) {
+        expect(getComputedStyle(items[i].element, null).fontSize).toBe('20px');
+      }
     });
   });
 

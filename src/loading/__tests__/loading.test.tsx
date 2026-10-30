@@ -15,6 +15,24 @@ describe('Loading', () => {
       }, 1000);
     });
 
+    it('duration[number]', () => {
+      const wrapper = mount(Loading, {
+        props: {
+          duration: 1200,
+        },
+      });
+      expect(wrapper.find('.t-loading__gradient').attributes('style')).toContain('1200ms');
+    });
+
+    it('indicator[boolean]', () => {
+      const wrapper = mount(Loading, {
+        props: {
+          indicator: false,
+        },
+      });
+      expect(wrapper.find('.t-loading__gradient').exists()).toBeFalsy();
+    });
+
     it('inheritColor[boolean]', () => {
       const wrapper = mount(Loading, {
         props: {
@@ -22,6 +40,30 @@ describe('Loading', () => {
         },
       });
       expect(wrapper.element).toMatchSnapshot();
+    });
+
+    it('layout[string]', () => {
+      const wrapper = mount(<Loading text="t" layout="vertical" />);
+      expect(wrapper.find('.t-loading--vertical').exists()).toBeTruthy();
+    });
+
+    it('loading[boolean]', async () => {
+      const wrapper = mount(Loading);
+
+      expect(document.body.classList.contains('t-loading--lock')).toBe(false);
+      await wrapper.setProps({
+        loading: false,
+      });
+      await wrapper.setProps({
+        loading: true,
+        fullscreen: true,
+      });
+      expect(document.body.classList.contains('t-loading--lock')).toBe(true);
+
+      await wrapper.setProps({
+        loading: false,
+      });
+      expect(document.body.classList.contains('t-loading--lock')).toBe(false);
     });
 
     it('pause[boolean]', () => {
@@ -44,34 +86,9 @@ describe('Loading', () => {
       expect(iconWrapperStyle).toContain('animation-direction: reverse');
     });
 
-    it('theme[circular/spinner/dots]', async () => {
-      const testTheme = (theme, component) => {
-        const wrapper = mount(() => <Loading theme={theme} />);
-        const icon = wrapper.findComponent(component);
-        expect(icon.exists()).toBeTruthy();
-      };
-
-      testTheme('spinner', Spinner);
-      testTheme('', Gradient);
-    });
-
-    it('loading[boolean]', async () => {
-      const wrapper = mount(Loading);
-
-      expect(document.body.classList.contains('t-loading--lock')).toBe(false);
-      await wrapper.setProps({
-        loading: false,
-      });
-      await wrapper.setProps({
-        loading: true,
-        fullscreen: true,
-      });
-      expect(document.body.classList.contains('t-loading--lock')).toBe(true);
-
-      await wrapper.setProps({
-        loading: false,
-      });
-      expect(document.body.classList.contains('t-loading--lock')).toBe(false);
+    it('size[string]', () => {
+      const wrapper = mount(<Loading size="20px" />);
+      expect(wrapper.find('.t-loading').attributes('style')).toContain('font-size: 20px');
     });
 
     it('text[string]', () => {
@@ -83,32 +100,15 @@ describe('Loading', () => {
       expect(wrapper.find('.t-loading__text').exists()).toBeTruthy();
     });
 
-    it('size[string]', () => {
-      const wrapper = mount(<Loading size="20px" />);
-      expect(wrapper.find('.t-loading').attributes('style')).toContain('font-size: 20px');
-    });
+    it('theme[circular/spinner/dots]', async () => {
+      const testTheme = (theme, component) => {
+        const wrapper = mount(() => <Loading theme={theme} />);
+        const icon = wrapper.findComponent(component);
+        expect(icon.exists()).toBeTruthy();
+      };
 
-    it('duration[number]', () => {
-      const wrapper = mount(Loading, {
-        props: {
-          duration: 1200,
-        },
-      });
-      expect(wrapper.find('.t-loading__gradient').attributes('style')).toContain('1200ms');
-    });
-
-    it('indicator[boolean]', () => {
-      const wrapper = mount(Loading, {
-        props: {
-          indicator: false,
-        },
-      });
-      expect(wrapper.find('.t-loading__gradient').exists()).toBeFalsy();
-    });
-
-    it('layout[string]', () => {
-      const wrapper = mount(<Loading text="t" layout="vertical" />);
-      expect(wrapper.find('.t-loading--vertical').exists()).toBeTruthy();
+      testTheme('spinner', Spinner);
+      testTheme('', Gradient);
     });
   });
 

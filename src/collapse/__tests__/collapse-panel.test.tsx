@@ -7,21 +7,22 @@ const placementList: TdCollapsePanelProps['placement'][] = ['bottom', 'top'];
 
 describe('CollapsePanel', () => {
   describe('props', () => {
-    test('header[string] & content[string]', async () => {
+    test('destroyOnCollapse[boolean]', async () => {
       const wrapper = mount({
         setup() {
           return () => (
             <Collapse>
-              <CollapsePanel ref="1" value="1" header="标题" content="内容" />
+              <CollapsePanel ref="1" value="1" destroyOnCollapse />
+              <CollapsePanel ref="2" value="2" destroyOnCollapse />
             </Collapse>
           );
         },
       });
-
+      expect(wrapper.findAll('.t-collapse-panel__content')).toHaveLength(0);
       const panel = wrapper.findComponent({ ref: '1' });
 
-      expect(panel.find('.t-collapse-panel__title').text()).toBe('标题');
-      expect(panel.find('.t-collapse-panel__content').text()).toBe('内容');
+      await panel.find('.t-collapse-panel__header').trigger('click');
+      expect(wrapper.findAll('.t-collapse-panel__content')).toHaveLength(1);
     });
 
     test('disabled[boolean]', async () => {
@@ -42,6 +43,30 @@ describe('CollapsePanel', () => {
 
       expect(handleChange).not.toHaveBeenCalled();
     });
+
+    // expandIcon/headerLeftIcon 自定义图标渲染
+    it.todo('expandIcon[boolean]');
+
+    it.todo('expandIcon[function]');
+
+    test('header[string] & content[string]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Collapse>
+              <CollapsePanel ref="1" value="1" header="标题" content="内容" />
+            </Collapse>
+          );
+        },
+      });
+
+      const panel = wrapper.findComponent({ ref: '1' });
+
+      expect(panel.find('.t-collapse-panel__title').text()).toBe('标题');
+      expect(panel.find('.t-collapse-panel__content').text()).toBe('内容');
+    });
+
+    it.todo('headerLeftIcon[function]');
 
     test('headerRightContent[string]', async () => {
       const wrapper = mount({
@@ -74,29 +99,6 @@ describe('CollapsePanel', () => {
         expect($CollapsePanel.classes()).toContain(`t-collapse-panel--${placement}`);
       });
     });
-
-    test('destroyOnCollapse[boolean]', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Collapse>
-              <CollapsePanel ref="1" value="1" destroyOnCollapse />
-              <CollapsePanel ref="2" value="2" destroyOnCollapse />
-            </Collapse>
-          );
-        },
-      });
-      expect(wrapper.findAll('.t-collapse-panel__content')).toHaveLength(0);
-      const panel = wrapper.findComponent({ ref: '1' });
-
-      await panel.find('.t-collapse-panel__header').trigger('click');
-      expect(wrapper.findAll('.t-collapse-panel__content')).toHaveLength(1);
-    });
-
-    // expandIcon/headerLeftIcon 自定义图标渲染
-    it.todo('expandIcon[boolean]');
-    it.todo('expandIcon[function]');
-    it.todo('headerLeftIcon[function]');
   });
 
   describe('slots', () => {

@@ -13,25 +13,23 @@ const iconFunc = () => h(TIconApp);
 
 describe('Button', () => {
   describe('props', () => {
-    it('theme[default/primary/danger/light]', async () => {
+    it('block[boolean]', async () => {
+      const block = true;
       const wrapper = mount(Button, {
         props: {
+          block,
           content: TEXT,
         },
       });
-      // theme 默认 default
       const $button = wrapper.findComponent(Button);
-      expect($button.classes()).toContain(`${name}--default`);
-      ['primary', 'danger'].forEach((item) => {
-        expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
-      });
-      expect(wrapper.text()).toBe(TEXT);
-      const theme = 'danger';
+
+      // block = true
+      expect($button.classes().includes(`${name}--block`)).toBeTruthy();
+      // block = false
       await wrapper.setProps({
-        theme,
+        block: false,
       });
-      // theme = 'danger'
-      expect($button.classes()).toContain(`${name}--${theme}`);
+      expect($button.classes().includes(`${name}--block`)).toBeFalsy();
     });
 
     it('content[string]', async () => {
@@ -58,6 +56,131 @@ describe('Button', () => {
       });
       const $button = wrapper.findComponent(Button);
       expect($button.text()).toBe('function content');
+    });
+
+    it('disabled[boolean]', async () => {
+      const onClick = vi.fn();
+      const disabled = true;
+      const wrapper = mount(Button, {
+        props: {
+          disabled,
+          content: TEXT,
+          onClick,
+        },
+      });
+      const $button = wrapper.findComponent(Button);
+      // disabled = true, 不会触发 click
+      expect($button.classes()).toContain(`${name}--disabled`);
+      await $button.trigger('click');
+      expect(onClick).not.toBeCalled();
+
+      // disabled = false, 可以触发 click
+      await wrapper.setProps({
+        disabled: false,
+      });
+      await $button.trigger('click');
+      expect(onClick).toBeCalled();
+    });
+
+    it('form[string]', async () => {
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+          form: 'form-id',
+        },
+      });
+      // 原生 button 输出 form 属性
+      expect(wrapper.element.getAttribute('form')).toBe('form-id');
+
+      // 非原生标签（a/div）不输出 form 属性
+      await wrapper.setProps({ tag: 'div' });
+      expect(wrapper.element.hasAttribute('form')).toBeFalsy();
+    });
+
+    it('ghost[boolean]', async () => {
+      const ghost = true;
+      const wrapper = mount(Button, {
+        props: {
+          ghost,
+          content: TEXT,
+        },
+      });
+      const $button = wrapper.findComponent(Button);
+
+      // ghost = true
+      expect($button.classes().includes(`${name}--ghost`)).toBeTruthy();
+      // ghost = false
+      await wrapper.setProps({
+        ghost: false,
+      });
+      expect($button.classes().includes(`${name}--ghost`)).toBeFalsy();
+    });
+
+    it('href[string]', async () => {
+      // 不传 tag，仅传 href 时默认使用 a 标签渲染
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+          href: 'https://tdesign.tencent.com',
+        },
+      });
+      expect(wrapper.element.tagName.toLowerCase()).toBe('a');
+      expect(wrapper.element.getAttribute('href')).toBe('https://tdesign.tencent.com');
+
+      // 显式指定 tag 时优先使用 tag
+      await wrapper.setProps({
+        tag: 'div',
+      });
+      expect(wrapper.element.tagName.toLowerCase()).toBe('div');
+    });
+
+    it('icon[function]', async () => {
+      const wrapper = mount(Button, {
+        props: {
+          loading: true,
+          icon: iconFunc,
+          content: TEXT,
+        },
+      });
+      const $button = wrapper.findComponent(Button);
+      expect($button.classes()).toContain(`${name}--loading`);
+      expect($button.findComponent(Loading).exists()).toBeTruthy();
+      expect($button.findComponent(TIconApp).exists()).toBeFalsy();
+    });
+
+    it('loading[boolean]', async () => {
+      const loading = true;
+      const onClick = vi.fn();
+      const wrapper = mount(Button, {
+        props: {
+          loading,
+          content: TEXT,
+          onClick,
+        },
+      });
+      const $button = wrapper.findComponent(Button);
+
+      // loading = true，不触发 click
+      await $button.trigger('click');
+      expect(onClick).not.toBeCalled();
+      // loading = false
+      await wrapper.setProps({
+        loading: false,
+      });
+      await $button.trigger('click');
+      expect(onClick).toBeCalled();
+    });
+
+    it('loadingProps[object]', async () => {
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+          loading: true,
+          loadingProps: { indicator: false },
+        },
+      });
+      expect(wrapper.find('.t-button').exists()).toBeTruthy();
+      expect(wrapper.find('.t-icon-loading').exists()).toBeFalsy();
     });
 
     it('shape[rectangle/square/round/circle]', async () => {
@@ -102,86 +225,6 @@ describe('Button', () => {
       expect($button.classes()).toContain(`${name}--size-small`);
     });
 
-    it('variant[base/outline/dashed/text]', async () => {
-      const wrapper = mount(Button, {
-        props: {
-          content: TEXT,
-        },
-      });
-      // variant 默认 base
-      const $button = wrapper.findComponent(Button);
-      expect($button.classes()).toContain(`${name}--base`);
-      ['outline', 'text'].forEach((item) => {
-        expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
-      });
-      expect(wrapper.text()).toBe(TEXT);
-      const variant = 'outline';
-      await wrapper.setProps({
-        variant,
-      });
-      // variant = 'outline'
-      expect($button.classes()).toContain(`${name}--${variant}`);
-    });
-
-    it('disabled[boolean]', async () => {
-      const onClick = vi.fn();
-      const disabled = true;
-      const wrapper = mount(Button, {
-        props: {
-          disabled,
-          content: TEXT,
-          onClick,
-        },
-      });
-      const $button = wrapper.findComponent(Button);
-      // disabled = true, 不会触发 click
-      expect($button.classes()).toContain(`${name}--disabled`);
-      await $button.trigger('click');
-      expect(onClick).not.toBeCalled();
-
-      // disabled = false, 可以触发 click
-      await wrapper.setProps({
-        disabled: false,
-      });
-      await $button.trigger('click');
-      expect(onClick).toBeCalled();
-    });
-
-    it('loading[boolean]', async () => {
-      const loading = true;
-      const onClick = vi.fn();
-      const wrapper = mount(Button, {
-        props: {
-          loading,
-          content: TEXT,
-          onClick,
-        },
-      });
-      const $button = wrapper.findComponent(Button);
-
-      // loading = true，不触发 click
-      await $button.trigger('click');
-      expect(onClick).not.toBeCalled();
-      // loading = false
-      await wrapper.setProps({
-        loading: false,
-      });
-      await $button.trigger('click');
-      expect(onClick).toBeCalled();
-    });
-
-    it('loadingProps[object]', async () => {
-      const wrapper = mount(Button, {
-        props: {
-          content: TEXT,
-          loading: true,
-          loadingProps: { indicator: false },
-        },
-      });
-      expect(wrapper.find('.t-button').exists()).toBeTruthy();
-      expect(wrapper.find('.t-icon-loading').exists()).toBeFalsy();
-    });
-
     it('suffix[function]', async () => {
       const wrapper = mount(Button, {
         props: {
@@ -190,58 +233,6 @@ describe('Button', () => {
         },
       });
       expect(wrapper.find('.btn-suffix').exists()).toBeTruthy();
-    });
-
-    it('icon[function]', async () => {
-      const wrapper = mount(Button, {
-        props: {
-          loading: true,
-          icon: iconFunc,
-          content: TEXT,
-        },
-      });
-      const $button = wrapper.findComponent(Button);
-      expect($button.classes()).toContain(`${name}--loading`);
-      expect($button.findComponent(Loading).exists()).toBeTruthy();
-      expect($button.findComponent(TIconApp).exists()).toBeFalsy();
-    });
-
-    it('ghost[boolean]', async () => {
-      const ghost = true;
-      const wrapper = mount(Button, {
-        props: {
-          ghost,
-          content: TEXT,
-        },
-      });
-      const $button = wrapper.findComponent(Button);
-
-      // ghost = true
-      expect($button.classes().includes(`${name}--ghost`)).toBeTruthy();
-      // ghost = false
-      await wrapper.setProps({
-        ghost: false,
-      });
-      expect($button.classes().includes(`${name}--ghost`)).toBeFalsy();
-    });
-
-    it('block[boolean]', async () => {
-      const block = true;
-      const wrapper = mount(Button, {
-        props: {
-          block,
-          content: TEXT,
-        },
-      });
-      const $button = wrapper.findComponent(Button);
-
-      // block = true
-      expect($button.classes().includes(`${name}--block`)).toBeTruthy();
-      // block = false
-      await wrapper.setProps({
-        block: false,
-      });
-      expect($button.classes().includes(`${name}--block`)).toBeFalsy();
     });
 
     it('tag[button/a/div]', async () => {
@@ -266,37 +257,46 @@ describe('Button', () => {
       expect(wrapper.element.tagName.toLowerCase()).toBe('div');
     });
 
-    it('href[string]', async () => {
-      // 不传 tag，仅传 href 时默认使用 a 标签渲染
+    it('theme[default/primary/danger/light]', async () => {
       const wrapper = mount(Button, {
         props: {
           content: TEXT,
-          href: 'https://tdesign.tencent.com',
         },
       });
-      expect(wrapper.element.tagName.toLowerCase()).toBe('a');
-      expect(wrapper.element.getAttribute('href')).toBe('https://tdesign.tencent.com');
-
-      // 显式指定 tag 时优先使用 tag
-      await wrapper.setProps({
-        tag: 'div',
+      // theme 默认 default
+      const $button = wrapper.findComponent(Button);
+      expect($button.classes()).toContain(`${name}--default`);
+      ['primary', 'danger'].forEach((item) => {
+        expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
       });
-      expect(wrapper.element.tagName.toLowerCase()).toBe('div');
+      expect(wrapper.text()).toBe(TEXT);
+      const theme = 'danger';
+      await wrapper.setProps({
+        theme,
+      });
+      // theme = 'danger'
+      expect($button.classes()).toContain(`${name}--${theme}`);
     });
 
-    it('form[string]', async () => {
+    it('variant[base/outline/dashed/text]', async () => {
       const wrapper = mount(Button, {
         props: {
           content: TEXT,
-          form: 'form-id',
         },
       });
-      // 原生 button 输出 form 属性
-      expect(wrapper.element.getAttribute('form')).toBe('form-id');
-
-      // 非原生标签（a/div）不输出 form 属性
-      await wrapper.setProps({ tag: 'div' });
-      expect(wrapper.element.hasAttribute('form')).toBeFalsy();
+      // variant 默认 base
+      const $button = wrapper.findComponent(Button);
+      expect($button.classes()).toContain(`${name}--base`);
+      ['outline', 'text'].forEach((item) => {
+        expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
+      });
+      expect(wrapper.text()).toBe(TEXT);
+      const variant = 'outline';
+      await wrapper.setProps({
+        variant,
+      });
+      // variant = 'outline'
+      expect($button.classes()).toContain(`${name}--${variant}`);
     });
   });
 

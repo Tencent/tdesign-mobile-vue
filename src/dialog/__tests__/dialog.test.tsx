@@ -18,73 +18,6 @@ config.global.stubs = {
 
 describe('Dialog', () => {
   describe('props', () => {
-    it('visible[boolean]', async () => {
-      const title = 'this is a title';
-      const wrapper = mount(Dialog, {
-        props: {
-          visible: false,
-          title,
-        },
-      });
-
-      expect(wrapper.find('.t-dialog').isVisible()).toBe(false);
-      await wrapper.setProps({
-        visible: true,
-      });
-      // 内容 teleport 到 body，需从 document 查询
-      expect(document.querySelector('.t-dialog__header').textContent).toBe(title);
-      expect(getComputedStyle(document.querySelector('.t-dialog')).display).not.toBe('none');
-    });
-
-    it('title[string]', async () => {
-      const visible = true;
-      const title = 'old title';
-      const wrapper = mount(Dialog, {
-        props: {
-          visible,
-          title,
-        },
-      });
-      expect(wrapper.find('.t-dialog__header').text()).toBe(title);
-      const newTitle = 'new title';
-      await wrapper.setProps({
-        title: newTitle,
-      });
-      // expect(wrapper.find('.t-dialog__header').text()).toBe(newTitle);
-    });
-
-    it('content[string]', async () => {
-      const visible = true;
-      const title = 'this is title';
-      const content = 'content is string';
-
-      const wrapper = mount(Dialog, {
-        props: {
-          visible,
-          title,
-          content,
-        },
-      });
-
-      expect(wrapper.find('.t-dialog__body').text()).toBe(content);
-      const newContent = 'new content';
-      await wrapper.setProps({
-        content: newContent,
-      });
-      // expect(wrapper.find('.t-dialog__body').text()).toBe(newContent);
-    });
-
-    it('content[function]', async () => {
-      const wrapper = mount(Dialog, {
-        props: {
-          visible: true,
-          content: () => 'content is function',
-        },
-      });
-
-      expect(wrapper.find('.t-dialog__body').text()).toBe('content is function');
-    });
-
     it('buttonLayout[horizontal/vertical]', async () => {
       const confirmBtn = {
         content: '确认',
@@ -140,6 +73,166 @@ describe('Dialog', () => {
       expect(document.querySelector(`.${name}__close-btn`)).not.toBeNull();
     });
 
+    it('closeOnOverlayClick[boolean]', async () => {
+      const onClose = vi.fn();
+      const onOverlayClick = vi.fn();
+      const closeOnOverlayClick = true;
+      const visible = true;
+      const wrapper = mount(Dialog, {
+        props: {
+          visible,
+          closeOnOverlayClick,
+          onClose,
+          onOverlayClick,
+        },
+      });
+      const $overlay = wrapper.find(`.t-overlay`);
+      expect($overlay.exists()).toBeTruthy();
+      $overlay.trigger('click');
+      expect(onClose).toBeCalledTimes(1);
+      expect(onOverlayClick).toBeCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'overlay' });
+    });
+
+    it('content[string]', async () => {
+      const visible = true;
+      const title = 'this is title';
+      const content = 'content is string';
+
+      const wrapper = mount(Dialog, {
+        props: {
+          visible,
+          title,
+          content,
+        },
+      });
+
+      expect(wrapper.find('.t-dialog__body').text()).toBe(content);
+      const newContent = 'new content';
+      await wrapper.setProps({
+        content: newContent,
+      });
+      // expect(wrapper.find('.t-dialog__body').text()).toBe(newContent);
+    });
+
+    it('content[function]', async () => {
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          content: () => 'content is function',
+        },
+      });
+
+      expect(wrapper.find('.t-dialog__body').text()).toBe('content is function');
+    });
+
+    it('destroyOnClose[boolean]', async () => {
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          destroyOnClose: true,
+        },
+      });
+      expect(wrapper.find('.t-dialog').exists()).toBeTruthy();
+
+      await wrapper.setProps({ visible: false });
+      expect(wrapper.find('.t-dialog').exists()).toBeFalsy();
+    });
+
+    it('middle[function]', async () => {
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          middle: () => <div class="dialog-middle">中间内容</div>,
+        },
+      });
+      expect(wrapper.find('.dialog-middle').exists()).toBeTruthy();
+    });
+
+    it('overlayProps[object]', async () => {
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          overlayProps: { zIndex: 3000 },
+        },
+      });
+      expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 3000');
+    });
+
+    it('preventScrollThrough[boolean]', async () => {
+      mount(Dialog, {
+        props: {
+          visible: true,
+          preventScrollThrough: true,
+        },
+      });
+      expect(document.body.classList.contains('t-popup--lock')).toBe(true);
+    });
+
+    it('showOverlay[boolean]', async () => {
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+        },
+      });
+      expect(wrapper.find('.t-overlay').isVisible()).toBeTruthy();
+
+      const wrapper2 = mount(Dialog, {
+        props: {
+          visible: true,
+          showOverlay: false,
+        },
+      });
+      const overlay = wrapper2.find('.t-overlay');
+      expect(overlay.exists()).toBe(true);
+      expect(overlay.isVisible()).toBe(false);
+    });
+
+    it('title[string]', async () => {
+      const visible = true;
+      const title = 'old title';
+      const wrapper = mount(Dialog, {
+        props: {
+          visible,
+          title,
+        },
+      });
+      expect(wrapper.find('.t-dialog__header').text()).toBe(title);
+      const newTitle = 'new title';
+      await wrapper.setProps({
+        title: newTitle,
+      });
+      // expect(wrapper.find('.t-dialog__header').text()).toBe(newTitle);
+    });
+
+    it('top[function]', async () => {
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          top: () => <div class="dialog-top">顶部内容</div>,
+        },
+      });
+      expect(wrapper.find('.dialog-top').exists()).toBeTruthy();
+    });
+
+    it('visible[boolean]', async () => {
+      const title = 'this is a title';
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: false,
+          title,
+        },
+      });
+
+      expect(wrapper.find('.t-dialog').isVisible()).toBe(false);
+      await wrapper.setProps({
+        visible: true,
+      });
+      // 内容 teleport 到 body，需从 document 查询
+      expect(document.querySelector('.t-dialog__header').textContent).toBe(title);
+      expect(getComputedStyle(document.querySelector('.t-dialog')).display).not.toBe('none');
+    });
+
     it('width[string]', async () => {
       const wrapper = mount(Dialog, {
         props: {
@@ -172,99 +265,6 @@ describe('Dialog', () => {
         zIndex: 12000,
       });
       expect(document.querySelector('.t-popup').getAttribute('style')).toContain('z-index: 12000');
-    });
-
-    it('closeOnOverlayClick[boolean]', async () => {
-      const onClose = vi.fn();
-      const onOverlayClick = vi.fn();
-      const closeOnOverlayClick = true;
-      const visible = true;
-      const wrapper = mount(Dialog, {
-        props: {
-          visible,
-          closeOnOverlayClick,
-          onClose,
-          onOverlayClick,
-        },
-      });
-      const $overlay = wrapper.find(`.t-overlay`);
-      expect($overlay.exists()).toBeTruthy();
-      $overlay.trigger('click');
-      expect(onClose).toBeCalledTimes(1);
-      expect(onOverlayClick).toBeCalledTimes(1);
-      expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'overlay' });
-    });
-
-    it('showOverlay[boolean]', async () => {
-      const wrapper = mount(Dialog, {
-        props: {
-          visible: true,
-        },
-      });
-      expect(wrapper.find('.t-overlay').isVisible()).toBeTruthy();
-
-      const wrapper2 = mount(Dialog, {
-        props: {
-          visible: true,
-          showOverlay: false,
-        },
-      });
-      const overlay = wrapper2.find('.t-overlay');
-      expect(overlay.exists()).toBe(true);
-      expect(overlay.isVisible()).toBe(false);
-    });
-
-    it('overlayProps[object]', async () => {
-      const wrapper = mount(Dialog, {
-        props: {
-          visible: true,
-          overlayProps: { zIndex: 3000 },
-        },
-      });
-      expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 3000');
-    });
-
-    it('preventScrollThrough[boolean]', async () => {
-      mount(Dialog, {
-        props: {
-          visible: true,
-          preventScrollThrough: true,
-        },
-      });
-      expect(document.body.classList.contains('t-popup--lock')).toBe(true);
-    });
-
-    it('top[function]', async () => {
-      const wrapper = mount(Dialog, {
-        props: {
-          visible: true,
-          top: () => <div class="dialog-top">顶部内容</div>,
-        },
-      });
-      expect(wrapper.find('.dialog-top').exists()).toBeTruthy();
-    });
-
-    it('middle[function]', async () => {
-      const wrapper = mount(Dialog, {
-        props: {
-          visible: true,
-          middle: () => <div class="dialog-middle">中间内容</div>,
-        },
-      });
-      expect(wrapper.find('.dialog-middle').exists()).toBeTruthy();
-    });
-
-    it('destroyOnClose[boolean]', async () => {
-      const wrapper = mount(Dialog, {
-        props: {
-          visible: true,
-          destroyOnClose: true,
-        },
-      });
-      expect(wrapper.find('.t-dialog').exists()).toBeTruthy();
-
-      await wrapper.setProps({ visible: false });
-      expect(wrapper.find('.t-dialog').exists()).toBeFalsy();
     });
   });
   describe('slots', () => {

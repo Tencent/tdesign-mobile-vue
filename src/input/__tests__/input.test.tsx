@@ -15,67 +15,6 @@ const simulateEvent = (target, text, event) => {
 
 describe('Input', () => {
   describe('props', () => {
-    it('value[string]', async () => {
-      const value = ref('123');
-      const wrapper = mount(<Input v-model={value.value} />);
-      const input = wrapper.find('.t-input input');
-      expect(input.exists()).toBeTruthy();
-      expect(input.element.value).toBe('123');
-    });
-
-    it('value[number]', async () => {
-      const value = ref(123);
-      const wrapper = mount(<Input v-model={value.value} />);
-      const input = wrapper.find('.t-input input');
-      expect(input.exists()).toBeTruthy();
-      expect(input.element.value).toBe('123');
-    });
-
-    it('maxcharacter[number]', async () => {
-      const value = ref('');
-      const maxcharacter = 2;
-      const onChange = vi.fn();
-      const wrapper = mount(<Input v-model={value.value} maxcharacter={maxcharacter} onChange={onChange} />);
-      const el = wrapper.find('input').element;
-      await simulateEvent(el, '一个汉字等于两个字符，超出会被剪切', 'input');
-      expect(onChange).toBeCalledTimes(1);
-      expect(onChange).toHaveBeenCalledWith('一');
-    });
-
-    it('placeholder[string]', async () => {
-      const wrapper = mount(<Input placeholder="请输入" />);
-      const input = wrapper.find('.t-input__wrap input');
-      expect(input.attributes('placeholder')).toBe('请输入');
-    });
-
-    it('label[string]', async () => {
-      const wrapper = mount(<Input label="标题" />);
-      const label = wrapper.find('.t-input__label');
-      expect(label.exists()).toBeTruthy();
-      expect(label.text()).toBe('标题');
-    });
-
-    it('label[function]', async () => {
-      const wrapper = mount(<Input label={() => '函数标题'} />);
-      const label = wrapper.find('.t-input__label');
-      expect(label.exists()).toBeTruthy();
-      expect(label.text()).toBe('函数标题');
-    });
-
-    it('tips[string]', async () => {
-      const wrapper = mount(<Input label="标题" tips="错误信息" />);
-      const $tips = wrapper.find('.t-input__tips');
-      expect($tips.exists()).toBeTruthy();
-      expect($tips.text()).toBe('错误信息');
-    });
-
-    it('tips[function]', async () => {
-      const wrapper = mount(<Input label="标题" tips={() => '函数错误信息'} />);
-      const $tips = wrapper.find('.t-input__tips');
-      expect($tips.exists()).toBeTruthy();
-      expect($tips.text()).toBe('函数错误信息');
-    });
-
     it('align[left/center/right]', async () => {
       const alignList: TdInputProps['align'][] = ['left', 'center', 'right'];
       alignList.forEach((align) => {
@@ -92,95 +31,13 @@ describe('Input', () => {
       });
     });
 
-    it('clearable[boolean]', async () => {
-      const value = ref('123');
-      const handleClear = vi.fn();
-      const wrapper = mount(<Input label="标题" v-model={value.value} clearable onClear={handleClear} />);
-      const closeIcon = wrapper.findComponent(CloseCircleFilledIcon);
-      expect(closeIcon.exists()).toBeTruthy();
-      await closeIcon.trigger('touchend');
-      expect(value.value).toBe('');
-      expect(handleClear).toBeCalled();
-    });
-
-    it('disabled[boolean]', async () => {
-      const value = ref('123');
-      const wrapper = mount(<Input label="标题" v-model={value.value} disabled />);
-      const label = wrapper.find('.t-input__control');
-      expect(label.classes()).toContain('t-input__control--disabled');
-      const input = wrapper.find('.t-input__wrap input');
-      expect(input.element.hasAttribute('disabled')).toBeTruthy();
-    });
-
-    it('readonly[boolean]', async () => {
-      const value = ref('123');
-      const wrapper = mount(<Input label="标题" v-model={value.value} readonly />);
-      const input = wrapper.find('.t-input__wrap input');
-      expect(input.element.hasAttribute('readonly')).toBeTruthy();
-    });
-
-    it('maxlength[number]', async () => {
-      const value = ref('');
-      const wrapper = mount(<Input label="标题" v-model={value.value} maxlength={10} />);
-      const input = wrapper.find('.t-input__wrap input');
-      expect(input.element.getAttribute('maxlength')).toBe(null);
-    });
+    // allowInputOverMax 依赖超限输入截断行为
+    it.todo('allowInputOverMax[boolean]');
 
     it('autocomplete[string]', async () => {
       const wrapper = mount(<Input label="标题" autocomplete="on" />);
       const input = wrapper.find('.t-input__wrap input');
       expect(input.element.getAttribute('autocomplete')).toBe('On');
-    });
-
-    it('layout[vertical/horizontal]', async () => {
-      const layoutList: TdInputProps['layout'][] = ['vertical', 'horizontal'];
-      layoutList.forEach((layout, index) => {
-        const wrapper = mount(() => <Input label="标题" layout={layout} />);
-        if (layout) {
-          expect(wrapper.classes()).toContain(`t-input--layout-${layout}`);
-        }
-      });
-    });
-
-    it('type[number]', async () => {
-      const wrapper = mount(<Input label="标题" type="number" />);
-      const input = wrapper.find('.t-input__wrap input');
-      expect(input.element.getAttribute('type')).toBe('number');
-    });
-
-    it('type[password]', async () => {
-      const wrapper = mount(<Input label="标题" type="password" />);
-      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
-      wrapper.find('.t-icon-browse-off').trigger('click');
-      await wrapper.vm.$nextTick();
-      expect(wrapper.find('.t-icon-browse').exists()).toBeTruthy();
-      const attrDom = wrapper.find('input');
-      expect(attrDom.attributes('type')).toBe('text');
-      wrapper.find('.t-icon-browse').trigger('click');
-      await wrapper.vm.$nextTick();
-      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
-      const attrDom1 = wrapper.find('input');
-      expect(attrDom1.attributes('type')).toBe('password');
-    });
-
-    it('type[password] with disabled', async () => {
-      const wrapper = mount(<Input label="标题" type="password" disabled />);
-      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
-      wrapper.find('.t-icon-browse-off').trigger('click');
-      await wrapper.vm.$nextTick();
-      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
-      await wrapper.setProps({
-        disabled: false,
-      });
-      wrapper.find('.t-icon-browse-off').trigger('click');
-      await wrapper.vm.$nextTick();
-      const attrDom = wrapper.find('input');
-      expect(attrDom.attributes('type')).toBe('text');
-      wrapper.find('.t-icon-browse').trigger('click');
-      await wrapper.vm.$nextTick();
-      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
-      const attrDom1 = wrapper.find('input');
-      expect(attrDom1.attributes('type')).toBe('password');
     });
 
     it('autofocus[boolean]', async () => {
@@ -192,6 +49,14 @@ describe('Input', () => {
       // 模拟浏览器因 autofocus 属性而聚焦
       await input.trigger('focus');
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
+    });
+
+    it('borderless[boolean]', async () => {
+      const wrapper = mount(<Input />);
+      expect(wrapper.find('.t-input--border').exists()).toBeTruthy();
+
+      const wrapper2 = mount(<Input borderless />);
+      expect(wrapper2.find('.t-input--border').exists()).toBeFalsy();
     });
 
     it('clearTrigger[always]', async () => {
@@ -284,22 +149,27 @@ describe('Input', () => {
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
     });
 
-    it('borderless[boolean]', async () => {
-      const wrapper = mount(<Input />);
-      expect(wrapper.find('.t-input--border').exists()).toBeTruthy();
-
-      const wrapper2 = mount(<Input borderless />);
-      expect(wrapper2.find('.t-input--border').exists()).toBeFalsy();
+    it('clearable[boolean]', async () => {
+      const value = ref('123');
+      const handleClear = vi.fn();
+      const wrapper = mount(<Input label="标题" v-model={value.value} clearable onClear={handleClear} />);
+      const closeIcon = wrapper.findComponent(CloseCircleFilledIcon);
+      expect(closeIcon.exists()).toBeTruthy();
+      await closeIcon.trigger('touchend');
+      expect(value.value).toBe('');
+      expect(handleClear).toBeCalled();
     });
 
-    it('status[default/success/warning/error]', async () => {
-      const wrapper = mount(<Input status="error" />);
-      expect(wrapper.find('.t-input--error').exists()).toBeTruthy();
-    });
+    // cursorColor 为 CSS 变量注入，jsdom 无法断言样式
+    it.todo('cursorColor[string]');
 
-    it('extra[function]', async () => {
-      const wrapper = mount(<Input extra={() => <div class="custom-extra">额外内容</div>} />);
-      expect(wrapper.find('.custom-extra').exists()).toBeTruthy();
+    it('disabled[boolean]', async () => {
+      const value = ref('123');
+      const wrapper = mount(<Input label="标题" v-model={value.value} disabled />);
+      const label = wrapper.find('.t-input__control');
+      expect(label.classes()).toContain('t-input__control--disabled');
+      const input = wrapper.find('.t-input__wrap input');
+      expect(input.element.hasAttribute('disabled')).toBeTruthy();
     });
 
     it('enterkeyhint[enter/done/go/next/previous/search/send]', async () => {
@@ -307,22 +177,154 @@ describe('Input', () => {
       expect(wrapper.find('input').attributes('enterkeyhint')).toBe('search');
     });
 
+    it('extra[function]', async () => {
+      const wrapper = mount(<Input extra={() => <div class="custom-extra">额外内容</div>} />);
+      expect(wrapper.find('.custom-extra').exists()).toBeTruthy();
+    });
+
+    // format 需输入事件触发格式化行为
+    it.todo('format[function]');
+
+    it('label[string]', async () => {
+      const wrapper = mount(<Input label="标题" />);
+      const label = wrapper.find('.t-input__label');
+      expect(label.exists()).toBeTruthy();
+      expect(label.text()).toBe('标题');
+    });
+
+    it('label[function]', async () => {
+      const wrapper = mount(<Input label={() => '函数标题'} />);
+      const label = wrapper.find('.t-input__label');
+      expect(label.exists()).toBeTruthy();
+      expect(label.text()).toBe('函数标题');
+    });
+
+    it('layout[vertical/horizontal]', async () => {
+      const layoutList: TdInputProps['layout'][] = ['vertical', 'horizontal'];
+      layoutList.forEach((layout, index) => {
+        const wrapper = mount(() => <Input label="标题" layout={layout} />);
+        if (layout) {
+          expect(wrapper.classes()).toContain(`t-input--layout-${layout}`);
+        }
+      });
+    });
+
+    it('maxcharacter[number]', async () => {
+      const value = ref('');
+      const maxcharacter = 2;
+      const onChange = vi.fn();
+      const wrapper = mount(<Input v-model={value.value} maxcharacter={maxcharacter} onChange={onChange} />);
+      const el = wrapper.find('input').element;
+      await simulateEvent(el, '一个汉字等于两个字符，超出会被剪切', 'input');
+      expect(onChange).toBeCalledTimes(1);
+      expect(onChange).toHaveBeenCalledWith('一');
+    });
+
+    it('maxlength[number]', async () => {
+      const value = ref('');
+      const wrapper = mount(<Input label="标题" v-model={value.value} maxlength={10} />);
+      const input = wrapper.find('.t-input__wrap input');
+      expect(input.element.getAttribute('maxlength')).toBe(null);
+    });
+
+    it('placeholder[string]', async () => {
+      const wrapper = mount(<Input placeholder="请输入" />);
+      const input = wrapper.find('.t-input__wrap input');
+      expect(input.attributes('placeholder')).toBe('请输入');
+    });
+
+    it('readonly[boolean]', async () => {
+      const value = ref('123');
+      const wrapper = mount(<Input label="标题" v-model={value.value} readonly />);
+      const input = wrapper.find('.t-input__wrap input');
+      expect(input.element.hasAttribute('readonly')).toBeTruthy();
+    });
+
     it('spellCheck[boolean]', async () => {
       const wrapper = mount(<Input spellCheck />);
       expect(wrapper.find('input').attributes('spellcheck')).toBe('true');
+    });
+
+    it('status[default/success/warning/error]', async () => {
+      const wrapper = mount(<Input status="error" />);
+      expect(wrapper.find('.t-input--error').exists()).toBeTruthy();
+    });
+
+    it('tips[string]', async () => {
+      const wrapper = mount(<Input label="标题" tips="错误信息" />);
+      const $tips = wrapper.find('.t-input__tips');
+      expect($tips.exists()).toBeTruthy();
+      expect($tips.text()).toBe('错误信息');
+    });
+
+    it('tips[function]', async () => {
+      const wrapper = mount(<Input label="标题" tips={() => '函数错误信息'} />);
+      const $tips = wrapper.find('.t-input__tips');
+      expect($tips.exists()).toBeTruthy();
+      expect($tips.text()).toBe('函数错误信息');
+    });
+
+    it('type[number]', async () => {
+      const wrapper = mount(<Input label="标题" type="number" />);
+      const input = wrapper.find('.t-input__wrap input');
+      expect(input.element.getAttribute('type')).toBe('number');
+    });
+
+    it('type[password]', async () => {
+      const wrapper = mount(<Input label="标题" type="password" />);
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      wrapper.find('.t-icon-browse-off').trigger('click');
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-browse').exists()).toBeTruthy();
+      const attrDom = wrapper.find('input');
+      expect(attrDom.attributes('type')).toBe('text');
+      wrapper.find('.t-icon-browse').trigger('click');
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      const attrDom1 = wrapper.find('input');
+      expect(attrDom1.attributes('type')).toBe('password');
+    });
+
+    it('type[password] with disabled', async () => {
+      const wrapper = mount(<Input label="标题" type="password" disabled />);
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      wrapper.find('.t-icon-browse-off').trigger('click');
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      await wrapper.setProps({
+        disabled: false,
+      });
+      wrapper.find('.t-icon-browse-off').trigger('click');
+      await wrapper.vm.$nextTick();
+      const attrDom = wrapper.find('input');
+      expect(attrDom.attributes('type')).toBe('text');
+      wrapper.find('.t-icon-browse').trigger('click');
+      await wrapper.vm.$nextTick();
+      expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
+      const attrDom1 = wrapper.find('input');
+      expect(attrDom1.attributes('type')).toBe('password');
+    });
+
+    it('value[string]', async () => {
+      const value = ref('123');
+      const wrapper = mount(<Input v-model={value.value} />);
+      const input = wrapper.find('.t-input input');
+      expect(input.exists()).toBeTruthy();
+      expect(input.element.value).toBe('123');
+    });
+
+    it('value[number]', async () => {
+      const value = ref(123);
+      const wrapper = mount(<Input v-model={value.value} />);
+      const input = wrapper.find('.t-input input');
+      expect(input.exists()).toBeTruthy();
+      expect(input.element.value).toBe('123');
     });
 
     it('defaultValue[string]', async () => {
       const wrapper = mount(<Input defaultValue="默认值" />);
       expect(wrapper.find('input').element.value).toBe('默认值');
     });
-
-    // allowInputOverMax 依赖超限输入截断行为
-    it.todo('allowInputOverMax[boolean]');
-    // cursorColor 为 CSS 变量注入，jsdom 无法断言样式
-    it.todo('cursorColor[string]');
-    // format 需输入事件触发格式化行为
-    it.todo('format[function]');
   });
   describe('events', () => {
     it('focus & blur', async () => {

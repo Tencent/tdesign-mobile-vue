@@ -25,16 +25,8 @@ const mockBoundingClientRect = (info) => {
 
 describe('ColorPicker', () => {
   describe('props', () => {
-    it('multiple[boolean]', () => {
-      const testCurrentProp = (type, target) => {
-        const wrapper = mountColorPicker({ type });
-        const dom = wrapper.findAll('.t-color-picker__saturation');
-        expect(dom).toHaveLength(target);
-      };
-      testCurrentProp(undefined, 0);
-      testCurrentProp('base', 0);
-      testCurrentProp('multiple', 1);
-    });
+    // clearable 清除色值按钮
+    it.todo('clearable[boolean]');
 
     it('enableAlpha[boolean]', () => {
       const testEnableAlpha = (enableAlpha) => {
@@ -44,6 +36,16 @@ describe('ColorPicker', () => {
       };
       testEnableAlpha();
       testEnableAlpha(true);
+    });
+
+    it('format[RGB/HEX]', () => {
+      const testFormat = (format, target) => {
+        const wrapper = mountColorPicker({ format, type: 'multiple' });
+        const dom = wrapper.find('.t-color-picker__format-item--first');
+        expect(dom.element.innerHTML).toBe(target);
+      };
+      testFormat('RGB', 'RGB');
+      testFormat('HEX', 'HEX');
     });
 
     it('swatchColors[array]', () => {
@@ -58,21 +60,21 @@ describe('ColorPicker', () => {
       testSwatchColors(['red', 'blur'], 2);
     });
 
-    it('format[RGB/HEX]', () => {
-      const testFormat = (format, target) => {
-        const wrapper = mountColorPicker({ format, type: 'multiple' });
-        const dom = wrapper.find('.t-color-picker__format-item--first');
-        expect(dom.element.innerHTML).toBe(target);
-      };
-      testFormat('RGB', 'RGB');
-      testFormat('HEX', 'HEX');
-    });
-
-    // clearable 清除色值按钮
-    it.todo('clearable[boolean]');
     // 受控色值 v-model 联动
     it.todo('modelValue[string]');
+
     it.todo('defaultValue[string]');
+
+    it('multiple[boolean]', () => {
+      const testCurrentProp = (type, target) => {
+        const wrapper = mountColorPicker({ type });
+        const dom = wrapper.findAll('.t-color-picker__saturation');
+        expect(dom).toHaveLength(target);
+      };
+      testCurrentProp(undefined, 0);
+      testCurrentProp('base', 0);
+      testCurrentProp('multiple', 1);
+    });
   });
 
   describe('events', () => {

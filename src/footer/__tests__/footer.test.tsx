@@ -4,15 +4,6 @@ import Footer from '../footer';
 
 describe('Footer', () => {
   describe('props', () => {
-    it('text[string]', () => {
-      const text = 'Copyright © 2019-2023 TDesign.All Rights Reserved.';
-      const wrapper = mount(Footer, {
-        props: { text },
-      });
-      const textContainer = wrapper.find('.t-footer__text');
-      expect(textContainer.text()).toBe(text);
-    });
-
     it('links[array]', () => {
       const links = [
         {
@@ -73,6 +64,15 @@ describe('Footer', () => {
         props: { logo },
       });
       expect(wrapper.find('.t-footer__logo').attributes().target).toBe(logo.target);
+    });
+
+    it('text[string]', () => {
+      const text = 'Copyright © 2019-2023 TDesign.All Rights Reserved.';
+      const wrapper = mount(Footer, {
+        props: { text },
+      });
+      const textContainer = wrapper.find('.t-footer__text');
+      expect(textContainer.text()).toBe(text);
     });
   });
 });

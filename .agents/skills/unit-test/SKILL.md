@@ -31,6 +31,7 @@ description: 按 tdesign-mobile-vue 规范编写、补充、迁移或审查 Vue 
 
 - 不创建空分组。
 - 不在组件根 `describe` 下直接放置 `it` 或 `test`。
+- `props` 分组内的用例按组件属性声明顺序排列（主组件为 `props.ts`，子组件为 `*-props.ts`）；`it.todo` 同样参与排序；标题中的属性名未在声明文件中找到的用例置于分组末尾，保持原有相对顺序。
 - `scenarios` 内按具体能力继续分组，使用可描述行为的名称，不使用 `others`、`misc` 或 `internal logic` 等模糊名称。
 - Prop 和 Slot 提供相同能力时，分别验证两条输入通道；优先级、覆盖和回退规则放入 `scenarios`。
 - 为修复 Issue 新增或补充回归测试时，在对应的 `it` 或 `test` 紧邻上方添加 `// Issue: <完整 Issue URL>`，不要只写 Issue 编号。该规则适用于所有分组；缺少地址时获取真实地址，不得猜测或编造。

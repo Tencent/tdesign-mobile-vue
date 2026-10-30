@@ -28,33 +28,6 @@ const defaultValue = ['1', '1-1', '1-1-1'];
 
 describe('TreeSelect', () => {
   describe('props', () => {
-    it('multiple[boolean]', () => {
-      const testMultiple = (multiple, component) => {
-        const wrapper = mount(<TreeSelect options={options} value={['1', ['1-1']]} multiple={multiple} />);
-        expect(wrapper.findComponent(component).exists()).toBe(true);
-      };
-
-      testMultiple(true, CheckboxGroup);
-      testMultiple(false, RadioGroup);
-    });
-
-    it('value[string]', () => {
-      const wrapper = mount(<TreeSelect options={options} value={defaultValue} />);
-      const radioGroup = wrapper.findComponent(RadioGroup);
-      expect(radioGroup.exists()).toBe(true);
-      expect(radioGroup.props('modelValue')).toBe('1-1-1');
-    });
-
-    it('value[array]', () => {
-      const wrapper = mount(<TreeSelect options={options} value={['1-1-1']} multiple />);
-      expect(wrapper.findComponent(CheckboxGroup).exists()).toBe(true);
-    });
-
-    it('value[number]', () => {
-      const wrapper = mount(<TreeSelect options={options} value={1} />);
-      expect(wrapper.findComponent(RadioGroup).exists()).toBe(true);
-    });
-
     it('keys[object]', () => {
       const alias = { label: 'name', value: 'id', children: 'nodes', disabled: 'myDisabled' };
 
@@ -90,6 +63,33 @@ describe('TreeSelect', () => {
         />,
       );
       expect(fallback.findAll('.t-tree-select__column')).toHaveLength(2);
+    });
+
+    it('multiple[boolean]', () => {
+      const testMultiple = (multiple, component) => {
+        const wrapper = mount(<TreeSelect options={options} value={['1', ['1-1']]} multiple={multiple} />);
+        expect(wrapper.findComponent(component).exists()).toBe(true);
+      };
+
+      testMultiple(true, CheckboxGroup);
+      testMultiple(false, RadioGroup);
+    });
+
+    it('value[string]', () => {
+      const wrapper = mount(<TreeSelect options={options} value={defaultValue} />);
+      const radioGroup = wrapper.findComponent(RadioGroup);
+      expect(radioGroup.exists()).toBe(true);
+      expect(radioGroup.props('modelValue')).toBe('1-1-1');
+    });
+
+    it('value[array]', () => {
+      const wrapper = mount(<TreeSelect options={options} value={['1-1-1']} multiple />);
+      expect(wrapper.findComponent(CheckboxGroup).exists()).toBe(true);
+    });
+
+    it('value[number]', () => {
+      const wrapper = mount(<TreeSelect options={options} value={1} />);
+      expect(wrapper.findComponent(RadioGroup).exists()).toBe(true);
     });
   });
 

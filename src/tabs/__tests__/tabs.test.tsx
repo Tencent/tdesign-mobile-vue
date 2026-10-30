@@ -42,61 +42,6 @@ const tabPanelList = [
 
 describe('Tabs', () => {
   describe('props', () => {
-    it('spaceEvenly[boolean]', async () => {
-      const wrapper = mount(Tabs);
-      const navWrap = wrapper.find(`.${name}__wrapper`);
-      const $tabNavItems = navWrap.findAllComponents(TTabNav);
-
-      $tabNavItems.forEach((item, index) => {
-        expect(item.attributes('class').includes(`${prefix}-tabs-item-evenly`)).toBeFalsy();
-      });
-
-      await wrapper.setProps({
-        spaceEvenly: false,
-      });
-
-      $tabNavItems.forEach((item) => {
-        expect(item.attributes('class').includes(`${prefix}-tabs-item-evenly`)).toBeTruthy();
-      });
-    });
-
-    it('theme[line/tag/card]', async () => {
-      let theme: TdTabsProps['theme'] = 'line';
-      const wrapper = mount(Tabs, {
-        props: {
-          theme,
-        },
-      });
-      const navWrap = wrapper.find(`.${name}__wrapper`);
-      const $tabNavItems = navWrap.findAllComponents(TTabNav);
-
-      const $tabs = wrapper.findComponent(Tabs);
-
-      theme = 'line';
-      await wrapper.setProps({
-        theme,
-      });
-      $tabNavItems.forEach((item) => {
-        expect($tabs.attributes('class').includes(`${prefix}-tabs-item-${theme}`)).toBeTruthy();
-      });
-
-      theme = 'tag';
-      await wrapper.setProps({
-        theme,
-      });
-      $tabNavItems.forEach((item) => {
-        expect($tabs.attributes('class').includes(`${prefix}-tabs-item-${theme}`)).toBeTruthy();
-      });
-
-      theme = 'card';
-      await wrapper.setProps({
-        theme,
-      });
-      $tabNavItems.forEach((item) => {
-        expect($tabs.attributes('class').includes(`${prefix}-tabs-item-${theme}`)).toBeTruthy();
-      });
-    });
-
     it('animation[boolean]', async () => {
       const animation = ref({ duration: 500 });
       const currentValue = ref('1');
@@ -138,6 +83,9 @@ describe('Tabs', () => {
       expect(onChange).toHaveBeenCalledTimes($tabNavItems.length - 1);
     });
 
+    // bottomLineMode 依赖导航元素真实尺寸（offsetWidth/offsetLeft）计算下划线
+    it.todo('bottomLineMode[string]');
+
     it('list[array]', async () => {
       const defaultValue = list[0].value;
       const onChange = vi.fn();
@@ -157,33 +105,9 @@ describe('Tabs', () => {
       expect(onChange).toHaveBeenCalledTimes($tabNavItems.length - 1);
     });
 
-    it('size[medium/large]', async () => {
-      let size: TdTabsProps['size'] = 'medium';
-      const SIZE_CLASSNAMES = {
-        small: `${prefix}-size-s`,
-        medium: `${prefix}-size-m`,
-        large: `${prefix}-size-l`,
-      };
-      const wrapper = mount(Tabs, {
-        props: {
-          size,
-        },
-      });
-      const $tabs = wrapper.findComponent(Tabs);
-
-      size = 'medium';
-      await wrapper.setProps({
-        size,
-      });
-
-      // size 默认为 medium
-      expect($tabs.attributes('class').includes(`${SIZE_CLASSNAMES[size]}`)).toBeTruthy();
-
-      size = 'large';
-      await wrapper.setProps({
-        size,
-      });
-      expect($tabs.attributes('class').includes(`${SIZE_CLASSNAMES[size]}`)).toBeTruthy();
+    it('middle[function]', async () => {
+      const wrapper = mount(<Tabs list={list} middle={() => <div class="tabs-middle">中间内容</div>}></Tabs>);
+      expect(wrapper.find('.tabs-middle').exists()).toBeTruthy();
     });
 
     it('showBottomLine[boolean]', async () => {
@@ -224,6 +148,58 @@ describe('Tabs', () => {
             }px); ${animation.value ? `transition-duration: ${animation.value.duration}ms` : ''}`,
           ),
       ).toBeTruthy();
+    });
+
+    it('size[medium/large]', async () => {
+      let size: TdTabsProps['size'] = 'medium';
+      const SIZE_CLASSNAMES = {
+        small: `${prefix}-size-s`,
+        medium: `${prefix}-size-m`,
+        large: `${prefix}-size-l`,
+      };
+      const wrapper = mount(Tabs, {
+        props: {
+          size,
+        },
+      });
+      const $tabs = wrapper.findComponent(Tabs);
+
+      size = 'medium';
+      await wrapper.setProps({
+        size,
+      });
+
+      // size 默认为 medium
+      expect($tabs.attributes('class').includes(`${SIZE_CLASSNAMES[size]}`)).toBeTruthy();
+
+      size = 'large';
+      await wrapper.setProps({
+        size,
+      });
+      expect($tabs.attributes('class').includes(`${SIZE_CLASSNAMES[size]}`)).toBeTruthy();
+    });
+
+    it('spaceEvenly[boolean]', async () => {
+      const wrapper = mount(Tabs);
+      const navWrap = wrapper.find(`.${name}__wrapper`);
+      const $tabNavItems = navWrap.findAllComponents(TTabNav);
+
+      $tabNavItems.forEach((item, index) => {
+        expect(item.attributes('class').includes(`${prefix}-tabs-item-evenly`)).toBeFalsy();
+      });
+
+      await wrapper.setProps({
+        spaceEvenly: false,
+      });
+
+      $tabNavItems.forEach((item) => {
+        expect(item.attributes('class').includes(`${prefix}-tabs-item-evenly`)).toBeTruthy();
+      });
+    });
+
+    it('split[boolean]', async () => {
+      const wrapper = mount(<Tabs list={list} split></Tabs>);
+      expect(wrapper.find('.t-tabs__nav--split').exists()).toBeTruthy();
     });
 
     it('swipeable[boolean]', async () => {
@@ -267,14 +243,41 @@ describe('Tabs', () => {
       expect(onClick).toBeCalled();
     });
 
-    it('split[boolean]', async () => {
-      const wrapper = mount(<Tabs list={list} split></Tabs>);
-      expect(wrapper.find('.t-tabs__nav--split').exists()).toBeTruthy();
-    });
+    it('theme[line/tag/card]', async () => {
+      let theme: TdTabsProps['theme'] = 'line';
+      const wrapper = mount(Tabs, {
+        props: {
+          theme,
+        },
+      });
+      const navWrap = wrapper.find(`.${name}__wrapper`);
+      const $tabNavItems = navWrap.findAllComponents(TTabNav);
 
-    it('middle[function]', async () => {
-      const wrapper = mount(<Tabs list={list} middle={() => <div class="tabs-middle">中间内容</div>}></Tabs>);
-      expect(wrapper.find('.tabs-middle').exists()).toBeTruthy();
+      const $tabs = wrapper.findComponent(Tabs);
+
+      theme = 'line';
+      await wrapper.setProps({
+        theme,
+      });
+      $tabNavItems.forEach((item) => {
+        expect($tabs.attributes('class').includes(`${prefix}-tabs-item-${theme}`)).toBeTruthy();
+      });
+
+      theme = 'tag';
+      await wrapper.setProps({
+        theme,
+      });
+      $tabNavItems.forEach((item) => {
+        expect($tabs.attributes('class').includes(`${prefix}-tabs-item-${theme}`)).toBeTruthy();
+      });
+
+      theme = 'card';
+      await wrapper.setProps({
+        theme,
+      });
+      $tabNavItems.forEach((item) => {
+        expect($tabs.attributes('class').includes(`${prefix}-tabs-item-${theme}`)).toBeTruthy();
+      });
     });
 
     it('panel disabled[boolean]', async () => {
@@ -302,8 +305,6 @@ describe('Tabs', () => {
       expect(wrapper.find('.t-badge').text()).toContain('6');
     });
 
-    // bottomLineMode 依赖导航元素真实尺寸（offsetWidth/offsetLeft）计算下划线
-    it.todo('bottomLineMode[string]');
     // panel lazy 懒加载渲染行为需切换面板验证
     it.todo('panel lazy[boolean]');
   });

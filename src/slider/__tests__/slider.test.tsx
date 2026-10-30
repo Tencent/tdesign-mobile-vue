@@ -13,33 +13,6 @@ const move = async (target, distance) => {
 
 describe('Slider', () => {
   describe('props', () => {
-    it('showExtremeValue[boolean]', async () => {
-      const value = [30, 70];
-      const showExtremeValue = true;
-      const wrapper = mount(Slider, {
-        props: {
-          label: false,
-          value,
-          showExtremeValue,
-        },
-      });
-      const $left = wrapper.find(`.${classPrefix}__value--min`);
-      const $right = wrapper.find(`.${classPrefix}__value--max`);
-
-      // min = 0, max = 100 (默认)
-      expect(Number($left.text())).toStrictEqual(0);
-      expect(Number($right.text())).toStrictEqual(100);
-
-      const newMin = 30;
-      const newMax = 110;
-      await wrapper.setProps({
-        min: newMin,
-        max: newMax,
-      });
-      expect(Number($left.text())).toStrictEqual(newMin);
-      expect(Number($right.text())).toStrictEqual(newMax);
-    });
-
     it('label[boolean]', async () => {
       const value = 0;
       const wrapper = mount(Slider, {
@@ -113,6 +86,75 @@ describe('Slider', () => {
       window.HTMLElement.prototype.getBoundingClientRect = original;
     });
 
+    it('marks[object]', async () => {
+      const wrapper = mount(Slider, {
+        props: {
+          value: 30,
+        },
+      });
+      // marks 通过 watch 更新刻度，初始不传再动态设置
+      await wrapper.setProps({ marks: { 0: '小', 50: '中', 100: '大' } });
+      expect(wrapper.find('.t-slider__scale-item').exists()).toBeTruthy();
+      expect(wrapper.text()).toContain('小');
+      expect(wrapper.text()).toContain('大');
+    });
+
+    it('showExtremeValue[boolean]', async () => {
+      const value = [30, 70];
+      const showExtremeValue = true;
+      const wrapper = mount(Slider, {
+        props: {
+          label: false,
+          value,
+          showExtremeValue,
+        },
+      });
+      const $left = wrapper.find(`.${classPrefix}__value--min`);
+      const $right = wrapper.find(`.${classPrefix}__value--max`);
+
+      // min = 0, max = 100 (默认)
+      expect(Number($left.text())).toStrictEqual(0);
+      expect(Number($right.text())).toStrictEqual(100);
+
+      const newMin = 30;
+      const newMax = 110;
+      await wrapper.setProps({
+        min: newMin,
+        max: newMax,
+      });
+      expect(Number($left.text())).toStrictEqual(newMin);
+      expect(Number($right.text())).toStrictEqual(newMax);
+    });
+
+    // step 控制步进刻度，需真实拖拽交互验证
+    it.todo('step[number]');
+
+    it('theme[capsule]', async () => {
+      const onChange = vi.fn();
+      const left = 16;
+      const right = 359;
+      const clientX = 200;
+      const original = window.HTMLElement.prototype.getBoundingClientRect;
+      window.HTMLElement.prototype.getBoundingClientRect = () => ({ left, right });
+
+      const wrapper = mount(Slider, {
+        props: {
+          value: 0,
+          onChange,
+          theme: 'capsule',
+        },
+      });
+
+      const $line = wrapper.find('.t-slider__line');
+
+      await $line.trigger('click', { clientX });
+
+      expect(onChange).toHaveBeenCalledWith(55);
+
+      // // restore
+      window.HTMLElement.prototype.getBoundingClientRect = original;
+    });
+
     it('value[out-of-limit]', async () => {
       const onChange = vi.fn();
       const left = 16;
@@ -146,31 +188,8 @@ describe('Slider', () => {
       expect(onChange).toHaveBeenLastCalledWith([calcValue(50), 100]);
     });
 
-    it('theme[capsule]', async () => {
-      const onChange = vi.fn();
-      const left = 16;
-      const right = 359;
-      const clientX = 200;
-      const original = window.HTMLElement.prototype.getBoundingClientRect;
-      window.HTMLElement.prototype.getBoundingClientRect = () => ({ left, right });
-
-      const wrapper = mount(Slider, {
-        props: {
-          value: 0,
-          onChange,
-          theme: 'capsule',
-        },
-      });
-
-      const $line = wrapper.find('.t-slider__line');
-
-      await $line.trigger('click', { clientX });
-
-      expect(onChange).toHaveBeenCalledWith(55);
-
-      // // restore
-      window.HTMLElement.prototype.getBoundingClientRect = original;
-    });
+    // defaultValue 滑块位置依赖轨道尺寸计算
+    it.todo('defaultValue[number]');
 
     it('vertical[boolean]', async () => {
       const wrapper = mount(Slider, {
@@ -181,24 +200,6 @@ describe('Slider', () => {
       });
       expect(wrapper.find('.t-slider--vertical').exists()).toBeTruthy();
     });
-
-    it('marks[object]', async () => {
-      const wrapper = mount(Slider, {
-        props: {
-          value: 30,
-        },
-      });
-      // marks 通过 watch 更新刻度，初始不传再动态设置
-      await wrapper.setProps({ marks: { 0: '小', 50: '中', 100: '大' } });
-      expect(wrapper.find('.t-slider__scale-item').exists()).toBeTruthy();
-      expect(wrapper.text()).toContain('小');
-      expect(wrapper.text()).toContain('大');
-    });
-
-    // step 控制步进刻度，需真实拖拽交互验证
-    it.todo('step[number]');
-    // defaultValue 滑块位置依赖轨道尺寸计算
-    it.todo('defaultValue[number]');
   });
 
   describe('events', () => {

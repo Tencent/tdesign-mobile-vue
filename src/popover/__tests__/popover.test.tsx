@@ -5,53 +5,6 @@ import Popover from '../popover';
 
 describe('Popover', () => {
   describe('props', () => {
-    it('visible[boolean]', () => {
-      const wrapper = mount(() => <Popover visible={false} content="气泡内容" />);
-      expect(wrapper.find('.t-popover').exists()).toBeFalsy();
-
-      const wrapper2 = mount(() => <Popover visible={true} content="气泡内容" />);
-      expect(wrapper2.find('.t-popover').exists()).toBeTruthy();
-    });
-
-    it('defaultVisible[boolean]', () => {
-      const wrapper = mount(() => <Popover defaultVisible content="气泡内容" />);
-      expect(wrapper.find('.t-popover').exists()).toBeTruthy();
-    });
-
-    it('content[string]', () => {
-      const wrapper = mount(() => <Popover visible={true} content="气泡内容" />);
-      expect(wrapper.find('.t-popover__content').text()).toBe('气泡内容');
-    });
-
-    it('content[function]', () => {
-      const wrapper = mount(() => <Popover visible={true} content={() => '函数气泡内容'} />);
-      expect(wrapper.find('.t-popover__content').text()).toBe('函数气泡内容');
-    });
-
-    it('theme[dark/light/brand/success/warning/error]', () => {
-      const wrapper = mount(() => <Popover visible={true} content="气泡内容" theme="light" />);
-      expect(wrapper.find('.t-popover--light').exists()).toBeTruthy();
-    });
-
-    it('showArrow[boolean]', () => {
-      const wrapper = mount(() => <Popover visible={true} content="气泡内容" />);
-      expect(wrapper.find('.t-popover__arrow').exists()).toBeTruthy();
-
-      const wrapper2 = mount(() => <Popover visible={true} content="气泡内容" showArrow={false} />);
-      expect(wrapper2.find('.t-popover__arrow').exists()).toBeFalsy();
-    });
-
-    it('placement[top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom]', () => {
-      const wrapper = mount(() => <Popover visible={true} content="气泡内容" placement="bottom-left" />);
-      // data-popper-placement 的实际值由 popper 运行时基于真实布局计算，jsdom 下只能断言属性存在
-      expect(wrapper.find('.t-popover').attributes('data-popper-placement')).toBeDefined();
-    });
-
-    it('triggerElement[function]', () => {
-      const wrapper = mount(() => <Popover content="气泡内容" triggerElement={() => '点击触发'} />);
-      expect(wrapper.find('.t-popover__wrapper').text()).toBe('点击触发');
-    });
-
     it('closeOnClickOutside[boolean]', async () => {
       const onVisibleChange = vi.fn();
       const wrapper = mount(() => (
@@ -69,6 +22,53 @@ describe('Popover', () => {
       await nextTick();
       expect(onVisibleChange).toHaveBeenCalledWith(false);
       expect(wrapper.find('.t-popover').exists()).toBe(false);
+    });
+
+    it('content[string]', () => {
+      const wrapper = mount(() => <Popover visible={true} content="气泡内容" />);
+      expect(wrapper.find('.t-popover__content').text()).toBe('气泡内容');
+    });
+
+    it('content[function]', () => {
+      const wrapper = mount(() => <Popover visible={true} content={() => '函数气泡内容'} />);
+      expect(wrapper.find('.t-popover__content').text()).toBe('函数气泡内容');
+    });
+
+    it('placement[top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom]', () => {
+      const wrapper = mount(() => <Popover visible={true} content="气泡内容" placement="bottom-left" />);
+      // data-popper-placement 的实际值由 popper 运行时基于真实布局计算，jsdom 下只能断言属性存在
+      expect(wrapper.find('.t-popover').attributes('data-popper-placement')).toBeDefined();
+    });
+
+    it('showArrow[boolean]', () => {
+      const wrapper = mount(() => <Popover visible={true} content="气泡内容" />);
+      expect(wrapper.find('.t-popover__arrow').exists()).toBeTruthy();
+
+      const wrapper2 = mount(() => <Popover visible={true} content="气泡内容" showArrow={false} />);
+      expect(wrapper2.find('.t-popover__arrow').exists()).toBeFalsy();
+    });
+
+    it('theme[dark/light/brand/success/warning/error]', () => {
+      const wrapper = mount(() => <Popover visible={true} content="气泡内容" theme="light" />);
+      expect(wrapper.find('.t-popover--light').exists()).toBeTruthy();
+    });
+
+    it('triggerElement[function]', () => {
+      const wrapper = mount(() => <Popover content="气泡内容" triggerElement={() => '点击触发'} />);
+      expect(wrapper.find('.t-popover__wrapper').text()).toBe('点击触发');
+    });
+
+    it('visible[boolean]', () => {
+      const wrapper = mount(() => <Popover visible={false} content="气泡内容" />);
+      expect(wrapper.find('.t-popover').exists()).toBeFalsy();
+
+      const wrapper2 = mount(() => <Popover visible={true} content="气泡内容" />);
+      expect(wrapper2.find('.t-popover').exists()).toBeTruthy();
+    });
+
+    it('defaultVisible[boolean]', () => {
+      const wrapper = mount(() => <Popover defaultVisible content="气泡内容" />);
+      expect(wrapper.find('.t-popover').exists()).toBeTruthy();
     });
   });
 

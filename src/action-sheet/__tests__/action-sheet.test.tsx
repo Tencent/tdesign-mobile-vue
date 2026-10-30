@@ -12,6 +12,51 @@ const name = `${prefix}-action-sheet`;
 
 describe('ActionSheet', () => {
   describe('props', () => {
+    it('align[center/left]', async () => {
+      const alignList: TdActionSheetProps['align'][] = ['center', 'left'];
+
+      alignList.forEach((align) => {
+        const wrapper = mount(() => (
+          <ActionSheet items={[]} visible={true} description={'动作面板描述文字'} align={align}></ActionSheet>
+        ));
+        if (align === 'left') {
+          expect(wrapper.find(`.${name}--left`).exists()).toBeTruthy();
+        } else {
+          expect(wrapper.find(`.${name}--left`).exists()).toBeFalsy();
+        }
+      });
+    });
+
+    it('cancelText[string]', async () => {
+      const wrapper = mount(ActionSheet, {
+        props: {
+          items: [],
+          visible: true,
+        },
+      });
+      expect(wrapper.find(`.${name}__footer`).text()).toEqual('取消');
+      await wrapper.setProps({
+        cancelText: 'Cancel',
+      });
+      // expect(wrapper.find(`.${name}__footer`).text()).toEqual('Cancel');
+    });
+
+    it('count[number]', async () => {
+      const wrapper = mount(ActionSheet, {
+        props: {
+          theme: 'grid',
+          items: ['1', '2', '3'],
+          visible: true,
+          count: 2,
+        },
+      });
+      expect(wrapper.findComponent(MenuGrid).props().count).toEqual(2);
+      await wrapper.setProps({
+        count: 3,
+      });
+      expect(wrapper.findComponent(MenuGrid).props().count).toEqual(3);
+    });
+
     it('items[array]', async () => {
       const wrapper = mount(ActionSheet, {
         props: {
@@ -31,19 +76,16 @@ describe('ActionSheet', () => {
       expect(wrapper.find(`.${name}__content`).exists()).toEqual(true);
       expect(wrapper.findAllComponents(TBadge).length).toEqual(2);
     });
-    it('align[center/left]', async () => {
-      const alignList: TdActionSheetProps['align'][] = ['center', 'left'];
 
-      alignList.forEach((align) => {
-        const wrapper = mount(() => (
-          <ActionSheet items={[]} visible={true} description={'动作面板描述文字'} align={align}></ActionSheet>
-        ));
-        if (align === 'left') {
-          expect(wrapper.find(`.${name}--left`).exists()).toBeTruthy();
-        } else {
-          expect(wrapper.find(`.${name}--left`).exists()).toBeFalsy();
-        }
+    it('popupProps[object]', async () => {
+      const wrapper = mount(ActionSheet, {
+        props: {
+          visible: true,
+          items: ['选项'],
+          popupProps: { zIndex: 5000 },
+        },
       });
+      expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 5000');
     });
 
     it('showCancel[boolean]', async () => {
@@ -58,67 +100,6 @@ describe('ActionSheet', () => {
         showCancel: false,
       });
       expect(wrapper.find(`.${name}__footer`).exists()).toEqual(false);
-    });
-
-    it('cancelText[string]', async () => {
-      const wrapper = mount(ActionSheet, {
-        props: {
-          items: [],
-          visible: true,
-        },
-      });
-      expect(wrapper.find(`.${name}__footer`).text()).toEqual('取消');
-      await wrapper.setProps({
-        cancelText: 'Cancel',
-      });
-      // expect(wrapper.find(`.${name}__footer`).text()).toEqual('Cancel');
-    });
-
-    it('theme[list/grid]', async () => {
-      const wrapper = mount(ActionSheet, {
-        props: {
-          theme: 'list',
-          items: [],
-          visible: true,
-        },
-      });
-      expect(wrapper.find(`.${name}__list`).exists()).toEqual(true);
-      expect(wrapper.find(`.${name}__grid`).exists()).toEqual(false);
-      await wrapper.setProps({
-        theme: 'grid',
-      });
-      expect(wrapper.find(`.${name}__list`).exists()).toEqual(false);
-      // expect(wrapper.find(`.${name}__grid`).exists()).toEqual(true);
-    });
-
-    it('count[number]', async () => {
-      const wrapper = mount(ActionSheet, {
-        props: {
-          theme: 'grid',
-          items: ['1', '2', '3'],
-          visible: true,
-          count: 2,
-        },
-      });
-      expect(wrapper.findComponent(MenuGrid).props().count).toEqual(2);
-      await wrapper.setProps({
-        count: 3,
-      });
-      expect(wrapper.findComponent(MenuGrid).props().count).toEqual(3);
-    });
-
-    it('visible[boolean]', async () => {
-      const wrapper = mount(ActionSheet, {
-        props: {
-          visible: false,
-          items: [],
-        },
-      });
-      expect(wrapper.find(`.${prefix}-popup`).exists()).toBeFalsy();
-      await wrapper.setProps({
-        visible: true,
-      });
-      // expect(wrapper.find(`.${prefix}-popup`).exists()).toBeTruthy();
     });
 
     it('showOverlay[boolean]', async () => {
@@ -141,6 +122,37 @@ describe('ActionSheet', () => {
       overlay.exists() && expect(overlay.isVisible()).toBeFalsy();
     });
 
+    it('theme[list/grid]', async () => {
+      const wrapper = mount(ActionSheet, {
+        props: {
+          theme: 'list',
+          items: [],
+          visible: true,
+        },
+      });
+      expect(wrapper.find(`.${name}__list`).exists()).toEqual(true);
+      expect(wrapper.find(`.${name}__grid`).exists()).toEqual(false);
+      await wrapper.setProps({
+        theme: 'grid',
+      });
+      expect(wrapper.find(`.${name}__list`).exists()).toEqual(false);
+      // expect(wrapper.find(`.${name}__grid`).exists()).toEqual(true);
+    });
+
+    it('visible[boolean]', async () => {
+      const wrapper = mount(ActionSheet, {
+        props: {
+          visible: false,
+          items: [],
+        },
+      });
+      expect(wrapper.find(`.${prefix}-popup`).exists()).toBeFalsy();
+      await wrapper.setProps({
+        visible: true,
+      });
+      // expect(wrapper.find(`.${prefix}-popup`).exists()).toBeTruthy();
+    });
+
     it('defaultVisible[boolean]', async () => {
       const wrapper = mount(ActionSheet, {
         props: {
@@ -149,17 +161,6 @@ describe('ActionSheet', () => {
         },
       });
       expect(wrapper.find(`.${name}__content`).exists()).toEqual(true);
-    });
-
-    it('popupProps[object]', async () => {
-      const wrapper = mount(ActionSheet, {
-        props: {
-          visible: true,
-          items: ['选项'],
-          popupProps: { zIndex: 5000 },
-        },
-      });
-      expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 5000');
     });
   });
 

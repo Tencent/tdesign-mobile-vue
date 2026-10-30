@@ -10,6 +10,11 @@ const simulateEvent = (target, text, event) => {
 
 describe('Stepper', () => {
   describe('props', () => {
+    it('disableInput[boolean]', async () => {
+      const wrapper = mount(<Stepper disableInput />);
+      expect(wrapper.find('input').attributes('readonly')).toBeDefined();
+    });
+
     it('disabled[boolean]', async () => {
       const wrapper = mount(Stepper, {
         props: {
@@ -42,16 +47,14 @@ describe('Stepper', () => {
       expect(getComputedStyle($input.element, null).width).toBe('100px');
     });
 
-    it('theme[normal/filled/outline]', async () => {
-      const wrapper = mount(Stepper, {});
+    it('integer[boolean]', async () => {
+      const wrapper = mount(<Stepper integer />);
+      expect(wrapper.find('input').attributes('type')).toBe('tel');
+    });
 
-      const $minus = wrapper.find('.t-stepper__minus');
-      expect($minus.classes()).toContain('t-stepper__minus--normal');
-
-      await wrapper.setProps({
-        theme: 'filled',
-      });
-      expect($minus.classes()).toContain('t-stepper__minus--filled');
+    it('size[string]', async () => {
+      const wrapper = mount(<Stepper size="large" />);
+      expect(wrapper.find('.t-stepper--large').exists()).toBeTruthy();
     });
 
     it('step & max & min', async () => {
@@ -88,24 +91,21 @@ describe('Stepper', () => {
       expect(plusIcon.classes()).toContain('t-stepper--normal-disabled');
     });
 
-    it('size[string]', async () => {
-      const wrapper = mount(<Stepper size="large" />);
-      expect(wrapper.find('.t-stepper--large').exists()).toBeTruthy();
+    it('theme[normal/filled/outline]', async () => {
+      const wrapper = mount(Stepper, {});
+
+      const $minus = wrapper.find('.t-stepper__minus');
+      expect($minus.classes()).toContain('t-stepper__minus--normal');
+
+      await wrapper.setProps({
+        theme: 'filled',
+      });
+      expect($minus.classes()).toContain('t-stepper__minus--filled');
     });
 
     it('defaultValue[number]', async () => {
       const wrapper = mount(<Stepper defaultValue={5} />);
       expect(wrapper.find('input').element.value).toBe('5');
-    });
-
-    it('disableInput[boolean]', async () => {
-      const wrapper = mount(<Stepper disableInput />);
-      expect(wrapper.find('input').attributes('readonly')).toBeDefined();
-    });
-
-    it('integer[boolean]', async () => {
-      const wrapper = mount(<Stepper integer />);
-      expect(wrapper.find('input').attributes('type')).toBe('tel');
     });
   });
 

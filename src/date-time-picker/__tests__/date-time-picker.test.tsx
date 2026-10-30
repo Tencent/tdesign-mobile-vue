@@ -77,35 +77,24 @@ const generateColumn = (start, end, type) => {
 
 describe('DateTimePicker', () => {
   describe('props', () => {
-    it('title & confirmBtn & cancelBtn', async () => {
-      const title = '';
-      const confirmBtn = '';
-      const cancelBtn = '';
+    it('footer[function]', async () => {
       const wrapper = mount(DateTimePicker, {
         props: {
-          title,
-          confirmBtn,
-          cancelBtn,
+          visible: true,
+          footer: () => <div class="dtp-footer">自定义底部</div>,
         },
       });
-      const $title = wrapper.find(`.${prefix}-picker__title`);
-      const $confirmButton = wrapper.find(`.${prefix}-picker__confirm`);
-      const $cancelButton = wrapper.find(`.${prefix}-picker__cancel`);
-      expect($title.text()).toBe(title || '选择时间');
-      expect($confirmButton.text()).toBe(confirmBtn || '确定');
-      expect($cancelButton.text()).toBe(cancelBtn || '取消');
+      expect(wrapper.find('.dtp-footer').exists()).toBeTruthy();
+    });
 
-      const newTitle = '标题测试';
-      const newConfirmBtn = 'confirm';
-      const newCancelBtn = 'cancel';
-      await wrapper.setProps({
-        title: newTitle,
-        confirmBtn: newConfirmBtn,
-        cancelBtn: newCancelBtn,
+    it('header[function]', async () => {
+      const wrapper = mount(DateTimePicker, {
+        props: {
+          visible: true,
+          header: () => <div class="dtp-header">自定义头部</div>,
+        },
       });
-      expect($title.text()).toBe(newTitle || '选择时间');
-      expect($confirmButton.text()).toBe(newConfirmBtn || '确定');
-      expect($cancelButton.text()).toBe(newCancelBtn || '取消');
+      expect(wrapper.find('.dtp-header').exists()).toBeTruthy();
     });
 
     it('mode[string]', async () => {
@@ -143,6 +132,39 @@ describe('DateTimePicker', () => {
       expect(wrapper.vm.value).toStrictEqual('10:00:00');
     });
 
+    it('renderLabel[function]', async () => {
+      generateColumn(Y - 10, Y + 10, 'year');
+      generateColumn(1, 12, 'month');
+      generateColumn(1, getDateCount(Y, M), 'date');
+
+      const defaultValue = defaultDateTime;
+      const wrapper = mount(DateTimePicker, {
+        props: {
+          defaultValue,
+          title: '自定义label',
+          renderLabel,
+        },
+      });
+      // mode = 'date', 渲染年月日，3列
+      const $pickerItems = wrapper.findAllComponents(PickerItem);
+      expect($pickerItems.length).toEqual(3);
+
+      const res = {};
+      $pickerItems.forEach((item, index) => {
+        res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`);
+      });
+
+      Object.keys(res).forEach((key, keyIndex) => {
+        expect(res[key].length).toEqual(ret[keyIndex].length);
+        res[key].forEach((item, itemIndex) => {
+          // expect(item.text()).toEqual(ret[keyIndex][itemIndex].label);
+        });
+      });
+    });
+
+    // showWeek 日期列显示星期，依赖列配置生成
+    it.todo('showWeek[boolean]');
+
     it('start & end', async () => {
       const start = '2020-6-30 10:00:00';
       const end = '2025-10-10 10:10:10';
@@ -174,60 +196,39 @@ describe('DateTimePicker', () => {
       });
     });
 
-    it('renderLabel[function]', async () => {
-      generateColumn(Y - 10, Y + 10, 'year');
-      generateColumn(1, 12, 'month');
-      generateColumn(1, getDateCount(Y, M), 'date');
-
-      const defaultValue = defaultDateTime;
-      const wrapper = mount(DateTimePicker, {
-        props: {
-          defaultValue,
-          title: '自定义label',
-          renderLabel,
-        },
-      });
-      // mode = 'date', 渲染年月日，3列
-      const $pickerItems = wrapper.findAllComponents(PickerItem);
-      expect($pickerItems.length).toEqual(3);
-
-      const res = {};
-      $pickerItems.forEach((item, index) => {
-        res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`);
-      });
-
-      Object.keys(res).forEach((key, keyIndex) => {
-        expect(res[key].length).toEqual(ret[keyIndex].length);
-        res[key].forEach((item, itemIndex) => {
-          // expect(item.text()).toEqual(ret[keyIndex][itemIndex].label);
-        });
-      });
-    });
-
-    it('header[function]', async () => {
-      const wrapper = mount(DateTimePicker, {
-        props: {
-          visible: true,
-          header: () => <div class="dtp-header">自定义头部</div>,
-        },
-      });
-      expect(wrapper.find('.dtp-header').exists()).toBeTruthy();
-    });
-
-    it('footer[function]', async () => {
-      const wrapper = mount(DateTimePicker, {
-        props: {
-          visible: true,
-          footer: () => <div class="dtp-footer">自定义底部</div>,
-        },
-      });
-      expect(wrapper.find('.dtp-footer').exists()).toBeTruthy();
-    });
-
-    // showWeek 日期列显示星期，依赖列配置生成
-    it.todo('showWeek[boolean]');
     // steps 步进间隔控制选项粒度，依赖列生成验证
     it.todo('steps[object]');
+
+    it('title & confirmBtn & cancelBtn', async () => {
+      const title = '';
+      const confirmBtn = '';
+      const cancelBtn = '';
+      const wrapper = mount(DateTimePicker, {
+        props: {
+          title,
+          confirmBtn,
+          cancelBtn,
+        },
+      });
+      const $title = wrapper.find(`.${prefix}-picker__title`);
+      const $confirmButton = wrapper.find(`.${prefix}-picker__confirm`);
+      const $cancelButton = wrapper.find(`.${prefix}-picker__cancel`);
+      expect($title.text()).toBe(title || '选择时间');
+      expect($confirmButton.text()).toBe(confirmBtn || '确定');
+      expect($cancelButton.text()).toBe(cancelBtn || '取消');
+
+      const newTitle = '标题测试';
+      const newConfirmBtn = 'confirm';
+      const newCancelBtn = 'cancel';
+      await wrapper.setProps({
+        title: newTitle,
+        confirmBtn: newConfirmBtn,
+        cancelBtn: newCancelBtn,
+      });
+      expect($title.text()).toBe(newTitle || '选择时间');
+      expect($confirmButton.text()).toBe(newConfirmBtn || '确定');
+      expect($cancelButton.text()).toBe(newCancelBtn || '取消');
+    });
   });
 
   describe('events', () => {

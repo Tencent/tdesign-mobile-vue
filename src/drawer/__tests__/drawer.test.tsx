@@ -22,26 +22,19 @@ const isElementVisible = (el) => {
 
 describe('Drawer', () => {
   describe('props', () => {
-    it('visible[boolean]', async () => {
-      const wrapper = mount(Drawer, {
+    it('attach', async () => {
+      const div = document.createElement('div');
+      div.id = 'drawer-container';
+      document.body.appendChild(div);
+
+      mount(Drawer, {
         props: {
-          visible: false,
+          visible: true,
+          attach: '#drawer-container',
         },
       });
-
-      expect(wrapper.find('.t-drawer__sidebar').isVisible()).toBe(false);
-      await wrapper.setProps({
-        visible: true,
-      });
-      // 内容 teleport 到 body，需从 document 查询
-      expect(isElementVisible(document.querySelector('.t-drawer__sidebar'))).toBe(true);
-    });
-
-    it('placement[left/right]', async () => {
-      placementList.forEach((placement) => {
-        const wrapper = mount(() => <Drawer visible={true} placement={placement} />);
-        expect(wrapper.find(`.t-popup--${placement}`).exists()).toBe(true);
-      });
+      await nextTick();
+      expect(document.querySelector('#drawer-container .t-drawer')).toBeTruthy();
     });
 
     it('closeOnOverlayClick[boolean]', async () => {
@@ -62,6 +55,28 @@ describe('Drawer', () => {
       const closeDrawer = mountDrawer(true);
       closeDrawer.findComponent({ name: 'TOverlay' }).find('.t-overlay').trigger('click');
       expect(onClose).toBeCalledWith('overlay');
+    });
+
+    it('destroyOnClose[boolean]', async () => {
+      const wrapper = mount(Drawer, {
+        props: {
+          visible: true,
+          destroyOnClose: true,
+        },
+      });
+      expect(wrapper.find('.t-drawer__sidebar').exists()).toBeTruthy();
+
+      await wrapper.setProps({ visible: false });
+      expect(wrapper.find('.t-drawer__sidebar').exists()).toBeFalsy();
+    });
+
+    it('footer[function]', () => {
+      const wrapper = mount(Drawer, {
+        props: {
+          footer: () => h(<div>custom footer</div>),
+        },
+      });
+      expect(wrapper.find('.t-drawer__footer').text()).toContain('custom footer');
     });
 
     it('items[array]', async () => {
@@ -86,41 +101,21 @@ describe('Drawer', () => {
       expect($items.at(1).text()).toBe('菜单二');
     });
 
-    it('footer[function]', () => {
-      const wrapper = mount(Drawer, {
-        props: {
-          footer: () => h(<div>custom footer</div>),
-        },
-      });
-      expect(wrapper.find('.t-drawer__footer').text()).toContain('custom footer');
-    });
-
-    it('title[string]', () => {
-      const wrapper = mount(Drawer, {
-        props: {
-          title: '抽屉标题',
-        },
-      });
-      expect(wrapper.find('.t-drawer__title').text()).toBe('抽屉标题');
-    });
-
-    it('title[function]', () => {
-      const wrapper = mount(Drawer, {
-        props: {
-          title: () => h(<div>custom title</div>),
-        },
-      });
-      expect(wrapper.find('.t-drawer__title').text()).toContain('custom title');
-    });
-
-    it('zIndex[number]', async () => {
+    it('overlayProps[object]', async () => {
       const wrapper = mount(Drawer, {
         props: {
           visible: true,
-          zIndex: 666,
+          overlayProps: { zIndex: 4000 },
         },
       });
-      expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 666');
+      expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 4000');
+    });
+
+    it('placement[left/right]', async () => {
+      placementList.forEach((placement) => {
+        const wrapper = mount(() => <Drawer visible={true} placement={placement} />);
+        expect(wrapper.find(`.t-popup--${placement}`).exists()).toBe(true);
+      });
     });
 
     it('showOverlay[boolean]', async () => {
@@ -142,42 +137,47 @@ describe('Drawer', () => {
       expect(overlay.isVisible()).toBe(false);
     });
 
-    it('overlayProps[object]', async () => {
+    it('title[string]', () => {
+      const wrapper = mount(Drawer, {
+        props: {
+          title: '抽屉标题',
+        },
+      });
+      expect(wrapper.find('.t-drawer__title').text()).toBe('抽屉标题');
+    });
+
+    it('title[function]', () => {
+      const wrapper = mount(Drawer, {
+        props: {
+          title: () => h(<div>custom title</div>),
+        },
+      });
+      expect(wrapper.find('.t-drawer__title').text()).toContain('custom title');
+    });
+
+    it('visible[boolean]', async () => {
+      const wrapper = mount(Drawer, {
+        props: {
+          visible: false,
+        },
+      });
+
+      expect(wrapper.find('.t-drawer__sidebar').isVisible()).toBe(false);
+      await wrapper.setProps({
+        visible: true,
+      });
+      // 内容 teleport 到 body，需从 document 查询
+      expect(isElementVisible(document.querySelector('.t-drawer__sidebar'))).toBe(true);
+    });
+
+    it('zIndex[number]', async () => {
       const wrapper = mount(Drawer, {
         props: {
           visible: true,
-          overlayProps: { zIndex: 4000 },
+          zIndex: 666,
         },
       });
-      expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 4000');
-    });
-
-    it('destroyOnClose[boolean]', async () => {
-      const wrapper = mount(Drawer, {
-        props: {
-          visible: true,
-          destroyOnClose: true,
-        },
-      });
-      expect(wrapper.find('.t-drawer__sidebar').exists()).toBeTruthy();
-
-      await wrapper.setProps({ visible: false });
-      expect(wrapper.find('.t-drawer__sidebar').exists()).toBeFalsy();
-    });
-
-    it('attach', async () => {
-      const div = document.createElement('div');
-      div.id = 'drawer-container';
-      document.body.appendChild(div);
-
-      mount(Drawer, {
-        props: {
-          visible: true,
-          attach: '#drawer-container',
-        },
-      });
-      await nextTick();
-      expect(document.querySelector('#drawer-container .t-drawer')).toBeTruthy();
+      expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 666');
     });
   });
 

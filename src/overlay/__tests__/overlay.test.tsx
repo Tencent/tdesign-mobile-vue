@@ -10,33 +10,21 @@ const waitFrame = () =>
 
 describe('Overlay', () => {
   describe('props', () => {
-    it('visible[boolean]', async () => {
-      const wrapper = mount(Overlay, {
-        props: { visible: true },
-      });
-      expect(wrapper.find('.t-overlay--active').exists()).toEqual(true);
-      await wrapper.setProps({ visible: false });
-      expect(wrapper.find('.t-overlay--active').exists()).toEqual(false);
+    it('backgroundColor[string]', async () => {
+      const wrapper = mount(() => <Overlay visible={true} backgroundColor="green" />);
+      expect(wrapper.find('.t-overlay').attributes('style')).toContain('background-color: green');
     });
 
-    it('preventScrollThrough[boolean]', async () => {
+    it('customStyle[object]', async () => {
+      const customStyle = 'color: red';
       const wrapper = mount(Overlay, {
-        props: { visible: true, preventScrollThrough: false },
+        props: {
+          visible: true,
+          customStyle,
+        },
       });
-      const event = {
-        preventDefault: vi.fn(),
-        stopPropagation: vi.fn(),
-      };
-      wrapper.find('.t-overlay').trigger('touchmove', event);
-      expect(event.preventDefault).toHaveBeenCalledTimes(0);
-      expect(event.stopPropagation).toHaveBeenCalledTimes(0);
-
-      await wrapper.setProps({
-        preventScrollThrough: true,
-      });
-      wrapper.find('.t-overlay').trigger('touchmove', event);
-      expect(event.preventDefault).toHaveBeenCalledTimes(1);
-      expect(event.stopPropagation).toHaveBeenCalledTimes(1);
+      const $overlay = wrapper.find('.t-overlay');
+      expect($overlay.attributes('style').includes(customStyle)).toBeTruthy();
     });
 
     it('duration[number]', async () => {
@@ -59,6 +47,35 @@ describe('Overlay', () => {
       ).toBeTruthy();
     });
 
+    it('preventScrollThrough[boolean]', async () => {
+      const wrapper = mount(Overlay, {
+        props: { visible: true, preventScrollThrough: false },
+      });
+      const event = {
+        preventDefault: vi.fn(),
+        stopPropagation: vi.fn(),
+      };
+      wrapper.find('.t-overlay').trigger('touchmove', event);
+      expect(event.preventDefault).toHaveBeenCalledTimes(0);
+      expect(event.stopPropagation).toHaveBeenCalledTimes(0);
+
+      await wrapper.setProps({
+        preventScrollThrough: true,
+      });
+      wrapper.find('.t-overlay').trigger('touchmove', event);
+      expect(event.preventDefault).toHaveBeenCalledTimes(1);
+      expect(event.stopPropagation).toHaveBeenCalledTimes(1);
+    });
+
+    it('visible[boolean]', async () => {
+      const wrapper = mount(Overlay, {
+        props: { visible: true },
+      });
+      expect(wrapper.find('.t-overlay--active').exists()).toEqual(true);
+      await wrapper.setProps({ visible: false });
+      expect(wrapper.find('.t-overlay--active').exists()).toEqual(false);
+    });
+
     it('zIndex[number]', async () => {
       const wrapper = mount(Overlay, {
         props: {
@@ -71,23 +88,6 @@ describe('Overlay', () => {
         zIndex: 99,
       });
       expect(getComputedStyle(wrapper.find('.t-overlay').element)['z-index']).toEqual('99');
-    });
-
-    it('customStyle[object]', async () => {
-      const customStyle = 'color: red';
-      const wrapper = mount(Overlay, {
-        props: {
-          visible: true,
-          customStyle,
-        },
-      });
-      const $overlay = wrapper.find('.t-overlay');
-      expect($overlay.attributes('style').includes(customStyle)).toBeTruthy();
-    });
-
-    it('backgroundColor[string]', async () => {
-      const wrapper = mount(() => <Overlay visible={true} backgroundColor="green" />);
-      expect(wrapper.find('.t-overlay').attributes('style')).toContain('background-color: green');
     });
   });
 

@@ -23,6 +23,37 @@ const items2 = [
 
 describe('GridItem', () => {
   describe('props', () => {
+    it('badge[object]', async () => {
+      const wrapper = mount(() => (
+        <Grid>
+          <GridItem badge={{ count: 1 }}></GridItem>
+        </Grid>
+      ));
+      const badge = wrapper.find('.t-badge--basic ');
+      expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
+      expect(badge.exists()).toBeTruthy();
+      expect(badge.text()).toBe('1');
+    });
+
+    // icon 自定义宫格图标
+    it.todo('icon[function]');
+
+    it('layout[vertical/horizontal]', async () => {
+      const layoutList: TdGridItemProps['layout'][] = ['vertical', 'horizontal'];
+      layoutList.forEach((l) => {
+        const wrapper = mount(() => {
+          return (
+            <Grid>
+              <GridItem layout={l} />
+            </Grid>
+          );
+        });
+        if (l) {
+          expect(wrapper.find('.t-grid-item').classes()).toContain(`t-grid-item--${l}`);
+        }
+      });
+    });
+
     it('text & image & description', async () => {
       const wrapper = mount({
         setup() {
@@ -50,36 +81,5 @@ describe('GridItem', () => {
         expect($img.attributes('src')).toBe(imgUrl);
       });
     });
-
-    it('badge[object]', async () => {
-      const wrapper = mount(() => (
-        <Grid>
-          <GridItem badge={{ count: 1 }}></GridItem>
-        </Grid>
-      ));
-      const badge = wrapper.find('.t-badge--basic ');
-      expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
-      expect(badge.exists()).toBeTruthy();
-      expect(badge.text()).toBe('1');
-    });
-
-    it('layout[vertical/horizontal]', async () => {
-      const layoutList: TdGridItemProps['layout'][] = ['vertical', 'horizontal'];
-      layoutList.forEach((l) => {
-        const wrapper = mount(() => {
-          return (
-            <Grid>
-              <GridItem layout={l} />
-            </Grid>
-          );
-        });
-        if (l) {
-          expect(wrapper.find('.t-grid-item').classes()).toContain(`t-grid-item--${l}`);
-        }
-      });
-    });
-
-    // icon 自定义宫格图标
-    it.todo('icon[function]');
   });
 });

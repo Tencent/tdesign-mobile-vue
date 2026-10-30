@@ -10,17 +10,6 @@ const TEXT = 'Badge 徽标';
 
 describe('Badge', () => {
   describe('props', () => {
-    it('dot[boolean]', () => {
-      const wrapper = mount(() => (
-        <Badge dot>
-          <Button>按钮</Button>
-        </Badge>
-      ));
-      const dot = wrapper.find(`.${name}--dot`);
-      expect(dot.exists()).toBeTruthy();
-      expect(wrapper.findComponent(Button).text()).toEqual(`按钮`);
-    });
-
     it('color[string]', () => {
       const wrapper = mount(() => (
         <Badge color="red" count={5}>
@@ -63,6 +52,17 @@ describe('Badge', () => {
       expect(inner.text()).toEqual('hot');
     });
 
+    it('dot[boolean]', () => {
+      const wrapper = mount(() => (
+        <Badge dot>
+          <Button>按钮</Button>
+        </Badge>
+      ));
+      const dot = wrapper.find(`.${name}--dot`);
+      expect(dot.exists()).toBeTruthy();
+      expect(wrapper.findComponent(Button).text()).toEqual(`按钮`);
+    });
+
     it('maxCount[number]', () => {
       const count = 100;
       const maxCount = 50;
@@ -74,6 +74,18 @@ describe('Badge', () => {
       const inner = wrapper.find(`.${name}--count`);
       expect(inner.exists()).toBeTruthy();
       expect(inner.text()).toEqual(`${maxCount}+`);
+    });
+
+    it('offset[array]', () => {
+      const count = 100;
+      const offset = [20, 30];
+      const wrapper = mount(() => (
+        <Badge count={count} offset={offset}>
+          <Button>按钮</Button>
+        </Badge>
+      ));
+      const inner = wrapper.find(`.${name}--basic`);
+      expect(inner.attributes('style').includes(`left: calc(100% + ${offset[0]}px); top: ${offset[1]}px`)).toBeTruthy();
     });
 
     it('shape[circle/square/bubble/ribbon/ribbon-right/ribbon-left/triangle-right/triangle-left]', async () => {
@@ -100,6 +112,17 @@ describe('Badge', () => {
       expect(inner.classes()).toContain(`${name}--${shape}`);
     });
 
+    it('showZero[boolean]', () => {
+      const wrapper = mount(() => (
+        <Badge showZero>
+          <Button>按钮</Button>
+        </Badge>
+      ));
+      const inner = wrapper.find(`.${name}--basic`);
+      expect(inner.exists()).toBeTruthy();
+      expect(inner.text()).toEqual('0');
+    });
+
     it('size[medium/large]', async () => {
       // size 默认 medium；large 增大尺寸
       const wrapper = mount(Badge, {
@@ -114,29 +137,6 @@ describe('Badge', () => {
 
       await wrapper.setProps({ size: 'large' });
       expect(inner.classes()).toContain(`${name}--large`);
-    });
-
-    it('showZero[boolean]', () => {
-      const wrapper = mount(() => (
-        <Badge showZero>
-          <Button>按钮</Button>
-        </Badge>
-      ));
-      const inner = wrapper.find(`.${name}--basic`);
-      expect(inner.exists()).toBeTruthy();
-      expect(inner.text()).toEqual('0');
-    });
-
-    it('offset[array]', () => {
-      const count = 100;
-      const offset = [20, 30];
-      const wrapper = mount(() => (
-        <Badge count={count} offset={offset}>
-          <Button>按钮</Button>
-        </Badge>
-      ));
-      const inner = wrapper.find(`.${name}--basic`);
-      expect(inner.attributes('style').includes(`left: calc(100% + ${offset[0]}px); top: ${offset[1]}px`)).toBeTruthy();
     });
   });
 });

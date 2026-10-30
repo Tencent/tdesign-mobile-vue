@@ -54,18 +54,98 @@ const makeEvent = (el, eventName = 'click') => {
 
 describe('Guide', () => {
   describe('props', () => {
-    it('modelValue[number]', () => {
-      expect(document.body.classList.contains('t-guide--lock')).toBe(false);
+    it('backButtonProps[object]', async () => {
+      createEmptyDomUnderBody('test-container');
+      await mountBaseGuide(
+        { mode: 'dialog', modelValue: 0, backButtonProps: { content: '返回上一步' } },
+        `#test-container`,
+      );
+      expect(document.querySelector('.t-guide__back').textContent).toContain('返回上一步');
+    });
+
+    it('counter[function] & hideCounter[boolean]', async () => {
+      createEmptyDomUnderBody('test-container');
+      await mountBaseGuide({ mode: 'dialog', modelValue: 0, counter: () => '1/2' }, `#test-container`, [
+        { element: '.guide-element-1' },
+        { element: '.guide-element-2' },
+      ]);
+      expect(document.querySelector('.t-guide__next').textContent).toContain('1/2');
+
+      createEmptyDomUnderBody('test-container-2');
+      await mountBaseGuide(
+        { mode: 'dialog', modelValue: 0, counter: () => '1/2', hideCounter: true },
+        `#test-container-2`,
+        [{ element: '.guide-element-1' }, { element: '.guide-element-2' }],
+      );
+      // 两个实例均 teleport 到 body，遍历断言 hideCounter 实例的 next 按钮不含 counter 文本
+      const nextBtns = document.querySelectorAll('.t-guide__next');
+      const hiddenCounterBtn = Array.from(nextBtns).find((btn) => !btn.textContent.includes('1/2'));
+      expect(hiddenCounterBtn).toBeTruthy();
+    });
+
+    it('current[number]', async () => {
+      createEmptyDomUnderBody('test-container');
+      await mountBaseGuide({ current: 0 }, `#test-container`);
+      expect(document.body.classList.contains('t-guide--lock')).toBe(true);
+    });
+
+    it('modelValue[number]', async () => {
+      // 重置 body 锁定状态，避免依赖其他用例的清理行为
+      document.body.classList.remove('t-guide--lock');
       const testValue = async (props, target) => {
-        mountBaseGuide(props);
+        await mountBaseGuide(props);
         expect(document.body.classList.contains('t-guide--lock')).toBe(target);
       };
 
-      testValue({}, false);
-      testValue({ modelValue: -1 }, false);
-      testValue({ defaultCurrent: -1 }, false);
-      testValue({ modelValue: 0 }, true);
+      await testValue({}, false);
+      await testValue({ modelValue: -1 }, false);
+      await testValue({ defaultCurrent: -1 }, false);
+      await testValue({ modelValue: 0 }, true);
     });
+
+    it('finishButtonProps[object]', async () => {
+      createEmptyDomUnderBody('test-container');
+      await mountBaseGuide(
+        { mode: 'dialog', modelValue: 0, finishButtonProps: { content: '完成引导' } },
+        `#test-container`,
+      );
+      expect(document.querySelector('.t-guide__finish').textContent).toContain('完成引导');
+    });
+
+    it('hideBack[boolean]', async () => {
+      const props = {
+        mode: 'dialog',
+        modelValue: 0,
+        hideBack: true,
+      };
+
+      createEmptyDomUnderBody('test-container');
+      await mountBaseGuide(props, `#test-container`);
+
+      expect(document.querySelector('.t-guide__tooltip')).toBeTruthy();
+      expect(document.querySelector('.t-guide__back')).toBeFalsy();
+      expect(document.querySelector('.t-guide__finish')).toBeTruthy();
+    });
+
+    it('hideSkip[boolean]', async () => {
+      createEmptyDomUnderBody('test-container');
+      await mountBaseGuide({ mode: 'dialog', modelValue: 0 }, `#test-container`, [
+        { element: '.guide-element-1' },
+        { element: '.guide-element-2' },
+      ]);
+      expect(document.querySelector('.t-guide__skip')).toBeTruthy();
+
+      createEmptyDomUnderBody('test-container-2');
+      await mountBaseGuide({ mode: 'dialog', modelValue: 0, hideSkip: true }, `#test-container-2`, [
+        { element: '.guide-element-1' },
+        { element: '.guide-element-2' },
+      ]);
+      // 两个实例均 teleport 到 body：hideSkip 实例不渲染跳过按钮，全 body 仅剩第一个实例的 1 个
+      expect(document.querySelectorAll('.t-guide__skip').length).toBe(1);
+    });
+
+    // highlightPadding 依赖元素真实尺寸计算（getBoundingClientRect），jsdom 中无法断言
+    it.todo('highlightPadding[number]');
 
     it('mode[popover/dialog]', async () => {
       const testMode = async ({ props, component, expectProps }) => {
@@ -124,25 +204,14 @@ describe('Guide', () => {
       });
     });
 
-    it('hideBack[boolean]', async () => {
-      const props = {
-        mode: 'dialog',
-        modelValue: 0,
-        hideBack: true,
-      };
-
+    it('nextButtonProps[object]', async () => {
       createEmptyDomUnderBody('test-container');
-      await mountBaseGuide(props, `#test-container`);
-
-      expect(document.querySelector('.t-guide__tooltip')).toBeTruthy();
-      expect(document.querySelector('.t-guide__back')).toBeFalsy();
-      expect(document.querySelector('.t-guide__finish')).toBeTruthy();
-    });
-
-    it('current[number]', async () => {
-      createEmptyDomUnderBody('test-container');
-      await mountBaseGuide({ current: 0 }, `#test-container`);
-      expect(document.body.classList.contains('t-guide--lock')).toBe(true);
+      await mountBaseGuide(
+        { mode: 'dialog', modelValue: 0, nextButtonProps: { content: '去下一步' } },
+        `#test-container`,
+        [{ element: '.guide-element-1' }, { element: '.guide-element-2' }],
+      );
+      expect(document.querySelector('.t-guide__next').textContent).toContain('去下一步');
     });
 
     it('showOverlay[boolean]', async () => {
@@ -155,71 +224,6 @@ describe('Guide', () => {
       expect(document.querySelector('.t-guide__highlight--nomask')).toBeTruthy();
     });
 
-    it('hideSkip[boolean]', async () => {
-      createEmptyDomUnderBody('test-container');
-      await mountBaseGuide({ mode: 'dialog', modelValue: 0 }, `#test-container`, [
-        { element: '.guide-element-1' },
-        { element: '.guide-element-2' },
-      ]);
-      expect(document.querySelector('.t-guide__skip')).toBeTruthy();
-
-      createEmptyDomUnderBody('test-container-2');
-      await mountBaseGuide({ mode: 'dialog', modelValue: 0, hideSkip: true }, `#test-container-2`, [
-        { element: '.guide-element-1' },
-        { element: '.guide-element-2' },
-      ]);
-      // 两个实例均 teleport 到 body：hideSkip 实例不渲染跳过按钮，全 body 仅剩第一个实例的 1 个
-      expect(document.querySelectorAll('.t-guide__skip').length).toBe(1);
-    });
-
-    it('counter[function] & hideCounter[boolean]', async () => {
-      createEmptyDomUnderBody('test-container');
-      await mountBaseGuide({ mode: 'dialog', modelValue: 0, counter: () => '1/2' }, `#test-container`, [
-        { element: '.guide-element-1' },
-        { element: '.guide-element-2' },
-      ]);
-      expect(document.querySelector('.t-guide__next').textContent).toContain('1/2');
-
-      createEmptyDomUnderBody('test-container-2');
-      await mountBaseGuide(
-        { mode: 'dialog', modelValue: 0, counter: () => '1/2', hideCounter: true },
-        `#test-container-2`,
-        [{ element: '.guide-element-1' }, { element: '.guide-element-2' }],
-      );
-      // 两个实例均 teleport 到 body，遍历断言 hideCounter 实例的 next 按钮不含 counter 文本
-      const nextBtns = document.querySelectorAll('.t-guide__next');
-      const hiddenCounterBtn = Array.from(nextBtns).find((btn) => !btn.textContent.includes('1/2'));
-      expect(hiddenCounterBtn).toBeTruthy();
-    });
-
-    it('nextButtonProps[object]', async () => {
-      createEmptyDomUnderBody('test-container');
-      await mountBaseGuide(
-        { mode: 'dialog', modelValue: 0, nextButtonProps: { content: '去下一步' } },
-        `#test-container`,
-        [{ element: '.guide-element-1' }, { element: '.guide-element-2' }],
-      );
-      expect(document.querySelector('.t-guide__next').textContent).toContain('去下一步');
-    });
-
-    it('finishButtonProps[object]', async () => {
-      createEmptyDomUnderBody('test-container');
-      await mountBaseGuide(
-        { mode: 'dialog', modelValue: 0, finishButtonProps: { content: '完成引导' } },
-        `#test-container`,
-      );
-      expect(document.querySelector('.t-guide__finish').textContent).toContain('完成引导');
-    });
-
-    it('backButtonProps[object]', async () => {
-      createEmptyDomUnderBody('test-container');
-      await mountBaseGuide(
-        { mode: 'dialog', modelValue: 0, backButtonProps: { content: '返回上一步' } },
-        `#test-container`,
-      );
-      expect(document.querySelector('.t-guide__back').textContent).toContain('返回上一步');
-    });
-
     it('skipButtonProps[object]', async () => {
       createEmptyDomUnderBody('test-container');
       await mountBaseGuide(
@@ -229,9 +233,6 @@ describe('Guide', () => {
       );
       expect(document.querySelector('.t-guide__skip').textContent).toContain('跳过引导');
     });
-
-    // highlightPadding 依赖元素真实尺寸计算（getBoundingClientRect），jsdom 中无法断言
-    it.todo('highlightPadding[number]');
   });
 
   describe('events', () => {

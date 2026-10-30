@@ -10,6 +10,21 @@ const name = `${prefix}-radio`;
 
 describe('RadioGroup', () => {
   describe('props', () => {
+    // borderless/readonly 作用于整组选项，与子项联动验证
+    it.todo('borderless[boolean]');
+
+    it('direction[vertical/horizontal]', () => {
+      const wrapper = mount(() => (
+        <RadioGroup>
+          <Radio name="radio" value="1" label="单选"></Radio>
+          <Radio name="radio" value="2" label="单选"></Radio>
+        </RadioGroup>
+      ));
+      // 默认值为 vertical
+      expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(false);
+    });
+
     it('keys[object]', async () => {
       const wrapper = mount(RadioGroup, {
         props: {
@@ -34,20 +49,6 @@ describe('RadioGroup', () => {
       expect(wrapper.element).toMatchSnapshot();
     });
 
-    it('direction[vertical/horizontal]', () => {
-      const wrapper = mount(() => (
-        <RadioGroup>
-          <Radio name="radio" value="1" label="单选"></Radio>
-          <Radio name="radio" value="2" label="单选"></Radio>
-        </RadioGroup>
-      ));
-      // 默认值为 vertical
-      expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(true);
-      expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(false);
-    });
-
-    // borderless/readonly 作用于整组选项，与子项联动验证
-    it.todo('borderless[boolean]');
     it.todo('readonly[boolean]');
   });
 

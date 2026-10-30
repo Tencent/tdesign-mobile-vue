@@ -9,6 +9,37 @@ const name = `${prefix}-segmented`;
 
 describe('Segmented', () => {
   describe('props', () => {
+    it('block[boolean]', () => {
+      const wrapper = mount(Segmented, {
+        props: {
+          block: true,
+          options: ['选项一', '选项二'],
+        },
+      });
+
+      expect(wrapper.classes()).toContain(`${name}--block`);
+    });
+
+    it('disabled[boolean]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(Segmented, {
+        props: {
+          disabled: true,
+          options: ['选项一', '选项二', '选项三'],
+          defaultValue: '选项一',
+          onChange,
+        },
+      });
+
+      const $items = wrapper.findAll(`.${name}__item`);
+      expect($items[0].classes()).toContain(`${name}__item--disabled`);
+      expect($items[1].classes()).toContain(`${name}__item--disabled`);
+
+      // 点击禁用项不应触发 change 事件
+      await $items[1].trigger('click');
+      expect(onChange).not.toBeCalled();
+    });
+
     it('options[string array]', async () => {
       const wrapper = mount(Segmented, {
         props: {
@@ -50,37 +81,6 @@ describe('Segmented', () => {
       const $items = wrapper.findAll(`.${name}__item`);
       expect($items.length).toBe(3);
       expect($items[1].classes()).toContain(`${name}__item--active`);
-    });
-
-    it('block[boolean]', () => {
-      const wrapper = mount(Segmented, {
-        props: {
-          block: true,
-          options: ['选项一', '选项二'],
-        },
-      });
-
-      expect(wrapper.classes()).toContain(`${name}--block`);
-    });
-
-    it('disabled[boolean]', async () => {
-      const onChange = vi.fn();
-      const wrapper = mount(Segmented, {
-        props: {
-          disabled: true,
-          options: ['选项一', '选项二', '选项三'],
-          defaultValue: '选项一',
-          onChange,
-        },
-      });
-
-      const $items = wrapper.findAll(`.${name}__item`);
-      expect($items[0].classes()).toContain(`${name}__item--disabled`);
-      expect($items[1].classes()).toContain(`${name}__item--disabled`);
-
-      // 点击禁用项不应触发 change 事件
-      await $items[1].trigger('click');
-      expect(onChange).not.toBeCalled();
     });
 
     it('options[disabled item]', async () => {

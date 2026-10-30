@@ -77,6 +77,7 @@ pnpm run test:snap-update
 遵循以下原则：
 
 - 分组按需创建，不保留空的 `describe`。
+- `props` 分组内的用例按组件属性声明顺序排列（主组件为 `props.ts`，子组件为 `*-props.ts`）；`it.todo` 同样参与排序；标题中的属性名未在声明文件中找到的用例置于分组末尾，保持原有相对顺序。
 - 组件根 `describe` 下不直接放置 `it` 或 `test`。
 - 能明确归属于单一公开 API 类型的测试放入前四类；跨多个 API 或无法归属于单一 API 的完整行为放入 `scenarios`。
 - `scenarios` 可继续按具体功能嵌套分组，例如 `keyboard interaction`、`range selection` 或 `edge cases`，避免使用 `others`、`misc` 等含义模糊的名称。
