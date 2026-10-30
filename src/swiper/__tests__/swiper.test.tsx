@@ -268,7 +268,7 @@ describe('Swiper', () => {
       const current = ref(1);
       const duration = 100;
       const onChange = vi.fn();
-      const direction = ref('horinzotal');
+      const direction = ref('horizontal');
       const wrapper = mount({
         setup() {
           return () => (
