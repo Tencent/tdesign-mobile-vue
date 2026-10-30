@@ -188,7 +188,9 @@ describe('Cascader', () => {
     });
 
     it('keys[object]', async () => {
-      const wrapper = mount(<Cascader visible={true} options={areaList} keys={keys} value={address} theme="tab" />);
+      const wrapper = mount(
+        <Cascader visible={true} options={areaList} keys={keys} value={address.value} theme="tab" />,
+      );
       expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
       await nextTick();
       const $tabs = wrapper.find(`.${prefix}-tabs`);
@@ -197,7 +199,7 @@ describe('Cascader', () => {
 
     it('value[string]', async () => {
       const address = ref('120119');
-      const wrapper = mount(<Cascader visible={true} options={options} value={address} theme="tab" />);
+      const wrapper = mount(<Cascader visible={true} options={options} value={address.value} theme="tab" />);
       expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
       await nextTick();
       const $tabs = wrapper.find(`.${prefix}-tabs`);
@@ -206,7 +208,7 @@ describe('Cascader', () => {
 
     it('value[number]', async () => {
       const address = ref(120119);
-      const wrapper = mount(<Cascader visible={true} options={options} value={address} theme="tab" />);
+      const wrapper = mount(<Cascader visible={true} options={options} value={address.value} theme="tab" />);
       expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
       await nextTick();
     });
@@ -273,7 +275,7 @@ describe('Cascader', () => {
       const themeList = ['', 'step', 'tab'];
       themeList.forEach((theme, index) => {
         const wrapper = mount(() => (
-          <Cascader visible={true} options={options} value={address} theme={theme}></Cascader>
+          <Cascader visible={true} options={options} value={address.value} theme={theme}></Cascader>
         ));
         if (theme === 'step') {
           expect(wrapper.find(`.${name}__steps`).exists()).toBeTruthy();

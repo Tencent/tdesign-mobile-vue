@@ -28,7 +28,7 @@ describe('Divider', () => {
       const wrapper = mount(Divider, {
         props: {
           align: '',
-          content: TEXT,
+          content: () => TEXT,
         },
       });
       const $divider = wrapper.findComponent(Divider);
@@ -51,7 +51,7 @@ describe('Divider', () => {
       const wrapper = mount(Divider, {
         props: {
           layout: '',
-          content: TEXT,
+          content: () => TEXT,
         },
       });
       const $divider = wrapper.findComponent(Divider);
@@ -78,7 +78,7 @@ describe('Divider', () => {
           return () => (
             <Divider>
               {{
-                content: TEXT,
+                content: () => TEXT,
               }}
             </Divider>
           );
@@ -94,7 +94,7 @@ describe('Divider', () => {
           return () => (
             <Divider>
               {{
-                default: TEXT,
+                default: () => TEXT,
               }}
             </Divider>
           );

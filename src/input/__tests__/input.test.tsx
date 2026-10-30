@@ -126,7 +126,7 @@ describe('Input', () => {
     });
 
     it('autocomplete[string]', async () => {
-      const wrapper = mount(<Input label="标题" autocomplete />);
+      const wrapper = mount(<Input label="标题" autocomplete="on" />);
       const input = wrapper.find('.t-input__wrap input');
       expect(input.element.getAttribute('autocomplete')).toBe('On');
     });

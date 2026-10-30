@@ -28,11 +28,12 @@ describe('GridItem', () => {
           return () => (
             <Grid>
               {{
-                default: items2.map((item, index) => {
-                  return (
-                    <GridItem text={item.text + index} description={item.description + index} image={item.image} />
-                  );
-                }),
+                default: () =>
+                  items2.map((item, index) => {
+                    return (
+                      <GridItem text={item.text + index} description={item.description + index} image={item.image} />
+                    );
+                  }),
               }}
             </Grid>
           );

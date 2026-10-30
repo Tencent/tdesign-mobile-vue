@@ -313,11 +313,12 @@ describe('Swiper', () => {
           return () => (
             <Swiper navigation={null}>
               {{
-                default: list.map((item) => (
-                  <SwiperItem>
-                    <img src={item.image} />
-                  </SwiperItem>
-                )),
+                default: () =>
+                  list.map((item) => (
+                    <SwiperItem>
+                      <img src={item.image} />
+                    </SwiperItem>
+                  )),
                 navigation: () => <div class="test-navigation">navigation</div>,
               }}
             </Swiper>
@@ -333,11 +334,12 @@ describe('Swiper', () => {
           return () => (
             <Swiper navigation={false}>
               {{
-                default: list.map((item) => (
-                  <SwiperItem>
-                    <img src={item.image} />
-                  </SwiperItem>
-                )),
+                default: () =>
+                  list.map((item) => (
+                    <SwiperItem>
+                      <img src={item.image} />
+                    </SwiperItem>
+                  )),
                 navigation: () => <div class="test-navigation">navigation</div>,
               }}
             </Swiper>

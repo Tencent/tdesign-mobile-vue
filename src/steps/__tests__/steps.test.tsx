@@ -38,9 +38,10 @@ describe('Steps', () => {
           return () => (
             <Steps v-model={current.value} theme={theme} layout={layout} onChange={onChange}>
               {{
-                default: items.map((item, index) => {
-                  return <StepItem title={item.title} content={item.content} />;
-                }),
+                default: () =>
+                  items.map((item, index) => {
+                    return <StepItem title={item.title} content={item.content} />;
+                  }),
               }}
             </Steps>
           );
@@ -64,9 +65,10 @@ describe('Steps', () => {
           return () => (
             <Steps v-model={current.value} readonly={true} onChange={onChange}>
               {{
-                default: items.map((item, index) => {
-                  return <StepItem title={item.title} content={item.content} />;
-                }),
+                default: () =>
+                  items.map((item, index) => {
+                    return <StepItem title={item.title} content={item.content} />;
+                  }),
               }}
             </Steps>
           );
@@ -93,9 +95,10 @@ describe('Steps', () => {
           return () => (
             <Steps v-model={current.value} readonly={true} layout={layout}>
               {{
-                default: itemStatus.map((item, index) => {
-                  return <StepItem title={item.title} content={item.content} status={item.status} />;
-                }),
+                default: () =>
+                  itemStatus.map((item, index) => {
+                    return <StepItem title={item.title} content={item.content} status={item.status} />;
+                  }),
               }}
             </Steps>
           );
@@ -154,9 +157,10 @@ describe('Steps', () => {
           return () => (
             <Steps v-model={current.value} onChange={onChange}>
               {{
-                default: items.map((item, index) => {
-                  return <StepItem title={item.title} content={item.content} />;
-                }),
+                default: () =>
+                  items.map((item, index) => {
+                    return <StepItem title={item.title} content={item.content} />;
+                  }),
               }}
             </Steps>
           );

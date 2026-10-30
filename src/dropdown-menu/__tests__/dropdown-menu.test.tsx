@@ -38,16 +38,17 @@ describe('DropdownMenu', () => {
           return () => (
             <DropdownMenu>
               {{
-                default: items.map((item, index) => {
-                  return (
-                    <DropdownItem
-                      value={item.value.value}
-                      label={item.label}
-                      multiple={item.multiple}
-                      options={item.options}
-                    />
-                  );
-                }),
+                default: () =>
+                  items.map((item, index) => {
+                    return (
+                      <DropdownItem
+                        value={item.value.value}
+                        label={item.label}
+                        multiple={item.multiple}
+                        options={item.options}
+                      />
+                    );
+                  }),
               }}
             </DropdownMenu>
           );

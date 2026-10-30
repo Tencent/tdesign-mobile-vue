@@ -74,9 +74,10 @@ describe('Grid', () => {
           return () => (
             <Grid border={true}>
               {{
-                default: items.map((item, index) => {
-                  return <GridItem text={item.text + index} image={item.image} />;
-                }),
+                default: () =>
+                  items.map((item, index) => {
+                    return <GridItem text={item.text + index} image={item.image} />;
+                  }),
               }}
             </Grid>
           );
@@ -97,9 +98,10 @@ describe('Grid', () => {
           return () => (
             <Grid column={column}>
               {{
-                default: items.map((item, index) => {
-                  return <GridItem text={item.text + index} image={item.image} />;
-                }),
+                default: () =>
+                  items.map((item, index) => {
+                    return <GridItem text={item.text + index} image={item.image} />;
+                  }),
               }}
             </Grid>
           );

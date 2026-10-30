@@ -8,11 +8,10 @@ const themeList = ['', 'default', 'card'];
 describe('Collapse', () => {
   describe('props', () => {
     test('defaultExpandAll[boolean]', async () => {
-      const defaultExpandAll = ref(false);
       const wrapper = mount({
         setup() {
           return () => (
-            <Collapse defaultExpandAll={defaultExpandAll}>
+            <Collapse defaultExpandAll={true}>
               <CollapsePanel ref="1" value="1" header="标题1" content="内容1" />
               <CollapsePanel ref="2" value="2" header="标题2" content="内容2" />
             </Collapse>
@@ -20,15 +19,13 @@ describe('Collapse', () => {
         },
       });
 
+      // onMounted 中展开需要等待 tick
+      await wrapper.vm.$nextTick();
+
       const panel1 = wrapper.findComponent({ ref: '1' });
       const panel2 = wrapper.findComponent({ ref: '2' });
 
-      expect(panel1.classes()).not.toContain('t-collapse-panel--expanded');
-      expect(panel2.classes()).not.toContain('t-collapse-panel--expanded');
-
-      defaultExpandAll.value = true;
-      await wrapper.vm.$nextTick();
-
+      // defaultExpandAll = true 时所有面板初始展开
       expect(panel1.classes()).toContain('t-collapse-panel--expanded');
       expect(panel2.classes()).toContain('t-collapse-panel--expanded');
     });

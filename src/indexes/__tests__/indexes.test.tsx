@@ -58,14 +58,15 @@ describe('Indexes', () => {
           return () => (
             <Indexes indexList={indexList}>
               {{
-                default: list.map((item, index) => (
-                  <template>
-                    <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
-                    {item.children.map((val) => (
-                      <TCell className="indexes-cell">{val}</TCell>
-                    ))}
-                  </template>
-                )),
+                default: () =>
+                  list.map((item, index) => (
+                    <template>
+                      <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
+                      {item.children.map((val) => (
+                        <TCell className="indexes-cell">{val}</TCell>
+                      ))}
+                    </template>
+                  )),
               }}
             </Indexes>
           );
@@ -82,14 +83,15 @@ describe('Indexes', () => {
           return () => (
             <Indexes>
               {{
-                default: list.map((item, index) => (
-                  <template>
-                    <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
-                    {item.children.map((val) => (
-                      <TCell className="indexes-cell">{val}</TCell>
-                    ))}
-                  </template>
-                )),
+                default: () =>
+                  list.map((item, index) => (
+                    <template>
+                      <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
+                      {item.children.map((val) => (
+                        <TCell className="indexes-cell">{val}</TCell>
+                      ))}
+                    </template>
+                  )),
               }}
             </Indexes>
           );
@@ -264,14 +266,15 @@ describe('Indexes', () => {
           return () => (
             <Indexes showFullIndex indexList={indexList}>
               {{
-                default: list.map((item, index) => (
-                  <template>
-                    <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
-                    {item.children.map((val) => (
-                      <TCell className="indexes-cell">{val}</TCell>
-                    ))}
-                  </template>
-                )),
+                default: () =>
+                  list.map((item, index) => (
+                    <template>
+                      <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
+                      {item.children.map((val) => (
+                        <TCell className="indexes-cell">{val}</TCell>
+                      ))}
+                    </template>
+                  )),
               }}
             </Indexes>
           );

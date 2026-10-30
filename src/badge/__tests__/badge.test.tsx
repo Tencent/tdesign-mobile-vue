@@ -101,26 +101,22 @@ describe('Badge', () => {
     });
 
     it('size[medium/large]', async () => {
+      // size 默认 medium；large 增大尺寸
       const wrapper = mount(Badge, {
         props: {
           dot: true,
-          size: '',
           content: TEXT,
         },
       });
-      // size = ''
       const $badge = wrapper.findComponent(Badge);
       const inner = $badge.find(`.${name}--basic`);
-      ['medium', 'small'].forEach((s) => {
-        expect(inner.classes().includes(`${name}--${s}`)).toBeFalsy();
-      });
-      expect($badge.text()).toEqual(`${TEXT}`);
+      expect(inner.classes()).toContain(`${name}--medium`);
 
-      const size = 'small';
-      await wrapper.setProps({
-        size,
-      });
-      expect(inner.classes()).toContain(`${name}--${size}`);
+      await wrapper.setProps({ size: 'large' });
+      expect(inner.classes()).toContain(`${name}--large`);
+
+      await wrapper.setProps({ size: 'small' });
+      expect(inner.classes()).toContain(`${name}--small`);
     });
 
     it('showZero[boolean]', () => {

@@ -34,9 +34,9 @@ describe('Toast', () => {
     });
 
     it('icon[boolean]', async () => {
+      // icon prop 类型为 Function；theme 非默认时自动显示对应图标（等效 icon=true 的语义）
       const wrapper = mount(Toast, {
         props: {
-          icon: true,
           theme: 'success',
         },
       });

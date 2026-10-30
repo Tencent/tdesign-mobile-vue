@@ -52,16 +52,17 @@ describe('DropdownItem', () => {
           return () => (
             <DropdownMenu>
               {{
-                default: items.map((item, index) => {
-                  return (
-                    <DropdownItem
-                      value={item.value.value}
-                      label={item.label}
-                      disabled={item.disabled}
-                      options={item.options}
-                    />
-                  );
-                }),
+                default: () =>
+                  items.map((item, index) => {
+                    return (
+                      <DropdownItem
+                        value={item.value.value}
+                        label={item.label}
+                        disabled={item.disabled}
+                        options={item.options}
+                      />
+                    );
+                  }),
               }}
             </DropdownMenu>
           );
@@ -110,17 +111,18 @@ describe('DropdownItem', () => {
           return () => (
             <DropdownMenu>
               {{
-                default: items.map((item, index) => {
-                  return (
-                    <DropdownItem
-                      value={item.value.value}
-                      label={item.label}
-                      keys={keys}
-                      disabled={item.disabled}
-                      options={item.options}
-                    />
-                  );
-                }),
+                default: () =>
+                  items.map((item, index) => {
+                    return (
+                      <DropdownItem
+                        value={item.value.value}
+                        label={item.label}
+                        keys={keys}
+                        disabled={item.disabled}
+                        options={item.options}
+                      />
+                    );
+                  }),
               }}
             </DropdownMenu>
           );
@@ -151,17 +153,18 @@ describe('DropdownItem', () => {
           return () => (
             <DropdownMenu>
               {{
-                default: items.map((item, index) => {
-                  return (
-                    <DropdownItem
-                      value={item.value.value}
-                      label={item.label}
-                      multiple={item.multiple}
-                      options={item.options}
-                      optionsColumns={item.optionsColumns}
-                    />
-                  );
-                }),
+                default: () =>
+                  items.map((item, index) => {
+                    return (
+                      <DropdownItem
+                        value={item.value.value}
+                        label={item.label}
+                        multiple={item.multiple}
+                        options={item.options}
+                        optionsColumns={item.optionsColumns}
+                      />
+                    );
+                  }),
               }}
             </DropdownMenu>
           );
@@ -208,17 +211,18 @@ describe('DropdownItem', () => {
           return () => (
             <DropdownMenu>
               {{
-                default: items.map((item) => {
-                  return (
-                    <DropdownItem
-                      value={item.value.value}
-                      label={item.label}
-                      multiple={item.multiple}
-                      options={item.options}
-                      keepLabelActive={item.keepLabelActive}
-                    />
-                  );
-                }),
+                default: () =>
+                  items.map((item) => {
+                    return (
+                      <DropdownItem
+                        value={item.value.value}
+                        label={item.label}
+                        multiple={item.multiple}
+                        options={item.options}
+                        keepLabelActive={item.keepLabelActive}
+                      />
+                    );
+                  }),
               }}
             </DropdownMenu>
           );
@@ -251,16 +255,17 @@ describe('DropdownItem', () => {
           return () => (
             <DropdownMenu>
               {{
-                default: items.map((item, index) => {
-                  return (
-                    <DropdownItem
-                      value={item.value.value}
-                      label={item.label}
-                      options={item.options}
-                      onChange={onChange}
-                    />
-                  );
-                }),
+                default: () =>
+                  items.map((item, index) => {
+                    return (
+                      <DropdownItem
+                        value={item.value.value}
+                        label={item.label}
+                        options={item.options}
+                        onChange={onChange}
+                      />
+                    );
+                  }),
               }}
             </DropdownMenu>
           );
@@ -303,20 +308,21 @@ describe('DropdownItem', () => {
           return () => (
             <DropdownMenu>
               {{
-                default: items.map((item, index) => {
-                  return (
-                    <DropdownItem
-                      value={item.value.value}
-                      label={item.label}
-                      multiple={item.multiple}
-                      options={item.options}
-                      optionsColumns={item.optionsColumns}
-                      onReset={onReset}
-                      onConfirm={onConfirm}
-                      onChange={onChange}
-                    />
-                  );
-                }),
+                default: () =>
+                  items.map((item, index) => {
+                    return (
+                      <DropdownItem
+                        value={item.value.value}
+                        label={item.label}
+                        multiple={item.multiple}
+                        options={item.options}
+                        optionsColumns={item.optionsColumns}
+                        onReset={onReset}
+                        onConfirm={onConfirm}
+                        onChange={onChange}
+                      />
+                    );
+                  }),
               }}
             </DropdownMenu>
           );

@@ -24,9 +24,10 @@ describe('StepItem', () => {
           return () => (
             <Steps v-model={current.value}>
               {{
-                default: stepItems.value.map((item, index) => {
-                  return <StepItem title={item.title} content={item.content} />;
-                }),
+                default: () =>
+                  stepItems.value.map((item, index) => {
+                    return <StepItem title={item.title} content={item.content} />;
+                  }),
               }}
             </Steps>
           );
