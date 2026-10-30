@@ -70,10 +70,8 @@ describe('CollapsePanel', () => {
             );
           },
         });
-        if (placement) {
-          const $CollapsePanel = wrapper.findComponent(CollapsePanel);
-          expect($CollapsePanel.classes()).toContain(`t-collapse-panel--${placement}`);
-        }
+        const $CollapsePanel = wrapper.findComponent(CollapsePanel);
+        expect($CollapsePanel.classes()).toContain(`t-collapse-panel--${placement}`);
       });
     });
 

@@ -1,12 +1,13 @@
 import { ref, h, nextTick } from 'vue';
 import { config, mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { AppIcon as TIconApp, CloseIcon } from 'tdesign-icons-vue-next';
 import Cascader from '../cascader';
 import type { TdCascaderProps } from '../type';
 import Radio from '../../radio/index';
 import { Tabs as TTabs, TabPanel as TTabPanel } from '../../tabs';
 import prefixConfig from '../../config';
+import { sleep } from '../../shared/util';
 
 // scrollTo isn't implemented in JSDOM，see: https://github.com/vuejs/vue-test-utils/issues/319
 Element.prototype.scrollTo = () => {};
@@ -165,6 +166,12 @@ const subTitles = ['请选择省份', '请选择城市', '请选择区/县'];
 const defaultPlaceholder = '默认选项标签';
 
 describe('Cascader', () => {
+  // 用例结束后先排空浮层异步任务再清理 teleport 挂载内容，避免卸载期间的 patch 报错与跨用例查询污染
+  afterEach(async () => {
+    await sleep(300);
+    document.body.innerHTML = '';
+  });
+
   describe('props', () => {
     it('visible[boolean]', async () => {
       const onPick = vi.fn();
@@ -194,8 +201,9 @@ describe('Cascader', () => {
       );
       expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
       await nextTick();
-      const $tabs = wrapper.find(`.${prefix}-tabs`);
-      // expect($tabs.text()).toEqual('天津市天津市蓟州区');
+      // 内容 teleport 到 body，从 document 查询；keys 别名（name/id/sub）正确解析选中路径
+      expect(document.querySelector(`.${prefix}-tabs`).textContent).toContain('天津市');
+      expect(document.querySelector(`.${prefix}-tabs`).textContent).toContain('蓟州区');
     });
 
     it('value[string]', async () => {
@@ -203,20 +211,52 @@ describe('Cascader', () => {
       const wrapper = mount(<Cascader visible={true} options={options} value={address.value} theme="tab" />);
       expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
       await nextTick();
-      const $tabs = wrapper.find(`.${prefix}-tabs`);
-      // expect($tabs.text()).toEqual('天津市天津市蓟州区');
+      const $tabs = document.querySelector(`.${prefix}-tabs`);
+      expect($tabs.textContent).toContain('天津市');
+      expect($tabs.textContent).toContain('蓟州区');
     });
 
     it('value[number]', async () => {
+      // 数字 value 需与 options 中 value 类型一致才能匹配
+      const numericOptions = [
+        {
+          label: '北京市',
+          value: 110000,
+          children: [{ label: '北京市', value: 110100, children: [{ label: '东城区', value: 110101 }] }],
+        },
+        {
+          label: '天津市',
+          value: 120000,
+          children: [
+            {
+              label: '天津市',
+              value: 120100,
+              children: [
+                { label: '和平区', value: 120101 },
+                { label: '蓟州区', value: 120119 },
+              ],
+            },
+          ],
+        },
+      ];
       const address = ref(120119);
-      const wrapper = mount(<Cascader visible={true} options={options} value={address.value} theme="tab" />);
+      const wrapper = mount(<Cascader visible={true} options={numericOptions} value={address.value} theme="tab" />);
       expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
       await nextTick();
+      const $tabs = document.querySelector(`.${prefix}-tabs`);
+      expect($tabs.textContent).toContain('天津市');
+      expect($tabs.textContent).toContain('蓟州区');
     });
 
     it('defaultValue[string]', async () => {
       const wrapper = mount(<Cascader visible={true} options={options} defaultValue="110000" theme="step" />);
-      expect(wrapper.find(`.${name}__steps`).exists()).toBeTruthy();
+      // onMounted 中的初始化会再触发一次渲染，需要两个 tick
+      await nextTick();
+      await nextTick();
+      // 内容 teleport 到 body，从 document 查询
+      const $steps = document.querySelector(`.${name}__steps`);
+      expect($steps).not.toBeNull();
+      expect($steps.textContent).toContain('北京市');
     });
 
     it('title[string]', async () => {

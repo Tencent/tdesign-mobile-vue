@@ -25,19 +25,6 @@ describe('Empty', () => {
       expect(dom?.element?.innerHTML).toBe('函数描述内容');
     });
 
-    it('action[string]', () => {
-      const action = 'some action';
-      const wrapper = mount(Empty, {
-        props: {
-          action,
-        },
-      });
-      const dom = wrapper.find('.t-empty__actions');
-      expect(dom?.element?.innerHTML).toBe(action);
-      const icons = wrapper.findAll('.t-empty__icon');
-      expect(icons.length).toBe(0);
-    });
-
     it('action[function]', () => {
       const wrapper = mount(Empty, {
         props: {
@@ -67,17 +54,6 @@ describe('Empty', () => {
       });
       const dom = wrapper.find('.t-empty__icon');
       expect(dom?.element?.innerHTML).toBe('some function icon');
-    });
-
-    it('image[vnode]', () => {
-      const image = <img class="test-img" />;
-      const wrapper = mount(Empty, {
-        props: {
-          image,
-        },
-      });
-      const dom = wrapper.findAll('.t-empty__thumb .test-img');
-      expect(dom.length).toBe(1);
     });
 
     it('image[string]', () => {

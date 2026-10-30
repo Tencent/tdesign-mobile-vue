@@ -59,7 +59,7 @@ Props 用例标题格式为 `it('propName[类型]', ...)`，每个声明类型�
 - 事件用例直接使用事件名称：`it('change')`、`it('visibleChange')`。
 - 实例方法用例直接使用方法名：`it('clearValidate')`。
 - 插槽用例直接使用插槽名，`slots` 分组已标明上下文，不加 `[slot]` 后缀：`it('icon')`、`it('default')`。
-- 多 Prop 组合验证用 `&` 连接：`it(':title[string] & :content[string]')`。
+- 多 Prop 组合验证用 `&` 连接：`it('title[string] & content[string]')`。
 - 未实现的 API 用 `it.todo('propName[type]')` 标注，并逐类型拆分。
 - 标题中不使用 `:` 开头（事件/实例方法）、不使用 `=` 连接、不使用 `others`/`misc` 等模糊名称。
 

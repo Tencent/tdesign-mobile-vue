@@ -99,7 +99,7 @@ describe('TreeSelect', () => {
       const wrapper = mount({
         setup() {
           const value = ref(defaultValue);
-          return () => <TreeSelect options={options} value={value} onChange={onChange} />;
+          return () => <TreeSelect options={options} value={value.value} onChange={onChange} />;
         },
       });
       const radios = wrapper.findAllComponents(Radio);

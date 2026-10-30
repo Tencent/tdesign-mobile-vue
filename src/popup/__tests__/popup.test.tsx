@@ -58,8 +58,8 @@ describe('Popup', () => {
           visible: true,
         },
       });
-      // expect(wrapper.find('.t-popup__close').exists()).toBeTruthy();
-      // expect(wrapper.find('.t-popup__close').text()).toEqual(temp);
+      expect(wrapper.find('.t-popup__close').exists()).toBeTruthy();
+      expect(wrapper.find('.t-popup__close').text()).toEqual(temp);
     });
 
     it('placement[top/left/right/bottom/center]', async () => {
@@ -82,7 +82,9 @@ describe('Popup', () => {
       await wrapper.setProps({
         zIndex: 17000,
       });
-      // expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 17000');
+      // 更新后内容已 teleport 到 body；此前用例的 popup 也会挂载到 body，断言存在任一匹配实例
+      const popups = Array.from(document.querySelectorAll<HTMLElement>('.t-popup'));
+      expect(popups.some((el) => el.getAttribute('style')?.includes('z-index: 17000'))).toBe(true);
     });
 
     it('transitionName[string]', async () => {
@@ -114,17 +116,8 @@ describe('Popup', () => {
       });
       // 遮罩 DOM 由 Overlay v-show 控制，隐藏态不可见
       const overlay = wrapper2.find('.t-overlay');
-      overlay.exists() && expect(overlay.isVisible()).toBeFalsy();
-    });
-
-    it('zIndex[number]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          visible: true,
-          zIndex: 999,
-        },
-      });
-      expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 999');
+      expect(overlay.exists()).toBe(true);
+      expect(overlay.isVisible()).toBe(false);
     });
 
     it('overlayProps[object]', async () => {

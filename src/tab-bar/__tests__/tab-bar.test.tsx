@@ -67,7 +67,7 @@ describe('TabBar', () => {
       expect(wrapper.classes()).not.toContain('t-tab-bar--fixed');
     });
 
-    it('defaultValue[number]', async () => {
+    it('defaultValue[string]', async () => {
       const wrapper = mount({
         render: () => (
           <TabBar defaultValue={'2'}>
@@ -79,27 +79,27 @@ describe('TabBar', () => {
       });
 
       expect(wrapper.findAll('.t-tab-bar-item')).toHaveLength(list.length);
-      // expect(
-      //   wrapper
-      //     .findAllComponents(TabBarItem)
-      //     .find((item) => item.vm.isChecked)
-      //     .text(),
-      // ).toEqual('标签二');
+      const $checked = wrapper.findAll('.t-tab-bar-item__content--checked');
+      expect($checked).toHaveLength(1);
+      expect($checked[0].text()).toContain('标签二');
     });
 
-    it('value[default]', async () => {
+    it('value[string]', async () => {
       const wrapper = mount({
         render() {
           return (
-            <TabBar value={0}>
-              <TabBarItem></TabBarItem>
+            <TabBar value={'1'}>
+              {list.map((item) => {
+                return <TabBarItem {...item}>{item.text}</TabBarItem>;
+              })}
             </TabBar>
           );
         },
       });
 
-      const item = wrapper.findComponent('.t-tab-bar-item');
-      // expect(item.vm.isChecked).toBeTruthy();
+      const $checked = wrapper.findAll('.t-tab-bar-item__content--checked');
+      expect($checked).toHaveLength(1);
+      expect($checked[0].text()).toContain('标签一');
     });
 
     it('shape[normal/round]', () => {

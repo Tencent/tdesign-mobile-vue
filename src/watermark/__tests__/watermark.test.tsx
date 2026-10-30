@@ -1,11 +1,22 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi, beforeAll } from 'vitest';
-import { h } from 'vue';
 import Watermark from '../watermark';
 
 describe('Watermark', () => {
   beforeAll(() => {
-    HTMLCanvasElement.prototype.getContext = vi.fn();
+    // mock canvas 2d context，使 generateBase64Url 同步回调并注入水印层
+    const noop = () => {};
+    const ctx = {
+      translate: noop,
+      rotate: noop,
+      fillRect: noop,
+      fillText: noop,
+      drawImage: noop,
+      save: noop,
+      restore: noop,
+    };
+    HTMLCanvasElement.prototype.getContext = vi.fn(() => ctx as unknown as CanvasRenderingContext2D);
+    HTMLCanvasElement.prototype.toDataURL = vi.fn(() => 'data:image/png;base64,mock');
   });
 
   describe('props', () => {
@@ -41,7 +52,9 @@ describe('Watermark', () => {
           tdesign
         </Watermark>
       ));
-      expect(wrapper.classes()).toContain('t-watermark');
+      // 尺寸参与 canvas 绘制，jsdom 下验证注入的水印层背景图生成
+      const $mark = wrapper.find('.t-watermark > div');
+      expect($mark.attributes('style')).toContain('background-image');
     });
 
     it('rotate[number]', () => {
@@ -86,7 +99,8 @@ describe('Watermark', () => {
           tdesign
         </Watermark>
       ));
-      expect(wrapper.classes()).toContain('t-watermark');
+      const $mark = wrapper.find('.t-watermark > div');
+      expect($mark.attributes('style')).toContain('background-repeat: no-repeat');
     });
 
     it('movable[boolean] & moveInterval[number]', () => {
@@ -95,7 +109,8 @@ describe('Watermark', () => {
           tdesign
         </Watermark>
       ));
-      expect(wrapper.classes()).toContain('t-watermark');
+      const $mark = wrapper.find('.t-watermark > div');
+      expect($mark.attributes('style')).toContain('animation: watermark infinite');
     });
 
     it('removable[boolean]', () => {
@@ -113,7 +128,8 @@ describe('Watermark', () => {
           tdesign
         </Watermark>
       ));
-      expect(wrapper.classes()).toContain('t-watermark');
+      const $mark = wrapper.find('.t-watermark > div');
+      expect($mark.attributes('style')).toContain('z-index: 100');
     });
   });
 

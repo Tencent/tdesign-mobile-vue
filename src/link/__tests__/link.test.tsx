@@ -109,8 +109,8 @@ describe('Link', () => {
     });
 
     it('prefixIcon[function]', () => {
-      const wrapper = mount(() => <Link prefixIcon={<Icon />}>text</Link>);
-      expect(wrapper.findComponent(Icon)).toBeTruthy();
+      const wrapper = mount(() => <Link prefixIcon={() => <Icon />}>text</Link>);
+      expect(wrapper.findComponent(Icon).exists()).toBeTruthy();
     });
   });
 

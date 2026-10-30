@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { AppIcon as TIconApp, MoreIcon } from 'tdesign-icons-vue-next';
+import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Fab from '../fab';
 
 describe('Fab', () => {

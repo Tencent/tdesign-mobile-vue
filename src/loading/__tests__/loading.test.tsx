@@ -88,11 +88,6 @@ describe('Loading', () => {
       expect(wrapper.find('.t-loading').attributes('style')).toContain('font-size: 20px');
     });
 
-    it('size[number]', () => {
-      const wrapper = mount(<Loading size={20} />);
-      expect(wrapper.find('.t-loading').exists()).toBeTruthy();
-    });
-
     it('duration[number]', () => {
       const wrapper = mount(Loading, {
         props: {

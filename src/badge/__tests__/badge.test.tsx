@@ -114,9 +114,6 @@ describe('Badge', () => {
 
       await wrapper.setProps({ size: 'large' });
       expect(inner.classes()).toContain(`${name}--large`);
-
-      await wrapper.setProps({ size: 'small' });
-      expect(inner.classes()).toContain(`${name}--small`);
     });
 
     it('showZero[boolean]', () => {

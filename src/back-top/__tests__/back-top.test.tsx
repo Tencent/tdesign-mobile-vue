@@ -1,6 +1,6 @@
-import { ref } from 'vue';
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
+import { nextTick } from 'vue';
 import { BacktopIcon as TIconBackTop, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import BackTop from '../back-top';
 
@@ -49,11 +49,11 @@ describe('BackTop', () => {
       expect(window.document.documentElement.scrollTop).toEqual(10);
     });
 
-    it('icon[boolean]', () => {
-      const icon = ref(false);
-      const wrapper = mount(<BackTop icon={icon.value} />);
-      icon.value = true;
-      expect(wrapper.findComponent(TIconBackTop)).toBeTruthy();
+    it('icon[boolean]', async () => {
+      const wrapper = mount(<BackTop icon={false} />);
+      expect(wrapper.find('.t-back-top svg').exists()).toBe(false);
+      await wrapper.setProps({ icon: true });
+      expect(wrapper.findComponent(TIconBackTop).exists()).toBe(true);
     });
 
     it('icon[function]', () => {
@@ -63,7 +63,13 @@ describe('BackTop', () => {
 
     it('visibilityHeight[number]', async () => {
       const wrapper = mount(<BackTop visibilityHeight={0} />);
-      expect(wrapper.find('.t-back-top').exists()).toBeTruthy();
+      // 初始不可见
+      expect(wrapper.find('.t-back-top').attributes('style')).toContain('display: none');
+      // 滚动距离达到 visibilityHeight 后可见
+      document.documentElement.scrollTop = 10;
+      document.documentElement.dispatchEvent(new Event('scroll'));
+      await nextTick();
+      expect(wrapper.find('.t-back-top').attributes('style')).not.toContain('display: none');
     });
 
     it('container[function]', async () => {
@@ -72,7 +78,12 @@ describe('BackTop', () => {
       document.body.appendChild(div);
 
       const wrapper = mount(<BackTop container={() => document.querySelector('#back-top-container')} />);
-      expect(wrapper.find('.t-back-top').exists()).toBeTruthy();
+      expect(wrapper.find('.t-back-top').attributes('style')).toContain('display: none');
+      // 自定义容器内滚动达到阈值后可见
+      div.scrollTop = 300;
+      div.dispatchEvent(new Event('scroll'));
+      await nextTick();
+      expect(wrapper.find('.t-back-top').attributes('style')).not.toContain('display: none');
     });
   });
 
@@ -84,13 +95,6 @@ describe('BackTop', () => {
       });
       wrapper.find('.t-back-top').trigger('click');
       expect(onToTop).toHaveBeenCalledTimes(1);
-    });
-
-    it('toTop', async () => {
-      const onToTop = vi.fn();
-      const wrapper = mount(<BackTop onToTop={onToTop} />);
-      wrapper.find('.t-back-top').trigger('click');
-      expect(onToTop).toBeCalledTimes(1);
     });
   });
 

@@ -241,7 +241,7 @@ describe('DropdownItem', () => {
 
   describe('events', () => {
     it('change', async () => {
-      const value1 = ref(['option_1']);
+      const value1 = ref('option_1');
       const items = [
         {
           value: value1,

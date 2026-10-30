@@ -1,7 +1,8 @@
 import { mount } from '@vue/test-utils';
-import { describe, it } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { ref } from 'vue';
 import { DropdownMenu, DropdownItem } from '../index';
+import { sleep } from '../../shared/util';
 
 const prefix = 't';
 const name = `${prefix}-dropdown-menu`;
@@ -23,62 +24,47 @@ options.push({
 describe('DropdownMenu', () => {
   describe('scenarios', () => {
     it('multiple item with footer buttons', async () => {
-      // 底部 button 仅在 multiple/optionsLayout === 'tree'时，有效
-      const value1 = ref(['option_1']);
-      const items = [
-        {
-          value: value1,
-          label: '菜单',
-          multiple: true,
-          options,
-        },
-      ];
+      // 底部 button 仅在 multiple/optionsLayout === 'tree' 时有效
+      const onReset = vi.fn();
+      const onConfirm = vi.fn();
+      const onChange = vi.fn();
+      const selected = ref(['option_1']);
       const wrapper = mount({
         setup() {
           return () => (
             <DropdownMenu>
-              {{
-                default: () =>
-                  items.map((item, index) => {
-                    return (
-                      <DropdownItem
-                        value={item.value.value}
-                        label={item.label}
-                        multiple={item.multiple}
-                        options={item.options}
-                      />
-                    );
-                  }),
-              }}
+              <DropdownItem
+                v-model={selected.value}
+                label="菜单"
+                multiple
+                options={options}
+                onReset={onReset}
+                onConfirm={onConfirm}
+                onChange={onChange}
+              />
             </DropdownMenu>
           );
         },
       });
-      // todo new dropdown-menu update
-      // const $menuLabels = wrapper.findAll(`.${name}__item`);
-      // $menuLabels.map((item, index) => {
-      //   item.trigger('click', { item, index });
-      // });
-      // await sleep(200);
-      //
-      // const $dropdownItems = wrapper.findAll(`.${prefix}-dropdown-item`);
-      // expect($dropdownItems[0].attributes('class').includes(`${prefix}-is-expanded`)).toBeTruthy();
-      // expect(wrapper.findAllComponents(Button).length).toEqual(2);
-      //
-      // // 初始化，选中1项
-      // expect(wrapper.findAll(`.${prefix}-checkbox-checked`).length).toEqual(1);
-      // const $buttons = wrapper.findAll(`.${prefix}-button`);
-      // // 重置, 清空,不触发 change, 选中项为 0
-      // await $buttons[0].trigger('click');
-      // expect(wrapper.findAll(`.${prefix}-checkbox-checked`).length).toEqual(0);
-      //
-      // // 模拟点击，选中第1项
-      // const $checkbox = wrapper.findAll(`.t-checkbox`);
-      // await $checkbox[0].find(`.${prefix}-checkbox--left`).trigger('click');
-      // // 确定, 触发 change, 返回选中值 [value]
-      // await $buttons[1].trigger('click');
-      // expect(onChange).toBeCalledTimes(1);
-      // expect(onChange).toHaveBeenCalledWith(['option_0']);
+
+      // 打开菜单面板
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+
+      // 初始选中 1 项
+      expect(wrapper.findAll(`.${prefix}-checkbox--checked`).length).toBe(1);
+
+      // 重置：清空选中
+      await wrapper.find(`.${prefix}-dropdown-item__reset-btn`).trigger('click');
+      expect(wrapper.findAll(`.${prefix}-checkbox--checked`).length).toBe(0);
+      expect(onReset).toHaveBeenCalledTimes(1);
+
+      // 勾选第 1 项后确认
+      await wrapper.find(`.${prefix}-dropdown-item__checkbox-item`).trigger('click');
+      await wrapper.find(`.${prefix}-dropdown-item__confirm-btn`).trigger('click');
+      expect(onConfirm).toHaveBeenCalledWith(['option_0']);
+      expect(onChange).toHaveBeenCalledWith(['option_0']);
+      expect(selected.value).toEqual(['option_0']);
     });
 
     // closeOnClickOverlay/direction/showOverlay/zIndex 菜单浮层行为

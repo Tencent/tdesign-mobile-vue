@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
+import { nextTick } from 'vue';
 import Popover from '../popover';
 
 describe('Popover', () => {
@@ -42,6 +43,7 @@ describe('Popover', () => {
 
     it('placement[top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom]', () => {
       const wrapper = mount(() => <Popover visible={true} content="气泡内容" placement="bottom-left" />);
+      // data-popper-placement 的实际值由 popper 运行时基于真实布局计算，jsdom 下只能断言属性存在
       expect(wrapper.find('.t-popover').attributes('data-popper-placement')).toBeDefined();
     });
 
@@ -50,14 +52,23 @@ describe('Popover', () => {
       expect(wrapper.find('.t-popover__wrapper').text()).toBe('点击触发');
     });
 
-    it('closeOnClickOutside[boolean]', () => {
-      const onClose = vi.fn();
+    it('closeOnClickOutside[boolean]', async () => {
+      const onVisibleChange = vi.fn();
       const wrapper = mount(() => (
-        <Popover defaultVisible content="气泡内容" onClose={onClose} v-slots={{ default: () => '触发元素' }} />
+        <Popover
+          defaultVisible
+          content="气泡内容"
+          onVisibleChange={onVisibleChange}
+          v-slots={{ default: () => '触发元素' }}
+        />
       ));
       expect(wrapper.find('.t-popover').exists()).toBeTruthy();
-      // closeOnClickOutside 依赖真实 DOM 事件委托，单测环境无法完整模拟，属性透传不崩溃
-      expect(wrapper.find('.t-popover__wrapper').text()).toBe('触发元素');
+
+      // 点击气泡与触发元素以外的区域后关闭
+      document.body.dispatchEvent(new Event('touchstart', { bubbles: true }));
+      await nextTick();
+      expect(onVisibleChange).toHaveBeenCalledWith(false);
+      expect(wrapper.find('.t-popover').exists()).toBe(false);
     });
   });
 

@@ -41,10 +41,9 @@ describe('CountDown', () => {
       expect(wrapper2.text()).toContain('40');
 
       const wrapper3 = mount(<CountDown time={100000} format="中文"></CountDown>);
-      expect(wrapper3.find('.t-count-down---split-with-unit').exists()).toBe(false);
-
-      const wrapper4 = mount(<CountDown></CountDown>);
-      expect(wrapper4).toBeTruthy();
+      // format 不含时间占位符时不渲染任何时间项与分隔符
+      expect(wrapper3.find('.t-count-down__item').exists()).toBe(false);
+      expect(wrapper3.find('.t-count-down__split').exists()).toBe(false);
     });
 
     it('splitWithUnit[boolean]', async () => {

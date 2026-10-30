@@ -73,11 +73,8 @@ describe('Calendar', () => {
       expect($confirmBtn.text()).toEqual('确认完成');
     });
 
-    it('defaultValue[Date]', async () => {
-      const wrapper = mount(<Calendar visible={true} defaultValue={value} />);
-      // defaultValue 指定初始选中日期
-      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
-    });
+    // 实现仅消费 value，defaultValue 声明后未在任何路径读取（template.tsx 只读 props.value），待组件支持后再补
+    it.todo('defaultValue[Date]');
 
     it('usePopup[boolean]', async () => {
       const wrapper = mount(<Calendar usePopup={false} value={value} />);

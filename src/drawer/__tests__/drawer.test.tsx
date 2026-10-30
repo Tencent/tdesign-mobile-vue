@@ -33,15 +33,14 @@ describe('Drawer', () => {
       await wrapper.setProps({
         visible: true,
       });
-      // expect(wrapper.find('.t-drawer__sidebar').isVisible()).toBe(true);
+      // 内容 teleport 到 body，需从 document 查询
+      expect(isElementVisible(document.querySelector('.t-drawer__sidebar'))).toBe(true);
     });
 
     it('placement[left/right]', async () => {
       placementList.forEach((placement) => {
         const wrapper = mount(() => <Drawer visible={true} placement={placement} />);
-        if (placement) {
-          expect(wrapper.find(`.t-popup--${placement}`)).toBeTruthy();
-        }
+        expect(wrapper.find(`.t-popup--${placement}`).exists()).toBe(true);
       });
     });
 
@@ -83,9 +82,8 @@ describe('Drawer', () => {
 
       const $items = wrapper.findAll('.t-drawer__sidebar-item');
       expect($items).toHaveLength(2);
-      titleSidebar.value.map(async (item, index) => {
-        expect($items.at(index).text()).toEqual(item.title);
-      });
+      expect($items.at(0).text()).toBe('菜单一');
+      expect($items.at(1).text()).toBe('菜单二');
     });
 
     it('footer[function]', () => {
@@ -94,7 +92,7 @@ describe('Drawer', () => {
           footer: () => h(<div>custom footer</div>),
         },
       });
-      expect(wrapper.find('.t-drawer__footer').exists()).toBeTruthy();
+      expect(wrapper.find('.t-drawer__footer').text()).toContain('custom footer');
     });
 
     it('title[string]', () => {
@@ -103,7 +101,7 @@ describe('Drawer', () => {
           title: '抽屉标题',
         },
       });
-      expect(wrapper.find('.t-drawer__title').exists()).toBeTruthy();
+      expect(wrapper.find('.t-drawer__title').text()).toBe('抽屉标题');
     });
 
     it('title[function]', () => {
@@ -112,7 +110,7 @@ describe('Drawer', () => {
           title: () => h(<div>custom title</div>),
         },
       });
-      expect(wrapper.find('.t-drawer__title').exists()).toBeTruthy();
+      expect(wrapper.find('.t-drawer__title').text()).toContain('custom title');
     });
 
     it('zIndex[number]', async () => {
@@ -140,7 +138,8 @@ describe('Drawer', () => {
         },
       });
       const overlay = wrapper2.find('.t-overlay');
-      overlay.exists() && expect(overlay.isVisible()).toBeFalsy();
+      expect(overlay.exists()).toBe(true);
+      expect(overlay.isVisible()).toBe(false);
     });
 
     it('overlayProps[object]', async () => {
@@ -253,15 +252,13 @@ describe('Drawer', () => {
       const $items = wrapper.findAll('.t-drawer__sidebar-item');
       expect($items).toHaveLength(2);
 
-      const triggerClick = (index) => {
-        $items.at(index).trigger('click');
-        expect(clickItemValue.index).toEqual(index);
-        expect(clickItemValue.item).toEqual(iconSidebar.value[index]);
-      };
+      await $items.at(0).trigger('click');
+      expect(clickItemValue.index).toEqual(0);
+      expect(clickItemValue.item).toEqual(iconSidebar.value[0]);
 
-      iconSidebar.value.map(async (item, index) => {
-        await triggerClick(index);
-      });
+      await $items.at(1).trigger('click');
+      expect(clickItemValue.index).toEqual(1);
+      expect(clickItemValue.item).toEqual(iconSidebar.value[1]);
     });
   });
 

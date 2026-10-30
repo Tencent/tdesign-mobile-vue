@@ -113,18 +113,24 @@ describe('Progress', () => {
       expect(getComputedStyle(wrapper.find('.t-progress__bar').element).backgroundColor).toEqual('white');
     });
 
-    it('theme[string]', async () => {
+    it('theme[line/plump/circle]', async () => {
+      // 默认 line（thin 形态）
       const wrapper = mount(Progress, {
+        props: { percentage: 50 },
+      });
+      expect(wrapper.find('.t-progress--thin').exists()).toBe(true);
+      expect(wrapper.text()).toBe('50%');
+
+      const wrapper2 = mount(Progress, {
         props: { percentage: 50, theme: 'plump' },
       });
-      const bar = wrapper.find('.t-progress__bar');
-      expect(bar.exists()).toBeTruthy();
-      expect(bar.classes()).toContain('t-progress--plump');
+      expect(wrapper2.find('.t-progress__bar').classes()).toContain('t-progress--plump');
+      expect(wrapper2.text()).toBe('50%');
 
-      await wrapper.setProps({
-        theme: 'circle',
+      const wrapper3 = mount(Progress, {
+        props: { percentage: 50, theme: 'circle' },
       });
-      expect(wrapper.find('.t-progress--circle')).toBeTruthy();
+      expect(wrapper3.find('.t-progress--circle').exists()).toBe(true);
     });
   });
 

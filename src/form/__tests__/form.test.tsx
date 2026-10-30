@@ -8,7 +8,6 @@ import Input from '../../input';
 import { ConfigProvider } from '../../config-provider';
 import Radio, { RadioGroup } from '../../radio';
 import config from '../../config';
-import { useFormDisabled, useReadonly } from '../hooks';
 
 const { prefix } = config;
 

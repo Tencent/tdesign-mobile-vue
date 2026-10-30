@@ -181,10 +181,10 @@ describe('NoticeBar', () => {
       const wrapper = mount(
         <NoticeBar
           visible
-          prefix-icon="pre"
+          prefix-icon={() => 'pre'}
           content="test"
           extra="extra"
-          suffix-icon="suffix"
+          suffix-icon={() => 'suffix'}
           operation="operation"
           onClick={fn}
         />,

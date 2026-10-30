@@ -31,8 +31,9 @@ describe('Dialog', () => {
       await wrapper.setProps({
         visible: true,
       });
-      // expect(wrapper.find('.t-dialog__header').text()).toBe(title);
-      // expect(wrapper.find('.t-dialog').isVisible()).toBe(true);
+      // 内容 teleport 到 body，需从 document 查询
+      expect(document.querySelector('.t-dialog__header').textContent).toBe(title);
+      expect(getComputedStyle(document.querySelector('.t-dialog')).display).not.toBe('none');
     });
 
     it('title[string]', async () => {
@@ -118,7 +119,7 @@ describe('Dialog', () => {
       await wrapper.setProps({
         buttonLayout: 'vertical',
       });
-      // expect(wrapper.find(`.${name}__footer`).classes().includes(`${name}__footer--column`)).toBeTruthy();
+      expect(document.querySelector(`.${name}__footer`).classList.contains(`${name}__footer--column`)).toBe(true);
     });
 
     it('closeBtn[boolean]', async () => {
@@ -136,44 +137,41 @@ describe('Dialog', () => {
       await wrapper.setProps({
         closeBtn: true,
       });
-      // expect(wrapper.find(`.${name}__close-btn`).exists()).toBeTruthy();
+      expect(document.querySelector(`.${name}__close-btn`)).not.toBeNull();
     });
 
     it('width[string]', async () => {
-      const visible = true;
-      // width 为 string 类型
-      const width = '80%';
       const wrapper = mount(Dialog, {
         props: {
-          visible,
-          width,
+          visible: true,
+          width: '80%',
         },
       });
-      expect(wrapper.find('.t-dialog').attributes('style').includes(`width: ${width}`)).toBeTruthy();
-      // width 为 number 类型
-      const newWidth = 320;
-      await wrapper.setProps({
-        width: newWidth,
+      expect(wrapper.find('.t-dialog').attributes('style')).toContain('width: 80%');
+    });
+
+    it('width[number]', async () => {
+      const wrapper = mount(Dialog, {
+        props: {
+          visible: true,
+          width: 320,
+        },
       });
-      // expect(wrapper.find('.t-dialog').attributes('style').includes(`width: ${newWidth}px`)).toBeTruthy();
+      expect(wrapper.find('.t-dialog').attributes('style')).toContain('width: 320px');
     });
 
     it('zIndex[number]', async () => {
-      const visible = true;
-      const zIndex = 11500;
       const wrapper = mount(Dialog, {
         props: {
-          visible,
-          zIndex,
+          visible: true,
+          zIndex: 11500,
         },
       });
-      // expect(wrapper).toMatchSnapshot()
-      expect(wrapper.find('.t-popup').attributes('style').includes(`z-index: ${zIndex}`)).toBeTruthy();
-      const newZIndex = 12000;
+      expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 11500');
       await wrapper.setProps({
-        zIndex: newZIndex,
+        zIndex: 12000,
       });
-      // expect(wrapper.find('.t-popup').attributes('style').includes(`z-index: ${newZIndex}`)).toBeTruthy();
+      expect(document.querySelector('.t-popup').getAttribute('style')).toContain('z-index: 12000');
     });
 
     it('closeOnOverlayClick[boolean]', async () => {
@@ -212,17 +210,8 @@ describe('Dialog', () => {
         },
       });
       const overlay = wrapper2.find('.t-overlay');
-      overlay.exists() && expect(overlay.isVisible()).toBeFalsy();
-    });
-
-    it('zIndex[number]', async () => {
-      const wrapper = mount(Dialog, {
-        props: {
-          visible: true,
-          zIndex: 888,
-        },
-      });
-      expect(wrapper.find('.t-dialog__wrapper').attributes('style')).toContain('z-index: 888');
+      expect(overlay.exists()).toBe(true);
+      expect(overlay.isVisible()).toBe(false);
     });
 
     it('overlayProps[object]', async () => {

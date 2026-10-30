@@ -160,8 +160,9 @@ describe('Radio', () => {
           maxContentRow: 2,
         },
       });
-      const $label = wrapper.find(`.${name}__title-inner`);
-      $label.exists() && expect($label.attributes('style')).toContain('-webkit-line-clamp: 1');
+      const $label = wrapper.find(`.${name}__title`);
+      expect($label.exists()).toBe(true);
+      // jsdom/cssstyle 不支持 -webkit-line-clamp，行数样式无法在 DOM 断言，仅验证行数元素通道
     });
 
     // contentDisabled 点击内容区域不触发切换，依赖事件来源区分

@@ -11,54 +11,46 @@ describe('Checkbox', () => {
       const activeImage = 'https://tdesign.gtimg.com/miniprogram/checkbox-checked.png';
       const inActiveImage = 'https://tdesign.gtimg.com/miniprogram/checkbox.png';
       const wrapper = mount(() => <Checkbox icon={[activeImage, inActiveImage]} />);
-      const $checkbox = wrapper.findComponent(Checkbox);
-      await $checkbox.trigger('click');
-      // expect($checkbox.vm.isChecked).toBe(true);
-      await $checkbox.trigger('click');
-      // expect($checkbox.vm.isChecked).toBe(false);
+      expect(wrapper.find(`.${name}__icon-image`).attributes('src')).toBe(inActiveImage);
+      await wrapper.trigger('click');
+      expect(wrapper.find(`.${name}__icon-image`).attributes('src')).toBe(activeImage);
     });
 
     it('icon[empty-array]', async () => {
       const wrapper = mount(() => <Checkbox icon={['']} />);
-      const $checkbox = wrapper.findComponent(Checkbox);
-      await $checkbox.trigger('click');
-      expect($checkbox.findComponent('t-icon-check-circle-filled')).exist;
+      expect(wrapper.find('.t-icon-circle').exists()).toBe(true);
+      await wrapper.trigger('click');
+      expect(wrapper.find('.t-icon-check-circle-filled').exists()).toBe(true);
     });
 
     it('icon[rectangle]', async () => {
       const wrapper = mount(() => <Checkbox icon="rectangle" />);
-      const $checkbox = wrapper.findComponent(Checkbox);
-      expect($checkbox.findComponent(`${name}__icon-rectangle`)).exist;
-      await $checkbox.trigger('click');
-      expect($checkbox.findComponent('t-icon-check-rectangle-filled')).exist;
-      // expect($checkbox.vm.isChecked).toBe(true);
+      expect(wrapper.find(`.${name}__icon-rectangle`).exists()).toBe(true);
+      await wrapper.trigger('click');
+      expect(wrapper.find('.t-icon-check-rectangle-filled').exists()).toBe(true);
     });
 
     it('icon[line]', async () => {
       const wrapper = mount(() => <Checkbox icon="line" />);
-      const $checkbox = wrapper.findComponent(Checkbox);
-      expect($checkbox.findComponent(`${name}__icon-line`)).exist;
-      await $checkbox.trigger('click');
+      expect(wrapper.find(`.${name}__icon .placeholder`).exists()).toBe(true);
+      await wrapper.trigger('click');
+      expect(wrapper.find('.t-icon-check').exists()).toBe(true);
     });
 
     it('placement[right]', async () => {
-      const wrapper = mount(() => <Checkbox placement="right" />);
-      const $checkbox = wrapper.findComponent(Checkbox);
-      expect($checkbox.findComponent(`${name}--right`)).exist;
-      // expect($checkbox).toMatchSnapshot();
+      const wrapper = mount(() => <Checkbox placement="right">选项</Checkbox>);
+      expect(wrapper.classes()).toContain(`${name}--right`);
     });
 
     it('placement[default]', async () => {
-      const wrapper = mount(() => <Checkbox />);
-      const $checkbox = wrapper.findComponent(Checkbox);
-      expect($checkbox.findComponent(`${name}--left`)).exist;
+      const wrapper = mount(() => <Checkbox>选项</Checkbox>);
+      expect(wrapper.classes()).toContain(`${name}--left`);
     });
 
     it('indeterminate[boolean]', async () => {
-      const wrapper = mount(() => <Checkbox indeterminate default="checkbox" />);
-      const $checkbox = wrapper.findComponent(Checkbox);
-      await $checkbox.trigger('click');
-      expect($checkbox.findComponent('t-icon-minus-circle-filled')).exist;
+      const wrapper = mount(() => <Checkbox indeterminate>选项</Checkbox>);
+      await wrapper.trigger('click');
+      expect(wrapper.find('.t-icon-minus-circle-filled').exists()).toBe(true);
     });
 
     it('block[boolean]', async () => {
@@ -84,15 +76,9 @@ describe('Checkbox', () => {
       expect(wrapper.find('.checkbox-desc').exists()).toBeTruthy();
     });
 
-    it('maxLabelRow[number] & maxContentRow[number]', async () => {
-      const wrapper = mount(() => (
-        <Checkbox label="多行标签内容" content="多行描述内容" maxLabelRow={1} maxContentRow={2}>
-          选项
-        </Checkbox>
-      ));
-      const $label = wrapper.find('.t-checkbox__label');
-      $label.exists() && expect($label.attributes('style')).toContain('-webkit-line-clamp: 1');
-    });
+    // -webkit-line-clamp 依赖 webkit 私有样式，jsdom/cssstyle 不支持，无法断言行数样式
+    it.todo('maxLabelRow[number]');
+    it.todo('maxContentRow[number]');
 
     // checkAll checkbox 与 Vue Test Utils 存在已知兼容性问题（devtoolsRawSetupState），以 todo 标注
     it.todo('checkAll[boolean]');

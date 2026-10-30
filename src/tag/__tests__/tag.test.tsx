@@ -45,7 +45,7 @@ describe('Tag', () => {
 
     it('icon[function]', async () => {
       const wrapper = mount(() => <Tag icon={iconFunc}>{TEXT}</Tag>);
-      expect(wrapper.findComponent(TIconApp)).toBeTruthy();
+      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
     });
 
     it('disabled[boolean]', async () => {

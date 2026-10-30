@@ -40,7 +40,7 @@ describe('CheckTag', () => {
 
     it('icon[function]', async () => {
       const wrapper = mount(() => <TCheckTag icon={iconFunc}>{TEXT}</TCheckTag>);
-      expect(wrapper.findComponent(TIconApp)).toBeTruthy();
+      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
     });
 
     it('size[small/medium/large/extra-large]', async () => {

@@ -25,8 +25,8 @@ describe('CheckboxGroup', () => {
       const wrapper = mount(() => <CheckboxGroup defaultValue={defaultValue.value} options={options} />);
       const $checkboxs = wrapper.findAllComponents(Checkbox);
       expect($checkboxs.length).toBe(2);
-      // expect($checkboxs[0].vm.isChecked).toBeTruthy();
-      // expect($checkboxs[1].vm.isChecked).toBeFalsy();
+      expect($checkboxs[0].classes()).toContain(`${name}--checked`);
+      expect($checkboxs[1].classes()).not.toContain(`${name}--checked`);
     });
 
     // borderless/disabled/readonly 作用于整组选项的边框与交互，与子项联动验证
@@ -52,12 +52,13 @@ describe('CheckboxGroup', () => {
 
       await wrapper.findComponent({ ref: '1' }).find(`.${name}--left`).trigger('click');
 
-      // expect(wrapper.findComponent({ ref: '1' }).vm.isChecked).toBe(true);
+      expect(wrapper.findComponent({ ref: '1' }).classes()).toContain(`${name}--checked`);
 
       await wrapper.findComponent({ ref: '2' }).find(`.${name}--left`).trigger('click');
 
-      // expect(wrapper.findComponent({ ref: '2' }).vm.isChecked).toBe(true);
-      // expect(wrapper.findComponent({ ref: '3' }).vm.isDisabled).toBe(true);
+      expect(wrapper.findComponent({ ref: '2' }).classes()).toContain(`${name}--checked`);
+      // 达到 max 后未选中项禁用
+      expect(wrapper.findComponent({ ref: '3' }).find(`.${name}__icon--disabled`).exists()).toBe(true);
     });
 
     it('direction[vertical/horizontal]', () => {
@@ -92,12 +93,12 @@ describe('CheckboxGroup', () => {
       const target = wrapper.findComponent({ ref: '1' });
       await target.find(`.${name}--left`).trigger('click');
 
-      // expect(wrapper.findComponent({ ref: '1' }).vm.isChecked).toBe(true);
+      expect(target.classes()).toContain(`${name}--checked`);
       expect(checked.value).toContain('1');
 
       await target.find(`.${name}--left`).trigger('click');
 
-      // expect(wrapper.findComponent({ ref: '1' }).vm.isChecked).toBe(false);
+      expect(target.classes()).not.toContain(`${name}--checked`);
       expect(checked.value.length).toBe(0);
     });
   });
@@ -118,13 +119,15 @@ describe('CheckboxGroup', () => {
 
       await wrapper.findComponent({ ref: '1' }).find(`.${name}--left`).trigger('click');
 
-      // expect(wrapper.findComponent({ ref: '2' }).vm.isChecked).toBe(true);
-      // expect(wrapper.findComponent({ ref: '3' }).vm.isChecked).toBe(true);
+      expect(wrapper.findComponent({ ref: '1' }).classes()).toContain(`${name}--checked`);
+      expect(wrapper.findComponent({ ref: '2' }).classes()).toContain(`${name}--checked`);
+      expect(wrapper.findComponent({ ref: '3' }).classes()).toContain(`${name}--checked`);
 
       await wrapper.findComponent({ ref: '1' }).find(`.${name}--left`).trigger('click');
 
-      // expect(wrapper.findComponent({ ref: '2' }).vm.isChecked).toBe(false);
-      // expect(wrapper.findComponent({ ref: '3' }).vm.isChecked).toBe(false);
+      expect(wrapper.findComponent({ ref: '1' }).classes()).not.toContain(`${name}--checked`);
+      expect(wrapper.findComponent({ ref: '2' }).classes()).not.toContain(`${name}--checked`);
+      expect(wrapper.findComponent({ ref: '3' }).classes()).not.toContain(`${name}--checked`);
     });
 
     it('invalid value warns', async () => {
@@ -138,7 +141,6 @@ describe('CheckboxGroup', () => {
       const logSpy = vi.spyOn(global.console, 'warn');
       const target = wrapper.findAllComponents(Checkbox)[0];
       await target.trigger('click');
-      // expect(logSpy).toHaveBeenCalled();
       expect(logSpy.mock.calls[0][0]).toContain('TDesign CheckboxGroup Warn');
       logSpy.mockRestore();
     });
@@ -158,7 +160,42 @@ describe('CheckboxGroup', () => {
       const wrapper = mount(() => <CheckboxGroup defaultValue={defaultValue.value} options={options} />);
       const target = wrapper.findAllComponents(Checkbox)[0];
       await target.trigger('click');
-      // expect(target.vm.isChecked).toBeFalsy();
+      // value 为 undefined 的选项不走 group 受控通道，仅切换自身选中态
+      expect(target.classes()).toContain(`${name}--checked`);
+    });
+
+    it('options 优先于 slot 渲染选项', () => {
+      const wrapper = mount(() => (
+        <CheckboxGroup options={[{ label: '选项一', value: '1' }]}>
+          <Checkbox value="2" label="slot 选项" />
+        </CheckboxGroup>
+      ));
+      expect(wrapper.findAllComponents(Checkbox).length).toBe(1);
+      expect(wrapper.text()).toContain('选项一');
+      expect(wrapper.text()).not.toContain('slot 选项');
+    });
+
+    it('slot 选项数量动态变化时同步', async () => {
+      const showExtra = ref(false);
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <CheckboxGroup>
+              <Checkbox value="1" label="选项一" />
+              {showExtra.value ? <Checkbox value="2" label="选项二" /> : null}
+            </CheckboxGroup>
+          );
+        },
+      });
+      expect(wrapper.findAllComponents(Checkbox).length).toBe(1);
+
+      showExtra.value = true;
+      await nextTick();
+      expect(wrapper.findAllComponents(Checkbox).length).toBe(2);
+
+      showExtra.value = false;
+      await nextTick();
+      expect(wrapper.findAllComponents(Checkbox).length).toBe(1);
     });
 
     it('direction changes dynamically', async () => {

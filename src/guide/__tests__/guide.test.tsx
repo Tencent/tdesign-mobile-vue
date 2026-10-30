@@ -168,7 +168,8 @@ describe('Guide', () => {
         { element: '.guide-element-1' },
         { element: '.guide-element-2' },
       ]);
-      expect(document.querySelector('#test-container-2 .t-guide__skip')).toBeFalsy();
+      // 两个实例均 teleport 到 body：hideSkip 实例不渲染跳过按钮，全 body 仅剩第一个实例的 1 个
+      expect(document.querySelectorAll('.t-guide__skip').length).toBe(1);
     });
 
     it('counter[function] & hideCounter[boolean]', async () => {

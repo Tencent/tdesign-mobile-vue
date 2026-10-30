@@ -30,7 +30,7 @@ pnpm run test:unit-coverage
 
 ### 组件快照测试 `snap`
 
-组件 `demos` 目录下的示例快照测试集中维护在 `test/snap/`（`csr.test.js` 与 `ssr.test.js` 为统一入口，遍历 `src/**/demos/*.vue`）；组件级 demo 快照文件由 `npm run test:demo` 生成在各组件 `__tests__/demo.test.jsx`。二者均不适用组件单测的五类分组。
+组件 `demos` 目录下的示例快照测试由 `npm run test:demo` 生成在各组件 `__tests__/demo.test.jsx`，通过 `pnpm run test:snap` 运行，不适用组件单测的五类分组。`test/snap/` 目录为历史遗留入口，当前 `vitest.config.mjs` 的 `include` 不会收集其中用例。
 
 ```bash
 # 快照
@@ -59,7 +59,7 @@ pnpm run test:snap-update
 - 组件测试文件：`[组件名].test.tsx`，例如 `watermark.test.tsx`。
 - 多子组件场景：每个子组件单独编写测试文件，例如 `form.test.tsx` 和 `form-item.test.tsx`，同样放在 `src/form/__tests__/` 下。
 - 组件内部 hooks 测试文件：`[组件名].hooks.test.tsx`，例如 `form.hooks.test.tsx`。
-- 组件内部 utils 测试文件：`[组件名].utils.test.tsx`，例如 `form.utils.test.tsx`。
+- 组件内部 utils 测试文件：`[组件名].utils.test.tsx`，例如 `config-provider.utils.test.tsx`。
 - 多个测试文件共用的挂载逻辑可提取到 `mount.tsx`，用于存放 mount factory、测试数据、查询方法和清理逻辑；仅被单个测试文件使用的辅助逻辑应保留在原测试文件中。
 - `mount.tsx` 是测试辅助文件，不直接编写测试用例，也不要求使用组件测试分组。
 - 组件测试统一存放在 `src/[组件名]/__tests__/`，单测文件统一采用 `[组件名].test.tsx` 命名；`demo.test.jsx` 为 demo 快照（由 `npm run test:demo` 自动生成，禁止手写修改）。
@@ -101,7 +101,7 @@ Props 用例标题格式为 `it('propName[类型]', ...)`，每个声明类型�
 - 事件用例直接使用事件名称：`it('change')`、`it('visibleChange')`。
 - 实例方法用例直接使用方法名：`it('clearValidate')`。
 - 插槽用例直接使用插槽名，`slots` 分组已标明上下文，不加 `[slot]` 后缀：`it('icon')`、`it('default')`。
-- 多 Prop 组合验证用 `&` 连接：`it(':title[string] & :content[string]')`。
+- 多 Prop 组合验证用 `&` 连接：`it('title[string] & content[string]')`。
 - 未实现的 API 用 `it.todo('propName[type]')` 标注，并逐类型拆分。
 - 标题中不使用 `:` 开头（事件/实例方法）、不使用 `=` 连接、不使用 `others`/`misc` 等模糊名称。
 
@@ -132,13 +132,13 @@ describe('ComponentName', () => {
 
 示例用于展示完整结构；实际测试中应删除没有对应测试用例的空分组。
 
-2. 命令行查看测试用例
+命令行查看测试用例：
 
 ```bash
 pnpm run test:unit-dev button
 ```
 
-3. 通过 UI 查看更多细节
+通过 UI 查看更多细节：
 
 ```bash
 pnpm run test:unit-gui button

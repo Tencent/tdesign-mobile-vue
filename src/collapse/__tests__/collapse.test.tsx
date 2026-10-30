@@ -1,4 +1,4 @@
-import { ref, reexpanded } from 'vue';
+import { ref } from 'vue';
 import { vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import { Collapse, CollapsePanel } from '../index';
