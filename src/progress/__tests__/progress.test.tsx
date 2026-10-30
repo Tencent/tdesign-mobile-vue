@@ -142,8 +142,31 @@ describe('Progress', () => {
       expect(wrapper.find('.t-progress__info').text()).toEqual('25%');
     });
 
-    // size 进度条粗细尺寸
-    it.todo('size[string]');
-    it.todo('size[number]');
+    // size 进度条粗细尺寸（仅环形进度条生效）
+    it('size[string]', async () => {
+      const wrapper = mount(Progress, {
+        props: { theme: 'circle', percentage: 50 },
+      });
+      // 默认 default，直径 112
+      expect(wrapper.find('.t-progress--circle').attributes('style')).toContain('width: 112px');
+      expect(wrapper.find('svg').attributes('width')).toBe('112');
+
+      // micro 尺寸直径 24，环宽默认收窄为 2
+      await wrapper.setProps({ size: 'micro' });
+      expect(wrapper.find('.t-progress--circle').attributes('style')).toContain('width: 24px');
+      expect(wrapper.find('svg').attributes('width')).toBe('24');
+      expect(wrapper.find('circle').attributes('stroke-width')).toBe('2');
+    });
+
+    it('size[number]', async () => {
+      const wrapper = mount(Progress, {
+        props: { theme: 'circle', percentage: 50, size: 80 },
+      });
+      // 数值型 size 直接作为直径
+      expect(wrapper.find('.t-progress--circle').attributes('style')).toContain('width: 80px');
+      expect(wrapper.find('.t-progress--circle').attributes('style')).toContain('height: 80px');
+      expect(wrapper.find('svg').attributes('width')).toBe('80');
+      expect(wrapper.find('svg').attributes('height')).toBe('80');
+    });
   });
 });

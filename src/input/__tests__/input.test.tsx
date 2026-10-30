@@ -31,8 +31,21 @@ describe('Input', () => {
       });
     });
 
-    // allowInputOverMax 依赖超限输入截断行为
-    it.todo('allowInputOverMax[boolean]');
+    it('allowInputOverMax[boolean]', async () => {
+      // 默认超限输入被截断
+      const value = ref('');
+      const wrapper = mount(<Input v-model={value.value} maxlength={5} />);
+      const el = wrapper.find('input').element;
+      await simulateEvent(el, '12345678', 'input');
+      expect(value.value).toBe('12345');
+
+      // allowInputOverMax 允许保留超限输入
+      const overMaxValue = ref('');
+      const overMaxWrapper = mount(<Input v-model={overMaxValue.value} maxlength={5} allowInputOverMax />);
+      const overMaxEl = overMaxWrapper.find('input').element;
+      await simulateEvent(overMaxEl, '12345678', 'input');
+      expect(overMaxValue.value).toBe('12345678');
+    });
 
     it('autocomplete[string]', async () => {
       const wrapper = mount(<Input label="标题" autocomplete="on" />);
@@ -160,8 +173,12 @@ describe('Input', () => {
       expect(handleClear).toBeCalled();
     });
 
-    // cursorColor 为 CSS 变量注入，jsdom 无法断言样式
-    it.todo('cursorColor[string]');
+    it('cursorColor[string]', async () => {
+      const wrapper = mount(<Input cursorColor="red" />);
+      const input = wrapper.find('.t-input__wrap input');
+      // 光标颜色以内联 CSS 变量注入到原生 input
+      expect(input.attributes('style')).toContain('--td-input-cursor-color: red');
+    });
 
     it('disabled[boolean]', async () => {
       const value = ref('123');
@@ -182,8 +199,18 @@ describe('Input', () => {
       expect(wrapper.find('.custom-extra').exists()).toBeTruthy();
     });
 
-    // format 需输入事件触发格式化行为
-    it.todo('format[function]');
+    it('format[function]', async () => {
+      const value = ref('abc');
+      const onChange = vi.fn();
+      const wrapper = mount(
+        <Input label="标题" v-model={value.value} format={(val: string) => val.toUpperCase()} onChange={onChange} />,
+      );
+      const input = wrapper.find('.t-input__wrap input');
+      await input.trigger('blur');
+      // 失焦时按 format 格式化并回写值
+      expect(onChange).toHaveBeenCalledWith('ABC');
+      expect(value.value).toBe('ABC');
+    });
 
     it('label[string]', async () => {
       const wrapper = mount(<Input label="标题" />);

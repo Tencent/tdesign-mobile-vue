@@ -1,4 +1,5 @@
 import { mount } from '@vue/test-utils';
+import { nextTick } from 'vue';
 import { vi } from 'vitest';
 import TCell from '../../cell/index';
 import { Indexes, IndexesAnchor } from '../index';
@@ -50,6 +51,13 @@ const list = [
 const indexList = list.map((item) => item.index);
 
 const componentName = `${prefix}-indexes`;
+
+// Indexes 初始化（onMounted → nextTick → Promise 链）需等宏任务后 DOM 才更新
+const sleep = (timeout: number) =>
+  new Promise((resolve) => {
+    setTimeout(resolve, timeout);
+  });
+
 describe('Indexes', () => {
   describe('props', () => {
     it('indexList[array]', () => {
@@ -260,6 +268,28 @@ describe('Indexes', () => {
   });
 
   describe('scenarios', () => {
+    // 挂载带锚点的索引列表，便于复用
+    const mountIndexes = (props = {}) =>
+      mount({
+        setup() {
+          return () => (
+            <Indexes indexList={indexList} {...props}>
+              {{
+                default: () =>
+                  list.map((item, index) => (
+                    <template>
+                      <IndexesAnchor index={item.index} key={index}></IndexesAnchor>
+                      {item.children.map((val) => (
+                        <TCell className="indexes-cell">{val}</TCell>
+                      ))}
+                    </template>
+                  )),
+              }}
+            </Indexes>
+          );
+        },
+      });
+
     it('render', () => {
       const wrapper = mount({
         setup() {
@@ -283,15 +313,67 @@ describe('Indexes', () => {
       expect(wrapper.element).toMatchSnapshot();
     });
 
-    // current/modelValue/defaultCurrent 当前锚点受控，依赖滚动联动
-    it.todo('current[string]');
-    it.todo('current[number]');
-    it.todo('modelValue[string]');
-    it.todo('modelValue[number]');
+    it('current[string]', async () => {
+      const wrapper = mountIndexes({ current: '#' });
+      await sleep(0);
+      // 点击侧边栏索引后通过 update:current 同步受控值
+      await wrapper.findAll(`.${componentName}__sidebar-item`)[1].trigger('click');
+      const emittedList = wrapper.findComponent(Indexes).emitted('update:current');
+      expect(emittedList[emittedList.length - 1]).toEqual([list[1].index]);
+    });
+
+    it('current[number]', async () => {
+      const wrapper = mountIndexes({ current: 5 });
+      await sleep(0);
+      await wrapper.findAll(`.${componentName}__sidebar-item`)[2].trigger('click');
+      const emittedList = wrapper.findComponent(Indexes).emitted('update:current');
+      expect(emittedList[emittedList.length - 1]).toEqual([list[2].index]);
+    });
+
+    it('modelValue[string]', async () => {
+      // 组件 emits 未声明 update:modelValue（会在控制台产生 Vue warn），此处验证 v-model 通道的事件同步
+      const wrapper = mountIndexes({ modelValue: '#' });
+      await sleep(0);
+      // 点击 '#' 侧边栏索引后通过 update:modelValue 同步受控值
+      const items = wrapper.findAll(`.${componentName}__sidebar-item`);
+      await items[items.length - 1].trigger('click');
+      const emittedList = wrapper.findComponent(Indexes).emitted('update:modelValue');
+      expect(emittedList[emittedList.length - 1]).toEqual(['#']);
+    });
+
+    it('modelValue[number]', async () => {
+      const wrapper = mountIndexes({ modelValue: 1 });
+      await sleep(0);
+      await wrapper.findAll(`.${componentName}__sidebar-item`)[3].trigger('click');
+      const emittedList = wrapper.findComponent(Indexes).emitted('update:modelValue');
+      expect(emittedList[emittedList.length - 1]).toEqual([list[3].index]);
+    });
+
+    it('sticky[boolean]', async () => {
+      // sticky 默认 true：滚动计算后首个锚点带激活态类名与吸顶定位样式
+      const wrapper = mountIndexes({});
+      await sleep(0);
+      const $wrapper = wrapper.find(`.${indexesAnchorClass}__wrapper`);
+      expect($wrapper.classes()).toContain(`${indexesAnchorClass}__wrapper--active`);
+      expect($wrapper.attributes('style')).toContain('top: 0px');
+
+      // sticky = false：不添加吸顶激活类名与定位样式
+      const wrapper2 = mountIndexes({ sticky: false });
+      await sleep(0);
+      const $wrapper2 = wrapper2.find(`.${indexesAnchorClass}__wrapper`);
+      expect($wrapper2.classes()).not.toContain(`${indexesAnchorClass}__wrapper--active`);
+      expect($wrapper2.attributes('style')).toBeUndefined();
+    });
+
+    it('stickyOffset[number]', async () => {
+      const wrapper = mountIndexes({ stickyOffset: 10 });
+      await sleep(0);
+      const $wrapper = wrapper.find(`.${indexesAnchorClass}__wrapper`);
+      expect($wrapper.attributes('style')).toContain('top: 10px');
+    });
+
+    // defaultCurrent 仅决定初始滚动定位（scrollTo 位置），jsdom 中无法观测滚动联动
     it.todo('defaultCurrent[string]');
     it.todo('defaultCurrent[number]');
-    // sticky/stickyOffset 锚点吸顶，依赖真实滚动布局
-    it.todo('sticky[boolean]');
-    it.todo('stickyOffset[number]');
   });
 });

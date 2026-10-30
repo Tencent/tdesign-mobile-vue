@@ -168,14 +168,14 @@ describe('Image', () => {
       expect($sources[1].attributes('srcset')).toBe(srcset['image/webp']);
     });
 
-    // TODO: loading/error 仅设置 prop 时组件不渲染（mask 以 slots 为门槛），待组件修复后补充 prop 通道用例
-    it.todo(':loading[string]');
+    // TODO: loading/error 的 prop 通道未实现——mask 渲染以 slots 为门槛，仅设置 prop 时仍展示默认图标，待组件修复后补充
+    it.todo('loading[string]');
 
-    it.todo(':loading[function]');
+    it.todo('loading[function]');
 
-    it.todo(':error[string]');
+    it.todo('error[string]');
 
-    it.todo(':error[function]');
+    it.todo('error[function]');
   });
 
   describe('events', () => {

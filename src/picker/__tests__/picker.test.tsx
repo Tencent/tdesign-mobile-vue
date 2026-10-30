@@ -3,6 +3,7 @@ import { isFunction } from 'lodash-es';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Picker from '../picker';
+import PickerItem from '../picker-item';
 import { getPickerColumns } from '../utils';
 
 import { DEFAULT_ITEM_HEIGHT } from '../picker.class';
@@ -114,17 +115,66 @@ describe('Picker', () => {
       testConfirmBtn('Confirm');
     });
 
-    it.todo('footer[string]');
+    it('footer[string]', () => {
+      // footer 类型声明为 TNode，运行时 prop 仅声明 Function，传字符串会有预期内的类型告警，这里静默处理
+      const wrapper = mount(Picker, {
+        props: { ...commonProps, footer: '自定义底部' },
+        global: { config: { warnHandler: () => {} } },
+      });
+      const $picker = wrapper.find('.t-picker');
+      expect($picker.text()).toContain('自定义底部');
+      // 底部内容渲染在面板最后（字符串渲染为文本节点）
+      const { childNodes } = $picker.element;
+      expect(childNodes[childNodes.length - 1].textContent).toBe('自定义底部');
+    });
 
-    it.todo('footer[function]');
+    it('footer[function]', () => {
+      const wrapper = mountPicker({ footer: () => <div class="picker-footer">自定义底部</div> });
+      expect(wrapper.find('.picker-footer').exists()).toBe(true);
+      expect(wrapper.find('.picker-footer').text()).toBe('自定义底部');
+    });
 
-    // header/footer 自定义头部底部内容
-    it.todo('header[string]');
+    it('header[string]', () => {
+      // header 类型声明为 TNode，运行时 prop 仅声明 Function，传字符串会有预期内的类型告警，这里静默处理
+      const wrapper = mount(Picker, {
+        props: { ...commonProps, header: '自定义头部' },
+        global: { config: { warnHandler: () => {} } },
+      });
+      const $picker = wrapper.find('.t-picker');
+      expect($picker.text()).toContain('自定义头部');
+      // 头部内容渲染在工具栏之后（字符串渲染为文本节点）
+      expect($picker.element.childNodes[1].textContent).toBe('自定义头部');
+    });
 
-    it.todo('header[function]');
+    it('header[function]', () => {
+      const wrapper = mountPicker({ header: () => <div class="picker-header">自定义头部</div> });
+      expect(wrapper.find('.picker-header').exists()).toBe(true);
+      expect(wrapper.find('.picker-header').text()).toBe('自定义头部');
+    });
 
-    // keys 自定义选项字段别名
-    it.todo('keys[object]');
+    it('keys[object]', async () => {
+      const aliasOptions = [
+        { text: '春', val: 'spring' },
+        { text: '夏', val: 'summer' },
+      ];
+      const onConfirm = vi.fn();
+      const wrapper = mountPicker({
+        columns: [aliasOptions],
+        keys: { label: 'text', value: 'val' },
+        defaultValue: ['summer'],
+        onConfirm,
+      });
+      // keys 别名解析 columns 的 label/value，defaultValue 按 val 匹配选中
+      const $items = wrapper.findAll('.t-picker-item__item');
+      expect($items).toHaveLength(2);
+      expect($items[0].text()).toBe('春');
+      expect($items[1].text()).toBe('夏');
+      expect(wrapper.find('.t-picker-item__item--active').text()).toBe('夏');
+
+      // 确认时按别名返回 value/label
+      await wrapper.find('.t-picker__confirm').trigger('click');
+      expect(onConfirm).toHaveBeenCalledWith(['summer'], { index: [1], label: ['夏'], e: expect.any(MouseEvent) });
+    });
 
     it('renderLabel[function]', () => {
       const renderLabel = (item) => `${item.label} ${item.value}`;
@@ -135,8 +185,17 @@ describe('Picker', () => {
       itemContainers.forEach((container, index) => expect(container.text()).toBe(renderLabel(seasonOptions[index])));
     });
 
-    // swipeDuration/wheelConfig 滚轮惯性与手势配置，依赖真实触摸
-    it.todo('swipeDuration[number]');
+    it('swipeDuration[number]', () => {
+      // swipeDuration 惯性滚动时长透传给滚轮子组件；优先级高于 wheelConfig.inertiaDuration
+      const wrapper = mountPicker({ swipeDuration: 500 });
+      expect(wrapper.findComponent(PickerItem).props('wheelConfig')).toEqual({
+        ...DEFAULT_WHEEL_CONFIG,
+        inertiaDuration: 500,
+      });
+
+      const wrapper2 = mountPicker({ swipeDuration: 500, wheelConfig: { inertiaDuration: 999 } });
+      expect(wrapper2.findComponent(PickerItem).props('wheelConfig').inertiaDuration).toBe(500);
+    });
 
     it('title[string]', () => {
       const testTitle = (title) => {
@@ -173,7 +232,19 @@ describe('Picker', () => {
       expect(textContainer.text()).toBe(seasonOptions[0].label);
     });
 
-    it.todo('wheelConfig[object]');
+    it('wheelConfig[object]', () => {
+      // wheelConfig 与默认配置合并后透传给滚轮子组件
+      const wrapper = mountPicker({ wheelConfig: { bounceDuration: 50, transitionDuration: 200 } });
+      expect(wrapper.findComponent(PickerItem).props('wheelConfig')).toEqual({
+        ...DEFAULT_WHEEL_CONFIG,
+        bounceDuration: 50,
+        transitionDuration: 200,
+      });
+
+      // swipeDuration 存在默认值，其优先级高于 wheelConfig.inertiaDuration
+      const wrapper2 = mountPicker({ wheelConfig: { inertiaDuration: 999 } });
+      expect(wrapper2.findComponent(PickerItem).props('wheelConfig').inertiaDuration).toBe(300);
+    });
   });
 
   describe('events', () => {

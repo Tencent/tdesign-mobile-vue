@@ -209,9 +209,36 @@ describe('Sticky', () => {
       expect(onScrollParameterFn).toHaveBeenCalledWith(true);
     });
 
-    // disabled 关闭吸顶功能，依赖滚动交互
-    it.todo('disabled[boolean]');
-    // container 自定义滚动容器，依赖真实容器滚动
+    it('disabled[boolean]', async () => {
+      const { makeScroll } = useTestUtils();
+      const wrapper = _mount(`
+        <Sticky :disabled="true" :offsetTop="30"></Sticky>
+      `);
+
+      await nextTick();
+      const { mockRestore } = stickyRectMock(wrapper, {
+        stickyMockReturnValue: {
+          height: 40,
+          width: 1000,
+          top: 29,
+        },
+        documentMockReturnValue: {
+          height: 200,
+          width: 1000,
+          top: 0,
+          bottom: 200,
+        },
+      });
+
+      await makeScroll(document.documentElement, 'scrollTop', 200);
+
+      // disabled 时滚动后仍不吸顶，仅保留 z-index 样式
+      expect(wrapper.find('.t-sticky__content').attributes('style')).toBe('z-index: 99;');
+
+      mockRestore();
+    });
+
+    // container 依赖容器真实边界（getBoundingClientRect）与滚动联动，jsdom 无法稳定模拟容器滚动几何
     it.todo('container[string]');
     it.todo('container[object]');
   });

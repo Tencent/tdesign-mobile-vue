@@ -4,10 +4,16 @@ import Grid from '../grid';
 import GridItem from '../grid-item';
 import Badge from '../../badge/badge';
 import type { TdGridProps, TdGridItemProps } from '../type';
+import { trigger } from '@/image-viewer/__tests__/touch';
 
 const prefix = 't';
 const name = `${prefix}-grid`;
 const imgUrl = 'https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png';
+
+const sleep = (timeout: number) =>
+  new Promise((resolve) => {
+    setTimeout(resolve, timeout);
+  });
 const items = [
   {
     text: '标题',
@@ -112,8 +118,33 @@ describe('Grid', () => {
       expect(wrapper.find('.t-grid--auto-size').exists()).toBeTruthy();
     });
 
-    // hover 点击态样式依赖交互反馈
-    it.todo('hover[boolean]');
+    it('hover[boolean]', async () => {
+      // hover 为 true 时，宫格项触摸按下短暂延迟后出现点击态类名，松开一段时间后移除
+      const wrapper = mount(() => (
+        <Grid hover>
+          <GridItem text="标题" />
+        </Grid>
+      ));
+      const $gridItem = wrapper.find(`.${name}-item`);
+      await trigger($gridItem, 'touchstart');
+      await sleep(60);
+      expect($gridItem.classes()).toContain(`${name}-item--hover`);
+
+      await trigger($gridItem, 'touchend');
+      await sleep(80);
+      expect($gridItem.classes()).not.toContain(`${name}-item--hover`);
+
+      // 默认关闭 hover，按下不出现点击态类名
+      const wrapper2 = mount(() => (
+        <Grid>
+          <GridItem text="标题" />
+        </Grid>
+      ));
+      const $gridItem2 = wrapper2.find(`.${name}-item`);
+      await trigger($gridItem2, 'touchstart');
+      await sleep(60);
+      expect($gridItem2.classes()).not.toContain(`${name}-item--hover`);
+    });
 
     it('theme[default/card]', async () => {
       const themeList: TdGridProps['theme'][] = ['default', 'card'];

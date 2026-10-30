@@ -36,7 +36,7 @@ interface GroupTop {
 export default defineComponent({
   name: 'TIndexes',
   props: IndexesProps,
-  emits: ['select', 'change', 'update:current'],
+  emits: ['select', 'change', 'update:current', 'update:modelValue'],
   setup(props) {
     const { current, modelValue, showFullIndex } = toRefs(props);
     const readerTNodeJSX = useTNodeJSX();

@@ -27,6 +27,11 @@ options.push({
   disabled: true,
 });
 
+const numberOptions = [
+  { label: '数量一', value: 1, disabled: false },
+  { label: '数量二', value: 2, disabled: false },
+];
+
 describe('DropdownItem', () => {
   describe('props', () => {
     it('keepLabelActive[boolean]', async () => {
@@ -235,7 +240,10 @@ describe('DropdownItem', () => {
         item.trigger('click', { item, index });
       });
       await sleep(200);
-      expect(wrapper.find(`.${prefix}-dropdown-item__content`).attributes('class')).toBeTruthy();
+      // 多选列表按 optionsColumns 生成网格列
+      expect(wrapper.find(`.${prefix}-dropdown-item__checkbox-group`).attributes('style')).toContain(
+        'grid-template-columns: repeat(2, 1fr)',
+      );
     });
   });
 
@@ -349,15 +357,184 @@ describe('DropdownItem', () => {
     });
 
     // icon 自定义菜单项图标
-    it.todo('icon[function]');
+    it('icon[function]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem
+                label="菜单"
+                options={options}
+                icon={() => <span class="custom-menu-icon">custom-icon</span>}
+              />
+            </DropdownMenu>
+          );
+        },
+      });
+      const $icon = wrapper.find(`.${name}__icon`);
+      expect($icon.exists()).toBe(true);
+      // 函数图标替换默认的箭头图标
+      expect($icon.find('.custom-menu-icon').exists()).toBe(true);
+      expect($icon.text()).toBe('custom-icon');
+      expect(wrapper.find('.t-icon-caret-down-small').exists()).toBe(false);
+    });
+
     // placement 菜单弹出方向
-    it.todo('placement[string]');
+    it('placement[string]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem label="菜单" options={options} placement="right" />
+            </DropdownMenu>
+          );
+        },
+      });
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      const $radios = wrapper.findAll(`.${prefix}-dropdown-item__radio-item`);
+      expect($radios.length).toBe(options.length);
+      // 仅单选菜单栏有效，placement 透传给选项，图标与内容相对位置为 right
+      $radios.forEach((radio) => {
+        expect(radio.classes()).toContain(`${prefix}-radio--right`);
+      });
+    });
+
     // 受控值 v-model 联动
-    it.todo('modelValue[string]');
-    it.todo('modelValue[number]');
-    it.todo('modelValue[array]');
-    it.todo('defaultValue[string]');
-    it.todo('defaultValue[number]');
-    it.todo('defaultValue[array]');
+    it('modelValue[string]', async () => {
+      const value = ref('option_1');
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem v-model={value.value} options={options} onChange={onChange} />
+            </DropdownMenu>
+          );
+        },
+      });
+      // modelValue 决定标题栏展示选中项 label
+      expect(wrapper.find(`.${name}__title`).text()).toBe('选项二');
+
+      // 打开面板，对应选项选中
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      const $radios = wrapper.findAll(`.${prefix}-dropdown-item__radio-item`);
+      expect($radios[1].classes()).toContain(`${prefix}-is-checked`);
+      expect($radios[0].classes()).not.toContain(`${prefix}-is-checked`);
+
+      // 切换选项后 v-model 与标题联动更新
+      await $radios[0].trigger('click');
+      expect(onChange).toHaveBeenCalledWith('option_0');
+      expect(value.value).toBe('option_0');
+      expect(wrapper.find(`.${name}__title`).text()).toBe('选项一');
+    });
+
+    it('modelValue[number]', async () => {
+      const value = ref(2);
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem v-model={value.value} options={numberOptions} />
+            </DropdownMenu>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('数量二');
+
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      const $radios = wrapper.findAll(`.${prefix}-dropdown-item__radio-item`);
+      expect($radios[1].classes()).toContain(`${prefix}-is-checked`);
+
+      await $radios[0].trigger('click');
+      expect(value.value).toBe(1);
+      expect(wrapper.find(`.${name}__title`).text()).toBe('数量一');
+    });
+
+    it('modelValue[array]', async () => {
+      const value = ref(['option_1']);
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem v-model={value.value} label="菜单" multiple options={options} />
+            </DropdownMenu>
+          );
+        },
+      });
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      const $checkboxes = wrapper.findAll(`.${prefix}-checkbox`);
+      // 初始选中 modelValue 指定的 1 项
+      expect($checkboxes[1].classes()).toContain(`${prefix}-checkbox--checked`);
+      expect(wrapper.findAll(`.${prefix}-checkbox--checked`)).toHaveLength(1);
+
+      // 勾选后确认，v-model 更新为两项
+      await $checkboxes[0].trigger('click');
+      await wrapper.find(`.${prefix}-dropdown-item__confirm-btn`).trigger('click');
+      expect(value.value).toHaveLength(2);
+      expect(value.value).toEqual(expect.arrayContaining(['option_0', 'option_1']));
+    });
+
+    it('defaultValue[string]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem defaultValue="option_1" options={options} />
+            </DropdownMenu>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('选项二');
+
+      // 非受控：切换选项后内部值与标题自行更新
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      const $radios = wrapper.findAll(`.${prefix}-dropdown-item__radio-item`);
+      await $radios[0].trigger('click');
+      expect(wrapper.find(`.${name}__title`).text()).toBe('选项一');
+    });
+
+    it('defaultValue[number]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem defaultValue={1} options={numberOptions} />
+            </DropdownMenu>
+          );
+        },
+      });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('数量一');
+
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      const $radios = wrapper.findAll(`.${prefix}-dropdown-item__radio-item`);
+      await $radios[1].trigger('click');
+      expect(wrapper.find(`.${name}__title`).text()).toBe('数量二');
+    });
+
+    it('defaultValue[array]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem defaultValue={['option_1']} label="菜单" multiple options={options} />
+            </DropdownMenu>
+          );
+        },
+      });
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      // 初始选中 defaultValue 指定的 1 项
+      expect(wrapper.findAll(`.${prefix}-checkbox--checked`)).toHaveLength(1);
+
+      // 非受控：勾选第 1 项后选中数自行更新为 2（无需确认）
+      await wrapper.findAll(`.${prefix}-checkbox`)[0].trigger('click');
+      expect(wrapper.findAll(`.${prefix}-checkbox--checked`)).toHaveLength(2);
+    });
   });
 });

@@ -1,6 +1,6 @@
 import { describe, it, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
-import { ref } from 'vue';
+import { nextTick, ref } from 'vue';
 import Swiper from '../swiper';
 import SwiperItem from '../swiper-item';
 import type { TdSwiperProps } from '../type';
@@ -372,11 +372,37 @@ describe('Swiper', () => {
       expect(items.value.length).toBe(2);
     });
 
-    // animation 切换动画类型（slide/fade），依赖真实轮播动画
+    // animation 组件仅实现 slide 且未消费该属性，无差异可断言
     it.todo('animation[string]');
-    // defaultCurrent 初始所在页码，依赖轮播初始渲染时机
-    it.todo('defaultCurrent[number]');
-    // nextMargin/previousMargin 前后露出区域尺寸，依赖真实布局
+
+    it('defaultCurrent[number]', async () => {
+      // 独立数据源：scenarios 前序用例会 splice 模块级 list
+      const images = ['01.png', '02.png', '03.png'];
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Swiper defaultCurrent={1} autoplay={false}>
+              {images.map((image) => (
+                <SwiperItem>
+                  <img src={image} />
+                </SwiperItem>
+              ))}
+            </Swiper>
+          );
+        },
+      });
+      // 等待 SwiperItem 注册与导航器渲染
+      await nextTick();
+      await nextTick();
+      const $dots = wrapper.findAll(`.${classPrefix}-nav__dots-item`);
+      expect($dots).toHaveLength(images.length);
+      // 初始渲染时第 defaultCurrent 项为激活态
+      expect($dots[1].classes()).toContain(`${classPrefix}-nav__dots-item--active`);
+      expect($dots[0].classes()).not.toContain(`${classPrefix}-nav__dots-item--active`);
+      expect($dots[2].classes()).not.toContain(`${classPrefix}-nav__dots-item--active`);
+    });
+
+    // nextMargin/previousMargin 标注【开发中】，组件未消费该属性，无差异可断言
     it.todo('nextMargin[number]');
     it.todo('previousMargin[number]');
   });

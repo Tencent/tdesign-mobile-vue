@@ -98,8 +98,15 @@ describe('ImageViewer', () => {
       expect(wrapper.find('.t-image-viewer__nav-index').text()).toBe(`2/${images.value.length}`);
     });
 
-    // loop 透传 Swiper 循环滚动行为，需真实滑动交互验证
-    it.todo('loop[boolean]');
+    it('loop[boolean]', async () => {
+      // loop 透传给内部 Swiper 控制循环滚动
+      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} loop={false} />);
+      expect(wrapper.findComponent(Swiper).props('loop')).toBe(false);
+
+      // 默认开启循环滚动
+      const wrapper2 = mount(<ImageViewer v-model:images={images.value} visible={true} />);
+      expect(wrapper2.findComponent(Swiper).props('loop')).toBe(true);
+    });
 
     it('showIndex[boolean]', async () => {
       const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} showIndex />);

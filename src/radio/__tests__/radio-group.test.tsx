@@ -1,6 +1,6 @@
 import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import Radio from '../radio';
 import RadioGroup from '../radio-group';
 import type { TdRadioGroupProps } from '../type';
@@ -10,8 +10,24 @@ const name = `${prefix}-radio`;
 
 describe('RadioGroup', () => {
   describe('props', () => {
-    // borderless/readonly 作用于整组选项，与子项联动验证
-    it.todo('borderless[boolean]');
+    it('borderless[boolean]', () => {
+      // 无边框模式作用于整组子项
+      const wrapper = mount(() => (
+        <RadioGroup borderless>
+          <Radio name="radio" value="1" label="单选"></Radio>
+          <Radio name="radio" value="2" label="单选"></Radio>
+        </RadioGroup>
+      ));
+      expect(wrapper.findAll(`.${name}__border`)).toHaveLength(0);
+
+      // 默认渲染子项边框
+      const wrapper2 = mount(() => (
+        <RadioGroup>
+          <Radio name="radio" value="1" label="单选"></Radio>
+        </RadioGroup>
+      ));
+      expect(wrapper2.findAll(`.${name}__border`)).toHaveLength(1);
+    });
 
     it('direction[vertical/horizontal]', () => {
       const wrapper = mount(() => (
@@ -49,7 +65,28 @@ describe('RadioGroup', () => {
       expect(wrapper.element).toMatchSnapshot();
     });
 
-    it.todo('readonly[boolean]');
+    it('readonly[boolean]', async () => {
+      const value = ref('1');
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <RadioGroup v-model:value={value.value} readonly onChange={onChange}>
+              <Radio name="radio" value="1" label="单选"></Radio>
+              <Radio name="radio" value="2" label="单选"></Radio>
+            </RadioGroup>
+          );
+        },
+      });
+
+      // 整组只读时点击任意选项不切换选中值
+      await wrapper.findAll(`.${name}`)[1].trigger('click');
+      expect(value.value).toBe('1');
+      expect(onChange).not.toHaveBeenCalled();
+      // 选中态图标仍停留在原选中项
+      expect(wrapper.findAll(`.${name}__icon--checked`)).toHaveLength(1);
+      expect(wrapper.findAll(`.${name}`)[0].find(`.${name}__icon--checked`).exists()).toBe(true);
+    });
   });
 
   describe('events', () => {

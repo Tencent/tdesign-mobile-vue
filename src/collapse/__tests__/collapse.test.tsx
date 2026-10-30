@@ -56,10 +56,46 @@ describe('Collapse', () => {
       expect(handleChange).toHaveBeenCalledTimes(1);
     });
 
-    // expandIcon 自定义展开图标/关闭展开图标，与面板图标渲染联动
-    it.todo('expandIcon[boolean]');
+    test('expandIcon[boolean]', async () => {
+      // 默认渲染默认展开图标
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Collapse>
+              <CollapsePanel ref="1" value="1" header="标题" content="内容" />
+            </Collapse>
+          );
+        },
+      });
+      expect(wrapper.find('.t-collapse-panel__header-icon svg').exists()).toBe(true);
 
-    it.todo('expandIcon[function]');
+      // expandIcon 为 false 时所有面板不渲染展开图标
+      const wrapper2 = mount({
+        setup() {
+          return () => (
+            <Collapse expandIcon={false}>
+              <CollapsePanel ref="1" value="1" header="标题" content="内容" />
+            </Collapse>
+          );
+        },
+      });
+      expect(wrapper2.find('.t-collapse-panel__header-icon svg').exists()).toBe(false);
+    });
+
+    test('expandIcon[function]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Collapse expandIcon={() => <span class="custom-expand-icon">更多</span>}>
+              <CollapsePanel ref="1" value="1" header="标题" content="内容" />
+            </Collapse>
+          );
+        },
+      });
+      // 函数图标透传至子面板
+      expect(wrapper.find('.t-collapse-panel__header-icon .custom-expand-icon').exists()).toBe(true);
+      expect(wrapper.find('.t-collapse-panel__header-icon .custom-expand-icon').text()).toBe('更多');
+    });
 
     test('expandMutex[boolean]', async () => {
       const val = ref([]);

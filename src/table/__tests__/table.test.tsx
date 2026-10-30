@@ -77,6 +77,50 @@ describe('Table', () => {
       expect(wrapper.find('.t-table__empty').text()).toBe(emptyText);
     });
 
+    it('fixedRows[array]', async () => {
+      const wrapper = mount({
+        render() {
+          return <TTable rowKey="index" data={data} columns={columns} fixedRows={[1, 1]}></TTable>;
+        },
+      });
+      const rows = wrapper.findAll('tbody > tr');
+      // 冻结首行
+      expect(rows[0].classes()).toContain('t-table__row--fixed-top');
+      // 冻结尾行
+      expect(rows[4].classes()).toContain('t-table__row--fixed-bottom');
+      expect(rows[4].classes()).toContain('t-table__row--fixed-bottom-first');
+      // 尾行前一行为首个固定底行的上一行，去掉底边框
+      expect(rows[3].classes()).toContain('t-table__row--without-border-bottom');
+    });
+
+    it('footerSummary[string]', () => {
+      const wrapper = mount({
+        render() {
+          return <TTable rowKey="index" data={data} columns={columns} footerSummary="汇总信息"></TTable>;
+        },
+      });
+      const $footer = wrapper.find('.t-table__bottom-content');
+      expect($footer.exists()).toBe(true);
+      expect($footer.text()).toBe('汇总信息');
+    });
+
+    it('footerSummary[function]', () => {
+      const wrapper = mount({
+        render() {
+          return (
+            <TTable
+              rowKey="index"
+              data={data}
+              columns={columns}
+              footerSummary={() => <div class="custom-footer-summary">自定义汇总</div>}
+            ></TTable>
+          );
+        },
+      });
+      expect(wrapper.find('.t-table__bottom-content').exists()).toBe(true);
+      expect(wrapper.find('.t-table__bottom-content .custom-footer-summary').text()).toBe('自定义汇总');
+    });
+
     it('loading[boolean]', async () => {
       const wrapper = mount({
         render() {
@@ -117,6 +161,81 @@ describe('Table', () => {
       expect(wrapper.find('.t-icon-loading').exists()).toBeFalsy();
       expect(wrapper.find('.t-loading__text').exists()).toBeTruthy();
       expect(wrapper.find('.t-loading__text').text()).toBe('function loading');
+    });
+
+    it('rowAttributes[object]', () => {
+      const wrapper = mount({
+        render() {
+          return <TTable rowKey="index" data={data} columns={columns} rowAttributes={{ draggable: true }}></TTable>;
+        },
+      });
+      const rows = wrapper.findAll('tbody > tr');
+      rows.forEach((row) => {
+        expect(row.attributes('draggable')).toBe('true');
+      });
+    });
+
+    it('rowAttributes[array]', () => {
+      const wrapper = mount({
+        render() {
+          return (
+            <TTable
+              rowKey="index"
+              data={data}
+              columns={columns}
+              rowAttributes={[{ 'data-custom': 'a' }, { title: '行标题' }]}
+            ></TTable>
+          );
+        },
+      });
+      const rows = wrapper.findAll('tbody > tr');
+      rows.forEach((row) => {
+        expect(row.attributes('data-custom')).toBe('a');
+        expect(row.attributes('title')).toBe('行标题');
+      });
+    });
+
+    it('rowAttributes[function]', () => {
+      const wrapper = mount({
+        render() {
+          return (
+            <TTable
+              rowKey="index"
+              data={data}
+              columns={columns}
+              rowAttributes={({ rowIndex }) => ({ 'data-row-index': String(rowIndex) })}
+            ></TTable>
+          );
+        },
+      });
+      const rows = wrapper.findAll('tbody > tr');
+      rows.forEach((row, index) => {
+        expect(row.attributes('data-row-index')).toBe(String(index));
+      });
+    });
+
+    it('rowspanAndColspan[function]', () => {
+      const mergeData = [
+        { index: 1, applicant: '内容1', channel: '内容', status: 1 },
+        { index: 2, applicant: '内容2', channel: '内容', status: 0 },
+      ];
+      const wrapper = mount({
+        render() {
+          return (
+            <TTable
+              rowKey="index"
+              data={mergeData}
+              columns={columns}
+              rowspanAndColspan={({ rowIndex, colIndex }) => (rowIndex === 0 && colIndex === 0 ? { rowspan: 2 } : {})}
+            ></TTable>
+          );
+        },
+      });
+      const rows = wrapper.findAll('tbody > tr');
+      // 首行首个单元格合并两行
+      expect(rows[0].find('td').attributes('rowspan')).toBe('2');
+      // 第二行被合并的单元格跳过渲染
+      expect(rows[1].findAll('td')).toHaveLength(columns.length - 1);
     });
 
     it('verticalAlign[top/middle/bottom]', async () => {
@@ -217,14 +336,6 @@ describe('Table', () => {
       });
       expect(wrapper.find('table').attributes('style')).toContain('width: 800px');
     });
-
-    // 行列合并逻辑依赖固定数据结构组合，待补充专项数据用例
-    it.todo('rowspanAndColspan[function]');
-    // 固定行/汇总行/行属性需要更完整的表格数据场景
-    it.todo('fixedRows[object]');
-    it.todo('footerSummary[string]');
-    it.todo('footerSummary[function]');
-    it.todo('rowAttributes[object/function/array]');
   });
 
   describe('slots', () => {

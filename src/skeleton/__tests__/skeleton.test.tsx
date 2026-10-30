@@ -32,8 +32,20 @@ describe('Skeleton', () => {
       expect($rows[0].findAll(`.${name}__col`)[0].classes().includes(`${name}--animation-${animation}`)).toBeTruthy();
     });
 
-    // delay 延迟显示骨架屏，依赖定时器渲染时机
-    it.todo('delay[number]');
+    it('delay[number]', async () => {
+      const wrapper = mount(Skeleton, {
+        props: {
+          loading: true,
+          delay: 100,
+        },
+      });
+      // 延迟未到时不渲染骨架屏，避免加载闪烁
+      expect(wrapper.find(`.${name}`).exists()).toBe(false);
+      await new Promise((resolve) => {
+        setTimeout(resolve, 150);
+      });
+      expect(wrapper.find(`.${name}`).exists()).toBe(true);
+    });
 
     it('loading[boolean]', async () => {
       const wrapper = mount(Skeleton, {

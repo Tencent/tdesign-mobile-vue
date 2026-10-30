@@ -10,8 +10,18 @@ const simulateEvent = (target, text, event) => {
 
 describe('Textarea', () => {
   describe('props', () => {
-    // allowInputOverMax 依赖超限输入截断行为
-    it.todo('allowInputOverMax[boolean]');
+    it('allowInputOverMax[boolean]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(<Textarea label="标题" maxlength={5} allowInputOverMax indicator onChange={onChange} />);
+      const el = wrapper.find('textarea').element;
+      await simulateEvent(el, '12345678', 'input');
+      // 超出 maxlength 后仍保留全部输入
+      expect(onChange).toHaveBeenCalledWith('12345678');
+      await nextTick();
+      expect(el.value).toBe('12345678');
+      // 计数器按实际长度显示，可超过上限
+      expect(wrapper.find('.t-textarea__indicator').text()).toContain('8/5');
+    });
 
     it('autofocus[boolean]', async () => {
       const onFocus = vi.fn();
@@ -54,8 +64,13 @@ describe('Textarea', () => {
       expect(wrapper2.find('.t-textarea--border').exists()).toBeFalsy();
     });
 
-    // cursorColor 为 CSS 变量注入，jsdom 无法断言样式
-    it.todo('cursorColor[string]');
+    it('cursorColor[string]', async () => {
+      const wrapper = mount(<Textarea cursorColor="red" />);
+      expect(wrapper.find('textarea').attributes('style')).toContain('caret-color: red');
+
+      await wrapper.setProps({ cursorColor: 'blue' });
+      expect(wrapper.find('textarea').attributes('style')).toContain('caret-color: blue');
+    });
 
     it('disabled[boolean]', async () => {
       const value = ref('文本');
@@ -100,8 +115,16 @@ describe('Textarea', () => {
       expect(onChange).toHaveBeenCalledWith('一');
     });
 
-    // maxlength 经字数限制逻辑处理，依赖输入事件
-    it.todo('maxlength[number]');
+    it('maxlength[number]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(<Textarea label="标题" maxlength={5} onChange={onChange} />);
+      const el = wrapper.find('textarea').element;
+      await simulateEvent(el, '超过五个字符的文本', 'input');
+      // 超出 maxlength 的输入按 unicode 长度截断
+      expect(onChange).toHaveBeenCalledWith('超过五个字');
+      await nextTick();
+      expect(el.value).toBe('超过五个字');
+    });
 
     it('name[string]', async () => {
       const wrapper = mount(<Textarea name="remark" />);

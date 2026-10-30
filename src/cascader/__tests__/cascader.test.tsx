@@ -1,5 +1,5 @@
 import { ref, h, nextTick } from 'vue';
-import { config, mount } from '@vue/test-utils';
+import { config, mount, DOMWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { AppIcon as TIconApp, CloseIcon } from 'tdesign-icons-vue-next';
 import Cascader from '../cascader';
@@ -173,8 +173,33 @@ describe('Cascader', () => {
   });
 
   describe('props', () => {
-    // checkStrictly 父子节点选中解耦，依赖多级选择交互
-    it.todo('checkStrictly[boolean]');
+    it('checkStrictly[boolean]', async () => {
+      const onChange = vi.fn();
+      const selected = ref<string>();
+      const wrapper = mount(<Cascader v-model={selected.value} options={options} checkStrictly onChange={onChange} />);
+      // 弹层内容 teleport 到 body，DOM 从 document 查询
+      const getSteps = () => document.querySelectorAll(`.${name}__step`);
+
+      // 选中父级选项仅展开下一级，不直接产出值
+      await wrapper.findAllComponents(Radio)[0].find(`.${prefix}-radio`).trigger('click');
+      await nextTick();
+      expect(getSteps()).toHaveLength(2);
+      expect(selected.value).toBeUndefined();
+
+      // 回到第一级，再次点击已选中的父级选项取消选中
+      await new DOMWrapper(getSteps()[0] as HTMLElement).trigger('click');
+      await nextTick();
+      await wrapper.findAllComponents(Radio)[0].find(`.${prefix}-radio`).trigger('click');
+      await nextTick();
+      expect(getSteps()).toHaveLength(1);
+
+      // 父子选中解耦：重新选中父级后关闭，把父级作为最终值产出
+      await wrapper.findAllComponents(Radio)[0].find(`.${prefix}-radio`).trigger('click');
+      await nextTick();
+      await new DOMWrapper(document.querySelector(`.${name}__close-btn`) as HTMLElement).trigger('click');
+      expect(onChange).toHaveBeenLastCalledWith('110000', expect.anything());
+      expect(selected.value).toBe('110000');
+    });
 
     it('closeBtn[boolean]', async () => {
       const wrapper = mount(<Cascader options={options} />);
@@ -198,8 +223,28 @@ describe('Cascader', () => {
       expect(document.querySelector(`.${prefix}-tabs`).textContent).toContain('蓟州区');
     });
 
-    // load 异步动态加载子级选项
-    it.todo('load[function]');
+    it('load[function]', async () => {
+      const children = [{ label: '东城区', value: '110101' }];
+      const load = vi.fn(() => Promise.resolve(children));
+      const asyncOptions = [{ label: '北京市', value: '110000', children: true }];
+      const onChange = vi.fn();
+      const wrapper = mount(<Cascader options={asyncOptions} load={load} onChange={onChange} />);
+
+      // 点击 children = true 的选项触发异步加载
+      await wrapper.findAllComponents(Radio)[0].find(`.${prefix}-radio`).trigger('click');
+      expect(load).toHaveBeenCalledWith(expect.objectContaining({ value: '110000', label: '北京市' }));
+
+      // 加载完成后渲染子级选项
+      await sleep(0);
+      await nextTick();
+      const $radios = wrapper.findAllComponents(Radio);
+      expect($radios).toHaveLength(2);
+      expect($radios[1].text()).toContain('东城区');
+
+      // 选中加载出的叶子节点，产出值
+      await $radios[1].find(`.${prefix}-radio`).trigger('click');
+      expect(onChange).toHaveBeenLastCalledWith('110101', expect.anything());
+    });
 
     it('middleContent[function]', async () => {
       const wrapper = mount(

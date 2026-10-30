@@ -44,10 +44,52 @@ describe('CollapsePanel', () => {
       expect(handleChange).not.toHaveBeenCalled();
     });
 
-    // expandIcon/headerLeftIcon 自定义图标渲染
-    it.todo('expandIcon[boolean]');
+    test('expandIcon[boolean]', async () => {
+      // 默认渲染默认展开图标
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Collapse>
+              <CollapsePanel ref="1" value="1" header="标题" content="内容" />
+            </Collapse>
+          );
+        },
+      });
+      const panel = wrapper.findComponent({ ref: '1' });
+      expect(panel.find('.t-collapse-panel__header-icon svg').exists()).toBe(true);
 
-    it.todo('expandIcon[function]');
+      // expandIcon 为 false 时不渲染展开图标
+      const wrapper2 = mount({
+        setup() {
+          return () => (
+            <Collapse>
+              <CollapsePanel ref="1" value="1" header="标题" content="内容" expandIcon={false} />
+            </Collapse>
+          );
+        },
+      });
+      expect(wrapper2.find('.t-collapse-panel__header-icon svg').exists()).toBe(false);
+    });
+
+    test('expandIcon[function]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Collapse>
+              <CollapsePanel
+                ref="1"
+                value="1"
+                header="标题"
+                content="内容"
+                expandIcon={() => <span class="custom-expand-icon">更多</span>}
+              />
+            </Collapse>
+          );
+        },
+      });
+      expect(wrapper.find('.t-collapse-panel__header-icon .custom-expand-icon').exists()).toBe(true);
+      expect(wrapper.find('.t-collapse-panel__header-icon .custom-expand-icon').text()).toBe('更多');
+    });
 
     test('header[string] & content[string]', async () => {
       const wrapper = mount({
@@ -66,7 +108,26 @@ describe('CollapsePanel', () => {
       expect(panel.find('.t-collapse-panel__content').text()).toBe('内容');
     });
 
-    it.todo('headerLeftIcon[function]');
+    test('headerLeftIcon[function]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Collapse>
+              <CollapsePanel
+                ref="1"
+                value="1"
+                header="标题"
+                content="内容"
+                headerLeftIcon={() => <span class="custom-left-icon">图标</span>}
+              />
+            </Collapse>
+          );
+        },
+      });
+      const panel = wrapper.findComponent({ ref: '1' });
+      expect(panel.find('.t-collapse-panel__header .custom-left-icon').exists()).toBe(true);
+      expect(panel.find('.t-collapse-panel__header .custom-left-icon').text()).toBe('图标');
+    });
 
     test('headerRightContent[string]', async () => {
       const wrapper = mount({

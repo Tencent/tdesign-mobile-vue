@@ -84,8 +84,8 @@ describe('Comment', () => {
       expect(wrapper.find('.t-comment__date').text()).toBe('昨天20:00');
     });
 
-    // modelValue（visible）显隐受控，与 visible 通道一致
-    it.todo('modelValue[boolean]');
+    // modelValue 在 props.ts 中声明（CommentFold 结构），但组件未消费该属性，受控折叠请使用 folds
+    it.todo('modelValue[object]');
   });
 
   describe('events', () => {

@@ -285,7 +285,8 @@ describe('Drawer', () => {
         expect(isElementVisible(document.querySelector('.t-drawer'))).toBe(true);
 
         await handler.hide();
-        await sleep(300);
+        // 等待超过过渡时长（300ms）再断言隐藏，避免边界竞态
+        await sleep(500);
         expect(isElementVisible(document.querySelector('.t-drawer'))).toBe(false);
       });
 

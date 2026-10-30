@@ -85,8 +85,31 @@ describe('Radio', () => {
       expect(wrapper.find(`.${name}__icon--checked`).exists()).toBeTruthy();
     });
 
-    // contentDisabled 点击内容区域不触发切换，依赖事件来源区分
-    it.todo('contentDisabled[boolean]');
+    it('contentDisabled[boolean]', async () => {
+      const value = ref('1');
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <RadioGroup v-model:value={value.value} onChange={onChange}>
+              <Radio value="1" label="选项一" />
+              <Radio value="2" label="选项二" contentDisabled />
+            </RadioGroup>
+          );
+        },
+      });
+      const radios = wrapper.findAllComponents(Radio);
+
+      // 点击内容区域不触发选中
+      await radios[1].find('.t-radio__content').trigger('click');
+      expect(value.value).toBe('1');
+      expect(onChange).not.toHaveBeenCalled();
+
+      // 点击组件根节点仍可正常选中
+      await radios[1].trigger('click');
+      expect(value.value).toBe('2');
+      expect(onChange).toHaveBeenCalledTimes(1);
+    });
 
     it('icon[dot]', async () => {
       const wrapper = mount(Radio, {
@@ -168,8 +191,32 @@ describe('Radio', () => {
       expect(wrapper.element).toMatchSnapshot();
     });
 
-    // readonly 与分组的联动行为在 group 场景验证
-    it.todo('readonly[boolean]');
+    it('readonly[boolean]', async () => {
+      const checked = ref(false);
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => <Radio v-model:checked={checked.value} label="选项一" readonly onChange={onChange} />;
+        },
+      });
+
+      // 只读时点击不切换选中态，图标不变为选中样式
+      await wrapper.trigger('click');
+      expect(checked.value).toBe(false);
+      expect(onChange).not.toHaveBeenCalled();
+      expect(wrapper.find(`.${name}__icon--checked`).exists()).toBe(false);
+
+      // 非只读时点击可选中
+      const editable = ref(false);
+      const editableWrapper = mount({
+        setup() {
+          return () => <Radio v-model:checked={editable.value} label="选项一" onChange={onChange} />;
+        },
+      });
+      await editableWrapper.trigger('click');
+      expect(editable.value).toBe(true);
+      expect(editableWrapper.find(`.${name}__icon--checked`).exists()).toBe(true);
+    });
   });
 
   describe('slots', () => {

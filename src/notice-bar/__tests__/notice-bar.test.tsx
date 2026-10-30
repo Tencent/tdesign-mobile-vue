@@ -1,8 +1,9 @@
-import { nextTick } from 'vue';
+import { nextTick, ref } from 'vue';
 import { expect, it, vi, describe } from 'vitest';
 import { mount } from '@vue/test-utils';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import NoticeBar from '../notice-bar';
+import { Swiper } from '../../swiper';
 
 describe('NoticeBar', () => {
   describe('props', () => {
@@ -200,9 +201,31 @@ describe('NoticeBar', () => {
       expect(fn).toHaveBeenCalledTimes(4);
     });
 
-    // interval 垂直滚动间隔，依赖跑马灯定时器
-    it.todo('interval[number]');
-    // modelValue 显示隐藏受控
-    it.todo('modelValue[boolean]');
+    it('interval[number]', async () => {
+      const content = ['君不见', '高堂明镜悲白发'];
+      const wrapper = mount(<NoticeBar visible marquee direction="vertical" content={content} interval={5000} />);
+      await nextTick();
+      // interval 仅垂直滚动生效，透传给内部 Swiper 控制轮播间隔
+      expect(wrapper.findComponent(Swiper).props('interval')).toBe(5000);
+    });
+
+    it('modelValue[boolean]', async () => {
+      const visible = ref(false);
+      const wrapper = mount({
+        setup() {
+          return () => <NoticeBar v-model={visible.value} />;
+        },
+      });
+      // 受控显示隐藏：初始隐藏
+      expect(wrapper.find('.t-notice-bar').exists()).toBe(false);
+
+      visible.value = true;
+      await nextTick();
+      expect(wrapper.find('.t-notice-bar').exists()).toBe(true);
+
+      visible.value = false;
+      await nextTick();
+      expect(wrapper.find('.t-notice-bar').exists()).toBe(false);
+    });
   });
 });

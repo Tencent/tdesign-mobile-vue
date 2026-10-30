@@ -5,11 +5,17 @@ import { ChevronRightIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Cell from '../cell';
 import type { TdCellProps } from '../type';
 import Avatar from '../../avatar/avatar';
+import { trigger } from '@/image-viewer/__tests__/touch';
 
 const appIcon = () => h(AppIcon);
 const chevronRightIcon = () => h(ChevronRightIcon);
 const alignList: TdCellProps['align'][] = ['bottom', 'middle', 'top'];
 const avatarUrl = 'https://tdesign.gtimg.com/mobile/demos/avatar_1.png';
+
+const sleep = (timeout: number) =>
+  new Promise((resolve) => {
+    setTimeout(resolve, timeout);
+  });
 
 describe('Cell', () => {
   describe('props', () => {
@@ -42,8 +48,25 @@ describe('Cell', () => {
       expect(desc.text()).toBe('描述信息');
     });
 
-    // hover 点击态样式依赖交互反馈
-    it.todo('hover[boolean]');
+    it('hover[boolean]', async () => {
+      // hover 为 true 时，触摸按下短暂延迟后出现点击态类名，松开一段时间后移除
+      const wrapper = mount(() => <Cell title="单行标题" hover></Cell>);
+      const $cell = wrapper.find('.t-cell');
+      await trigger($cell, 'touchstart');
+      await sleep(60);
+      expect($cell.classes()).toContain('t-cell--hover');
+
+      await trigger($cell, 'touchend');
+      await sleep(80);
+      expect($cell.classes()).not.toContain('t-cell--hover');
+
+      // 默认关闭 hover，按下不出现点击态类名
+      const wrapper2 = mount(() => <Cell title="单行标题"></Cell>);
+      const $cell2 = wrapper2.find('.t-cell');
+      await trigger($cell2, 'touchstart');
+      await sleep(60);
+      expect($cell2.classes()).not.toContain('t-cell--hover');
+    });
 
     it('image[string]', async () => {
       const wrapper = mount(() => <Cell title="单行标题" image={avatarUrl}></Cell>);

@@ -68,9 +68,102 @@ describe('DropdownMenu', () => {
     });
 
     // closeOnClickOverlay/direction/showOverlay/zIndex 菜单浮层行为
-    it.todo('closeOnClickOverlay[boolean]');
-    it.todo('direction[string]');
-    it.todo('showOverlay[boolean]');
-    it.todo('zIndex[number]');
+    it('closeOnClickOverlay[boolean]', async () => {
+      const mountMenu = (closeOnClickOverlay?: boolean) =>
+        mount({
+          setup() {
+            return () => (
+              <DropdownMenu closeOnClickOverlay={closeOnClickOverlay}>
+                <DropdownItem label="菜单" options={options} />
+              </DropdownMenu>
+            );
+          },
+        });
+
+      // 默认 closeOnClickOverlay = true：点击遮罩收起菜单
+      const wrapper = mountMenu();
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      expect(wrapper.find(`.${name}__item--active`).exists()).toBe(true);
+      await wrapper.find(`.${prefix}-overlay`).trigger('click');
+      await sleep(200);
+      expect(wrapper.find(`.${name}__item--active`).exists()).toBe(false);
+
+      // closeOnClickOverlay = false：点击遮罩不收起菜单
+      const wrapper2 = mountMenu(false);
+      await wrapper2.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      expect(wrapper2.find(`.${name}__item--active`).exists()).toBe(true);
+      await wrapper2.find(`.${prefix}-overlay`).trigger('click');
+      await sleep(200);
+      expect(wrapper2.find(`.${name}__item--active`).exists()).toBe(true);
+    });
+
+    it('direction[string]', async () => {
+      const mountMenu = (direction?: string) =>
+        mount({
+          setup() {
+            return () => (
+              <DropdownMenu direction={direction}>
+                <DropdownItem label="菜单" options={options} />
+              </DropdownMenu>
+            );
+          },
+        });
+
+      // direction = down（默认）：标题栏箭头朝下
+      const wrapper = mountMenu();
+      expect(wrapper.find('.t-icon-caret-down-small').exists()).toBe(true);
+      expect(wrapper.find('.t-icon-caret-up-small').exists()).toBe(false);
+
+      // direction = up：标题栏箭头朝上
+      const wrapper2 = mountMenu('up');
+      expect(wrapper2.find('.t-icon-caret-up-small').exists()).toBe(true);
+      expect(wrapper2.find('.t-icon-caret-down-small').exists()).toBe(false);
+    });
+
+    it('showOverlay[boolean]', async () => {
+      const mountMenu = (showOverlay?: boolean) =>
+        mount({
+          setup() {
+            return () => (
+              <DropdownMenu showOverlay={showOverlay}>
+                <DropdownItem label="菜单" options={options} />
+              </DropdownMenu>
+            );
+          },
+        });
+
+      // 默认显示遮罩层
+      const wrapper = mountMenu();
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      expect(wrapper.find(`.${prefix}-overlay`).isVisible()).toBe(true);
+
+      // showOverlay = false：遮罩 DOM 由 v-show 控制，不可见
+      const wrapper2 = mountMenu(false);
+      await wrapper2.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      const $overlay = wrapper2.find(`.${prefix}-overlay`);
+      expect($overlay.exists()).toBe(true);
+      expect($overlay.isVisible()).toBe(false);
+    });
+
+    it('zIndex[number]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu zIndex={2000}>
+              <DropdownItem label="菜单" options={options} />
+            </DropdownMenu>
+          );
+        },
+      });
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      // 展开层使用 zIndex，弹出内容使用 zIndex + 1
+      expect(wrapper.find(`.${prefix}-dropdown-item`).attributes('style')).toContain('z-index: 2000');
+      expect(wrapper.find(`.${prefix}-popup`).attributes('style')).toContain('z-index: 2001');
+    });
   });
 });

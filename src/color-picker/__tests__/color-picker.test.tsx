@@ -1,4 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
+import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import ColorPicker from '../index';
 import { getColorObject, Color } from '../../_common/js/color-picker';
@@ -25,7 +26,7 @@ const mockBoundingClientRect = (info) => {
 
 describe('ColorPicker', () => {
   describe('props', () => {
-    // clearable 清除色值按钮
+    // clearable 文档声明但实现未消费该属性（组件缺口），待组件支持后再补
     it.todo('clearable[boolean]');
 
     it('enableAlpha[boolean]', () => {
@@ -61,9 +62,36 @@ describe('ColorPicker', () => {
     });
 
     // 受控色值 v-model 联动
-    it.todo('modelValue[string]');
+    it('modelValue[string]', async () => {
+      const value = ref('#FF0000');
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => <ColorPicker v-model={value.value} type="multiple" format="RGB" onChange={onChange} />;
+        },
+      });
+      await nextTick();
+      // modelValue 决定色板初始色值（RGB 通道展示 255/0/0）
+      const getFormatTexts = () => wrapper.findAll('.t-color-picker__format-input').map((item) => item.text());
+      expect(getFormatTexts()).toEqual(['255', '0', '0', '100%']);
 
-    it.todo('defaultValue[string]');
+      // 点击系统预设色后 v-model 联动更新
+      await wrapper.find('.t-color-picker__swatches-item').trigger('click');
+      expect(onChange).toHaveBeenCalledWith('rgb(236, 242, 254)', expect.anything());
+      expect(value.value).toBe('rgb(236, 242, 254)');
+      expect(getFormatTexts()).toEqual(['236', '242', '254', '100%']);
+    });
+
+    it('defaultValue[string]', async () => {
+      const wrapper = mountColorPicker({ type: 'multiple', format: 'RGB', defaultValue: '#00FF00' });
+      // defaultValue 作为非受控初始色值（RGB 通道展示 0/255/0）
+      expect(wrapper.findAll('.t-color-picker__format-input').map((item) => item.text())).toEqual([
+        '0',
+        '255',
+        '0',
+        '100%',
+      ]);
+    });
 
     it('multiple[boolean]', () => {
       const testCurrentProp = (type, target) => {

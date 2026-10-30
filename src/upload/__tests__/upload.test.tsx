@@ -18,6 +18,7 @@ import {
   VideoFilledIcon,
 } from 'tdesign-icons-vue-next';
 import Upload from '../upload';
+import { trigger } from '@/image-viewer/__tests__/touch';
 
 // jsdom 环境下 URL.createObjectURL / revokeObjectURL 不存在，需要 mock
 let _objectUrlCounter = 0;
@@ -84,6 +85,47 @@ const triggerUploadFile = (node, fileList) => {
   target.trigger('change');
 };
 
+// 请求配置类属性（method/headers/withCredentials/data/formatRequest/模拟进度）走 XHR 链路，
+// 通过临时替换全局 XMLHttpRequest 捕获请求参数，不做真实网络请求
+const OriginXMLHttpRequest = window.XMLHttpRequest;
+
+class MockXMLHttpRequest {
+  upload: { onprogress: ((event: ProgressEvent) => void) | null; requestParams?: Record<string, any> } = {
+    onprogress: null,
+  };
+
+  withCredentials = false;
+
+  onerror: ((event: ProgressEvent) => void) | null = null;
+
+  ontimeout: ((event: ProgressEvent) => void) | null = null;
+
+  onload: ((event: ProgressEvent) => void) | null = null;
+
+  open = vi.fn();
+
+  setRequestHeader = vi.fn();
+
+  send = vi.fn();
+
+  abort = vi.fn();
+
+  constructor() {
+    mockXHRInstances.push(this);
+  }
+}
+
+let mockXHRInstances: MockXMLHttpRequest[] = [];
+
+const useMockXMLHttpRequest = () => {
+  mockXHRInstances = [];
+  window.XMLHttpRequest = MockXMLHttpRequest as unknown as typeof window.XMLHttpRequest;
+};
+
+const restoreXMLHttpRequest = () => {
+  window.XMLHttpRequest = OriginXMLHttpRequest;
+};
+
 describe('Upload', () => {
   describe('props', () => {
     it('accept[string]', () => {
@@ -146,8 +188,39 @@ describe('Upload', () => {
       expect(wrapper.find('input').attributes('capture')).toBe('camera');
     });
 
-    // 以下为请求配置类属性，依赖 XHR 上传链路，单测环境以 todo 标注
-    it.todo('data[object/function]');
+    it('data[object]', async () => {
+      useMockXMLHttpRequest();
+      try {
+        const wrapper = mount(Upload, {
+          props: { action, data: { channel: 'wx' } },
+        });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        await sleep(0);
+        const { requestParams } = mockXHRInstances[0].upload;
+        // 额外字段随请求发送，默认字段 file/length 保留
+        expect(requestParams).toMatchObject({ channel: 'wx', length: 1 });
+        expect(requestParams.file).toBe(mockFileFoo);
+      } finally {
+        restoreXMLHttpRequest();
+      }
+    });
+
+    it('data[function]', async () => {
+      useMockXMLHttpRequest();
+      try {
+        // type.ts 声明 data 支持 function（props.ts 运行时仅声明 Object，传入函数会有 Vue 类型告警）
+        const data = vi.fn((files) => ({ count: files.length, fileName: files[0].name }));
+        const wrapper = mount(Upload, {
+          props: { action, data },
+        });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        await sleep(0);
+        expect(data).toHaveBeenCalled();
+        expect(mockXHRInstances[0].upload.requestParams).toMatchObject({ count: 1, fileName: 'foo.png' });
+      } finally {
+        restoreXMLHttpRequest();
+      }
+    });
 
     it('disabled[boolean]', async () => {
       const onSelectChange = vi.fn();
@@ -166,7 +239,55 @@ describe('Upload', () => {
       expect(onSelectChange).not.toHaveBeenCalled();
     });
 
-    it.todo('draggable[boolean]');
+    it('draggable[boolean]', async () => {
+      vi.useFakeTimers();
+      try {
+        const onDrag = vi.fn();
+        const wrapper = mount(Upload, {
+          props: {
+            draggable: true,
+            onDrag,
+            defaultFiles: [
+              { name: 'a.png', url: 'https://x.png', type: 'image/png', status: 'success' },
+              { name: 'b.png', url: 'https://y.png', type: 'image/png', status: 'success' },
+            ],
+          },
+        });
+        await nextTick();
+        const item = wrapper.findAll('.t-upload__item:not(.t-upload__item--add)')[0];
+        // 长按 300ms 进入拖拽态
+        await trigger(item, 'touchstart', 10, 10);
+        await vi.advanceTimersByTimeAsync(300);
+        expect(onDrag).toHaveBeenCalledWith(expect.objectContaining({ index: 0 }));
+        expect(wrapper.find('.t-upload').classes()).toContain('t-upload--dragging');
+        // 拖拽浮层 clone 挂载到 body
+        expect(document.querySelector('.t-upload__drag-clone')).not.toBeNull();
+        await trigger(item, 'touchend', 10, 10);
+        await vi.advanceTimersByTimeAsync(0);
+
+        // 未开启 draggable 时长按不进入拖拽
+        const onDrag2 = vi.fn();
+        const wrapper2 = mount(Upload, {
+          props: {
+            onDrag: onDrag2,
+            defaultFiles: [
+              { name: 'a.png', url: 'https://x.png', type: 'image/png', status: 'success' },
+              { name: 'b.png', url: 'https://y.png', type: 'image/png', status: 'success' },
+            ],
+          },
+        });
+        await nextTick();
+        const item2 = wrapper2.findAll('.t-upload__item:not(.t-upload__item--add)')[0];
+        await trigger(item2, 'touchstart', 10, 10);
+        await vi.advanceTimersByTimeAsync(300);
+        expect(onDrag2).not.toHaveBeenCalled();
+        expect(wrapper2.find('.t-upload').classes()).not.toContain('t-upload--dragging');
+      } finally {
+        vi.useRealTimers();
+        // 清理 teleport 到 body 的拖拽 clone
+        document.body.innerHTML = '';
+      }
+    });
 
     // fileListDisplay 在 props.ts 声明但组件未实现渲染逻辑
     it.todo('fileListDisplay[function]');
@@ -189,9 +310,36 @@ describe('Upload', () => {
       expect(defaultFiles.value.length).toBe(0);
     });
 
-    it.todo('formatRequest[function]');
+    it('formatRequest[function]', async () => {
+      useMockXMLHttpRequest();
+      try {
+        const formatRequest = vi.fn((requestData) => ({ fileList: requestData.file, extra: 'custom' }));
+        const wrapper = mount(Upload, {
+          props: { action, formatRequest },
+        });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        await sleep(0);
+        expect(formatRequest).toHaveBeenCalled();
+        // formatRequest 完全自定义请求字段
+        expect(mockXHRInstances[0].upload.requestParams).toEqual({ fileList: mockFileFoo, extra: 'custom' });
+      } finally {
+        restoreXMLHttpRequest();
+      }
+    });
 
-    it.todo('headers[object]');
+    it('headers[object]', async () => {
+      useMockXMLHttpRequest();
+      try {
+        const wrapper = mount(Upload, {
+          props: { action, headers: { 'X-Token': 'tdesign' } },
+        });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        await sleep(0);
+        expect(mockXHRInstances[0].setRequestHeader).toHaveBeenCalledWith('X-Token', 'tdesign');
+      } finally {
+        restoreXMLHttpRequest();
+      }
+    });
 
     it('imageProps should be passed down', async () => {
       const wrapper = mount(Upload, {
@@ -205,7 +353,34 @@ describe('Upload', () => {
       expect(wrapper.find('.t-upload__image').exists()).toBe(true);
     });
 
-    it.todo('isBatchUpload[boolean]');
+    it('isBatchUpload[boolean]', async () => {
+      // 宫格布局使用 TransitionGroup，jsdom 中移除节点不触发过渡结束会残留 DOM，故以 onChange 载荷断言
+      const onChangeBatch = vi.fn();
+      const wrapper = mount(Upload, {
+        props: { autoUpload: false, multiple: true, isBatchUpload: true, onChange: onChangeBatch },
+      });
+      triggerUploadFile(wrapper, [mockFileFoo]);
+      await sleep(0);
+      triggerUploadFile(wrapper, [mockFileBar]);
+      await sleep(0);
+      // 批量模式下文件作为整体替换，第二批不追加第一批文件
+      expect(onChangeBatch).toHaveBeenLastCalledWith(
+        [expect.objectContaining({ name: 'bar.png' })],
+        expect.objectContaining({ trigger: 'add' }),
+      );
+
+      // 默认非批量模式下多选文件追加到列表
+      const onChange = vi.fn();
+      const wrapper2 = mount(Upload, {
+        props: { autoUpload: false, multiple: true, onChange },
+      });
+      triggerUploadFile(wrapper2, [mockFileFoo]);
+      await sleep(0);
+      triggerUploadFile(wrapper2, [mockFileBar]);
+      await sleep(0);
+      const lastCall = onChange.mock.calls[onChange.mock.calls.length - 1];
+      expect(lastCall[0]).toHaveLength(2);
+    });
 
     it('max should reject extra files', async () => {
       const onValidate = vi.fn();
@@ -237,9 +412,51 @@ describe('Upload', () => {
       expect(wrapper.find('.t-upload__item--add').exists()).toBe(false);
     });
 
-    it.todo('method[string]');
+    it('method[string]', async () => {
+      useMockXMLHttpRequest();
+      try {
+        const wrapper = mount(Upload, {
+          props: { action, method: 'PUT' },
+        });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        await sleep(0);
+        expect(mockXHRInstances[0].open).toHaveBeenCalledWith('PUT', action, true);
 
-    it.todo('mockProgressDuration[number]');
+        // 默认 POST
+        mockXHRInstances = [];
+        const wrapper2 = mount(Upload, {
+          props: { action },
+        });
+        triggerUploadFile(wrapper2, [mockFileFoo]);
+        await sleep(0);
+        expect(mockXHRInstances[0].open).toHaveBeenCalledWith('POST', action, true);
+      } finally {
+        restoreXMLHttpRequest();
+      }
+    });
+
+    it('mockProgressDuration[number]', async () => {
+      useMockXMLHttpRequest();
+      vi.useFakeTimers();
+      try {
+        const onProgress = vi.fn();
+        const wrapper = mount(Upload, {
+          props: { action, mockProgressDuration: 100, onProgress },
+        });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        // 间隔 100ms：300ms（即 100ms 开启 + 100ms 首次步进）内出现首个模拟进度 10%
+        await vi.advanceTimersByTimeAsync(200);
+        expect(onProgress).toHaveBeenCalledWith(
+          expect.objectContaining({ type: 'mock', percent: 10, file: expect.objectContaining({ name: 'foo.png' }) }),
+        );
+        expect(wrapper.text()).toContain('10%');
+        await vi.advanceTimersByTimeAsync(100);
+        expect(wrapper.text()).toContain('20%');
+      } finally {
+        vi.useRealTimers();
+        restoreXMLHttpRequest();
+      }
+    });
 
     it('multiple[boolean]', () => {
       const wrapper = mount(Upload, {
@@ -311,9 +528,63 @@ describe('Upload', () => {
       expect(args).toBeTruthy();
     });
 
-    it.todo('uploadAllFilesInOneRequest[boolean]');
+    it('uploadAllFilesInOneRequest[boolean]', async () => {
+      const oneByOne = vi.fn(requestMethod);
+      const wrapper = mount(Upload, {
+        props: { requestMethod: oneByOne, multiple: true, allowUploadDuplicateFile: true },
+      });
+      triggerUploadFile(wrapper, [mockFileFoo, mockFileBar]);
+      await sleep(0);
+      // 默认一个文件一个请求
+      expect(oneByOne).toHaveBeenCalledTimes(2);
+      expect(oneByOne.mock.calls[0][0]).toHaveLength(1);
+      expect(oneByOne.mock.calls[1][0]).toHaveLength(1);
 
-    it.todo('useMockProgress[boolean]');
+      const allInOne = vi.fn(requestMethod);
+      const wrapper2 = mount(Upload, {
+        props: {
+          requestMethod: allInOne,
+          multiple: true,
+          uploadAllFilesInOneRequest: true,
+          allowUploadDuplicateFile: true,
+        },
+      });
+      triggerUploadFile(wrapper2, [mockFileFoo, mockFileBar]);
+      await sleep(0);
+      // 全部文件在同一个请求中上传
+      expect(allInOne).toHaveBeenCalledTimes(1);
+      expect(allInOne.mock.calls[0][0]).toHaveLength(2);
+    });
+
+    it('useMockProgress[boolean]', async () => {
+      useMockXMLHttpRequest();
+      vi.useFakeTimers();
+      try {
+        const onProgress = vi.fn();
+        const wrapper = mount(Upload, {
+          props: { action, onProgress },
+        });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        // 默认间隔 300ms：600ms 后出现首个模拟进度
+        await vi.advanceTimersByTimeAsync(600);
+        const mockProgressCalls = onProgress.mock.calls.filter((args) => args[0]?.type === 'mock');
+        expect(mockProgressCalls).toHaveLength(1);
+        expect(mockProgressCalls[0][0].percent).toBe(10);
+
+        // useMockProgress = false 时不产生模拟进度
+        const onProgress2 = vi.fn();
+        mockXHRInstances = [];
+        const wrapper2 = mount(Upload, {
+          props: { action, useMockProgress: false, onProgress: onProgress2 },
+        });
+        triggerUploadFile(wrapper2, [mockFileFoo]);
+        await vi.advanceTimersByTimeAsync(1000);
+        expect(onProgress2).not.toHaveBeenCalled();
+      } finally {
+        vi.useRealTimers();
+        restoreXMLHttpRequest();
+      }
+    });
 
     it('theme[list] renders list structure', async () => {
       const wrapper = mount(Upload, {
@@ -409,9 +680,31 @@ describe('Upload', () => {
       expect(wrapper.find('.t-upload__file-name').text()).toBe('doc.pdf');
     });
 
+    // defaultValue 在 props.ts 声明但组件未消费（useUpload 的初始值仅读取 defaultFiles）
     it.todo('defaultValue[array]');
 
-    it.todo('withCredentials[boolean]');
+    it('withCredentials[boolean]', async () => {
+      useMockXMLHttpRequest();
+      try {
+        const wrapper = mount(Upload, {
+          props: { action, withCredentials: true },
+        });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        await sleep(0);
+        expect(mockXHRInstances[0].withCredentials).toBe(true);
+
+        // 默认不携带 cookie
+        mockXHRInstances = [];
+        const wrapper2 = mount(Upload, {
+          props: { action },
+        });
+        triggerUploadFile(wrapper2, [mockFileFoo]);
+        await sleep(0);
+        expect(mockXHRInstances[0].withCredentials).toBe(false);
+      } finally {
+        restoreXMLHttpRequest();
+      }
+    });
 
     it('onFail[function]', async () => {
       const onFail = vi.fn();

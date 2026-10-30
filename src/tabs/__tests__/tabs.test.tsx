@@ -83,8 +83,56 @@ describe('Tabs', () => {
       expect(onChange).toHaveBeenCalledTimes($tabNavItems.length - 1);
     });
 
-    // bottomLineMode 依赖导航元素真实尺寸（offsetWidth/offsetLeft）计算下划线
-    it.todo('bottomLineMode[string]');
+    it('bottomLineMode[fixed/auto/full]', async () => {
+      // jsdom 无真实布局，mock 导航元素尺寸后断言下划线定位样式的计算规则
+      const widthDesc = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'offsetWidth');
+      const leftDesc = Object.getOwnPropertyDescriptor(HTMLElement.prototype, 'offsetLeft');
+      Object.defineProperty(HTMLElement.prototype, 'offsetWidth', { configurable: true, get: () => 100 });
+      Object.defineProperty(HTMLElement.prototype, 'offsetLeft', { configurable: true, get: () => 100 });
+
+      const mountTabs = async (bottomLineMode?: string) => {
+        const currentValue = ref('1');
+        const wrapper = mount({
+          setup() {
+            return () => (
+              <Tabs
+                value={currentValue.value}
+                bottomLineMode={bottomLineMode}
+                list={[
+                  { value: '1', label: '标签页一' },
+                  { value: '2', label: '标签页二' },
+                ]}
+              />
+            );
+          },
+        });
+        // 值变化触发下划线重新定位
+        currentValue.value = '2';
+        await sleep(0);
+        await sleep(0);
+        return wrapper;
+      };
+
+      try {
+        // fixed（默认）：下划线宽度固定，居中于激活项
+        const $fixed = (await mountTabs()).find(`.${name}__track`);
+        expect($fixed.attributes('style')).toContain('transform: translateX(100px)');
+        expect($fixed.attributes('style')).not.toContain('width');
+
+        // auto：下划线宽度与激活项内容一致，按内容偏移定位
+        const $auto = (await mountTabs('auto')).find(`.${name}__track`);
+        expect($auto.attributes('style')).toContain('width: 100px');
+        expect($auto.attributes('style')).toContain('transform: translateX(200px)');
+
+        // full：下划线宽度与激活项整项一致
+        const $full = (await mountTabs('full')).find(`.${name}__track`);
+        expect($full.attributes('style')).toContain('width: 100px');
+        expect($full.attributes('style')).toContain('transform: translateX(100px)');
+      } finally {
+        if (widthDesc) Object.defineProperty(HTMLElement.prototype, 'offsetWidth', widthDesc);
+        if (leftDesc) Object.defineProperty(HTMLElement.prototype, 'offsetLeft', leftDesc);
+      }
+    });
 
     it('list[array]', async () => {
       const defaultValue = list[0].value;
@@ -305,8 +353,39 @@ describe('Tabs', () => {
       expect(wrapper.find('.t-badge').text()).toContain('6');
     });
 
-    // panel lazy 懒加载渲染行为需切换面板验证
-    it.todo('panel lazy[boolean]');
+    it('panel lazy[boolean]', async () => {
+      const currentValue = ref('1');
+      // 面板内容仅支持 slot 通道（renderTNodeJSX('default')），slot 调用警告与同文件其他用例同源
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Tabs v-model={currentValue.value}>
+              <TabPanel value="1" label="标签页一">
+                标签一内容区
+              </TabPanel>
+              <TabPanel value="2" label="标签页二" lazy destroyOnHide={false}>
+                标签二内容区
+              </TabPanel>
+            </Tabs>
+          );
+        },
+      });
+      // 懒加载面板初始不渲染
+      expect(wrapper.findAll('.t-tab-panel')).toHaveLength(1);
+      expect(wrapper.text()).not.toContain('标签二内容区');
+
+      // 切换到懒加载面板后才开始渲染（panel1 默认 destroyOnHide，切走即销毁）
+      await wrapper.findAll(`.${name}__item`)[1].trigger('click');
+      expect(wrapper.findAll('.t-tab-panel')).toHaveLength(1);
+      expect(wrapper.text()).toContain('标签二内容区');
+      expect(wrapper.text()).not.toContain('标签一内容区');
+
+      // 懒加载面板 destroyOnHide = false，切走后保持挂载，仅隐藏
+      await wrapper.findAll(`.${name}__item`)[0].trigger('click');
+      expect(wrapper.findAll('.t-tab-panel')).toHaveLength(2);
+      expect(wrapper.findAll('.t-tab-panel')[1].isVisible()).toBe(false);
+      expect(wrapper.text()).toContain('标签一内容区');
+    });
   });
 
   describe('slots', () => {

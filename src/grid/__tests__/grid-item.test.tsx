@@ -35,8 +35,16 @@ describe('GridItem', () => {
       expect(badge.text()).toBe('1');
     });
 
-    // icon 自定义宫格图标
-    it.todo('icon[function]');
+    it('icon[function]', () => {
+      const wrapper = mount(() => (
+        <Grid>
+          <GridItem icon={() => <span class="custom-grid-icon">自定义图标</span>} />
+        </Grid>
+      ));
+      // icon 渲染在图片区域，且不再渲染默认 image
+      expect(wrapper.find(`.${name}-item__image .custom-grid-icon`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}-item__image img`).exists()).toBe(false);
+    });
 
     it('layout[vertical/horizontal]', async () => {
       const layoutList: TdGridItemProps['layout'][] = ['vertical', 'horizontal'];

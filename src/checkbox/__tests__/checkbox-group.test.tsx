@@ -10,8 +10,23 @@ const name = `${prefix}-checkbox`;
 
 describe('CheckboxGroup', () => {
   describe('props', () => {
-    // borderless/disabled/readonly 作用于整组选项的边框与交互，与子项联动验证
-    it.todo('borderless[boolean]');
+    it('borderless[boolean]', () => {
+      // 默认子选项带边框
+      const wrapper = mount(() => (
+        <CheckboxGroup>
+          <Checkbox value="1" />
+        </CheckboxGroup>
+      ));
+      expect(wrapper.find(`.${name}__border`).exists()).toBe(true);
+
+      // 分组设置 borderless 后，子选项统一无边框
+      const wrapper2 = mount(() => (
+        <CheckboxGroup borderless>
+          <Checkbox value="1" />
+        </CheckboxGroup>
+      ));
+      expect(wrapper2.find(`.${name}__border`).exists()).toBe(false);
+    });
 
     it('direction[vertical/horizontal]', () => {
       const wrapper = mount(() => (
@@ -25,10 +40,44 @@ describe('CheckboxGroup', () => {
       expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(false);
     });
 
-    it.todo('disabled[boolean]');
+    it('disabled[boolean]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <CheckboxGroup disabled onChange={onChange}>
+              <Checkbox value="1" ref="1" />
+              <Checkbox value="2" ref="2" />
+            </CheckboxGroup>
+          );
+        },
+      });
 
-    // keys 自定义 options 字段别名
-    it.todo('keys[object]');
+      // 分组禁用后，子选项图标呈禁用态
+      expect(wrapper.findComponent({ ref: '1' }).find(`.${name}__icon--disabled`).exists()).toBe(true);
+
+      // 点击禁用子选项不切换选中态，也不触发 change
+      await wrapper.findComponent({ ref: '1' }).find(`.${name}--left`).trigger('click');
+      expect(wrapper.findComponent({ ref: '1' }).classes()).not.toContain(`${name}--checked`);
+      expect(onChange).toHaveBeenCalledTimes(0);
+    });
+
+    it('keys[object]', () => {
+      const keysOptions = [
+        { name: '选项一', val: '1' },
+        { name: '选项二', val: '2' },
+      ];
+      const keys = { value: 'val', label: 'name' };
+      const wrapper = mount(() => <CheckboxGroup options={keysOptions} keys={keys} defaultValue={['1']} />);
+
+      const $checkboxs = wrapper.findAllComponents(Checkbox);
+      expect($checkboxs).toHaveLength(2);
+      // keys 别名解析 options 的 label/value，defaultValue 按 val 匹配选中
+      expect(wrapper.text()).toContain('选项一');
+      expect(wrapper.text()).toContain('选项二');
+      expect($checkboxs[0].classes()).toContain(`${name}--checked`);
+      expect($checkboxs[1].classes()).not.toContain(`${name}--checked`);
+    });
 
     it('max[number]', async () => {
       const checked = ref([]);
@@ -74,7 +123,23 @@ describe('CheckboxGroup', () => {
       expect($checkboxs[1].classes()).not.toContain(`${name}--checked`);
     });
 
-    it.todo('readonly[boolean]');
+    it('readonly[boolean]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <CheckboxGroup readonly onChange={onChange}>
+              <Checkbox value="1" ref="1" />
+            </CheckboxGroup>
+          );
+        },
+      });
+
+      // 分组只读后，点击子选项不切换选中态，也不触发 change
+      await wrapper.findComponent({ ref: '1' }).find(`.${name}--left`).trigger('click');
+      expect(wrapper.findComponent({ ref: '1' }).classes()).not.toContain(`${name}--checked`);
+      expect(onChange).toHaveBeenCalledTimes(0);
+    });
   });
 
   describe('events', () => {

@@ -60,8 +60,25 @@ describe('QRCode', () => {
       expect(wrapper.find('.t-qrcode').find('image').attributes('href')).eq(iconSrc);
     });
 
-    it.todo('iconSize[number]-svg');
-    it.todo('iconSize[object]-svg');
+    it('iconSize[number]-svg', async () => {
+      const iconSrc = 'https://tdesign.gtimg.com/site/tdesign-logo.png';
+      await wrapper.setProps({ icon: iconSrc, type: 'svg', iconSize: 60 });
+      // 图标尺寸按 (iconSize / 二维码尺寸) * 模块数 缩放到 svg 坐标系
+      const numCells = Number(wrapper.find('.t-qrcode').find('svg').attributes('viewBox').split(' ')[2]);
+      const $image = wrapper.find('.t-qrcode').find('image');
+      expect(Number($image.attributes('width'))).toBeCloseTo((60 * numCells) / defaultSize);
+      expect(Number($image.attributes('height'))).toBeCloseTo((60 * numCells) / defaultSize);
+    });
+
+    it('iconSize[object]-svg', async () => {
+      const iconSrc = 'https://tdesign.gtimg.com/site/tdesign-logo.png';
+      await wrapper.setProps({ icon: iconSrc, type: 'svg', iconSize: { width: 30, height: 50 } });
+      const numCells = Number(wrapper.find('.t-qrcode').find('svg').attributes('viewBox').split(' ')[2]);
+      const $image = wrapper.find('.t-qrcode').find('image');
+      // 宽高分别按对象中的 width/height 缩放
+      expect(Number($image.attributes('width'))).toBeCloseTo((30 * numCells) / defaultSize);
+      expect(Number($image.attributes('height'))).toBeCloseTo((50 * numCells) / defaultSize);
+    });
 
     const level: TdQRCodeProps['level'][] = ['L', 'M', 'Q', 'H'];
     level.forEach((item) => {

@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
+import { nextTick } from 'vue';
 
 import Slider from '../slider';
 import { trigger } from '../../image-viewer/__tests__/touch';
@@ -126,8 +127,34 @@ describe('Slider', () => {
       expect(Number($right.text())).toStrictEqual(newMax);
     });
 
-    // step 控制步进刻度，需真实拖拽交互验证
-    it.todo('step[number]');
+    it('step[number]', async () => {
+      const onChange = vi.fn();
+      const left = 16;
+      const right = 359;
+      const original = window.HTMLElement.prototype.getBoundingClientRect;
+      window.HTMLElement.prototype.getBoundingClientRect = () => ({ left, right });
+
+      const wrapper = mount(Slider, {
+        props: {
+          value: 0,
+          step: 10,
+          onChange,
+        },
+      });
+      const $line = wrapper.find('.t-slider__line');
+
+      // clientX 200 的原始值为 53.64，step = 10 时步进取整为 50
+      await $line.trigger('click', { clientX: 200 });
+      expect(onChange).toHaveBeenCalledWith(50);
+
+      // step = 20 时同一位置步进取整为 60
+      await wrapper.setProps({ step: 20 });
+      await $line.trigger('click', { clientX: 200 });
+      expect(onChange).toHaveBeenLastCalledWith(60);
+
+      // // restore
+      window.HTMLElement.prototype.getBoundingClientRect = original;
+    });
 
     it('theme[capsule]', async () => {
       const onChange = vi.fn();
@@ -188,8 +215,42 @@ describe('Slider', () => {
       expect(onChange).toHaveBeenLastCalledWith([calcValue(50), 100]);
     });
 
-    // defaultValue 滑块位置依赖轨道尺寸计算
-    it.todo('defaultValue[number]');
+    it('defaultValue[number]', async () => {
+      const onChange = vi.fn();
+      const left = 16;
+      const right = 359;
+      const original = window.HTMLElement.prototype.getBoundingClientRect;
+      window.HTMLElement.prototype.getBoundingClientRect = () => ({ left, right });
+
+      const wrapper = mount(Slider, {
+        props: {
+          defaultValue: 40,
+          label: true,
+          onChange,
+        },
+      });
+      await nextTick();
+      // 非受控初始值 40 展示在滑块上，滑轨宽度按轨道比例计算
+      const getLineWidth = () =>
+        Number(
+          wrapper
+            .find('.t-slider__line--single')
+            .attributes('style')
+            .match(/width: ([\d.]+)px/)[1],
+        );
+      expect(wrapper.find('.t-slider__dot-value').text()).toBe('40');
+      expect(getLineWidth()).toBeCloseTo(137.2);
+
+      // 非受控：点击轨道后内部值与滑轨宽度自行更新
+      await wrapper.find('.t-slider__line').trigger('click', { clientX: 200 });
+      expect(onChange).toHaveBeenCalledWith(54);
+      await nextTick();
+      expect(wrapper.find('.t-slider__dot-value').text()).toBe('54');
+      expect(getLineWidth()).toBeCloseTo(185.22);
+
+      // // restore
+      window.HTMLElement.prototype.getBoundingClientRect = original;
+    });
 
     it('vertical[boolean]', async () => {
       const wrapper = mount(Slider, {

@@ -162,8 +162,22 @@ describe('DateTimePicker', () => {
       });
     });
 
-    // showWeek 日期列显示星期，依赖列配置生成
-    it.todo('showWeek[boolean]');
+    it('showWeek[boolean]', async () => {
+      const getDateColumnTexts = (showWeek?: boolean) => {
+        const wrapper = mount(DateTimePicker, {
+          props: { defaultValue: defaultDateTime, mode: 'date', showWeek },
+        });
+        return wrapper
+          .findAll(`.${prefix}-picker-item`)[2]
+          .findAll(`.${prefix}-picker-item__item`)
+          .slice(0, 3)
+          .map((item) => item.text());
+      };
+      // showWeek = true：日期旁边附带周几（2023/10/1 为周日）
+      expect(getDateColumnTexts(true)).toEqual(['1日 Sun', '2日 Mon', '3日 Tue']);
+      // 默认不显示周几
+      expect(getDateColumnTexts()).toEqual(['1 日', '2 日', '3 日']);
+    });
 
     it('start & end', async () => {
       const start = '2020-6-30 10:00:00';
@@ -196,8 +210,25 @@ describe('DateTimePicker', () => {
       });
     });
 
-    // steps 步进间隔控制选项粒度，依赖列生成验证
-    it.todo('steps[object]');
+    it('steps[object]', async () => {
+      // mode = 'minute' 渲染 年/月/日/时/分 5 列，分钟列按 steps.step 间隔生成
+      const wrapper = mount(DateTimePicker, {
+        props: { defaultValue: `${defaultDateTime} 10:20`, mode: 'minute', steps: { minute: 10 } },
+      });
+      const $pickerItems = wrapper.findAll(`.${prefix}-picker-item`);
+      expect($pickerItems).toHaveLength(5);
+
+      const $minuteItems = $pickerItems[4].findAll(`.${prefix}-picker-item__item`);
+      expect($minuteItems).toHaveLength(6);
+      const minuteTexts = $minuteItems.map((item) => item.text());
+      expect(minuteTexts).toEqual(['0 分', '10 分', '20 分', '30 分', '40 分', '50 分']);
+
+      // 默认 step = 1，分钟列为 60 项
+      const wrapper2 = mount(DateTimePicker, {
+        props: { defaultValue: `${defaultDateTime} 10:20`, mode: 'minute' },
+      });
+      expect(wrapper2.findAll(`.${prefix}-picker-item`)[4].findAll(`.${prefix}-picker-item__item`)).toHaveLength(60);
+    });
 
     it('title & confirmBtn & cancelBtn', async () => {
       const title = '';

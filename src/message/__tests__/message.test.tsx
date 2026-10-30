@@ -1,5 +1,6 @@
 import { h, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
+import type { VueWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { AppIcon, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Message from '../message';
@@ -64,12 +65,42 @@ describe('Message', () => {
       expect(fn).toBeCalledTimes(1);
     });
 
-    // gap 多条消息堆叠间距，需多条消息实例场景
-    it.todo('gap[string]');
+    // gap 只在多条消息堆叠时生效（需 single=false）：messageIndex 为模块级计数，这里通过两个先后出现的消息 top 差值验证
+    const mountStackedMessage = async (extraProps: Partial<TdMessageProps> = {}) => {
+      const wrapper = mount(<Message visible={false} offset={[0, 0]} single={false} {...extraProps} />);
+      await wrapper.setProps({ visible: true });
+      return wrapper;
+    };
 
-    it.todo('gap[number]');
+    const getMessageTop = (wrapper: VueWrapper<any>) => {
+      const style = wrapper.find(`.${name}`).attributes('style');
+      const matched = style?.match(/top: (-?[\d.]+)px/);
+      return matched ? Number(matched[1]) : Number.NaN;
+    };
 
-    it.todo('gap[boolean]');
+    it('gap[number]', async () => {
+      const first = await mountStackedMessage({ gap: 20 });
+      const second = await mountStackedMessage({ gap: 20 });
+      expect(getMessageTop(second) - getMessageTop(first)).toBe(20);
+    });
+
+    it('gap[string]', async () => {
+      const first = await mountStackedMessage({ gap: '15' });
+      const second = await mountStackedMessage({ gap: '15' });
+      expect(getMessageTop(second) - getMessageTop(first)).toBe(15);
+    });
+
+    it('gap[boolean]', async () => {
+      // gap = true 时取默认间距 12
+      const first = await mountStackedMessage({ gap: true });
+      const second = await mountStackedMessage({ gap: true });
+      expect(getMessageTop(second) - getMessageTop(first)).toBe(12);
+
+      // gap = false 时不堆叠间距
+      const third = await mountStackedMessage({ gap: false });
+      const fourth = await mountStackedMessage({ gap: false });
+      expect(getMessageTop(fourth)).toBe(getMessageTop(third));
+    });
 
     it('icon[boolean]', () => {
       // icon = false
@@ -120,9 +151,13 @@ describe('Message', () => {
       ).toBeTruthy();
     });
 
-    // single 影响多条消息堆叠位移计算，需多条消息实例场景
-    it.todo('single[boolean]');
-
+    it('single[boolean]', async () => {
+      // single 为 true 时不参与多条消息堆叠，即使设置 gap 也不叠加间距
+      const first = await mountStackedMessage({ gap: 20, single: true });
+      const second = await mountStackedMessage({ gap: 20, single: true });
+      expect(getMessageTop(second)).toBe(getMessageTop(first));
+      expect(getMessageTop(first)).toBe(0);
+    });
     it('zIndex[number]', () => {
       const wrapper = mount(<Message visible zIndex={99} />);
       const $message = wrapper.find(`.${name}`);

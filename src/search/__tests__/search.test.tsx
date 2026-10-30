@@ -1,4 +1,4 @@
-import { ref } from 'vue';
+import { ref, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { CloseCircleFilledIcon as TIconClear } from 'tdesign-icons-vue-next';
@@ -9,7 +9,7 @@ const name = `${prefix}-search`;
 
 describe('Search', () => {
   describe('props', () => {
-    // autocompleteOptions 联想词列表依赖输入联想交互流程
+    // autocompleteOptions 在 props.ts 声明但组件未消费该属性，联想词渲染逻辑未实现
     it.todo('autocompleteOptions[array]');
 
     it('center[boolean]', async () => {
@@ -24,11 +24,38 @@ describe('Search', () => {
       expect(wrapper2.find(`.${name}--center`).exists()).toBeFalsy();
     });
 
-    // clearTrigger 控制清空按钮出现时机，依赖 focus/clear 交互组合
-    it.todo('clearTrigger[string]');
+    it('clearTrigger[string]', async () => {
+      // clearTrigger = 'focus'：输入框有值但未聚焦时不显示清空按钮，聚焦后显示
+      const wrapper = mount(Search, {
+        props: {
+          value: '关键字',
+          clearTrigger: 'focus',
+        },
+      });
+      expect(wrapper.findComponent(TIconClear).exists()).toBe(false);
+      // useFocus 的监听在 post-flush 挂载，先等一个 tick 再聚焦
+      await nextTick();
+      await wrapper.find('input').trigger('focus');
+      expect(wrapper.findComponent(TIconClear).exists()).toBe(true);
 
-    // cursorColor 为 CSS 变量注入，jsdom 无法断言样式
-    it.todo('cursorColor[string]');
+      // 默认 'always'：输入框有值即显示清空按钮
+      const wrapper2 = mount(Search, {
+        props: {
+          value: '关键字',
+        },
+      });
+      expect(wrapper2.findComponent(TIconClear).exists()).toBe(true);
+    });
+
+    it('cursorColor[string]', () => {
+      const wrapper = mount(Search, {
+        props: {
+          cursorColor: '#00d362',
+        },
+      });
+      // 以 CSS 变量注入到输入框
+      expect(wrapper.find('input').attributes('style')).toContain('--td-search-cursor-color: #00d362');
+    });
 
     it('disabled[boolean]', async () => {
       const wrapper = mount(Search, {
@@ -39,11 +66,56 @@ describe('Search', () => {
       expect(wrapper.find('input').attributes('disabled')).toBeDefined();
     });
 
-    // maxcharacter 字数限制依赖输入事件截断行为
-    it.todo('maxcharacter[number]');
+    it('maxcharacter[number]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(Search, {
+        props: {
+          maxcharacter: 5,
+          onChange,
+        },
+      });
+      const $input = wrapper.find('input');
+      await $input.setValue('aaaaaa');
+      await nextTick();
+      // 超出 maxcharacter 的输入被截断
+      expect($input.element.value).toBe('aaaaa');
+      expect(onChange).toHaveBeenLastCalledWith('aaaaa', expect.objectContaining({ trigger: 'input-change' }));
 
-    // maxlength 经 useLengthLimit 逻辑截断，不透传原生属性（见 search.tsx 注释），依赖输入事件
-    it.todo('maxlength[number]');
+      // 中文按两个字符计算，超出部分被截断
+      await $input.setValue('一二三');
+      await nextTick();
+      expect($input.element.value).toBe('一二');
+      expect(onChange).toHaveBeenLastCalledWith('一二', expect.anything());
+    });
+
+    it('maxlength[number]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(Search, {
+        props: {
+          maxlength: 3,
+          onChange,
+        },
+      });
+      const $input = wrapper.find('input');
+      await $input.setValue('abcdef');
+      await nextTick();
+      expect($input.element.value).toBe('abc');
+      expect(onChange).toHaveBeenLastCalledWith('abc', expect.objectContaining({ trigger: 'input-change' }));
+      // 不透传原生 maxlength 属性，由组件内部截断
+      expect($input.attributes('maxlength')).toBeUndefined();
+    });
+
+    it('maxlength[string]', async () => {
+      const wrapper = mount(Search, {
+        props: {
+          maxlength: '3',
+        },
+      });
+      const $input = wrapper.find('input');
+      await $input.setValue('abcdef');
+      await nextTick();
+      expect($input.element.value).toBe('abc');
+    });
 
     it('placeholder[string]', async () => {
       const placeholder = 'placeholder content';

@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { vi, afterEach } from 'vitest';
+import { nextTick } from 'vue';
 import Guide from '../index';
 import Popover from '../../popover';
 import Popup from '../../popup';
@@ -144,8 +145,20 @@ describe('Guide', () => {
       expect(document.querySelectorAll('.t-guide__skip').length).toBe(1);
     });
 
-    // highlightPadding 依赖元素真实尺寸计算（getBoundingClientRect），jsdom 中无法断言
-    it.todo('highlightPadding[number]');
+    it('highlightPadding[number]', async () => {
+      createEmptyDomUnderBody('test-container');
+      await mountBaseGuide({ modelValue: 0, highlightPadding: 8 }, `#test-container`);
+      // 等待 popover 定位计算完成
+      await nextTick();
+      await nextTick();
+      await nextTick();
+      const highlight = document.querySelector('.t-guide__highlight');
+      // 目标元素尺寸为 0 时，高亮框尺寸为 highlightPadding 的两倍，并按内边距外扩偏移
+      expect(highlight.getAttribute('style')).toContain('width: 16px');
+      expect(highlight.getAttribute('style')).toContain('height: 16px');
+      expect(highlight.getAttribute('style')).toContain('top: -8px');
+      expect(highlight.getAttribute('style')).toContain('left: -8px');
+    });
 
     it('mode[popover/dialog]', async () => {
       const testMode = async ({ props, component, expectProps }) => {

@@ -145,10 +145,24 @@ describe('TreeSelect', () => {
       sideBarItem[1].trigger('click');
     });
 
-    // customStyle/filterable/height 过滤搜索与容器样式
-    it.todo('customStyle[object]');
+    it('customStyle[string]', () => {
+      const wrapper = mount(<TreeSelect options={options} value={defaultValue} customStyle="background-color: red;" />);
+      // customStyle 追加在根节点默认高度样式之后
+      expect(wrapper.attributes('style')).toContain('height: 336px;');
+      expect(wrapper.attributes('style')).toContain('background-color: red;');
+    });
+
+    // filterable 声明后组件内部未实现（无搜索渲染与过滤逻辑），无行为差异可断言
     it.todo('filterable[boolean]');
-    it.todo('height[string]');
-    it.todo('height[number]');
+
+    it('height[string]', () => {
+      const wrapper = mount(<TreeSelect options={options} value={defaultValue} height="90vh" />);
+      expect(wrapper.attributes('style')).toContain('height: 90vh;');
+    });
+
+    it('height[number]', () => {
+      const wrapper = mount(<TreeSelect options={options} value={defaultValue} height={200} />);
+      expect(wrapper.attributes('style')).toContain('height: 200px;');
+    });
   });
 });

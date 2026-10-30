@@ -452,8 +452,35 @@ describe('Form', () => {
       expect(formData.value.name).eq('defaultName');
     });
 
-    // scrollToFirstError 滚动定位依赖真实布局尺寸
-    it.todo('scrollToFirstError[string]');
+    it('scrollToFirstError[string]', async () => {
+      const formData = ref({ name: '' });
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form
+              rules={{ name: [{ required: true, message: '姓名必填' }] }}
+              data={formData.value}
+              scrollToFirstError="smooth"
+            >
+              <FormItem label="name" name="name">
+                <Input v-model={formData.value.name} />
+              </FormItem>
+            </Form>
+          );
+        },
+      });
+
+      const scrollIntoView = vi.fn();
+      wrapper.element.querySelector('.t-form-item__name').scrollIntoView = scrollIntoView;
+
+      const form = wrapper.findComponent(Form);
+      await form.trigger('submit');
+      await sleep(0);
+
+      // 校验失败提交时，自动滚动定位到第一个校验不通过的字段
+      expect(scrollIntoView).toHaveBeenCalledTimes(1);
+      expect(scrollIntoView).toHaveBeenCalledWith({ behavior: 'smooth' });
+    });
 
     it('showErrorMessage[boolean]', async () => {
       const rules = {
@@ -484,7 +511,7 @@ describe('Form', () => {
       expect(form.find(`.${name}__item-extra`).exists()).toBeFalsy();
     });
 
-    // submitWithWarningMessage 校验警告态提交行为
+    // submitWithWarningMessage 组件未消费该属性（提交恒触发 onSubmit，不区分警告态，API 标注【讨论中】），无行为差异可断言
     it.todo('submitWithWarningMessage[boolean]');
   });
   describe('events', () => {
