@@ -74,7 +74,7 @@ describe('NoticeBar', () => {
       expect(wrapper.find('.t-icon-app').exists()).toBe(true);
     });
 
-    it('theme[string]', async () => {
+    it('theme[info/success/warning/error]', async () => {
       const prefix = 't-notice-bar';
 
       const wrapper = mount(<NoticeBar visible />);
@@ -106,7 +106,7 @@ describe('NoticeBar', () => {
       expect(wrapper.find('.t-notice-bar').exists()).toBe(true);
     });
 
-    it('direction[string]', async () => {
+    it('direction[horizontal/vertical]', async () => {
       const content = ['君不见', '高堂明镜悲白发', '朝如青丝暮成雪', '人生得意须尽欢', '莫使金樽空对月'];
       const wrapper = mount(<NoticeBar visible marquee direction="vertical" content={content} />);
       await nextTick();

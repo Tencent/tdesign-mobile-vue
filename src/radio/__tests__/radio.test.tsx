@@ -65,7 +65,7 @@ describe('Radio', () => {
       expect($secondRadio.vm.checked).toBeFalsy();
     });
 
-    it('placement[string]', async () => {
+    it('placement[left/right]', async () => {
       const wrapper = mount(Radio, {
         props: {
           placement: 'right',
@@ -77,7 +77,7 @@ describe('Radio', () => {
       expect(wrapper.element).toMatchSnapshot();
     });
 
-    it('icon[string]', async () => {
+    it('icon[dot]', async () => {
       const wrapper = mount(Radio, {
         props: {
           checked: true,

@@ -112,7 +112,7 @@ describe('Textarea', () => {
       expect(wrapper2.find('.t-textarea--border').exists()).toBeFalsy();
     });
 
-    it('layout[string]', async () => {
+    it('layout[vertical/horizontal]', async () => {
       const wrapper = mount(<Textarea layout="vertical" label="标题" />);
       expect(wrapper.find('.t-textarea--layout-vertical').exists()).toBeTruthy();
     });

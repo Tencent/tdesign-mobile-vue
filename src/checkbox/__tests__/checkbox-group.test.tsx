@@ -59,7 +59,7 @@ describe('CheckboxGroup', () => {
       // expect(wrapper.findComponent({ ref: '3' }).vm.isDisabled).toBe(true);
     });
 
-    it('direction[string]', () => {
+    it('direction[vertical/horizontal]', () => {
       const wrapper = mount(() => (
         <CheckboxGroup>
           <Checkbox value="1" ref="1" />

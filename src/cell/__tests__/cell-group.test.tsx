@@ -6,7 +6,7 @@ const themeList = ['default', 'card'];
 
 describe('CellGroup', () => {
   describe('props', () => {
-    it('theme[string]', async () => {
+    it('theme[default/card]', async () => {
       themeList.forEach((t) => {
         const wrapper = mount(() => <CellGroup theme={t}></CellGroup>);
         const theme = wrapper.find(`.t-cell-group--${t}`);

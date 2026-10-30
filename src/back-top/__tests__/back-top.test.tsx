@@ -24,7 +24,7 @@ describe('BackTop', () => {
       expect(wrapper.find('.t-back-top__text--round').text()).toEqual('返回');
     });
 
-    it('theme[string]', async () => {
+    it('theme[round/half-round/round-dark/half-round-dark]', async () => {
       const wrapper = mount(BackTop);
       expect(wrapper.find('.t-back-top').classes()).toContain('t-back-top--round');
       await wrapper.setProps({

@@ -71,7 +71,7 @@ describe('Watermark', () => {
       expect(wrapper.classes()).toContain('t-watermark');
     });
 
-    it('layout[string]', () => {
+    it('layout[rectangular/hexagonal]', () => {
       const wrapper = mount(() => (
         <Watermark layout="hexagonal" watermarkContent={['水印文字']}>
           tdesign

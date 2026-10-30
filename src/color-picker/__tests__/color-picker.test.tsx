@@ -58,7 +58,7 @@ describe('ColorPicker', () => {
       testSwatchColors(['red', 'blur'], 2);
     });
 
-    it('format[string]', () => {
+    it('format[HEX/HEX8/RGB/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CMYKA]', () => {
       const testFormat = (format, target) => {
         const wrapper = mountColorPicker({ format, type: 'multiple' });
         const dom = wrapper.find('.t-color-picker__format-item--first');

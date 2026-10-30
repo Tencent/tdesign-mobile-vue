@@ -58,7 +58,7 @@ describe('CollapsePanel', () => {
       expect(panel.find('.t-collapse-panel__header .t-cell__note').text()).toBe('操作');
     });
 
-    test('placement[string]', async () => {
+    test('placement[bottom/top]', async () => {
       placementList.forEach((placement) => {
         const wrapper = mount({
           setup() {

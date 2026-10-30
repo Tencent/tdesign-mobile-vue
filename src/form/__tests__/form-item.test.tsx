@@ -45,7 +45,7 @@ describe('FormItem', () => {
       expect(wrapper.findComponent(CheckCircleFilledIcon).exists()).toBeTruthy();
     });
 
-    it('labelAlign[string]', () => {
+    it('labelAlign[left/right/top]', () => {
       const labelAlignList = ['', 'left', 'right', 'top'];
 
       labelAlignList.forEach((labelAlign) => {

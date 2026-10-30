@@ -67,7 +67,7 @@ describe('Guide', () => {
       testValue({ modelValue: 0 }, true);
     });
 
-    it('mode[string]', async () => {
+    it('mode[popover/dialog]', async () => {
       const testMode = async ({ props, component, expectProps }) => {
         const div = document.createElement('div');
         div.id = 'test-container';

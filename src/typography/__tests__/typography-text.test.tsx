@@ -357,7 +357,7 @@ describe('Typography Text', () => {
       expect(wrapper.find('strong').exists()).toBe(true);
     });
 
-    it('theme[empty string] passes validator', () => {
+    it('theme[empty] passes validator', () => {
       const wrapper = mount(Text, {
         props: { theme: '' },
         slots: { default: () => shortText },
@@ -367,7 +367,7 @@ describe('Typography Text', () => {
       expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).not.toContain(`${COMPONENT_NAME}--primary`);
     });
 
-    it('theme[string] - primary', () => {
+    it('theme[primary]', () => {
       const wrapper = mount(Text, {
         props: { theme: 'primary' },
         slots: { default: () => shortText },
@@ -375,7 +375,7 @@ describe('Typography Text', () => {
       expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--primary`);
     });
 
-    it('theme[string] - secondary', () => {
+    it('theme[secondary]', () => {
       const wrapper = mount(Text, {
         props: { theme: 'secondary' },
         slots: { default: () => shortText },
@@ -383,7 +383,7 @@ describe('Typography Text', () => {
       expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--secondary`);
     });
 
-    it('theme[string] - success', () => {
+    it('theme[success]', () => {
       const wrapper = mount(Text, {
         props: { theme: 'success' },
         slots: { default: () => shortText },
@@ -391,7 +391,7 @@ describe('Typography Text', () => {
       expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--success`);
     });
 
-    it('theme[string] - warning', () => {
+    it('theme[warning]', () => {
       const wrapper = mount(Text, {
         props: { theme: 'warning' },
         slots: { default: () => shortText },
@@ -399,7 +399,7 @@ describe('Typography Text', () => {
       expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--warning`);
     });
 
-    it('theme[string] - error', () => {
+    it('theme[error]', () => {
       const wrapper = mount(Text, {
         props: { theme: 'error' },
         slots: { default: () => shortText },

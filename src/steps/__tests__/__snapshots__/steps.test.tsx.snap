@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Steps > props > layout[string] 1`] = `
+exports[`Steps > props > layout[horizontal/vertical] 1`] = `
 <div
   class="t-steps t-steps--vertical t-steps--positive t-steps--readonly"
 >

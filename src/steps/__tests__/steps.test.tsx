@@ -27,7 +27,7 @@ const itemStatus = [
 ];
 describe('Steps', () => {
   describe('props', () => {
-    it('theme[string]', async () => {
+    it('theme[default/dot]', async () => {
       const current = ref(0);
       const theme = 'dot';
       const layout = 'vertical';
@@ -85,7 +85,7 @@ describe('Steps', () => {
       expect(onChange).toHaveBeenCalledTimes(0);
     });
 
-    it('layout[string]', () => {
+    it('layout[horizontal/vertical]', () => {
       const current = ref(1);
       const layout = 'vertical';
       const wrapper = mount({
@@ -123,7 +123,7 @@ describe('Steps', () => {
       expect(wrapper.findAll('.t-step-item')[1].classes()).toContain('t-step-item--process');
     });
 
-    it('currentStatus[string]', () => {
+    it('currentStatus[default/process/finish/error]', () => {
       const wrapper = mount(() => (
         <Steps current={0} currentStatus="error">
           <StepItem title="步骤1" content="描述1" />
@@ -133,7 +133,7 @@ describe('Steps', () => {
       expect(wrapper.findAll('.t-step-item')[0].classes()).toContain('t-step-item--error');
     });
 
-    it('sequence[string]', () => {
+    it('sequence[positive/reverse]', () => {
       const wrapper = mount(() => (
         <Steps sequence="reverse">
           <StepItem title="步骤1" content="描述1" />

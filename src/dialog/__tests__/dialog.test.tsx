@@ -84,7 +84,7 @@ describe('Dialog', () => {
       expect(wrapper.find('.t-dialog__body').text()).toBe('content is function');
     });
 
-    it('buttonLayout[string]', async () => {
+    it('buttonLayout[horizontal/vertical]', async () => {
       const confirmBtn = {
         content: '确认',
         variant: 'text',

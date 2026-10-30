@@ -27,7 +27,7 @@ describe('Popover', () => {
       expect(wrapper.find('.t-popover__content').text()).toBe('函数气泡内容');
     });
 
-    it('theme[string]', () => {
+    it('theme[dark/light/brand/success/warning/error]', () => {
       const wrapper = mount(() => <Popover visible={true} content="气泡内容" theme="light" />);
       expect(wrapper.find('.t-popover--light').exists()).toBeTruthy();
     });
@@ -40,7 +40,7 @@ describe('Popover', () => {
       expect(wrapper2.find('.t-popover__arrow').exists()).toBeFalsy();
     });
 
-    it('placement[string]', () => {
+    it('placement[top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom]', () => {
       const wrapper = mount(() => <Popover visible={true} content="气泡内容" placement="bottom-left" />);
       expect(wrapper.find('.t-popover').attributes('data-popper-placement')).toBeDefined();
     });

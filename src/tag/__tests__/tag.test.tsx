@@ -14,7 +14,7 @@ const shapeList = ['mark', 'round', 'square', ''];
 
 describe('Tag', () => {
   describe('props', () => {
-    it('theme[string]', async () => {
+    it('theme[default/primary/warning/danger/success]', async () => {
       themeList.forEach((t) => {
         const wrapper = mount(() => <Tag theme={t}>{TEXT}</Tag>);
         if (!t) {
@@ -25,7 +25,7 @@ describe('Tag', () => {
       });
     });
 
-    it('variant[string]', async () => {
+    it('variant[dark/light/outline/light-outline]', async () => {
       variantList.forEach((v) => {
         const wrapper = mount(() => <Tag variant={v}>{TEXT}</Tag>);
         if (!v) {
@@ -36,7 +36,7 @@ describe('Tag', () => {
       });
     });
 
-    it('size[string]', async () => {
+    it('size[small/medium/large/extra-large]', async () => {
       sizeList.forEach((s) => {
         const wrapper = mount(() => <Tag size={s}>{TEXT}</Tag>);
         if (!s) {
@@ -47,7 +47,7 @@ describe('Tag', () => {
       });
     });
 
-    it('shape[string]', async () => {
+    it('shape[square/round/mark]', async () => {
       shapeList.forEach((s) => {
         const wrapper = mount(() => <Tag shape={s}>{TEXT}</Tag>);
         if (!s) {

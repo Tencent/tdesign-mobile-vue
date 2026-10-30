@@ -13,7 +13,7 @@ const bodyLockClass = `${prefix}-toast--lock`;
 
 describe('Toast', () => {
   describe('props', () => {
-    it('direction[string]', async () => {
+    it('direction[row/column]', async () => {
       const wrapper = mount(Toast, {
         direction: 'row',
       });
@@ -104,7 +104,7 @@ describe('Toast', () => {
       expect(wrapper.findComponent(Overlay).vm.visible).toEqual(false);
     });
 
-    it('theme[string]', async () => {
+    it('theme[loading/success/warning/error]', async () => {
       const wrapper = mount(Toast, {
         props: {
           theme: 'loading',

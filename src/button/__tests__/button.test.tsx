@@ -13,7 +13,7 @@ const iconFunc = () => h(TIconApp);
 
 describe('Button', () => {
   describe('props', () => {
-    it('theme[string]', async () => {
+    it('theme[default/primary/danger/light]', async () => {
       const wrapper = mount(Button, {
         props: {
           theme: '',
@@ -60,7 +60,7 @@ describe('Button', () => {
       expect($button.text()).toBe('function content');
     });
 
-    it('shape[string]', async () => {
+    it('shape[rectangle/square/round/circle]', async () => {
       const wrapper = mount(Button, {
         props: {
           shape: '',
@@ -81,7 +81,7 @@ describe('Button', () => {
       expect($button.classes()).toContain(`${name}--${shape}`);
     });
 
-    it('size[string]', async () => {
+    it('size[extra-small/small/medium/large]', async () => {
       const wrapper = mount(Button, {
         props: {
           size: '',
@@ -102,7 +102,7 @@ describe('Button', () => {
       expect($button.classes()).toContain(`${name}--size-small`);
     });
 
-    it('variant[string]', async () => {
+    it('variant[base/outline/dashed/text]', async () => {
       const wrapper = mount(Button, {
         props: {
           variant: '',
@@ -244,7 +244,7 @@ describe('Button', () => {
       expect($button.classes().includes(`${name}--block`)).toBeFalsy();
     });
 
-    it('tag[string]', async () => {
+    it('tag[button/a/div]', async () => {
       // 默认渲染为 button 标签
       const wrapper = mount(Button, {
         props: {

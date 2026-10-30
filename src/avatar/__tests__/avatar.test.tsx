@@ -19,7 +19,7 @@ describe('Avatar', () => {
       expect(wrapper.findComponent(UserIcon).exists()).toBeTruthy();
     });
 
-    it('shape[string]', async () => {
+    it('shape[circle/round]', async () => {
       shapeList.forEach((s) => {
         const wrapper = mount(() => <Avatar image={IMAGE} shape={s}></Avatar>);
         const shape = wrapper.find(`.t-avatar--${s}`);

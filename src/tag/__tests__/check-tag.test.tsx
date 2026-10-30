@@ -42,21 +42,21 @@ describe('CheckTag', () => {
       expect(wrapper.findComponent(TIconApp)).toBeTruthy();
     });
 
-    it('size[string]', async () => {
+    it('size[small/medium/large/extra-large]', async () => {
       sizeList.forEach((s) => {
         const wrapper = mount(() => <TCheckTag size={s}>{TEXT}</TCheckTag>);
         expect(wrapper.classes()).toContain(`t-tag--${s}`);
       });
     });
 
-    it('shape[string]', async () => {
+    it('shape[square/round/mark]', async () => {
       shapeList.forEach((s) => {
         const wrapper = mount(() => <TCheckTag shape={s}>{TEXT}</TCheckTag>);
         expect(wrapper.classes()).toContain(`t-tag--${s}`);
       });
     });
 
-    it('variant[string]', async () => {
+    it('variant[dark/light/outline/light-outline]', async () => {
       variantList.forEach((v) => {
         const wrapper = mount(() => <TCheckTag variant={v}>{TEXT}</TCheckTag>);
         if (!v) {

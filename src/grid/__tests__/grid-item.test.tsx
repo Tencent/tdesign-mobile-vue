@@ -61,7 +61,7 @@ describe('GridItem', () => {
       expect(badge.text()).toBe('1');
     });
 
-    it('layout[string]', async () => {
+    it('layout[vertical/horizontal]', async () => {
       const layoutList = ['vertical', 'horizontal', ''];
       layoutList.forEach((l) => {
         const wrapper = mount(() => {

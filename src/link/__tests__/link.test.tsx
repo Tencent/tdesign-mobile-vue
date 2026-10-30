@@ -8,7 +8,7 @@ import Link from '../link';
 describe('Link', () => {
   // test props api
   describe('props', () => {
-    it('size[string]', () => {
+    it('size[small/medium/large]', () => {
       const wrapper = mount({
         render() {
           return <Link size={'large'}>text</Link>;
@@ -22,7 +22,7 @@ describe('Link', () => {
       });
       expect(wrapperDefault.find('.t-link--medium').exists()).toBeTruthy();
     });
-    it('theme[string]', () => {
+    it('theme[default/primary/danger/warning/success]', () => {
       const wrapper = mount({
         render() {
           return <Link theme={'primary'}>text</Link>;

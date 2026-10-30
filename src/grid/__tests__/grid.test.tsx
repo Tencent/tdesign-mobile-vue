@@ -31,7 +31,7 @@ const items2 = [
 ];
 describe('Grid', () => {
   describe('props', () => {
-    it('align[string]', async () => {
+    it('align[left/center]', async () => {
       const alignList = ['left', 'center', ''];
       alignList.forEach((a) => {
         const wrapper = mount(() => {
@@ -50,7 +50,7 @@ describe('Grid', () => {
       });
     });
 
-    it('theme[string]', async () => {
+    it('theme[default/card]', async () => {
       const themeList = ['default', 'card', ''];
       themeList.forEach((t) => {
         const wrapper = mount(() => {

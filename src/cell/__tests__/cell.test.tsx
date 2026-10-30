@@ -55,7 +55,7 @@ describe('Cell', () => {
       expect(wrapper2.classes('t-cell--bordered')).toBeFalsy();
     });
 
-    it('align[string]', async () => {
+    it('align[top/middle/bottom]', async () => {
       alignList.forEach((a) => {
         const wrapper = mount(() => <Cell title="单行标题" align={a} arrow></Cell>);
         const rightAlign = wrapper.find(`.t-cell__right--${a}`);

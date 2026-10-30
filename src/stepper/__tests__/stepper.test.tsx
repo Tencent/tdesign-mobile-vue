@@ -42,7 +42,7 @@ describe('Stepper', () => {
       expect(getComputedStyle($input.element, null).width).toBe('100px');
     });
 
-    it('theme[string]', async () => {
+    it('theme[normal/filled/outline]', async () => {
       const wrapper = mount(Stepper, {});
 
       const $minus = wrapper.find('.t-stepper__minus');

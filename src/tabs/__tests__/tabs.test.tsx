@@ -59,7 +59,7 @@ describe('Tabs', () => {
       });
     });
 
-    it('theme[string]', async () => {
+    it('theme[line/tag/card]', async () => {
       let theme = '';
       const wrapper = mount(Tabs, {
         props: {
@@ -156,7 +156,7 @@ describe('Tabs', () => {
       expect(onChange).toHaveBeenCalledTimes($tabNavItems.length - 1);
     });
 
-    it('size[string]', async () => {
+    it('size[medium/large]', async () => {
       let size = '';
       const SIZE_CLASSNAMES = {
         small: `${prefix}-size-s`,

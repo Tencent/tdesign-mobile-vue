@@ -269,7 +269,7 @@ describe('Cascader', () => {
     // load 异步动态加载子级选项
     it.todo('load[function]');
 
-    it('theme[string]', async () => {
+    it('theme[step/tab]', async () => {
       const themeList = ['', 'step', 'tab'];
       themeList.forEach((theme, index) => {
         const wrapper = mount(() => (

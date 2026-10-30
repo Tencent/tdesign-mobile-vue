@@ -44,7 +44,7 @@ describe('Loading', () => {
       expect(iconWrapperStyle).toContain('animation-direction: reverse');
     });
 
-    it('theme[string]', async () => {
+    it('theme[circular/spinner/dots]', async () => {
       const testTheme = (theme, component) => {
         const wrapper = mount(() => <Loading theme={theme} />);
         const icon = wrapper.findComponent(component);

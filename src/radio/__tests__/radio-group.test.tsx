@@ -33,7 +33,7 @@ describe('RadioGroup', () => {
       expect(wrapper.element).toMatchSnapshot();
     });
 
-    it('direction[string]', () => {
+    it('direction[vertical/horizontal]', () => {
       const wrapper = mount(() => (
         <RadioGroup>
           <Radio name="radio" value="1" label="单选"></Radio>

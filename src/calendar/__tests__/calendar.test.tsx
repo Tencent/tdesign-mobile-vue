@@ -94,7 +94,7 @@ describe('Calendar', () => {
       expect($firstDay.text()).toEqual(raw.split('')[firstDayOfWeek]);
     });
 
-    it('type[string]', async () => {
+    it('type[single/multiple/range]', async () => {
       // type = 'range'
       const onSelect = vi.fn();
       const time = ref('');

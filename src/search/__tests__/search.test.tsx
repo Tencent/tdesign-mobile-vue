@@ -20,7 +20,7 @@ describe('Search', () => {
       expect($input.attributes('placeholder')).toEqual(placeholder);
     });
 
-    it('shape[string]', async () => {
+    it('shape[square/round]', async () => {
       const placeholder = 'placeholder content';
       const wrapper = mount(Search, {
         props: {

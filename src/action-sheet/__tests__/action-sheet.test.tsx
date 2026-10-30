@@ -30,7 +30,7 @@ describe('ActionSheet', () => {
       expect(wrapper.find(`.${name}__content`).exists()).toEqual(true);
       expect(wrapper.findAllComponents(TBadge).length).toEqual(2);
     });
-    it('align[string]', async () => {
+    it('align[center/left]', async () => {
       const alignList = ['', 'center', 'left'];
 
       alignList.forEach((align, index) => {
@@ -73,7 +73,7 @@ describe('ActionSheet', () => {
       // expect(wrapper.find(`.${name}__footer`).text()).toEqual('Cancel');
     });
 
-    it('theme[string]', async () => {
+    it('theme[list/grid]', async () => {
       const wrapper = mount(ActionSheet, {
         props: {
           theme: 'list',

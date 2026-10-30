@@ -68,7 +68,7 @@ describe('Image', () => {
       expect($image.attributes('alt')).toBe('图片');
     });
 
-    it('fit[string]', async () => {
+    it('fit[contain/cover/fill/none/scale-down]', async () => {
       const wrapper = mount(Image, {
         props: {
           fit: '',
@@ -89,7 +89,7 @@ describe('Image', () => {
       expect($image.attributes('style')).toContain(`object-fit: ${fit}`);
     });
 
-    it('shape[string]', async () => {
+    it('shape[circle/round/square]', async () => {
       const wrapper = mount(Image, {
         props: {
           shape: '',
@@ -119,7 +119,7 @@ describe('Image', () => {
       });
     });
 
-    it('referrerpolicy[string]', () => {
+    it('referrerpolicy[no-referrer/origin/same-origin/unsafe-url/...]', () => {
       const wrapper = mount(() => <Image src={IMAGE} referrerpolicy="no-referrer" />);
       const $image = wrapper.find(`.${name}__img`);
       expect($image.attributes('referrerpolicy')).toBe('no-referrer');

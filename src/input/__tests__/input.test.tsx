@@ -75,7 +75,7 @@ describe('Input', () => {
       expect($tips.text()).toBe('函数错误信息');
     });
 
-    it('align[string]', async () => {
+    it('align[left/center/right]', async () => {
       const alignList = ['', 'left', 'center', 'right'];
       alignList.forEach((align) => {
         const tips = 'tips';
@@ -131,7 +131,7 @@ describe('Input', () => {
       expect(input.element.getAttribute('autocomplete')).toBe('On');
     });
 
-    it('layout[string]', async () => {
+    it('layout[vertical/horizontal]', async () => {
       const layoutList = ['', 'vertical', 'horizontal'];
       layoutList.forEach((layout, index) => {
         const wrapper = mount(() => <Input label="标题" layout={layout} />);
@@ -141,7 +141,7 @@ describe('Input', () => {
       });
     });
 
-    it('type[string]', async () => {
+    it('type[number]', async () => {
       const wrapper = mount(<Input label="标题" type="number" />);
       const input = wrapper.find('.t-input__wrap input');
       expect(input.element.getAttribute('type')).toBe('number');
@@ -291,7 +291,7 @@ describe('Input', () => {
       expect(wrapper2.find('.t-input--border').exists()).toBeFalsy();
     });
 
-    it('status[string]', async () => {
+    it('status[default/success/warning/error]', async () => {
       const wrapper = mount(<Input status="error" />);
       expect(wrapper.find('.t-input--error').exists()).toBeTruthy();
     });
@@ -301,7 +301,7 @@ describe('Input', () => {
       expect(wrapper.find('.custom-extra').exists()).toBeTruthy();
     });
 
-    it('enterkeyhint[string]', async () => {
+    it('enterkeyhint[enter/done/go/next/previous/search/send]', async () => {
       const wrapper = mount(<Input enterkeyhint="search" />);
       expect(wrapper.find('input').attributes('enterkeyhint')).toBe('search');
     });

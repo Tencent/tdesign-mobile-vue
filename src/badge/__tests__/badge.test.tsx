@@ -76,7 +76,7 @@ describe('Badge', () => {
       expect(inner.text()).toEqual(`${maxCount}+`);
     });
 
-    it('shape[string]', async () => {
+    it('shape[circle/square/bubble/ribbon/ribbon-right/ribbon-left/triangle-right/triangle-left]', async () => {
       const count = 16;
       const wrapper = mount(Badge, {
         props: {
@@ -100,7 +100,7 @@ describe('Badge', () => {
       expect(inner.classes()).toContain(`${name}--${shape}`);
     });
 
-    it('size[string]', async () => {
+    it('size[medium/large]', async () => {
       const wrapper = mount(Badge, {
         props: {
           dot: true,

@@ -45,7 +45,7 @@ describe('Result', () => {
       expect(wrapper.findComponent(AppIcon).exists()).toBeTruthy();
     });
 
-    it('theme[string]', async () => {
+    it('theme[default/success/warning/error]', async () => {
       const wrapper1 = mount(() => <Result theme="success"></Result>);
       const wrapper2 = mount(() => <Result theme="warning"></Result>);
       const wrapper3 = mount(() => <Result theme="error"></Result>);

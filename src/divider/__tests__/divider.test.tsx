@@ -24,7 +24,7 @@ describe('Divider', () => {
       expect(wrapper.find(`.${name}`).classes()).toContain(`${name}--dashed`);
     });
 
-    it('align[string]', async () => {
+    it('align[left/right/center]', async () => {
       const wrapper = mount(Divider, {
         props: {
           align: '',
@@ -47,7 +47,7 @@ describe('Divider', () => {
       expect($divider.find(`.${name}`).classes()).toContain(`${name}--${align}`);
     });
 
-    it('layout[string]', async () => {
+    it('layout[horizontal/vertical]', async () => {
       const wrapper = mount(Divider, {
         props: {
           layout: '',

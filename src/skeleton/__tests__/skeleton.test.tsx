@@ -8,7 +8,7 @@ const TEXT = 'tdesign-mobile-vue';
 
 describe('Skeleton', () => {
   describe('props', () => {
-    it('theme[string]', async () => {
+    it('theme[avatar/image/text/paragraph]', async () => {
       const wrapper = mount(Skeleton, {
         props: {
           theme: '',
@@ -51,7 +51,7 @@ describe('Skeleton', () => {
       expect($rows.length).toBe(2);
     });
 
-    it('animation[string]', async () => {
+    it('animation[gradient/flashed/none]', async () => {
       const rowCol = [1];
       const wrapper = mount(Skeleton, {
         props: {

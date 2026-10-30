@@ -61,7 +61,7 @@ describe('Popup', () => {
       // expect(wrapper.find('.t-popup__close').text()).toEqual(temp);
     });
 
-    it('placement[string]', async () => {
+    it('placement[top/left/right/bottom/center]', async () => {
       const placementList = ['', 'top', 'left', 'right', 'bottom', 'center'];
       placementList.forEach((placement, index) => {
         const wrapper = mount(() => <Popup visible={true} placement={placement} />);

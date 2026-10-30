@@ -86,7 +86,7 @@ exports[`Radio > props > checked[boolean] 1`] = `
 </div>
 `;
 
-exports[`Radio > props > placement[string] 1`] = `
+exports[`Radio > props > placement[left/right] 1`] = `
 <div
   class="t-radio t-radio--right t-radio--block"
 >

@@ -75,7 +75,7 @@ describe('Switch', () => {
       expect(wrapper.classes()).not.toContain('t-switch--disabled');
     });
 
-    it('size[string]', async () => {
+    it('size[small/medium/large]', async () => {
       const wrapper = mount(Switch, {
         props: {
           size: '',

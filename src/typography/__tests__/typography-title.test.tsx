@@ -28,14 +28,14 @@ describe('Typography Title', () => {
       expect(wrapper.text()).toContain(shortText);
     });
 
-    it('level[string] - h1 (default)', () => {
+    it('level[h1]', () => {
       const wrapper = mount(Title, {
         slots: { default: () => shortText },
       });
       expect(wrapper.find('h1').exists()).toBe(true);
     });
 
-    it('level[string] - h2', () => {
+    it('level[h2]', () => {
       const wrapper = mount(Title, {
         props: { level: 'h2' },
         slots: { default: () => shortText },
@@ -43,7 +43,7 @@ describe('Typography Title', () => {
       expect(wrapper.find('h2').exists()).toBe(true);
     });
 
-    it('level[string] - h3', () => {
+    it('level[h3]', () => {
       const wrapper = mount(Title, {
         props: { level: 'h3' },
         slots: { default: () => shortText },
@@ -51,7 +51,7 @@ describe('Typography Title', () => {
       expect(wrapper.find('h3').exists()).toBe(true);
     });
 
-    it('level[string] - h4', () => {
+    it('level[h4]', () => {
       const wrapper = mount(Title, {
         props: { level: 'h4' },
         slots: { default: () => shortText },
@@ -59,7 +59,7 @@ describe('Typography Title', () => {
       expect(wrapper.find('h4').exists()).toBe(true);
     });
 
-    it('level[string] - h5', () => {
+    it('level[h5]', () => {
       const wrapper = mount(Title, {
         props: { level: 'h5' },
         slots: { default: () => shortText },
@@ -67,7 +67,7 @@ describe('Typography Title', () => {
       expect(wrapper.find('h5').exists()).toBe(true);
     });
 
-    it('level[string] - h6', () => {
+    it('level[h6]', () => {
       const wrapper = mount(Title, {
         props: { level: 'h6' },
         slots: { default: () => shortText },
@@ -132,7 +132,7 @@ describe('Typography Title', () => {
       expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
     });
 
-    it('level[empty string] passes validator', () => {
+    it('level[empty] passes validator', () => {
       const wrapper = mount(Title, {
         props: { level: '' },
         slots: { default: () => shortText },

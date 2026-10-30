@@ -37,7 +37,7 @@ describe('Form', () => {
         },
       });
     });
-    it('labelAlign[string]', async () => {
+    it('labelAlign[left/right/top]', async () => {
       expect(wrapper.find(`.${name}__label`).classes(`${name}__label--right`)).toBeTruthy();
 
       await wrapper.setProps({ labelAlign: 'top' });
@@ -112,7 +112,7 @@ describe('Form', () => {
       expect(input.element.hasAttribute('readonly')).toBeTruthy();
     });
 
-    it('resetType[string]', async () => {
+    it('resetType[empty/initial]', async () => {
       const rules = {
         name: [{ required: true }],
       };
@@ -159,7 +159,7 @@ describe('Form', () => {
       expect(wrapper.find(`.${name}__label`).text()).toContain('：');
     });
 
-    it('contentAlign[string]', async () => {
+    it('contentAlign[left/right]', async () => {
       const wrapper = mount({
         setup() {
           return () => (
@@ -197,7 +197,7 @@ describe('Form', () => {
     // submitWithWarningMessage 校验警告态提交行为
     it.todo('submitWithWarningMessage[boolean]');
 
-    it('requiredMarkPosition[string]', async () => {
+    it('requiredMarkPosition[left/right]', async () => {
       const wrapper = mount({
         setup() {
           return () => (

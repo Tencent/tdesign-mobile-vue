@@ -129,7 +129,7 @@ describe('Collapse', () => {
       expect(handleChange).toHaveBeenCalledTimes(1);
     });
 
-    test('theme[string]', async () => {
+    test('theme[default/card]', async () => {
       themeList.forEach((theme) => {
         const wrapper = mount({
           setup() {

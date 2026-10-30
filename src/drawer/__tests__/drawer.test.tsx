@@ -35,7 +35,7 @@ describe('Drawer', () => {
       // expect(wrapper.find('.t-drawer__sidebar').isVisible()).toBe(true);
     });
 
-    it('placement[string]', async () => {
+    it('placement[left/right]', async () => {
       placementList.forEach((placement) => {
         const wrapper = mount(() => <Drawer visible={true} placement={placement} />);
         if (placement) {

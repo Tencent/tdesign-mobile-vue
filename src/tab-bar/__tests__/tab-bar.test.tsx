@@ -102,12 +102,12 @@ describe('TabBar', () => {
       // expect(item.vm.isChecked).toBeTruthy();
     });
 
-    it('shape[string]', () => {
+    it('shape[normal/round]', () => {
       const wrapper = mount(<TabBar shape="round"></TabBar>);
       expect(wrapper.classes()).toContain('t-tab-bar--round');
     });
 
-    it('theme[string]', () => {
+    it('theme[normal/tag]', () => {
       const wrapper = mount(
         <TabBar theme="tag">
           <TabBarItem>首页</TabBarItem>

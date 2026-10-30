@@ -30,7 +30,7 @@ const columns = [
 
 describe('Table', () => {
   describe('props', () => {
-    it('tableLayout[string]', async () => {
+    it('tableLayout[auto/fixed]', async () => {
       const wrapper = mount({
         render() {
           return <TTable rowKey="index" data={data} columns={columns}></TTable>;
@@ -119,7 +119,7 @@ describe('Table', () => {
       expect(wrapper.find('.t-loading__text').text()).toBe('function loading');
     });
 
-    it('verticalAlign[string]', async () => {
+    it('verticalAlign[top/middle/bottom]', async () => {
       const wrapper = mount({
         render() {
           return <TTable rowKey="index" data={data} columns={columns}></TTable>;
