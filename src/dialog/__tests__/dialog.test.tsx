@@ -1,5 +1,5 @@
 import { config, mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import { nextTick } from 'vue';
 import Dialog from '../dialog';
@@ -454,12 +454,14 @@ describe('Dialog', () => {
     });
   });
 
+  // 用例结束后先排空浮层异步任务再清理 teleport 挂载内容，避免卸载期间的 patch 报错
+  afterEach(async () => {
+    await sleep(300);
+    document.body.innerHTML = '';
+  });
+
   describe('scenarios', () => {
     describe('plugin', () => {
-      beforeEach(() => {
-        document.body.innerHTML = '';
-      });
-
       it('method', () => {
         const testMethod = (method, content) => {
           document.body.innerHTML = '';
@@ -487,6 +489,10 @@ describe('Dialog', () => {
         handler.show();
         await sleep(300);
         expect(document.body.querySelector('.t-overlay').style.display).not.toBe('none');
+
+        // 收尾到隐藏态，避免用例结束后浮层卸载与清理时机竞争
+        handler.hide();
+        await sleep(300);
       });
 
       it('update', async () => {

@@ -1,5 +1,5 @@
 import { config, mount } from '@vue/test-utils';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { ref, h } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
 import Drawer, { DrawerPlugin } from '../index';
@@ -247,11 +247,14 @@ describe('Drawer', () => {
     });
   });
 
+  // 用例结束后先排空浮层异步任务再清理 teleport 挂载内容，避免卸载期间的 patch 报错
+  afterEach(async () => {
+    await sleep(300);
+    document.body.innerHTML = '';
+  });
+
   describe('scenarios', () => {
     describe('plugin', () => {
-      beforeEach(() => {
-        document.body.innerHTML = '';
-      });
       const title = 'Hello TDesign';
 
       it('show', async () => {

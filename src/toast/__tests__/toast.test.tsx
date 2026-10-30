@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { LoadingIcon } from 'tdesign-icons-vue-next';
 import { mount } from '@vue/test-utils';
 import { createApp } from 'vue';
@@ -115,12 +115,14 @@ describe('Toast', () => {
     });
   });
 
+  // 用例结束后先排空浮层异步任务再清理 teleport 挂载内容，避免卸载期间的 patch 报错
+  afterEach(async () => {
+    await sleep(300);
+    document.body.innerHTML = '';
+  });
+
   describe('scenarios', () => {
     describe('plugin', () => {
-      beforeEach(() => {
-        document.body.innerHTML = '';
-      });
-
       it('show', () => {
         ToastPlugin('Hello');
         expect(document.body.textContent).toContain('Hello');

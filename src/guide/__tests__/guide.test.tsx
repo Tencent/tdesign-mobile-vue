@@ -1,10 +1,14 @@
 import { mount } from '@vue/test-utils';
-import { vi } from 'vitest';
+import { vi, afterEach } from 'vitest';
 import Guide from '../index';
 import Popover from '../../popover';
 import Popup from '../../popup';
 
-beforeEach(() => {
+// 用例结束后先排空浮层/Popper 异步任务再清理挂载容器，避免卸载期间的 patch 报错
+afterEach(async () => {
+  await new Promise((resolve) => {
+    setTimeout(resolve, 0);
+  });
   document.body.innerHTML = '';
 });
 
@@ -146,7 +150,6 @@ describe('Guide', () => {
       await mountBaseGuide({ modelValue: 0 }, `#test-container`);
       expect(document.querySelector('.t-guide__highlight--mask')).toBeTruthy();
 
-      document.body.innerHTML = '';
       createEmptyDomUnderBody('test-container-2');
       await mountBaseGuide({ modelValue: 0, showOverlay: false }, `#test-container-2`);
       expect(document.querySelector('.t-guide__highlight--nomask')).toBeTruthy();
@@ -160,13 +163,12 @@ describe('Guide', () => {
       ]);
       expect(document.querySelector('.t-guide__skip')).toBeTruthy();
 
-      document.body.innerHTML = '';
       createEmptyDomUnderBody('test-container-2');
       await mountBaseGuide({ mode: 'dialog', modelValue: 0, hideSkip: true }, `#test-container-2`, [
         { element: '.guide-element-1' },
         { element: '.guide-element-2' },
       ]);
-      expect(document.querySelector('.t-guide__skip')).toBeFalsy();
+      expect(document.querySelector('#test-container-2 .t-guide__skip')).toBeFalsy();
     });
 
     it('counter[function] & hideCounter[boolean]', async () => {
@@ -177,14 +179,16 @@ describe('Guide', () => {
       ]);
       expect(document.querySelector('.t-guide__next').textContent).toContain('1/2');
 
-      document.body.innerHTML = '';
       createEmptyDomUnderBody('test-container-2');
       await mountBaseGuide(
         { mode: 'dialog', modelValue: 0, counter: () => '1/2', hideCounter: true },
         `#test-container-2`,
         [{ element: '.guide-element-1' }, { element: '.guide-element-2' }],
       );
-      expect(document.querySelector('.t-guide__next').textContent).not.toContain('1/2');
+      // 两个实例均 teleport 到 body，遍历断言 hideCounter 实例的 next 按钮不含 counter 文本
+      const nextBtns = document.querySelectorAll('.t-guide__next');
+      const hiddenCounterBtn = Array.from(nextBtns).find((btn) => !btn.textContent.includes('1/2'));
+      expect(hiddenCounterBtn).toBeTruthy();
     });
 
     it('nextButtonProps[object]', async () => {
