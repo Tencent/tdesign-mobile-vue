@@ -47,19 +47,21 @@ describe('Drawer', () => {
 
     it('closeOnOverlayClick[boolean]', async () => {
       const onClose = vi.fn();
-      const closeOverlayClick = ref(true);
+      const mountDrawer = (closeOnOverlayClick: boolean) =>
+        mount({
+          render() {
+            return <Drawer visible={true} closeOnOverlayClick={closeOnOverlayClick} onClose={onClose} />;
+          },
+        });
 
-      const visible = ref(true);
-      const wrapper = mount({
-        render() {
-          return <Drawer visible={visible.value} closeOverlayClick={closeOverlayClick} onClose={onClose} />;
-        },
-      });
+      // false：点击遮罩不触发关闭
+      const preventDrawer = mountDrawer(false);
+      preventDrawer.findComponent({ name: 'TOverlay' }).find('.t-overlay').trigger('click');
+      expect(onClose).not.toBeCalled();
 
-      const $overlay = wrapper.findComponent({ name: 'TOverlay' });
-      expect($overlay.exists()).toBeTruthy();
-
-      $overlay.find('.t-overlay').trigger('click');
+      // true：点击遮罩触发 onClose('overlay')
+      const closeDrawer = mountDrawer(true);
+      closeDrawer.findComponent({ name: 'TOverlay' }).find('.t-overlay').trigger('click');
       expect(onClose).toBeCalledWith('overlay');
     });
 
