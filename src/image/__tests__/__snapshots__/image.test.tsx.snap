@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Image > props > lazy[boolean] 1`] = `
+<div
+  class="t-image t-image--square"
+>
+  <!---->
+  <picture>
+    <!---->
+    <img
+      alt=""
+      class="t-image__img"
+      src="https://tdesign.gtimg.com/site/upload1.png"
+      style="object-fit: fill; object-position: center;"
+    />
+  </picture>
+</div>
+`;

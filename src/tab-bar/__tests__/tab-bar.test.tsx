@@ -1,0 +1,195 @@
+import { describe, it, expect, vi } from 'vitest';
+import { mount } from '@vue/test-utils';
+import { ref } from 'vue';
+import TabBar from '../tab-bar';
+import TabBarItem from '../tab-bar-item';
+
+const list = [
+  {
+    name: 'label_1',
+    text: '标签一',
+    icon: undefined,
+    value: '1',
+  },
+  {
+    name: 'label_2',
+    text: '标签二',
+    icon: undefined,
+    value: '2',
+  },
+  {
+    name: 'label_3',
+    text: '此处展开',
+    icon: undefined,
+    value: '3',
+    subTabBar: [
+      {
+        name: 'spread_1',
+        text: '展开项一',
+        icon: undefined,
+        value: '3-1',
+      },
+      {
+        name: 'spread_2',
+        text: '展开项二',
+        icon: undefined,
+        value: '3-2',
+      },
+      {
+        name: 'spread_3',
+        text: '展开项三',
+        icon: undefined,
+        value: '3-3',
+      },
+    ],
+  },
+];
+
+describe('TabBar', () => {
+  describe('props', () => {
+    it('bordered[boolean]', async () => {
+      const wrapper = mount(TabBar, {
+        shallow: true,
+      });
+      expect(wrapper.classes()).toContain('t-tab-bar--bordered');
+
+      await wrapper.setProps({ bordered: false });
+      expect(wrapper.classes()).not.toContain('t-tab-bar--bordered');
+    });
+
+    it('fixed[boolean]', async () => {
+      const wrapper = mount(TabBar, {
+        shallow: true,
+      });
+      expect(wrapper.classes()).toContain('t-tab-bar--fixed');
+
+      await wrapper.setProps({ fixed: false });
+      expect(wrapper.classes()).not.toContain('t-tab-bar--fixed');
+    });
+
+    it('placeholder[boolean]', () => {
+      const wrapper = mount(
+        <TabBar fixed placeholder>
+          <TabBarItem>首页</TabBarItem>
+        </TabBar>,
+      );
+      expect(wrapper.find('.t-tab-bar__placeholder').exists()).toBeTruthy();
+    });
+
+    it('safeAreaInsetBottom[boolean]', () => {
+      const wrapper = mount(<TabBar safeAreaInsetBottom></TabBar>);
+      expect(wrapper.classes()).toContain('t-tab-bar--safe');
+    });
+
+    it('shape[normal/round]', () => {
+      const wrapper = mount(<TabBar shape="round"></TabBar>);
+      expect(wrapper.classes()).toContain('t-tab-bar--round');
+    });
+
+    it('split[boolean]', () => {
+      const wrapper = mount(
+        <TabBar split>
+          <TabBarItem>首页</TabBarItem>
+          <TabBarItem>我的</TabBarItem>
+        </TabBar>,
+      );
+      expect(wrapper.find('.t-tab-bar-item--split').exists()).toBeTruthy();
+    });
+
+    it('theme[normal/tag]', () => {
+      const wrapper = mount(
+        <TabBar theme="tag">
+          <TabBarItem>首页</TabBarItem>
+        </TabBar>,
+      );
+      expect(wrapper.find('.t-tab-bar-item__content--tag').exists()).toBeTruthy();
+    });
+
+    it('value[string]', async () => {
+      const wrapper = mount({
+        render() {
+          return (
+            <TabBar value={'1'}>
+              {list.map((item) => {
+                return <TabBarItem {...item}>{item.text}</TabBarItem>;
+              })}
+            </TabBar>
+          );
+        },
+      });
+
+      const $checked = wrapper.findAll('.t-tab-bar-item__content--checked');
+      expect($checked).toHaveLength(1);
+      expect($checked[0].text()).toContain('标签一');
+    });
+
+    it('defaultValue[string]', async () => {
+      const wrapper = mount({
+        render: () => (
+          <TabBar defaultValue={'2'}>
+            {list.map((item) => {
+              return <TabBarItem {...item}>{item.text}</TabBarItem>;
+            })}
+          </TabBar>
+        ),
+      });
+
+      expect(wrapper.findAll('.t-tab-bar-item')).toHaveLength(list.length);
+      const $checked = wrapper.findAll('.t-tab-bar-item__content--checked');
+      expect($checked).toHaveLength(1);
+      expect($checked[0].text()).toContain('标签二');
+    });
+
+    it('zIndex[number]', () => {
+      const wrapper = mount(<TabBar zIndex={50}></TabBar>);
+      expect(wrapper.attributes('style')).toContain('z-index: 50');
+    });
+  });
+
+  describe('events', () => {
+    it('click', async () => {
+      const onChange = vi.fn();
+      const value = ref('1');
+      const wrapper = mount({
+        render: () => (
+          <TabBar v-model={value.value} onChange={onChange}>
+            {list.map((item) => {
+              return <TabBarItem {...item} />;
+            })}
+          </TabBar>
+        ),
+      });
+
+      // 从 bar1 切到 bar2
+      const bar2 = wrapper.find('[name="label_2"] > .t-tab-bar-item__content');
+      expect(onChange).toHaveBeenCalledTimes(0);
+      await bar2.trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenLastCalledWith('2');
+
+      // 从 bar2 切到 bar3
+      const bar3 = wrapper.find('[name="label_3"] > .t-tab-bar-item__content');
+      await bar3.trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(2);
+      expect(onChange).toHaveBeenLastCalledWith(['3']);
+
+      // 点击 spread
+      const bar3_1 = wrapper.find('[name="label_3"] .t-tab-bar-item__spread-item');
+      await bar3_1.trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(3);
+      expect(onChange).toHaveBeenLastCalledWith(['3', '3-1']);
+      expect(wrapper.find('[name="label_3"]').find('.t-tab-bar-item__spread-item').exists()).toBe(false);
+    });
+
+    it('badgeProps[object]', () => {
+      const wrapper = mount(
+        <TabBar defaultValue={0}>
+          <TabBarItem badgeProps={{ count: 5 }}>标签一</TabBarItem>
+        </TabBar>,
+      );
+      const item = wrapper.findComponent(TabBarItem);
+      expect(item.exists()).toBeTruthy();
+      expect(item.props('badgeProps')).toEqual({ count: 5 });
+    });
+  });
+});

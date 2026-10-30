@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Spinner > scenarios > renders spinner lines 1`] = `
+<span
+  class="t-loading__spinner"
+>
+  
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-1"
+  />
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-2"
+  />
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-3"
+  />
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-4"
+  />
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-5"
+  />
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-6"
+  />
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-7"
+  />
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-8"
+  />
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-9"
+  />
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-10"
+  />
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-11"
+  />
+  <i
+    class="t-loading__spinner--line t-loading__spinner--line-12"
+  />
+  
+</span>
+`;

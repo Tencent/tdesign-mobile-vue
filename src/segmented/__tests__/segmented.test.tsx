@@ -1,0 +1,198 @@
+import { ref, h, nextTick } from 'vue';
+import { mount } from '@vue/test-utils';
+import { describe, it, expect, vi } from 'vitest';
+import { HomeIcon } from 'tdesign-icons-vue-next';
+import Segmented from '../segmented';
+
+const prefix = 't';
+const name = `${prefix}-segmented`;
+
+describe('Segmented', () => {
+  describe('props', () => {
+    it('block[boolean]', () => {
+      const wrapper = mount(Segmented, {
+        props: {
+          block: true,
+          options: ['选项一', '选项二'],
+        },
+      });
+
+      expect(wrapper.classes()).toContain(`${name}--block`);
+    });
+
+    it('disabled[boolean]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(Segmented, {
+        props: {
+          disabled: true,
+          options: ['选项一', '选项二', '选项三'],
+          defaultValue: '选项一',
+          onChange,
+        },
+      });
+
+      const $items = wrapper.findAll(`.${name}__item`);
+      expect($items[0].classes()).toContain(`${name}__item--disabled`);
+      expect($items[1].classes()).toContain(`${name}__item--disabled`);
+
+      // 点击禁用项不应触发 change 事件
+      await $items[1].trigger('click');
+      expect(onChange).not.toBeCalled();
+    });
+
+    it('options[string array]', async () => {
+      const wrapper = mount(Segmented, {
+        props: {
+          options: ['选项一', '选项二', '选项三'],
+          defaultValue: '选项一',
+        },
+      });
+
+      const $items = wrapper.findAll(`.${name}__item`);
+      expect($items.length).toBe(3);
+      expect($items[0].classes()).toContain(`${name}__item--active`);
+    });
+
+    it('options[number array]', async () => {
+      const wrapper = mount(Segmented, {
+        props: {
+          options: [1, 2, 3],
+          defaultValue: 2,
+        },
+      });
+
+      const $items = wrapper.findAll(`.${name}__item`);
+      expect($items.length).toBe(3);
+      expect($items[1].classes()).toContain(`${name}__item--active`);
+    });
+
+    it('options[object array]', async () => {
+      const wrapper = mount(Segmented, {
+        props: {
+          options: [
+            { value: 0, label: 'home' },
+            { value: 1, label: 'category' },
+            { value: 2, label: 'mine' },
+          ],
+          defaultValue: 1,
+        },
+      });
+
+      const $items = wrapper.findAll(`.${name}__item`);
+      expect($items.length).toBe(3);
+      expect($items[1].classes()).toContain(`${name}__item--active`);
+    });
+
+    it('options[disabled item]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(Segmented, {
+        props: {
+          options: [
+            { value: 0, label: '周一' },
+            { value: 1, label: '周二' },
+            { value: 2, label: '周三', disabled: true },
+          ],
+          defaultValue: 0,
+          onChange,
+        },
+      });
+
+      const $items = wrapper.findAll(`.${name}__item`);
+      expect($items[2].classes()).toContain(`${name}__item--disabled`);
+
+      // 点击禁用项不应触发 change 事件
+      await $items[2].trigger('click');
+      expect(onChange).not.toBeCalled();
+
+      // 点击非禁用项应触发 change 事件
+      await $items[1].trigger('click');
+      expect(onChange).toBeCalledTimes(1);
+    });
+
+    it('value[string]', async () => {
+      const value = ref('选项一');
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => <Segmented value={value.value} options={['选项一', '选项二', '选项三']} onChange={onChange} />;
+        },
+      });
+      const $items = wrapper.findAll(`.${name}__item`);
+      expect($items[0].classes()).toContain(`${name}__item--active`);
+
+      // 受控模式：外部修改 value 后激活项切换
+      value.value = '选项三';
+      await nextTick();
+      expect($items[2].classes()).toContain(`${name}__item--active`);
+      expect($items[0].classes()).not.toContain(`${name}__item--active`);
+
+      // 外部值未响应时，点击仅抛出 change，激活项保持
+      await $items[1].trigger('click');
+      expect(onChange).toHaveBeenCalledWith({ value: '选项二', selectedOption: { value: '选项二', label: '选项二' } });
+      expect($items[2].classes()).toContain(`${name}__item--active`);
+    });
+  });
+
+  describe('events', () => {
+    it('change', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(Segmented, {
+        props: {
+          options: ['选项一', '选项二', '选项三'],
+          defaultValue: '选项一',
+          onChange,
+        },
+      });
+
+      const $items = wrapper.findAll(`.${name}__item`);
+      await $items[1].trigger('click');
+
+      expect(onChange).toBeCalledTimes(1);
+      expect(onChange).toBeCalledWith({ value: '选项二', selectedOption: { value: '选项二', label: '选项二' } });
+    });
+
+    it('v-model', async () => {
+      const value = ref('选项一');
+      const wrapper = mount(() => <Segmented v-model={value.value} options={['选项一', '选项二', '选项三']} />);
+
+      const $items = wrapper.findAll(`.${name}__item`);
+      expect($items[0].classes()).toContain(`${name}__item--active`);
+
+      await $items[1].trigger('click');
+      expect(value.value).toBe('选项二');
+      expect($items[1].classes()).toContain(`${name}__item--active`);
+    });
+  });
+
+  describe('scenarios', () => {
+    describe('thumb rendering', () => {
+      it('renders thumb element', () => {
+        const wrapper = mount(Segmented, {
+          props: {
+            options: ['选项一', '选项二'],
+            defaultValue: '选项一',
+          },
+        });
+
+        const $thumb = wrapper.find(`.${name}__thumb`);
+        expect($thumb.exists()).toBeTruthy();
+      });
+
+      it('updates thumb on value change', async () => {
+        const value = ref('选项一');
+        const wrapper = mount(() => <Segmented v-model={value.value} options={['选项一', '选项二', '选项三']} />);
+
+        const $thumb = wrapper.find(`.${name}__thumb`);
+        expect($thumb.exists()).toBeTruthy();
+
+        // 切换选项
+        const $items = wrapper.findAll(`.${name}__item`);
+        await $items[2].trigger('click');
+
+        // 等待 DOM 更新
+        await wrapper.vm.$nextTick();
+        expect(value.value).toBe('选项三');
+      });
+    });
+  });
+});
