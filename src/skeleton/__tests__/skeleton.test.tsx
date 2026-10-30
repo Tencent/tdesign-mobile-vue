@@ -9,12 +9,8 @@ const TEXT = 'tdesign-mobile-vue';
 describe('Skeleton', () => {
   describe('props', () => {
     it('theme[avatar/image/text/paragraph]', async () => {
-      const wrapper = mount(Skeleton, {
-        props: {
-          theme: '',
-        },
-      });
-      // theme = '', 默认取 'text', 此时 rowCol = [1, [{ width: '24%', height: '16px', marginRight: '16px' },{ width: '76%', height: '16px' }]
+      const wrapper = mount(Skeleton);
+      // theme 默认取 'text', 此时 rowCol = [1, [{ width: '24%', height: '16px', marginRight: '16px' },{ width: '76%', height: '16px' }]
       const $skeleton = wrapper.findComponent(Skeleton);
       const $rows = $skeleton.findAll(`.${name}__row`);
       // 2行
@@ -56,10 +52,9 @@ describe('Skeleton', () => {
       const wrapper = mount(Skeleton, {
         props: {
           rowCol,
-          animation: '',
         },
       });
-      // animation = '', 值为空则表示没有动画
+      // animation 默认 none, 没有渐变/闪烁动画
       const $skeleton = wrapper.findComponent(Skeleton);
 
       // 自定义 rowCol, 1行1列

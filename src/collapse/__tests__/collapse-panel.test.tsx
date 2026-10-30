@@ -1,8 +1,9 @@
 import { vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import { Collapse, CollapsePanel } from '../index';
+import type { TdCollapsePanelProps } from '../type';
 
-const placementList = ['', 'bottom', 'top'];
+const placementList: TdCollapsePanelProps['placement'][] = ['bottom', 'top'];
 
 describe('CollapsePanel', () => {
   describe('props', () => {

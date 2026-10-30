@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { CloseCircleFilledIcon, InfoCircleFilledIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Input from '../input';
+import type { TdInputProps } from '../type';
 
 const prefix = 't';
 const name = `${prefix}-input`;
@@ -76,7 +77,7 @@ describe('Input', () => {
     });
 
     it('align[left/center/right]', async () => {
-      const alignList = ['', 'left', 'center', 'right'];
+      const alignList: TdInputProps['align'][] = ['left', 'center', 'right'];
       alignList.forEach((align) => {
         const tips = 'tips';
         const wrapper = mount(<Input label="标题" align={align} tips={tips} />);
@@ -132,7 +133,7 @@ describe('Input', () => {
     });
 
     it('layout[vertical/horizontal]', async () => {
-      const layoutList = ['', 'vertical', 'horizontal'];
+      const layoutList: TdInputProps['layout'][] = ['vertical', 'horizontal'];
       layoutList.forEach((layout, index) => {
         const wrapper = mount(() => <Input label="标题" layout={layout} />);
         if (layout) {

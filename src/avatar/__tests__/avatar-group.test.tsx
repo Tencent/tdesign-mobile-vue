@@ -40,7 +40,7 @@ describe('AvatarGroup', () => {
     it('cascading[default]', async () => {
       sizeList.forEach((s) => {
         const wrapper = mount(() => (
-          <AvatarGroup cascading={''} size={s}>
+          <AvatarGroup size={s}>
             <Avatar image={IMAGE}></Avatar>
             <Avatar image={IMAGE}></Avatar>
           </AvatarGroup>

@@ -49,7 +49,7 @@ describe('Checkbox', () => {
     });
 
     it('placement[default]', async () => {
-      const wrapper = mount(() => <Checkbox placement="" />);
+      const wrapper = mount(() => <Checkbox />);
       const $checkbox = wrapper.findComponent(Checkbox);
       expect($checkbox.findComponent(`${name}--left`)).exist;
     });

@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import Progress from '../index';
+import type { TdProgressProps } from '../type';
 
 describe('Progress', () => {
   describe('props', () => {
@@ -74,7 +75,7 @@ describe('Progress', () => {
     });
 
     it('status[string]', async () => {
-      const statusList = ['', 'success', 'error', 'warning', 'active'];
+      const statusList: TdProgressProps['status'][] = [undefined, 'success', 'error', 'warning', 'active'];
       const statusListResult = ['default', 'success', 'error', 'warning', 'active'];
       statusList.forEach((status, index) => {
         const wrapper = mount(() => <Progress percentage={30} status={status} />);
@@ -114,12 +115,7 @@ describe('Progress', () => {
 
     it('theme[string]', async () => {
       const wrapper = mount(Progress, {
-        props: { percentage: 50, theme: '' },
-      });
-      const progressDom = wrapper.find('.t-progress');
-      expect(progressDom.text()).toBeFalsy();
-      await wrapper.setProps({
-        theme: 'plump',
+        props: { percentage: 50, theme: 'plump' },
       });
       const bar = wrapper.find('.t-progress__bar');
       expect(bar.exists()).toBeTruthy();

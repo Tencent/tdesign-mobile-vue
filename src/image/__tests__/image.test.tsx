@@ -71,15 +71,17 @@ describe('Image', () => {
     it('fit[contain/cover/fill/none/scale-down]', async () => {
       const wrapper = mount(Image, {
         props: {
-          fit: '',
           src: IMAGE,
         },
       });
       const $image = wrapper.find(`.${name}__img`);
-      // fit = ''
-      fitList.forEach((item) => {
-        expect($image.attributes('style').includes(`object-fit: ${item}`)).toBeFalsy();
-      });
+      // fit 默认 fill
+      expect($image.attributes('style')).toContain('object-fit: fill');
+      fitList
+        .filter((fit) => fit !== 'fill')
+        .forEach((item) => {
+          expect($image.attributes('style').includes(`object-fit: ${item}`)).toBeFalsy();
+        });
 
       const fit = 'cover';
       await wrapper.setProps({
@@ -92,16 +94,18 @@ describe('Image', () => {
     it('shape[circle/round/square]', async () => {
       const wrapper = mount(Image, {
         props: {
-          shape: '',
           src: IMAGE,
         },
       });
       const $image = wrapper.findComponent(Image);
 
-      // shape = ''
-      shapeList.forEach((item) => {
-        expect($image.classes().includes(`${name}--${item}`)).toBeFalsy();
-      });
+      // shape 默认 square
+      expect($image.classes()).toContain(`${name}--square`);
+      shapeList
+        .filter((shape) => shape !== 'square')
+        .forEach((item) => {
+          expect($image.classes().includes(`${name}--${item}`)).toBeFalsy();
+        });
 
       const shape = 'square';
       await wrapper.setProps({

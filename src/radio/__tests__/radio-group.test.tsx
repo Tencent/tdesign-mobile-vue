@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import Radio from '../radio';
 import RadioGroup from '../radio-group';
+import type { TdRadioGroupProps } from '../type';
 
 const prefix = 't';
 const name = `${prefix}-radio`;
@@ -79,7 +80,7 @@ describe('RadioGroup', () => {
 
   describe('scenarios', () => {
     it('direction changes dynamically', async () => {
-      const direction = ref('vertical');
+      const direction = ref<TdRadioGroupProps['direction']>('vertical');
       const wrapper = mount(() => (
         <RadioGroup direction={direction.value}>
           <Radio name="radio" value="1" label="单选"></Radio>

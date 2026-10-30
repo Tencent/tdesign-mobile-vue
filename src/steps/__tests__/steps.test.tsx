@@ -2,6 +2,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { nextTick, ref } from 'vue';
 import { Steps, StepItem } from '../../steps';
+import type { TdStepItemProps } from '../type';
 
 const items = [
   {
@@ -13,7 +14,7 @@ const items = [
     content: '辅助信息文字最多两行',
   },
 ];
-const itemStatus = [
+const itemStatus: Pick<TdStepItemProps, 'title' | 'content' | 'status'>[] = [
   {
     title: '步骤描述1',
     content: '辅助信息文字最多两行',

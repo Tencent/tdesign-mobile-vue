@@ -2,6 +2,7 @@ import { ref, nextTick } from 'vue';
 import { vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import Checkbox, { CheckboxGroup } from '../index';
+import type { TdCheckboxGroupProps } from '../type';
 import config from '../../config';
 
 const { prefix } = config;
@@ -161,7 +162,7 @@ describe('CheckboxGroup', () => {
     });
 
     it('direction changes dynamically', async () => {
-      const direction = ref('vertical');
+      const direction = ref<TdCheckboxGroupProps['direction']>('vertical');
       const wrapper = mount(() => (
         <CheckboxGroup direction={direction.value}>
           <Checkbox value="1" ref="1" />

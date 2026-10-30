@@ -3,6 +3,7 @@ import { config, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { AppIcon as TIconApp, CloseIcon } from 'tdesign-icons-vue-next';
 import Cascader from '../cascader';
+import type { TdCascaderProps } from '../type';
 import Radio from '../../radio/index';
 import { Tabs as TTabs, TabPanel as TTabPanel } from '../../tabs';
 import prefixConfig from '../../config';
@@ -277,7 +278,7 @@ describe('Cascader', () => {
     it.todo('load[function]');
 
     it('theme[step/tab]', async () => {
-      const themeList = ['', 'step', 'tab'];
+      const themeList: TdCascaderProps['theme'][] = ['step', 'tab'];
       themeList.forEach((theme, index) => {
         const wrapper = mount(() => (
           <Cascader visible={true} options={options} value={address.value} theme={theme}></Cascader>

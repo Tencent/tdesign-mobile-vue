@@ -357,16 +357,6 @@ describe('Typography Text', () => {
       expect(wrapper.find('strong').exists()).toBe(true);
     });
 
-    it('theme[empty] passes validator', () => {
-      const wrapper = mount(Text, {
-        props: { theme: '' },
-        slots: { default: () => shortText },
-      });
-      expect(wrapper.find(`.${COMPONENT_NAME}`).exists()).toBe(true);
-      // empty theme should not add any theme class
-      expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).not.toContain(`${COMPONENT_NAME}--primary`);
-    });
-
     it('theme[primary]', () => {
       const wrapper = mount(Text, {
         props: { theme: 'primary' },

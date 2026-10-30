@@ -2,8 +2,9 @@ import { ref, reexpanded } from 'vue';
 import { vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import { Collapse, CollapsePanel } from '../index';
+import type { TdCollapseProps } from '../type';
 
-const themeList = ['', 'default', 'card'];
+const themeList: TdCollapseProps['theme'][] = ['default', 'card'];
 
 describe('Collapse', () => {
   describe('props', () => {

@@ -66,14 +66,14 @@ describe('CountDown', () => {
     it('size[small/medium/large]', async () => {
       const wrapper = mount(<CountDown time={100000}></CountDown>);
       expect(wrapper.find('.t-count-down--medium').exists()).toBe(true);
-      const wrapper1 = mount(<CountDown time={100000} size=""></CountDown>);
+      const wrapper1 = mount(<CountDown time={100000}></CountDown>);
       expect(wrapper1.find('.t-count-down').exists()).toBe(true);
     });
 
     it('theme[default/round/square]', async () => {
       const wrapper = mount(<CountDown time={100000}></CountDown>);
       expect(wrapper.find('.t-count-down--default').exists()).toBe(true);
-      const wrapper1 = mount(<CountDown time={100000} theme=""></CountDown>);
+      const wrapper1 = mount(<CountDown time={100000}></CountDown>);
       expect(wrapper1.find('.t-count-down').exists()).toBe(true);
     });
   });

@@ -3,13 +3,14 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import TCheckTag from '../check-tag';
+import type { TdCheckTagProps } from '../type';
 
 const TEXT = 'tdesign-mobile-vue';
 const iconFunc = () => h(TIconApp);
 
-const variantList = ['dark', 'light', 'light-outline', 'outline', ''];
-const sizeList = ['large', 'medium', 'small', ''];
-const shapeList = ['mark', 'round', 'square', ''];
+const variantList: TdCheckTagProps['variant'][] = ['dark', 'light', 'light-outline', 'outline'];
+const sizeList: TdCheckTagProps['size'][] = ['large', 'medium', 'small'];
+const shapeList: TdCheckTagProps['shape'][] = ['mark', 'round', 'square'];
 
 describe('CheckTag', () => {
   describe('props', () => {
@@ -59,11 +60,7 @@ describe('CheckTag', () => {
     it('variant[dark/light/outline/light-outline]', async () => {
       variantList.forEach((v) => {
         const wrapper = mount(() => <TCheckTag variant={v}>{TEXT}</TCheckTag>);
-        if (!v) {
-          expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
-        } else {
-          expect(wrapper.classes()).toContain(`t-tag--${v}`);
-        }
+        expect(wrapper.classes()).toContain(`t-tag--${v}`);
       });
     });
   });

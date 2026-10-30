@@ -49,7 +49,7 @@ describe('Result', () => {
       const wrapper1 = mount(() => <Result theme="success"></Result>);
       const wrapper2 = mount(() => <Result theme="warning"></Result>);
       const wrapper3 = mount(() => <Result theme="error"></Result>);
-      const wrapper4 = mount(() => <Result theme={''}></Result>);
+      const wrapper4 = mount(() => <Result></Result>);
 
       expect(wrapper1.classes()).toContain('t-result--theme-success');
       expect(wrapper1.findComponent(CheckCircleIcon).exists()).toBeTruthy();

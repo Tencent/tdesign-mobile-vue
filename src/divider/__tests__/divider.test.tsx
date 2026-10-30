@@ -27,15 +27,15 @@ describe('Divider', () => {
     it('align[left/right/center]', async () => {
       const wrapper = mount(Divider, {
         props: {
-          align: '',
           content: () => TEXT,
         },
       });
       const $divider = wrapper.findComponent(Divider);
       expect($divider.text()).toEqual(TEXT);
 
-      // align = ''
-      ['left', 'right', 'center'].forEach((item) => {
+      // align 默认 center
+      expect($divider.find(`.${name}`).classes()).toContain(`${name}--center`);
+      ['left', 'right'].forEach((item) => {
         expect($divider.find(`.${name}`).classes().includes(`${name}--${item}`)).toBeFalsy();
       });
 
@@ -50,17 +50,15 @@ describe('Divider', () => {
     it('layout[horizontal/vertical]', async () => {
       const wrapper = mount(Divider, {
         props: {
-          layout: '',
           content: () => TEXT,
         },
       });
       const $divider = wrapper.findComponent(Divider);
       expect($divider.text()).toEqual(TEXT);
 
-      // layout = ''
-      ['horizontal', 'vertical'].forEach((item) => {
-        expect($divider.find(`.${name}`).classes().includes(`${name}--${item}`)).toBeFalsy();
-      });
+      // layout 默认 horizontal
+      expect($divider.find(`.${name}`).classes()).toContain(`${name}--horizontal`);
+      expect($divider.find(`.${name}`).classes()).not.toContain(`${name}--vertical`);
 
       const layout = 'vertical';
       await wrapper.setProps({

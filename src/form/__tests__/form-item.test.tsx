@@ -2,6 +2,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
 import { FormItem, Form } from '../index.ts';
+import type { TdFormItemProps } from '../type';
 import Input from '../../input';
 import config from '../../config';
 
@@ -46,7 +47,7 @@ describe('FormItem', () => {
     });
 
     it('labelAlign[left/right/top]', () => {
-      const labelAlignList = ['', 'left', 'right', 'top'];
+      const labelAlignList: TdFormItemProps['labelAlign'][] = ['left', 'right', 'top'];
 
       labelAlignList.forEach((labelAlign) => {
         const wrapper = mount({

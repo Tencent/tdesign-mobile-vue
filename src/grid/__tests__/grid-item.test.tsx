@@ -3,6 +3,7 @@ import { describe, it, expect } from 'vitest';
 import Grid from '../grid';
 import GridItem from '../grid-item';
 import Badge from '../../badge/badge';
+import type { TdGridItemProps } from '../type';
 
 const prefix = 't';
 const name = `${prefix}-grid`;
@@ -63,7 +64,7 @@ describe('GridItem', () => {
     });
 
     it('layout[vertical/horizontal]', async () => {
-      const layoutList = ['vertical', 'horizontal', ''];
+      const layoutList: TdGridItemProps['layout'][] = ['vertical', 'horizontal'];
       layoutList.forEach((l) => {
         const wrapper = mount(() => {
           return (

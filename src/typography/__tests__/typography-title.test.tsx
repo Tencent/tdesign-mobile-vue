@@ -131,15 +131,6 @@ describe('Typography Title', () => {
       });
       expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
     });
-
-    it('level[empty] passes validator', () => {
-      const wrapper = mount(Title, {
-        props: { level: '' },
-        slots: { default: () => shortText },
-      });
-      // validator returns true for falsy val, component still renders
-      expect(wrapper.exists()).toBe(true);
-    });
   });
 
   describe('slots', () => {

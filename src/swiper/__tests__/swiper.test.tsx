@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { ref } from 'vue';
 import Swiper from '../swiper';
 import SwiperItem from '../swiper-item';
+import type { TdSwiperProps } from '../type';
 
 const sleep = (duration) =>
   new Promise((resolve) => {
@@ -268,7 +269,7 @@ describe('Swiper', () => {
       const current = ref(1);
       const duration = 100;
       const onChange = vi.fn();
-      const direction = ref('horizontal');
+      const direction = ref<TdSwiperProps['direction']>('horizontal');
       const wrapper = mount({
         setup() {
           return () => (

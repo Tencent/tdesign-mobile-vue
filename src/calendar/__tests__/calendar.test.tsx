@@ -136,19 +136,6 @@ describe('Calendar', () => {
       expect(dayFormat(time.value[0])).toEqual(dayFormat([year, month + 1, selectFirstIndex + 1]));
       expect(dayFormat(time.value[1])).toEqual(dayFormat([year, month + 1, selectLastIndex + 1]));
       // TODO: && type = 'multiple'
-
-      // 覆盖 type = '' 情况
-      const wrapper1 = mount(
-        <Calendar
-          visible={true}
-          value={value}
-          type=""
-          minDate={minDate}
-          maxDate={maxDate}
-          onConfirm={onConfirm}
-          onSelect={onSelect}
-        />,
-      );
     });
 
     it('format[function]', async () => {

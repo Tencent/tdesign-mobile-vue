@@ -16,13 +16,13 @@ describe('Button', () => {
     it('theme[default/primary/danger/light]', async () => {
       const wrapper = mount(Button, {
         props: {
-          theme: '',
           content: TEXT,
         },
       });
-      // theme = ''
+      // theme 默认 default
       const $button = wrapper.findComponent(Button);
-      ['default', 'primary', 'danger'].forEach((item) => {
+      expect($button.classes()).toContain(`${name}--default`);
+      ['primary', 'danger'].forEach((item) => {
         expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
       });
       expect(wrapper.text()).toBe(TEXT);
@@ -63,13 +63,13 @@ describe('Button', () => {
     it('shape[rectangle/square/round/circle]', async () => {
       const wrapper = mount(Button, {
         props: {
-          shape: '',
           content: TEXT,
         },
       });
-      // shape = ''
+      // shape 默认 rectangle
       const $button = wrapper.findComponent(Button);
-      ['rectangle', 'square', 'round', 'circle'].forEach((item) => {
+      expect($button.classes()).toContain(`${name}--rectangle`);
+      ['square', 'round', 'circle'].forEach((item) => {
         expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
       });
       expect(wrapper.text()).toBe(TEXT);
@@ -84,13 +84,13 @@ describe('Button', () => {
     it('size[extra-small/small/medium/large]', async () => {
       const wrapper = mount(Button, {
         props: {
-          size: '',
           content: TEXT,
         },
       });
-      // size = ''
+      // size 默认 medium
       const $button = wrapper.findComponent(Button);
-      ['small', 'medium', 'large'].forEach((item) => {
+      expect($button.classes()).toContain(`${name}--size-medium`);
+      ['small', 'large'].forEach((item) => {
         expect($button.classes().includes(`${name}--size-${item}`)).toBeFalsy();
       });
       expect(wrapper.text()).toBe(TEXT);
@@ -105,13 +105,13 @@ describe('Button', () => {
     it('variant[base/outline/dashed/text]', async () => {
       const wrapper = mount(Button, {
         props: {
-          variant: '',
           content: TEXT,
         },
       });
-      // variant = ''
+      // variant 默认 base
       const $button = wrapper.findComponent(Button);
-      ['base', 'outline', 'text'].forEach((item) => {
+      expect($button.classes()).toContain(`${name}--base`);
+      ['outline', 'text'].forEach((item) => {
         expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
       });
       expect(wrapper.text()).toBe(TEXT);

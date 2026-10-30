@@ -3,13 +3,14 @@ import { describe, it, expect, vi, afterEach } from 'vitest';
 import { ref, h, nextTick } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
 import Drawer, { DrawerPlugin } from '../index';
+import type { TdDrawerProps } from '../type';
 import { sleep } from '../../shared/util';
 
 config.global.stubs = {
   teleport: false,
 };
 
-const placementList = ['', 'left', 'right'];
+const placementList: TdDrawerProps['placement'][] = ['left', 'right'];
 
 const isElementVisible = (el) => {
   while (el) {

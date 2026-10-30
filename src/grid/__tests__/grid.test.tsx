@@ -3,6 +3,7 @@ import { describe, it, expect } from 'vitest';
 import Grid from '../grid';
 import GridItem from '../grid-item';
 import Badge from '../../badge/badge';
+import type { TdGridProps, TdGridItemProps } from '../type';
 
 const prefix = 't';
 const name = `${prefix}-grid`;
@@ -32,7 +33,7 @@ const items2 = [
 describe('Grid', () => {
   describe('props', () => {
     it('align[left/center]', async () => {
-      const alignList = ['left', 'center', ''];
+      const alignList: TdGridProps['align'][] = ['left', 'center'];
       alignList.forEach((a) => {
         const wrapper = mount(() => {
           return (
@@ -51,7 +52,7 @@ describe('Grid', () => {
     });
 
     it('theme[default/card]', async () => {
-      const themeList = ['default', 'card', ''];
+      const themeList: TdGridProps['theme'][] = ['default', 'card'];
       themeList.forEach((t) => {
         const wrapper = mount(() => {
           return (

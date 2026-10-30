@@ -81,14 +81,14 @@ describe('Badge', () => {
       const wrapper = mount(Badge, {
         props: {
           count,
-          shape: '',
           content: TEXT,
         },
       });
-      // shape = ''
+      // shape 默认 circle
       const $badge = wrapper.findComponent(Badge);
       const inner = $badge.find(`.${name}--basic`);
-      ['circle', 'ribbon', 'round'].forEach((s) => {
+      expect(inner.classes()).toContain(`${name}--circle`);
+      ['ribbon', 'round'].forEach((s) => {
         expect(inner.classes().includes(`${name}--${s}`)).toBeFalsy();
       });
       expect($badge.text()).toEqual(`${TEXT}${count}`);

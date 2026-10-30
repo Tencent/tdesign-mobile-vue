@@ -17,7 +17,7 @@ describe('Link', () => {
       expect(wrapper.find('.t-link--large').exists()).toBeTruthy();
       const wrapperDefault = mount({
         render() {
-          return <Link size={''}>text</Link>;
+          return <Link>text</Link>;
         },
       });
       expect(wrapperDefault.find('.t-link--medium').exists()).toBeTruthy();
@@ -31,7 +31,7 @@ describe('Link', () => {
       expect(wrapper.find('.t-link--primary').exists()).toBeTruthy();
       const wrapperDefault = mount({
         render() {
-          return <Link theme={''}>text</Link>;
+          return <Link>text</Link>;
         },
       });
       expect(wrapperDefault.find('.t-link--default').exists()).toBeTruthy();

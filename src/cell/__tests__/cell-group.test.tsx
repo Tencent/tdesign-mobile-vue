@@ -1,8 +1,9 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import CellGroup from '../cell-group';
+import type { TdCellGroupProps } from '../type';
 
-const themeList = ['default', 'card'];
+const themeList: TdCellGroupProps['theme'][] = ['default', 'card'];
 
 describe('CellGroup', () => {
   describe('props', () => {

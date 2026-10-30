@@ -3,6 +3,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { ref, nextTick } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import Popup from '../index';
+import type { TdPopupProps } from '../type';
 
 config.global.stubs = {
   teleport: false,
@@ -62,13 +63,11 @@ describe('Popup', () => {
     });
 
     it('placement[top/left/right/bottom/center]', async () => {
-      const placementList = ['', 'top', 'left', 'right', 'bottom', 'center'];
-      placementList.forEach((placement, index) => {
+      const placementList: TdPopupProps['placement'][] = ['top', 'left', 'right', 'bottom', 'center'];
+      placementList.forEach((placement) => {
         const wrapper = mount(() => <Popup visible={true} placement={placement} />);
         const $popup = wrapper.find('.t-popup');
-        if (placement) {
-          expect($popup.classes()).toContain(`t-popup--${placement}`);
-        }
+        expect($popup.classes()).toContain(`t-popup--${placement}`);
       });
     });
 

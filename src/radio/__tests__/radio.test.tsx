@@ -3,10 +3,20 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Radio from '../radio';
 import RadioGroup from '../radio-group';
+import type { TdRadioProps } from '../type';
 
 const prefix = 't';
 const name = `${prefix}-radio`;
 const TEXT = 'tdesign-mobile-vue';
+
+// icon 数组形式的类型为 Array<TNode>（渲染函数），但组件不调用函数，而是把数组项
+// 直接作为子节点渲染（文本节点经 String() 序列化）；通过自定义 toString 使渲染出的
+// 文本与原有字符串用例保持一致
+const createIconText = (text: string) => {
+  const icon = () => text;
+  icon.toString = () => text;
+  return icon;
+};
 
 describe('Radio', () => {
   describe('props', () => {
@@ -66,10 +76,11 @@ describe('Radio', () => {
     });
 
     it('placement[left/right]', async () => {
+      const iconList: TdRadioProps['icon'] = [createIconText('line'), createIconText('dot')];
       const wrapper = mount(Radio, {
         props: {
           placement: 'right',
-          icon: ['line', 'dot'],
+          icon: iconList,
           checked: true,
         },
       });
@@ -95,10 +106,11 @@ describe('Radio', () => {
     });
 
     it('icon[array]', async () => {
+      const iconList: TdRadioProps['icon'] = [createIconText('line'), createIconText('dot')];
       const wrapper = mount(Radio, {
         props: {
           checked: true,
-          icon: ['line', 'dot'],
+          icon: iconList,
         },
       });
 

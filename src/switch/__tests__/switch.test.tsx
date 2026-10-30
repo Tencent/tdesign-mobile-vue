@@ -76,12 +76,9 @@ describe('Switch', () => {
     });
 
     it('size[small/medium/large]', async () => {
-      const wrapper = mount(Switch, {
-        props: {
-          size: '',
-        },
-      });
-      expect(wrapper.classes()).toContain('t-switch--');
+      const wrapper = mount(Switch);
+      // size 默认 medium
+      expect(wrapper.classes()).toContain('t-switch--medium');
       await wrapper.setProps({
         size: 'small',
       });

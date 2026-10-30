@@ -3,58 +3,43 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Tag from '../tag.tsx';
+import type { TdTagProps } from '../type';
 
 const TEXT = 'tdesign-mobile-vue';
 const iconFunc = () => h(TIconApp);
 
-const themeList = ['danger', 'default', 'primary', 'success', 'warning', ''];
-const variantList = ['dark', 'light', 'light-outline', 'outline', ''];
-const sizeList = ['large', 'medium', 'small', ''];
-const shapeList = ['mark', 'round', 'square', ''];
+const themeList: TdTagProps['theme'][] = ['danger', 'default', 'primary', 'success', 'warning'];
+const variantList: TdTagProps['variant'][] = ['dark', 'light', 'light-outline', 'outline'];
+const sizeList: TdTagProps['size'][] = ['large', 'medium', 'small'];
+const shapeList: TdTagProps['shape'][] = ['mark', 'round', 'square'];
 
 describe('Tag', () => {
   describe('props', () => {
     it('theme[default/primary/warning/danger/success]', async () => {
       themeList.forEach((t) => {
         const wrapper = mount(() => <Tag theme={t}>{TEXT}</Tag>);
-        if (!t) {
-          expect(wrapper.classes()).toContain(`t-tag`);
-        } else {
-          expect(wrapper.classes()).toContain(`t-tag--${t}`);
-        }
+        expect(wrapper.classes()).toContain(`t-tag--${t}`);
       });
     });
 
     it('variant[dark/light/outline/light-outline]', async () => {
       variantList.forEach((v) => {
         const wrapper = mount(() => <Tag variant={v}>{TEXT}</Tag>);
-        if (!v) {
-          expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
-        } else {
-          expect(wrapper.classes()).toContain(`t-tag--${v}`);
-        }
+        expect(wrapper.classes()).toContain(`t-tag--${v}`);
       });
     });
 
     it('size[small/medium/large/extra-large]', async () => {
       sizeList.forEach((s) => {
         const wrapper = mount(() => <Tag size={s}>{TEXT}</Tag>);
-        if (!s) {
-          expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
-        } else {
-          expect(wrapper.classes()).toContain(`t-tag--${s}`);
-        }
+        expect(wrapper.classes()).toContain(`t-tag--${s}`);
       });
     });
 
     it('shape[square/round/mark]', async () => {
       shapeList.forEach((s) => {
         const wrapper = mount(() => <Tag shape={s}>{TEXT}</Tag>);
-        if (!s) {
-          expect(wrapper.classes()).toContain(`t-tag--${'default'}`);
-        } else {
-          expect(wrapper.classes()).toContain(`t-tag--${s}`);
-        }
+        expect(wrapper.classes()).toContain(`t-tag--${s}`);
       });
     });
 

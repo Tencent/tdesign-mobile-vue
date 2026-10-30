@@ -3,13 +3,14 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { UserIcon } from 'tdesign-icons-vue-next';
 import Avatar from '../avatar';
+import type { TdAvatarProps } from '../type';
 import Badge from '../../badge/badge';
 
 const IMAGE = 'https://tdesign.gtimg.com/site/avatar.jpg';
 const IMAGE_FAIL = 'https://tdesign.gtimg.com/mobile/demos/avatar_11112233.png';
 const userIconFunc = () => h(UserIcon);
 
-const shapeList = ['circle', 'round'];
+const shapeList: TdAvatarProps['shape'][] = ['circle', 'round'];
 const sizeList = ['small', 'medium', 'large'];
 
 describe('Avatar', () => {

@@ -3,11 +3,12 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { ChevronRightIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Cell from '../cell';
+import type { TdCellProps } from '../type';
 import Avatar from '../../avatar/avatar';
 
 const appIcon = () => h(AppIcon);
 const chevronRightIcon = () => h(ChevronRightIcon);
-const alignList = ['bottom', 'middle', 'top'];
+const alignList: TdCellProps['align'][] = ['bottom', 'middle', 'top'];
 const avatarUrl = 'https://tdesign.gtimg.com/mobile/demos/avatar_1.png';
 
 describe('Cell', () => {

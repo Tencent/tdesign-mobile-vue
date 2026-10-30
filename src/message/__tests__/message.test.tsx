@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { AppIcon, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Message from '../message';
+import type { TdMessageProps } from '../type';
 
 const prefix = 't';
 const name = `${prefix}-message`;
@@ -10,7 +11,8 @@ const name = `${prefix}-message`;
 describe('Message', () => {
   describe('props', () => {
     it('align[string]', () => {
-      ['left', 'center'].forEach((align) => {
+      const alignList: TdMessageProps['align'][] = ['left', 'center'];
+      alignList.forEach((align) => {
         const wrapper = mount(<Message visible align={align} />);
         expect(wrapper.find(`.${name}`).classes().includes(`${name}-align--${align}`)).toBeTruthy();
       });

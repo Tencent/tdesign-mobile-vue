@@ -4,6 +4,7 @@ import { mount } from '@vue/test-utils';
 import { createApp } from 'vue';
 import Toast from '../toast';
 import { ToastPlugin } from '../index';
+import type { TdToastProps } from '../type';
 import Overlay from '../../overlay';
 import { sleep } from '../../shared/util';
 import config from '../../config';
@@ -23,13 +24,11 @@ describe('Toast', () => {
       });
       expect(wrapper.find('.t-toast').classes()).toContain('t-toast--column');
 
-      const directionList = ['', 'row', 'column'];
-      directionList.forEach((direction, index) => {
+      const directionList: TdToastProps['direction'][] = ['row', 'column'];
+      directionList.forEach((direction) => {
         const wrapper = mount(() => <Toast direction={direction} message="direction" />);
         const $toast = wrapper.find('.t-toast');
-        if (direction) {
-          expect($toast.classes()).toContain(`t-toast--${direction}`);
-        }
+        expect($toast.classes()).toContain(`t-toast--${direction}`);
       });
     });
 

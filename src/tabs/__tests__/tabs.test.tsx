@@ -2,6 +2,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { ref } from 'vue';
 import { Tabs, TabPanel } from '../index';
+import type { TdTabsProps } from '../type';
 import TTabNav from '../tab-nav-item';
 import { sleep } from '../../shared/util';
 import Sticky from '../../sticky/index';
@@ -60,7 +61,7 @@ describe('Tabs', () => {
     });
 
     it('theme[line/tag/card]', async () => {
-      let theme = '';
+      let theme: TdTabsProps['theme'] = 'line';
       const wrapper = mount(Tabs, {
         props: {
           theme,
@@ -157,7 +158,7 @@ describe('Tabs', () => {
     });
 
     it('size[medium/large]', async () => {
-      let size = '';
+      let size: TdTabsProps['size'] = 'medium';
       const SIZE_CLASSNAMES = {
         small: `${prefix}-size-s`,
         medium: `${prefix}-size-m`,

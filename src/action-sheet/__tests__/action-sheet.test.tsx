@@ -1,6 +1,7 @@
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import ActionSheet from '../action-sheet';
+import type { TdActionSheetProps } from '../type';
 import MenuGrid from '../action-sheet-grid';
 import { GridItem as TGridItem } from '../../grid/index';
 import TBadge from '../../badge/index';
@@ -31,9 +32,9 @@ describe('ActionSheet', () => {
       expect(wrapper.findAllComponents(TBadge).length).toEqual(2);
     });
     it('align[center/left]', async () => {
-      const alignList = ['', 'center', 'left'];
+      const alignList: TdActionSheetProps['align'][] = ['center', 'left'];
 
-      alignList.forEach((align, index) => {
+      alignList.forEach((align) => {
         const wrapper = mount(() => (
           <ActionSheet items={[]} visible={true} description={'动作面板描述文字'} align={align}></ActionSheet>
         ));
