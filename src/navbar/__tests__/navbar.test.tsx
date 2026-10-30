@@ -120,7 +120,7 @@ describe('Navbar', () => {
 
   describe('slots', () => {
     it('left', () => {
-      const slot = <div className="left-content">左侧内容</div>;
+      const slot = <div class="left-content">左侧内容</div>;
       const navbar = mount(<NavBar title="标题" />, {
         slots: {
           left: slot,
@@ -139,7 +139,7 @@ describe('Navbar', () => {
     });
 
     it('right', () => {
-      const slot = <div className="right-content">右侧内容</div>;
+      const slot = <div class="right-content">右侧内容</div>;
       const navbar = mount(<NavBar title="标题" />, {
         slots: {
           right: slot,
