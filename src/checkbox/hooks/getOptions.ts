@@ -1,4 +1,4 @@
-import { VNode, Ref, ref, watch, onMounted, onUpdated, Slots, toRefs } from 'vue';
+import { VNode, Ref, computed, Slots, toRefs } from 'vue';
 
 import { CheckboxOption, CheckboxOptionObj, TdCheckboxGroupProps } from '../type';
 import useChildSlots from '../../hooks/useChildSlots';
@@ -18,13 +18,11 @@ export const getOptionListBySlots = (nodes: VNode[]) => {
 
 export const getOptions = (props: any, slots: Slots) => {
   const { options } = toRefs(props);
-  const optionList = ref<CheckboxOptionObj[]>([]);
 
-  watch(
-    options,
-    (options) => {
-      if (!options) return [];
-      optionList.value = options.map((item: CheckboxOption) => {
+  // computed 在渲染阶段求值，slot 调用不会产生 "invoked outside render function" 警告
+  const optionList = computed<Array<CheckboxOptionObj>>(() => {
+    if (options.value?.length) {
+      return options.value.map((item: CheckboxOption) => {
         let r: CheckboxOptionObj = {};
         if (typeof item !== 'object') {
           r = { label: String(item), value: item };
@@ -33,23 +31,15 @@ export const getOptions = (props: any, slots: Slots) => {
         }
         return r;
       });
-    },
-    { immediate: true },
-  );
-
-  // 从 slot 中解析 checkbox 选项列表
-  const updateOptionListBySlots = () => {
-    const nodes = slots.default && slots.default();
-    if (nodes !== undefined) {
-      optionList.value = getOptionListBySlots(useChildSlots('TCheckbox'));
     }
-  };
 
-  // 挂载时初始化
-  onMounted(updateOptionListBySlots);
-
-  // 更新时同步，确保 slot 内容动态变化（如筛选后 checkbox 数量改变）时 optionList 也能更新
-  onUpdated(updateOptionListBySlots);
+    // 无 options 时从 slot 解析
+    const nodes = slots.default?.();
+    if (nodes) {
+      return getOptionListBySlots(useChildSlots('TCheckbox', nodes));
+    }
+    return [];
+  });
 
   return optionList;
 };
