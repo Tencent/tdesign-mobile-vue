@@ -52,7 +52,7 @@ description: 按 tdesign-mobile-vue 规范编写、补充、迁移或审查 Vue 
 - 多子组件分别使用独立的组件测试文件，并各自遵循组件分组规则。
 - hooks 使用 `*.hooks.test.tsx`，utils 使用 `*.utils.test.tsx`；这类非组件测试不强制使用五类分组。
 - 多个测试文件共用的挂载逻辑可提取到 `mount.tsx`；其中只放 mount factory、测试数据、查询方法和清理逻辑，不直接编写测试用例，也不使用五类分组。仅被单个测试文件使用的辅助逻辑保留在原测试文件中。
-- 存量组件多为 `src/<component>/__test__/index.test.jsx`（单测）与 `demo.test.jsx`（demo 快照，由 `npm run test:demo` 自动生成，禁止手写修改）；新增或重构的组件测试统一采用 `__tests__/[组件名].test.tsx` 约定。
+- 组件测试统一存放在 `src/<component>/__tests__/`，单测文件统一采用 `[组件名].test.tsx` 命名；`demo.test.jsx` 为 demo 快照（由 `npm run test:demo` 自动生成，禁止手写修改）。
 
 ## 验证
 

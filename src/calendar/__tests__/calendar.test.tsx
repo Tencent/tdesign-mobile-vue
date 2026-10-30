@@ -1,0 +1,228 @@
+import { ref } from 'vue';
+import { config, mount } from '@vue/test-utils';
+import { describe, it, expect, vi } from 'vitest';
+import Button from '../../button/index';
+import Calendar from '../calendar';
+
+config.global.stubs = {
+  teleport: false,
+};
+
+const prefix = 't';
+const name = `${prefix}-calendar`;
+
+const raw = '日一二三四五六';
+const year = 2022;
+const month = 0;
+const day = 15;
+const minDate = new Date(year, month, 1);
+const maxDate = new Date(year, month, 31);
+const value = new Date(year, month, day);
+const rangeValue = [new Date(year, month, day)];
+const confirmBtn = 'confirmBtn';
+
+const dayFormat = (date, character) => {
+  const D = new Date(date);
+  const year = D.getFullYear();
+  const month = D.getMonth() + 1;
+  const dates = D.getDate();
+  return [year, month, dates].join(character);
+};
+
+describe('Calendar', () => {
+  describe('props', () => {
+    it('visible[boolean]', async () => {
+      const wrapper = mount(Calendar, {
+        props: {
+          visible: false,
+        },
+      });
+      await wrapper.setProps({
+        visible: true,
+      });
+    });
+
+    it('title[string]', async () => {
+      const title = '';
+      const wrapper = mount(<Calendar title={title} />);
+      const $title = wrapper.find(`.${name}__title`);
+      expect($title.text()).toEqual(title || '请选择日期');
+    });
+
+    it('title[function]', async () => {
+      const wrapper = mount(<Calendar title={() => '自定义标题'} />);
+      const $title = wrapper.find(`.${name}__title`);
+      expect($title.text()).toEqual('自定义标题');
+    });
+
+    it('confirmBtn[string]', async () => {
+      const wrapper = mount(<Calendar visible={true} value={value} confirmBtn={confirmBtn} />);
+      const $confirmBtn = wrapper.find(`.${name}__footer`);
+      expect($confirmBtn.text()).toEqual(confirmBtn);
+    });
+
+    it('confirmBtn[object]', async () => {
+      const wrapper = mount(<Calendar visible={true} value={value} confirmBtn={{ content: '确定' }} />);
+      const $confirmBtn = wrapper.find(`.${name}__footer`);
+      expect($confirmBtn.text()).toEqual('确定');
+    });
+
+    it('confirmBtn[function]', async () => {
+      const wrapper = mount(<Calendar visible={true} value={value} confirmBtn={() => '确认完成'} />);
+      const $confirmBtn = wrapper.find(`.${name}__footer`);
+      expect($confirmBtn.text()).toEqual('确认完成');
+    });
+
+    it('usePopup[boolean]', async () => {
+      const wrapper = mount(<Calendar usePopup={false} value={value} />);
+      // 非弹窗模式直接渲染日历模板
+      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
+      expect(wrapper.findComponent({ name: 'TPopup' }).exists()).toBeFalsy();
+    });
+
+    // readonly 点击日期不改变选中值，依赖交互行为
+    it.todo('readonly[boolean]');
+    // allowSameDay 范围选择可选中同一天，依赖交互行为
+    it.todo('allowSameDay[boolean]');
+    // switchMode 年月切换视图，依赖交互行为
+    it.todo('switchMode[string]');
+
+    it('firstDayOfWeek[number]', async () => {
+      const firstDayOfWeek = 1;
+      const wrapper = mount(<Calendar visible={true} value={value} firstDayOfWeek={firstDayOfWeek} />);
+      const $firstDay = wrapper.find(`.${name}__days-item`);
+      expect($firstDay.text()).toEqual(raw.split('')[firstDayOfWeek]);
+    });
+
+    it('type[string]', async () => {
+      // type = 'range'
+      const onSelect = vi.fn();
+      const time = ref('');
+      const character = '-';
+      const onConfirm = vi.fn((e) => {
+        time.value = e;
+      });
+      const wrapper = mount(
+        <Calendar
+          visible={true}
+          value={rangeValue}
+          type="range"
+          minDate={minDate}
+          maxDate={maxDate}
+          onConfirm={onConfirm}
+          onSelect={onSelect}
+        />,
+      );
+      const $dates = wrapper.findAll(`.t-calendar__dates-item`);
+      expect($dates).toHaveLength(31);
+
+      // 默认日期是2022/1/15， 模拟点选第2项(3号)，和第8项(9号)
+      const selectFirstIndex = 2;
+      const selectLastIndex = 8;
+      await $dates[selectFirstIndex].trigger('click');
+      await $dates[selectLastIndex].trigger('click');
+      expect(onSelect).toHaveBeenCalledTimes(2);
+
+      // confirm
+      const $button = wrapper.findComponent(Button);
+      await $button.trigger('click');
+
+      expect(dayFormat(time.value[0])).toEqual(dayFormat([year, month + 1, selectFirstIndex + 1]));
+      expect(dayFormat(time.value[1])).toEqual(dayFormat([year, month + 1, selectLastIndex + 1]));
+      // TODO: && type = 'multiple'
+
+      // 覆盖 type = '' 情况
+      const wrapper1 = mount(
+        <Calendar
+          visible={true}
+          value={value}
+          type=""
+          minDate={minDate}
+          maxDate={maxDate}
+          onConfirm={onConfirm}
+          onSelect={onSelect}
+        />,
+      );
+    });
+
+    it('format[function]', async () => {
+      const suffix = '¥60'; // 每一个日期后均自定义 suffix = '¥60'
+      const format = (day) => {
+        day.suffix = suffix;
+        return day;
+      };
+      const wrapper = mount(
+        <Calendar visible={true} value={value} format={format} minDate={minDate} maxDate={maxDate} />,
+      );
+      // expect(wrapper.element).toMatchSnapshot();
+      const $dates = wrapper.findAll(`.${name}__dates-item-suffix`);
+      $dates.forEach((item) => {
+        expect(item.text()).toEqual(suffix);
+      });
+    });
+  });
+
+  describe('slots', () => {
+    it('confirmBtn[slot]', async () => {
+      const wrapper = mount(<Calendar visible={true} value={value} />, {
+        slots: {
+          confirmBtn,
+        },
+      });
+      const $confirmBtn = wrapper.find(`.${name}__footer`);
+      expect($confirmBtn.text()).toEqual(confirmBtn);
+    });
+  });
+
+  describe('events', () => {
+    it('confirm', async () => {
+      const time = ref('');
+      const character = '-';
+      const onClose = vi.fn();
+      const onConfirm = vi.fn((e) => {
+        time.value = dayFormat(e, character);
+      });
+      const wrapper = mount(<Calendar visible={true} value={value} onConfirm={onConfirm} onClose={onClose} />);
+      const $button = wrapper.findComponent(Button);
+      await $button.trigger('click');
+      expect(onConfirm).toHaveBeenCalledTimes(1);
+      expect(time.value).toEqual([year, month + 1, day].join(character));
+      expect(onClose).toHaveBeenCalledTimes(1);
+    });
+
+    it('select', async () => {
+      const time = ref('');
+      const character = '-';
+      const onConfirm = vi.fn((e) => {
+        time.value = dayFormat(e, character);
+      });
+
+      const selectTime = ref('');
+      const onSelect = vi.fn((e) => {
+        selectTime.value = dayFormat(e, character);
+      });
+      const wrapper = mount(
+        <Calendar
+          visible={true}
+          value={value}
+          minDate={minDate}
+          maxDate={maxDate}
+          onSelect={onSelect}
+          onConfirm={onConfirm}
+        />,
+      );
+      const $dates = wrapper.findAll(`.${name}__dates-item`);
+      expect($dates).toHaveLength(31);
+
+      // 默认日期是2022/1/15， 模拟点选第2项，触发 onSelect 事件，此时选中日期为2022/1/3
+      const selectIndex = 2;
+      await $dates[selectIndex].trigger('click');
+      expect(onSelect).toHaveBeenCalledTimes(1);
+      expect(selectTime.value).toEqual([year, month + 1, selectIndex + 1].join(character));
+      const $button = wrapper.findComponent(Button);
+      await $button.trigger('click');
+      expect(onConfirm).toHaveBeenCalledTimes(1);
+      expect(selectTime).toEqual(time);
+    });
+  });
+});

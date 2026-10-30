@@ -66,7 +66,7 @@ describe('${newComponent}', () => {
 }
 
 function outputOneComponentTestFile(component, demoFiles) {
-  const outputPath = `${targetPath}/${component}/__test__`;
+  const outputPath = `${targetPath}/${component}/__tests__`;
   const imports = [];
   const demos = ['\nconst mapper = {'];
 

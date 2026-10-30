@@ -30,7 +30,7 @@ pnpm run test:unit-coverage
 
 ### 组件快照测试 `snap`
 
-组件 `demos` 目录下的示例快照测试集中维护在 `test/snap/`（`csr.test.js` 与 `ssr.test.js` 为统一入口，遍历 `src/**/demos/*.vue`）；组件级 demo 快照文件由 `npm run test:demo` 生成在各组件 `__test__/demo.test.jsx`。二者均不适用组件单测的五类分组。
+组件 `demos` 目录下的示例快照测试集中维护在 `test/snap/`（`csr.test.js` 与 `ssr.test.js` 为统一入口，遍历 `src/**/demos/*.vue`）；组件级 demo 快照文件由 `npm run test:demo` 生成在各组件 `__tests__/demo.test.jsx`。二者均不适用组件单测的五类分组。
 
 ```bash
 # 快照
@@ -62,7 +62,7 @@ pnpm run test:snap-update
 - 组件内部 utils 测试文件：`[组件名].utils.test.tsx`，例如 `form.utils.test.tsx`。
 - 多个测试文件共用的挂载逻辑可提取到 `mount.tsx`，用于存放 mount factory、测试数据、查询方法和清理逻辑；仅被单个测试文件使用的辅助逻辑应保留在原测试文件中。
 - `mount.tsx` 是测试辅助文件，不直接编写测试用例，也不要求使用组件测试分组。
-- 存量组件多为 `src/[组件名]/__test__/index.test.jsx`（单测）与 `demo.test.jsx`（demo 快照，由 `npm run test:demo` 自动生成，禁止手写修改）；新增或重构的组件测试统一采用上面的 `__tests__/[组件名].test.tsx` 约定。
+- 组件测试统一存放在 `src/[组件名]/__tests__/`，单测文件统一采用 `[组件名].test.tsx` 命名；`demo.test.jsx` 为 demo 快照（由 `npm run test:demo` 自动生成，禁止手写修改）。
 
 ### 组件测试分组规范
 
@@ -93,7 +93,7 @@ it('handles the reported edge case', () => {});
 
 ## 测试示例
 
-使用 BDD 模式进行开发，测试必须在流水线中通过。可参照 `src/watermark/__tests__/watermark.test.tsx`。
+使用 BDD 模式进行开发，测试必须在流水线中通过。可参照 `src/action-sheet/__tests__/action-sheet.test.tsx`。
 
 ```ts
 describe('ComponentName', () => {
