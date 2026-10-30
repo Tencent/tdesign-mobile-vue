@@ -228,7 +228,7 @@ describe('Table', () => {
   });
 
   describe('slots', () => {
-    it('empty[slot]', () => {
+    it('empty', () => {
       const emptyText = 'Empty Data Rendered By Slots';
       const wrapper = mount({
         render() {
@@ -247,7 +247,7 @@ describe('Table', () => {
       expect(wrapper.find('.t-table__empty').text()).toBe(emptyText);
     });
 
-    it('loading[slot]', async () => {
+    it('loading', async () => {
       const loadingText = 'loading text';
       const wrapper = mount({
         render() {

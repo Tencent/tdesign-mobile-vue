@@ -133,7 +133,7 @@ describe('Progress', () => {
   });
 
   describe('slots', () => {
-    it('label[slot]', () => {
+    it('label', () => {
       const wrapper = mount(Progress, {
         slots: { label: '25%' },
       });

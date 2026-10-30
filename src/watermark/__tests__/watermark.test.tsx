@@ -118,7 +118,7 @@ describe('Watermark', () => {
   });
 
   describe('slots', () => {
-    it('default[slot]', () => {
+    it('default', () => {
       const wrapper = mount(() => (
         <Watermark watermarkContent={['水印文字']} v-slots={{ default: () => <div class="covered">被覆盖内容</div> }} />
       ));

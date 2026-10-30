@@ -143,7 +143,7 @@ describe('Typography Title', () => {
   });
 
   describe('slots', () => {
-    it('default[slot]', () => {
+    it('default', () => {
       const wrapper = mount(Title, {
         slots: { default: () => shortText },
       });

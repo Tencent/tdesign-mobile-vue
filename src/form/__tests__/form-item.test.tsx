@@ -68,7 +68,7 @@ describe('FormItem', () => {
   });
 
   describe('slots', () => {
-    it('help[slot]', () => {
+    it('help', () => {
       const wrapper = mount({
         setup() {
           return () => (

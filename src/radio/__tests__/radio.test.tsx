@@ -159,7 +159,7 @@ describe('Radio', () => {
   });
 
   describe('slots', () => {
-    it('label[slot]', () => {
+    it('label', () => {
       const label = 'slot: label content';
       const wrapper = mount(Radio, {
         slots: {
@@ -170,7 +170,7 @@ describe('Radio', () => {
       expect($label.text()).toEqual(label);
     });
 
-    it('content[slot]', () => {
+    it('content', () => {
       const content = 'slot: content content';
       const wrapper = mount(Radio, {
         slots: {

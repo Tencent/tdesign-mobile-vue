@@ -307,7 +307,7 @@ describe('Swiper', () => {
   });
 
   describe('slots', () => {
-    it('navigation[slot]', async () => {
+    it('navigation', async () => {
       const wrapper = mount({
         setup() {
           return () => (
@@ -328,7 +328,7 @@ describe('Swiper', () => {
       expect(wrapper.find('.test-navigation').text()).toBe('navigation');
     });
 
-    it('navigation[slot] [navigation={false}]', async () => {
+    it('navigation [navigation={false}]', async () => {
       const wrapper = mount({
         setup() {
           return () => (

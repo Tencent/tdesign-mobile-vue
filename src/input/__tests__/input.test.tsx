@@ -386,7 +386,7 @@ describe('Input', () => {
   });
 
   describe('slots', () => {
-    it('prefixIcon[slot] & suffixIcon[slot]', async () => {
+    it('prefixIcon & suffixIcon', async () => {
       const slots = {
         prefixIcon: () => <InfoCircleFilledIcon />,
         suffixIcon: () => <AppIcon />,

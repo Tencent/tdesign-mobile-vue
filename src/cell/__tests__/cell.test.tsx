@@ -90,7 +90,7 @@ describe('Cell', () => {
   });
 
   describe('slots', () => {
-    it('leftIcon[slot] & rightIcon[slot]', async () => {
+    it('leftIcon & rightIcon', async () => {
       const slots = {
         leftIcon: () => <Avatar shape="circle" image={avatarUrl}></Avatar>,
         rightIcon: () => <chevronRightIcon />,

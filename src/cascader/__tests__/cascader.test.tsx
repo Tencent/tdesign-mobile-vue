@@ -295,7 +295,7 @@ describe('Cascader', () => {
   });
 
   describe('slots', () => {
-    it('title[slot]', () => {
+    it('title', () => {
       const title = 'Cascader 级联选择器';
       const wrapper = mount(<Cascader options={options} />, {
         slots: {
@@ -306,7 +306,7 @@ describe('Cascader', () => {
       expect($title.text()).toBe(title);
     });
 
-    it('placeholder[slot]', () => {
+    it('placeholder', () => {
       const wrapper = mount(<Cascader options={options} />, {
         slots: {
           placeholder: defaultPlaceholder,
@@ -316,7 +316,7 @@ describe('Cascader', () => {
       expect($placeholder.text()).toBe(defaultPlaceholder);
     });
 
-    it('closeBtn[slot]', () => {
+    it('closeBtn', () => {
       const closeBtn = '关闭';
       const wrapper = mount(<Cascader options={options} />, {
         slots: {

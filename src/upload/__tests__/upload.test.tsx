@@ -467,7 +467,7 @@ describe('Upload', () => {
   });
 
   describe('slots', () => {
-    it('addBtn[slot]', async () => {
+    it('addBtn', async () => {
       const wrapper = mount(Upload, {
         props: {
           requestMethod,
@@ -480,7 +480,7 @@ describe('Upload', () => {
       expect(wrapper.find('.my-add-btn-icon').exists()).toBe(true);
     });
 
-    it('addContent[slot]', async () => {
+    it('addContent', async () => {
       const wrapper = mount(<Upload addContent={() => <UploadIcon />}></Upload>);
       await nextTick();
       const triggerTarget = wrapper.findComponent(UploadIcon);

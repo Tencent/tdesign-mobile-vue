@@ -95,7 +95,7 @@ describe('CountDown', () => {
   });
 
   describe('slots', () => {
-    it('content[slot]', async () => {
+    it('content', async () => {
       const temp = <div>测试</div>;
       const wrapper = mount(<CountDown time={1000}></CountDown>, {
         slots: {

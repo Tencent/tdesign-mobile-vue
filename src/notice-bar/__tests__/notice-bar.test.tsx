@@ -127,7 +127,7 @@ describe('NoticeBar', () => {
   });
 
   describe('slots', () => {
-    it('content[slot]', async () => {
+    it('content', async () => {
       const content = <div>测试</div>;
       const wrapper = mount(<NoticeBar visible />, {
         slots: {
@@ -138,7 +138,7 @@ describe('NoticeBar', () => {
       expect(wrapper.text()).toContain('测试');
     });
 
-    it('operation[slot]', async () => {
+    it('operation', async () => {
       const operation = <div>测试</div>;
       const wrapper = mount(<NoticeBar visible />, {
         slots: {
@@ -149,7 +149,7 @@ describe('NoticeBar', () => {
       expect(wrapper.text()).toContain('测试');
     });
 
-    it('prefixIcon[slot]', async () => {
+    it('prefixIcon', async () => {
       const prefixIcon = <div>测试</div>;
       const wrapper = mount(<NoticeBar visible />, {
         slots: {
@@ -160,7 +160,7 @@ describe('NoticeBar', () => {
       expect(wrapper.text()).toContain('测试');
     });
 
-    it('suffixIcon[slot]', async () => {
+    it('suffixIcon', async () => {
       const suffixIcon = <div>测试</div>;
       const wrapper = mount(<NoticeBar visible />, {
         slots: {

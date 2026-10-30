@@ -11,7 +11,7 @@ const shortText = 'TDesign 是腾讯各业务团队在服务业务过程中沉�
 
 describe('Typography', () => {
   describe('slots', () => {
-    it('default[slot]', () => {
+    it('default', () => {
       const wrapper = mount(Typography, {
         slots: {
           default: () => longText,

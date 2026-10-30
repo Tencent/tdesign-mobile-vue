@@ -75,7 +75,7 @@ describe('List', () => {
   });
 
   describe('slots', () => {
-    it('asyncLoading[slot]', async () => {
+    it('asyncLoading', async () => {
       const textWithSlots = 'Hello. TDesign List Loading';
       const wrapperWithSlots = await mount(List, {
         slots: {
@@ -84,7 +84,7 @@ describe('List', () => {
       });
       expect(wrapperWithSlots.find('.t-list__loading--wrapper').text()).toEqual(textWithSlots);
     });
-    it('default[slot]', () => {
+    it('default', () => {
       const LIST_COUNT = 10;
       const MOCK_LIST = Array(LIST_COUNT).fill(1);
       const wrapper = mount(List, {

@@ -63,7 +63,7 @@ describe('Result', () => {
   });
 
   describe('slots', () => {
-    it('image[slot]', async () => {
+    it('image', async () => {
       const slots = {
         image: () => <Image src={imageUrl} />,
       };

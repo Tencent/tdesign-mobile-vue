@@ -62,7 +62,7 @@ describe('Popover', () => {
   });
 
   describe('slots', () => {
-    it('default[slot]', () => {
+    it('default', () => {
       const wrapper = mount(() => (
         <Popover content="气泡内容" v-slots={{ default: () => <button class="trigger-btn">触发按钮</button> }} />
       ));

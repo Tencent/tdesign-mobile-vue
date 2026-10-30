@@ -169,7 +169,7 @@ describe('Calendar', () => {
   });
 
   describe('slots', () => {
-    it('confirmBtn[slot]', async () => {
+    it('confirmBtn', async () => {
       const wrapper = mount(<Calendar visible={true} value={value} />, {
         slots: {
           confirmBtn,

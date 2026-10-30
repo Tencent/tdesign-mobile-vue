@@ -215,7 +215,7 @@ describe('Search', () => {
   });
 
   describe('slots', () => {
-    it('action[slot]', async () => {
+    it('action', async () => {
       const action = '插槽';
 
       const wrapper = mount(Search, {
@@ -234,7 +234,7 @@ describe('Search', () => {
       expect($action.text()).toEqual(action);
     });
 
-    it('left-icon[slot]', async () => {
+    it('left-icon', async () => {
       const text = '插槽';
       const leftIcon = () => {
         return text;

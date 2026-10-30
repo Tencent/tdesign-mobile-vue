@@ -64,7 +64,7 @@ describe('AvatarGroup', () => {
       expect(avatarList[avatarList.length - 1].text()).toBe('+3');
     });
 
-    it('collapseAvatar[slot]', async () => {
+    it('collapseAvatar', async () => {
       const wrapper = mount(() => (
         <AvatarGroup max={2} v-slots={{ collapseAvatar: () => '更多' }}>
           <Avatar image={IMAGE}></Avatar>

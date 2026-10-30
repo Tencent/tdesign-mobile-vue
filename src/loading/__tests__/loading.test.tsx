@@ -118,7 +118,7 @@ describe('Loading', () => {
   });
 
   describe('slots', () => {
-    it('text[slot]', () => {
+    it('text', () => {
       const customLoading = 'custom-loading-text';
       const wrapper = mount(() => (
         <Loading>{{ text: () => <p className={customLoading}>{customLoading}</p> }}</Loading>

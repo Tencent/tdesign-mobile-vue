@@ -95,7 +95,7 @@ describe('BackTop', () => {
   });
 
   describe('slots', () => {
-    it('icon[slot]', () => {
+    it('icon', () => {
       const icon = () => <TIconApp />;
 
       const wrapper = mount(BackTop, {

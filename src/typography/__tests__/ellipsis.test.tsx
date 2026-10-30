@@ -283,7 +283,7 @@ describe('Ellipsis', () => {
   });
 
   describe('slots', () => {
-    it('default[slot]', () => {
+    it('default', () => {
       const wrapper = mount(Ellipsis, {
         props: { ellipsis: true },
         slots: { default: () => longText },

@@ -308,7 +308,7 @@ describe('Tabs', () => {
   });
 
   describe('slots', () => {
-    it('panel[slot]', () => {
+    it('panel', () => {
       const label = ref('标签一');
       const wrapper = mount({
         setup() {

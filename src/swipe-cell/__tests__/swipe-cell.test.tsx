@@ -338,7 +338,7 @@ describe('SwipeCell', () => {
   });
 
   describe('slots', () => {
-    it('content[slot]', async () => {
+    it('content', async () => {
       const icon = () => <TIconApp />;
       const wrapper = mount(SwipeCell, {
         slots: {
@@ -348,7 +348,7 @@ describe('SwipeCell', () => {
       const $content = wrapper;
       expect($content.findComponent(TIconApp).exists()).toBeTruthy();
     });
-    it('left[slot]', async () => {
+    it('left', async () => {
       const onClick = vi.fn();
       const left = () => (
         <div class="delete-btn" onClick={onClick}>
@@ -371,7 +371,7 @@ describe('SwipeCell', () => {
       $button.trigger('click');
       expect(onClick).toBeCalledTimes(1);
     });
-    it('right[slot]', async () => {
+    it('right', async () => {
       const onClick = vi.fn();
       const right = () => (
         <div class="delete-btn" onClick={onClick}>

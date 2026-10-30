@@ -105,7 +105,7 @@ describe('Comment', () => {
   });
 
   describe('slots', () => {
-    it('default[slot] & reply[slot]', () => {
+    it('default & reply', () => {
       let wrapper = mount(Comment, {
         slots: { default: () => h('div', { class: 'reply-child' }, '嵌套回复') },
       });
@@ -117,14 +117,14 @@ describe('Comment', () => {
       expect(wrapper.find('.reply-slot').exists()).toBe(true);
     });
 
-    it('avatar[slot]', () => {
+    it('avatar', () => {
       const wrapper = mount(Comment, {
         slots: { avatar: () => h('span', { class: 'custom-avatar' }, 'custom') },
       });
       expect(wrapper.find('.custom-avatar').exists()).toBe(true);
     });
 
-    it('author[slot]', () => {
+    it('author', () => {
       const wrapper = mount(Comment, {
         slots: { author: () => h('span', { class: 'custom-author' }, '作者') },
       });

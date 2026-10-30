@@ -279,7 +279,7 @@ describe('Dialog', () => {
     });
   });
   describe('slots', () => {
-    it('confirmBtn[slot]', async () => {
+    it('confirmBtn', async () => {
       const visible = true;
       const confirmBtn = 'confirm';
       const wrapper = mount(Dialog, {
@@ -292,7 +292,7 @@ describe('Dialog', () => {
       });
       expect(wrapper.find('.slot-confirm-btn').text()).toBe(confirmBtn);
     });
-    it('cancelBtn[slot]', async () => {
+    it('cancelBtn', async () => {
       const visible = true;
       const cancelBtn = 'cancel';
       const wrapper = mount(Dialog, {

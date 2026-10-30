@@ -128,7 +128,7 @@ describe('ImageViewer', () => {
   });
 
   describe('slots', () => {
-    it('closeBtn[slot]', () => {
+    it('closeBtn', () => {
       const wrapper = mount(
         <ImageViewer v-model:images={images.value} visible={true} closeBtn={() => <AddCircleIcon />} />,
       );

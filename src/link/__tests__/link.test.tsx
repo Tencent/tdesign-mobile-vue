@@ -130,7 +130,7 @@ describe('Link', () => {
 
   // test slots
   describe('slots', () => {
-    it('icon[slot]', () => {
+    it('icon', () => {
       const suffixIcon = () => <TIconApp />;
       const wrapper = mount(Link, {
         props: {

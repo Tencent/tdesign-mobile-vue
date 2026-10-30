@@ -126,7 +126,7 @@ describe('Message', () => {
   });
 
   describe('slots', () => {
-    it('icon[slot]', () => {
+    it('icon', () => {
       const slots = {
         icon: () => h(TIconApp),
       };
@@ -134,7 +134,7 @@ describe('Message', () => {
       expect(wrapper.find(`.${name}__icon--left`).findComponent(TIconApp).exists()).toBeTruthy();
     });
 
-    it('link[slot]', () => {
+    it('link', () => {
       const slots = {
         link: () => h(TIconApp),
       };

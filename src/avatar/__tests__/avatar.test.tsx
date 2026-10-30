@@ -72,13 +72,13 @@ describe('Avatar', () => {
   });
 
   describe('slots', () => {
-    it('default[slot]', async () => {
+    it('default', async () => {
       const wrapper = mount(() => <Avatar>A</Avatar>);
       const characterAvatar = wrapper.find('.t-avatar');
       expect(characterAvatar.text()).toBe('A');
     });
 
-    it('icon[slot]', async () => {
+    it('icon', async () => {
       const wrapper = mount(Avatar, {
         slots: {
           icon: userIconFunc,

@@ -426,14 +426,14 @@ describe('Typography Text', () => {
   });
 
   describe('slots', () => {
-    it('default[slot]', () => {
+    it('default', () => {
       const wrapper = mount(Text, {
         slots: { default: () => shortText },
       });
       expect(wrapper.text()).toContain(shortText);
     });
 
-    it('content[slot]', () => {
+    it('content', () => {
       const wrapper = mount(Text, {
         slots: { content: () => shortText },
       });

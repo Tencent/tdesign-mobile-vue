@@ -194,7 +194,7 @@ describe('Image', () => {
   });
 
   describe('slots', () => {
-    it('loading[slot]', () => {
+    it('loading', () => {
       const slots = {
         loading: () => <LoadingIcon />,
       };
@@ -204,7 +204,7 @@ describe('Image', () => {
       expect(wrapper.findComponent(LoadingIcon).exists()).toBeTruthy();
     });
 
-    it('error[slot]', async () => {
+    it('error', async () => {
       const slots = {
         error: () => '加载失败',
       };

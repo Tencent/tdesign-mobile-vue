@@ -72,7 +72,7 @@ describe('Divider', () => {
   });
 
   describe('slots', () => {
-    it('content[slot]', async () => {
+    it('content', async () => {
       const wrapper = mount({
         setup() {
           return () => (
@@ -88,7 +88,7 @@ describe('Divider', () => {
       expect($divider.text()).toEqual(TEXT);
     });
 
-    it('default[slot]', async () => {
+    it('default', async () => {
       const wrapper = mount({
         setup() {
           return () => (

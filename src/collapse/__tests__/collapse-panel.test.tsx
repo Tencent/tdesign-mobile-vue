@@ -101,7 +101,7 @@ describe('CollapsePanel', () => {
   });
 
   describe('slots', () => {
-    test('header[slot] & headerRightContent[slot] & default[slot]', async () => {
+    test('header & headerRightContent & default', async () => {
       const wrapper = mount({
         setup() {
           return () => (

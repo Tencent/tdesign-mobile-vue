@@ -96,7 +96,7 @@ describe('Typography Paragraph', () => {
   });
 
   describe('slots', () => {
-    it('default[slot]', () => {
+    it('default', () => {
       const wrapper = mount(Paragraph, {
         slots: { default: () => shortText },
       });

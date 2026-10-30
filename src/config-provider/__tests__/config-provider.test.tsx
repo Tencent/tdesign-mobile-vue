@@ -5,7 +5,7 @@ import ConfigProvider from '../index';
 
 describe('ConfigProvider', () => {
   describe('slots', () => {
-    it('default[slot]', () => {
+    it('default', () => {
       const wrapper = mount(() => <ConfigProvider>tdesign</ConfigProvider>, {});
 
       expect(wrapper.element.innerHTML).toBe('tdesign');

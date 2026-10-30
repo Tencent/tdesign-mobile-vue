@@ -119,7 +119,7 @@ describe('Navbar', () => {
   });
 
   describe('slots', () => {
-    it('left[slot]', () => {
+    it('left', () => {
       const slot = <div className="left-content">左侧内容</div>;
       const navbar = mount(<NavBar title="标题" />, {
         slots: {
@@ -129,7 +129,7 @@ describe('Navbar', () => {
       expect(navbar.find('.t-navbar__left').find('.left-content').exists()).toBeTruthy();
     });
 
-    it('capsule[slot]', () => {
+    it('capsule', () => {
       const navbar = mount(<NavBar title="标题" />, {
         slots: {
           capsule: iconFunc,
@@ -138,7 +138,7 @@ describe('Navbar', () => {
       expect(navbar.find('.t-navbar__capsule').exists()).toBeTruthy();
     });
 
-    it('right[slot]', () => {
+    it('right', () => {
       const slot = <div className="right-content">右侧内容</div>;
       const navbar = mount(<NavBar title="标题" />, {
         slots: {
@@ -148,7 +148,7 @@ describe('Navbar', () => {
       expect(navbar.find('.t-navbar__right').find('.right-content').exists()).toBeTruthy();
     });
 
-    it('title[slot]', () => {
+    it('title', () => {
       const slot = <div>标题</div>;
       const navbar = mount(<NavBar />, {
         slots: {

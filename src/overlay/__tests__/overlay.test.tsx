@@ -92,7 +92,7 @@ describe('Overlay', () => {
   });
 
   describe('slots', () => {
-    it('default[slot]', () => {
+    it('default', () => {
       const wrapper = mount(Overlay, {
         props: { visible: true },
         slots: {
