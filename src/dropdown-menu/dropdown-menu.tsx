@@ -39,7 +39,6 @@ export default defineComponent({
       itemsActive: [],
     });
 
-    // 子成员处理：computed 在渲染阶段求值，slot 调用不会产生 "invoked outside render function" 警告
     const menuItems = computed<any[]>(() => {
       const itemName = 'TDropdownItem';
       const children = slots.default?.() || [];

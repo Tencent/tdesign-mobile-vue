@@ -19,7 +19,6 @@ export const getOptionListBySlots = (nodes: VNode[]) => {
 export const getOptions = (props: any, slots: Slots) => {
   const { options } = toRefs(props);
 
-  // computed 在渲染阶段求值，slot 调用不会产生 "invoked outside render function" 警告
   const optionList = computed<Array<CheckboxOptionObj>>(() => {
     if (options.value?.length) {
       return options.value.map((item: CheckboxOption) => {
