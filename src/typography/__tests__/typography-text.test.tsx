@@ -1,6 +1,6 @@
 import { h, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
+import { afterEach, beforeEach, describe, it, expect, vi } from 'vitest';
 import Text from '../text';
 import Ellipsis from '../ellipsis';
 
@@ -12,6 +12,18 @@ const longText =
 const shortText = 'TDesign 是腾讯各业务团队在服务业务过程中沉淀的一套企业级设计体系。';
 
 describe('Typography Text', () => {
+  beforeEach(() => {
+    Object.defineProperty(document, 'execCommand', {
+      configurable: true,
+      value: vi.fn(() => true),
+    });
+  });
+
+  afterEach(() => {
+    Reflect.deleteProperty(document, 'execCommand');
+    vi.restoreAllMocks();
+  });
+
   describe('props', () => {
     it('code[boolean]', () => {
       const wrapper = mount(Text, {
