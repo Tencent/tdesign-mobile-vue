@@ -1,5 +1,5 @@
 import { ref } from 'vue';
-import { vi } from 'vitest';
+import { describe, test, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import { Collapse, CollapsePanel } from '../index';
 import type { TdCollapseProps } from '../type';
@@ -121,6 +121,11 @@ describe('Collapse', () => {
 
       expect(val.value).toHaveLength(1);
       expect(val.value).toContain('2');
+      expect(panel1.classes()).not.toContain('t-collapse-panel--expanded');
+      expect(panel2.classes()).toContain('t-collapse-panel--expanded');
+      await panel2.find('.t-collapse-panel__header').trigger('click');
+      expect(val.value).toEqual([]);
+      expect(panel2.classes()).not.toContain('t-collapse-panel--expanded');
     });
 
     test('theme[default/card]', async () => {
@@ -145,7 +150,7 @@ describe('Collapse', () => {
       const wrapper = mount({
         setup() {
           return () => (
-            <Collapse v-model={val.value}>
+            <Collapse v-model:value={val.value}>
               <CollapsePanel ref="1" value="1" header="标题1" content="内容1" />
               <CollapsePanel ref="2" value="2" header="标题2" content="内容2" />
             </Collapse>
@@ -166,6 +171,19 @@ describe('Collapse', () => {
       expect(val.value).toContain('2');
     });
 
+    test('modelValue[array]', async () => {
+      const wrapper = mount(Collapse, {
+        props: { modelValue: ['one'] },
+        slots: { default: () => <CollapsePanel value="one" header="标题" /> },
+      });
+      const panel = wrapper.findComponent(CollapsePanel);
+      expect(panel.classes()).toContain('t-collapse-panel--expanded');
+      await panel.find('.t-collapse-panel__header').trigger('click');
+      expect(wrapper.emitted('update:modelValue')).toEqual([[[], { e: expect.any(MouseEvent) }]]);
+      await wrapper.setProps({ modelValue: [] });
+      expect(panel.classes()).not.toContain('t-collapse-panel--expanded');
+    });
+
     test('defaultValue[array]', async () => {
       const wrapper = mount({
         setup() {
@@ -183,6 +201,10 @@ describe('Collapse', () => {
 
       expect(panel1.classes()).toContain('t-collapse-panel--expanded');
       expect(panel2.classes()).not.toContain('t-collapse-panel--expanded');
+      await panel1.find('.t-collapse-panel__header').trigger('click');
+      expect(panel1.classes()).not.toContain('t-collapse-panel--expanded');
+      await panel2.find('.t-collapse-panel__header').trigger('click');
+      expect(panel2.classes()).toContain('t-collapse-panel--expanded');
     });
   });
 
@@ -202,7 +224,44 @@ describe('Collapse', () => {
       const panel = wrapper.findComponent({ ref: '1' });
       await panel.find('.t-collapse-panel__header').trigger('click');
 
-      expect(handleChange).toHaveBeenCalled();
+      expect(handleChange).toHaveBeenCalledTimes(1);
+      expect(handleChange).toHaveBeenCalledWith(['1'], { e: expect.any(MouseEvent) });
+      await panel.find('.t-collapse-panel__header').trigger('click');
+      expect(handleChange).toHaveBeenCalledTimes(2);
+      expect(handleChange).toHaveBeenLastCalledWith([], { e: expect.any(MouseEvent) });
+    });
+  });
+
+  describe('slots', () => {
+    test('default', () => {
+      const wrapper = mount(Collapse, {
+        slots: { default: () => <CollapsePanel value="one" header="插槽面板" /> },
+      });
+      expect(wrapper.findComponent(CollapsePanel).text()).toContain('插槽面板');
+    });
+
+    test('expandIcon', () => {
+      const wrapper = mount(Collapse, {
+        slots: {
+          default: () => <CollapsePanel value="one" />,
+          expandIcon: () => <span class="slot-expand">展开</span>,
+        },
+      });
+      expect(wrapper.find('.t-collapse-panel__header-icon .slot-expand').text()).toBe('展开');
+    });
+  });
+
+  describe('scenarios', () => {
+    test('expandIcon prop takes priority over expandIcon slot', () => {
+      const wrapper = mount(Collapse, {
+        props: { expandIcon: () => <span class="prop-expand">属性图标</span> },
+        slots: {
+          default: () => <CollapsePanel value="one" />,
+          expandIcon: () => <span class="slot-expand">插槽图标</span>,
+        },
+      });
+      expect(wrapper.find('.prop-expand').text()).toBe('属性图标');
+      expect(wrapper.find('.slot-expand').exists()).toBe(false);
     });
   });
 });
