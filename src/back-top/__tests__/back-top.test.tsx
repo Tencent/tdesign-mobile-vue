@@ -75,17 +75,6 @@ describe('BackTop', () => {
       wrapper.unmount();
     });
 
-    it('visibilityHeight[number]', async () => {
-      const wrapper = mount(<BackTop visibilityHeight={0} />);
-      // 初始不可见
-      expect(wrapper.find('.t-back-top').attributes('style')).toContain('display: none');
-      // 滚动距离达到 visibilityHeight 后可见
-      document.documentElement.scrollTop = 10;
-      document.documentElement.dispatchEvent(new Event('scroll'));
-      await nextTick();
-      expect(wrapper.find('.t-back-top').attributes('style')).not.toContain('display: none');
-    });
-
     it('text[string]', async () => {
       const wrapper = mount(BackTop);
       expect(wrapper.find('.t-back-top__text--round').exists()).toEqual(false);
@@ -102,6 +91,17 @@ describe('BackTop', () => {
         const wrapper = mount(BackTop, { props: { theme } });
         expect(wrapper.find('.t-back-top').classes()).toContain(`t-back-top--${theme}`);
       });
+    });
+
+    it('visibilityHeight[number]', async () => {
+      const wrapper = mount(<BackTop visibilityHeight={0} />);
+      // 初始不可见
+      expect(wrapper.find('.t-back-top').attributes('style')).toContain('display: none');
+      // 滚动距离达到 visibilityHeight 后可见
+      document.documentElement.scrollTop = 10;
+      document.documentElement.dispatchEvent(new Event('scroll'));
+      await nextTick();
+      expect(wrapper.find('.t-back-top').attributes('style')).not.toContain('display: none');
     });
   });
 

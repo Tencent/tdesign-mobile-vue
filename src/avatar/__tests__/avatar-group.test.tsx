@@ -45,6 +45,22 @@ describe('AvatarGroup', () => {
       expect(wrapper.find('.custom-collapse').text()).toBe('查看更多');
     });
 
+    it('shape[circle/round]', () => {
+      shapeList.forEach((s) => {
+        const wrapper = mount(() => (
+          <AvatarGroup shape={s}>
+            <Avatar image={IMAGE}></Avatar>
+            <Avatar image={IMAGE}></Avatar>
+          </AvatarGroup>
+        ));
+        const avatarList = wrapper.findAll('.t-avatar');
+        expect(avatarList).toHaveLength(2);
+        avatarList.forEach((avatar) => {
+          expect(avatar.classes()).toContain(`t-avatar--${s}`);
+        });
+      });
+    });
+
     it('max[number]', () => {
       const wrapper = mount(() => (
         <AvatarGroup max={2}>
@@ -58,23 +74,6 @@ describe('AvatarGroup', () => {
       const avatarList = wrapper.findAllComponents(Avatar);
       expect(avatarList.length).toBe(3);
       expect(avatarList[avatarList.length - 1].text()).toBe('+3');
-    });
-
-    it('shape[circle/round]', () => {
-      shapeList.forEach((s) => {
-        const wrapper = mount(() => (
-          <AvatarGroup shape={s}>
-            <Avatar image={IMAGE}></Avatar>
-            <Avatar image={IMAGE}></Avatar>
-          </AvatarGroup>
-        ));
-        const avatarList = wrapper.findAll('.t-avatar');
-        expect(avatarList).toHaveLength(2);
-        // 分组未单独设置 shape 时，子头像形状由 AvatarGroup.shape 决定
-        avatarList.forEach((avatar) => {
-          expect(avatar.classes()).toContain(`t-avatar--${s}`);
-        });
-      });
     });
 
     it('size[string]', () => {
