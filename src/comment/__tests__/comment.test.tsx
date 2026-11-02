@@ -4,6 +4,8 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Comment from '../comment';
 import ConfigProvider from '../../config-provider';
+import Avatar from '../../avatar';
+import type { CommentActionItem, CommentFold } from '../type';
 
 const DEFAULT_FOLDS_CONTENT = {
   collapsed: '展开回复',
@@ -15,7 +17,7 @@ describe('Comment', () => {
   describe('props', () => {
     it('actions[array]', () => {
       // array
-      const actions = [
+      const actions: CommentActionItem[] = [
         { key: 'reply', placement: 'start', content: '回复' },
         { key: 'like', placement: 'end', content: '点赞' },
       ];
@@ -42,18 +44,34 @@ describe('Comment', () => {
       expect(wrapper.find('.t-comment__author').text()).toBe('张三');
     });
 
+    it('author[function]', () => {
+      const wrapper = mount(Comment, { props: { author: () => <span>函数作者</span> } });
+      expect(wrapper.find('.t-comment__author').text()).toBe('函数作者');
+    });
+
     it('avatar[string]', () => {
       const wrapper = mount(Comment, {
         props: { avatar: 'https://example.com/avatar.png' },
       });
       expect(wrapper.find('.t-comment__avatar').exists()).toBe(true);
+      expect(wrapper.findComponent(Avatar).props('image')).toBe('https://example.com/avatar.png');
     });
 
     it('avatar[object]', () => {
       const wrapper = mount(Comment, {
-        props: { avatar: { image: 'https://example.com/avatar.png', shape: 'circle' } },
+        props: { avatar: { image: 'https://example.com/avatar.png', shape: 'round', size: 'small' } },
       });
       expect(wrapper.find('.t-comment__avatar').exists()).toBe(true);
+      expect(wrapper.findComponent(Avatar).props()).toMatchObject({
+        image: 'https://example.com/avatar.png',
+        shape: 'round',
+        size: 'small',
+      });
+    });
+
+    it('avatar[function]', () => {
+      const wrapper = mount(Comment, { props: { avatar: () => <span class="prop-avatar">自定义头像</span> } });
+      expect(wrapper.find('.prop-avatar').text()).toBe('自定义头像');
     });
 
     it('content[string]', () => {
@@ -84,6 +102,20 @@ describe('Comment', () => {
       expect(wrapper.find('.t-comment__date').text()).toBe('昨天20:00');
     });
 
+    it('folds[object]', async () => {
+      const onFolds = vi.fn();
+      const wrapper = mount(Comment, { props: { folds: { state: 'collapsed', total: 5 }, onFolds } });
+      await wrapper.find('.t-comment__folds-item').trigger('click');
+      // 受控状态不因点击自行改变，需由父级更新。
+      expect(wrapper.findAll('.t-comment__folds-item')).toHaveLength(1);
+      expect(wrapper.find('.t-comment__folds-item').text()).toContain('展开回复');
+      await wrapper.setProps({ folds: { state: 'partial', total: 5 } });
+      expect(wrapper.findAll('.t-comment__folds-item')).toHaveLength(2);
+      await wrapper.setProps({ folds: { state: 'expanded', total: 5 } });
+      expect(wrapper.findAll('.t-comment__folds-item')).toHaveLength(1);
+      expect(wrapper.find('.t-comment__folds-item').text()).toContain('收起');
+    });
+
     // modelValue 在 props.ts 中声明（CommentFold 结构），但组件未消费该属性，受控折叠请使用 folds
     it.todo('modelValue[object]');
 
@@ -111,12 +143,22 @@ describe('Comment', () => {
       await $items[0].trigger('click');
       expect(wrapper.find('.t-comment__folds-item').text()).toContain('展开回复');
     });
+
+    it('reply[string]', () => {
+      const wrapper = mount(Comment, { props: { reply: '回复内容' } });
+      expect(wrapper.find('.t-comment__reply-inner').text()).toBe('回复内容');
+    });
+
+    it('reply[function]', () => {
+      const wrapper = mount(Comment, { props: { reply: () => <span>函数回复</span> } });
+      expect(wrapper.find('.t-comment__reply-inner').text()).toBe('函数回复');
+    });
   });
 
   describe('events', () => {
     it('actions', async () => {
       const onActions = vi.fn();
-      const action = { key: 'reply', placement: 'start', content: '回复' };
+      const action: CommentActionItem = { key: 'reply', placement: 'start', content: '回复' };
       const wrapper = mount(Comment, {
         props: {
           actions: [action],
@@ -126,17 +168,48 @@ describe('Comment', () => {
       const actionItem = wrapper.find('.t-comment-block > div');
       await actionItem.trigger('click');
       expect(onActions).toHaveBeenCalledWith({ action, e: expect.any(Event) });
+      expect(onActions).toHaveBeenCalledTimes(1);
+
+      const actions = () => <span>函数操作</span>;
+      const functionWrapper = mount(Comment, { props: { actions, onActions } });
+      await functionWrapper.find('.t-comment__actions > div').trigger('click');
+      expect(onActions).toHaveBeenLastCalledWith({ action: actions, e: expect.any(MouseEvent) });
+      expect(onActions).toHaveBeenCalledTimes(2);
+    });
+
+    it('folds', async () => {
+      const onFolds = vi.fn();
+      const defaultFolds: CommentFold = { state: 'collapsed', total: 5, step: 3 };
+      const wrapper = mount(Comment, { props: { defaultFolds, onFolds } });
+      await wrapper.find('.t-comment__folds-item').trigger('click');
+      expect(onFolds).toHaveBeenNthCalledWith(1, {
+        fold: { ...defaultFolds, state: 'partial' },
+        e: expect.any(MouseEvent),
+      });
+      await wrapper.findAll('.t-comment__folds-item')[0].trigger('click');
+      expect(onFolds).toHaveBeenNthCalledWith(2, {
+        fold: { ...defaultFolds, state: 'expanded' },
+        e: expect.any(MouseEvent),
+      });
+      await wrapper.find('.t-comment__folds-item').trigger('click');
+      expect(onFolds).toHaveBeenNthCalledWith(3, {
+        fold: { ...defaultFolds, state: 'collapsed' },
+        e: expect.any(MouseEvent),
+      });
+      expect(onFolds).toHaveBeenCalledTimes(3);
     });
   });
 
   describe('slots', () => {
-    it('default & reply', () => {
-      let wrapper = mount(Comment, {
+    it('default', () => {
+      const wrapper = mount(Comment, {
         slots: { default: () => h('div', { class: 'reply-child' }, '嵌套回复') },
       });
       expect(wrapper.find('.reply-child').exists()).toBe(true);
+    });
 
-      wrapper = mount(Comment, {
+    it('reply', () => {
+      const wrapper = mount(Comment, {
         slots: { reply: () => h('div', { class: 'reply-slot' }, '回复插槽') },
       });
       expect(wrapper.find('.reply-slot').exists()).toBe(true);
@@ -155,9 +228,100 @@ describe('Comment', () => {
       });
       expect(wrapper.find('.custom-author').text()).toBe('作者');
     });
+
+    it('content', () => {
+      const wrapper = mount(Comment, { slots: { content: () => <span>插槽评论</span> } });
+      expect(wrapper.find('.t-comment__content').text()).toBe('插槽评论');
+    });
+
+    it('datetime', () => {
+      const wrapper = mount(Comment, { slots: { datetime: () => <span>插槽时间</span> } });
+      expect(wrapper.find('.t-comment__date').text()).toBe('插槽时间');
+    });
+
+    // 未传 actions 时提前返回；传数组或函数时又优先渲染 Prop，无法单独使用 actions 插槽。
+    it.todo('actions');
   });
 
   describe('scenarios', () => {
+    it('author prop takes priority over author slot', () => {
+      const wrapper = mount(Comment, { props: { author: '属性作者' }, slots: { author: () => <span>插槽作者</span> } });
+      expect(wrapper.find('.t-comment__author').text()).toBe('属性作者');
+    });
+
+    it('avatar prop takes priority over avatar slot', () => {
+      const wrapper = mount(Comment, {
+        props: { avatar: 'https://example.com/avatar.png' },
+        slots: { avatar: () => <span class="slot-avatar">插槽头像</span> },
+      });
+      expect(wrapper.findComponent(Avatar).props('image')).toBe('https://example.com/avatar.png');
+      expect(wrapper.find('.slot-avatar').exists()).toBe(false);
+    });
+
+    it('content prop takes priority over content slot', () => {
+      const wrapper = mount(Comment, {
+        props: { content: '属性评论' },
+        slots: { content: () => <span>插槽评论</span> },
+      });
+      expect(wrapper.find('.t-comment__content').text()).toBe('属性评论');
+    });
+
+    it('datetime prop takes priority over datetime slot', () => {
+      const wrapper = mount(Comment, {
+        props: { datetime: '属性时间' },
+        slots: { datetime: () => <span>插槽时间</span> },
+      });
+      expect(wrapper.find('.t-comment__date').text()).toBe('属性时间');
+    });
+
+    it('reply prop takes priority over reply slot', () => {
+      const wrapper = mount(Comment, { props: { reply: '属性回复' }, slots: { reply: () => <span>插槽回复</span> } });
+      expect(wrapper.find('.t-comment__reply-inner').text()).toBe('属性回复');
+    });
+
+    it('reply slot takes priority over default slot', () => {
+      const wrapper = mount(Comment, {
+        slots: { reply: () => <span>具名回复</span>, default: () => <span>默认回复</span> },
+      });
+      expect(wrapper.find('.t-comment__reply-inner').text()).toBe('具名回复');
+    });
+
+    it('folds takes priority over defaultFolds', () => {
+      const wrapper = mount(Comment, {
+        props: {
+          folds: { state: 'expanded', total: 5 },
+          defaultFolds: { state: 'collapsed', total: 5 },
+        },
+      });
+      expect(wrapper.find('.t-comment__folds-item').text()).toContain('收起');
+    });
+
+    it('partial replies can be collapsed before reaching expanded', async () => {
+      const onFolds = vi.fn();
+      const wrapper = mount(Comment, {
+        props: { defaultFolds: { state: 'collapsed', total: 5, step: 4 }, onFolds },
+      });
+      await wrapper.find('.t-comment__folds-item').trigger('click');
+      expect(wrapper.findAll('.t-comment__folds-item')).toHaveLength(2);
+      await wrapper.findAll('.t-comment__folds-item')[1].trigger('click');
+      expect(wrapper.find('.t-comment__folds-item').text()).toContain('展开回复');
+      expect(onFolds).toHaveBeenLastCalledWith({
+        fold: { state: 'collapsed', total: 5, step: 4 },
+        e: expect.any(MouseEvent),
+      });
+    });
+
+    it('actions functions receive their disabled state', () => {
+      const renderAction = vi.fn(() => <span>自定义操作</span>);
+      const actions: CommentActionItem[] = [{ key: 'like', placement: 'end', disabled: true, content: renderAction }];
+      const wrapper = mount(Comment, { props: { actions } });
+      expect(wrapper.find('.t-comment__actions').text()).toBe('自定义操作');
+      expect(renderAction).toHaveBeenCalledWith(expect.any(Function), { disabled: true });
+    });
+
+    // folds.content 类型声明允许 TNode，但 renderFoldsContent 直接输出函数而不执行。
+    it.todo('folds content renders TNode functions');
+
     describe('folds', () => {
       it('total <= 1 does not render folds', () => {
         let wrapper = mount(Comment, {
