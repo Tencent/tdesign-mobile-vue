@@ -1,5 +1,5 @@
 import { ref, nextTick } from 'vue';
-import { vi } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import Checkbox, { CheckboxGroup } from '../index';
 import type { TdCheckboxGroupProps } from '../type';
@@ -28,7 +28,7 @@ describe('CheckboxGroup', () => {
       expect(wrapper2.find(`.${name}__border`).exists()).toBe(false);
     });
 
-    it('direction[vertical/horizontal]', () => {
+    it('direction[vertical/horizontal]', async () => {
       const wrapper = mount(() => (
         <CheckboxGroup>
           <Checkbox value="1" ref="1" />
@@ -38,6 +38,9 @@ describe('CheckboxGroup', () => {
       // 默认值为 vertical
       expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(true);
       expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(false);
+      const horizontal = mount(CheckboxGroup, { props: { direction: 'horizontal', options: ['选项'] } });
+      expect(horizontal.classes()).toContain(`${name}-group--horizontal`);
+      expect(horizontal.findComponent(Checkbox).classes()).toContain(`${name}--horizontal`);
     });
 
     it('disabled[boolean]', async () => {
@@ -62,13 +65,16 @@ describe('CheckboxGroup', () => {
       expect(onChange).toHaveBeenCalledTimes(0);
     });
 
-    it('keys[object]', () => {
+    it('keys[object]', async () => {
       const keysOptions = [
         { name: '选项一', val: '1' },
-        { name: '选项二', val: '2' },
+        { name: '选项二', val: '2', inactive: true },
       ];
-      const keys = { value: 'val', label: 'name' };
-      const wrapper = mount(() => <CheckboxGroup options={keysOptions} keys={keys} defaultValue={['1']} />);
+      const keys = { value: 'val', label: 'name', disabled: 'inactive' };
+      const onChange = vi.fn();
+      const wrapper = mount(() => (
+        <CheckboxGroup options={keysOptions} keys={keys} defaultValue={['1']} onChange={onChange} />
+      ));
 
       const $checkboxs = wrapper.findAllComponents(Checkbox);
       expect($checkboxs).toHaveLength(2);
@@ -77,6 +83,9 @@ describe('CheckboxGroup', () => {
       expect(wrapper.text()).toContain('选项二');
       expect($checkboxs[0].classes()).toContain(`${name}--checked`);
       expect($checkboxs[1].classes()).not.toContain(`${name}--checked`);
+      expect($checkboxs[1].find(`.${name}__icon--disabled`).exists()).toBe(true);
+      await $checkboxs[1].trigger('click');
+      expect(onChange).not.toHaveBeenCalled();
     });
 
     it('max[number]', async () => {
@@ -102,12 +111,24 @@ describe('CheckboxGroup', () => {
       expect(wrapper.findComponent({ ref: '2' }).classes()).toContain(`${name}--checked`);
       // 达到 max 后未选中项禁用
       expect(wrapper.findComponent({ ref: '3' }).find(`.${name}__icon--disabled`).exists()).toBe(true);
+      await wrapper.findComponent({ ref: '3' }).trigger('click');
+      expect(checked.value).toEqual(['1', '2']);
+
+      await wrapper.findComponent({ ref: '1' }).trigger('click');
+      expect(checked.value).toEqual(['2']);
+      expect(wrapper.findComponent({ ref: '3' }).find(`.${name}__icon--disabled`).exists()).toBe(false);
+      await wrapper.findComponent({ ref: '3' }).trigger('click');
+      expect(checked.value).toEqual(['2', '3']);
     });
 
     // name 在 checkbox-group-props.ts 中声明（统一设置内部复选框 HTML 属性），但组件实现未读取该属性（未透传给子项），待组件支持后再补
     it.todo('name[string]');
 
     it('options[array]', () => {
+      const primitives = mount(CheckboxGroup, { props: { options: ['北京', 1] } });
+      expect(primitives.findAllComponents(Checkbox).map((item) => item.props('value'))).toEqual(['北京', 1]);
+      expect(primitives.text()).toContain('北京');
+      expect(primitives.text()).toContain('1');
       const defaultValue = ref(['1']);
       const options = [
         {
@@ -144,6 +165,14 @@ describe('CheckboxGroup', () => {
       expect(onChange).toHaveBeenCalledTimes(0);
     });
 
+    it('value[array]', async () => {
+      const wrapper = mount(CheckboxGroup, { props: { options: ['one', 'two'], value: ['one'] } });
+      expect(wrapper.findAllComponents(Checkbox)[0].classes()).toContain(`${name}--checked`);
+      await wrapper.setProps({ value: ['two'] });
+      expect(wrapper.findAllComponents(Checkbox)[0].classes()).not.toContain(`${name}--checked`);
+      expect(wrapper.findAllComponents(Checkbox)[1].classes()).toContain(`${name}--checked`);
+    });
+
     it('modelValue[array]', async () => {
       const checked = ref<string[]>(['1']);
       const wrapper = mount({
@@ -167,15 +196,25 @@ describe('CheckboxGroup', () => {
       expect(wrapper.findComponent({ ref: '1' }).classes()).not.toContain(`${name}--checked`);
       expect(wrapper.findComponent({ ref: '2' }).classes()).toContain(`${name}--checked`);
     });
+
+    it('defaultValue[array]', async () => {
+      const wrapper = mount(CheckboxGroup, { props: { options: ['one', 'two'], defaultValue: ['one'] } });
+      const items = wrapper.findAllComponents(Checkbox);
+      expect(items[0].classes()).toContain(`${name}--checked`);
+      await items[1].trigger('click');
+      expect(items[0].classes()).toContain(`${name}--checked`);
+      expect(items[1].classes()).toContain(`${name}--checked`);
+    });
   });
 
   describe('events', () => {
     it('change', async () => {
+      const onChange = vi.fn();
       const checked = ref([]);
       const wrapper = mount({
         setup() {
           return () => (
-            <CheckboxGroup v-model={checked.value}>
+            <CheckboxGroup v-model={checked.value} onChange={onChange}>
               <Checkbox value="1" ref="1" />
               <Checkbox value="2" ref="2" />
             </CheckboxGroup>
@@ -195,10 +234,67 @@ describe('CheckboxGroup', () => {
 
       expect(target.classes()).not.toContain(`${name}--checked`);
       expect(checked.value.length).toBe(0);
+      expect(onChange).toHaveBeenNthCalledWith(1, ['1'], {
+        e: expect.any(MouseEvent),
+        current: '1',
+        type: 'check',
+      });
+      expect(onChange).toHaveBeenNthCalledWith(2, [], {
+        e: expect.any(MouseEvent),
+        current: '1',
+        type: 'uncheck',
+      });
+      expect(onChange).toHaveBeenCalledTimes(2);
+    });
+  });
+
+  describe('slots', () => {
+    it('default', async () => {
+      const wrapper = mount(CheckboxGroup, {
+        slots: { default: () => <Checkbox value="one" label="插槽选项" /> },
+      });
+      const item = wrapper.findComponent(Checkbox);
+      expect(item.text()).toBe('插槽选项');
+      await item.trigger('click');
+      expect(item.classes()).toContain(`${name}--checked`);
     });
   });
 
   describe('scenarios', () => {
+    it('group disabled overrides form disabled and reacts to updates', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(CheckboxGroup, {
+        props: { disabled: false, options: ['one'], onChange },
+        global: { provide: { formDisabled: { disabled: ref(true) } } },
+      });
+      const item = wrapper.findComponent(Checkbox);
+      await item.trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(item.classes()).toContain(`${name}--checked`);
+
+      await wrapper.setProps({ disabled: true });
+      await item.trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(item.classes()).toContain(`${name}--checked`);
+    });
+
+    it('group inherits form disabled when disabled is unspecified', async () => {
+      const disabled = ref(true);
+      const onChange = vi.fn();
+      const wrapper = mount(CheckboxGroup, {
+        props: { options: ['one'], onChange },
+        global: { provide: { formDisabled: { disabled } } },
+      });
+      const item = wrapper.findComponent(Checkbox);
+      await item.trigger('click');
+      expect(onChange).not.toHaveBeenCalled();
+      disabled.value = false;
+      await nextTick();
+      await item.trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(item.classes()).toContain(`${name}--checked`);
+    });
+
     it('check all', async () => {
       const wrapper = mount({
         setup() {
@@ -226,18 +322,17 @@ describe('CheckboxGroup', () => {
     });
 
     it('invalid value warns', async () => {
-      const checked = ref('1');
-      const wrapper = mount(() => (
-        <CheckboxGroup v-model={checked}>
-          <Checkbox value="1" />
-          <Checkbox value="2" />
-        </CheckboxGroup>
-      ));
-      const logSpy = vi.spyOn(global.console, 'warn');
-      const target = wrapper.findAllComponents(Checkbox)[0];
-      await target.trigger('click');
-      expect(logSpy.mock.calls[0][0]).toContain('TDesign CheckboxGroup Warn');
-      logSpy.mockRestore();
+      const logSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+      try {
+        const wrapper = mount(CheckboxGroup, {
+          // 故意绕过类型声明，验证运行时收到非数组值时的告警。
+          props: { modelValue: '1' as unknown as string[], options: ['one', 'two'] },
+        });
+        await wrapper.findComponent(Checkbox).trigger('click');
+        expect(logSpy).toHaveBeenCalledWith(expect.stringContaining('TDesign CheckboxGroup Warn'));
+      } finally {
+        logSpy.mockRestore();
+      }
     });
 
     it('undefined option value', async () => {

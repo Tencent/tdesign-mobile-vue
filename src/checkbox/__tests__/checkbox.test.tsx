@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { ref, nextTick } from 'vue';
-import { vi } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import Checkbox, { CheckboxGroup } from '../index';
 import config from '../../config';
 
@@ -10,8 +10,10 @@ const name = `${prefix}-checkbox`;
 describe('Checkbox', () => {
   describe('props', () => {
     it('block[boolean]', async () => {
-      const wrapper = mount(() => <Checkbox block>选项</Checkbox>);
+      const wrapper = mount(Checkbox, { slots: { default: '选项' } });
       expect(wrapper.classes()).toContain('t-checkbox--block');
+      await wrapper.setProps({ block: false });
+      expect(wrapper.classes()).not.toContain('t-checkbox--block');
     });
 
     it('borderless[boolean]', async () => {
@@ -80,9 +82,27 @@ describe('Checkbox', () => {
       expect(wrapper.classes()).not.toContain(`${name}--checked`);
     });
 
+    it('modelValue[boolean]', async () => {
+      const wrapper = mount(Checkbox, { props: { modelValue: false } });
+      await wrapper.trigger('click');
+      expect(wrapper.emitted('update:modelValue')).toEqual([[true, { e: expect.any(MouseEvent) }]]);
+      expect(wrapper.classes()).not.toContain(`${name}--checked`);
+      await wrapper.setProps({ modelValue: true });
+      expect(wrapper.classes()).toContain(`${name}--checked`);
+    });
+
     it('defaultChecked[boolean]', async () => {
-      const wrapper = mount(() => <Checkbox defaultChecked>选项</Checkbox>);
+      const wrapper = mount(Checkbox, { props: { defaultChecked: true } });
       expect(wrapper.classes()).toContain('t-checkbox--checked');
+      await wrapper.trigger('click');
+      expect(wrapper.classes()).not.toContain('t-checkbox--checked');
+      await wrapper.trigger('click');
+      expect(wrapper.classes()).toContain('t-checkbox--checked');
+    });
+
+    it('content[string]', () => {
+      const wrapper = mount(Checkbox, { props: { content: '描述内容' } });
+      expect(wrapper.find(`.${name}__description`).text()).toBe('描述内容');
     });
 
     it('content[function]', async () => {
@@ -102,19 +122,25 @@ describe('Checkbox', () => {
       expect(wrapper.classes()).not.toContain(`${name}--checked`);
       expect(onChange).toHaveBeenCalledTimes(0);
 
-      // 点击组件其余区域（图标）仍可正常选中
-      await wrapper.find(`.${name}`).trigger('click');
+      // 图标区域仍可正常选中。
+      await wrapper.find(`.${name}__icon`).trigger('click');
       expect(wrapper.classes()).toContain(`${name}--checked`);
       expect(onChange).toHaveBeenCalledTimes(1);
     });
 
+    it('default[string]', () => {
+      const wrapper = mount(Checkbox, { props: { default: '别名主文案' } });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('别名主文案');
+    });
+
+    it('default[function]', () => {
+      const wrapper = mount(Checkbox, { props: { default: () => <span>函数别名主文案</span> } });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('函数别名主文案');
+    });
+
     it('disabled[boolean]', async () => {
       const onChange = vi.fn();
-      const wrapper = mount(() => (
-        <Checkbox disabled onChange={onChange}>
-          选项
-        </Checkbox>
-      ));
+      const wrapper = mount(Checkbox, { props: { disabled: true, onChange } });
 
       // 禁用态：图标与主文案带禁用修饰类
       expect(wrapper.find(`.${name}__icon--disabled`).exists()).toBe(true);
@@ -124,6 +150,26 @@ describe('Checkbox', () => {
       await wrapper.find(`.${name}`).trigger('click');
       expect(wrapper.classes()).not.toContain(`${name}--checked`);
       expect(onChange).toHaveBeenCalledTimes(0);
+      await wrapper.setProps({ disabled: false });
+      await wrapper.trigger('click');
+      expect(wrapper.classes()).toContain(`${name}--checked`);
+      expect(onChange).toHaveBeenCalledTimes(1);
+    });
+
+    it('icon[boolean]', async () => {
+      const wrapper = mount(Checkbox, { props: { icon: false } });
+      expect(wrapper.find(`.${name}__icon`).exists()).toBe(false);
+      await wrapper.setProps({ icon: true });
+      expect(wrapper.find(`.${name}__icon-circle`).exists()).toBe(true);
+      await wrapper.trigger('click');
+      expect(wrapper.find('.t-icon-check-circle-filled').exists()).toBe(true);
+    });
+
+    it('icon[circle]', async () => {
+      const wrapper = mount(Checkbox, { props: { icon: 'circle' } });
+      expect(wrapper.find(`.${name}__icon-circle`).exists()).toBe(true);
+      await wrapper.trigger('click');
+      expect(wrapper.find('.t-icon-check-circle-filled').exists()).toBe(true);
     });
 
     it('icon[array]', async () => {
@@ -135,7 +181,10 @@ describe('Checkbox', () => {
       expect(wrapper.find(`.${name}__icon-image`).attributes('src')).toBe(activeImage);
     });
 
-    it('icon[empty-array]', async () => {
+    // 类型允许 TNode 数组，但 render-tnode.ts 直接返回 content，不执行其中的函数。
+    it.todo('icon[function-array]');
+
+    it('icon[incomplete-array]', async () => {
       const wrapper = mount(() => <Checkbox icon={['']} />);
       expect(wrapper.find('.t-icon-circle').exists()).toBe(true);
       await wrapper.trigger('click');
@@ -193,15 +242,132 @@ describe('Checkbox', () => {
 
     it('readonly[boolean]', async () => {
       const onChange = vi.fn();
-      const wrapper = mount(() => (
-        <Checkbox readonly onChange={onChange}>
-          选项
-        </Checkbox>
-      ));
+      const wrapper = mount(Checkbox, { props: { readonly: true, onChange } });
       // 只读状态下点击不切换选中态，也不触发 change
       await wrapper.find(`.${name}`).trigger('click');
       expect(wrapper.classes()).not.toContain(`${name}--checked`);
       expect(onChange).toHaveBeenCalledTimes(0);
+      await wrapper.setProps({ readonly: false });
+      await wrapper.trigger('click');
+      expect(wrapper.classes()).toContain(`${name}--checked`);
+      expect(onChange).toHaveBeenCalledTimes(1);
+    });
+
+    it('value[string]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(() => (
+        <CheckboxGroup onChange={onChange}>
+          <Checkbox value="one" />
+        </CheckboxGroup>
+      ));
+      await wrapper.findComponent(Checkbox).trigger('click');
+      expect(onChange).toHaveBeenCalledWith(['one'], expect.objectContaining({ current: 'one' }));
+    });
+
+    it('value[number]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(() => (
+        <CheckboxGroup onChange={onChange}>
+          <Checkbox value={1} />
+        </CheckboxGroup>
+      ));
+      await wrapper.findComponent(Checkbox).trigger('click');
+      expect(onChange).toHaveBeenCalledWith([1], expect.objectContaining({ current: 1 }));
+    });
+
+    it('value[boolean]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(() => (
+        <CheckboxGroup onChange={onChange}>
+          <Checkbox value={false} />
+        </CheckboxGroup>
+      ));
+      await wrapper.findComponent(Checkbox).trigger('click');
+      expect(onChange).toHaveBeenCalledWith([false], expect.objectContaining({ current: false }));
+    });
+  });
+
+  describe('events', () => {
+    it('change', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(Checkbox, { props: { onChange } });
+      await wrapper.trigger('click');
+      expect(onChange).toHaveBeenNthCalledWith(1, true, { e: expect.any(MouseEvent) });
+      await wrapper.trigger('click');
+      expect(onChange).toHaveBeenNthCalledWith(2, false, { e: expect.any(MouseEvent) });
+      expect(onChange).toHaveBeenCalledTimes(2);
+    });
+  });
+
+  describe('slots', () => {
+    it('default', () => {
+      const wrapper = mount(Checkbox, { slots: { default: () => <span>默认主文案</span> } });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('默认主文案');
+    });
+
+    it('label', () => {
+      const wrapper = mount(Checkbox, { slots: { label: () => <span>插槽主文案</span> } });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('插槽主文案');
+    });
+
+    it('content', () => {
+      const wrapper = mount(Checkbox, { slots: { content: () => <span>插槽描述</span> } });
+      expect(wrapper.find(`.${name}__description`).text()).toBe('插槽描述');
+    });
+  });
+
+  describe('scenarios', () => {
+    it('explicit disabled overrides group and form disabled states', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(CheckboxGroup, {
+        props: { disabled: true, onChange },
+        global: { provide: { formDisabled: { disabled: ref(true) } } },
+        slots: { default: () => <Checkbox value="one" disabled={false} /> },
+      });
+      await wrapper.findComponent(Checkbox).trigger('click');
+      expect(onChange).toHaveBeenCalledWith(['one'], expect.objectContaining({ type: 'check' }));
+    });
+
+    it('explicit readonly overrides group readonly', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(CheckboxGroup, {
+        props: { readonly: true, onChange },
+        slots: { default: () => <Checkbox value="one" readonly={false} /> },
+      });
+      await wrapper.findComponent(Checkbox).trigger('click');
+      expect(onChange).toHaveBeenCalledWith(['one'], expect.objectContaining({ type: 'check' }));
+    });
+
+    it('default slot takes priority over label prop', () => {
+      const wrapper = mount(Checkbox, {
+        props: { label: '属性主文案' },
+        slots: { default: () => <span>默认主文案</span> },
+      });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('默认主文案');
+    });
+
+    it('default prop takes priority over default slot', () => {
+      const wrapper = mount(Checkbox, {
+        props: { default: '别名属性' },
+        slots: { default: () => <span>默认插槽</span> },
+      });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('别名属性');
+    });
+
+    it('label prop takes priority over label slot', () => {
+      const wrapper = mount(Checkbox, {
+        props: { label: '属性主文案' },
+        slots: { label: () => <span>插槽主文案</span> },
+      });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('属性主文案');
+    });
+
+    it('content prop takes priority over content slot', () => {
+      const wrapper = mount(Checkbox, {
+        props: { content: '属性描述' },
+        slots: { content: () => <span>插槽描述</span> },
+      });
+      expect(wrapper.find(`.${name}__description`).text()).toBe('属性描述');
     });
   });
 });
