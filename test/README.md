@@ -62,7 +62,7 @@ pnpm run test:snap-update
 - 组件内部 utils 测试文件：`[组件名].utils.test.tsx`，例如 `config-provider.utils.test.tsx`。
 - 多个测试文件共用的挂载逻辑可提取到 `mount.tsx`，用于存放 mount factory、测试数据、查询方法和清理逻辑；仅被单个测试文件使用的辅助逻辑应保留在原测试文件中。
 - `mount.tsx` 是测试辅助文件，不直接编写测试用例，也不要求使用组件测试分组。
-- 组件测试统一存放在 `src/[组件名]/__tests__/`，单测文件统一采用 `[组件名].test.tsx` 命名；`demo.test.jsx` 为 demo 快照（由 `npm run test:demo` 自动生成，禁止手写修改）。
+- `demo.test.jsx` 为 demo 快照（由 `npm run test:demo` 自动生成，禁止手写修改）。
 
 ### 组件测试分组规范
 
@@ -132,15 +132,3 @@ describe('ComponentName', () => {
 ```
 
 示例用于展示完整结构；实际测试中应删除没有对应测试用例的空分组。
-
-命令行查看测试用例：
-
-```bash
-pnpm run test:unit-dev button
-```
-
-通过 UI 查看更多细节：
-
-```bash
-pnpm run test:unit-gui button
-```
