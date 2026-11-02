@@ -18,6 +18,9 @@ describe('BackTop', () => {
       div.dispatchEvent(new Event('scroll'));
       await nextTick();
       expect(wrapper.find('.t-back-top').attributes('style')).not.toContain('display: none');
+
+      wrapper.unmount();
+      expect(div.onscroll).toBeNull();
     });
 
     it('fixed[boolean]', async () => {
@@ -42,37 +45,34 @@ describe('BackTop', () => {
     });
 
     it('target[function]', async () => {
+      const container = document.createElement('div');
+      const target = document.createElement('div');
+      document.body.append(container, target);
+      const targetRect = vi.spyOn(target, 'getBoundingClientRect').mockReturnValue({
+        x: 0,
+        y: 10,
+        top: 10,
+        right: 0,
+        bottom: 10,
+        left: 0,
+        width: 0,
+        height: 0,
+        toJSON: () => ({}),
+      });
       const wrapper = mount(BackTop, {
         props: {
-          target: () => ({
-            getBoundingClientRect: () => {
-              return {
-                top: 10,
-              };
-            },
-          }),
+          target: () => target,
+          container: () => container,
         },
       });
+      await nextTick();
+
+      container.scrollTop = 100;
       await wrapper.find('.t-back-top').trigger('click');
-      expect(window.document.documentElement.scrollTop).toEqual(10);
-    });
 
-    it('text[string]', async () => {
-      const wrapper = mount(BackTop);
-      expect(wrapper.find('.t-back-top__text--round').exists()).toEqual(false);
-      await wrapper.setProps({
-        text: '返回',
-      });
-      expect(wrapper.find('.t-back-top__text--round').text()).toEqual('返回');
-    });
-
-    it('theme[round/half-round/round-dark/half-round-dark]', async () => {
-      const wrapper = mount(BackTop);
-      expect(wrapper.find('.t-back-top').classes()).toContain('t-back-top--round');
-      await wrapper.setProps({
-        theme: 'half-round',
-      });
-      expect(wrapper.find('.t-back-top').classes()).toContain('t-back-top--half-round');
+      expect(container.scrollTop).toEqual(10);
+      targetRect.mockRestore();
+      wrapper.unmount();
     });
 
     it('visibilityHeight[number]', async () => {
@@ -85,16 +85,42 @@ describe('BackTop', () => {
       await nextTick();
       expect(wrapper.find('.t-back-top').attributes('style')).not.toContain('display: none');
     });
+
+    it('text[string]', async () => {
+      const wrapper = mount(BackTop);
+      expect(wrapper.find('.t-back-top__text--round').exists()).toEqual(false);
+      await wrapper.setProps({
+        text: '返回',
+      });
+      expect(wrapper.find('.t-back-top__text--round').text()).toEqual('返回');
+    });
+
+    it('theme[round/half-round/round-dark/half-round-dark]', () => {
+      const themes = ['round', 'half-round', 'round-dark', 'half-round-dark'] as const;
+
+      themes.forEach((theme) => {
+        const wrapper = mount(BackTop, { props: { theme } });
+        expect(wrapper.find('.t-back-top').classes()).toContain(`t-back-top--${theme}`);
+      });
+    });
   });
 
   describe('events', () => {
-    it('toTop', () => {
+    it('toTop', async () => {
+      const container = document.createElement('div');
+      container.scrollTop = 120;
       const onToTop = vi.fn();
       const wrapper = mount(BackTop, {
-        props: { onToTop },
+        props: {
+          container: () => container,
+          onToTop,
+        },
       });
-      wrapper.find('.t-back-top').trigger('click');
+      await wrapper.find('.t-back-top').trigger('click');
+
+      expect(container.scrollTop).toBe(0);
       expect(onToTop).toHaveBeenCalledTimes(1);
+      wrapper.unmount();
     });
   });
 
