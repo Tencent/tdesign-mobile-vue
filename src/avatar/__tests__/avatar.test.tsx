@@ -85,6 +85,7 @@ describe('Avatar', () => {
       expect(img.exists()).toBeTruthy();
       await img.trigger('error');
       expect(onError).toBeCalledTimes(1);
+      expect(onError).toHaveBeenCalledWith({ e: expect.any(Event) });
     });
   });
 

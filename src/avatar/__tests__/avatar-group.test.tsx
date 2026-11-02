@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import Avatar from '../avatar';
 import AvatarGroup from '../avatar-group';
 
@@ -9,33 +9,22 @@ const shapeList = ['circle', 'round'];
 
 describe('AvatarGroup', () => {
   describe('props', () => {
-    it('cascading[left-up]', async () => {
-      sizeList.forEach((s) => {
+    it('cascading[left-up/right-up]', () => {
+      (['left-up', 'right-up'] as const).forEach((cascading) => {
         const wrapper = mount(() => (
-          <AvatarGroup cascading="left-up" size={s}>
+          <AvatarGroup cascading={cascading}>
             <Avatar image={IMAGE}></Avatar>
             <Avatar image={IMAGE}></Avatar>
           </AvatarGroup>
         ));
-        expect(wrapper.classes()).toContain(`t-avatar-group-offset-left-${s}`);
+        const direction = cascading === 'left-up' ? 'left' : 'right';
+        expect(wrapper.classes()).toContain(`t-avatar-group-offset-${direction}-medium`);
       });
     });
 
-    it('cascading[default]', async () => {
-      sizeList.forEach((s) => {
-        const wrapper = mount(() => (
-          <AvatarGroup size={s}>
-            <Avatar image={IMAGE}></Avatar>
-            <Avatar image={IMAGE}></Avatar>
-          </AvatarGroup>
-        ));
-        expect(wrapper.classes()).toContain(`t-avatar-group-offset-right-${s}`);
-      });
-    });
-
-    it('collapseAvatar', async () => {
+    it('collapseAvatar[string]', () => {
       const wrapper = mount(() => (
-        <AvatarGroup max={2} v-slots={{ collapseAvatar: () => '更多' }}>
+        <AvatarGroup max={2} collapseAvatar="更多">
           <Avatar image={IMAGE}></Avatar>
           <Avatar image={IMAGE}></Avatar>
           <Avatar image={IMAGE}></Avatar>
@@ -45,7 +34,18 @@ describe('AvatarGroup', () => {
       expect(avatarList[avatarList.length - 1].text()).toBe('更多');
     });
 
-    it('max[number]', async () => {
+    it('collapseAvatar[function]', () => {
+      const wrapper = mount(() => (
+        <AvatarGroup max={2} collapseAvatar={() => <span class="custom-collapse">查看更多</span>}>
+          <Avatar image={IMAGE}></Avatar>
+          <Avatar image={IMAGE}></Avatar>
+          <Avatar image={IMAGE}></Avatar>
+        </AvatarGroup>
+      ));
+      expect(wrapper.find('.custom-collapse').text()).toBe('查看更多');
+    });
+
+    it('max[number]', () => {
       const wrapper = mount(() => (
         <AvatarGroup max={2}>
           <Avatar image={IMAGE}></Avatar>
@@ -77,7 +77,7 @@ describe('AvatarGroup', () => {
       });
     });
 
-    it('size[string]', async () => {
+    it('size[string]', () => {
       sizeList.forEach((s) => {
         const wrapper = mount(() => (
           <AvatarGroup size={s}>
@@ -87,11 +87,25 @@ describe('AvatarGroup', () => {
         ));
         expect(wrapper.classes()).toContain('t-avatar-group');
         expect(wrapper.classes()).toContain(`t-avatar-group-offset-right-${s}`);
-        const avatarList = wrapper.findAll('.t-avatar');
-        expect(avatarList.length).toBe(2);
-        expect(avatarList[0].classes()).toContain('t-avatar');
-        expect(avatarList[1].classes()).toContain('t-avatar');
+        expect(wrapper.findAll('.t-avatar')).toHaveLength(2);
       });
+    });
+  });
+
+  describe('events', () => {
+    it('collapsedItemClick', async () => {
+      const onCollapsedItemClick = vi.fn();
+      const wrapper = mount(() => (
+        <AvatarGroup max={1} onCollapsedItemClick={onCollapsedItemClick}>
+          <Avatar image={IMAGE}></Avatar>
+          <Avatar image={IMAGE}></Avatar>
+        </AvatarGroup>
+      ));
+
+      await wrapper.find('.t-avatar-group__collapse--default').trigger('click');
+
+      expect(onCollapsedItemClick).toHaveBeenCalledTimes(1);
+      expect(onCollapsedItemClick).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
     });
   });
 });
