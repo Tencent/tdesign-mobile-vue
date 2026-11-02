@@ -1,13 +1,12 @@
 import { ref } from 'vue';
-import { config, mount } from '@vue/test-utils';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import Button from '../../button/index';
 import Calendar from '../calendar';
 import { sleep } from '../../shared/util';
+import Popup from '../../popup';
 
-config.global.stubs = {
-  teleport: false,
-};
+enableAutoUnmount(afterEach);
 
 const prefix = 't';
 const name = `${prefix}-calendar`;
@@ -31,10 +30,9 @@ const dayFormat = (date, character) => {
 };
 
 describe('Calendar', () => {
-  // 弹层内容 teleport 到 body，用例结束后排空异步任务并清理挂载内容
+  // 等待弹层异步任务结束，由 enableAutoUnmount 卸载并清理 Teleport 节点。
   afterEach(async () => {
     await sleep(300);
-    document.body.innerHTML = '';
   });
 
   describe('props', () => {
@@ -82,6 +80,9 @@ describe('Calendar', () => {
       expect($confirmBtn.text()).toEqual('确认完成');
     });
 
+    // useTNodeJSX 将 null 转为 undefined，模板随后使用默认空字符串并渲染确认按钮。
+    it.todo('confirmBtn[null]');
+
     it('firstDayOfWeek[number]', async () => {
       const firstDayOfWeek = 1;
       const wrapper = mount(<Calendar visible={true} value={value} firstDayOfWeek={firstDayOfWeek} />);
@@ -98,8 +99,8 @@ describe('Calendar', () => {
       const wrapper = mount(
         <Calendar visible={true} value={value} format={format} minDate={minDate} maxDate={maxDate} />,
       );
-      // expect(wrapper.element).toMatchSnapshot();
       const $dates = wrapper.findAll(`.${name}__dates-item-suffix`);
+      expect($dates).toHaveLength(31);
       $dates.forEach((item) => {
         expect(item.text()).toEqual(suffix);
       });
@@ -167,7 +168,7 @@ describe('Calendar', () => {
       expect($dates[day - 1].classes()).toContain(`${name}__dates-item--selected`);
     });
 
-    it('switchMode[string]', async () => {
+    it('switchMode[none/month/year-month]', async () => {
       const onPanelChange = vi.fn();
       const switchMinDate = new Date(2021, 11, 1);
       const switchMaxDate = new Date(2022, 1, 28);
@@ -213,7 +214,7 @@ describe('Calendar', () => {
     });
 
     it('title[string]', async () => {
-      const title = '';
+      const title = '选择出发日期';
       const wrapper = mount(<Calendar title={title} />);
       const $title = wrapper.find(`.${name}__title`);
       expect($title.text()).toEqual(title || '请选择日期');
@@ -225,11 +226,28 @@ describe('Calendar', () => {
       expect($title.text()).toEqual('自定义标题');
     });
 
-    it('type[single/multiple/range]', async () => {
+    it('type[single]', async () => {
+      const wrapper = mount(Calendar, { props: { usePopup: false, value, minDate, maxDate } });
+      await wrapper.findAll(`.${name}__dates-item`)[2].trigger('click');
+      expect(wrapper.findAll(`.${name}__dates-item--selected`)).toHaveLength(1);
+      expect(wrapper.find(`.${name}__dates-item--selected`).text()).toBe('3');
+    });
+
+    it('type[multiple]', async () => {
+      const wrapper = mount(Calendar, {
+        props: { usePopup: false, type: 'multiple', value: [value], minDate, maxDate },
+      });
+      await wrapper.findAll(`.${name}__dates-item`)[2].trigger('click');
+      expect(wrapper.findAll(`.${name}__dates-item--selected`)).toHaveLength(2);
+      await wrapper.findAll(`.${name}__dates-item`)[2].trigger('click');
+      expect(wrapper.findAll(`.${name}__dates-item--selected`)).toHaveLength(1);
+      expect(wrapper.find(`.${name}__dates-item--selected`).text()).toBe('15');
+    });
+
+    it('type[range]', async () => {
       // type = 'range'
       const onSelect = vi.fn();
       const time = ref('');
-      const character = '-';
       const onConfirm = vi.fn((e) => {
         time.value = e;
       });
@@ -260,7 +278,6 @@ describe('Calendar', () => {
 
       expect(dayFormat(time.value[0])).toEqual(dayFormat([year, month + 1, selectFirstIndex + 1]));
       expect(dayFormat(time.value[1])).toEqual(dayFormat([year, month + 1, selectLastIndex + 1]));
-      // TODO: && type = 'multiple'
     });
 
     it('usePopup[boolean]', async () => {
@@ -270,7 +287,37 @@ describe('Calendar', () => {
       expect(wrapper.findComponent({ name: 'TPopup' }).exists()).toBeFalsy();
     });
 
-    // 实现仅消费 value，defaultValue 声明后未在任何路径读取（template.tsx 只读 props.value），待组件支持后再补
+    it('value[number]', () => {
+      const wrapper = mount(Calendar, { props: { usePopup: false, value: value.getTime(), minDate, maxDate } });
+      expect(wrapper.find(`.${name}__dates-item--selected`).text()).toBe('15');
+    });
+
+    it('value[array]', () => {
+      const wrapper = mount(Calendar, {
+        props: {
+          usePopup: false,
+          type: 'multiple',
+          value: [value, new Date(year, month, 20).getTime()],
+          minDate,
+          maxDate,
+        },
+      });
+      expect(wrapper.findAll(`.${name}__dates-item--selected`).map((item) => item.text())).toEqual(['15', '20']);
+    });
+
+    it('value[Date]', async () => {
+      const wrapper = mount(Calendar, { props: { usePopup: false, value, minDate, maxDate } });
+      expect(wrapper.find(`.${name}__dates-item--selected`).text()).toBe('15');
+      await wrapper.setProps({ value: new Date(year, month, 20) });
+      expect(wrapper.find(`.${name}__dates-item--selected`).text()).toBe('20');
+    });
+
+    // calendar.tsx 和 template.tsx 仅消费 value，尚未接入 modelValue/defaultValue。
+    it.todo('modelValue[number]');
+    it.todo('modelValue[array]');
+    it.todo('modelValue[Date]');
+    it.todo('defaultValue[number]');
+    it.todo('defaultValue[array]');
     it.todo('defaultValue[Date]');
 
     it('visible[boolean]', async () => {
@@ -279,9 +326,11 @@ describe('Calendar', () => {
           visible: false,
         },
       });
+      expect(wrapper.findComponent(Popup).props('visible')).toBe(false);
       await wrapper.setProps({
         visible: true,
       });
+      expect(wrapper.findComponent(Popup).props('visible')).toBe(true);
     });
   });
 
@@ -295,9 +344,62 @@ describe('Calendar', () => {
       const $confirmBtn = wrapper.find(`.${name}__footer`);
       expect($confirmBtn.text()).toEqual(confirmBtn);
     });
+
+    it('title', () => {
+      const wrapper = mount(Calendar, {
+        props: { usePopup: false, minDate, maxDate },
+        slots: { title: () => <span class="slot-title">插槽标题</span> },
+      });
+      expect(wrapper.find(`.${name}__title .slot-title`).text()).toBe('插槽标题');
+    });
+  });
+
+  describe('scenarios', () => {
+    it('title prop takes priority over title slot', () => {
+      const wrapper = mount(Calendar, {
+        props: { usePopup: false, minDate, maxDate, title: '属性标题' },
+        slots: { title: () => <span>插槽标题</span> },
+      });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('属性标题');
+    });
+
+    it('confirmBtn prop takes priority over confirmBtn slot', () => {
+      const wrapper = mount(Calendar, {
+        props: { visible: true, minDate, maxDate, confirmBtn: '属性按钮' },
+        slots: { confirmBtn: () => <span>插槽按钮</span> },
+      });
+      expect(wrapper.find(`.${name}__footer`).text()).toBe('属性按钮');
+    });
   });
 
   describe('events', () => {
+    // confirmBtn=null 尚未透传到模板，主组件无法进入无确认按钮时的 change 分支。
+    it.todo('change');
+
+    it('close', async () => {
+      const onClose = vi.fn();
+      const wrapper = mount(Calendar, { props: { visible: true, minDate, maxDate, onClose } });
+      await wrapper.find(`.${name}__close-btn`).trigger('click');
+      expect(onClose).toHaveBeenCalledWith('close-btn');
+    });
+
+    it('panelChange', async () => {
+      const onPanelChange = vi.fn();
+      const wrapper = mount(Calendar, {
+        props: { usePopup: false, switchMode: 'month', minDate, maxDate: new Date(year, 2, 31), value, onPanelChange },
+      });
+      await wrapper.findAll(`.${name}-header__icon`)[1].trigger('click');
+      expect(onPanelChange).toHaveBeenCalledTimes(1);
+      expect(onPanelChange).toHaveBeenCalledWith({ year, month: 2 });
+    });
+
+    it('scroll', async () => {
+      const onScroll = vi.fn();
+      const wrapper = mount(Calendar, { props: { usePopup: false, minDate, maxDate, onScroll } });
+      await wrapper.find(`.${name}__months`).trigger('scroll');
+      expect(onScroll).toHaveBeenCalledTimes(1);
+      expect(onScroll).toHaveBeenCalledWith({ e: expect.any(Event) });
+    });
     it('confirm', async () => {
       const time = ref('');
       const character = '-';
@@ -311,6 +413,7 @@ describe('Calendar', () => {
       expect(onConfirm).toHaveBeenCalledTimes(1);
       expect(time.value).toEqual([year, month + 1, day].join(character));
       expect(onClose).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith('confirm-btn');
     });
 
     it('select', async () => {
