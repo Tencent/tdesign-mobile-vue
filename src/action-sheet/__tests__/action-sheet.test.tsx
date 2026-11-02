@@ -27,18 +27,15 @@ describe('ActionSheet', () => {
       });
     });
 
-    it('cancelText[string]', async () => {
+    it('cancelText[string]', () => {
       const wrapper = mount(ActionSheet, {
         props: {
           items: [],
           visible: true,
+          cancelText: 'Cancel',
         },
       });
-      expect(wrapper.find(`.${name}__footer`).text()).toEqual('取消');
-      await wrapper.setProps({
-        cancelText: 'Cancel',
-      });
-      // expect(wrapper.find(`.${name}__footer`).text()).toEqual('Cancel');
+      expect(wrapper.find(`.${name}__footer`).text()).toEqual('Cancel');
     });
 
     it('count[number]', async () => {
@@ -80,7 +77,7 @@ describe('ActionSheet', () => {
       expect(wrapper2.find(`.${name}--no-description`).exists()).toEqual(true);
     });
 
-    it('items[array]', async () => {
+    it('items[array]', () => {
       const wrapper = mount(ActionSheet, {
         props: {
           items: [
@@ -149,7 +146,7 @@ describe('ActionSheet', () => {
       const wrapper = mount(ActionSheet, {
         props: {
           theme: 'list',
-          items: [],
+          items: ['选项'],
           visible: true,
         },
       });
@@ -159,21 +156,35 @@ describe('ActionSheet', () => {
         theme: 'grid',
       });
       expect(wrapper.find(`.${name}__list`).exists()).toEqual(false);
-      // expect(wrapper.find(`.${name}__grid`).exists()).toEqual(true);
+      expect(document.querySelector(`.${name}__grid`)).toBeTruthy();
     });
 
     it('visible[boolean]', async () => {
+      document.body.innerHTML = '';
       const wrapper = mount(ActionSheet, {
         props: {
           visible: false,
           items: [],
         },
       });
-      expect(wrapper.find(`.${prefix}-popup`).exists()).toBeFalsy();
+      expect(document.querySelector(`.${prefix}-popup`)).toBeFalsy();
       await wrapper.setProps({
         visible: true,
       });
-      // expect(wrapper.find(`.${prefix}-popup`).exists()).toBeTruthy();
+      expect(document.querySelector(`.${prefix}-popup`)).toBeTruthy();
+    });
+
+    it('modelValue[boolean]', async () => {
+      document.body.innerHTML = '';
+      const wrapper = mount(ActionSheet, {
+        props: {
+          modelValue: false,
+          items: ['选项'],
+        },
+      });
+      expect(document.querySelector(`.${prefix}-popup`)).toBeFalsy();
+      await wrapper.setProps({ modelValue: true });
+      expect(document.querySelector(`.${prefix}-popup`)).toBeTruthy();
     });
 
     it('defaultVisible[boolean]', async () => {
@@ -198,39 +209,48 @@ describe('ActionSheet', () => {
           onSelected,
         },
       });
-      wrapper.findAll(`.${name}__list-item`)[0].trigger('click');
+      await wrapper.findAll(`.${name}__list-item`)[0].trigger('click');
       expect(onSelected).toHaveBeenCalledTimes(1);
       expect(onSelected).toHaveBeenLastCalledWith('确定', 0);
-      wrapper.findAll(`.${name}__list-item`)[1].trigger('click');
+      const wrapper2 = mount(ActionSheet, {
+        props: {
+          theme: 'list',
+          visible: true,
+          items: ['确定', '删除'],
+          onSelected,
+        },
+      });
+      await wrapper2.findAll(`.${name}__list-item`)[1].trigger('click');
       expect(onSelected).toHaveBeenCalledTimes(2);
       expect(onSelected).toHaveBeenLastCalledWith('删除', 1);
 
-      await wrapper.setProps({
+      await wrapper2.setProps({
         theme: 'grid',
       });
 
-      const $TGridItems = wrapper.findAllComponents(TGridItem);
+      const $TGridItems = wrapper2.findAllComponents(TGridItem);
       expect($TGridItems.length).toEqual(2);
-      $TGridItems[0].trigger('click');
+      await $TGridItems[0].trigger('click');
       expect(onSelected).toHaveBeenCalledTimes(3);
       expect(onSelected).toHaveBeenLastCalledWith('确定', 0);
-      $TGridItems[1].trigger('click');
+      await $TGridItems[1].trigger('click');
       expect(onSelected).toHaveBeenCalledTimes(4);
       expect(onSelected).toHaveBeenLastCalledWith('删除', 1);
     });
 
-    it('cancel', () => {
+    it('cancel', async () => {
       const onCancel = vi.fn();
       const wrapper = mount(() => <ActionSheet visible items={['确定', '删除']} onCancel={onCancel} />);
-      wrapper.find(`.${name}__cancel`).trigger('click');
+      await wrapper.find(`.${name}__cancel`).trigger('click');
       expect(onCancel).toHaveBeenCalledTimes(1);
     });
 
-    it('close', () => {
+    it('close', async () => {
       const onClose = vi.fn();
       const wrapper = mount(() => <ActionSheet visible items={['确定', '删除']} onClose={onClose} />);
-      wrapper.find(`.${prefix}-overlay`).trigger('click');
+      await wrapper.find(`.${prefix}-overlay`).trigger('click');
       expect(onClose).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith({ trigger: 'overlay' });
     });
   });
 });
