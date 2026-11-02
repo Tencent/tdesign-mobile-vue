@@ -137,15 +137,12 @@ describe('Button', () => {
     it('icon[function]', async () => {
       const wrapper = mount(Button, {
         props: {
-          loading: true,
           icon: iconFunc,
           content: TEXT,
         },
       });
       const $button = wrapper.findComponent(Button);
-      expect($button.classes()).toContain(`${name}--loading`);
-      expect($button.findComponent(Loading).exists()).toBeTruthy();
-      expect($button.findComponent(TIconApp).exists()).toBeFalsy();
+      expect($button.findComponent(TIconApp).exists()).toBeTruthy();
     });
 
     it('loading[boolean]', async () => {
@@ -202,6 +199,10 @@ describe('Button', () => {
       });
       // shape = 'square'
       expect($button.classes()).toContain(`${name}--${shape}`);
+      (['rectangle', 'square', 'round', 'circle'] as const).forEach((value) => {
+        const shapeWrapper = mount(Button, { props: { shape: value } });
+        expect(shapeWrapper.classes()).toContain(`${name}--${value}`);
+      });
     });
 
     it('size[extra-small/small/medium/large]', async () => {
@@ -223,6 +224,10 @@ describe('Button', () => {
       });
       // size = 'small'
       expect($button.classes()).toContain(`${name}--size-small`);
+      (['extra-small', 'small', 'medium', 'large'] as const).forEach((value) => {
+        const sizeWrapper = mount(Button, { props: { size: value } });
+        expect(sizeWrapper.classes()).toContain(`${name}--size-${value}`);
+      });
     });
 
     it('suffix[function]', async () => {
@@ -276,6 +281,10 @@ describe('Button', () => {
       });
       // theme = 'danger'
       expect($button.classes()).toContain(`${name}--${theme}`);
+      (['default', 'primary', 'danger', 'light'] as const).forEach((value) => {
+        const themeWrapper = mount(Button, { props: { theme: value } });
+        expect(themeWrapper.classes()).toContain(`${name}--${value}`);
+      });
     });
 
     it('type[submit/reset/button]', async () => {
@@ -315,10 +324,95 @@ describe('Button', () => {
       });
       // variant = 'outline'
       expect($button.classes()).toContain(`${name}--${variant}`);
+      (['base', 'outline', 'dashed', 'text'] as const).forEach((value) => {
+        const variantWrapper = mount(Button, { props: { variant: value } });
+        expect(variantWrapper.classes()).toContain(`${name}--${value}`);
+      });
+    });
+  });
+
+  describe('events', () => {
+    it('click', async () => {
+      const onClick = vi.fn();
+      const wrapper = mount(Button, { props: { onClick } });
+
+      await wrapper.trigger('click');
+
+      expect(onClick).toHaveBeenCalledTimes(1);
+      expect(onClick).toHaveBeenCalledWith(expect.any(MouseEvent));
+    });
+  });
+
+  describe('slots', () => {
+    it('default', () => {
+      const wrapper = mount(Button, { slots: { default: () => <span>默认内容</span> } });
+      expect(wrapper.find(`.${name}__content`).text()).toBe('默认内容');
+    });
+
+    it('content', () => {
+      const wrapper = mount(Button, { slots: { content: () => <span>具名内容</span> } });
+      expect(wrapper.find(`.${name}__content`).text()).toBe('具名内容');
+    });
+
+    it('icon', () => {
+      const wrapper = mount(Button, { slots: { icon: iconFunc } });
+      expect(wrapper.findComponent(TIconApp).exists()).toBe(true);
+    });
+
+    it('suffix', () => {
+      const wrapper = mount(Button, { slots: { suffix: () => <span class="slot-suffix">后缀</span> } });
+      expect(wrapper.find('.slot-suffix').text()).toBe('后缀');
     });
   });
 
   describe('scenarios', () => {
+    describe('content priority', () => {
+      it('default slot takes priority over content prop', () => {
+        const wrapper = mount(Button, {
+          props: { content: '属性内容' },
+          slots: { default: () => <span>默认插槽</span> },
+        });
+        expect(wrapper.find(`.${name}__content`).text()).toBe('默认插槽');
+      });
+
+      it('content prop takes priority over content slot', () => {
+        const wrapper = mount(Button, {
+          props: { content: '属性内容' },
+          slots: { content: () => <span>具名插槽</span> },
+        });
+        expect(wrapper.find(`.${name}__content`).text()).toBe('属性内容');
+      });
+    });
+
+    it('icon prop takes priority over icon slot', () => {
+      const wrapper = mount(Button, {
+        props: { icon: iconFunc },
+        slots: { icon: () => <span class="slot-icon">插槽图标</span> },
+      });
+      expect(wrapper.findComponent(TIconApp).exists()).toBe(true);
+      expect(wrapper.find('.slot-icon').exists()).toBe(false);
+    });
+
+    it('suffix prop takes priority over suffix slot', () => {
+      const wrapper = mount(Button, {
+        props: { suffix: () => <span class="prop-suffix">属性后缀</span> },
+        slots: { suffix: () => <span class="slot-suffix">插槽后缀</span> },
+      });
+      expect(wrapper.find('.prop-suffix').text()).toBe('属性后缀');
+      expect(wrapper.find('.slot-suffix').exists()).toBe(false);
+    });
+
+    it('loading replaces icon and restores it when finished', async () => {
+      const wrapper = mount(Button, { props: { loading: true, icon: iconFunc } });
+      expect(wrapper.findComponent(Loading).exists()).toBe(true);
+      expect(wrapper.findComponent(TIconApp).exists()).toBe(false);
+
+      await wrapper.setProps({ loading: false });
+
+      expect(wrapper.findComponent(Loading).exists()).toBe(false);
+      expect(wrapper.findComponent(TIconApp).exists()).toBe(true);
+    });
+
     describe('tag rendering', () => {
       it('native button: role/type', async () => {
         const wrapper = mount(Button, {
@@ -349,18 +443,28 @@ describe('Button', () => {
       });
 
       it('tag disabled', async () => {
+        const onClick = vi.fn();
         // 非原生标签禁用时：不设置 disabled，改用 aria-disabled + tabindex="-1"
         const wrapper = mount(Button, {
           props: {
             content: TEXT,
             tag: 'a',
             disabled: true,
+            onClick,
           },
         });
         expect(wrapper.element.tagName.toLowerCase()).toBe('a');
         expect(wrapper.element.hasAttribute('disabled')).toBeFalsy();
         expect(wrapper.element.getAttribute('aria-disabled')).toBe('true');
         expect(wrapper.element.getAttribute('tabindex')).toBe('-1');
+        await wrapper.trigger('click');
+        expect(onClick).not.toHaveBeenCalled();
+
+        await wrapper.setProps({ disabled: false });
+        expect(wrapper.element.hasAttribute('aria-disabled')).toBe(false);
+        expect(wrapper.element.getAttribute('tabindex')).toBe('0');
+        await wrapper.trigger('click');
+        expect(onClick).toHaveBeenCalledTimes(1);
       });
     });
   });
