@@ -101,28 +101,27 @@ describe('Badge', () => {
       expect(inner.attributes('style').includes(`left: calc(100% + ${offset[0]}px); top: ${offset[1]}px`)).toBeTruthy();
     });
 
-    it('shape[circle/square/bubble/ribbon/ribbon-right/ribbon-left/triangle-right/triangle-left]', async () => {
-      const count = 16;
-      const wrapper = mount(Badge, {
-        props: {
-          count,
-          content: TEXT,
-        },
-      });
-      // shape 默认 circle
-      const $badge = wrapper.findComponent(Badge);
-      const inner = $badge.find(`.${name}--basic`);
-      expect(inner.classes()).toContain(`${name}--circle`);
-      ['ribbon', 'round'].forEach((s) => {
-        expect(inner.classes().includes(`${name}--${s}`)).toBeFalsy();
-      });
-      expect($badge.text()).toEqual(`${TEXT}${count}`);
+    it('shape[circle/square/bubble/ribbon/ribbon-right/ribbon-left/triangle-right/triangle-left]', () => {
+      const shapes = [
+        'circle',
+        'square',
+        'bubble',
+        'ribbon',
+        'ribbon-right',
+        'ribbon-left',
+        'triangle-right',
+        'triangle-left',
+      ] as const;
 
-      const shape = 'ribbon';
-      await wrapper.setProps({
-        shape,
+      shapes.forEach((shape) => {
+        const wrapper = mount(Badge, {
+          props: {
+            count: 16,
+            shape,
+          },
+        });
+        expect(wrapper.find(`.${name}--basic`).classes()).toContain(`${name}--${shape}`);
       });
-      expect(inner.classes()).toContain(`${name}--${shape}`);
     });
 
     it('showZero[boolean]', () => {
@@ -136,20 +135,49 @@ describe('Badge', () => {
       expect(inner.text()).toEqual('0');
     });
 
-    it('size[medium/large]', async () => {
-      // size 默认 medium；large 增大尺寸
+    it('size[medium/large]', () => {
+      (['medium', 'large'] as const).forEach((size) => {
+        const wrapper = mount(Badge, {
+          props: {
+            count: 1,
+            size,
+          },
+        });
+        expect(wrapper.find(`.${name}--basic`).classes()).toContain(`${name}--${size}`);
+      });
+    });
+  });
+
+  describe('slots', () => {
+    it('default', () => {
       const wrapper = mount(Badge, {
-        props: {
-          dot: true,
-          content: TEXT,
+        slots: {
+          default: '默认内容',
         },
       });
-      const $badge = wrapper.findComponent(Badge);
-      const inner = $badge.find(`.${name}--basic`);
-      expect(inner.classes()).toContain(`${name}--medium`);
 
-      await wrapper.setProps({ size: 'large' });
-      expect(inner.classes()).toContain(`${name}--large`);
+      expect(wrapper.find(`.${name}__content`).text()).toBe('默认内容');
+    });
+
+    it('content', () => {
+      const wrapper = mount(Badge, {
+        slots: {
+          content: '插槽徽标内容',
+        },
+      });
+
+      expect(wrapper.find(`.${name}__content`).text()).toBe('插槽徽标内容');
+    });
+
+    it('default & content', () => {
+      const wrapper = mount(Badge, {
+        slots: {
+          default: '默认插槽内容',
+          content: '具名插槽内容',
+        },
+      });
+
+      expect(wrapper.find(`.${name}__content`).text()).toBe('默认插槽内容');
     });
   });
 });
