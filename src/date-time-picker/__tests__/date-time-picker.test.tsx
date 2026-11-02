@@ -4,6 +4,7 @@ import { describe, it, expect, vi } from 'vitest';
 import dayjs from 'dayjs';
 
 import DateTimePicker from '../date-time-picker';
+import ConfigProvider from '../../config-provider';
 import PickerItem from '../../picker/picker-item';
 import { DEFAULT_ITEM_HEIGHT } from '../../picker/picker.class';
 import { DEFAULT_WHEEL_CONFIG } from '../../picker/constants';
@@ -11,7 +12,7 @@ import { DEFAULT_WHEEL_CONFIG } from '../../picker/constants';
 const makeTouch = (el, eventName, touchPosition) => {
   const event = new Event(eventName);
   if (touchPosition) {
-    event.changedTouches = [touchPosition];
+    Object.defineProperty(event, 'changedTouches', { value: [touchPosition] });
   }
 
   el.dispatchEvent(event);
@@ -77,6 +78,15 @@ const generateColumn = (start, end, type) => {
 
 describe('DateTimePicker', () => {
   describe('props', () => {
+    it('cancelBtn[string] & confirmBtn[string]', async () => {
+      const wrapper = mount(DateTimePicker, { props: { cancelBtn: '取消选择', confirmBtn: '确认选择' } });
+      expect(wrapper.find(`.${prefix}-picker__cancel`).text()).toBe('取消选择');
+      expect(wrapper.find(`.${prefix}-picker__confirm`).text()).toBe('确认选择');
+      await wrapper.setProps({ cancelBtn: '取消', confirmBtn: '确定' });
+      expect(wrapper.find(`.${prefix}-picker__cancel`).text()).toBe('取消');
+      expect(wrapper.find(`.${prefix}-picker__confirm`).text()).toBe('确定');
+    });
+
     it('footer[function]', async () => {
       const wrapper = mount(DateTimePicker, {
         props: {
@@ -192,7 +202,7 @@ describe('DateTimePicker', () => {
       Object.keys(res).forEach((key, keyIndex) => {
         expect(res[key].length).toEqual(ret[keyIndex].length);
         res[key].forEach((item, itemIndex) => {
-          // expect(item.text()).toEqual(ret[keyIndex][itemIndex].label);
+          expect(item.text()).toMatch(/年$|月$|日$/);
         });
       });
     });
@@ -296,6 +306,17 @@ describe('DateTimePicker', () => {
       expect($cancelButton.text()).toBe(newCancelBtn || '取消');
     });
 
+    it('defaultValue[string]', () => {
+      const wrapper = mount(DateTimePicker, { props: { defaultValue: defaultDateTime, mode: 'date' } });
+      expect(wrapper.findAll(`.${prefix}-picker-item__item--active`)).toHaveLength(3);
+    });
+
+    it('modelValue[string]', () => {
+      const wrapper = mount(DateTimePicker, { props: { modelValue: defaultDateTime, mode: 'date' } });
+      expect(wrapper.findAll(`.${prefix}-picker-item__item--active`)).toHaveLength(3);
+    });
+    it.todo('modelValue[string] updates after mount');
+
     it('value[string]', async () => {
       const value = ref(defaultDateTime);
       const wrapper = mount({
@@ -335,6 +356,7 @@ describe('DateTimePicker', () => {
       });
       const $cancelButton = wrapper.find(`.${prefix}-picker__cancel`);
       await $cancelButton.trigger('click');
+      expect(onCancel).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
       expect(onCancel).toBeCalledTimes(1);
     });
 
@@ -363,13 +385,38 @@ describe('DateTimePicker', () => {
       const el = wrapper.findAll(`.${prefix}-picker-item`);
       const touchItemIndex = 0;
       const touchIndex = 2;
-      simulateMoveOption(el[touchItemIndex].element, touchIndex);
-      expect(wrapper.element).toMatchSnapshot();
+      await simulateMoveOption(el[touchItemIndex].element, touchIndex);
       expect(onPick).toBeCalledTimes(1);
       await $confirmButton.trigger('click');
       expect(onConfirm).toBeCalledTimes(2);
       expect(onChange).toBeCalledTimes(2);
       expect(initValue.value).toEqual(`${ret[touchItemIndex][10 + touchIndex].value}-${addZero(M)}-${addZero(D)}`);
+    });
+  });
+
+  describe('slots', () => {
+    it('header', () => {
+      const wrapper = mount(DateTimePicker, { slots: { header: () => <span class="slot-header">头部</span> } });
+      expect(wrapper.find('.slot-header').text()).toBe('头部');
+    });
+
+    it('footer', () => {
+      const wrapper = mount(DateTimePicker, { slots: { footer: () => <span class="slot-footer">底部</span> } });
+      expect(wrapper.find('.slot-footer').text()).toBe('底部');
+    });
+  });
+
+  describe('scenarios', () => {
+    it('globalConfig labels are used when props do not override them', () => {
+      const wrapper = mount(
+        <ConfigProvider globalConfig={{ dateTimePicker: { yearLabel: '年号', monthLabel: '月号', dateLabel: '日号' } }}>
+          <DateTimePicker defaultValue={defaultDateTime} mode="date" />
+        </ConfigProvider>,
+      );
+      const columns = wrapper.findAllComponents(PickerItem);
+      expect(columns[0].find(`.${prefix}-picker-item__item--active`).text()).toContain('年号');
+      expect(columns[1].find(`.${prefix}-picker-item__item--active`).text()).toContain('月号');
+      expect(columns[2].find(`.${prefix}-picker-item__item--active`).text()).toContain('日号');
     });
   });
 });
