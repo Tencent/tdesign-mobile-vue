@@ -1,28 +1,31 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import ColorPicker from '../index';
 import { getColorObject, Color } from '../../_common/js/color-picker';
+import type { TdColorPickerProps } from '../type';
 
-const commonProps = {};
-
-const mountColorPicker = (props) =>
+const mountColorPicker = (props: TdColorPickerProps) =>
   mount(ColorPicker, {
-    props: { ...commonProps, ...props },
+    props,
   });
 
 const makeTouch = (el, eventName, touchPosition) => {
   const event = new Event(eventName);
   if (touchPosition) {
-    event.changedTouches = [touchPosition];
+    Object.defineProperty(event, 'changedTouches', { value: [touchPosition] });
   }
 
   el.dispatchEvent(event);
 };
 
 const mockBoundingClientRect = (info) => {
-  window.HTMLElement.prototype.getBoundingClientRect = () => info;
+  vi.spyOn(window.HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue(info);
 };
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
 
 describe('ColorPicker', () => {
   describe('props', () => {
@@ -75,6 +78,14 @@ describe('ColorPicker', () => {
       testFormat('HEX', 'HEX');
     });
 
+    it('format[HEX8/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CSS]', () => {
+      const formats = ['HEX8', 'RGBA', 'HSL', 'HSLA', 'HSV', 'HSVA', 'CMYK', 'CSS'] as const;
+      formats.forEach((format) => {
+        const wrapper = mountColorPicker({ format, type: 'multiple' });
+        expect(wrapper.find('.t-color-picker__format-item--first').text()).toBe(format);
+      });
+    });
+
     it('swatchColors[array]', () => {
       const testSwatchColors = (swatchColors, target) => {
         const wrapper = mountColorPicker({ swatchColors });
@@ -84,7 +95,7 @@ describe('ColorPicker', () => {
       testSwatchColors(null, 0);
       testSwatchColors([], 0);
       testSwatchColors(undefined, 10);
-      testSwatchColors(['red', 'blur'], 2);
+      testSwatchColors(['red', 'blue'], 2);
     });
 
     it('type[base/multiple]', () => {
@@ -99,6 +110,11 @@ describe('ColorPicker', () => {
       testType(undefined, 0);
       testType('base', 0);
       testType('multiple', 1);
+    });
+
+    it('value[string]', () => {
+      const wrapper = mountColorPicker({ type: 'multiple', format: 'HEX', value: '#0000FF' });
+      expect(wrapper.findAll('.t-color-picker__format-input')[0].text()).toBe('#0000ff');
     });
 
     // 受控色值 v-model 联动
@@ -135,22 +151,24 @@ describe('ColorPicker', () => {
   });
 
   describe('events', () => {
-    it('preset change', async () => {
-      const onChange = vi.fn();
-      const wrapper = mountColorPicker({ onChange });
-      const swatch = wrapper.find('.t-color-picker__swatches-item');
-      await swatch.trigger('click');
+    describe('preset', () => {
+      it('change', async () => {
+        const onChange = vi.fn();
+        const wrapper = mountColorPicker({ onChange });
+        const swatch = wrapper.find('.t-color-picker__swatches-item');
+        await swatch.trigger('click');
 
-      const result = 'rgb(236, 242, 254)';
-      expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange).toHaveBeenLastCalledWith(result, {
-        trigger: 'preset',
-        color: getColorObject(new Color(result)),
+        const result = 'rgb(236, 242, 254)';
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenLastCalledWith(result, {
+          trigger: 'preset',
+          color: getColorObject(new Color(result)),
+        });
       });
     });
 
-    it('saturation change', async () => {
-      const testSaturation = async (fixed) => {
+    it('paletteBarChange', () => {
+      const testSaturation = (fixed = false) => {
         const onPaletteBarChange = vi.fn();
         const wrapper = mountColorPicker({ onPaletteBarChange, type: 'multiple', fixed });
         const el = wrapper.find('.t-color-picker__saturation').element;
@@ -160,7 +178,7 @@ describe('ColorPicker', () => {
           width: 300,
           height: 50,
         });
-        makeTouch(el, 'touchstart');
+        makeTouch(el, 'touchstart', { pageY: 50, pageX: 0, clientY: 50 });
         makeTouch(el, 'touchmove', { pageY: 40, pageX: 0, clientY: 40 });
         makeTouch(el, 'touchmove', { pageY: 30, pageX: 0, clientY: 30 });
         makeTouch(el, 'touchend', { pageY: 30, pageX: 30, clientY: 20 });
@@ -170,59 +188,86 @@ describe('ColorPicker', () => {
         const color = new Color(result);
         color.saturation = 0.1;
         color.value = fixed ? 0.6 : 0.4;
-        // TODO: error
-        // expect(onPaletteBarChange).toHaveBeenLastCalledWith({
-        //   color: getColorObject(color),
-        // });
+        expect(onPaletteBarChange).toHaveBeenLastCalledWith({ color: getColorObject(color) });
       };
 
       testSaturation();
       testSaturation(true);
     });
 
-    it('hue slider change', async () => {
-      const onChange = vi.fn();
-      const wrapper = mountColorPicker({ onChange, type: 'multiple' });
-      const el = wrapper.find('.t-color-picker__slider').element;
-      mockBoundingClientRect({
-        left: 0,
-        top: 0,
-        width: 300,
-        height: 50,
-      });
-      makeTouch(el, 'touchstart', { pageY: 0, pageX: 0, clientY: 30 });
-      makeTouch(el, 'touchmove', { pageY: 30, pageX: 0, clientY: 30 });
-      makeTouch(el, 'touchend', { pageY: 30, pageX: 40, clientY: 30 });
+    describe('hue slider', () => {
+      it('change', () => {
+        const onChange = vi.fn();
+        const wrapper = mountColorPicker({ onChange, type: 'multiple' });
+        const el = wrapper.find('.t-color-picker__slider').element;
+        mockBoundingClientRect({
+          left: 0,
+          top: 0,
+          width: 300,
+          height: 50,
+        });
+        makeTouch(el, 'touchstart', { pageY: 0, pageX: 0, clientY: 30 });
+        makeTouch(el, 'touchmove', { pageY: 30, pageX: 0, clientY: 30 });
+        makeTouch(el, 'touchend', { pageY: 30, pageX: 40, clientY: 30 });
 
-      expect(onChange).toHaveBeenCalledTimes(3);
-      const result = 'rgb(151, 121, 0)';
-      expect(onChange).toHaveBeenLastCalledWith(result, {
-        trigger: 'palette-hue-bar',
-        color: getColorObject(new Color(result)),
+        expect(onChange).toHaveBeenCalledTimes(3);
+        const result = 'rgb(151, 121, 0)';
+        expect(onChange).toHaveBeenLastCalledWith(result, {
+          trigger: 'palette-hue-bar',
+          color: getColorObject(new Color(result)),
+        });
       });
     });
+    describe('alpha slider', () => {
+      it('change', () => {
+        const onChange = vi.fn();
+        const wrapper = mountColorPicker({ onChange, type: 'multiple', enableAlpha: true });
+        const el = wrapper.find('.t-color-picker__slider-wrapper--alpha-type .t-color-picker__slider').element;
+        mockBoundingClientRect({
+          left: 0,
+          top: 0,
+          width: 300,
+          height: 50,
+        });
+        makeTouch(el, 'touchstart', { pageY: 0, pageX: 0, clientY: 30 });
+        makeTouch(el, 'touchmove', { pageY: 30, pageX: 0, clientY: 30 });
+        makeTouch(el, 'touchend', { pageY: 30, pageX: 40, clientY: 30 });
 
-    it('alpha slider change', async () => {
-      const onChange = vi.fn();
-      const wrapper = mountColorPicker({ onChange, type: 'multiple', enableAlpha: true });
-      const el = wrapper.find('.t-color-picker__slider-wrapper--alpha-type .t-color-picker__slider').element;
-      mockBoundingClientRect({
-        left: 0,
-        top: 0,
-        width: 300,
-        height: 50,
+        expect(onChange).toHaveBeenCalledTimes(3);
+        const result = 'rgb(0, 31, 151)';
+        const color = new Color(result);
+        color.alpha = 0.13;
+        expect(onChange).toHaveBeenLastCalledWith(result, {
+          trigger: 'palette-alpha-bar',
+          color: getColorObject(color),
+        });
       });
-      makeTouch(el, 'touchstart', { pageY: 0, pageX: 0, clientY: 30 });
-      makeTouch(el, 'touchmove', { pageY: 30, pageX: 0, clientY: 30 });
-      makeTouch(el, 'touchend', { pageY: 30, pageX: 40, clientY: 30 });
+    });
+  });
 
-      expect(onChange).toHaveBeenCalledTimes(3);
-      const result = 'rgb(0, 31, 151)';
-      const color = new Color(result);
-      color.alpha = 0.13;
-      expect(onChange).toHaveBeenLastCalledWith(result, {
-        trigger: 'palette-alpha-bar',
-        color: getColorObject(color),
+  describe('slots', () => {
+    // render 中读取了 header/footer，但未将返回的节点插入最终 VNode。
+    it.todo('header');
+    it.todo('footer');
+  });
+
+  describe('scenarios', () => {
+    // innerValue 仅在 mounted 时同步到 Color，后续没有 watch 处理外部变化。
+    it.todo('external value changes update the palette');
+    it.todo('external modelValue changes update the palette');
+
+    it('RGBA output preserves alpha when selecting a preset', async () => {
+      const onChange = vi.fn();
+      const wrapper = mountColorPicker({
+        enableAlpha: true,
+        format: 'RGBA',
+        swatchColors: ['rgba(255, 0, 0, 0.5)'],
+        onChange,
+      });
+      await wrapper.find('.t-color-picker__swatches-item').trigger('click');
+      expect(onChange).toHaveBeenCalledWith('rgba(255, 0, 0, 0.5)', {
+        trigger: 'preset',
+        color: getColorObject(new Color('rgba(255, 0, 0, 0.5)')),
       });
     });
   });
