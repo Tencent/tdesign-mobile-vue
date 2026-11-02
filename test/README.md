@@ -57,6 +57,7 @@ pnpm run test:snap-update
 
 - 测试文件统一放置在组件目录 `src/[组件名]/__tests__/` 中，例如 `src/watermark/__tests__/watermark.test.tsx`。
 - 组件测试文件：`[组件名].test.tsx`，例如 `watermark.test.tsx`。
+- 插件测试文件：`[组件名].plugin.test.tsx`，例如 `drawer.plugin.test.tsx`。插件测试必须独立于组件测试文件；插件的创建、安装、返回实例方法和插件专属场景均放在插件测试文件中，不得嵌入组件测试文件的 `scenarios/plugin` 等分组。
 - 多子组件场景：每个子组件单独编写测试文件，例如 `form.test.tsx` 和 `form-item.test.tsx`，同样放在 `src/form/__tests__/` 下。
 - 组件内部 hooks 测试文件：`[组件名].hooks.test.tsx`，例如 `form.hooks.test.tsx`。
 - 组件内部 utils 测试文件：`[组件名].utils.test.tsx`，例如 `config-provider.utils.test.tsx`。

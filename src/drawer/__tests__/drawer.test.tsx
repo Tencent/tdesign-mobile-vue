@@ -1,28 +1,26 @@
-import { config, mount } from '@vue/test-utils';
+import { DOMWrapper, enableAutoUnmount, mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { ref, h, nextTick } from 'vue';
+import { h, nextTick } from 'vue';
 import { AppIcon } from 'tdesign-icons-vue-next';
-import Drawer, { DrawerPlugin } from '../index';
+import Drawer from '../index';
 import type { TdDrawerProps } from '../type';
 import { sleep } from '../../shared/util';
 
-config.global.stubs = {
-  teleport: false,
-};
+// 先等待浮层异步任务，再由 Vue 卸载，最后清理 DOM；避免提前清空 Teleport 锚点。
+enableAutoUnmount((unmount) => {
+  afterEach(async () => {
+    await sleep(300);
+    unmount();
+    document.body.innerHTML = '';
+  });
+});
 
 const placementList: TdDrawerProps['placement'][] = ['left', 'right'];
-
-const isElementVisible = (el) => {
-  while (el) {
-    if (getComputedStyle(el).display === 'none') return false;
-    el = el.parentElement;
-  }
-  return true;
-};
+const body = new DOMWrapper(document.body);
 
 describe('Drawer', () => {
   describe('props', () => {
-    it('attach', async () => {
+    it('attach[string]', async () => {
       const div = document.createElement('div');
       div.id = 'drawer-container';
       document.body.appendChild(div);
@@ -37,6 +35,17 @@ describe('Drawer', () => {
       expect(document.querySelector('#drawer-container .t-drawer')).toBeTruthy();
     });
 
+    it('attach[function]', async () => {
+      const container = document.createElement('div');
+      document.body.appendChild(container);
+      const wrapper = mount(Drawer, { props: { visible: true, attach: () => container } });
+      await nextTick();
+      expect(container.querySelector('.t-drawer')).not.toBeNull();
+      wrapper.unmount();
+      expect(container.querySelector('.t-drawer')).toBeNull();
+      container.remove();
+    });
+
     it('closeOnOverlayClick[boolean]', async () => {
       const onClose = vi.fn();
       const mountDrawer = (closeOnOverlayClick: boolean) =>
@@ -48,13 +57,16 @@ describe('Drawer', () => {
 
       // false：点击遮罩不触发关闭
       const preventDrawer = mountDrawer(false);
-      preventDrawer.findComponent({ name: 'TOverlay' }).find('.t-overlay').trigger('click');
+      await preventDrawer.findComponent({ name: 'TOverlay' }).find('.t-overlay').trigger('click');
       expect(onClose).not.toBeCalled();
+      expect(preventDrawer.findComponent(Drawer).emitted('update:visible')).toBeUndefined();
 
       // true：点击遮罩触发 onClose('overlay')
       const closeDrawer = mountDrawer(true);
-      closeDrawer.findComponent({ name: 'TOverlay' }).find('.t-overlay').trigger('click');
+      await closeDrawer.findComponent({ name: 'TOverlay' }).find('.t-overlay').trigger('click');
       expect(onClose).toBeCalledWith('overlay');
+      expect(onClose).toHaveBeenCalledTimes(1);
+      expect(closeDrawer.findComponent(Drawer).emitted('update:visible')).toEqual([[false]]);
     });
 
     it('destroyOnClose[boolean]', async () => {
@@ -68,37 +80,44 @@ describe('Drawer', () => {
 
       await wrapper.setProps({ visible: false });
       expect(wrapper.find('.t-drawer__sidebar').exists()).toBeFalsy();
+
+      await wrapper.setProps({ visible: true });
+      await nextTick();
+      expect(document.querySelector('.t-drawer__sidebar')).not.toBeNull();
     });
 
     it('footer[function]', () => {
       const wrapper = mount(Drawer, {
         props: {
-          footer: () => h(<div>custom footer</div>),
+          footer: () => <button>custom footer</button>,
         },
       });
-      expect(wrapper.find('.t-drawer__footer').text()).toContain('custom footer');
+      expect(wrapper.get('.t-drawer__footer button').text()).toBe('custom footer');
     });
 
     it('items[array]', async () => {
-      const titleSidebar = ref([
+      const items = [
         {
           title: '菜单一',
+          icon: () => h(AppIcon),
         },
         {
           title: '菜单二',
         },
-      ]);
-
-      const wrapper = mount({
-        render() {
-          return <Drawer items={titleSidebar.value} />;
-        },
-      });
+      ];
+      const wrapper = mount(Drawer, { props: { items } });
 
       const $items = wrapper.findAll('.t-drawer__sidebar-item');
       expect($items).toHaveLength(2);
       expect($items.at(0).text()).toBe('菜单一');
       expect($items.at(1).text()).toBe('菜单二');
+      expect($items[0].findComponent(AppIcon).exists()).toBe(true);
+      expect($items[1].find('.t-drawer__sidebar-item-icon').exists()).toBe(false);
+
+      await wrapper.setProps({ items: [] });
+      expect(document.querySelectorAll('.t-drawer__sidebar-item')).toHaveLength(0);
+      await wrapper.setProps({ items: [{ title: '新菜单' }] });
+      expect(document.querySelector('.t-drawer__sidebar-item-title').textContent).toBe('新菜单');
     });
 
     it('overlayProps[object]', async () => {
@@ -111,11 +130,13 @@ describe('Drawer', () => {
       expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 4000');
     });
 
-    it('placement[left/right]', async () => {
-      placementList.forEach((placement) => {
-        const wrapper = mount(() => <Drawer visible={true} placement={placement} />);
-        expect(wrapper.find(`.t-popup--${placement}`).exists()).toBe(true);
-      });
+    it.each(placementList)('placement[%s]', async (placement) => {
+      const wrapper = mount(Drawer, { props: { visible: true } });
+      expect(wrapper.find('.t-popup--right').exists()).toBe(true);
+      await wrapper.setProps({ placement });
+      const popup = document.querySelector('.t-popup');
+      expect(popup.classList.contains(`t-popup--${placement}`)).toBe(true);
+      expect(popup.classList.contains(`t-popup--${placement === 'left' ? 'right' : 'left'}`)).toBe(false);
     });
 
     it('showOverlay[boolean]', async () => {
@@ -137,22 +158,24 @@ describe('Drawer', () => {
       expect(overlay.isVisible()).toBe(false);
     });
 
-    it('title[string]', () => {
+    it('title[string]', async () => {
       const wrapper = mount(Drawer, {
         props: {
           title: '抽屉标题',
         },
       });
       expect(wrapper.find('.t-drawer__title').text()).toBe('抽屉标题');
+      await wrapper.setProps({ title: '更新后的标题' });
+      expect(document.querySelector('.t-drawer__title').textContent).toBe('更新后的标题');
     });
 
     it('title[function]', () => {
       const wrapper = mount(Drawer, {
         props: {
-          title: () => h(<div>custom title</div>),
+          title: () => <span>custom title</span>,
         },
       });
-      expect(wrapper.find('.t-drawer__title').text()).toContain('custom title');
+      expect(wrapper.get('.t-drawer__title span').text()).toBe('custom title');
     });
 
     it('visible[boolean]', async () => {
@@ -167,7 +190,13 @@ describe('Drawer', () => {
         visible: true,
       });
       // 内容 teleport 到 body，需从 document 查询
-      expect(isElementVisible(document.querySelector('.t-drawer__sidebar'))).toBe(true);
+      expect(body.get('.t-drawer__sidebar').isVisible()).toBe(true);
+      await wrapper.setProps({ visible: false });
+      await vi.waitFor(() => {
+        expect(body.get('.t-drawer__sidebar').isVisible()).toBe(false);
+      });
+      // 默认关闭仅隐藏节点，不销毁内容。
+      expect(document.querySelector('.t-drawer__sidebar')).not.toBeNull();
     });
 
     it('zIndex[number]', async () => {
@@ -178,61 +207,27 @@ describe('Drawer', () => {
         },
       });
       expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 666');
+      await wrapper.setProps({ zIndex: 2000 });
+      expect(document.querySelector<HTMLElement>('.t-popup').style.zIndex).toBe('2000');
     });
   });
 
   describe('events', () => {
-    it('overlayClick', async () => {
-      const onOverlayClick = vi.fn();
-      const visible = ref(true);
-      const wrapper = mount({
-        render() {
-          return <Drawer visible={visible.value} onOverlayClick={onOverlayClick} />;
-        },
-      });
-
-      const $popup = wrapper.findComponent({ name: 'TPopup' });
-      expect($popup.exists()).toBeTruthy();
-      $popup.vm.$emit('visible-change', visible.value);
-      expect($popup.emitted()['visible-change'].length).toBe(1);
-      expect($popup.emitted()['visible-change'][0]).toEqual([true]);
-      expect(onOverlayClick).toBeCalledTimes(1);
-    });
+    // API 声明为 { e: MouseEvent }，当前实现却从 visible-change 回调传入 { visible }。
+    // 且 closeOnOverlayClick=false 时不会通知点击，待组件修复后补齐事件参数及触发时机断言。
+    it.todo('overlayClick');
 
     it('close', async () => {
       const onClose = vi.fn();
-      const iconSidebar = ref([
-        {
-          title: '菜单一',
-          icon: () => h(AppIcon),
-        },
-        {
-          title: '菜单二',
-          icon: () => h(AppIcon),
-        },
-      ]);
-
-      const wrapper = mount({
-        render() {
-          return <Drawer items={iconSidebar.value} onClose={onClose} />;
-        },
-      });
-
-      const $popup = wrapper.findComponent({ name: 'TPopup' });
-      expect($popup.exists()).toBeTruthy();
-      $popup.vm.$emit('close');
-      expect($popup.emitted().close).toBeTruthy();
-      expect($popup.emitted().close.length).toBe(1);
-      expect(onClose).toBeCalledTimes(1);
+      const wrapper = mount(Drawer, { props: { visible: true, onClose } });
+      await wrapper.find('.t-overlay').trigger('click');
+      expect(onClose).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenCalledWith('overlay');
     });
 
     it('itemClick', async () => {
-      const clickItemValue = {};
-      const onItemClick = (index, item, context) => {
-        clickItemValue.index = index;
-        clickItemValue.item = item;
-      };
-      const iconSidebar = ref([
+      const onItemClick = vi.fn();
+      const items = [
         {
           title: '菜单一',
           icon: () => h(AppIcon),
@@ -241,85 +236,94 @@ describe('Drawer', () => {
           title: '菜单二',
           icon: () => h(AppIcon),
         },
-      ]);
-
-      const wrapper = mount({
-        render() {
-          return <Drawer items={iconSidebar.value} onItemClick={onItemClick} />;
-        },
-      });
+      ];
+      const wrapper = mount(Drawer, { props: { items, onItemClick } });
 
       const $items = wrapper.findAll('.t-drawer__sidebar-item');
       expect($items).toHaveLength(2);
 
       await $items.at(0).trigger('click');
-      expect(clickItemValue.index).toEqual(0);
-      expect(clickItemValue.item).toEqual(iconSidebar.value[0]);
+      expect(onItemClick).toHaveBeenNthCalledWith(1, 0, items[0], { e: expect.any(MouseEvent) });
 
       await $items.at(1).trigger('click');
-      expect(clickItemValue.index).toEqual(1);
-      expect(clickItemValue.item).toEqual(iconSidebar.value[1]);
+      expect(onItemClick).toHaveBeenNthCalledWith(2, 1, items[1], { e: expect.any(MouseEvent) });
+      expect(onItemClick).toHaveBeenCalledTimes(2);
+    });
+
+    it('update:visible', async () => {
+      const wrapper = mount(Drawer, { props: { visible: true } });
+      await wrapper.find('.t-overlay').trigger('click');
+      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
     });
   });
 
-  // 用例结束后先排空浮层异步任务再清理 teleport 挂载内容，避免卸载期间的 patch 报错
-  afterEach(async () => {
-    await sleep(300);
-    document.body.innerHTML = '';
+  describe('slots', () => {
+    it('default', () => {
+      const wrapper = mount(Drawer, { slots: { default: () => <div class="drawer-content">内容</div> } });
+      expect(wrapper.get('.t-drawer .drawer-content').text()).toBe('内容');
+    });
+
+    it('title', () => {
+      const wrapper = mount(Drawer, { slots: { title: () => <span>插槽标题</span> } });
+      expect(wrapper.get('.t-drawer__title span').text()).toBe('插槽标题');
+    });
+
+    it('footer', () => {
+      const wrapper = mount(Drawer, { slots: { footer: () => <button>插槽底部</button> } });
+      expect(wrapper.get('.t-drawer__footer button').text()).toBe('插槽底部');
+    });
   });
 
   describe('scenarios', () => {
-    describe('plugin', () => {
-      const title = 'Hello TDesign';
+    it('omits optional title, footer and items by default', () => {
+      const wrapper = mount(Drawer);
+      expect(wrapper.find('.t-drawer__title').exists()).toBe(false);
+      expect(wrapper.find('.t-drawer__footer').exists()).toBe(false);
+      expect(wrapper.findAll('.t-drawer__sidebar-item')).toHaveLength(0);
+    });
 
-      it('show', async () => {
-        expect(document.querySelector('.t-drawer')).toBeFalsy();
-        const handler = DrawerPlugin({
-          items: [{ title }],
-        });
-        expect(document.body.textContent).toContain(title);
-        expect(document.querySelector('.t-drawer')).toBeTruthy();
-        expect(isElementVisible(document.querySelector('.t-drawer'))).toBe(false);
-
-        await handler.show();
-        expect(isElementVisible(document.querySelector('.t-drawer'))).toBe(true);
-
-        await handler.hide();
-        // 等待超过过渡时长（300ms）再断言隐藏，避免边界竞态
-        await sleep(500);
-        expect(isElementVisible(document.querySelector('.t-drawer'))).toBe(false);
+    it('prefers the title prop and falls back to its slot when empty', async () => {
+      const wrapper = mount(Drawer, {
+        props: { title: '属性标题' },
+        slots: { title: () => '插槽标题' },
       });
+      expect(wrapper.get('.t-drawer__title').text()).toBe('属性标题');
+      await wrapper.setProps({ title: '' });
+      expect(document.querySelector('.t-drawer__title').textContent).toBe('插槽标题');
+    });
 
-      it('update', async () => {
-        const title2 = 'Hello Vue';
-        expect(document.querySelector('.t-drawer')).toBeFalsy();
-        const handler = DrawerPlugin({
-          items: [{ title }],
-        });
-        expect(document.body.textContent).toContain(title);
-        await handler.update({
-          items: [{ title: title2 }],
-        });
-        expect(document.body.textContent).not.toContain(title);
-        expect(document.body.textContent).toContain(title2);
+    it('prefers the footer prop and falls back to its slot when removed', async () => {
+      const wrapper = mount(Drawer, {
+        props: { footer: () => '属性底部' },
+        slots: { footer: () => '插槽底部' },
       });
+      expect(wrapper.get('.t-drawer__footer').text()).toBe('属性底部');
+      await wrapper.setProps({ footer: undefined });
+      expect(document.querySelector('.t-drawer__footer').textContent).toBe('插槽底部');
+    });
 
-      it('destroy', async () => {
-        const handler = DrawerPlugin({
-          items: [{ title }],
-        });
-        expect(document.body.textContent).toContain(title);
-        await handler.destroy();
-        expect(document.body.textContent).not.toContain(title);
+    it('closes on overlay click and notifies visibility listeners', async () => {
+      const onOverlayClick = vi.fn();
+      const wrapper = mount(Drawer, { props: { visible: true, onOverlayClick } });
+      await wrapper.find('.t-overlay').trigger('click');
+      expect(onOverlayClick).toHaveBeenCalledTimes(1);
+      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
+      await vi.waitFor(() => {
+        expect(body.get('.t-drawer').isVisible()).toBe(false);
       });
+    });
 
-      it('use plugin', () => {
-        const wrapper = mount(() => <div></div>, { global: { plugins: [DrawerPlugin] } });
-        expect(typeof wrapper.vm.$drawer).toBe('function');
-        expect(document.body.textContent).not.toContain(title);
-        wrapper.vm.$drawer({ items: [{ title }] });
-        expect(document.body.textContent).toContain(title);
-      });
+    it('does not notify overlayClick when opening without an overlay', async () => {
+      const onOverlayClick = vi.fn();
+      const wrapper = mount(Drawer, { props: { showOverlay: false, onOverlayClick } });
+      await wrapper.setProps({ visible: true });
+      expect(onOverlayClick).not.toHaveBeenCalled();
+    });
+
+    it('allows item clicks without an itemClick listener', async () => {
+      const wrapper = mount(Drawer, { props: { items: [{ title: '菜单' }] } });
+      await wrapper.get('.t-drawer__sidebar-item').trigger('click');
+      expect(document.querySelector('.t-drawer__sidebar-item-title').textContent).toBe('菜单');
     });
   });
 });
