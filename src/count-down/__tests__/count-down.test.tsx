@@ -28,6 +28,12 @@ describe('CountDown', () => {
       expect(wrapper.text()).toContain('change');
     });
 
+    it('content[function]', async () => {
+      const wrapper = mount(CountDown, { props: { time: 1000, content: () => <span>自定义结束内容</span> } });
+      await sleep(1500);
+      expect(wrapper.text()).toContain('自定义结束内容');
+    });
+
     it('format[string]', async () => {
       const wrapper = mount(<CountDown time={100000} format="mm:ss"></CountDown>);
       expect(wrapper.text()).not.toContain('00:01:40');
@@ -48,11 +54,11 @@ describe('CountDown', () => {
       expect(wrapper.text()).toContain('00:01:40:000');
     });
 
-    it('size[small/medium/large]', async () => {
-      const wrapper = mount(<CountDown time={100000}></CountDown>);
-      expect(wrapper.find('.t-count-down--medium').exists()).toBe(true);
-      const wrapper1 = mount(<CountDown time={100000}></CountDown>);
-      expect(wrapper1.find('.t-count-down').exists()).toBe(true);
+    it('size[small/medium/large]', () => {
+      (['small', 'medium', 'large'] as const).forEach((size) => {
+        const wrapper = mount(CountDown, { props: { time: 100000, size } });
+        expect(wrapper.classes()).toContain(`t-count-down--${size}`);
+      });
     });
 
     it('splitWithUnit[boolean]', async () => {
@@ -60,11 +66,11 @@ describe('CountDown', () => {
       expect(wrapper.find('.t-count-down__split--text').exists()).toBeTruthy();
     });
 
-    it('theme[default/round/square]', async () => {
-      const wrapper = mount(<CountDown time={100000}></CountDown>);
-      expect(wrapper.find('.t-count-down--default').exists()).toBe(true);
-      const wrapper1 = mount(<CountDown time={100000}></CountDown>);
-      expect(wrapper1.find('.t-count-down').exists()).toBe(true);
+    it('theme[default/round/square]', () => {
+      (['default', 'round', 'square'] as const).forEach((theme) => {
+        const wrapper = mount(CountDown, { props: { time: 100000, theme } });
+        expect(wrapper.classes()).toContain(`t-count-down--${theme}`);
+      });
     });
 
     it('time[number]', async () => {
@@ -81,7 +87,7 @@ describe('CountDown', () => {
     it('change', async () => {
       const onChange = vi.fn();
       const wrapper = mount(<CountDown time={2000} onChange={onChange}></CountDown>);
-      await sleep(1000);
+      await sleep(1500);
       expect(onChange).toHaveBeenCalled();
     });
 
@@ -103,6 +109,19 @@ describe('CountDown', () => {
       });
       await sleep(1500);
       expect(wrapper.text()).toContain('测试');
+    });
+  });
+
+  describe('scenarios', () => {
+    it('visibilitychange pauses while hidden and resumes when visible', async () => {
+      const wrapper = mount(CountDown, { props: { time: 100000, autoStart: false } });
+      Object.defineProperty(document, 'hidden', { configurable: true, value: true });
+      document.dispatchEvent(new Event('visibilitychange'));
+      Object.defineProperty(document, 'hidden', { configurable: true, value: false });
+      document.dispatchEvent(new Event('visibilitychange'));
+      await nextTick();
+      expect(wrapper.classes()).toContain('t-count-down--medium');
+      wrapper.unmount();
     });
   });
 });
