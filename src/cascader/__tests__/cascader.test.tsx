@@ -1,11 +1,12 @@
 import { ref, h, nextTick } from 'vue';
-import { config, mount, DOMWrapper } from '@vue/test-utils';
+import { enableAutoUnmount, mount, DOMWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { AppIcon as TIconApp, CloseIcon } from 'tdesign-icons-vue-next';
 import Cascader from '../cascader';
 import type { TdCascaderProps } from '../type';
 import Radio from '../../radio/index';
-import { Tabs as TTabs, TabPanel as TTabPanel } from '../../tabs';
+import { Tabs as TTabs } from '../../tabs';
+import Popup from '../../popup';
 import prefixConfig from '../../config';
 import { sleep } from '../../shared/util';
 
@@ -14,9 +15,7 @@ Element.prototype.scrollTo = () => {};
 
 const { prefix } = prefixConfig;
 
-config.global.stubs = {
-  teleport: false,
-};
+enableAutoUnmount(afterEach);
 
 const name = `${prefix}-cascader`;
 
@@ -166,10 +165,9 @@ const subTitles = ['请选择省份', '请选择城市', '请选择区/县'];
 const defaultPlaceholder = '默认选项标签';
 
 describe('Cascader', () => {
-  // 用例结束后先排空浮层异步任务再清理 teleport 挂载内容，避免卸载期间的 patch 报错与跨用例查询污染
+  // 等待浮层异步任务结束，由 enableAutoUnmount 清理 Teleport 挂载内容。
   afterEach(async () => {
     await sleep(300);
-    document.body.innerHTML = '';
   });
 
   describe('props', () => {
@@ -205,6 +203,15 @@ describe('Cascader', () => {
       const wrapper = mount(<Cascader options={options} />);
       // 默认
       expect(wrapper.findComponent(CloseIcon).exists()).toBeTruthy();
+      await wrapper.setProps({ closeBtn: false });
+      expect(wrapper.findComponent(CloseIcon).exists()).toBe(false);
+    });
+
+    it('closeBtn[function]', () => {
+      const wrapper = mount(Cascader, {
+        props: { closeBtn: () => <span class="custom-close">关闭</span> },
+      });
+      expect(wrapper.find('.custom-close').text()).toBe('关闭');
     });
 
     it('header[function]', async () => {
@@ -277,15 +284,23 @@ describe('Cascader', () => {
       expect($placeholder.text()).toEqual(defaultPlaceholder);
     });
 
+    it('placeholder[function]', () => {
+      const wrapper = mount(Cascader, {
+        props: { options, placeholder: () => <span class="custom-placeholder">请选择地区</span> },
+      });
+      expect(wrapper.find('.custom-placeholder').text()).toBe('请选择地区');
+    });
+
     it('subTitles[array]', async () => {
       const wrapper = mount(<Cascader options={options} subTitles={subTitles} />);
       const $subTitles = wrapper.find(`.${name}__options-title`);
       expect($subTitles.exists()).toBeTruthy();
+      expect($subTitles.text()).toBe(subTitles[0]);
     });
 
     it('theme[step/tab]', async () => {
       const themeList: TdCascaderProps['theme'][] = ['step', 'tab'];
-      themeList.forEach((theme, index) => {
+      themeList.forEach((theme) => {
         const wrapper = mount(() => (
           <Cascader visible={true} options={options} value={address.value} theme={theme}></Cascader>
         ));
@@ -305,11 +320,7 @@ describe('Cascader', () => {
       const wrapper = mount(<Cascader options={options} title={title} />);
       const $title = wrapper.find(`.${name}__title`);
 
-      const newTitle = 'Cascader 级联选择器';
       expect($title.text()).toBe(TEXT);
-      // await wrapper.setProps({
-      //   title: newTitle,
-      // });
     });
 
     it('title[function]', async () => {
@@ -360,6 +371,20 @@ describe('Cascader', () => {
       expect($tabs.textContent).toContain('蓟州区');
     });
 
+    it('modelValue[string]', async () => {
+      const wrapper = mount(Cascader, { props: { visible: true, options, modelValue: '120119' } });
+      await nextTick();
+      expect(document.querySelector(`.${name}__steps`).textContent).toContain('蓟州区');
+    });
+
+    it('modelValue[number]', async () => {
+      const wrapper = mount(Cascader, {
+        props: { visible: true, options: [{ label: '选项一', value: 1 }], modelValue: 1 },
+      });
+      await nextTick();
+      expect(document.querySelector(`.${name}__steps`).textContent).toContain('选项一');
+    });
+
     it('defaultValue[string]', async () => {
       const wrapper = mount(<Cascader visible={true} options={options} defaultValue="110000" theme="step" />);
       // onMounted 中的初始化会再触发一次渲染，需要两个 tick
@@ -369,6 +394,14 @@ describe('Cascader', () => {
       const $steps = document.querySelector(`.${name}__steps`);
       expect($steps).not.toBeNull();
       expect($steps.textContent).toContain('北京市');
+    });
+
+    it('defaultValue[number]', async () => {
+      const wrapper = mount(Cascader, {
+        props: { visible: true, options: [{ label: '选项一', value: 1 }], defaultValue: 1 },
+      });
+      await nextTick();
+      expect(document.querySelector(`.${name}__steps`).textContent).toContain('选项一');
     });
 
     it('visible[boolean]', async () => {
@@ -384,7 +417,7 @@ describe('Cascader', () => {
       await wrapper.setProps({
         visible: true,
       });
-      // expect(wrapper.find(`.${name}`).isVisible()).toBe(true);
+      expect(wrapper.findComponent(Popup).props('modelValue')).toBe(true);
 
       const $radios = wrapper.findAllComponents(Radio);
 
@@ -395,6 +428,19 @@ describe('Cascader', () => {
   });
 
   describe('slots', () => {
+    it('header', () => {
+      const wrapper = mount(Cascader, {
+        slots: { header: () => <span class="slot-header">插槽头部</span> },
+      });
+      expect(wrapper.find('.slot-header').text()).toBe('插槽头部');
+    });
+
+    it('middleContent', () => {
+      const wrapper = mount(Cascader, {
+        slots: { middleContent: () => <span class="slot-middle">插槽中间内容</span> },
+      });
+      expect(wrapper.find('.slot-middle').text()).toBe('插槽中间内容');
+    });
     it('title', () => {
       const title = 'Cascader 级联选择器';
       const wrapper = mount(<Cascader options={options} />, {
@@ -428,26 +474,85 @@ describe('Cascader', () => {
     });
   });
 
+  describe('scenarios', () => {
+    it('title prop takes priority over title slot', () => {
+      const wrapper = mount(Cascader, {
+        props: { title: '属性标题' },
+        slots: { title: () => <span class="slot-title">插槽标题</span> },
+      });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('属性标题');
+      expect(wrapper.find('.slot-title').exists()).toBe(false);
+    });
+
+    it('header prop takes priority over header slot', () => {
+      const wrapper = mount(Cascader, {
+        props: { header: () => <span class="prop-header">属性头部</span> },
+        slots: { header: () => <span class="slot-header">插槽头部</span> },
+      });
+      expect(wrapper.find('.prop-header').text()).toBe('属性头部');
+      expect(wrapper.find('.slot-header').exists()).toBe(false);
+    });
+
+    it('middleContent prop takes priority over middleContent slot', () => {
+      const wrapper = mount(Cascader, {
+        props: { middleContent: () => <span class="prop-middle">属性内容</span> },
+        slots: { middleContent: () => <span class="slot-middle">插槽内容</span> },
+      });
+      expect(wrapper.find('.prop-middle').text()).toBe('属性内容');
+      expect(wrapper.find('.slot-middle').exists()).toBe(false);
+    });
+
+    it('closeBtn function takes priority over closeBtn slot', () => {
+      const wrapper = mount(Cascader, {
+        props: { closeBtn: () => <span class="prop-close">属性关闭</span> },
+        slots: { closeBtn: () => <span class="slot-close">插槽关闭</span> },
+      });
+      expect(wrapper.find('.prop-close').text()).toBe('属性关闭');
+      expect(wrapper.find('.slot-close').exists()).toBe(false);
+    });
+
+    it('placeholder function takes priority over placeholder slot', () => {
+      const wrapper = mount(Cascader, {
+        props: { placeholder: () => <span class="prop-placeholder">属性提示</span> },
+        slots: { placeholder: () => <span class="slot-placeholder">插槽提示</span> },
+      });
+      expect(wrapper.find('.prop-placeholder').text()).toBe('属性提示');
+      expect(wrapper.find('.slot-placeholder').exists()).toBe(false);
+    });
+  });
+
   describe('events', () => {
+    it('change', async () => {
+      const onChange = vi.fn();
+      const leaf = { label: '叶子节点', value: 'leaf' };
+      const wrapper = mount(Cascader, { props: { options: [leaf], onChange } });
+      await wrapper.findComponent(Radio).find(`.${prefix}-radio`).trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenCalledWith('leaf', [leaf]);
+    });
+
     it('close', async () => {
       const onClose = vi.fn();
-      const wrapper = mount(<Cascader options={options} onClose={onClose} />);
+      const wrapper = mount(Cascader, { props: { options, onClose } });
       const $closeBtn = wrapper.find(`.${name}__close-btn`);
       await $closeBtn.trigger('click');
       expect(onClose).toHaveBeenCalledTimes(1);
       expect(onClose).toHaveBeenLastCalledWith('close-btn');
 
-      // overlay
-      const $overlay = wrapper.find(`.${prefix}-overlay`);
-      // $overlay.trigger('click');
-      // expect(onClose).toBeCalledTimes(2);
-      // expect(onClose).toHaveBeenLastCalledWith('overlay');
+      const finishWrapper = mount(Cascader, {
+        props: { options: [{ label: '叶子节点', value: 'leaf' }], onClose },
+      });
+      await finishWrapper.findComponent(Radio).find(`.${prefix}-radio`).trigger('click');
+      expect(onClose).toHaveBeenCalledTimes(2);
+      expect(onClose).toHaveBeenLastCalledWith('finish');
     });
+
+    // Popup 传递字符串 'overlay'，Cascader 却读取参数的 trigger 属性，实际点击不会触发该回调。
+    it.todo('close[overlay]');
 
     it('pick', async () => {
       const onPick = vi.fn();
       const wrapper = mount(<Cascader options={options} onPick={onPick} />);
-      // expect(wrapper.element).toMatchSnapshot();
       const $cascaderSteps = wrapper.findAll(`.${name}__step`);
       // 无默认 value 值，初始化时 steps.length = 1
       expect($cascaderSteps).toHaveLength(1);
@@ -458,16 +563,22 @@ describe('Cascader', () => {
       const clickIndex = 0;
       await $radios[clickIndex].find(`.t-radio`).trigger('click');
       expect(onPick).toHaveBeenCalledTimes(1);
-      // expect(wrapper.findAll('.t-radio-group')[0].findAll(`.t-radio__icon--checked`)).toHaveLength(1);
       expect(onPick).toHaveBeenCalledWith({ level: 0, index: 0, value: '110000', label: '北京市' });
-      const $step = wrapper.findAll(`.${name}__step`);
-      // expect($step).toHaveLength(2);
+    });
+  });
 
-      // 此时 label 激活项为第二项
-      // expect($step[1].find(`.${name}__step-label`).classes().includes(`${name}__step-label--active`)).toBeTruthy();
-      // 模拟点击 第一项 step内容，此时激活项变更为第一项
-      // await $step[0].trigger('click');
-      // expect($step[0].find(`.${name}__step-label`).classes().includes(`${name}__step-label--active`)).toBeTruthy();
+  describe('instanceFunctions', () => {
+    it('reset', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(Cascader, { props: { options, defaultValue: '120119', onChange } });
+      await nextTick();
+
+      wrapper.vm.reset();
+      await nextTick();
+
+      expect(onChange).toHaveBeenCalledWith(undefined, []);
+      expect(document.querySelectorAll(`.${name}__step`)).toHaveLength(1);
+      expect(document.querySelector(`.${name}__step-label`).textContent).toBe('选择选项');
     });
   });
 });
