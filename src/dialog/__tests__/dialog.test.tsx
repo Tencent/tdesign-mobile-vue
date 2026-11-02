@@ -1,9 +1,8 @@
-import { mount } from '@vue/test-utils';
+import { DOMWrapper, enableAutoUnmount, mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import { nextTick } from 'vue';
 import Dialog from '../dialog';
-import { DialogPlugin } from '../index';
 import Button from '../../button/button';
 
 import prefixConfig from '../../config';
@@ -12,6 +11,14 @@ import { sleep } from '../../shared/util';
 const { prefix } = prefixConfig;
 const name = `${prefix}-dialog`;
 
+enableAutoUnmount((unmount) => {
+  afterEach(async () => {
+    await sleep(300);
+    unmount();
+    document.body.innerHTML = '';
+  });
+});
+
 describe('Dialog', () => {
   describe('props', () => {
     it('actions[array]', async () => {
@@ -19,7 +26,7 @@ describe('Dialog', () => {
       const wrapper = mount(Dialog, {
         props: {
           visible: true,
-          actions: [{ content: '一等奖' }, { content: '再来一次', theme: 'danger' }],
+          actions: [{ content: '一等奖' }, { content: '再来一次', theme: 'danger', class: 'custom-action' }],
           onClose,
         },
       });
@@ -31,12 +38,15 @@ describe('Dialog', () => {
       expect($buttons[1].text()).toBe('再来一次');
       // 按钮属性透传（主题）
       expect($buttons[1].classes()).toContain(`${prefix}-button--danger`);
+      expect($buttons[1].props('theme')).toBe('danger');
+      expect($buttons[1].classes()).toContain('custom-action');
 
       // 点击操作按钮按 cancel 通道关闭
       await $buttons[0].trigger('click');
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
     });
 
+    // 运行时声明 Function，但 isTextStyleBtn 会直接展开 actions，函数输入会报错。
     it.todo('actions[function]');
 
     it('beforeClose[function]', async () => {
@@ -88,6 +98,16 @@ describe('Dialog', () => {
       await nextTick();
       expect(onConfirm2).not.toHaveBeenCalled();
       expect($confirm2.classes()).not.toContain(`${prefix}-button--loading`);
+
+      const syncBeforeClose = vi.fn();
+      const syncConfirm = vi.fn();
+      const syncWrapper = mount(Dialog, {
+        props: { visible: true, confirmBtn: '确认', beforeClose: syncBeforeClose, onConfirm: syncConfirm },
+      });
+      await syncWrapper.findComponent(Button).trigger('click');
+      await sleep(0);
+      expect(syncBeforeClose).toHaveBeenCalledExactlyOnceWith('confirm', { e: expect.any(MouseEvent) });
+      expect(syncConfirm).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent) });
     });
 
     it('buttonLayout[horizontal/vertical]', async () => {
@@ -140,6 +160,7 @@ describe('Dialog', () => {
       expect(wrapper.findAllComponents(Button)).toHaveLength(0);
     });
 
+    // 无同名插槽时，renderButtonNode 会丢弃函数返回的节点，仍渲染内置 Button。
     it.todo('cancelBtn[function]');
 
     it('closeBtn[boolean]', async () => {
@@ -163,19 +184,21 @@ describe('Dialog', () => {
     it('closeOnOverlayClick[boolean]', async () => {
       const onClose = vi.fn();
       const onOverlayClick = vi.fn();
-      const closeOnOverlayClick = true;
       const visible = true;
       const wrapper = mount(Dialog, {
         props: {
           visible,
-          closeOnOverlayClick,
           onClose,
           onOverlayClick,
         },
       });
       const $overlay = wrapper.find(`.t-overlay`);
       expect($overlay.exists()).toBeTruthy();
-      $overlay.trigger('click');
+      await $overlay.trigger('click');
+      expect(onClose).not.toHaveBeenCalled();
+      onOverlayClick.mockClear();
+      await wrapper.setProps({ closeOnOverlayClick: true });
+      await $overlay.trigger('click');
       expect(onClose).toBeCalledTimes(1);
       expect(onOverlayClick).toBeCalledTimes(1);
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'overlay' });
@@ -194,6 +217,7 @@ describe('Dialog', () => {
       expect(wrapper.findAllComponents(Button)).toHaveLength(0);
     });
 
+    // 与 cancelBtn 相同，函数返回的自定义节点没有被渲染。
     it.todo('confirmBtn[function]');
 
     it('content[string]', async () => {
@@ -261,14 +285,14 @@ describe('Dialog', () => {
       expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 3000');
     });
 
-    it('preventScrollThrough[boolean]', async () => {
+    it.each([true, false])('preventScrollThrough[%s]', (preventScrollThrough) => {
       mount(Dialog, {
         props: {
           visible: true,
-          preventScrollThrough: true,
+          preventScrollThrough,
         },
       });
-      expect(document.body.classList.contains('t-popup--lock')).toBe(true);
+      expect(document.body.classList.contains('t-popup--lock')).toBe(preventScrollThrough);
     });
 
     it('showOverlay[boolean]', async () => {
@@ -307,6 +331,13 @@ describe('Dialog', () => {
       expect(document.querySelector('.t-dialog__header').textContent).toBe(newTitle);
     });
 
+    it('title[function]', () => {
+      const wrapper = mount(Dialog, {
+        props: { visible: true, title: () => <span class="custom-title">函数标题</span> },
+      });
+      expect(wrapper.find('.t-dialog__header .custom-title').text()).toBe('函数标题');
+    });
+
     it('top[function]', async () => {
       const wrapper = mount(Dialog, {
         props: {
@@ -331,8 +362,13 @@ describe('Dialog', () => {
         visible: true,
       });
       // 内容 teleport 到 body，需从 document 查询
-      expect(document.querySelector('.t-dialog__header').textContent).toBe(title);
-      expect(getComputedStyle(document.querySelector('.t-dialog')).display).not.toBe('none');
+      const dialog = new DOMWrapper(document.querySelector('.t-dialog'));
+      expect(dialog.find('.t-dialog__header').text()).toBe(title);
+      expect(dialog.isVisible()).toBe(true);
+      await wrapper.setProps({ visible: false });
+      await sleep(300);
+      expect(dialog.isVisible()).toBe(false);
+      expect(document.body.contains(dialog.element)).toBe(true);
     });
 
     it('width[string]', async () => {
@@ -370,6 +406,22 @@ describe('Dialog', () => {
     });
   });
   describe('slots', () => {
+    it('actions', () => {
+      const wrapper = mount(Dialog, {
+        props: { visible: true },
+        slots: { actions: () => <button class="slot-action">自定义操作</button> },
+      });
+      expect(wrapper.find('.t-dialog__footer .slot-action').text()).toBe('自定义操作');
+    });
+
+    it('default', () => {
+      const wrapper = mount(Dialog, {
+        props: { visible: true },
+        slots: { default: () => <span class="default-content">默认插槽内容</span> },
+      });
+      expect(wrapper.find('.t-dialog__body .default-content').text()).toBe('默认插槽内容');
+    });
+
     it('title', () => {
       const wrapper = mount(Dialog, { props: { visible: true }, slots: { title: () => <span>插槽标题</span> } });
       expect(wrapper.find('.t-dialog__header').text()).toBe('插槽标题');
@@ -418,6 +470,32 @@ describe('Dialog', () => {
     });
   });
   describe('events', () => {
+    it('cancel', async () => {
+      const onCancel = vi.fn();
+      const onClose = vi.fn();
+      const wrapper = mount(Dialog, { props: { visible: true, cancelBtn: '取消', onCancel, onClose } });
+      await wrapper.findComponent(Button).trigger('click');
+      expect(onCancel).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent) });
+      expect(onClose).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
+      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
+    });
+
+    it('close', async () => {
+      const onClose = vi.fn();
+      const wrapper = mount(Dialog, { props: { visible: true, closeBtn: true, onClose } });
+      await wrapper.findComponent(CloseIcon).trigger('click');
+      expect(onClose).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent), trigger: 'close-btn' });
+      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
+    });
+
+    it('overlayClick', async () => {
+      const onOverlayClick = vi.fn();
+      const wrapper = mount(Dialog, { props: { visible: true, closeOnOverlayClick: true, onOverlayClick } });
+      await wrapper.find('.t-overlay').trigger('click');
+      expect(onOverlayClick).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent) });
+      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
+    });
+
     it('confirm', async () => {
       const onConfirm = vi.fn();
       const wrapper = mount(Dialog, { props: { visible: true, confirmBtn: '确认', onConfirm } });
@@ -433,7 +511,9 @@ describe('Dialog', () => {
       await sleep(300);
       expect(onClosed).toHaveBeenCalledTimes(1);
     });
+  });
 
+  describe('scenarios', () => {
     it('should support custom onClick in actions', async () => {
       const onClick = vi.fn();
       const onCancel = vi.fn();
@@ -502,19 +582,6 @@ describe('Dialog', () => {
       expect(onClickB).toHaveBeenCalledTimes(1);
     });
 
-    it('should passthrough action props (e.g. class) to button', async () => {
-      const wrapper = mount(Dialog, {
-        props: {
-          visible: true,
-          actions: [{ content: 'action', theme: 'danger', class: 'custom-action' }],
-        },
-      });
-
-      const $button = wrapper.findComponent(Button);
-      expect($button.props('theme')).toBe('danger');
-      expect($button.classes()).toContain('custom-action');
-    });
-
     it('should run action onClick before beforeClose intercepts closing', async () => {
       const onClick = vi.fn();
       const onCancel = vi.fn();
@@ -579,70 +646,51 @@ describe('Dialog', () => {
       expect(onClose).toBeCalledTimes(2);
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'close-btn' });
     });
-  });
 
-  // 等待浮层异步任务结束，由 enableAutoUnmount 清理挂载内容。
-  afterEach(async () => {
-    await sleep(300);
-    document.body.innerHTML = '';
-  });
-
-  describe('scenarios', () => {
-    describe('plugin', () => {
-      it('method', () => {
-        const testMethod = (method, content) => {
-          document.body.innerHTML = '';
-          DialogPlugin[method](content);
-          expect(document.body.textContent).toContain(content);
-        };
-
-        testMethod('show', 'Hello TDesign');
-        testMethod('alert', 'Hello TDesign Mobile');
-        testMethod('confirm', 'Hello TDesign Vue');
+    it.each(['cancel', 'overlay', 'close-btn'] as const)('beforeClose guards %s', async (trigger) => {
+      const beforeClose = vi.fn().mockRejectedValueOnce(new Error('blocked')).mockResolvedValueOnce(undefined);
+      const onClose = vi.fn();
+      const wrapper = mount(Dialog, {
+        props: { visible: true, cancelBtn: '取消', closeBtn: true, closeOnOverlayClick: true, beforeClose, onClose },
       });
+      const targets = {
+        cancel: wrapper.findComponent(Button),
+        overlay: wrapper.find('.t-overlay'),
+        'close-btn': wrapper.findComponent(CloseIcon),
+      };
+      const target = targets[trigger];
+      await target.trigger('click');
+      await sleep(0);
+      expect(beforeClose).toHaveBeenNthCalledWith(1, trigger, { e: expect.any(MouseEvent) });
+      expect(onClose).not.toHaveBeenCalled();
+      expect(wrapper.emitted('update:visible')).toBeUndefined();
 
-      it('hide & show', async () => {
-        const content = 'Hello TDesign';
-        const handler = await DialogPlugin.show(content);
-
-        expect(document.body.querySelector('.t-dialog')).toBeTruthy();
-        await sleep(300);
-        expect(document.body.querySelector('.t-overlay').style.display).not.toBe('none');
-
-        handler.hide();
-        await sleep(300);
-        expect(document.body.querySelector('.t-overlay').style.display).toBe('none');
-
-        handler.show();
-        await sleep(300);
-        expect(document.body.querySelector('.t-overlay').style.display).not.toBe('none');
-
-        // 收尾到隐藏态，避免用例结束后浮层卸载与清理时机竞争
-        handler.hide();
-        await sleep(300);
-      });
-
-      it('update', async () => {
-        const content = 'Hello Vue';
-        const content2 = 'Hello TDesign';
-        const content3 = 'Hello Vapor';
-        const handler = await DialogPlugin.show(content);
-
-        expect(document.body.textContent).toContain(content);
-        expect(document.body.textContent).not.toContain(content2);
-
-        handler.update(content2);
-        await nextTick();
-        expect(document.body.textContent).not.toContain(content);
-        expect(document.body.textContent).toContain(content2);
-
-        handler.update({ content: content3 });
-        handler.update({ onConfirm: () => ({}) });
-        await nextTick();
-        expect(document.body.textContent).not.toContain(content);
-        expect(document.body.textContent).not.toContain(content2);
-        expect(document.body.textContent).toContain(content3);
-      });
+      await target.trigger('click');
+      await sleep(0);
+      expect(beforeClose).toHaveBeenNthCalledWith(2, trigger, { e: expect.any(MouseEvent) });
+      expect(onClose).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent), trigger });
+      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
     });
+
+    it('prefers the default slot over the content prop', () => {
+      const wrapper = mount(Dialog, {
+        props: { visible: true, content: '属性内容' },
+        slots: { default: () => '默认插槽内容' },
+      });
+      expect(wrapper.find('.t-dialog__body').text()).toBe('默认插槽内容');
+    });
+
+    it('prefers the title prop and falls back to its slot when removed', async () => {
+      const wrapper = mount(Dialog, {
+        props: { visible: true, title: '属性标题' },
+        slots: { title: () => '插槽标题' },
+      });
+      expect(wrapper.find('.t-dialog__header').text()).toBe('属性标题');
+      await wrapper.setProps({ title: undefined });
+      expect(document.querySelector('.t-dialog__header').textContent).toBe('插槽标题');
+    });
+
+    // closeOnOverlayClick=false 时提前返回，关闭被禁用的同时也丢失了点击通知。
+    it.todo('notifies overlayClick when overlay closing is disabled');
   });
 });

@@ -107,6 +107,16 @@ describe('Divider', () => {
       expect(wrapper.text()).toBe(TEXT);
     });
 
+    it('prefers the default prop and falls back to the default slot when removed', async () => {
+      const wrapper = mount(Divider, {
+        props: { default: TEXT },
+        slots: { default: () => 'default slot' },
+      });
+      expect(wrapper.text()).toBe(TEXT);
+      await wrapper.setProps({ default: undefined });
+      expect(wrapper.text()).toBe('default slot');
+    });
+
     it('prefers the default slot over the content prop', () => {
       const wrapper = mount(Divider, {
         props: { content: TEXT },
