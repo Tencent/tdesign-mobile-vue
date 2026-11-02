@@ -1,105 +1,118 @@
-import { mount } from '@vue/test-utils';
-import { describe, it, expect } from 'vitest';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { afterEach, describe, it, expect } from 'vitest';
 import Divider from '../divider';
 import config from '../../config';
 
 const { prefix } = config;
 const name = `${prefix}-divider`;
 const TEXT = 'tdesign-mobile-vue';
+const aligns = ['left', 'right', 'center'] as const;
+
+enableAutoUnmount(afterEach);
 
 describe('Divider', () => {
   describe('props', () => {
-    it('align[left/right/center]', async () => {
+    it.each(aligns)('align[%s]', async (align) => {
+      const wrapper = mount(Divider);
+      expect(wrapper.classes()).toContain(`${name}--center`);
+
+      await wrapper.setProps({ align });
+      expect(wrapper.classes()).toContain(`${name}--${align}`);
+      aligns
+        .filter((value) => value !== align)
+        .forEach((value) => {
+          expect(wrapper.classes()).not.toContain(`${name}--${value}`);
+        });
+    });
+
+    it('content[string]', async () => {
+      const wrapper = mount(Divider, { props: { content: TEXT } });
+      expect(wrapper.get(`.${name}__content`).text()).toBe(TEXT);
+      await wrapper.setProps({ content: 'updated content' });
+      expect(wrapper.get(`.${name}__content`).text()).toBe('updated content');
+    });
+
+    it('content[function]', () => {
       const wrapper = mount(Divider, {
-        props: {
-          content: () => TEXT,
-        },
+        props: { content: () => <span class="content-node">{TEXT}</span> },
       });
-      const $divider = wrapper.findComponent(Divider);
-      expect($divider.text()).toEqual(TEXT);
-
-      // align 默认 center
-      expect($divider.find(`.${name}`).classes()).toContain(`${name}--center`);
-      ['left', 'right'].forEach((item) => {
-        expect($divider.find(`.${name}`).classes().includes(`${name}--${item}`)).toBeFalsy();
-      });
-
-      const align = 'left';
-      await wrapper.setProps({
-        align,
-      });
-      // align = 'left'
-      expect($divider.find(`.${name}`).classes()).toContain(`${name}--${align}`);
+      expect(wrapper.get(`.${name}__content .content-node`).text()).toBe(TEXT);
     });
 
     it('dashed[boolean]', async () => {
-      const wrapper = mount(() => <Divider dashed />);
-      expect(wrapper.find(`.${name}`).classes()).toContain(`${name}--dashed`);
+      const wrapper = mount(Divider);
+      expect(wrapper.classes()).not.toContain(`${name}--dashed`);
+      await wrapper.setProps({ dashed: true });
+      expect(wrapper.classes()).toContain(`${name}--dashed`);
+      await wrapper.setProps({ dashed: false });
+      expect(wrapper.classes()).not.toContain(`${name}--dashed`);
     });
 
-    it('default[string]', async () => {
-      const wrapper = mount(() => <Divider default={TEXT}></Divider>);
-      expect(wrapper.text()).toBe(TEXT);
+    it('default[string]', () => {
+      const wrapper = mount(Divider, { props: { default: TEXT } });
+      expect(wrapper.get(`.${name}__content`).text()).toBe(TEXT);
     });
 
-    it('default[function]', async () => {
-      const wrapper = mount(() => <Divider default={() => TEXT}></Divider>);
-      expect(wrapper.text()).toBe(TEXT);
+    it('default[function]', () => {
+      const wrapper = mount(Divider, {
+        props: { default: () => <span class="default-node">{TEXT}</span> },
+      });
+      expect(wrapper.get(`.${name}__content .default-node`).text()).toBe(TEXT);
     });
 
     it('layout[horizontal/vertical]', async () => {
-      const wrapper = mount(Divider, {
-        props: {
-          content: () => TEXT,
-        },
-      });
-      const $divider = wrapper.findComponent(Divider);
-      expect($divider.text()).toEqual(TEXT);
-
-      // layout 默认 horizontal
-      expect($divider.find(`.${name}`).classes()).toContain(`${name}--horizontal`);
-      expect($divider.find(`.${name}`).classes()).not.toContain(`${name}--vertical`);
-
-      const layout = 'vertical';
-      await wrapper.setProps({
-        layout,
-      });
-      // layout = 'vertical'
-      expect($divider.find(`.${name}`).classes()).toContain(`${name}--${layout}`);
+      const wrapper = mount(Divider);
+      expect(wrapper.classes()).toContain(`${name}--horizontal`);
+      expect(wrapper.classes()).not.toContain(`${name}--vertical`);
+      await wrapper.setProps({ layout: 'vertical' });
+      expect(wrapper.classes()).toContain(`${name}--vertical`);
+      expect(wrapper.classes()).not.toContain(`${name}--horizontal`);
+      await wrapper.setProps({ layout: 'horizontal' });
+      expect(wrapper.classes()).toContain(`${name}--horizontal`);
+      expect(wrapper.classes()).not.toContain(`${name}--vertical`);
     });
   });
 
   describe('slots', () => {
-    it('content', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Divider>
-              {{
-                content: () => TEXT,
-              }}
-            </Divider>
-          );
-        },
-      });
-      const $divider = wrapper.findComponent(Divider);
-      expect($divider.text()).toEqual(TEXT);
+    it('content', () => {
+      const wrapper = mount(Divider, { slots: { content: () => <span>{TEXT}</span> } });
+      expect(wrapper.get(`.${name}__content span`).text()).toBe(TEXT);
     });
 
-    it('default', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Divider>
-              {{
-                default: () => TEXT,
-              }}
-            </Divider>
-          );
-        },
+    it('default', () => {
+      const wrapper = mount(Divider, { slots: { default: () => <span>{TEXT}</span> } });
+      expect(wrapper.get(`.${name}__content span`).text()).toBe(TEXT);
+    });
+  });
+
+  describe('scenarios', () => {
+    it('renders an empty separator without content', () => {
+      const wrapper = mount(Divider);
+      expect(wrapper.attributes('role')).toBe('separator');
+      expect(wrapper.get(`.${name}__content`).text()).toBe('');
+    });
+
+    it('prefers default content and falls back to content when default is empty', async () => {
+      const wrapper = mount(Divider, { props: { default: 'default text', content: TEXT } });
+      expect(wrapper.text()).toBe('default text');
+      await wrapper.setProps({ default: '' });
+      expect(wrapper.text()).toBe(TEXT);
+    });
+
+    it('prefers an explicit content prop over the content slot', () => {
+      const wrapper = mount(Divider, {
+        props: { content: TEXT },
+        slots: { content: () => 'slot content' },
       });
-      const $divider = wrapper.findComponent(Divider);
-      expect($divider.text()).toEqual(TEXT);
+      expect(wrapper.text()).toBe(TEXT);
+    });
+
+    it('prefers the default slot over the content prop', () => {
+      const wrapper = mount(Divider, {
+        props: { content: TEXT },
+        slots: { default: () => 'default slot' },
+      });
+      expect(wrapper.text()).toBe('default slot');
     });
   });
 });
