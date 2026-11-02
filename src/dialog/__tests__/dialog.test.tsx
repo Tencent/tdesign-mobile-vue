@@ -1,4 +1,4 @@
-import { config, mount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import { nextTick } from 'vue';
@@ -11,10 +11,6 @@ import { sleep } from '../../shared/util';
 
 const { prefix } = prefixConfig;
 const name = `${prefix}-dialog`;
-
-config.global.stubs = {
-  teleport: false,
-};
 
 describe('Dialog', () => {
   describe('props', () => {
@@ -40,6 +36,8 @@ describe('Dialog', () => {
       await $buttons[0].trigger('click');
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
     });
+
+    it.todo('actions[function]');
 
     it('beforeClose[function]', async () => {
       let resolveFn: () => void;
@@ -129,6 +127,21 @@ describe('Dialog', () => {
       expect(document.querySelector(`.${name}__footer`).classList.contains(`${name}__footer--column`)).toBe(true);
     });
 
+    it('cancelBtn[string]', () => {
+      const wrapper = mount(Dialog, { props: { visible: true, cancelBtn: '取消按钮' } });
+      expect(wrapper.findAllComponents(Button)[0].text()).toBe('取消按钮');
+    });
+
+    it('cancelBtn[object]', async () => {
+      const wrapper = mount(Dialog, { props: { visible: true, cancelBtn: { content: '对象按钮', theme: 'danger' } } });
+      expect(wrapper.findAllComponents(Button)[0].text()).toBe('对象按钮');
+      expect(wrapper.findAllComponents(Button)[0].classes()).toContain(`${prefix}-button--danger`);
+      await wrapper.setProps({ cancelBtn: null });
+      expect(wrapper.findAllComponents(Button)).toHaveLength(0);
+    });
+
+    it.todo('cancelBtn[function]');
+
     it('closeBtn[boolean]', async () => {
       const wrapper = mount(Dialog, {
         props: {
@@ -168,6 +181,21 @@ describe('Dialog', () => {
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'overlay' });
     });
 
+    it('confirmBtn[string]', () => {
+      const wrapper = mount(Dialog, { props: { visible: true, confirmBtn: '确认按钮' } });
+      expect(wrapper.findAllComponents(Button)[0].text()).toBe('确认按钮');
+    });
+
+    it('confirmBtn[object]', async () => {
+      const wrapper = mount(Dialog, { props: { visible: true, confirmBtn: { content: '对象按钮', theme: 'danger' } } });
+      expect(wrapper.findAllComponents(Button)[0].text()).toBe('对象按钮');
+      expect(wrapper.findAllComponents(Button)[0].classes()).toContain(`${prefix}-button--danger`);
+      await wrapper.setProps({ confirmBtn: null });
+      expect(wrapper.findAllComponents(Button)).toHaveLength(0);
+    });
+
+    it.todo('confirmBtn[function]');
+
     it('content[string]', async () => {
       const visible = true;
       const title = 'this is title';
@@ -186,7 +214,7 @@ describe('Dialog', () => {
       await wrapper.setProps({
         content: newContent,
       });
-      // expect(wrapper.find('.t-dialog__body').text()).toBe(newContent);
+      expect(document.querySelector('.t-dialog__body').textContent).toBe(newContent);
     });
 
     it('content[function]', async () => {
@@ -276,7 +304,7 @@ describe('Dialog', () => {
       await wrapper.setProps({
         title: newTitle,
       });
-      // expect(wrapper.find('.t-dialog__header').text()).toBe(newTitle);
+      expect(document.querySelector('.t-dialog__header').textContent).toBe(newTitle);
     });
 
     it('top[function]', async () => {
@@ -342,6 +370,26 @@ describe('Dialog', () => {
     });
   });
   describe('slots', () => {
+    it('title', () => {
+      const wrapper = mount(Dialog, { props: { visible: true }, slots: { title: () => <span>插槽标题</span> } });
+      expect(wrapper.find('.t-dialog__header').text()).toBe('插槽标题');
+    });
+
+    it('content', () => {
+      const wrapper = mount(Dialog, { props: { visible: true }, slots: { content: () => <span>插槽内容</span> } });
+      expect(wrapper.find('.t-dialog__body').text()).toBe('插槽内容');
+    });
+
+    it('top', () => {
+      const wrapper = mount(Dialog, { props: { visible: true }, slots: { top: () => <span>插槽顶部</span> } });
+      expect(wrapper.find('.t-dialog').text()).toContain('插槽顶部');
+    });
+
+    it('middle', () => {
+      const wrapper = mount(Dialog, { props: { visible: true }, slots: { middle: () => <span>插槽中间</span> } });
+      expect(wrapper.find('.t-dialog').text()).toContain('插槽中间');
+    });
+
     it('confirmBtn', async () => {
       const visible = true;
       const confirmBtn = 'confirm';
@@ -370,6 +418,22 @@ describe('Dialog', () => {
     });
   });
   describe('events', () => {
+    it('confirm', async () => {
+      const onConfirm = vi.fn();
+      const wrapper = mount(Dialog, { props: { visible: true, confirmBtn: '确认', onConfirm } });
+      await wrapper.findComponent(Button).trigger('click');
+      expect(onConfirm).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
+      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
+    });
+
+    it('closed', async () => {
+      const onClosed = vi.fn();
+      const wrapper = mount(Dialog, { props: { visible: true, onClosed } });
+      await wrapper.setProps({ visible: false });
+      await sleep(300);
+      expect(onClosed).toHaveBeenCalledTimes(1);
+    });
+
     it('should support custom onClick in actions', async () => {
       const onClick = vi.fn();
       const onCancel = vi.fn();
@@ -503,21 +567,21 @@ describe('Dialog', () => {
       expect($buttons).toHaveLength(2);
       expect($buttons.at(0).text()).toBe(cancelBtn);
       expect($buttons.at(1).text()).toBe(confirmBtn);
-      $buttons.at(0).trigger('click');
+      await $buttons.at(0).trigger('click');
       expect(onClose).toBeCalledTimes(1);
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
       expect(onCancel).toBeCalledTimes(1);
-      $buttons.at(1).trigger('click');
+      await $buttons.at(1).trigger('click');
       expect(onConfirm).toBeCalledTimes(1);
 
       const $closeIcon = wrapper.findComponent(CloseIcon);
-      $closeIcon.trigger('click');
+      await $closeIcon.trigger('click');
       expect(onClose).toBeCalledTimes(2);
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'close-btn' });
     });
   });
 
-  // 用例结束后先排空浮层异步任务再清理 teleport 挂载内容，避免卸载期间的 patch 报错
+  // 等待浮层异步任务结束，由 enableAutoUnmount 清理挂载内容。
   afterEach(async () => {
     await sleep(300);
     document.body.innerHTML = '';
