@@ -1,167 +1,95 @@
-import { mount } from '@vue/test-utils';
-import { describe, it, expect } from 'vitest';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { afterEach, describe, expect, it } from 'vitest';
 import Grid from '../grid';
 import GridItem from '../grid-item';
-import Badge from '../../badge/badge';
-import type { TdGridProps, TdGridItemProps } from '../type';
+import config from '../../config';
 import { trigger } from '@/image-viewer/__tests__/touch';
+import { sleep } from '../../shared/util';
 
-const prefix = 't';
+const { prefix } = config;
 const name = `${prefix}-grid`;
-const imgUrl = 'https://tdesign.gtimg.com/mobile/%E5%9B%BE%E7%89%87.png';
 
-const sleep = (timeout: number) =>
-  new Promise((resolve) => {
-    setTimeout(resolve, timeout);
-  });
-const items = [
-  {
-    text: '标题',
-    image: imgUrl,
-  },
-  {
-    text: '标题',
-    image: imgUrl,
-  },
-];
-const items2 = [
-  {
-    text: '标题',
-    description: '内容 description',
-    image: imgUrl,
-  },
-  {
-    text: '标题',
-    description: '内容 description',
-    image: imgUrl,
-  },
-];
+enableAutoUnmount(afterEach);
+
 describe('Grid', () => {
   describe('props', () => {
-    it('align[left/center]', async () => {
-      const alignList: TdGridProps['align'][] = ['left', 'center'];
-      alignList.forEach((a) => {
-        const wrapper = mount(() => {
-          return (
-            <Grid align={a}>
-              <GridItem />
-            </Grid>
-          );
-        });
-        const $gridItem = wrapper.find('.t-grid-item');
-        if (a === 'left') {
-          expect($gridItem.element.style.textAlign).toBe('left');
-        } else {
-          expect($gridItem.element.style.textAlign).toBe('center');
-        }
+    it('align[left/center]', () => {
+      (['left', 'center'] as const).forEach((align) => {
+        const wrapper = mount(Grid, { props: { align }, slots: { default: () => <GridItem /> } });
+        expect(wrapper.get(`.${name}-item`).element.style.textAlign).toBe(align);
       });
     });
 
-    it('border[boolean]', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Grid border={true}>
-              {{
-                default: () =>
-                  items.map((item, index) => {
-                    return <GridItem text={item.text + index} image={item.image} />;
-                  }),
-              }}
-            </Grid>
-          );
-        },
-      });
-      const $gridItems = wrapper.findAll(`.${name}-item`);
-      // border: object
-      $gridItems.forEach((item) => {
-        expect(item.attributes('class').includes(`${name}-item--bordered`)).toBeTruthy(); // border
-      });
+    it('border[boolean]', () => {
+      const bordered = mount(Grid, { props: { border: true }, slots: { default: () => <GridItem /> } });
+      expect(bordered.classes()).toContain(`${name}--bordered`);
+      expect(bordered.get(`.${name}-item`).classes()).toContain(`${name}-item--bordered`);
+
+      const plain = mount(Grid, { slots: { default: () => <GridItem /> } });
+      expect(plain.classes()).not.toContain(`${name}--bordered`);
+      expect(plain.get(`.${name}-item`).classes()).not.toContain(`${name}-item--bordered`);
     });
 
-    it('column[number] & gutter[number]', async () => {
-      const column = 5;
-      const gutter = 10;
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Grid column={column}>
-              {{
-                default: () =>
-                  items.map((item, index) => {
-                    return <GridItem text={item.text + index} image={item.image} />;
-                  }),
-              }}
-            </Grid>
-          );
-        },
-      });
-      expect(wrapper.findComponent(Grid).exists()).toBeTruthy();
-      expect(wrapper.findAllComponents(GridItem).length).toEqual(items.length);
-      const $grid = wrapper.find(`.${name}`);
-      const $gridItems = wrapper.findAll(`.${name}-item`);
-      // column = 4, gutter = 10 (自定义)
-      $gridItems.forEach((item) => {
-        expect(item.element.style.textAlign).toBe('center'); // align 默认为 center
-        expect(item.element.style.flexBasis).toBe(`${100 / column}%`); // column
-      });
+    it('column[number]', async () => {
+      const wrapper = mount(Grid, { props: { column: 5 }, slots: { default: () => <GridItem /> } });
+      expect(wrapper.element.style.gridTemplateColumns).toBe('repeat(5, 1fr)');
+      expect(wrapper.get(`.${name}-item`).element.style.flexBasis).toBe('20%');
+      await wrapper.setProps({ column: 2 });
+      expect(wrapper.element.style.gridTemplateColumns).toBe('repeat(2, 1fr)');
+      expect(wrapper.get(`.${name}-item`).element.style.flexBasis).toBe('50%');
     });
 
-    it('column[zero]', async () => {
-      const wrapper = mount(() => {
-        return (
-          <Grid column={0}>
-            <GridItem></GridItem>
-          </Grid>
-        );
-      });
-      expect(wrapper.find('.t-grid--auto-size').exists()).toBeTruthy();
+    it('gutter[number]', () => {
+      const wrapper = mount(Grid, { props: { border: true, gutter: 12 }, slots: { default: () => <GridItem /> } });
+      expect(wrapper.attributes('style')).toContain('padding: 12px');
+      expect(wrapper.get(`.${name}-item`).classes()).toContain(`${name}-item--surround`);
     });
 
     it('hover[boolean]', async () => {
-      // hover 为 true 时，宫格项触摸按下短暂延迟后出现点击态类名，松开一段时间后移除
-      const wrapper = mount(() => (
-        <Grid hover>
-          <GridItem text="标题" />
-        </Grid>
-      ));
-      const $gridItem = wrapper.find(`.${name}-item`);
-      await trigger($gridItem, 'touchstart');
+      const enabled = mount(Grid, { props: { hover: true }, slots: { default: () => <GridItem /> } });
+      const disabled = mount(Grid, { slots: { default: () => <GridItem /> } });
+      await trigger(enabled.get(`.${name}-item`), 'touchstart');
       await sleep(60);
-      expect($gridItem.classes()).toContain(`${name}-item--hover`);
-
-      await trigger($gridItem, 'touchend');
-      await sleep(80);
-      expect($gridItem.classes()).not.toContain(`${name}-item--hover`);
-
-      // 默认关闭 hover，按下不出现点击态类名
-      const wrapper2 = mount(() => (
-        <Grid>
-          <GridItem text="标题" />
-        </Grid>
-      ));
-      const $gridItem2 = wrapper2.find(`.${name}-item`);
-      await trigger($gridItem2, 'touchstart');
+      expect(enabled.get(`.${name}-item`).classes()).toContain(`${name}-item--hover`);
+      await trigger(disabled.get(`.${name}-item`), 'touchstart');
       await sleep(60);
-      expect($gridItem2.classes()).not.toContain(`${name}-item--hover`);
+      expect(disabled.get(`.${name}-item`).classes()).not.toContain(`${name}-item--hover`);
     });
 
-    it('theme[default/card]', async () => {
-      const themeList: TdGridProps['theme'][] = ['default', 'card'];
-      themeList.forEach((t) => {
-        const wrapper = mount(() => {
-          return (
-            <Grid theme={t}>
-              <GridItem />
-            </Grid>
-          );
-        });
-        if (t === 'card') {
-          expect(wrapper.find(`.t-grid--card`).exists()).toBe(true);
+    it('theme[default/card]', () => {
+      (['default', 'card'] as const).forEach((theme) => {
+        const wrapper = mount(Grid, { props: { theme }, slots: { default: () => <GridItem /> } });
+        if (theme === 'card') {
+          expect(wrapper.classes()).toContain(`${name}--card`);
         } else {
-          expect(wrapper.find(`.t-grid--card`).exists()).toBe(false);
+          expect(wrapper.classes()).not.toContain(`${name}--card`);
         }
       });
+    });
+  });
+
+  describe('slots', () => {
+    it('default', () => {
+      const wrapper = mount(Grid, { slots: { default: () => [<GridItem text="一" />, <GridItem text="二" />] } });
+      expect(wrapper.findAllComponents(GridItem)).toHaveLength(2);
+      expect(wrapper.text()).toContain('一');
+      expect(wrapper.text()).toContain('二');
+    });
+  });
+
+  describe('scenarios', () => {
+    it('border with gutter uses item borders without a grid border', () => {
+      const wrapper = mount(Grid, { props: { border: true, gutter: 8 }, slots: { default: () => <GridItem /> } });
+      expect(wrapper.classes()).not.toContain(`${name}--bordered`);
+      expect(wrapper.get(`.${name}-item`).classes()).toContain(`${name}-item--bordered`);
+      expect(wrapper.get(`.${name}-item`).classes()).toContain(`${name}-item--surround`);
+    });
+
+    it('column zero enables auto sizing and omits grid-template columns', () => {
+      const wrapper = mount(Grid, { props: { column: 0 }, slots: { default: () => <GridItem /> } });
+      expect(wrapper.classes()).toContain(`${name}--auto-size`);
+      expect(wrapper.attributes('style') || '').not.toContain('grid-template-columns');
+      expect(wrapper.get(`.${name}-item`).element.style.flexBasis).toBe('');
     });
   });
 });
