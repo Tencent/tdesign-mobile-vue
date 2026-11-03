@@ -1,124 +1,111 @@
 import { nextTick, ref } from 'vue';
-import { isFunction } from 'lodash-es';
 import { mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import Picker from '../picker';
 import PickerItem from '../picker-item';
-import { getPickerColumns } from '../utils';
-
 import { DEFAULT_ITEM_HEIGHT } from '../picker.class';
 import { DEFAULT_WHEEL_CONFIG } from '../constants';
+import { makeTouch, simulateMoveOption, seasonOptions } from './mount';
+import type { PickerColumn, PickerColumnItem, PickerValue, TdPickerProps } from '../type';
 
-const getRealColumns = (columns) => {
-  if (isFunction(columns)) {
-    const _columns = columns();
-    return getPickerColumns(_columns);
-  }
-  return getPickerColumns(columns);
-};
-
-const seasonOptions = [
-  { label: '春', value: 'spring' },
-  { label: '夏', value: 'summer' },
-  { label: '秋', value: 'autumn' },
-  { label: '冬', value: 'winter' },
+const weekdayOptions: PickerColumn = [
+  { label: '周一', value: 'monday' },
+  { label: '周二', value: 'tuesday' },
+  { label: '周三', value: 'wednesday' },
+  { label: '周四', value: 'thursday' },
+  { label: '周五', value: 'friday' },
+  { label: '周六', value: 'saturday' },
+  { label: '周日', value: 'sunday' },
 ];
 
-const commonProps = {
-  columns: [seasonOptions],
-  defaultValue: [seasonOptions[0].value],
-};
-
-const mountPicker = (props) =>
+const mountPicker = (props: Partial<TdPickerProps> = {}) =>
   mount(Picker, {
-    props: { ...commonProps, ...props },
-  });
-
-const makeTouch = (el, eventName, touchPosition) => {
-  const event = new Event(eventName);
-  if (touchPosition) {
-    event.changedTouches = [touchPosition];
-  }
-
-  el.dispatchEvent(event);
-};
-
-const simulateMoveOption = async (optionContainerEl, distance) => {
-  makeTouch(optionContainerEl, 'touchstart', { pageY: 0 });
-  makeTouch(optionContainerEl, 'touchmove', { pageY: -distance * DEFAULT_ITEM_HEIGHT });
-
-  vi.useFakeTimers().advanceTimersByTime(DEFAULT_WHEEL_CONFIG.inertiaTimeThreshold + 1);
-  makeTouch(optionContainerEl, 'touchend', { pageY: -distance * DEFAULT_ITEM_HEIGHT });
-  vi.useRealTimers();
-
-  await nextTick();
-};
-
-const sleep = (ms) =>
-  new Promise((resolve) => {
-    setTimeout(resolve, ms);
+    props: {
+      columns: [seasonOptions],
+      defaultValue: [seasonOptions[0].value],
+      ...props,
+    },
   });
 
 describe('Picker', () => {
+  afterEach(() => {
+    vi.useRealTimers();
+    vi.restoreAllMocks();
+  });
+
   describe('props', () => {
     it('cancelBtn[string]', () => {
-      const testCancelBtn = (cancelBtn) => {
-        const wrapper = mountPicker({ cancelBtn });
-        const textContainer = wrapper.find('.t-picker__cancel');
-        expect(textContainer.text()).toBe(cancelBtn || '取消');
-      };
+      const wrapper = mountPicker({ cancelBtn: '取消选择' });
+      expect(wrapper.find('.t-picker__cancel').text()).toBe('取消选择');
 
-      testCancelBtn();
-      testCancelBtn('Cancel');
+      // 未设置时使用全局配置文案
+      expect(mountPicker().find('.t-picker__cancel').text()).toBe('取消');
+    });
+
+    it('cancelBtn[boolean]', () => {
+      // false 时不渲染取消按钮
+      const hidden = mountPicker({ cancelBtn: false });
+      expect(hidden.find('.t-picker__cancel').exists()).toBe(false);
+
+      // true 时渲染默认文案
+      const shown = mountPicker({ cancelBtn: true });
+      expect(shown.find('.t-picker__cancel').text()).toBe('取消');
     });
 
     it('columns[array]', () => {
-      const testColumns = (columns, isValidColumns = true) => {
-        const wrapper = mountPicker({ columns });
-        const itemContainers = wrapper.findAll('.t-picker-item__item');
+      // 单列：直接传入一维数组
+      const single = mountPicker({ columns: seasonOptions, defaultValue: undefined });
+      expect(single.findAll('.t-picker-item__group')).toHaveLength(1);
+      expect(single.findAll('.t-picker-item__item')).toHaveLength(seasonOptions.length);
 
-        if (!isValidColumns) {
-          return expect(itemContainers).toHaveLength(0);
-        }
+      // 多列：传入二维数组，每列渲染为一组选项
+      const multiple = mountPicker({ columns: [seasonOptions, weekdayOptions] });
+      expect(multiple.findAll('.t-picker-item__group')).toHaveLength(2);
+      const itemContainers = multiple.findAll('.t-picker-item__item');
+      expect(itemContainers).toHaveLength(seasonOptions.length + weekdayOptions.length);
+      expect(itemContainers.slice(0, seasonOptions.length).map((container) => container.text())).toEqual(
+        seasonOptions.map((option) => option.label),
+      );
+      expect(itemContainers.slice(seasonOptions.length).map((container) => container.text())).toEqual(
+        weekdayOptions.map((option) => option.label),
+      );
 
-        const _columns = getRealColumns(columns);
-
-        expect(itemContainers).toHaveLength(_columns[0].length);
-
-        itemContainers.forEach((container, index) => {
-          if (_columns[index]?.label) {
-            expect(container.text()).toBe(_columns[index]?.label);
-          }
-        });
-      };
-
-      testColumns([undefined], true);
-      testColumns(undefined, false);
-      testColumns([seasonOptions]);
+      // 空数据不渲染选项
+      const empty = mountPicker({ columns: [] });
+      expect(empty.findAll('.t-picker-item__item')).toHaveLength(0);
     });
 
     it('columns[function]', () => {
-      const columns = () => [seasonOptions];
+      const columns = vi.fn((selected: Array<PickerValue>): Array<PickerColumn> => [seasonOptions]);
       const wrapper = mountPicker({ columns });
-      const itemContainers = wrapper.findAll('.t-picker-item__item');
-      expect(itemContainers).toHaveLength(seasonOptions.length);
+
+      // 函数以当前选中值数组作为入参
+      expect(columns).toHaveBeenCalledWith(['spring']);
+      expect(wrapper.findAll('.t-picker-item__item')).toHaveLength(seasonOptions.length);
     });
 
     it('confirmBtn[string]', () => {
-      const testConfirmBtn = (confirmBtn) => {
-        const wrapper = mountPicker({ confirmBtn });
-        const textContainer = wrapper.find('.t-picker__confirm');
-        expect(textContainer.text()).toBe(confirmBtn || '确认');
-      };
+      const wrapper = mountPicker({ confirmBtn: '确认选择' });
+      expect(wrapper.find('.t-picker__confirm').text()).toBe('确认选择');
 
-      testConfirmBtn();
-      testConfirmBtn('Confirm');
+      // 未设置时使用全局配置文案
+      expect(mountPicker().find('.t-picker__confirm').text()).toBe('确认');
+    });
+
+    it('confirmBtn[boolean]', () => {
+      // false 时不渲染确认按钮
+      const hidden = mountPicker({ confirmBtn: false });
+      expect(hidden.find('.t-picker__confirm').exists()).toBe(false);
+
+      // true 时渲染默认文案
+      const shown = mountPicker({ confirmBtn: true });
+      expect(shown.find('.t-picker__confirm').text()).toBe('确认');
     });
 
     it('footer[string]', () => {
-      // footer 类型声明为 TNode，运行时 prop 仅声明 Function，传字符串会有预期内的类型告警，这里静默处理
+      // footer 类型声明为 TNode（运行时 prop 仅声明 Function），传字符串会有预期内的类型告警，这里以类型断言处理
       const wrapper = mount(Picker, {
-        props: { ...commonProps, footer: '自定义底部' },
+        props: { columns: [seasonOptions], footer: '自定义底部' as unknown as TdPickerProps['footer'] },
         global: { config: { warnHandler: () => {} } },
       });
       const $picker = wrapper.find('.t-picker');
@@ -135,9 +122,9 @@ describe('Picker', () => {
     });
 
     it('header[string]', () => {
-      // header 类型声明为 TNode，运行时 prop 仅声明 Function，传字符串会有预期内的类型告警，这里静默处理
+      // header 类型声明为 TNode（运行时 prop 仅声明 Function），传字符串会有预期内的类型告警，这里以类型断言处理
       const wrapper = mount(Picker, {
-        props: { ...commonProps, header: '自定义头部' },
+        props: { columns: [seasonOptions], header: '自定义头部' as unknown as TdPickerProps['header'] },
         global: { config: { warnHandler: () => {} } },
       });
       const $picker = wrapper.find('.t-picker');
@@ -154,21 +141,24 @@ describe('Picker', () => {
 
     it('keys[object]', async () => {
       const aliasOptions = [
-        { text: '春', val: 'spring' },
+        { text: '春', val: 'spring', off: true },
         { text: '夏', val: 'summer' },
       ];
       const onConfirm = vi.fn();
       const wrapper = mountPicker({
-        columns: [aliasOptions],
-        keys: { label: 'text', value: 'val' },
+        columns: [aliasOptions as unknown as PickerColumn],
+        keys: { label: 'text', value: 'val', disabled: 'off' },
         defaultValue: ['summer'],
         onConfirm,
       });
-      // keys 别名解析 columns 的 label/value，defaultValue 按 val 匹配选中
-      const $items = wrapper.findAll('.t-picker-item__item');
-      expect($items).toHaveLength(2);
-      expect($items[0].text()).toBe('春');
-      expect($items[1].text()).toBe('夏');
+
+      // 按别名解析 label 与 disabled
+      const itemContainers = wrapper.findAll('.t-picker-item__item');
+      expect(itemContainers).toHaveLength(aliasOptions.length);
+      expect(itemContainers.map((container) => container.text())).toEqual(['春', '夏']);
+      expect(itemContainers[0].classes()).toContain('t-picker-item__item--disabled');
+
+      // defaultValue 按别名 val 匹配选中
       expect(wrapper.find('.t-picker-item__item--active').text()).toBe('夏');
 
       // 确认时按别名返回 value/label
@@ -177,85 +167,107 @@ describe('Picker', () => {
     });
 
     it('option[function]', () => {
-      // 自定义选项渲染：option 函数接收 (option, index) 参数，替换默认 label 渲染
-      const wrapper = mountPicker({
-        option: (option, index) => `${option.label}-${index}`,
-      });
+      const wrapper = mountPicker({ option: (option: PickerColumnItem, index: number) => `${option.label}-${index}` });
       const itemContainers = wrapper.findAll('.t-picker-item__item');
       expect(itemContainers).toHaveLength(seasonOptions.length);
-      itemContainers.forEach((container, index) => {
-        expect(container.text()).toBe(`${seasonOptions[index].label}-${index}`);
-      });
+      expect(itemContainers.map((container) => container.text())).toEqual(
+        seasonOptions.map((option, index) => `${option.label}-${index}`),
+      );
     });
 
     it('renderLabel[function]', () => {
-      const renderLabel = (item) => `${item.label} ${item.value}`;
-      const wrapper = mountPicker({ renderLabel });
-      const itemContainers = wrapper.findAll('.t-picker-item__item');
-      expect(itemContainers).toHaveLength(seasonOptions.length);
+      const wrapper = mountPicker({ renderLabel: (item: PickerColumnItem) => `${item.label} ${item.value}` });
+      expect(wrapper.findAll('.t-picker-item__item').map((container) => container.text())).toEqual(
+        seasonOptions.map((option) => `${option.label} ${option.value}`),
+      );
+    });
 
-      itemContainers.forEach((container, index) => expect(container.text()).toBe(renderLabel(seasonOptions[index])));
+    it('swipeDuration[string]', () => {
+      const wrapper = mountPicker({ swipeDuration: '600' });
+      expect(wrapper.findComponent(PickerItem).props('wheelConfig')).toEqual({
+        ...DEFAULT_WHEEL_CONFIG,
+        inertiaDuration: 600,
+      });
     });
 
     it('swipeDuration[number]', () => {
-      // swipeDuration 惯性滚动时长透传给滚轮子组件；优先级高于 wheelConfig.inertiaDuration
       const wrapper = mountPicker({ swipeDuration: 500 });
       expect(wrapper.findComponent(PickerItem).props('wheelConfig')).toEqual({
         ...DEFAULT_WHEEL_CONFIG,
         inertiaDuration: 500,
       });
 
-      const wrapper2 = mountPicker({ swipeDuration: 500, wheelConfig: { inertiaDuration: 999 } });
-      expect(wrapper2.findComponent(PickerItem).props('wheelConfig').inertiaDuration).toBe(500);
+      // 0 表示取消惯性滚动
+      const disabled = mountPicker({ swipeDuration: 0 });
+      expect(disabled.findComponent(PickerItem).props('wheelConfig').inertiaDuration).toBe(0);
     });
 
     it('title[string]', () => {
-      const testTitle = (title) => {
-        const wrapper = mountPicker({ title });
-        const textContainer = wrapper.find('.t-picker__title');
-        expect(textContainer.text()).toBe(title || '');
-      };
+      expect(mountPicker({ title: '选择季节' }).find('.t-picker__title').text()).toBe('选择季节');
 
-      testTitle();
-      testTitle('Choose Season');
+      // 默认为空字符串
+      expect(mountPicker().find('.t-picker__title').text()).toBe('');
     });
 
     it('value[array]', async () => {
-      const value = ref([seasonOptions[1].value]);
-      const wrapper = mount(<Picker v-model={value.value} {...commonProps} />);
-      const textContainer = wrapper.find('.t-picker-item__item--active');
-      expect(textContainer.text()).toBe(seasonOptions[1].label);
+      const value = ref<Array<PickerValue>>([seasonOptions[1].value]);
+      const wrapper = mount({
+        setup() {
+          return () => <Picker v-model:value={value.value} columns={[seasonOptions]} />;
+        },
+      });
 
+      // 受控初值同步到选中态
+      expect(wrapper.find('.t-picker-item__item--active').text()).toBe(seasonOptions[1].label);
+
+      // 滚动两项后确认，受控值经 update:value 回写
       await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
       await wrapper.find('.t-picker__confirm').trigger('click');
       expect(value.value).toStrictEqual([seasonOptions[3].value]);
+
+      // 外部更新受控值，选中态跟随
+      value.value = [seasonOptions[0].value];
+      await nextTick();
+      await nextTick();
+      expect(wrapper.find('.t-picker-item__item--active').text()).toBe(seasonOptions[0].label);
+    });
+
+    it('modelValue[array]', async () => {
+      const modelValue = ref<Array<PickerValue>>([seasonOptions[2].value]);
+      const wrapper = mount({
+        setup() {
+          return () => <Picker v-model={modelValue.value} columns={[seasonOptions]} />;
+        },
+      });
+
+      // 受控初值同步到选中态
+      expect(wrapper.find('.t-picker-item__item--active').text()).toBe(seasonOptions[2].label);
+
+      // 滚动一项后确认，受控值经 update:modelValue 回写
+      await simulateMoveOption(wrapper.find('.t-picker-item').element, 1);
+      await wrapper.find('.t-picker__confirm').trigger('click');
+      expect(modelValue.value).toStrictEqual([seasonOptions[3].value]);
     });
 
     it('defaultValue[array]', () => {
       const selector = '.t-picker-item__item--active';
-      // valid option value
-      let wrapper = mountPicker({ defaultValue: [seasonOptions[1].value] });
-      let textContainer = wrapper.find(selector);
-      expect(textContainer.text()).toBe(seasonOptions[1].label);
 
-      // invalid option value
-      wrapper = mountPicker({ defaultValue: ['NOT_EXIST'] });
-      textContainer = wrapper.find(selector);
-      expect(textContainer.text()).toBe(seasonOptions[0].label);
+      // 合法选项值
+      const wrapper = mountPicker({ defaultValue: [seasonOptions[1].value] });
+      expect(wrapper.find(selector).text()).toBe(seasonOptions[1].label);
+
+      // 非法选项值回退到第一项
+      const invalid = mountPicker({ defaultValue: ['NOT_EXIST'] });
+      expect(invalid.find(selector).text()).toBe(seasonOptions[0].label);
     });
 
     it('wheelConfig[object]', () => {
-      // wheelConfig 与默认配置合并后透传给滚轮子组件
       const wrapper = mountPicker({ wheelConfig: { bounceDuration: 50, transitionDuration: 200 } });
       expect(wrapper.findComponent(PickerItem).props('wheelConfig')).toEqual({
         ...DEFAULT_WHEEL_CONFIG,
         bounceDuration: 50,
         transitionDuration: 200,
       });
-
-      // swipeDuration 存在默认值，其优先级高于 wheelConfig.inertiaDuration
-      const wrapper2 = mountPicker({ wheelConfig: { inertiaDuration: 999 } });
-      expect(wrapper2.findComponent(PickerItem).props('wheelConfig').inertiaDuration).toBe(300);
     });
   });
 
@@ -265,7 +277,8 @@ describe('Picker', () => {
       const wrapper = mountPicker({ onCancel });
       await wrapper.find('.t-picker__cancel').trigger('click');
 
-      expect(onCancel).toBeCalledTimes(1);
+      expect(onCancel).toHaveBeenCalledTimes(1);
+      expect(onCancel).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
     });
 
     it('change', async () => {
@@ -273,8 +286,10 @@ describe('Picker', () => {
       const wrapper = mountPicker({ onChange });
       await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
       await wrapper.find('.t-picker__confirm').trigger('click');
-      expect(onChange).toBeCalledTimes(1);
-      expect(onChange).toBeCalledWith([seasonOptions[2].value]);
+
+      // 注：文档声明第二个参数 context（columns/e），当前源码仅透传 value
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenCalledWith([seasonOptions[2].value]);
     });
 
     it('confirm', async () => {
@@ -282,114 +297,202 @@ describe('Picker', () => {
       const wrapper = mountPicker({ onConfirm });
       await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
       await wrapper.find('.t-picker__confirm').trigger('click');
-      expect(onConfirm).toBeCalledTimes(1);
-      expect(onConfirm).toBeCalledWith([seasonOptions[2].value], {
+
+      expect(onConfirm).toHaveBeenCalledTimes(1);
+      expect(onConfirm).toHaveBeenCalledWith([seasonOptions[2].value], {
         e: expect.any(MouseEvent),
         index: [2],
-        label: ['秋'],
+        label: [seasonOptions[2].label],
       });
     });
 
     it('pick', async () => {
-      // columns is static array
       const onPick = vi.fn();
-      let wrapper = mountPicker({ onPick, columns: [seasonOptions] });
-      await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
-      expect(onPick).toBeCalledTimes(1);
-      expect(onPick).toBeCalledWith([seasonOptions[2].value], { column: 0, index: 2 });
 
-      // columns is function, can change dynamically
-      let monthOptions = [];
-      const columns = (item = seasonOptions[0].value) => {
-        switch (item[0]) {
-          case 'spring':
+      // columns 为静态数组
+      const staticWrapper = mountPicker({ onPick });
+      await simulateMoveOption(staticWrapper.find('.t-picker-item').element, 2);
+      expect(onPick).toHaveBeenCalledTimes(1);
+      expect(onPick).toHaveBeenCalledWith([seasonOptions[2].value], { column: 0, index: 2 });
+
+      // columns 为函数时，滚动某列后其余列数据联动刷新
+      let monthOptions: PickerColumn = [];
+      const columns = (selected: Array<PickerValue> = []): Array<PickerColumn> => {
+        switch (selected[0]) {
+          case seasonOptions[0].value:
             monthOptions = [
               { label: '一月', value: 'January' },
               { label: '二月', value: 'February' },
               { label: '三月', value: 'March' },
             ];
             break;
-          case 'summer':
-            monthOptions = [
-              { label: '四月', value: 'April' },
-              { label: '五月', value: 'May' },
-              { label: '六月', value: 'June' },
-            ];
-            break;
-          case 'autumn':
+          case seasonOptions[2].value:
             monthOptions = [
               { label: '七月', value: 'July' },
               { label: '八月', value: 'August' },
               { label: '九月', value: 'September' },
             ];
             break;
-          case 'winter':
-            monthOptions = [
-              { label: '十月', value: 'October' },
-              { label: '十一月', value: 'November' },
-              { label: '十二月', value: 'December' },
-            ];
-            break;
           default:
-            throw new Error('unexpected item!');
+            monthOptions = [];
+            break;
         }
         return [seasonOptions, monthOptions];
       };
+      const wrapper = mountPicker({ onPick, columns });
+      await simulateMoveOption(wrapper.findAll('.t-picker-item')[0].element, 2);
 
-      wrapper = mountPicker({ onPick, columns });
-      await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
-      expect(onPick).toBeCalledTimes(2);
-      expect(onPick).toBeCalledWith([seasonOptions[2].value], { column: 0, index: 2 });
+      expect(onPick).toHaveBeenCalledTimes(2);
+      expect(onPick).toHaveBeenLastCalledWith([seasonOptions[2].value], { column: 0, index: 2 });
+
       const itemContainers = wrapper.findAll('.t-picker-item__item');
-
       expect(itemContainers).toHaveLength(seasonOptions.length + monthOptions.length);
-      for (let i = 0; i < seasonOptions.length; i++) {
-        expect(itemContainers[i].text()).toBe(seasonOptions[i].label);
-      }
+      expect(itemContainers.slice(0, seasonOptions.length).map((container) => container.text())).toEqual(
+        seasonOptions.map((option) => option.label),
+      );
+      expect(itemContainers.slice(seasonOptions.length).map((container) => container.text())).toEqual(
+        monthOptions.map((option) => option.label),
+      );
+    });
+  });
 
-      for (let j = 0; j < monthOptions.length; j++) {
-        expect(itemContainers[seasonOptions.length + j].text()).toBe(monthOptions[j].label);
-      }
+  describe('slots', () => {
+    it('footer', () => {
+      const wrapper = mount(Picker, {
+        props: { columns: [seasonOptions] },
+        slots: { footer: () => <div class="picker-footer-slot">自定义底部</div> },
+      });
+      expect(wrapper.find('.picker-footer-slot').exists()).toBe(true);
+      expect(wrapper.find('.picker-footer-slot').text()).toBe('自定义底部');
+    });
+
+    it('header', () => {
+      const wrapper = mount(Picker, {
+        props: { columns: [seasonOptions] },
+        slots: { header: () => <div class="picker-header-slot">自定义头部</div> },
+      });
+      expect(wrapper.find('.picker-header-slot').exists()).toBe(true);
+      expect(wrapper.find('.picker-header-slot').text()).toBe('自定义头部');
+    });
+
+    it('option', () => {
+      const wrapper = mount(Picker, {
+        props: { columns: [seasonOptions] },
+        slots: { option: (option: PickerColumnItem, index: number) => `${option.label}@${index}` },
+      });
+      expect(wrapper.findAll('.t-picker-item__item').map((container) => container.text())).toEqual(
+        seasonOptions.map((option, index) => `${option.label}@${index}`),
+      );
     });
   });
 
   describe('scenarios', () => {
     describe('wheel scrolling', () => {
-      beforeAll(() => {
-        vi.spyOn(window, 'requestAnimationFrame').mockImplementation(async (cb) => {
-          await sleep(50);
-          cb(Date.now());
+      it('keeps scrolling by inertia after a fast swipe', () => {
+        const onPick = vi.fn();
+        // 同步执行 rAF 回调，让惯性动画在 touchend 内完成
+        let frame = 0;
+        vi.spyOn(window, 'requestAnimationFrame').mockImplementation((callback) => {
+          frame += 1;
+          callback(frame * 16);
+          return frame;
         });
-      });
 
-      afterAll(() => {
-        window.requestAnimationFrame.mockRestore();
-      });
-
-      it('scroll quickly to trigger animation', async () => {
-        const wrapper = mountPicker();
+        const wrapper = mountPicker({ onPick });
         const el = wrapper.find('.t-picker-item').element;
 
         makeTouch(el, 'touchstart', { pageY: 0 });
         makeTouch(el, 'touchmove', { pageY: -2 * DEFAULT_ITEM_HEIGHT });
-
-        await sleep(200);
         makeTouch(el, 'touchend', { pageY: -2 * DEFAULT_ITEM_HEIGHT });
 
-        // waiting for animation
-        await sleep(1000);
-
-        // scroll  to the last one
-        const textContainer = wrapper.find('.t-picker-item__item--active');
-        expect(textContainer.text()).toBe(seasonOptions[3].label);
+        // 惯性滚动越过拖拽位置，最终停留在最后一项
+        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(seasonOptions[3].label);
+        expect(onPick).toHaveBeenCalledWith([seasonOptions[3].value], { column: 0, index: 3 });
       });
 
-      it('scroll slowly to prevent animation', async () => {
+      it('stops on the swiped option after a slow swipe', async () => {
         const wrapper = mountPicker();
-        const el = wrapper.find('.t-picker-item').element;
-        simulateMoveOption(el, 2);
-        const textContainer = wrapper.find('.t-picker-item__item--active');
-        expect(textContainer.text()).toBe(seasonOptions[2].label);
+        await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
+        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(seasonOptions[2].label);
+      });
+    });
+
+    describe('disabled options', () => {
+      const workdayOptions: PickerColumn = [
+        { label: '周一', value: 'monday' },
+        { label: '周二', value: 'tuesday', disabled: true },
+        { label: '周三', value: 'wednesday' },
+      ];
+
+      it('marks disabled options and skips one when the wheel lands on it', async () => {
+        const onPick = vi.fn();
+        const wrapper = mountPicker({ columns: [workdayOptions], onPick });
+        expect(wrapper.findAll('.t-picker-item__item')[1].classes()).toContain('t-picker-item__item--disabled');
+
+        // 滚动落在禁用项上时，吸附到最近的可用项（优先沿下标增大方向搜索命中周三）
+        await simulateMoveOption(wrapper.find('.t-picker-item').element, 1);
+        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(workdayOptions[2].label);
+        expect(onPick).toHaveBeenCalledWith([workdayOptions[2].value], { column: 0, index: 2 });
+      });
+
+      it('falls back to a nearby enabled option when defaultValue hits a disabled one', () => {
+        const onPick = vi.fn();
+        const wrapper = mountPicker({ columns: [workdayOptions], defaultValue: ['tuesday'], onPick });
+
+        // 回退到最近的可用项（双向搜索优先命中周三），并通过 pick 通知
+        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(workdayOptions[2].label);
+        expect(onPick).toHaveBeenCalledWith([workdayOptions[2].value], { column: 0, index: 2 });
+      });
+    });
+
+    describe('multi-column selection', () => {
+      it('confirm returns the value/label/index of every column', async () => {
+        const onConfirm = vi.fn();
+        const wrapper = mountPicker({
+          columns: [seasonOptions, weekdayOptions],
+          defaultValue: ['spring', 'monday'],
+          onConfirm,
+        });
+        expect(wrapper.findAll('.t-picker-item__group')).toHaveLength(2);
+
+        // 滚动第二列两项后确认
+        await simulateMoveOption(wrapper.findAll('.t-picker-item')[1].element, 2);
+        await wrapper.find('.t-picker__confirm').trigger('click');
+
+        expect(onConfirm).toHaveBeenCalledWith([seasonOptions[0].value, weekdayOptions[2].value], {
+          e: expect.any(MouseEvent),
+          index: [0, 2],
+          label: [seasonOptions[0].label, weekdayOptions[2].label],
+        });
+      });
+    });
+
+    describe('rendering priority', () => {
+      it('option slot overrides the option prop', () => {
+        const wrapper = mount(Picker, {
+          props: { columns: [seasonOptions], option: (option: PickerColumnItem) => `prop-${option.label}` },
+          slots: { option: (option: PickerColumnItem) => `slot-${option.label}` },
+        });
+        expect(wrapper.findAll('.t-picker-item__item').map((container) => container.text())).toEqual(
+          seasonOptions.map((option) => `slot-${option.label}`),
+        );
+      });
+
+      it('option overrides renderLabel', () => {
+        const wrapper = mountPicker({
+          option: (option: PickerColumnItem) => `option-${option.label}`,
+          renderLabel: (item: PickerColumnItem) => `label-${item.label}`,
+        });
+        expect(wrapper.findAll('.t-picker-item__item').map((container) => container.text())).toEqual(
+          seasonOptions.map((option) => `option-${option.label}`),
+        );
+      });
+    });
+
+    describe('wheel config merging', () => {
+      it('swipeDuration takes precedence over wheelConfig.inertiaDuration', () => {
+        const wrapper = mountPicker({ swipeDuration: 500, wheelConfig: { inertiaDuration: 999 } });
+        expect(wrapper.findComponent(PickerItem).props('wheelConfig').inertiaDuration).toBe(500);
       });
     });
   });
