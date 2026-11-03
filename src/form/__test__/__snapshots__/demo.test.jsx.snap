@@ -264,20 +264,23 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <div
                   class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
                 >
-                  <svg
-                    class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
-                    fill="none"
-                    height="1em"
-                    style="fill: none;"
-                    viewBox="0 0 24 24"
-                    width="1em"
+                  <div
+                    class="t-radio__icon-circle t-radio__icon-circle--checked"
                   >
-                    <path
-                      d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <!---->
+                    <svg
+                      class="t-icon t-icon-check-1"
+                      fill="none"
+                      height="1em"
+                      style="fill: none;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="t-radio__content"
@@ -307,8 +310,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 >
                   <div
                     class="t-radio__icon-circle"
-                  />
-                  <!---->
+                  >
+                    <!---->
+                  </div>
                 </div>
                 <div
                   class="t-radio__content"
@@ -338,8 +342,9 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 >
                   <div
                     class="t-radio__icon-circle"
-                  />
-                  <!---->
+                  >
+                    <!---->
+                  </div>
                 </div>
                 <div
                   class="t-radio__content"
@@ -1093,9 +1098,10 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                               class="t-radio__icon t-radio__icon--right"
                             >
                               <div
-                                class="placeholder"
-                              />
-                              <!---->
+                                class="t-radio__icon-line"
+                              >
+                                <!---->
+                              </div>
                             </div>
                             <div
                               class="t-radio__content"
@@ -1123,9 +1129,10 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                               class="t-radio__icon t-radio__icon--right"
                             >
                               <div
-                                class="placeholder"
-                              />
-                              <!---->
+                                class="t-radio__icon-line"
+                              >
+                                <!---->
+                              </div>
                             </div>
                             <div
                               class="t-radio__content"
@@ -2228,20 +2235,23 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <div
                         class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
                       >
-                        <svg
-                          class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
-                          fill="none"
-                          height="1em"
-                          style="fill: none;"
-                          viewBox="0 0 24 24"
-                          width="1em"
+                        <div
+                          class="t-radio__icon-circle t-radio__icon-circle--checked"
                         >
-                          <path
-                            d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        <!---->
+                          <svg
+                            class="t-icon t-icon-check-1"
+                            fill="none"
+                            height="1em"
+                            style="fill: none;"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                          >
+                            <path
+                              d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -2271,8 +2281,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       >
                         <div
                           class="t-radio__icon-circle"
-                        />
-                        <!---->
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -2302,8 +2313,9 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       >
                         <div
                           class="t-radio__icon-circle"
-                        />
-                        <!---->
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -3057,9 +3069,10 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                     class="t-radio__icon t-radio__icon--right"
                                   >
                                     <div
-                                      class="placeholder"
-                                    />
-                                    <!---->
+                                      class="t-radio__icon-line"
+                                    >
+                                      <!---->
+                                    </div>
                                   </div>
                                   <div
                                     class="t-radio__content"
@@ -3087,9 +3100,10 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                     class="t-radio__icon t-radio__icon--right"
                                   >
                                     <div
-                                      class="placeholder"
-                                    />
-                                    <!---->
+                                      class="t-radio__icon-line"
+                                    >
+                                      <!---->
+                                    </div>
                                   </div>
                                   <div
                                     class="t-radio__content"
@@ -4055,20 +4069,23 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <div
                   class="t-radio__icon t-radio__icon--left t-radio__icon--checked"
                 >
-                  <svg
-                    class="t-icon t-icon-check-circle-filled t-radio__icon-wrap"
-                    fill="none"
-                    height="1em"
-                    style="fill: none;"
-                    viewBox="0 0 24 24"
-                    width="1em"
+                  <div
+                    class="t-radio__icon-circle t-radio__icon-circle--checked"
                   >
-                    <path
-                      d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <!---->
+                    <svg
+                      class="t-icon t-icon-check-1"
+                      fill="none"
+                      height="1em"
+                      style="fill: none;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </div>
                 </div>
                 <div
                   class="t-radio__content"
@@ -4098,8 +4115,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 >
                   <div
                     class="t-radio__icon-circle"
-                  />
-                  <!---->
+                  >
+                    <!---->
+                  </div>
                 </div>
                 <div
                   class="t-radio__content"
@@ -4129,8 +4147,9 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 >
                   <div
                     class="t-radio__icon-circle"
-                  />
-                  <!---->
+                  >
+                    <!---->
+                  </div>
                 </div>
                 <div
                   class="t-radio__content"
@@ -4880,9 +4899,10 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                               class="t-radio__icon t-radio__icon--right"
                             >
                               <div
-                                class="placeholder"
-                              />
-                              <!---->
+                                class="t-radio__icon-line"
+                              >
+                                <!---->
+                              </div>
                             </div>
                             <div
                               class="t-radio__content"
@@ -4910,9 +4930,10 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                               class="t-radio__icon t-radio__icon--right"
                             >
                               <div
-                                class="placeholder"
-                              />
-                              <!---->
+                                class="t-radio__icon-line"
+                              >
+                                <!---->
+                              </div>
                             </div>
                             <div
                               class="t-radio__content"

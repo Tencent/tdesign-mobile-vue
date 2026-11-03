@@ -13,19 +13,23 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <span
+            class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
           >
-            <path
-              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="t-icon t-icon-check-1"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -51,19 +55,23 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <span
+            class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
           >
-            <path
-              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="t-icon t-icon-check-1"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -89,19 +97,23 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <span
+            class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
           >
-            <path
-              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="t-icon t-icon-check-1"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -127,19 +139,23 @@ exports[`Checkbox > Checkbox allVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <span
+            class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
           >
-            <path
-              d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-              fill="currentColor"
-            />
-          </svg>
+            <svg
+              class="t-icon t-icon-check-1"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
+            >
+              <path
+                d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -177,19 +193,23 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
       <div
         class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
       >
-        <svg
-          class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-          fill="none"
-          height="1em"
-          style="fill: none;"
-          viewBox="0 0 24 24"
-          width="1em"
+        <span
+          class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
         >
-          <path
-            d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-            fill="currentColor"
-          />
-        </svg>
+          <svg
+            class="t-icon t-icon-check-1"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
       </div>
       <div
         class="t-checkbox__content"
@@ -215,19 +235,23 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
       <div
         class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
       >
-        <svg
-          class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-          fill="none"
-          height="1em"
-          style="fill: none;"
-          viewBox="0 0 24 24"
-          width="1em"
+        <span
+          class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
         >
-          <path
-            d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-            fill="currentColor"
-          />
-        </svg>
+          <svg
+            class="t-icon t-icon-check-1"
+            fill="none"
+            height="1em"
+            style="fill: none;"
+            viewBox="0 0 24 24"
+            width="1em"
+          >
+            <path
+              d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
       </div>
       <div
         class="t-checkbox__content"
@@ -253,12 +277,11 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
       <div
         class="t-checkbox__icon t-checkbox__icon--left"
       >
-        
-        <div
+        <span
           class="t-checkbox__icon-circle"
-        />
-        <!---->
-        
+        >
+          <!---->
+        </span>
       </div>
       <div
         class="t-checkbox__content"
@@ -284,12 +307,11 @@ exports[`Checkbox > Checkbox baseVue demo works fine 1`] = `
       <div
         class="t-checkbox__icon t-checkbox__icon--left"
       >
-        
-        <div
+        <span
           class="t-checkbox__icon-circle"
-        />
-        <!---->
-        
+        >
+          <!---->
+        </span>
       </div>
       <div
         class="t-checkbox__content"
@@ -327,19 +349,23 @@ exports[`Checkbox > Checkbox cardVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      <svg
-        class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-        fill="none"
-        height="1em"
-        style="fill: none;"
-        viewBox="0 0 24 24"
-        width="1em"
+      <span
+        class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
       >
-        <path
-          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-          fill="currentColor"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-check-1"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
     </div>
     <div
       class="t-checkbox__content"
@@ -366,19 +392,23 @@ exports[`Checkbox > Checkbox cardVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      <svg
-        class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-        fill="none"
-        height="1em"
-        style="fill: none;"
-        viewBox="0 0 24 24"
-        width="1em"
+      <span
+        class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
       >
-        <path
-          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-          fill="currentColor"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-check-1"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
     </div>
     <div
       class="t-checkbox__content"
@@ -405,12 +435,11 @@ exports[`Checkbox > Checkbox cardVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left"
     >
-      
-      <div
+      <span
         class="t-checkbox__icon-circle"
-      />
-      <!---->
-      
+      >
+        <!---->
+      </span>
     </div>
     <div
       class="t-checkbox__content"
@@ -447,19 +476,23 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      <svg
-        class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-        fill="none"
-        height="1em"
-        style="fill: none;"
-        viewBox="0 0 24 24"
-        width="1em"
+      <span
+        class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
       >
-        <path
-          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-          fill="currentColor"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-check-1"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
     </div>
     <div
       class="t-checkbox__content"
@@ -484,19 +517,23 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      <svg
-        class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-        fill="none"
-        height="1em"
-        style="fill: none;"
-        viewBox="0 0 24 24"
-        width="1em"
+      <span
+        class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
       >
-        <path
-          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-          fill="currentColor"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-check-1"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
     </div>
     <div
       class="t-checkbox__content"
@@ -521,12 +558,11 @@ exports[`Checkbox > Checkbox horizontalVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left"
     >
-      
-      <div
+      <span
         class="t-checkbox__icon-circle"
-      />
-      <!---->
-      
+      >
+        <!---->
+      </span>
     </div>
     <div
       class="t-checkbox__content"
@@ -595,19 +631,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
               >
-                <svg
-                  class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-                  fill="none"
-                  height="1em"
-                  style="fill: none;"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <span
+                  class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
                 >
-                  <path
-                    d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    class="t-icon t-icon-check-1"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -633,19 +673,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
               >
-                <svg
-                  class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-                  fill="none"
-                  height="1em"
-                  style="fill: none;"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <span
+                  class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
                 >
-                  <path
-                    d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  <svg
+                    class="t-icon t-icon-check-1"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -671,12 +715,11 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--left"
               >
-                
-                <div
+                <span
                   class="t-checkbox__icon-circle"
-                />
-                <!---->
-                
+                >
+                  <!---->
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -702,12 +745,11 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--left"
               >
-                
-                <div
+                <span
                   class="t-checkbox__icon-circle"
-                />
-                <!---->
-                
+                >
+                  <!---->
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -762,19 +804,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
             >
-              <svg
-                class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <span
+                class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
               >
-                <path
-                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  class="t-icon t-icon-check-1"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
             </div>
             <div
               class="t-checkbox__content"
@@ -799,19 +845,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
             >
-              <svg
-                class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <span
+                class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
               >
-                <path
-                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  class="t-icon t-icon-check-1"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
             </div>
             <div
               class="t-checkbox__content"
@@ -836,12 +886,11 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left"
             >
-              
-              <div
+              <span
                 class="t-checkbox__icon-circle"
-              />
-              <!---->
-              
+              >
+                <!---->
+              </span>
             </div>
             <div
               class="t-checkbox__content"
@@ -893,19 +942,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
                 >
-                  <svg
-                    class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-                    fill="none"
-                    height="1em"
-                    style="fill: none;"
-                    viewBox="0 0 24 24"
-                    width="1em"
+                  <span
+                    class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
                   >
-                    <path
-                      d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                      fill="currentColor"
-                    />
-                  </svg>
+                    <svg
+                      class="t-icon t-icon-check-1"
+                      fill="none"
+                      height="1em"
+                      style="fill: none;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
                 </div>
                 <div
                   class="t-checkbox__content"
@@ -931,19 +984,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
                 >
-                  <svg
-                    class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-                    fill="none"
-                    height="1em"
-                    style="fill: none;"
-                    viewBox="0 0 24 24"
-                    width="1em"
+                  <span
+                    class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
                   >
-                    <path
-                      d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                      fill="currentColor"
-                    />
-                  </svg>
+                    <svg
+                      class="t-icon t-icon-check-1"
+                      fill="none"
+                      height="1em"
+                      style="fill: none;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
                 </div>
                 <div
                   class="t-checkbox__content"
@@ -969,19 +1026,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
                 >
-                  <svg
-                    class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-                    fill="none"
-                    height="1em"
-                    style="fill: none;"
-                    viewBox="0 0 24 24"
-                    width="1em"
+                  <span
+                    class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
                   >
-                    <path
-                      d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                      fill="currentColor"
-                    />
-                  </svg>
+                    <svg
+                      class="t-icon t-icon-check-1"
+                      fill="none"
+                      height="1em"
+                      style="fill: none;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
                 </div>
                 <div
                   class="t-checkbox__content"
@@ -1007,19 +1068,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
                 <div
                   class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
                 >
-                  <svg
-                    class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-                    fill="none"
-                    height="1em"
-                    style="fill: none;"
-                    viewBox="0 0 24 24"
-                    width="1em"
+                  <span
+                    class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
                   >
-                    <path
-                      d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                      fill="currentColor"
-                    />
-                  </svg>
+                    <svg
+                      class="t-icon t-icon-check-1"
+                      fill="none"
+                      height="1em"
+                      style="fill: none;"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                    >
+                      <path
+                        d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
                 </div>
                 <div
                   class="t-checkbox__content"
@@ -1077,19 +1142,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked t-checkbox__icon--disabled"
             >
-              <svg
-                class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <span
+                class="t-checkbox__icon-circle t-checkbox__icon-circle--checked t-checkbox__icon-circle--disabled"
               >
-                <path
-                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  class="t-icon t-icon-check-1"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
             </div>
             <div
               class="t-checkbox__content"
@@ -1115,12 +1184,11 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--disabled"
             >
-              
-              <div
+              <span
                 class="t-checkbox__icon-circle t-checkbox__icon-circle--disabled"
-              />
-              <!---->
-              
+              >
+                <!---->
+              </span>
             </div>
             <div
               class="t-checkbox__content"
@@ -1173,26 +1241,30 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           <div
             class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
           >
-            <svg
-              class="t-icon t-icon-check t-checkbox__icon-wrapper"
-              fill="none"
-              height="1em"
-              style="fill: none;"
-              viewBox="0 0 24 24"
-              width="1em"
+            <span
+              class="t-checkbox__icon-line"
             >
-              <g
-                id="check"
+              <svg
+                class="t-icon t-icon-check"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
               >
-                <path
-                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                  id="stroke1"
-                  stroke="currentColor"
-                  stroke-linecap="square"
-                  stroke-width="2"
-                />
-              </g>
-            </svg>
+                <g
+                  id="check"
+                >
+                  <path
+                    d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+            </span>
           </div>
           <div
             class="t-checkbox__content"
@@ -1221,19 +1293,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           <div
             class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
           >
-            <svg
-              class="t-icon t-icon-check-rectangle-filled t-checkbox__icon-wrapper"
-              fill="none"
-              height="1em"
-              style="fill: none;"
-              viewBox="0 0 24 24"
-              width="1em"
+            <span
+              class="t-checkbox__icon-rectangle t-checkbox__icon-rectangle--checked"
             >
-              <path
-                d="M22 2H2V22H22V2ZM6.08618 12L7.5004 10.5858L10.5004 13.5858L16.5004 7.58579L17.9146 9L10.5004 16.4142L6.08618 12Z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-check-1"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
           </div>
           <div
             class="t-checkbox__content"
@@ -1313,19 +1389,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           <div
             class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
           >
-            <svg
-              class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-              fill="none"
-              height="1em"
-              style="fill: none;"
-              viewBox="0 0 24 24"
-              width="1em"
+            <span
+              class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
             >
-              <path
-                d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-check-1"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
           </div>
           <div
             class="t-checkbox__content"
@@ -1355,19 +1435,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
           <div
             class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
           >
-            <svg
-              class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-              fill="none"
-              height="1em"
-              style="fill: none;"
-              viewBox="0 0 24 24"
-              width="1em"
+            <span
+              class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
             >
-              <path
-                d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                fill="currentColor"
-              />
-            </svg>
+              <svg
+                class="t-icon t-icon-check-1"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
           </div>
           <div
             class="t-checkbox__content"
@@ -1420,19 +1504,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
             >
-              <svg
-                class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <span
+                class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
               >
-                <path
-                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  class="t-icon t-icon-check-1"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
             </div>
             <div
               class="t-checkbox__content"
@@ -1459,19 +1547,23 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
             >
-              <svg
-                class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-                fill="none"
-                height="1em"
-                style="fill: none;"
-                viewBox="0 0 24 24"
-                width="1em"
+              <span
+                class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
               >
-                <path
-                  d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-                  fill="currentColor"
-                />
-              </svg>
+                <svg
+                  class="t-icon t-icon-check-1"
+                  fill="none"
+                  height="1em"
+                  style="fill: none;"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                >
+                  <path
+                    d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
             </div>
             <div
               class="t-checkbox__content"
@@ -1498,12 +1590,11 @@ exports[`Checkbox > Checkbox mobileVue demo works fine 1`] = `
             <div
               class="t-checkbox__icon t-checkbox__icon--left"
             >
-              
-              <div
+              <span
                 class="t-checkbox__icon-circle"
-              />
-              <!---->
-              
+              >
+                <!---->
+              </span>
             </div>
             <div
               class="t-checkbox__content"
@@ -1769,19 +1860,23 @@ exports[`Checkbox > Checkbox rightVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      <svg
-        class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-        fill="none"
-        height="1em"
-        style="fill: none;"
-        viewBox="0 0 24 24"
-        width="1em"
+      <span
+        class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
       >
-        <path
-          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-          fill="currentColor"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-check-1"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
     </div>
     <div
       class="t-checkbox__content"
@@ -1811,19 +1906,23 @@ exports[`Checkbox > Checkbox rightVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
     >
-      <svg
-        class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-        fill="none"
-        height="1em"
-        style="fill: none;"
-        viewBox="0 0 24 24"
-        width="1em"
+      <span
+        class="t-checkbox__icon-circle t-checkbox__icon-circle--checked"
       >
-        <path
-          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-          fill="currentColor"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-check-1"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
     </div>
     <div
       class="t-checkbox__content"
@@ -2067,19 +2166,23 @@ exports[`Checkbox > Checkbox statusVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked t-checkbox__icon--disabled"
     >
-      <svg
-        class="t-icon t-icon-check-circle-filled t-checkbox__icon-wrapper"
-        fill="none"
-        height="1em"
-        style="fill: none;"
-        viewBox="0 0 24 24"
-        width="1em"
+      <span
+        class="t-checkbox__icon-circle t-checkbox__icon-circle--checked t-checkbox__icon-circle--disabled"
       >
-        <path
-          d="M12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23ZM7.49985 10.5858L10.4999 13.5858L16.4999 7.58578L17.9141 8.99999L10.4999 16.4142L6.08564 12L7.49985 10.5858Z"
-          fill="currentColor"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-check-1"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
     </div>
     <div
       class="t-checkbox__content"
@@ -2105,12 +2208,11 @@ exports[`Checkbox > Checkbox statusVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--disabled"
     >
-      
-      <div
+      <span
         class="t-checkbox__icon-circle t-checkbox__icon-circle--disabled"
-      />
-      <!---->
-      
+      >
+        <!---->
+      </span>
     </div>
     <div
       class="t-checkbox__content"
@@ -2145,26 +2247,30 @@ exports[`Checkbox > Checkbox typeVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      <svg
-        class="t-icon t-icon-check t-checkbox__icon-wrapper"
-        fill="none"
-        height="1em"
-        style="fill: none;"
-        viewBox="0 0 24 24"
-        width="1em"
+      <span
+        class="t-checkbox__icon-line"
       >
-        <g
-          id="check"
+        <svg
+          class="t-icon t-icon-check"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
         >
-          <path
-            d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-            id="stroke1"
-            stroke="currentColor"
-            stroke-linecap="square"
-            stroke-width="2"
-          />
-        </g>
-      </svg>
+          <g
+            id="check"
+          >
+            <path
+              d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+      </span>
     </div>
     <div
       class="t-checkbox__content"
@@ -2193,19 +2299,23 @@ exports[`Checkbox > Checkbox typeVue demo works fine 1`] = `
     <div
       class="t-checkbox__icon t-checkbox__icon--left t-checkbox__icon--checked"
     >
-      <svg
-        class="t-icon t-icon-check-rectangle-filled t-checkbox__icon-wrapper"
-        fill="none"
-        height="1em"
-        style="fill: none;"
-        viewBox="0 0 24 24"
-        width="1em"
+      <span
+        class="t-checkbox__icon-rectangle t-checkbox__icon-rectangle--checked"
       >
-        <path
-          d="M22 2H2V22H22V2ZM6.08618 12L7.5004 10.5858L10.5004 13.5858L16.5004 7.58579L17.9146 9L10.5004 16.4142L6.08618 12Z"
-          fill="currentColor"
-        />
-      </svg>
+        <svg
+          class="t-icon t-icon-check-1"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <path
+            d="M21.6157 7.91232L11.3862 18.1418C11.0581 18.4699 10.6129 18.6544 10.1489 18.6545C9.6848 18.6545 9.23883 18.47 8.91064 18.1418L2.67529 11.9065L5.1499 9.43185L10.1479 14.4289L19.1411 5.43771L21.6157 7.91232Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
     </div>
     <div
       class="t-checkbox__content"

@@ -144,27 +144,30 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         <div
           class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check t-radio__icon-wrap"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <div
+            class="t-radio__icon-line"
           >
-            <g
-              id="check"
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <path
-                d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
-          </svg>
-          <!---->
+              <g
+                id="check"
+              >
+                <path
+                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -194,9 +197,10 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -226,9 +230,10 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -258,9 +263,10 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -290,9 +296,10 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -322,9 +329,10 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -354,9 +362,10 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -386,9 +395,10 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -418,9 +428,10 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -450,9 +461,10 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -655,27 +667,30 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
               >
-                <svg
-                  class="t-icon t-icon-check t-radio__icon-wrap"
-                  fill="none"
-                  height="1em"
-                  style="fill: none;"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <div
+                  class="t-radio__icon-line"
                 >
-                  <g
-                    id="check"
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <path
-                      d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
-                <!---->
+                    <g
+                      id="check"
+                    >
+                      <path
+                        d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -705,9 +720,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -737,9 +753,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -769,9 +786,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -801,9 +819,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -833,9 +852,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -865,9 +885,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -897,9 +918,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -929,9 +951,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -961,9 +984,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1140,26 +1164,30 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
               >
-                <svg
-                  class="t-icon t-icon-check t-checkbox__icon-wrapper"
-                  fill="none"
-                  height="1em"
-                  style="fill: none;"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <span
+                  class="t-checkbox__icon-line"
                 >
-                  <g
-                    id="check"
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <path
-                      d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      id="check"
+                    >
+                      <path
+                        d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1185,26 +1213,30 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
               >
-                <svg
-                  class="t-icon t-icon-check t-checkbox__icon-wrapper"
-                  fill="none"
-                  height="1em"
-                  style="fill: none;"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <span
+                  class="t-checkbox__icon-line"
                 >
-                  <g
-                    id="check"
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <path
-                      d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      id="check"
+                    >
+                      <path
+                        d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1230,12 +1262,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
-                <div
-                  class="placeholder"
-                />
-                
+                <span
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1261,12 +1292,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
-                <div
-                  class="placeholder"
-                />
-                
+                <span
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1292,12 +1322,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
-                <div
-                  class="placeholder"
-                />
-                
+                <span
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1323,12 +1352,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
-                <div
-                  class="placeholder"
-                />
-                
+                <span
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1354,12 +1382,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
-                <div
-                  class="placeholder"
-                />
-                
+                <span
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1385,12 +1412,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
-                <div
-                  class="placeholder"
-                />
-                
+                <span
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1416,12 +1442,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
-                <div
-                  class="placeholder"
-                />
-                
+                <span
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1447,12 +1472,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
-                <div
-                  class="placeholder"
-                />
-                
+                <span
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </span>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1584,27 +1608,30 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
               >
-                <svg
-                  class="t-icon t-icon-check t-radio__icon-wrap"
-                  fill="none"
-                  height="1em"
-                  style="fill: none;"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <div
+                  class="t-radio__icon-line"
                 >
-                  <g
-                    id="check"
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <path
-                      d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
-                <!---->
+                    <g
+                      id="check"
+                    >
+                      <path
+                        d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1635,9 +1662,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right t-radio__icon--disabled"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line t-radio__icon-line--disabled"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1667,9 +1695,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1699,9 +1728,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1731,9 +1761,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1763,9 +1794,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1795,9 +1827,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1827,9 +1860,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1859,9 +1893,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1891,9 +1926,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1923,9 +1959,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1955,9 +1992,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -1987,9 +2025,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -2019,9 +2058,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -2051,9 +2091,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -2083,9 +2124,10 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
@@ -2249,26 +2291,30 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check t-checkbox__icon-wrapper"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <span
+            class="t-checkbox__icon-line"
           >
-            <g
-              id="check"
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <path
-                d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
-          </svg>
+              <g
+                id="check"
+              >
+                <path
+                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -2294,26 +2340,30 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check t-checkbox__icon-wrapper"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <span
+            class="t-checkbox__icon-line"
           >
-            <g
-              id="check"
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <path
-                d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
-          </svg>
+              <g
+                id="check"
+              >
+                <path
+                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -2339,12 +2389,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
-          <div
-            class="placeholder"
-          />
-          
+          <span
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -2370,12 +2419,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
-          <div
-            class="placeholder"
-          />
-          
+          <span
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -2401,12 +2449,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
-          <div
-            class="placeholder"
-          />
-          
+          <span
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -2432,12 +2479,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
-          <div
-            class="placeholder"
-          />
-          
+          <span
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -2463,12 +2509,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
-          <div
-            class="placeholder"
-          />
-          
+          <span
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -2494,12 +2539,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
-          <div
-            class="placeholder"
-          />
-          
+          <span
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -2525,12 +2569,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
-          <div
-            class="placeholder"
-          />
-          
+          <span
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -2556,12 +2599,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
-          <div
-            class="placeholder"
-          />
-          
+          <span
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </span>
         </div>
         <div
           class="t-checkbox__content"
@@ -2672,27 +2714,30 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <div
           class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check t-radio__icon-wrap"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <div
+            class="t-radio__icon-line"
           >
-            <g
-              id="check"
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <path
-                d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
-          </svg>
-          <!---->
+              <g
+                id="check"
+              >
+                <path
+                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -2723,9 +2768,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right t-radio__icon--disabled"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line t-radio__icon-line--disabled"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -2755,9 +2801,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -2787,9 +2834,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -2819,9 +2867,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -2851,9 +2900,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -2883,9 +2933,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -2915,9 +2966,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -2947,9 +2999,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -2979,9 +3032,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -3011,9 +3065,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -3043,9 +3098,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -3075,9 +3131,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -3107,9 +3164,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -3139,9 +3197,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
@@ -3171,9 +3230,10 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"

@@ -178,9 +178,10 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -208,9 +209,10 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -409,9 +411,10 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -439,9 +442,10 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -651,9 +655,10 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -681,9 +686,10 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -893,9 +899,10 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -1136,9 +1143,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -1166,9 +1174,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -1354,9 +1363,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -1384,9 +1394,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -1613,9 +1624,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -1643,9 +1655,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -1868,9 +1881,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -1898,9 +1912,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -2127,9 +2142,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -2157,9 +2173,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -2382,9 +2399,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -2596,9 +2614,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -2626,9 +2645,10 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
                         class="t-radio__icon t-radio__icon--right"
                       >
                         <div
-                          class="placeholder"
-                        />
-                        <!---->
+                          class="t-radio__icon-line"
+                        >
+                          <!---->
+                        </div>
                       </div>
                       <div
                         class="t-radio__content"
@@ -2804,9 +2824,10 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -2834,9 +2855,10 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -3050,9 +3072,10 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -3080,9 +3103,10 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -3292,9 +3316,10 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
@@ -3322,9 +3347,10 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
                     class="t-radio__icon t-radio__icon--right"
                   >
                     <div
-                      class="placeholder"
-                    />
-                    <!---->
+                      class="t-radio__icon-line"
+                    >
+                      <!---->
+                    </div>
                   </div>
                   <div
                     class="t-radio__content"
