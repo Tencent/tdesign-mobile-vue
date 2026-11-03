@@ -1,181 +1,382 @@
-import { nextTick, ref } from 'vue';
-import { mount } from '@vue/test-utils';
-import { AddCircleIcon, DeleteIcon, CloseIcon } from 'tdesign-icons-vue-next';
-import { describe, it, vi } from 'vitest';
+import { enableAutoUnmount, flushPromises, mount } from '@vue/test-utils';
+import { afterAll, afterEach, describe, expect, it, vi } from 'vitest';
+import { CloseIcon, DeleteIcon } from 'tdesign-icons-vue-next';
 import ImageViewer from '../image-viewer';
+import type { ImageSlotParams, TdImageViewerProps } from '../type';
 import { Swiper } from '../../swiper';
-import { trigger, triggerZoom } from './touch';
 
-const images = ref([
-  'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-  'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-  'https://imgcache.qq.com/open_proj/proj_qcloud_v2/rocket_images/1606728019829_yw760ok1jmpbep14i.png',
-]);
+// 手势库在模块加载时探测触屏能力；jsdom 默认没有 ontouchstart。
+vi.hoisted(() => {
+  vi.stubGlobal('ontouchstart', null);
+});
+afterAll(() => {
+  vi.unstubAllGlobals();
+});
+afterEach(() => {
+  vi.restoreAllMocks();
+});
+
+enableAutoUnmount(afterEach);
+
+const images = ['first.png', 'second.png', 'third.png', 'fourth.png', 'fifth.png'];
+const mountViewer = (props: TdImageViewerProps = {}, slots = {}) =>
+  mount(ImageViewer, { props: { images: [...images], visible: true, ...props }, slots });
+
+const pinchImage = async (wrapper: ReturnType<typeof mountViewer>, distance: number) => {
+  const item = wrapper.get('.t-swiper-item');
+  const points = (offset: number) => [
+    { identifier: 1, target: item.element, clientX: 0, clientY: 0, pageX: 0, pageY: 0 },
+    { identifier: 2, target: item.element, clientX: offset, clientY: 0, pageX: offset, pageY: 0 },
+  ];
+  await item.trigger('touchstart', { touches: points(100), targetTouches: points(100), changedTouches: points(100) });
+  await item.trigger('touchmove', {
+    touches: points(distance),
+    targetTouches: points(distance),
+    changedTouches: points(distance),
+  });
+  await item.trigger('touchend', { touches: [], changedTouches: points(distance) });
+  await flushPromises();
+};
 
 describe('ImageViewer', () => {
   describe('props', () => {
-    // it('maxZoom', async () => {
-    //   const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} maxZoom={2} />);
-
-    //   const target = wrapper.find('.t-swiper-item');
-    //   triggerZoom(target, 200, 200, 'in');
-    //   expect(wrapper.vm.imageStyle).toMatchObject({ transform: `scale(${2}, ${2})` });
-
-    //   triggerZoom(target, 200, 200, 'out');
-    //   expect(wrapper.vm.imageStyle).not.toHaveProperty('transform');
-
-    //   // 测试 toggleScale
-    //   trigger(target, 'touchstart', 50, 50);
-    //   trigger(target, 'touchend', 50, 50);
-
-    //   await new Promise((resolve, reject) => {
-    //     setTimeout(() => {
-    //       resolve();
-    //     }, 100); // 小于 TAP_TIME
-    //   });
-    //   trigger(target, 'touchstart', 50, 50);
-    //   trigger(target, 'touchend', 50, 50);
-    // });
-
     it('closeBtn[boolean]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} closeBtn={false} />);
-
-      expect(wrapper.findComponent(CloseIcon).exists()).toBeFalsy();
+      const wrapper = mountViewer();
+      expect(wrapper.findComponent(CloseIcon).exists()).toBe(true);
+      await wrapper.setProps({ closeBtn: false });
+      expect(wrapper.findComponent(CloseIcon).exists()).toBe(false);
+      await wrapper.setProps({ closeBtn: true });
+      expect(wrapper.findComponent(CloseIcon).exists()).toBe(true);
     });
 
-    it('closeBtn[function]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} closeBtn={() => '自定义关闭'} />);
-
-      expect(wrapper.text()).toContain('自定义关闭');
+    it('closeBtn[function]', () => {
+      const wrapper = mountViewer({ closeBtn: () => <button class="custom-close">关闭图片</button> });
+      expect(wrapper.get('.t-image-viewer__nav-close .custom-close').text()).toBe('关闭图片');
+      expect(wrapper.findComponent(CloseIcon).exists()).toBe(false);
     });
 
-    it('cover[function]', async () => {
-      const wrapper = mount(
-        <ImageViewer
-          v-model:images={images.value}
-          visible={true}
-          cover={() => <div class="custom-cover">自定义封面</div>}
-        />,
-      );
-
-      expect(wrapper.find('.t-image-viewer__cover .custom-cover').exists()).toBe(true);
+    it('cover[function]', () => {
+      const wrapper = mountViewer({ cover: () => <span class="custom-cover">封面内容</span> });
+      expect(wrapper.get('.t-image-viewer__cover .custom-cover').text()).toBe('封面内容');
     });
 
     it('deleteBtn[boolean]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} deleteBtn={true} />);
-
-      expect(wrapper.find('.t-image-viewer__nav-delete').findComponent(DeleteIcon).exists()).toBe(true);
-
-      const wrapper2 = mount(<ImageViewer v-model:images={images.value} visible={true} />);
-
-      expect(wrapper2.find('.t-image-viewer__nav-delete').findComponent(DeleteIcon).exists()).toBe(false);
+      const wrapper = mountViewer();
+      expect(wrapper.findComponent(DeleteIcon).exists()).toBe(false);
+      await wrapper.setProps({ deleteBtn: true });
+      expect(wrapper.findComponent(DeleteIcon).exists()).toBe(true);
+      await wrapper.setProps({ deleteBtn: false });
+      expect(wrapper.findComponent(DeleteIcon).exists()).toBe(false);
     });
 
-    it('image[function]', async () => {
-      const wrapper = mount(
-        <ImageViewer
-          v-model:images={images.value}
-          visible={true}
-          image={(h, params) => <div class="custom-image">{params.index}</div>}
-        />,
-      );
-      await nextTick();
+    it('deleteBtn[function]', () => {
+      const wrapper = mountViewer({ deleteBtn: () => <button class="custom-delete">删除图片</button> });
+      expect(wrapper.get('.t-image-viewer__nav-delete .custom-delete').text()).toBe('删除图片');
+    });
 
-      // 自定义渲染函数接管默认 img 渲染，每张预加载图片均收到 index 参数
-      const $customImages = wrapper.findAll('.custom-image');
-      expect($customImages.length).toBe(images.value.length);
-      $customImages.forEach(($image, index) => {
-        expect($image.text()).toBe(String(index));
-      });
-      expect(wrapper.find('.t-image-viewer__img').exists()).toBe(false);
+    it('image[function]', () => {
+      const image = vi.fn((_h, params: ImageSlotParams) => (
+        <span class="custom-image">
+          {params.index}:{params.src}
+        </span>
+      ));
+      const wrapper = mountViewer({ image });
+      expect(wrapper.findAll('.custom-image').map((item) => item.text())).toEqual([
+        '0:first.png',
+        '1:second.png',
+        '4:fifth.png',
+      ]);
+      expect(image).toHaveBeenCalledWith(
+        expect.any(Function),
+        expect.objectContaining({
+          src: 'first.png',
+          index: 0,
+          className: 't-image-viewer__img',
+          onLoad: expect.any(Function),
+          onTransitionstart: expect.any(Function),
+          onTransitionend: expect.any(Function),
+        }),
+      );
+      expect(wrapper.find('img').exists()).toBe(false);
     });
 
     it('images[array]', async () => {
-      const emptyImages = mount(<ImageViewer visible={true} />);
-      expect(emptyImages.find('.t-swiper-item').exists()).toBe(false);
-
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} />);
-
-      await nextTick();
-      expect(wrapper.findAll('.t-swiper-item').length).toBe(images.value.length);
-
-      images.value.pop();
-      await nextTick();
-      expect(wrapper.findAll('.t-swiper-item').length).toBe(images.value.length);
+      const wrapper = mountViewer();
+      expect(wrapper.findAll('.t-swiper-item')).toHaveLength(5);
+      expect(wrapper.findAll('img').map((item) => item.attributes('src'))).toEqual([
+        'first.png',
+        'second.png',
+        'fifth.png',
+      ]);
+      await wrapper.setProps({ images: [{ url: 'aligned.png', align: 'start', extra: { id: 1 } }] });
+      expect(wrapper.findAll('.t-swiper-item')).toHaveLength(1);
+      expect(wrapper.get('img').attributes('src')).toBe('aligned.png');
+      expect(wrapper.get('.t-image-viewer__swiper-item').attributes('style')).toContain('align-items: start');
+      await wrapper.setProps({ images: [] });
+      expect(wrapper.find('.t-swiper-item').exists()).toBe(false);
     });
 
     it('index[number]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} index={1} showIndex />);
-      await nextTick();
-
-      expect(wrapper.find('.t-image-viewer__nav-index').text()).toBe(`2/${images.value.length}`);
+      const wrapper = mountViewer({ index: 1, showIndex: true });
+      expect(wrapper.get('.t-image-viewer__nav-index').text()).toBe('2/5');
+      await wrapper.setProps({ index: 3 });
+      expect(wrapper.get('.t-image-viewer__nav-index').text()).toBe('4/5');
     });
 
-    it('defaultIndex[number]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} defaultIndex={1} showIndex />);
-
-      expect(wrapper.find('.t-image-viewer__nav-index').text()).toBe(`2/${images.value.length}`);
+    it('defaultIndex[number]', () => {
+      const wrapper = mountViewer({ defaultIndex: 2, showIndex: true });
+      expect(wrapper.get('.t-image-viewer__nav-index').text()).toBe('3/5');
+      expect(wrapper.findComponent(Swiper).props('defaultCurrent')).toBe(2);
     });
 
     it('loop[boolean]', async () => {
-      // loop 透传给内部 Swiper 控制循环滚动
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} loop={false} />);
+      const wrapper = mountViewer();
+      expect(wrapper.findComponent(Swiper).props('loop')).toBe(true);
+      await wrapper.setProps({ loop: false });
       expect(wrapper.findComponent(Swiper).props('loop')).toBe(false);
+    });
 
-      // 默认开启循环滚动
-      const wrapper2 = mount(<ImageViewer v-model:images={images.value} visible={true} />);
-      expect(wrapper2.findComponent(Swiper).props('loop')).toBe(true);
+    it('maxZoom[number]', async () => {
+      const wrapper = mountViewer({ maxZoom: 2, visible: false });
+      await wrapper.setProps({ visible: true });
+      await flushPromises();
+      await wrapper.get('img').trigger('load');
+      await pinchImage(wrapper, 500);
+      expect(wrapper.get('img').attributes('style')).toContain('matrix(2, 0, 0, 2, 0, 0)');
+      expect(wrapper.findComponent(Swiper).props('disabled')).toBe(true);
+      await wrapper.setProps({ maxZoom: 4 });
+      await pinchImage(wrapper, 500);
+      expect(wrapper.get('img').attributes('style')).toContain('matrix(4, 0, 0, 4, 0, 0)');
+      await pinchImage(wrapper, 10);
+      expect(wrapper.get('img').attributes('style')).toContain('matrix(1, 0, 0, 1, 0, 0)');
+      expect(wrapper.findComponent(Swiper).props('disabled')).toBe(false);
     });
 
     it('showIndex[boolean]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} showIndex />);
-
-      expect(wrapper.find('.t-image-viewer__nav-index').exists()).toBe(true);
-      expect(wrapper.find('.t-image-viewer__nav-index').text()).toBe(`1/${images.value.length}`);
-
-      const wrapper2 = mount(<ImageViewer v-model:images={images.value} visible={true} showIndex={false} />);
-
-      expect(wrapper2.find('.t-image-viewer__nav-index').exists()).toBe(false);
+      const wrapper = mountViewer();
+      expect(wrapper.find('.t-image-viewer__nav-index').exists()).toBe(false);
+      await wrapper.setProps({ showIndex: true });
+      expect(wrapper.get('.t-image-viewer__nav-index').text()).toBe('1/5');
+      await wrapper.setProps({ showIndex: false });
+      expect(wrapper.find('.t-image-viewer__nav-index').exists()).toBe(false);
     });
 
     it('visible[boolean]', async () => {
-      const visible = ref(false);
-      const wrapper = mount(<ImageViewer v-model:images={images.value} v-model:visible={visible.value} />);
-
+      const wrapper = mountViewer({ visible: false });
       expect(wrapper.findComponent(Swiper).exists()).toBe(false);
-      visible.value = true;
+      await wrapper.setProps({ visible: true });
+      expect(wrapper.findComponent(Swiper).exists()).toBe(true);
+      await wrapper.setProps({ visible: false });
+      expect(wrapper.find('.t-image-viewer').exists()).toBe(false);
+    });
+
+    it('modelValue[boolean]', async () => {
+      const wrapper = mount(ImageViewer, { props: { images: [...images], modelValue: false } });
+      expect(wrapper.findComponent(Swiper).exists()).toBe(false);
+      await wrapper.setProps({ modelValue: true });
+      expect(wrapper.findComponent(Swiper).exists()).toBe(true);
+      await wrapper.get('.t-image-viewer__mask').trigger('click');
+      expect(wrapper.emitted('update:modelValue')).toEqual([[false]]);
     });
 
     it('defaultVisible[boolean]', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} defaultVisible />);
-
+      const wrapper = mount(ImageViewer, { props: { images: [...images], defaultVisible: true } });
       expect(wrapper.findComponent(Swiper).exists()).toBe(true);
-    });
-  });
-
-  describe('slots', () => {
-    it('closeBtn', () => {
-      const wrapper = mount(
-        <ImageViewer v-model:images={images.value} visible={true} closeBtn={() => <AddCircleIcon />} />,
-      );
-
-      expect(wrapper.findComponent(AddCircleIcon).exists()).toBe(true);
+      await wrapper.get('.t-image-viewer__mask').trigger('click');
+      expect(wrapper.find('.t-image-viewer').exists()).toBe(false);
+      expect(wrapper.emitted('close')).toEqual([[{ e: expect.any(MouseEvent), trigger: 'overlay' }]]);
     });
   });
 
   describe('events', () => {
     it('close', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} />);
-
-      await wrapper.find('.t-image-viewer__nav-close').trigger('click');
-      expect(wrapper.emitted()).toHaveProperty('close');
+      const onClose = vi.fn();
+      const wrapper = mountViewer({ onClose });
+      await wrapper.get('.t-image-viewer__mask').trigger('click');
+      expect(onClose).toHaveBeenNthCalledWith(1, { e: expect.any(MouseEvent), trigger: 'overlay' });
+      await wrapper.get('img').trigger('click');
+      expect(onClose).toHaveBeenNthCalledWith(2, { e: expect.any(MouseEvent), trigger: 'image' });
+      expect(onClose).toHaveBeenCalledTimes(2);
+      expect(wrapper.emitted('update:visible')).toEqual([[false], [false]]);
+      // 关闭按钮的第一次回调正确，重复冒泡触发问题在 TODO 中单独记录。
+      onClose.mockClear();
+      await wrapper.get('.t-image-viewer__nav-close').trigger('click');
+      expect(onClose).toHaveBeenNthCalledWith(1, { e: expect.any(MouseEvent), trigger: 'close-btn' });
     });
 
     it('delete', async () => {
-      const wrapper = mount(<ImageViewer v-model:images={images.value} visible={true} delete-btn={true} />);
-
-      await wrapper.find('.t-image-viewer__nav-delete').trigger('click');
-      expect(wrapper.emitted()).toHaveProperty('delete');
+      const onDelete = vi.fn();
+      const wrapper = mountViewer({ defaultIndex: 2, deleteBtn: true, showIndex: true, onDelete });
+      await wrapper.get('.t-image-viewer__nav-delete').trigger('click');
+      expect(onDelete).toHaveBeenCalledTimes(1);
+      expect(onDelete).toHaveBeenCalledWith(2);
+      expect(wrapper.emitted('delete')).toEqual([[2]]);
     });
+
+    it('indexChange', async () => {
+      const onIndexChange = vi.fn();
+      const wrapper = mountViewer({ showIndex: true, onIndexChange });
+      await flushPromises();
+      wrapper.vm.$.exposed.swipeTo(2, { immediate: true });
+      await flushPromises();
+      expect(onIndexChange).toHaveBeenNthCalledWith(1, 2, { trigger: 'next' });
+      expect(wrapper.get('.t-image-viewer__nav-index').text()).toBe('3/5');
+      wrapper.vm.$.exposed.swipeTo(1, { immediate: true });
+      await flushPromises();
+      expect(onIndexChange).toHaveBeenNthCalledWith(2, 1, { trigger: 'prev' });
+      expect(onIndexChange).toHaveBeenCalledTimes(2);
+    });
+  });
+
+  describe('slots', () => {
+    it('closeBtn', () => {
+      const wrapper = mountViewer({}, { closeBtn: () => <span class="slot-close">插槽关闭</span> });
+      expect(wrapper.get('.t-image-viewer__nav-close .slot-close').text()).toBe('插槽关闭');
+    });
+
+    it('cover', () => {
+      const wrapper = mountViewer({}, { cover: () => <span class="slot-cover">插槽封面</span> });
+      expect(wrapper.get('.t-image-viewer__cover .slot-cover').text()).toBe('插槽封面');
+    });
+
+    it('deleteBtn', () => {
+      const wrapper = mountViewer({ deleteBtn: true }, { deleteBtn: () => <span class="slot-delete">插槽删除</span> });
+      expect(wrapper.get('.t-image-viewer__nav-delete .slot-delete').text()).toBe('插槽删除');
+    });
+
+    it('image', () => {
+      const wrapper = mountViewer(
+        { images: [{ url: 'custom.png', align: 'end', extra: { caption: '图片说明' } }] },
+        {
+          image: (params: ImageSlotParams) => (
+            <img class={params.className} src={params.src} data-caption={params.extra?.caption} />
+          ),
+        },
+      );
+      expect(wrapper.get('img').attributes('src')).toBe('custom.png');
+      expect(wrapper.get('img').attributes('data-caption')).toBe('图片说明');
+      expect(wrapper.get('.t-image-viewer__swiper-item').attributes('style')).toContain('align-items: end');
+    });
+  });
+
+  describe('instanceFunctions', () => {
+    it('swipeTo', async () => {
+      const wrapper = mountViewer({ showIndex: true });
+      await flushPromises();
+      wrapper.vm.$.exposed.swipeTo(3, { immediate: true });
+      await flushPromises();
+      expect(wrapper.get('.t-image-viewer__nav-index').text()).toBe('4/5');
+      wrapper.vm.$.exposed.swipeTo(-1, { immediate: true });
+      await flushPromises();
+      expect(wrapper.get('.t-image-viewer__nav-index').text()).toBe('4/5');
+    });
+  });
+
+  describe('scenarios', () => {
+    // jsdom 中无法控制手势 elapsedTime，快速拖拽会被识别为 tap 而不产生位移；
+    // 不同 align 下的拖拽边界需真实触屏环境验证。
+    it.todo('bounds zoomed image dragging with start/center/end alignment');
+
+    it('ignores pinch gestures until the image has loaded', async () => {
+      const wrapper = mountViewer({ visible: false });
+      await wrapper.setProps({ visible: true });
+      await flushPromises();
+      await pinchImage(wrapper, 500);
+      expect(wrapper.get('img').attributes('style')).toContain('matrix(1, 0, 0, 1, 0, 0)');
+      expect(wrapper.findComponent(Swiper).props('disabled')).toBe(false);
+    });
+
+    it('changing images resets zoom and enables the swiper again', async () => {
+      const wrapper = mountViewer({ visible: false, showIndex: true });
+      await wrapper.setProps({ visible: true });
+      await flushPromises();
+      await wrapper.get('img').trigger('load');
+      await pinchImage(wrapper, 200);
+      expect(wrapper.findComponent(Swiper).props('disabled')).toBe(true);
+      wrapper.vm.$.exposed.swipeTo(1, { immediate: true });
+      await flushPromises();
+      expect(wrapper.get('.t-image-viewer__nav-index').text()).toBe('2/5');
+      expect(wrapper.findComponent(Swiper).props('disabled')).toBe(false);
+      expect(wrapper.get('img').attributes('style')).toContain('matrix(1, 0, 0, 1, 0, 0)');
+    });
+
+    it('preloads only the current image and its neighbors', async () => {
+      const wrapper = mountViewer({ defaultIndex: 2 });
+      expect(wrapper.findAll('img').map((item) => item.attributes('src'))).toEqual([
+        'second.png',
+        'third.png',
+        'fourth.png',
+      ]);
+      await flushPromises();
+      wrapper.vm.$.exposed.swipeTo(4, { immediate: true });
+      await flushPromises();
+      expect(wrapper.findAll('img').map((item) => item.attributes('src'))).toEqual([
+        'first.png',
+        'fourth.png',
+        'fifth.png',
+      ]);
+    });
+
+    it('closeBtn function overrides its slot and falls back when removed', async () => {
+      const wrapper = mountViewer(
+        { closeBtn: () => <span class="prop-close">属性关闭</span> },
+        {
+          closeBtn: () => <span class="slot-close">插槽关闭</span>,
+        },
+      );
+      expect(wrapper.get('.prop-close').text()).toBe('属性关闭');
+      expect(wrapper.find('.slot-close').exists()).toBe(false);
+      await wrapper.setProps({ closeBtn: true });
+      expect(wrapper.get('.slot-close').text()).toBe('插槽关闭');
+    });
+
+    it('deleteBtn function overrides its slot', () => {
+      const wrapper = mountViewer(
+        { deleteBtn: () => <span class="prop-delete">属性删除</span> },
+        {
+          deleteBtn: () => <span class="slot-delete">插槽删除</span>,
+        },
+      );
+      expect(wrapper.get('.prop-delete').text()).toBe('属性删除');
+      expect(wrapper.find('.slot-delete').exists()).toBe(false);
+    });
+
+    it('cover function overrides its slot', () => {
+      const wrapper = mountViewer(
+        { cover: () => <span class="prop-cover">属性封面</span> },
+        {
+          cover: () => <span class="slot-cover">插槽封面</span>,
+        },
+      );
+      expect(wrapper.get('.prop-cover').text()).toBe('属性封面');
+      expect(wrapper.find('.slot-cover').exists()).toBe(false);
+    });
+
+    it('image function overrides its slot', () => {
+      const wrapper = mountViewer(
+        { image: () => <span class="prop-image">属性图片</span> },
+        {
+          image: () => <span class="slot-image">插槽图片</span>,
+        },
+      );
+      expect(wrapper.findAll('.prop-image')).toHaveLength(3);
+      expect(wrapper.find('.slot-image').exists()).toBe(false);
+    });
+
+    it('visible takes priority over modelValue and defaultVisible', () => {
+      const wrapper = mountViewer({ visible: false, modelValue: true, defaultVisible: true });
+      expect(wrapper.find('.t-image-viewer').exists()).toBe(false);
+    });
+
+    // nav-close 包裹节点未随 closeBtn=false 隐藏；nav-delete 同样保留并会向根节点冒泡。
+    it.todo('hides the close action completely when closeBtn is false');
+    it.todo('clicking the close button emits close only once');
+    it.todo('deleting an image does not also close the viewer');
+    // TdImageViewerProps.onClose 声明 visible/index，但 emit 仅传递 trigger/e。
+    it.todo('close context includes visible and index as declared');
+    // 手势 watcher 未 immediate，且 swiperItemRefs 仅通过下标赋值，初始 visible=true 不触发绑定。
+    it.todo('binds pinch and drag gestures when initially visible');
+    // index 更新未转发给内部 Swiper（只传了 defaultCurrent）。
+    it.todo('external index changes move the displayed Swiper panel');
   });
 });
