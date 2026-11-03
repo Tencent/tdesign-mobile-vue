@@ -1,79 +1,74 @@
 import { h, nextTick, ref } from 'vue';
-import { mount } from '@vue/test-utils';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
 import type { VueWrapper } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
-import { AppIcon, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
+import { afterEach, describe, it, expect, vi } from 'vitest';
+import { CloseIcon, InfoCircleFilledIcon, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Message from '../message';
 import type { TdMessageProps } from '../type';
 
 const prefix = 't';
 const name = `${prefix}-message`;
 
+enableAutoUnmount(afterEach);
+afterEach(() => {
+  vi.useRealTimers();
+});
+
 describe('Message', () => {
   describe('props', () => {
-    // marquee 跑马灯滚动行为
-    // it(' marquee', async () => {
-    //   const wrapper = mount(<Message visible />);
-    //   expect(wrapper.vm.scroll.marquee).toBe(false);
-
-    //   const wrapper1 = mount(<Message visible marquee />);
-    //   expect(wrapper1.vm.scroll.marquee).toBe(false);
-
-    //   const wrapper2 = mount(<Message visible marquee={true} />);
-    //   await nextTick();
-    //   expect(wrapper2.vm.scroll.marquee).toBe(true);
-
-    //   const wrapper3 = mount(<Message visible marquee={{ loop: 1 }} />);
-    //   await nextTick();
-    //   expect(wrapper3.vm.scroll.marquee).toBe(true);
-    //   wrapper3.vm.handleTransitionend();
-    //   expect(wrapper3.vm.scroll.loop).toBe(0);
-    //   wrapper3.vm.handleTransitionend();
-    //   expect(wrapper3.vm.scroll.marquee).toBe(false);
-
-    //   const wrapper4 = mount(<Message visible marquee={{ loop: -1 }} />);
-    //   await nextTick();
-    //   expect(wrapper4.vm.scroll.marquee).toBe(true);
-    //   wrapper4.vm.handleTransitionend();
-    // });
-
-    it('align[string]', () => {
-      const alignList: TdMessageProps['align'][] = ['left', 'center'];
-      alignList.forEach((align) => {
+    it('align[left/center]', () => {
+      (['left', 'center'] as const).forEach((align) => {
         const wrapper = mount(<Message visible align={align} />);
-        expect(wrapper.find(`.${name}`).classes().includes(`${name}-align--${align}`)).toBeTruthy();
+        expect(wrapper.get(`.${name}`).classes()).toContain(`${name}-align--${align}`);
       });
     });
 
+    it('closeBtn[boolean]', () => {
+      const wrapper = mount(<Message visible closeBtn />);
+      expect(wrapper.get(`.${name}__close-wrap`).findComponent(CloseIcon).exists()).toBe(true);
+
+      const hidden = mount(<Message visible closeBtn={false} />);
+      expect(hidden.find(`.${name}__close-wrap`).exists()).toBe(false);
+    });
+
+    it('closeBtn[string]', () => {
+      const wrapper = mount(<Message visible closeBtn="关闭" />);
+      expect(wrapper.get(`.${name}__close-wrap`).text()).toBe('关闭');
+    });
+
     it('closeBtn[function]', () => {
-      const closeBtn = () => h(TIconApp);
-      const wrapper = mount(<Message visible closeBtn={closeBtn} />);
-      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+      const wrapper = mount(<Message visible closeBtn={() => h(TIconApp)} />);
+      expect(wrapper.get(`.${name}__close-wrap`).findComponent(TIconApp).exists()).toBe(true);
     });
 
     it('content[string]', () => {
       const wrapper = mount(<Message visible content="这是一条消息通知" />);
-      expect(wrapper.find(`.${name}__text`).text()).toBe('这是一条消息通知');
+      expect(wrapper.get(`.${name}__text`).text()).toBe('这是一条消息通知');
     });
 
     it('content[function]', () => {
       const wrapper = mount(<Message visible content={() => <span class="custom-content">自定义消息</span>} />);
-      const $text = wrapper.find(`.${name}__text`);
-      expect($text.find('.custom-content').text()).toBe('自定义消息');
+      expect(wrapper.get(`.${name}__text .custom-content`).text()).toBe('自定义消息');
     });
 
-    it('duration[number]', () => {
-      function timer(callback) {
-        setTimeout(() => {
-          callback();
-        }, 5000);
-      }
+    it('duration[number]', async () => {
       vi.useFakeTimers();
-      const fn = vi.fn();
-      timer(fn);
-      const wrapper = mount(<Message defaultVisible duration={5000} onCloseBtnClick={fn} />);
-      vi.advanceTimersByTime(5000);
-      expect(fn).toBeCalledTimes(1);
+      const onDurationEnd = vi.fn();
+      const wrapper = mount(<Message visible={false} duration={3000} onDurationEnd={onDurationEnd} />);
+      await wrapper.setProps({ visible: true });
+      expect(onDurationEnd).not.toHaveBeenCalled();
+      vi.advanceTimersByTime(3000);
+      expect(onDurationEnd).toHaveBeenCalledTimes(1);
+      // useVModel 未传 propName，受控通道实际发出 update:value（应为 update:visible）；
+      // watch 进入加载态时先回写 true，计时结束再回写 false
+      expect(wrapper.emitted('update:value')).toEqual([[true], [false]]);
+
+      // duration = 0 表示没有计时器
+      const noTimer = vi.fn();
+      const wrapper2 = mount(<Message visible={false} duration={0} onDurationEnd={noTimer} />);
+      await wrapper2.setProps({ visible: true });
+      vi.advanceTimersByTime(10000);
+      expect(noTimer).not.toHaveBeenCalled();
     });
 
     // gap 只在多条消息堆叠时生效（需 single=false）：messageIndex 为模块级计数，这里通过两个先后出现的消息 top 差值验证
@@ -114,52 +109,47 @@ describe('Message', () => {
     });
 
     it('icon[boolean]', () => {
-      // icon = false
-      const wrapper0 = mount(() => <Message visible={true} icon={false} content="这是一条消息通知" />);
-      expect(wrapper0.find('.t-icon').exists()).toBeFalsy();
+      const wrapper = mount(<Message visible icon={false} content="这是一条消息通知" />);
+      expect(wrapper.find('.t-icon').exists()).toBe(false);
 
-      // icon 使用内置主题icon
-      const wrapper1 = mount(() => <Message visible={true} content="这是一条消息通知" theme={'success'} />);
-      const successIcon = wrapper1.find('.t-icon-check-circle-filled');
-      expect(successIcon).toBeTruthy();
+      // 默认 icon = true 显示主题对应图标
+      const themed = mount(<Message visible content="这是一条消息通知" />);
+      expect(themed.get(`.${name}__icon--left`).findComponent(InfoCircleFilledIcon).exists()).toBe(true);
     });
 
     it('icon[function]', () => {
-      const appIcon = () => h(TIconApp);
-      const wrapper2 = mount(() => <Message visible={true} content="这是一条消息通知" icon={appIcon} />);
-      expect(wrapper2.find(`.${name}__icon--left`).findComponent(TIconApp).exists()).toBeTruthy();
+      const wrapper = mount(<Message visible content="这是一条消息通知" icon={() => h(TIconApp)} />);
+      expect(wrapper.get(`.${name}__icon--left`).findComponent(TIconApp).exists()).toBe(true);
     });
 
     it('link[string]', () => {
-      const wrapper0 = mount(() => <Message visible={true} content="这是一条消息通知" />);
-      expect(wrapper0.find(`.${name}__link`).exists()).toBeFalsy();
-
-      // lin is string
-      const wrapper1 = mount(() => <Message visible={true} content="这是一条消息通知" link={'link'} />);
-      expect(wrapper1.find(`.${name}__link`).exists()).toBeTruthy();
-      expect(wrapper1.find(`.${name}__link`).text()).toEqual('link');
+      const wrapper = mount(<Message visible content="这是一条消息通知" link="查看详情" />);
+      expect(wrapper.get(`.${name}__link`).text()).toBe('查看详情');
     });
 
     it('link[object]', () => {
-      const wrapper2 = mount(() => <Message visible={true} content="这是一条消息通知" link={{ content: 'content' }} />);
-      expect(wrapper2.find(`.${name}__link`).exists()).toBeTruthy();
-      expect(wrapper2.find(`.${name}__link`).text()).toEqual('content');
+      const wrapper = mount(
+        <Message visible content="这是一条消息通知" link={{ content: '详情', href: 'https://tdesign.tencent.com' }} />,
+      );
+      const link = wrapper.get(`.${name}__link a`);
+      expect(link.text()).toBe('详情');
+      expect(link.attributes('href')).toBe('https://tdesign.tencent.com');
     });
 
     it('link[function]', () => {
-      const appIcon = () => h(TIconApp);
-      const wrapper3 = mount(() => <Message visible={true} content="这是一条消息通知" link={appIcon} />);
-      expect(wrapper3.find(`.${name}__link`).exists()).toBeTruthy();
-      expect(wrapper3.find(`.${name}__link`).findComponent(TIconApp).exists()).toBeTruthy();
+      const wrapper = mount(<Message visible content="这是一条消息通知" link={() => h(TIconApp)} />);
+      expect(wrapper.get(`.${name}__link`).findComponent(TIconApp).exists()).toBe(true);
     });
 
     it('offset[array]', () => {
-      const offset = [-10, 20];
-      const wrapper = mount(<Message visible offset={offset} />);
-      const $message = wrapper.find(`.${name}`);
-      expect(
-        $message.attributes('style').includes(`top: ${offset[0]}px; right: ${offset[1]}px; left: ${offset[1]}px`),
-      ).toBeTruthy();
+      const wrapper = mount(<Message visible offset={[-10, 20]} />);
+      expect(wrapper.get(`.${name}`).attributes('style')).toContain('top: -10px');
+      expect(wrapper.get(`.${name}`).attributes('style')).toContain('right: 20px');
+      expect(wrapper.get(`.${name}`).attributes('style')).toContain('left: 20px');
+
+      // 带单位字符串保持 calc 叠加（single 默认 true，gap 为 0，直接透传）
+      const unit = mount(<Message visible offset={['10vh', '2rem']} />);
+      expect(unit.get(`.${name}`).attributes('style')).toContain('top: 10vh');
     });
 
     it('single[boolean]', async () => {
@@ -171,10 +161,9 @@ describe('Message', () => {
     });
 
     it('theme[info/success/warning/error]', () => {
-      const themeList: TdMessageProps['theme'][] = ['info', 'success', 'warning', 'error'];
-      themeList.forEach((theme) => {
+      (['info', 'success', 'warning', 'error'] as const).forEach((theme) => {
         const wrapper = mount(<Message visible theme={theme} />);
-        expect(wrapper.find(`.${name}`).classes()).toContain(`${name}--${theme}`);
+        expect(wrapper.get(`.${name}`).classes()).toContain(`${name}--${theme}`);
       });
     });
 
@@ -200,49 +189,164 @@ describe('Message', () => {
       await nextTick();
       expect(wrapper.find(`.${name}`).exists()).toBe(true);
     });
+
+    it('defaultVisible[boolean]', async () => {
+      const wrapper = mount(<Message defaultVisible content="非受控消息" closeBtn />);
+      expect(wrapper.get(`.${name}__text`).text()).toBe('非受控消息');
+
+      // 点击关闭按钮在非受控模式下直接隐藏
+      await wrapper.get(`.${name}__close-wrap`).trigger('click');
+      expect(wrapper.find(`.${name}`).exists()).toBe(false);
+    });
+
     it('zIndex[number]', () => {
       const wrapper = mount(<Message visible zIndex={99} />);
-      const $message = wrapper.find(`.${name}`);
-      expect($message.attributes('style')).toContain('z-index: 99');
+      expect(wrapper.get(`.${name}`).attributes('style')).toContain('z-index: 99');
     });
   });
 
   describe('slots', () => {
+    it('default', () => {
+      const wrapper = mount(
+        <Message visible v-slots={{ default: () => <span class="slot-content">插槽消息</span> }} />,
+      );
+      expect(wrapper.get(`.${name}__text .slot-content`).text()).toBe('插槽消息');
+    });
+
+    it('content', () => {
+      const wrapper = mount(<Message visible v-slots={{ content: () => <span class="slot-text">具名消息</span> }} />);
+      expect(wrapper.get(`.${name}__text .slot-text`).text()).toBe('具名消息');
+    });
+
     it('icon', () => {
-      const slots = {
-        icon: () => h(TIconApp),
-      };
-      const wrapper = mount(<Message visible={true} content="这是一条消息通知" v-slots={slots} />);
-      expect(wrapper.find(`.${name}__icon--left`).findComponent(TIconApp).exists()).toBeTruthy();
+      const wrapper = mount(<Message visible content="这是一条消息通知" v-slots={{ icon: () => h(TIconApp) }} />);
+      expect(wrapper.get(`.${name}__icon--left`).findComponent(TIconApp).exists()).toBe(true);
     });
 
     it('link', () => {
-      const slots = {
-        link: () => h(TIconApp),
-      };
-      const wrapper = mount(<Message visible={true} content="这是一条消息通知" v-slots={slots} />);
-      expect(wrapper.find(`.${name}__link`).exists()).toBeTruthy();
-      expect(wrapper.find(`.${name}__link`).findComponent(TIconApp).exists()).toBeTruthy();
+      const wrapper = mount(<Message visible content="这是一条消息通知" v-slots={{ link: () => h(TIconApp) }} />);
+      expect(wrapper.get(`.${name}__link`).findComponent(TIconApp).exists()).toBe(true);
+    });
+
+    it('closeBtn', () => {
+      const wrapper = mount(<Message visible v-slots={{ closeBtn: () => <span class="slot-close">插槽关闭</span> }} />);
+      expect(wrapper.get(`.${name}__close-wrap .slot-close`).text()).toBe('插槽关闭');
     });
   });
 
   describe('events', () => {
-    it('closeBtn', () => {
-      const fn = vi.fn();
-      const wrapper = mount(() => (
-        <Message visible={true} content="这是一条带关闭的消息通知，常驻可关闭" closeBtn={true} onCloseBtnClick={fn} />
-      ));
-      const closeBtn = wrapper.find('.t-message__close-wrap');
-      closeBtn.trigger('click');
-      expect(fn).toBeCalledTimes(1);
+    it('closeBtnClick', async () => {
+      const onCloseBtnClick = vi.fn();
+      const wrapper = mount(
+        <Message visible content="这是一条带关闭的消息通知" closeBtn onCloseBtnClick={onCloseBtnClick} />,
+      );
+      await wrapper.get(`.${name}__close-wrap`).trigger('click');
+      expect(onCloseBtnClick).toHaveBeenCalledTimes(1);
+      expect(onCloseBtnClick).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
+      // useVModel 未传 propName，受控通道实际发出 update:value（应为 update:visible）
+      expect(wrapper.emitted('update:value')).toEqual([[false]]);
     });
 
-    it('linkClick', () => {
-      const fn = vi.fn();
-      const wrapper = mount(() => <Message visible={true} content="这是一条消息通知" link={'链接'} onLinkClick={fn} />);
-      const _link = wrapper.find(`.${name}__link`);
-      _link.trigger('click');
-      expect(fn).toBeCalledTimes(1);
+    it('linkClick', async () => {
+      const onLinkClick = vi.fn();
+      const wrapper = mount(<Message visible content="这是一条消息通知" link="链接" onLinkClick={onLinkClick} />);
+      await wrapper.get(`.${name}__link`).trigger('click');
+      expect(onLinkClick).toHaveBeenCalledTimes(1);
+      expect(onLinkClick).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
     });
+
+    it('durationEnd', async () => {
+      vi.useFakeTimers();
+      const onDurationEnd = vi.fn();
+      const wrapper = mount(<Message visible={false} duration={1000} onDurationEnd={onDurationEnd} />);
+      await wrapper.setProps({ visible: true });
+      vi.advanceTimersByTime(1000);
+      expect(onDurationEnd).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('scenarios', () => {
+    it('marquee[boolean] applies nowrap and animation after delay', async () => {
+      vi.useFakeTimers();
+      const wrapper = mount(<Message visible={false} marquee content="滚动消息" />);
+      expect(wrapper.find(`.${name}__text-nowrap`).exists()).toBe(false);
+
+      await wrapper.setProps({ visible: true });
+      // 文本立即换行约束，动画延迟后启动
+      expect(wrapper.get(`.${name}__text-wrap`).classes()).toContain(`${name}__text-nowrap`);
+      expect(wrapper.get(`.${name}__text`).attributes('style') || '').not.toContain('transition-duration');
+
+      vi.advanceTimersByTime(300);
+      await nextTick();
+      expect(wrapper.get(`.${name}__text`).attributes('style')).toContain('transition-duration: 0s');
+      expect(wrapper.get(`.${name}__text`).attributes('style')).toContain('transition-timing-function: linear');
+    });
+
+    it('marquee[loop 0] never starts scrolling', async () => {
+      vi.useFakeTimers();
+      const wrapper = mount(<Message visible={false} marquee={{ loop: 0 }} content="不滚动" />);
+      await wrapper.setProps({ visible: true });
+      vi.advanceTimersByTime(1000);
+      await nextTick();
+      expect(wrapper.get(`.${name}__text`).attributes('style') || '').not.toContain('transition-duration');
+    });
+
+    it('marquee stops after the configured loops', async () => {
+      vi.useFakeTimers();
+      const wrapper = mount(<Message visible={false} marquee={{ loop: 1 }} content="滚动一次" />);
+      await wrapper.setProps({ visible: true });
+      vi.advanceTimersByTime(300);
+      await nextTick();
+      expect(wrapper.get(`.${name}__text`).attributes('style')).toContain('transition-duration');
+
+      await wrapper.get(`.${name}__text`).trigger('transitionend');
+      expect(wrapper.get(`.${name}__text`).attributes('style') || '').not.toContain('transition-duration');
+    });
+
+    it('icon prop takes priority over icon slot', () => {
+      const wrapper = mount(
+        <Message visible icon={() => h(TIconApp)} v-slots={{ icon: () => <span class="slot-icon">插槽图标</span> }} />,
+      );
+      expect(wrapper.get(`.${name}__icon--left`).findComponent(TIconApp).exists()).toBe(true);
+      expect(wrapper.find('.slot-icon').exists()).toBe(false);
+    });
+
+    it('default slot takes priority over content prop', () => {
+      const wrapper = mount(
+        <Message visible content="属性内容" v-slots={{ default: () => <span class="slot-content">插槽内容</span> }} />,
+      );
+      expect(wrapper.get(`.${name}__text .slot-content`).text()).toBe('插槽内容');
+    });
+
+    it('content prop takes priority over content slot', () => {
+      const wrapper = mount(
+        <Message visible content="属性内容" v-slots={{ content: () => <span class="slot-text">具名插槽</span> }} />,
+      );
+      expect(wrapper.get(`.${name}__text`).text()).toBe('属性内容');
+      expect(wrapper.find('.slot-text').exists()).toBe(false);
+    });
+
+    it('link function takes priority over link slot', () => {
+      const wrapper = mount(
+        <Message visible link={() => h(TIconApp)} v-slots={{ link: () => <span class="slot-link">插槽链接</span> }} />,
+      );
+      expect(wrapper.get(`.${name}__link`).findComponent(TIconApp).exists()).toBe(true);
+      expect(wrapper.find('.slot-link').exists()).toBe(false);
+    });
+
+    it('closeBtn function takes priority over closeBtn slot', () => {
+      const wrapper = mount(
+        <Message
+          visible
+          closeBtn={() => <span class="prop-close">属性关闭</span>}
+          v-slots={{ closeBtn: () => <span class="slot-close">插槽关闭</span> }}
+        />,
+      );
+      expect(wrapper.get(`.${name}__close-wrap .prop-close`).text()).toBe('属性关闭');
+      expect(wrapper.find('.slot-close').exists()).toBe(false);
+    });
+
+    // useVModel 未传 propName='visible'，受控通道事件名实际为 update:value。
+    it.todo('visible channel emits update:visible');
   });
 });
