@@ -1,93 +1,134 @@
 import { mount } from '@vue/test-utils';
-import { vi, describe, it, expect, afterEach } from 'vitest';
-import { Icon, IconFont } from 'tdesign-icons-vue-next';
-import '../icon-svg-props';
-import '../iconfont-props';
+import { describe, expect, it, vi } from 'vitest';
+import { h, resolveComponent } from 'vue';
+import Icon from '../index';
+import { getScriptSources, setupIconCleanup } from './mount';
 
-// icon-svg / iconfont 会向 document 注入 script / link 标签，用例结束后清理，避免相互影响
-afterEach(() => {
-  document
-    .querySelectorAll('script.t-svg-js-stylesheet--unique-class, link.t-iconfont-stylesheet--unique-class')
-    .forEach((node) => node.remove());
-});
+setupIconCleanup();
 
 describe('Icon', () => {
   describe('props', () => {
-    it('name[string]', () => {
-      const wrapper = mount(<Icon name="apple" />);
-      expect(wrapper.find('.t-icon.t-icon-apple')).toBeTruthy();
+    it('loadDefaultIcons[boolean]', () => {
+      const existing = getScriptSources();
+      mount(Icon, { props: { name: 'apple', loadDefaultIcons: false } });
+      expect(getScriptSources()).toEqual(existing);
+      mount(Icon, { props: { name: 'apple', loadDefaultIcons: true } });
+      expect(getScriptSources()).toEqual([
+        ...existing,
+        expect.stringMatching(/^https:\/\/tdesign\.gtimg\.com\/icon\/.+\/fonts\/index\.js$/),
+      ]);
     });
 
-    it('size[string]', () => {
-      const testSize = (size, target, fontSize) => {
-        const wrapper = mount(<Icon name="apple" size={size} />);
-        if (target) {
-          expect(wrapper.find(`.t-icon.t-icon-apple.t-size-${target}`).exists()).toBeTruthy();
-        } else if (fontSize) {
-          expect(wrapper.find(`.t-icon.t-icon-apple`).element.style.fontSize).toBe(fontSize);
-        }
-      };
-      testSize('small', 's');
-      testSize('medium', 'm');
-      testSize('large', 'l');
-      testSize('25px', '', '25px');
-      testSize('2rem', '', '2rem');
-      testSize('2em', '', '2em');
-    });
+    it('name[string]', async () => {
+      const wrapper = mount(Icon, { props: { name: 'apple', loadDefaultIcons: false } });
+      expect(wrapper.element.tagName.toLowerCase()).toBe('svg');
+      expect(wrapper.classes()).toContain('t-icon');
+      expect(wrapper.classes()).toContain('t-icon-apple');
+      expect(wrapper.get('use').attributes('href')).toBe('#t-icon-apple');
 
-    it('icon-svg url[string] & loadDefaultIcons[boolean]', () => {
-      const customUrl = 'https://mock.com/icons/index.js';
-
-      // 传入自定义 url 时，use 引用去掉 t-icon- 前缀，且 url 与内置图标脚本均被注入
-      const wrapper = mount(<Icon name="apple" url={customUrl} />);
-      expect(wrapper.find('use').attributes('href')).toBe('#apple');
-      const sources = Array.from(document.querySelectorAll('script.t-svg-js-stylesheet--unique-class')).map((node) =>
-        node.getAttribute('src'),
-      );
-      expect(sources).toContain(customUrl);
-      // 自定义 url 之外还有内置 CDN 图标脚本
-      expect(sources).toHaveLength(2);
-
-      // loadDefaultIcons 为 false 时不注入内置图标脚本，只注入自定义 url
-      document.querySelectorAll('script.t-svg-js-stylesheet--unique-class').forEach((node) => node.remove());
-      mount(<Icon name="apple" url={customUrl} loadDefaultIcons={false} />);
-      const sourcesWithoutDefault = Array.from(
-        document.querySelectorAll('script.t-svg-js-stylesheet--unique-class'),
-      ).map((node) => node.getAttribute('src'));
-      expect(sourcesWithoutDefault).toEqual([customUrl]);
-    });
-
-    it('iconfont url[string] & tag[string] & loadDefaultIcons[boolean]', () => {
-      const customUrl = 'https://mock.com/fonts/index.css';
-
-      // 自定义 url 时以 name 作为类名，tag 决定渲染标签，url 与内置图标样式均被注入
-      const wrapper = mount(<IconFont name="apple" url={customUrl} tag="span" />);
-      expect(wrapper.element.tagName).toBe('SPAN');
-      expect(wrapper.classes()).toContain('apple');
+      await wrapper.setProps({ name: 'add' });
+      expect(wrapper.classes()).toContain('t-icon-add');
       expect(wrapper.classes()).not.toContain('t-icon-apple');
-      const hrefs = Array.from(document.querySelectorAll('link.t-iconfont-stylesheet--unique-class')).map((node) =>
-        node.getAttribute('href'),
-      );
-      expect(hrefs).toContain(customUrl);
-      // 自定义 url 之外还有内置 CDN 图标样式
-      expect(hrefs).toHaveLength(2);
+      expect(wrapper.get('use').attributes('href')).toBe('#t-icon-add');
+    });
 
-      // loadDefaultIcons 为 false 时不注入内置图标样式，只注入自定义 url
-      document.querySelectorAll('link.t-iconfont-stylesheet--unique-class').forEach((node) => node.remove());
-      mount(<IconFont name="apple" url={customUrl} loadDefaultIcons={false} />);
-      const hrefsWithoutDefault = Array.from(document.querySelectorAll('link.t-iconfont-stylesheet--unique-class')).map(
-        (node) => node.getAttribute('href'),
-      );
-      expect(hrefsWithoutDefault).toEqual([customUrl]);
+    it('size[string]', async () => {
+      const wrapper = mount(Icon, { props: { name: 'apple', loadDefaultIcons: false } });
+      expect(wrapper.attributes('style') || '').not.toContain('font-size');
+      await wrapper.setProps({ size: 'small' });
+      expect(wrapper.classes()).toContain('t-size-s');
+      await wrapper.setProps({ size: 'medium' });
+      expect(wrapper.classes()).toContain('t-size-m');
+      expect(wrapper.classes()).not.toContain('t-size-s');
+      await wrapper.setProps({ size: 'large' });
+      expect(wrapper.classes()).toContain('t-size-l');
+      await wrapper.setProps({ size: '25px' });
+      expect(wrapper.attributes('style')).toContain('font-size: 25px');
+      expect(wrapper.classes()).not.toContain('t-size-l');
+      await wrapper.setProps({ size: '2rem' });
+      expect(wrapper.attributes('style')).toContain('font-size: 2rem');
+      await wrapper.setProps({ size: '2em' });
+      expect(wrapper.attributes('style')).toContain('font-size: 2em');
+      await wrapper.setProps({ size: undefined });
+      expect(wrapper.attributes('style') || '').not.toContain('font-size');
+      expect(wrapper.classes().filter((name) => name.startsWith('t-size-'))).toEqual([]);
+    });
+
+    it('url[string]', () => {
+      const url = 'https://example.com/guide-icons.js';
+      const existing = getScriptSources();
+      const wrapper = mount(Icon, { props: { name: 'custom-apple', url } });
+      expect(wrapper.get('use').attributes('href')).toBe('#custom-apple');
+      expect(getScriptSources()).toContain(url);
+      expect(getScriptSources().filter((source) => !existing.includes(source))).toHaveLength(2);
+    });
+
+    it('url[array]', () => {
+      const urls = ['https://example.com/icons-one.js', 'https://example.com/icons-two.js'];
+      const existing = getScriptSources();
+      const wrapper = mount(Icon, { props: { name: 'custom-apple', url: urls, loadDefaultIcons: false } });
+      expect(getScriptSources()).toEqual([...existing, ...urls]);
+      expect(wrapper.get('use').attributes('href')).toBe('#custom-apple');
+      expect(urls).toEqual(['https://example.com/icons-one.js', 'https://example.com/icons-two.js']);
     });
   });
 
   describe('events', () => {
-    it('click', () => {
+    it('click', async () => {
       const onClick = vi.fn();
-      const wrapper = mount(<Icon name="apple" onClick={onClick} />);
-      wrapper.trigger('click');
+      const wrapper = mount(Icon, { props: { name: 'apple', loadDefaultIcons: false, onClick } });
+      await wrapper.trigger('click');
       expect(onClick).toHaveBeenCalledTimes(1);
+      expect(onClick).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
+    });
+  });
+
+  describe('scenarios', () => {
+    it('loads only custom resources when default icons are disabled', () => {
+      const url = 'https://example.com/custom-only.js';
+      const existing = getScriptSources();
+      mount(Icon, { props: { name: 'custom-apple', url, loadDefaultIcons: false } });
+      expect(getScriptSources().filter((source) => !existing.includes(source))).toEqual([url]);
+    });
+
+    it('deduplicates resources within arrays and across instances', () => {
+      const url = 'https://example.com/shared-icons.js';
+      mount(Icon, { props: { name: 'custom-apple', url: [url, url], loadDefaultIcons: false } });
+      mount(Icon, { props: { name: 'custom-add', url, loadDefaultIcons: false } });
+      expect(getScriptSources().filter((source) => source === url)).toHaveLength(1);
+    });
+
+    it('reuses an existing resource node without replacing it', () => {
+      const url = 'https://example.com/preloaded-icons.js';
+      const script = document.createElement('script');
+      script.className = 't-svg-js-stylesheet--unique-class';
+      script.src = url;
+      document.body.appendChild(script);
+      mount(Icon, { props: { name: 'custom-apple', url, loadDefaultIcons: false } });
+      expect(document.querySelectorAll(`script[src="${url}"]`)).toHaveLength(1);
+      expect(document.querySelector(`script[src="${url}"]`)).toBe(script);
+    });
+
+    it('passes color styles and native attributes to the SVG', () => {
+      const wrapper = mount(Icon, {
+        props: { name: 'apple', loadDefaultIcons: false },
+        attrs: { style: { color: 'red' }, 'aria-label': '苹果', role: 'img' },
+      });
+      expect(wrapper.attributes('style')).toContain('color: red');
+      expect(wrapper.attributes('aria-label')).toBe('苹果');
+      expect(wrapper.attributes('role')).toBe('img');
+    });
+
+    it('registers the public TIcon component on installation', () => {
+      const wrapper = mount(
+        {
+          setup() {
+            return () => h(resolveComponent('TIcon'), { name: 'apple', loadDefaultIcons: false });
+          },
+        },
+        { global: { plugins: [Icon] } },
+      );
+      expect(wrapper.get('svg').classes()).toContain('t-icon-apple');
     });
   });
 });
