@@ -94,7 +94,7 @@ export default defineComponent({
         let ActiveIcon = indeterminate.value ? TdRemove1Icon : TdCheck1Icon;
         if (shape === 'line') ActiveIcon = indeterminate.value ? TdMinusIcon : TdCheckIcon;
         return (
-          <span
+          <div
             class={{
               [`${checkboxClass.value}__icon-${shape}`]: true,
               [`${checkboxClass.value}__icon-${shape}--checked`]: shape !== 'line' && isActive.value,
@@ -102,7 +102,7 @@ export default defineComponent({
             }}
           >
             {isActive.value && <ActiveIcon />}
-          </span>
+          </div>
         );
       };
 

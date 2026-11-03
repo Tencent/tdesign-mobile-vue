@@ -1,16 +1,28 @@
 import { nextTick } from 'vue';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { mount } from '@vue/test-utils';
 import CountDown from '../count-down';
 
-const sleep = (duration) =>
-  new Promise((resolve) =>
-    setTimeout(() => {
-      resolve();
-    }, duration),
-  );
+// 使用 fake timers 将 requestAnimationFrame 的节拍固定为 16ms/帧（62.5fps），
+vi.mock('../../shared/useCountDown/utils', async (importOriginal) => {
+  const actual = await importOriginal();
+  return {
+    ...actual,
+    getScreenFps: () => 62.5,
+  };
+});
+
+const sleep = (duration) => vi.advanceTimersByTimeAsync(duration);
 
 describe('countdown.vue', async () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+  });
+
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   describe('props', async () => {
     it('time', async () => {
       const wrapper = mount(<CountDown time={2000}></CountDown>);

@@ -285,12 +285,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <div
                   class="t-radio__content"
                 >
-                  <span
+                  <div
                     class="t-radio__title"
                     style=""
                   >
                     男
-                  </span>
+                  </div>
                   <!---->
                 </div>
                 <!---->
@@ -317,12 +317,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <div
                   class="t-radio__content"
                 >
-                  <span
+                  <div
                     class="t-radio__title"
                     style=""
                   >
                     女
-                  </span>
+                  </div>
                   <!---->
                 </div>
                 <!---->
@@ -349,12 +349,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                 <div
                   class="t-radio__content"
                 >
-                  <span
+                  <div
                     class="t-radio__title"
                     style=""
                   >
                     保密
-                  </span>
+                  </div>
                   <!---->
                 </div>
                 <!---->
@@ -1106,12 +1106,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                             <div
                               class="t-radio__content"
                             >
-                              <span
+                              <div
                                 class="t-radio__title"
                                 style=""
                               >
                                 北京市
-                              </span>
+                              </div>
                               <!---->
                             </div>
                             <!---->
@@ -1137,12 +1137,12 @@ exports[`Form > Form horizontalVue demo works fine 1`] = `
                             <div
                               class="t-radio__content"
                             >
-                              <span
+                              <div
                                 class="t-radio__title"
                                 style=""
                               >
                                 天津市
-                              </span>
+                              </div>
                               <!---->
                             </div>
                             <!---->
@@ -2256,12 +2256,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <div
                         class="t-radio__content"
                       >
-                        <span
+                        <div
                           class="t-radio__title"
                           style=""
                         >
                           男
-                        </span>
+                        </div>
                         <!---->
                       </div>
                       <!---->
@@ -2288,12 +2288,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <div
                         class="t-radio__content"
                       >
-                        <span
+                        <div
                           class="t-radio__title"
                           style=""
                         >
                           女
-                        </span>
+                        </div>
                         <!---->
                       </div>
                       <!---->
@@ -2320,12 +2320,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                       <div
                         class="t-radio__content"
                       >
-                        <span
+                        <div
                           class="t-radio__title"
                           style=""
                         >
                           保密
-                        </span>
+                        </div>
                         <!---->
                       </div>
                       <!---->
@@ -3077,12 +3077,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                   <div
                                     class="t-radio__content"
                                   >
-                                    <span
+                                    <div
                                       class="t-radio__title"
                                       style=""
                                     >
                                       北京市
-                                    </span>
+                                    </div>
                                     <!---->
                                   </div>
                                   <!---->
@@ -3108,12 +3108,12 @@ exports[`Form > Form mobileVue demo works fine 1`] = `
                                   <div
                                     class="t-radio__content"
                                   >
-                                    <span
+                                    <div
                                       class="t-radio__title"
                                       style=""
                                     >
                                       天津市
-                                    </span>
+                                    </div>
                                     <!---->
                                   </div>
                                   <!---->
@@ -4090,12 +4090,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <div
                   class="t-radio__content"
                 >
-                  <span
+                  <div
                     class="t-radio__title"
                     style=""
                   >
                     男
-                  </span>
+                  </div>
                   <!---->
                 </div>
                 <!---->
@@ -4122,12 +4122,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <div
                   class="t-radio__content"
                 >
-                  <span
+                  <div
                     class="t-radio__title"
                     style=""
                   >
                     女
-                  </span>
+                  </div>
                   <!---->
                 </div>
                 <!---->
@@ -4154,12 +4154,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                 <div
                   class="t-radio__content"
                 >
-                  <span
+                  <div
                     class="t-radio__title"
                     style=""
                   >
                     保密
-                  </span>
+                  </div>
                   <!---->
                 </div>
                 <!---->
@@ -4907,12 +4907,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                             <div
                               class="t-radio__content"
                             >
-                              <span
+                              <div
                                 class="t-radio__title"
                                 style=""
                               >
                                 北京市
-                              </span>
+                              </div>
                               <!---->
                             </div>
                             <!---->
@@ -4938,12 +4938,12 @@ exports[`Form > Form verticalVue demo works fine 1`] = `
                             <div
                               class="t-radio__content"
                             >
-                              <span
+                              <div
                                 class="t-radio__title"
                                 style=""
                               >
                                 天津市
-                              </span>
+                              </div>
                               <!---->
                             </div>
                             <!---->

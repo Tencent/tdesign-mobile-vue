@@ -29,12 +29,12 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
       <div
         class="t-radio__content"
       >
-        <span
+        <div
           class="t-radio__title"
           style=""
         >
           单选
-        </span>
+        </div>
         <!---->
       </div>
       <div
@@ -62,12 +62,12 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
       <div
         class="t-radio__content"
       >
-        <span
+        <div
           class="t-radio__title"
           style=""
         >
           单选
-        </span>
+        </div>
         <!---->
       </div>
       <div
@@ -108,12 +108,12 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
       <div
         class="t-radio__content"
       >
-        <span
+        <div
           class="t-radio__title"
           style=""
         >
           单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
-        </span>
+        </div>
         <!---->
       </div>
       <div
@@ -141,12 +141,12 @@ exports[`Radio > Radio baseVue demo works fine 1`] = `
       <div
         class="t-radio__content"
       >
-        <span
+        <div
           class="t-radio__title"
           style=""
         >
           单选
-        </span>
+        </div>
         <div
           class="t-radio__description"
           style=""
@@ -205,12 +205,12 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
       <div
         class="t-radio__content"
       >
-        <span
+        <div
           class="t-radio__title"
           style=""
         >
           单选
-        </span>
+        </div>
         <!---->
       </div>
       <div
@@ -238,12 +238,12 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
       <div
         class="t-radio__content"
       >
-        <span
+        <div
           class="t-radio__title"
           style=""
         >
           单选
-        </span>
+        </div>
         <!---->
       </div>
       <div
@@ -271,12 +271,12 @@ exports[`Radio > Radio cardVue demo works fine 1`] = `
       <div
         class="t-radio__content"
       >
-        <span
+        <div
           class="t-radio__title"
           style=""
         >
           单选标题多行单选标题多行单选标题多行单选标题多行单选标题多行
-        </span>
+        </div>
         <!---->
       </div>
       <div
@@ -332,12 +332,12 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             单选
-          </span>
+          </div>
           <div
             class="t-radio__description"
             style=""
@@ -371,12 +371,12 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             单选
-          </span>
+          </div>
           <div
             class="t-radio__description"
             style=""
@@ -410,12 +410,12 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             单选
-          </span>
+          </div>
           <div
             class="t-radio__description"
             style=""
@@ -475,12 +475,12 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             单选
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -509,12 +509,12 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             单选
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -543,12 +543,12 @@ exports[`Radio > Radio customVue demo works fine 1`] = `
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             单选
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -591,12 +591,12 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title"
         style=""
       >
         单选标题
-      </span>
+      </div>
       <!---->
     </div>
     <!---->
@@ -623,12 +623,12 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title"
         style=""
       >
         单选标题
-      </span>
+      </div>
       <!---->
     </div>
     <!---->
@@ -668,12 +668,12 @@ exports[`Radio > Radio horizontalVue demo works fine 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title"
         style=""
       >
         单选标题
-      </span>
+      </div>
       <!---->
     </div>
     <!---->
@@ -728,12 +728,12 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title"
         style=""
       >
         单选
-      </span>
+      </div>
       <!---->
     </div>
     <div
@@ -764,12 +764,12 @@ exports[`Radio > Radio iconVue demo works fine 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title"
         style=""
       >
         单选
-      </span>
+      </div>
       <!---->
     </div>
     <div
@@ -843,12 +843,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选
-              </span>
+              </div>
               <!---->
             </div>
             <div
@@ -876,12 +876,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选
-              </span>
+              </div>
               <!---->
             </div>
             <div
@@ -922,12 +922,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选单选
-              </span>
+              </div>
               <!---->
             </div>
             <div
@@ -955,12 +955,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选
-              </span>
+              </div>
               <div
                 class="t-radio__description"
                 style=""
@@ -1024,12 +1024,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <div
             class="t-radio__content"
           >
-            <span
+            <div
               class="t-radio__title"
               style=""
             >
               单选标题
-            </span>
+            </div>
             <!---->
           </div>
           <!---->
@@ -1056,12 +1056,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <div
             class="t-radio__content"
           >
-            <span
+            <div
               class="t-radio__title"
               style=""
             >
               单选标题
-            </span>
+            </div>
             <!---->
           </div>
           <!---->
@@ -1101,12 +1101,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <div
             class="t-radio__content"
           >
-            <span
+            <div
               class="t-radio__title"
               style=""
             >
               单选标题
-            </span>
+            </div>
             <!---->
           </div>
           <!---->
@@ -1178,12 +1178,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <div
             class="t-radio__content"
           >
-            <span
+            <div
               class="t-radio__title t-radio__title--disabled"
               style=""
             >
               选项禁用-已选
-            </span>
+            </div>
             <!---->
           </div>
           <div
@@ -1212,12 +1212,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
           <div
             class="t-radio__content"
           >
-            <span
+            <div
               class="t-radio__title t-radio__title--disabled"
               style=""
             >
               选项禁用-默认
-            </span>
+            </div>
             <!---->
           </div>
           <div
@@ -1293,12 +1293,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             单选
-          </span>
+          </div>
           <!---->
         </div>
         <div
@@ -1329,12 +1329,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             单选
-          </span>
+          </div>
           <!---->
         </div>
         <div
@@ -1397,12 +1397,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             单选
-          </span>
+          </div>
           <!---->
         </div>
         <div
@@ -1443,12 +1443,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             单选
-          </span>
+          </div>
           <!---->
         </div>
         <div
@@ -1517,12 +1517,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选
-              </span>
+              </div>
               <!---->
             </div>
             <div
@@ -1550,12 +1550,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选
-              </span>
+              </div>
               <!---->
             </div>
             <div
@@ -1583,12 +1583,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选标题多行单选标题多行单选标题多行单选标题多行单选标题多行
-              </span>
+              </div>
               <!---->
             </div>
             <div
@@ -1662,12 +1662,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选
-              </span>
+              </div>
               <div
                 class="t-radio__description"
                 style=""
@@ -1701,12 +1701,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选
-              </span>
+              </div>
               <div
                 class="t-radio__description"
                 style=""
@@ -1740,12 +1740,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选
-              </span>
+              </div>
               <div
                 class="t-radio__description"
                 style=""
@@ -1805,12 +1805,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选
-              </span>
+              </div>
               <!---->
             </div>
             <!---->
@@ -1839,12 +1839,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选
-              </span>
+              </div>
               <!---->
             </div>
             <!---->
@@ -1873,12 +1873,12 @@ exports[`Radio > Radio mobileVue demo works fine 1`] = `
             <div
               class="t-radio__content"
             >
-              <span
+              <div
                 class="t-radio__title"
                 style=""
               >
                 单选
-              </span>
+              </div>
               <!---->
             </div>
             <!---->
@@ -1933,12 +1933,12 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title"
         style=""
       >
         单选
-      </span>
+      </div>
       <!---->
     </div>
     <div
@@ -1979,12 +1979,12 @@ exports[`Radio > Radio placementVue demo works fine 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title"
         style=""
       >
         单选
-      </span>
+      </div>
       <!---->
     </div>
     <div
@@ -2037,12 +2037,12 @@ exports[`Radio > Radio statusVue demo works fine 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title t-radio__title--disabled"
         style=""
       >
         选项禁用-已选
-      </span>
+      </div>
       <!---->
     </div>
     <div
@@ -2071,12 +2071,12 @@ exports[`Radio > Radio statusVue demo works fine 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title t-radio__title--disabled"
         style=""
       >
         选项禁用-默认
-      </span>
+      </div>
       <!---->
     </div>
     <div

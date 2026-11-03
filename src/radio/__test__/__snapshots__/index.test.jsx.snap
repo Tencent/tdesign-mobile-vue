@@ -27,12 +27,12 @@ exports[`Radio > props > : checked 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title"
         style=""
       >
         0
-      </span>
+      </div>
       <!---->
     </div>
     <div
@@ -73,12 +73,12 @@ exports[`Radio > props > : checked 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title"
         style=""
       >
         1
-      </span>
+      </div>
       <!---->
     </div>
     <div
@@ -118,12 +118,12 @@ exports[`Radio > props > : keys 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title t-radio__title--disabled"
         style=""
       >
         单选
-      </span>
+      </div>
       <!---->
     </div>
     <div
@@ -151,12 +151,12 @@ exports[`Radio > props > : keys 1`] = `
     <div
       class="t-radio__content"
     >
-      <span
+      <div
         class="t-radio__title"
         style=""
       >
         单选
-      </span>
+      </div>
       <!---->
     </div>
     <div

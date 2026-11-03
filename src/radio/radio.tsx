@@ -149,13 +149,16 @@ export default defineComponent({
           <div class={iconClass.value}>{renderIconContent()}</div>
           <div class={`${radioClass.value}__content`} onClick={radioContentChange}>
             {label && (
-              <span class={titleClasses.value} style={`-webkit-line-clamp: ${props.maxLabelRow}`}>
+              <div class={titleClasses.value} style={`-webkit-line-clamp: ${props.maxLabelRow}`}>
                 {label}
-              </span>
+              </div>
             )}
             {content && (
               <div
-                class={[`${radioClass.value}__description`, { [`${radioClass.value}__description`]: isDisabled.value }]}
+                class={[
+                  `${radioClass.value}__description`,
+                  { [`${radioClass.value}__description--disabled`]: isDisabled.value },
+                ]}
                 style={`-webkit-line-clamp: ${props.maxContentRow}`}
               >
                 {content}
