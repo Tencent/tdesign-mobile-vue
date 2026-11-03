@@ -1,51 +1,62 @@
-import { mount } from '@vue/test-utils';
-import { vi, describe, it, expect, beforeAll } from 'vitest';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { LoadingIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import { nextTick } from 'vue';
 import Image from '../image';
+import type { TdImageProps } from '../type';
 
 const prefix = 't';
 const name = `${prefix}-image`;
 const IMAGE = 'https://tdesign.gtimg.com/site/upload1.png';
 const FAIL_IMAGE = 'https://123.jpg';
-const fitList = ['fill', 'contain', 'cover', 'none', 'scale-down'];
-const shapeList = ['circle', 'round', 'square'];
+const fitList = ['fill', 'contain', 'cover', 'none', 'scale-down'] as const;
+const shapeList = ['circle', 'round', 'square'] as const;
 const positionList = ['top', 'bottom', 'center', 'left', 'right'];
 
-class MockIntersectionObserver {
-  _callback: Function;
+const observers: MockIntersectionObserver[] = [];
 
-  _element!: HTMLElement;
+class MockIntersectionObserver implements IntersectionObserver {
+  readonly root: Element | Document | null = null;
 
-  constructor(callback: Function) {
-    this._callback = callback;
+  readonly rootMargin = '0px';
+
+  readonly thresholds = [0];
+
+  readonly targets = new Set<Element>();
+
+  constructor(private callback: (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => void) {
+    observers.push(this);
   }
 
-  observe(element: HTMLElement) {
-    this._element = element;
-    this._element.addEventListener('resize', this.trigger);
-  }
+  observe = vi.fn((element: Element) => {
+    this.targets.add(element);
+  });
 
-  unobserve() {
-    this._element.removeEventListener('resize', this.trigger);
-  }
+  unobserve = vi.fn((element: Element) => {
+    this.targets.delete(element);
+  });
 
-  disconnect() {
-    this._element.removeEventListener('resize', this.trigger);
-  }
+  disconnect = vi.fn(() => {
+    this.targets.clear();
+  });
 
-  trigger = (event: UIEvent) => {
-    this._callback([
-      {
-        isIntersecting: true,
-      },
-    ]);
-  };
+  takeRecords = vi.fn((): IntersectionObserverEntry[] => []);
+
+  intersect(element: Element, isIntersecting: boolean) {
+    this.callback([{ target: element, isIntersecting } as IntersectionObserverEntry], this);
+  }
 }
 
+enableAutoUnmount(afterEach);
+
 describe('Image', () => {
-  beforeAll(() => {
-    window.IntersectionObserver = MockIntersectionObserver as unknown as typeof IntersectionObserver;
+  beforeEach(() => {
+    observers.length = 0;
+    vi.stubGlobal('IntersectionObserver', MockIntersectionObserver);
+  });
+
+  afterEach(() => {
+    vi.unstubAllGlobals();
   });
 
   describe('props', () => {
@@ -56,6 +67,10 @@ describe('Image', () => {
       expect($image.attributes('alt')).toBe('图片');
     });
 
+    // mask 渲染以 slots 为门槛，仅设置 Prop 时仍展示默认图标。
+    it.todo('error[string]');
+    it.todo('error[function]');
+
     it('fallback[string]', async () => {
       const onError = vi.fn();
       const wrapper = mount(() => <Image src={FAIL_IMAGE} fallback={IMAGE} onError={onError} />);
@@ -64,6 +79,8 @@ describe('Image', () => {
       // 手动触发 图片加载失败的回调函数
       await $image.trigger('error');
       expect($image.attributes('src')).toBe(IMAGE);
+      expect(onError).toHaveBeenCalledWith({ e: expect.any(Event) });
+      expect(wrapper.find(`.${name}__mask`).exists()).toBe(false);
     });
 
     it('fit[contain/cover/fill/none/scale-down]', async () => {
@@ -81,12 +98,13 @@ describe('Image', () => {
           expect($image.attributes('style').includes(`object-fit: ${item}`)).toBeFalsy();
         });
 
-      const fit = 'cover';
-      await wrapper.setProps({
-        fit,
-      });
-      // fit = 'cover'
-      expect($image.attributes('style')).toContain(`object-fit: ${fit}`);
+      await Promise.all(
+        fitList.map(async (fit) => {
+          const fitted = mount(Image, { props: { src: IMAGE } });
+          await fitted.setProps({ fit });
+          expect(fitted.get('img').element.style.objectFit).toBe(fit);
+        }),
+      );
     });
 
     it('lazy[boolean]', async () => {
@@ -94,15 +112,25 @@ describe('Image', () => {
       await nextTick();
       const $image = wrapper.find(`.${name}__img`);
       expect(wrapper.find(`.${name}__mask`).exists()).toBeFalsy();
-      // 触发 IntersectionObserver , 但图片加载完成不会触发 load 回调,
-      $image.trigger('resize');
+      expect($image.attributes('src')).toBe('');
+      const observer = observers.find((item) => item.targets.has($image.element));
+      expect(observer).toBeDefined();
+      observer.intersect($image.element, false);
+      await nextTick();
+      expect($image.attributes('src')).toBe('');
+      observer.intersect($image.element, true);
       await nextTick();
       expect($image.attributes('src')).toBe(IMAGE);
+      expect(observer.disconnect).toHaveBeenCalledTimes(1);
+      expect(wrapper.find(`.${name}__mask`).exists()).toBe(true);
       // 手动触发 图片加载完成的回调函数
       await $image.trigger('load');
       expect(wrapper.element).toMatchSnapshot();
       expect(wrapper.find(`.${name}__mask`).exists()).toBeFalsy();
     });
+
+    it.todo('loading[string]');
+    it.todo('loading[function]');
 
     it('position[string]', async () => {
       positionList.forEach((position) => {
@@ -112,10 +140,21 @@ describe('Image', () => {
       });
     });
 
-    it('referrerpolicy[no-referrer/origin/same-origin/unsafe-url/...]', () => {
-      const wrapper = mount(() => <Image src={IMAGE} referrerpolicy="no-referrer" />);
-      const $image = wrapper.find(`.${name}__img`);
-      expect($image.attributes('referrerpolicy')).toBe('no-referrer');
+    it('referrerpolicy[string]', () => {
+      const policies: TdImageProps['referrerpolicy'][] = [
+        'no-referrer',
+        'no-referrer-when-downgrade',
+        'origin',
+        'origin-when-cross-origin',
+        'same-origin',
+        'strict-origin',
+        'strict-origin-when-cross-origin',
+        'unsafe-url',
+      ];
+      policies.forEach((referrerpolicy) => {
+        const wrapper = mount(Image, { props: { src: IMAGE, referrerpolicy } });
+        expect(wrapper.get('img').attributes('referrerpolicy')).toBe(referrerpolicy);
+      });
     });
 
     it('shape[circle/round/square]', async () => {
@@ -134,12 +173,18 @@ describe('Image', () => {
           expect($image.classes().includes(`${name}--${item}`)).toBeFalsy();
         });
 
-      const shape = 'square';
-      await wrapper.setProps({
-        shape,
-      });
-      // shape = 'square'
-      expect($image.classes()).toContain(`${name}--${shape}`);
+      await Promise.all(
+        shapeList.map(async (shape) => {
+          const shaped = mount(Image, { props: { src: IMAGE } });
+          await shaped.setProps({ shape });
+          expect(shaped.classes()).toContain(`${name}--${shape}`);
+          shapeList
+            .filter((value) => value !== shape)
+            .forEach((value) => {
+              expect(shaped.classes()).not.toContain(`${name}--${value}`);
+            });
+        }),
+      );
     });
 
     it('src[string]', async () => {
@@ -152,30 +197,30 @@ describe('Image', () => {
       // src = ''，不进入失败态，保持加载中遮罩，也不会触发 error
       expect(wrapper.find(`.${name}__mask`).exists()).toBeTruthy();
       expect(onError).toBeCalledTimes(0);
+
+      const valid = mount(Image, { props: { src: IMAGE } });
+      expect(valid.get('img').attributes('src')).toBe(IMAGE);
+      await valid.setProps({ src: FAIL_IMAGE });
+      expect(valid.get('img').attributes('src')).toBe(FAIL_IMAGE);
     });
 
-    it('srcset[object]', () => {
+    it('srcset[object]', async () => {
       const srcset = {
         'image/avif': 'https://tdesign.gtimg.com/site/upload1.avif',
         'image/webp': 'https://tdesign.gtimg.com/site/upload1.webp',
       };
-      const wrapper = mount(() => <Image src={IMAGE} srcset={srcset} />);
+      const wrapper = mount(Image, { props: { src: IMAGE, srcset } });
       const $sources = wrapper.findAll('picture source');
       expect($sources).toHaveLength(2);
       expect($sources[0].attributes('type')).toBe('image/avif');
       expect($sources[0].attributes('srcset')).toBe(srcset['image/avif']);
       expect($sources[1].attributes('type')).toBe('image/webp');
       expect($sources[1].attributes('srcset')).toBe(srcset['image/webp']);
+      expect(wrapper.get('picture img').attributes('src')).toBe(IMAGE);
+      await wrapper.setProps({ srcset: undefined });
+      expect(wrapper.find('source').exists()).toBe(false);
+      expect(wrapper.get('picture img').attributes('src')).toBe(IMAGE);
     });
-
-    // TODO: loading/error 的 prop 通道未实现——mask 渲染以 slots 为门槛，仅设置 prop 时仍展示默认图标，待组件修复后补充
-    it.todo('loading[string]');
-
-    it.todo('loading[function]');
-
-    it.todo('error[string]');
-
-    it.todo('error[function]');
   });
 
   describe('events', () => {
@@ -188,6 +233,7 @@ describe('Image', () => {
       // 手动触发 图片加载完成的回调函数
       await $image.trigger('load');
       expect(onLoad).toBeCalledTimes(1);
+      expect(onLoad).toHaveBeenCalledWith({ e: expect.any(Event) });
     });
 
     it('error', async () => {
@@ -198,6 +244,7 @@ describe('Image', () => {
       // 手动触发 图片加载失败的回调函数
       await $image.trigger('error');
       expect(onError).toBeCalledTimes(1);
+      expect(onError).toHaveBeenCalledWith({ e: expect.any(Event) });
     });
   });
 
@@ -228,6 +275,62 @@ describe('Image', () => {
   });
 
   describe('scenarios', () => {
+    it('shows loading and error slots only in their respective states', async () => {
+      const wrapper = mount(Image, {
+        props: { src: IMAGE },
+        slots: {
+          loading: () => <span class="custom-loading">正在加载</span>,
+          error: () => <span class="custom-error">图片失败</span>,
+        },
+      });
+      expect(wrapper.get('.custom-loading').text()).toBe('正在加载');
+      expect(wrapper.find('.custom-error').exists()).toBe(false);
+      await wrapper.get('img').trigger('error');
+      expect(wrapper.find('.custom-loading').exists()).toBe(false);
+      expect(wrapper.get('.custom-error').text()).toBe('图片失败');
+    });
+
+    it('fallback replaces a failed source instead of rendering the error slot', async () => {
+      const wrapper = mount(Image, {
+        props: { src: FAIL_IMAGE, fallback: IMAGE },
+        slots: { error: () => <span class="custom-error">图片失败</span> },
+      });
+      await wrapper.get('img').trigger('error');
+      expect(wrapper.get('img').attributes('src')).toBe(IMAGE);
+      expect(wrapper.find('.custom-error').exists()).toBe(false);
+      expect(wrapper.find(`.${name}__mask`).exists()).toBe(false);
+    });
+
+    it('does not report errors before a lazy image enters the viewport', async () => {
+      const onError = vi.fn();
+      const wrapper = mount(Image, { props: { src: IMAGE, lazy: true, onError } });
+      await nextTick();
+      await wrapper.get('img').trigger('error');
+      expect(onError).not.toHaveBeenCalled();
+      expect(wrapper.find(`.${name}__mask`).exists()).toBe(false);
+    });
+
+    it('disabling lazy loading loads the source without waiting for intersection', async () => {
+      const wrapper = mount(Image, { props: { src: IMAGE, lazy: true } });
+      expect(wrapper.get('img').attributes('src')).toBe('');
+      await wrapper.setProps({ lazy: false });
+      expect(wrapper.get('img').attributes('src')).toBe(IMAGE);
+      expect(wrapper.find(`.${name}__mask`).exists()).toBe(true);
+    });
+
+    it('disconnects the observer when unmounted before intersection', async () => {
+      const wrapper = mount(Image, { props: { src: IMAGE, lazy: true } });
+      await nextTick();
+      const observer = observers.find((item) => item.targets.has(wrapper.get('img').element));
+      expect(observer).toBeDefined();
+      wrapper.unmount();
+      expect(observer.disconnect).toHaveBeenCalledTimes(1);
+      expect(observer.targets.size).toBe(0);
+    });
+
+    // src 更新只修改 realSrc，没有重置 isLoading/isError。
+    it.todo('resets loading and error state when the image source changes');
+
     describe('状态流转', () => {
       it('默认加载中状态展示 loading 图标，加载完成后遮罩消失', async () => {
         const wrapper = mount(() => <Image src={IMAGE} />);
@@ -250,6 +353,31 @@ describe('Image', () => {
     });
 
     describe('prop 与 slot 优先级', () => {
+      it('loading function takes priority and falls back to its slot when removed', async () => {
+        const wrapper = mount(Image, {
+          props: { src: IMAGE, loading: () => <span class="prop-loading">属性加载中</span> },
+          slots: { loading: () => <span class="slot-loading">插槽加载中</span> },
+        });
+        expect(wrapper.get('.prop-loading').text()).toBe('属性加载中');
+        expect(wrapper.find('.slot-loading').exists()).toBe(false);
+        await wrapper.setProps({ loading: undefined });
+        expect(wrapper.get('.slot-loading').text()).toBe('插槽加载中');
+        expect(wrapper.find('.prop-loading').exists()).toBe(false);
+      });
+
+      it('error function takes priority and falls back to its slot when removed', async () => {
+        const wrapper = mount(Image, {
+          props: { src: FAIL_IMAGE, error: () => <span class="prop-error">属性加载失败</span> },
+          slots: { error: () => <span class="slot-error">插槽加载失败</span> },
+        });
+        await wrapper.get('img').trigger('error');
+        expect(wrapper.get('.prop-error').text()).toBe('属性加载失败');
+        expect(wrapper.find('.slot-error').exists()).toBe(false);
+        await wrapper.setProps({ error: undefined });
+        expect(wrapper.get('.slot-error').text()).toBe('插槽加载失败');
+        expect(wrapper.find('.prop-error').exists()).toBe(false);
+      });
+
       it('loading 同时设置 prop 与 slot 时优先渲染 prop 内容', () => {
         const slots = {
           loading: () => 'SLOT加载中',
