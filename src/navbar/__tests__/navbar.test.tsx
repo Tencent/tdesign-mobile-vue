@@ -1,172 +1,264 @@
-import { h } from 'vue';
-import { mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
-import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import NavBar from '../navbar';
 
-const iconFunc = () => h(TIconApp);
+enableAutoUnmount(afterEach);
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
+
 describe('Navbar', () => {
   describe('props', () => {
     it('animation[boolean]', async () => {
-      // animation = true（默认）：显示态类名带动画后缀
-      const navbar = mount(<NavBar title="标题" />);
-      expect(navbar.element.className).toContain('t-navbar--visible-animation');
+      // animation 默认 true：显示态类名带动画后缀
+      const wrapper = mount(<NavBar title="标题" />);
+      expect(wrapper.classes()).toContain('t-navbar--visible-animation');
 
       // animation = false：显示态类名不带动画后缀
-      await navbar.setProps({ animation: false });
-      expect(navbar.element.className).toContain('t-navbar--visible');
-      expect(navbar.element.className).not.toContain('t-navbar--visible-animation');
+      await wrapper.setProps({ animation: false });
+      expect(wrapper.classes()).toContain('t-navbar--visible');
+      expect(wrapper.classes()).not.toContain('t-navbar--visible-animation');
     });
 
     it('capsule[function]', () => {
-      const navbar = mount(<NavBar title="标题" capsule={iconFunc} />);
-      expect(navbar.find('.t-icon-app').exists()).toBeTruthy();
+      const withCapsule = mount(<NavBar title="标题" capsule={() => '胶囊内容'} />);
+      expect(withCapsule.get('.t-navbar__capsule').text()).toBe('胶囊内容');
+
+      // 默认不传 capsule：不渲染胶囊容器
+      const withoutCapsule = mount(<NavBar title="标题" />);
+      expect(withoutCapsule.find('.t-navbar__capsule').exists()).toBeFalsy();
     });
 
     it('fixed[boolean]', async () => {
-      const navbar = mount(<NavBar title="标题" />);
-      expect(navbar.element.className).toContain('t-navbar--fixed');
+      // fixed 默认 true
+      const wrapper = mount(<NavBar title="标题" />);
+      expect(wrapper.classes()).toContain('t-navbar--fixed');
 
-      await navbar.setProps({ fixed: false });
-      expect(navbar.element.className).not.toContain('t-navbar--fixed');
+      await wrapper.setProps({ fixed: false });
+      expect(wrapper.classes()).not.toContain('t-navbar--fixed');
     });
 
     it('left[function]', () => {
-      const test = () => '左侧内容';
-      const navbar = mount(<NavBar title="标题" left={test} />);
-      expect(navbar.text()).toContain('左侧内容');
+      const wrapper = mount(<NavBar title="标题" left={() => '左侧内容'} />);
+      expect(wrapper.get('.t-navbar__left').text()).toContain('左侧内容');
     });
 
     it('leftArrow[boolean]', () => {
-      const navbar = mount(<NavBar title="标题" leftArrow />);
-      expect(navbar.find('.t-navbar__left-arrow').exists()).toBeTruthy();
+      const withArrow = mount(<NavBar title="标题" leftArrow />);
+      expect(withArrow.find('.t-navbar__left-arrow').exists()).toBeTruthy();
+
+      const withoutArrow = mount(<NavBar title="标题" />);
+      expect(withoutArrow.find('.t-navbar__left-arrow').exists()).toBeFalsy();
     });
 
     it('placeholder[boolean]', () => {
-      const navbar = mount(<NavBar title="标题" fixed placeholder />);
-      expect(navbar.find('.t-navbar__placeholder').exists()).toBeTruthy();
+      // fixed + placeholder：渲染占位元素
+      const fixedNavbar = mount(<NavBar title="标题" fixed placeholder />);
+      expect(fixedNavbar.find('.t-navbar__placeholder').exists()).toBeTruthy();
+
+      // 默认不开启 placeholder：不渲染占位元素
+      const noPlaceholder = mount(<NavBar title="标题" fixed />);
+      expect(noPlaceholder.find('.t-navbar__placeholder').exists()).toBeFalsy();
+
+      // placeholder 仅在 fixed 时生效
+      const unfixedNavbar = mount(<NavBar title="标题" fixed={false} placeholder />);
+      expect(unfixedNavbar.find('.t-navbar__placeholder').exists()).toBeFalsy();
     });
 
     it('right[function]', () => {
-      const test = () => '右侧内容';
-      const navbar = mount(<NavBar title="标题" right={test} />);
-      expect(navbar.text()).toContain('右侧内容');
+      const withRight = mount(<NavBar title="标题" right={() => '右侧内容'} />);
+      expect(withRight.get('.t-navbar__right').text()).toContain('右侧内容');
+
+      // 默认不传 right：不渲染右侧容器
+      const withoutRight = mount(<NavBar title="标题" />);
+      expect(withoutRight.find('.t-navbar__right').exists()).toBeFalsy();
     });
 
-    it('safeAreaInsetTop[boolean]', () => {
-      const navbar = mount(<NavBar title="标题" safeAreaInsetTop />);
-      expect(navbar.find('.t-safe-area-top').exists()).toBeTruthy();
+    it('safeAreaInsetTop[boolean]', async () => {
+      // safeAreaInsetTop 默认 true：内容区带顶部安全区类名
+      const wrapper = mount(<NavBar title="标题" />);
+      expect(wrapper.get('.t-navbar__content').classes()).toContain('t-safe-area-top');
+
+      await wrapper.setProps({ safeAreaInsetTop: false });
+      expect(wrapper.get('.t-navbar__content').classes()).not.toContain('t-safe-area-top');
     });
 
     it('title[string]', () => {
-      const navbar = mount(<NavBar title="标题" />);
-      expect(navbar.text()).toContain('标题');
+      const wrapper = mount(<NavBar title="标题" />);
+      expect(wrapper.get('.t-navbar__center-title').text()).toBe('标题');
+
+      // 默认不设置标题：不渲染中部区域
+      const empty = mount(<NavBar />);
+      expect(empty.find('.t-navbar__center').exists()).toBeFalsy();
     });
 
     it('title[function]', () => {
-      const test = () => '标题';
-      const navbar = mount(<NavBar title={test} />);
-      expect(navbar.text()).toContain('标题');
+      const wrapper = mount(<NavBar title={() => '函数标题'} />);
+      expect(wrapper.get('.t-navbar__center').text()).toBe('函数标题');
+      // 函数类型标题不使用字符串标题的 span 包装
+      expect(wrapper.find('.t-navbar__center-title').exists()).toBeFalsy();
     });
 
     it('titleMaxLength[number]', async () => {
-      const navbar = mount(<NavBar title="标题超过了六个字符" titleMaxLength={6} />);
-      expect(navbar.text()).toContain('标题超过了六...');
+      const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+      const wrapper = mount(<NavBar title="标题超过了六个字符" titleMaxLength={6} />);
+      // 超出最大长度：截断并追加省略号
+      expect(wrapper.get('.t-navbar__center').text()).toBe('标题超过了六...');
 
-      await navbar.setProps({ titleMaxLength: -1 });
-      expect(navbar.text()).toContain('标题超过了六个字符');
-      await navbar.setProps({ titleMaxLength: 10, title: '测试标题' });
-      expect(navbar.text()).toContain('测试标题');
+      // 等于最大长度：不截断
+      await wrapper.setProps({ titleMaxLength: 9 });
+      expect(wrapper.get('.t-navbar__center').text()).toBe('标题超过了六个字符');
+
+      // 小于等于 0：告警且不截断
+      await wrapper.setProps({ titleMaxLength: 0 });
+      expect(wrapper.get('.t-navbar__center').text()).toBe('标题超过了六个字符');
+      expect(warn).toHaveBeenCalledWith('titleMaxLength must be greater than 0');
     });
 
-    it('visible[boolean]', () => {
-      const navbar = mount(<NavBar title="标题" visible={false} animation={false} />);
-      const el = navbar.element;
-      expect(el.className).toContain('t-navbar--hide');
+    it('visible[boolean]', async () => {
+      // visible 默认 true
+      const wrapper = mount(<NavBar title="标题" animation={false} />);
+      expect(wrapper.classes()).toContain('t-navbar--visible');
+      expect(wrapper.classes()).not.toContain('t-navbar--hide');
+
+      await wrapper.setProps({ visible: false });
+      expect(wrapper.classes()).toContain('t-navbar--hide');
+      expect(wrapper.classes()).not.toContain('t-navbar--visible');
     });
 
     it('zIndex[number]', () => {
-      const navbar = mount(<NavBar title="标题" zIndex={100} />);
-      expect(navbar.attributes('style')).toContain('z-index: 100');
-    });
-
-    it('visibleAnimation[boolean]', () => {
-      const navbar = mount(<NavBar title="标题" visible={false} />);
-      const el = navbar.element;
-      expect(el.className).toContain('t-navbar--hide-animation');
+      const wrapper = mount(<NavBar title="标题" zIndex={100} />);
+      expect(wrapper.attributes('style')).toContain('z-index: 100');
     });
   });
 
   describe('events', () => {
     it('leftClick', async () => {
-      const fn = vi.fn();
-      const wrapper = mount(<NavBar title="标题" onLeftClick={fn} />, {
-        // 插槽名称必须要和组件内部保持一致'left'
-        slots: {
-          left: iconFunc,
-        },
-      });
-      expect(wrapper.element).toMatchSnapshot();
-      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
-      const left = wrapper.find('.t-navbar__left');
-      await left.trigger('click');
-      expect(fn).toHaveBeenCalled();
+      const onLeftClick = vi.fn();
+      const onRightClick = vi.fn();
+      const wrapper = mount(<NavBar title="标题" onLeftClick={onLeftClick} onRightClick={onRightClick} />);
+      await wrapper.find('.t-navbar__left').trigger('click');
+      expect(onLeftClick).toHaveBeenCalledTimes(1);
+      expect(onLeftClick.mock.calls[0]).toEqual([]);
+      // 点击左侧区域不应触发右侧事件
+      expect(onRightClick).not.toHaveBeenCalled();
     });
 
     it('rightClick', async () => {
-      const fn = vi.fn();
-      const wrapper = mount(<NavBar title="标题" onRightClick={fn} />, {
-        // 插槽名称必须要和组件内部保持一致'right'
-        slots: {
-          right: iconFunc,
-        },
-      });
-      expect(wrapper.element).toMatchSnapshot();
-      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
-      const right = wrapper.find('.t-navbar__right');
-      await right.trigger('click');
-      expect(fn).toHaveBeenCalled();
+      const onRightClick = vi.fn();
+      const onLeftClick = vi.fn();
+      const wrapper = mount(
+        <NavBar title="标题" right={() => '右侧内容'} onRightClick={onRightClick} onLeftClick={onLeftClick} />,
+      );
+      await wrapper.find('.t-navbar__right').trigger('click');
+      expect(onRightClick).toHaveBeenCalledTimes(1);
+      expect(onRightClick.mock.calls[0]).toEqual([]);
+      // 点击右侧区域不应触发左侧事件
+      expect(onLeftClick).not.toHaveBeenCalled();
     });
   });
 
   describe('slots', () => {
-    it('left', () => {
-      const slot = <div class="left-content">左侧内容</div>;
-      const navbar = mount(<NavBar title="标题" />, {
-        slots: {
-          left: slot,
-        },
+    it('capsule', () => {
+      const wrapper = mount(<NavBar title="标题" />, {
+        slots: { capsule: <div class="capsule-content">胶囊</div> },
       });
-      expect(navbar.find('.t-navbar__left').find('.left-content').exists()).toBeTruthy();
+      expect(wrapper.find('.t-navbar__capsule .capsule-content').exists()).toBeTruthy();
     });
 
-    it('capsule', () => {
-      const navbar = mount(<NavBar title="标题" />, {
-        slots: {
-          capsule: iconFunc,
-        },
+    it('left', () => {
+      const wrapper = mount(<NavBar title="标题" />, {
+        slots: { left: <div class="left-content">左侧内容</div> },
       });
-      expect(navbar.find('.t-navbar__capsule').exists()).toBeTruthy();
+      expect(wrapper.find('.t-navbar__left .left-content').exists()).toBeTruthy();
     });
 
     it('right', () => {
-      const slot = <div class="right-content">右侧内容</div>;
-      const navbar = mount(<NavBar title="标题" />, {
-        slots: {
-          right: slot,
-        },
+      const wrapper = mount(<NavBar title="标题" />, {
+        slots: { right: <div class="right-content">右侧内容</div> },
       });
-      expect(navbar.find('.t-navbar__right').find('.right-content').exists()).toBeTruthy();
+      expect(wrapper.find('.t-navbar__right .right-content').exists()).toBeTruthy();
     });
 
     it('title', () => {
-      const slot = <div>标题</div>;
-      const navbar = mount(<NavBar />, {
-        slots: {
-          title: slot,
-        },
+      const wrapper = mount(<NavBar />, {
+        slots: { title: <div class="title-content">插槽标题</div> },
       });
-      expect(navbar.text()).toContain('标题');
+      expect(wrapper.find('.t-navbar__center .title-content').exists()).toBeTruthy();
+      // 插槽标题不使用字符串标题的 span 包装
+      expect(wrapper.find('.t-navbar__center-title').exists()).toBeFalsy();
+    });
+  });
+
+  describe('scenarios', () => {
+    describe('left area composition', () => {
+      it('renders leftArrow & left & capsule together in order inside the left area', () => {
+        const wrapper = mount(<NavBar title="标题" leftArrow left={() => '左侧内容'} capsule={() => '胶囊'} />);
+        const left = wrapper.get('.t-navbar__left');
+        expect(left.find('.t-navbar__left-arrow').exists()).toBeTruthy();
+        expect(left.text()).toContain('左侧内容');
+        expect(left.text()).toContain('胶囊');
+
+        // 渲染顺序：左侧箭头在最前，胶囊区域在最后
+        const children = Array.from(left.element.children);
+        expect(children[0].classList.contains('t-navbar__left-arrow')).toBeTruthy();
+        expect(children[children.length - 1].classList.contains('t-navbar__capsule')).toBeTruthy();
+      });
+    });
+
+    describe('title content priority', () => {
+      it('title prop overrides title slot', () => {
+        const wrapper = mount(<NavBar title="属性标题" />, {
+          slots: { title: <div class="title-content">插槽标题</div> },
+        });
+        // 同时传入时 prop 优先
+        expect(wrapper.get('.t-navbar__center').text()).toBe('属性标题');
+        expect(wrapper.find('.title-content').exists()).toBeFalsy();
+      });
+
+      it('titleMaxLength does not truncate title slot content', () => {
+        const wrapper = mount(<NavBar titleMaxLength={2} />, {
+          slots: { title: <div class="title-content">很长的插槽标题</div> },
+        });
+        // 插槽标题不受 titleMaxLength 截断
+        expect(wrapper.get('.t-navbar__center .title-content').text()).toBe('很长的插槽标题');
+      });
+    });
+
+    describe('visible & animation combination', () => {
+      it('toggles visible/hide classes with and without animation suffix', async () => {
+        const wrapper = mount(<NavBar title="标题" />);
+        // visible + animation（默认）
+        expect(wrapper.classes()).toContain('t-navbar--visible-animation');
+
+        await wrapper.setProps({ visible: false });
+        expect(wrapper.classes()).toContain('t-navbar--hide-animation');
+
+        await wrapper.setProps({ animation: false });
+        expect(wrapper.classes()).toContain('t-navbar--hide');
+        expect(wrapper.classes()).not.toContain('t-navbar--hide-animation');
+
+        await wrapper.setProps({ visible: true });
+        expect(wrapper.classes()).toContain('t-navbar--visible');
+        expect(wrapper.classes()).not.toContain('t-navbar--visible-animation');
+      });
+    });
+
+    describe('fixed & placeholder & safeAreaInsetTop', () => {
+      it('keeps placeholder before content and aligned with safe area', async () => {
+        const wrapper = mount(<NavBar title="标题" fixed placeholder />);
+        const placeholder = wrapper.get('.t-navbar__placeholder');
+        // 占位元素与内容区均适配顶部安全区，且占位元素在内容区之前
+        expect(placeholder.classes()).toContain('t-safe-area-top');
+        expect(wrapper.get('.t-navbar__content').classes()).toContain('t-safe-area-top');
+        expect(wrapper.element.firstElementChild).toBe(placeholder.element);
+
+        // 关闭安全区适配后两者同步移除类名
+        await wrapper.setProps({ safeAreaInsetTop: false });
+        expect(wrapper.get('.t-navbar__placeholder').classes()).not.toContain('t-safe-area-top');
+        expect(wrapper.get('.t-navbar__content').classes()).not.toContain('t-safe-area-top');
+      });
     });
   });
 });
