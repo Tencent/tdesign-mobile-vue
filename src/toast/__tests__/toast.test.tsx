@@ -1,110 +1,114 @@
-import { describe, it, expect, vi, afterEach } from 'vitest';
-import { LoadingIcon } from 'tdesign-icons-vue-next';
+import { describe, it, expect, afterEach } from 'vitest';
 import { mount } from '@vue/test-utils';
-import { createApp } from 'vue';
+import { CheckCircleIcon, CloseCircleIcon, ErrorCircleIcon, LoadingIcon } from 'tdesign-icons-vue-next';
 import Toast from '../toast';
-import { ToastPlugin } from '../index';
-import type { TdToastProps } from '../type';
 import Overlay from '../../overlay';
-import { sleep } from '../../shared/util';
+import type { TdToastProps } from '../type';
 import config from '../../config';
 
 const { prefix } = config;
+const name = `${prefix}-toast`;
 const bodyLockClass = `${prefix}-toast--lock`;
 
 describe('Toast', () => {
+  // 滚动锁定会向 body 写入类名，用例结束后恢复
+  afterEach(() => {
+    document.body.innerHTML = '';
+    document.body.className = '';
+  });
+
   describe('props', () => {
-    it('direction[row/column]', async () => {
-      const wrapper = mount(Toast, {
-        direction: 'row',
-      });
-      expect(wrapper.find('.t-toast').classes()).toContain('t-toast--row');
-      await wrapper.setProps({
-        direction: 'column',
-      });
-      expect(wrapper.find('.t-toast').classes()).toContain('t-toast--column');
-
-      const directionList: TdToastProps['direction'][] = ['row', 'column'];
-      directionList.forEach((direction) => {
-        const wrapper = mount(() => <Toast direction={direction} message="direction" />);
-        const $toast = wrapper.find('.t-toast');
-        expect($toast.classes()).toContain(`t-toast--${direction}`);
+    it('direction[row/column]', () => {
+      (['row', 'column'] as TdToastProps['direction'][]).forEach((direction) => {
+        const wrapper = mount(Toast, {
+          props: {
+            direction,
+            icon: () => <LoadingIcon />,
+            message: '排列方式',
+          },
+        });
+        const $toast = wrapper.find(`.${name}`);
+        expect($toast.classes()).toContain(`${name}--${direction}`);
+        expect($toast.classes()).toContain(`${name}__content--${direction}`);
+        expect(wrapper.find(`.${name}__icon--${direction}`).exists()).toBe(true);
+        expect(wrapper.find(`.${name}__text--${direction}`).exists()).toBe(true);
       });
     });
 
-    it('icon[boolean]', async () => {
-      // icon prop 类型为 Function；theme 非默认时自动显示对应图标（等效 icon=true 的语义）
-      const wrapper = mount(Toast, {
-        props: {
-          theme: 'success',
-        },
-      });
-      expect(wrapper.find('.t-icon').exists()).toBeTruthy();
-    });
+    // duration 仅由插件 plugin.ts 消费（自动关闭定时器），组件源码未使用该属性，见 toast.plugin.test.tsx
+    it.todo('duration[number]');
 
-    it('icon[function]', async () => {
-      const icon = () => <LoadingIcon />;
-
+    it('icon[function]', () => {
       const wrapper = mount(Toast, {
         props: {
-          icon,
+          icon: () => <LoadingIcon />,
         },
       });
-      expect(wrapper.findComponent(LoadingIcon).exists()).toBeTruthy();
+      expect(wrapper.findComponent(LoadingIcon).exists()).toBe(true);
+      // 存在图标时文字节点不再挂 __text 类名
+      expect(wrapper.find(`.${name}__text`).exists()).toBe(false);
     });
 
-    it('message[string]', async () => {
+    it('message[string]', () => {
       const wrapper = mount(Toast, {
         props: {
-          message: 'Loading',
+          message: '文字提示',
         },
       });
-      expect(wrapper.find('.t-toast').text()).toEqual('Loading');
+      expect(wrapper.find(`.${name}__text`).text()).toBe('文字提示');
     });
 
-    it('message[function]', async () => {
+    it('message[function]', () => {
       const wrapper = mount(Toast, {
         props: {
           message: () => '函数消息',
         },
       });
-      expect(wrapper.find('.t-toast').text()).toEqual('函数消息');
+      expect(wrapper.find(`.${name}__text`).text()).toBe('函数消息');
     });
 
-    it('overlayProps[object]', async () => {
-      const wrapper = mount(Toast);
-      await wrapper.setProps({
-        overlayProps: {
-          duration: 1000,
+    it('overlayProps[object]', () => {
+      const wrapper = mount(Toast, {
+        props: {
+          overlayProps: {
+            duration: 1000,
+            zIndex: 2000,
+          },
         },
       });
-      expect(wrapper.findComponent(Overlay).vm.duration).toEqual(1000);
+      const style = wrapper.find(`.${prefix}-overlay`).attributes('style');
+      expect(style).toContain('transition-duration: 1000ms');
+      expect(style).toContain('z-index: 2000');
     });
 
     it('placement[top/middle/bottom]', () => {
-      const topMap = {
+      const topMap: Record<TdToastProps['placement'], string> = {
         top: '25%',
         middle: '50%',
         bottom: '75%',
       };
-      Object.entries(topMap).forEach(([placement, top]) => {
+      (Object.keys(topMap) as TdToastProps['placement'][]).forEach((placement) => {
         const wrapper = mount(Toast, {
           props: {
             placement,
           },
         });
         // 展示位置映射为内容层 top 定位
-        expect(wrapper.find('.t-toast__content').attributes('style')).toContain(`top: ${top}`);
+        expect(wrapper.find(`.${name}__content`).attributes('style')).toContain(`top: ${topMap[placement]}`);
       });
     });
 
     it('preventScrollThrough[boolean]', async () => {
-      mount(Toast, {
-        props: {
-          preventScrollThrough: true,
-        },
-      });
-      expect(document.body.classList.contains(bodyLockClass)).toBeTruthy();
+      const wrapper = mount(Toast);
+      expect(document.body.classList.contains(bodyLockClass)).toBe(false);
+
+      await wrapper.setProps({ preventScrollThrough: true });
+      expect(document.body.classList.contains(bodyLockClass)).toBe(true);
+
+      await wrapper.setProps({ preventScrollThrough: false });
+      expect(document.body.classList.contains(bodyLockClass)).toBe(false);
+
+      wrapper.unmount();
     });
 
     it('showOverlay[boolean]', async () => {
@@ -113,101 +117,99 @@ describe('Toast', () => {
           showOverlay: true,
         },
       });
-      expect(wrapper.findComponent(Overlay).vm.visible).toEqual(true);
-      await wrapper.setProps({
-        showOverlay: false,
-      });
-      expect(wrapper.findComponent(Overlay).vm.visible).toEqual(false);
+      const $overlay = wrapper.find(`.${prefix}-overlay`);
+      expect($overlay.classes()).toContain(`${prefix}-overlay--active`);
+      expect(wrapper.findComponent(Overlay).vm.visible).toBe(true);
+
+      await wrapper.setProps({ showOverlay: false });
+      expect($overlay.classes()).not.toContain(`${prefix}-overlay--active`);
+      expect(wrapper.findComponent(Overlay).vm.visible).toBe(false);
     });
 
-    it('theme[loading/success/warning/error]', async () => {
+    it('theme[loading/success/warning/error]', () => {
+      const themeIconMap = {
+        loading: LoadingIcon,
+        success: CheckCircleIcon,
+        warning: ErrorCircleIcon,
+        error: CloseCircleIcon,
+      } as const;
+
+      (Object.keys(themeIconMap) as (keyof typeof themeIconMap)[]).forEach((theme) => {
+        const wrapper = mount(Toast, {
+          props: {
+            theme,
+          },
+        });
+        expect(wrapper.findComponent(themeIconMap[theme]).exists()).toBe(true);
+      });
+
       const wrapper = mount(Toast, {
         props: {
           theme: 'loading',
         },
       });
-
-      expect(wrapper.findComponent(LoadingIcon).exists()).toEqual(true);
+      expect(wrapper.find(`.${name}`).classes()).toContain(`${name}--loading`);
     });
   });
 
-  // 用例结束后先排空浮层异步任务再清理 teleport 挂载内容，避免卸载期间的 patch 报错
-  afterEach(async () => {
-    await sleep(300);
-    document.body.innerHTML = '';
+  // onClose/onDestroy 由插件 plugin.ts 在 clear 与定时器销毁时调用，组件源码不会触发，见 toast.plugin.test.tsx
+  describe('events', () => {
+    it.todo('onClose');
+
+    it.todo('onDestroy');
+  });
+
+  describe('slots', () => {
+    it('default', () => {
+      const wrapper = mount(Toast, {
+        slots: {
+          default: () => '插槽内容',
+        },
+      });
+      expect(wrapper.find(`.${name}__text`).text()).toBe('插槽内容');
+    });
   });
 
   describe('scenarios', () => {
-    describe('plugin', () => {
-      it('show', () => {
-        ToastPlugin('Hello');
-        expect(document.body.textContent).toContain('Hello');
+    it('default & message[string]', () => {
+      const wrapper = mount(Toast, {
+        props: {
+          message: '属性消息',
+        },
+        slots: {
+          default: () => '插槽消息',
+        },
       });
+      // renderContent('default', 'message')，默认插槽优先于 message 属性
+      expect(wrapper.find(`.${name}__text`).text()).toBe('插槽消息');
+    });
 
-      it('method', () => {
-        const testShow = (method, text) => {
-          document.body.innerHTML = '';
-          ToastPlugin[method](text);
-          expect(document.body.textContent).toContain(text);
-        };
-        testShow('loading', '加载中');
-        testShow('success', '成功');
-        testShow('warning', '警告');
-        testShow('error', '失败');
-        ToastPlugin.clear();
-        expect(document.body.textContent).not.toContain('失败');
+    it('icon[function] & theme[loading]', () => {
+      const wrapper = mount(Toast, {
+        props: {
+          icon: () => <ErrorCircleIcon />,
+          theme: 'loading',
+        },
       });
+      // 自定义 icon 优先于 theme 内置图标
+      expect(wrapper.findComponent(ErrorCircleIcon).exists()).toBe(true);
+      expect(wrapper.findComponent(LoadingIcon).exists()).toBe(false);
+    });
 
-      it('clear', () => {
-        const onClose = vi.fn();
-        ToastPlugin({
-          message: 'hello',
-          onClose,
-        });
-        ToastPlugin.clear();
-        expect(onClose).toHaveBeenCalledTimes(1);
+    it('overlayProps[object] & showOverlay[boolean]', () => {
+      const wrapper = mount(Toast, {
+        props: {
+          showOverlay: true,
+          overlayProps: {
+            visible: false,
+            preventScrollThrough: true,
+          },
+        },
       });
-
-      it('duration', async () => {
-        const onDestroy = vi.fn();
-        ToastPlugin({
-          message: 'hello',
-          onDestroy,
-          duration: 1000,
-        });
-
-        expect(onDestroy).not.toHaveBeenCalled();
-        await sleep(900);
-        expect(onDestroy).not.toHaveBeenCalled();
-        await sleep(100);
-        expect(onDestroy).toHaveBeenCalledTimes(1);
-      });
-
-      it('attach', () => {
-        const errorFn = vi.fn();
-        vi.spyOn(console, 'error').mockImplementation(errorFn);
-
-        ToastPlugin({
-          attach: 'abc',
-        });
-        expect(errorFn).toHaveBeenCalledWith('attach is not exist');
-
-        const div = document.createElement('div');
-        div.id = 'test-container';
-        document.body.appendChild(div);
-
-        ToastPlugin({
-          attach: `#${div.id}`,
-        });
-        expect(document.querySelector(`#${div.id} .t-toast`)).toBeTruthy();
-      });
-
-      it('use plugin', () => {
-        const wrapper = mount(() => <div></div>, { global: { plugins: [ToastPlugin] } });
-        expect(document.body.textContent).not.toContain('测试');
-        wrapper.vm.$toast('测试');
-        expect(document.body.textContent).toContain('测试');
-      });
+      // visible 与 preventScrollThrough 由 Toast 接管，覆盖 overlayProps 中的同名字段
+      const overlay = wrapper.findComponent(Overlay);
+      expect(overlay.vm.visible).toBe(true);
+      expect(overlay.vm.preventScrollThrough).toBe(false);
     });
   });
 });
