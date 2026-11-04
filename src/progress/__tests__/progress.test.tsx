@@ -164,7 +164,7 @@ describe('Progress', () => {
 
     // 源码未实现：props.ts 注明 strokeWidth「宽度数值不能超过 size 的一半，否则不能输出环形进度」，
     // 但 getCircleStokeWidth 未实现该限制，超过 size/2 时环形进度仍会照常输出，待源码补充后再验收
-    it.todo('strokeWidth[number] 超过 size 一半时不输出环形进度');
+    it.todo('strokeWidth[number] does not render circle progress when exceeding half of size');
 
     it('theme[line/plump/circle]', () => {
       // 默认 line（thin 形态）
