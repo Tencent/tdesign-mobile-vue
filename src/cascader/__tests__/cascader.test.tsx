@@ -573,7 +573,8 @@ describe('Cascader', () => {
       const wrapper = mount(Cascader, { props: { options, defaultValue: '120119', onChange } });
       await nextTick();
 
-      wrapper.vm.reset();
+      const instance = wrapper.vm as typeof wrapper.vm & { reset: () => void };
+      instance.reset();
       await nextTick();
 
       expect(onChange).toHaveBeenCalledWith(undefined, []);
