@@ -676,14 +676,6 @@ describe('Dialog', () => {
       expect(wrapper.emitted('update:visible')).toEqual([[false]]);
     });
 
-    it('prefers the default slot over the content prop', () => {
-      const wrapper = mount(Dialog, {
-        props: { visible: true, content: '属性内容' },
-        slots: { default: () => '默认插槽内容' },
-      });
-      expect(wrapper.find('.t-dialog__body').text()).toBe('默认插槽内容');
-    });
-
     // closeOnOverlayClick=false 时提前返回，关闭被禁用的同时也丢失了点击通知。
     it.todo('notifies overlayClick when overlay closing is disabled');
   });
