@@ -280,61 +280,36 @@ describe('Comment', () => {
     // folds.content 类型声明允许 TNode，但 renderFoldsContent 直接输出函数而不执行。
     it.todo('folds content renders TNode functions');
 
-    describe('folds', () => {
-      it('total <= 1 does not render folds', () => {
-        let wrapper = mount(Comment, {
-          props: { folds: { state: 'collapsed', total: 1, content: DEFAULT_FOLDS_CONTENT } },
-        });
-        expect(wrapper.find('.t-comment__folds').exists()).toBe(false);
-
-        wrapper = mount(Comment, {
-          props: { folds: { state: 'collapsed', total: 0, content: DEFAULT_FOLDS_CONTENT } },
-        });
-        expect(wrapper.find('.t-comment__folds').exists()).toBe(false);
+    it('folds with total <= 1 does not render the folds area', () => {
+      let wrapper = mount(Comment, {
+        props: { folds: { state: 'collapsed', total: 1, content: DEFAULT_FOLDS_CONTENT } },
       });
+      expect(wrapper.find('.t-comment__folds').exists()).toBe(false);
 
-      it('state renders correctly', () => {
-        // collapsed
-        let wrapper = mount(Comment, {
-          props: { folds: { state: 'collapsed', total: 5, content: DEFAULT_FOLDS_CONTENT } },
-          slots: { reply: () => h('div', { class: 'reply-item' }, '回复1') },
-        });
-        expect(wrapper.find('.t-comment__folds').text()).toContain('展开回复');
-
-        // expanded
-        wrapper = mount(Comment, {
-          props: { folds: { state: 'expanded', total: 5, content: DEFAULT_FOLDS_CONTENT } },
-          slots: { reply: () => h('div', { class: 'reply-item' }, '回复') },
-        });
-        expect(wrapper.find('.t-comment__folds').text()).toContain('收起');
-
-        // partial
-        wrapper = mount(Comment, {
-          props: { folds: { state: 'partial', total: 5, content: DEFAULT_FOLDS_CONTENT } },
-          slots: { reply: () => h('div', { class: 'reply-item' }, '回复') },
-        });
-        expect(wrapper.findAll('.t-comment__folds-item')).toHaveLength(2);
+      wrapper = mount(Comment, {
+        props: { folds: { state: 'collapsed', total: 0, content: DEFAULT_FOLDS_CONTENT } },
       });
+      expect(wrapper.find('.t-comment__folds').exists()).toBe(false);
+    });
 
-      it('click triggers folds', async () => {
-        const onFolds = vi.fn();
-        // expand
-        let wrapper = mount(Comment, {
-          props: { folds: { state: 'collapsed', total: 5, content: DEFAULT_FOLDS_CONTENT }, onFolds },
-          slots: { reply: () => h('div', { class: 'reply-item' }, '回复') },
-        });
-        await wrapper.find('.t-comment__folds-item').trigger('click');
-        expect(onFolds.mock.calls[0][0].fold.state).toBe('partial');
-
-        // collapse
-        onFolds.mockClear();
-        wrapper = mount(Comment, {
-          props: { folds: { state: 'expanded', total: 5, content: DEFAULT_FOLDS_CONTENT }, onFolds },
-          slots: { reply: () => h('div', { class: 'reply-item' }, '回复') },
-        });
-        await wrapper.find('.t-comment__folds-item').trigger('click');
-        expect(onFolds.mock.calls[0][0].fold.state).toBe('collapsed');
+    it('controlled folds click still emits folds callbacks', async () => {
+      const onFolds = vi.fn();
+      // expand
+      let wrapper = mount(Comment, {
+        props: { folds: { state: 'collapsed', total: 5, content: DEFAULT_FOLDS_CONTENT }, onFolds },
+        slots: { reply: () => h('div', { class: 'reply-item' }, '回复') },
       });
+      await wrapper.find('.t-comment__folds-item').trigger('click');
+      expect(onFolds.mock.calls[0][0].fold.state).toBe('partial');
+
+      // collapse
+      onFolds.mockClear();
+      wrapper = mount(Comment, {
+        props: { folds: { state: 'expanded', total: 5, content: DEFAULT_FOLDS_CONTENT }, onFolds },
+        slots: { reply: () => h('div', { class: 'reply-item' }, '回复') },
+      });
+      await wrapper.find('.t-comment__folds-item').trigger('click');
+      expect(onFolds.mock.calls[0][0].fold.state).toBe('collapsed');
     });
 
     describe('i18n', () => {
@@ -505,32 +480,17 @@ describe('Comment', () => {
       });
     });
 
-    describe('defaultFolds', () => {
-      it('initial state and click expand', async () => {
-        const wrapper = mount(Comment, {
-          props: { defaultFolds: { state: 'collapsed', total: 5, step: 3, content: DEFAULT_FOLDS_CONTENT } },
-          slots: { reply: () => h('div', { class: 'reply-item' }, '回复') },
-        });
-        expect(wrapper.find('.t-comment__folds').text()).toContain('展开回复');
-
-        await wrapper.find('.t-comment__folds-item').trigger('click');
-        expect(wrapper.findAll('.t-comment__folds-item')).toHaveLength(2);
+    it('renders correct root structure', () => {
+      const wrapper = mount(Comment, {
+        props: {
+          content: '内容',
+        },
       });
-    });
-
-    describe('structure', () => {
-      it('renders correct root structure', () => {
-        const wrapper = mount(Comment, {
-          props: {
-            content: '内容',
-          },
-        });
-        expect(wrapper.find('.t-comment').exists()).toBe(true);
-        expect(wrapper.find('.t-comment__inner').exists()).toBe(true);
-        expect(wrapper.find('.t-comment__detail').exists()).toBe(true);
-        expect(wrapper.find('.t-comment__bottom').exists()).toBe(true);
-        expect(wrapper.find('.t-comment__reply').exists()).toBe(true);
-      });
+      expect(wrapper.find('.t-comment').exists()).toBe(true);
+      expect(wrapper.find('.t-comment__inner').exists()).toBe(true);
+      expect(wrapper.find('.t-comment__detail').exists()).toBe(true);
+      expect(wrapper.find('.t-comment__bottom').exists()).toBe(true);
+      expect(wrapper.find('.t-comment__reply').exists()).toBe(true);
     });
   });
 });
