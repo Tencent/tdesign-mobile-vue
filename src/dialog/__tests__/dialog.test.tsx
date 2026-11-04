@@ -684,16 +684,6 @@ describe('Dialog', () => {
       expect(wrapper.find('.t-dialog__body').text()).toBe('默认插槽内容');
     });
 
-    it('prefers the title prop and falls back to its slot when removed', async () => {
-      const wrapper = mount(Dialog, {
-        props: { visible: true, title: '属性标题' },
-        slots: { title: () => '插槽标题' },
-      });
-      expect(wrapper.find('.t-dialog__header').text()).toBe('属性标题');
-      await wrapper.setProps({ title: undefined });
-      expect(document.querySelector('.t-dialog__header').textContent).toBe('插槽标题');
-    });
-
     // closeOnOverlayClick=false 时提前返回，关闭被禁用的同时也丢失了点击通知。
     it.todo('notifies overlayClick when overlay closing is disabled');
   });

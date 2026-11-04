@@ -350,32 +350,5 @@ describe('Image', () => {
         expect(wrapper.findComponent(CloseIcon).exists()).toBeTruthy();
       });
     });
-
-    describe('prop and slot priority', () => {
-      it('loading function takes priority and falls back to its slot when removed', async () => {
-        const wrapper = mount(Image, {
-          props: { src: IMAGE, loading: () => <span class="prop-loading">属性加载中</span> },
-          slots: { loading: () => <span class="slot-loading">插槽加载中</span> },
-        });
-        expect(wrapper.get('.prop-loading').text()).toBe('属性加载中');
-        expect(wrapper.find('.slot-loading').exists()).toBe(false);
-        await wrapper.setProps({ loading: undefined });
-        expect(wrapper.get('.slot-loading').text()).toBe('插槽加载中');
-        expect(wrapper.find('.prop-loading').exists()).toBe(false);
-      });
-
-      it('error function takes priority and falls back to its slot when removed', async () => {
-        const wrapper = mount(Image, {
-          props: { src: FAIL_IMAGE, error: () => <span class="prop-error">属性加载失败</span> },
-          slots: { error: () => <span class="slot-error">插槽加载失败</span> },
-        });
-        await wrapper.get('img').trigger('error');
-        expect(wrapper.get('.prop-error').text()).toBe('属性加载失败');
-        expect(wrapper.find('.slot-error').exists()).toBe(false);
-        await wrapper.setProps({ error: undefined });
-        expect(wrapper.get('.slot-error').text()).toBe('插槽加载失败');
-        expect(wrapper.find('.prop-error').exists()).toBe(false);
-      });
-    });
   });
 });

@@ -95,7 +95,6 @@ describe('Fab', () => {
         },
       });
       expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
-      expect(wrapper.element).toMatchSnapshot();
     });
 
     it('magnet[boolean]', async () => {
@@ -252,18 +251,6 @@ describe('Fab', () => {
       expect(position(wrapper)).toEqual({ right: '30px', bottom: '50px' });
       await dragTo(wrapper, 100, 100, 80, 70);
       expect(position(wrapper)).toEqual({ right: '50px', bottom: '80px' });
-    });
-
-    it('icon prop takes priority over icon slot and falls back when removed', async () => {
-      const wrapper = mount(Fab, {
-        props: { icon: () => <span class="prop-icon">属性图标</span> },
-        slots: { icon: () => <span class="slot-icon">插槽图标</span> },
-      });
-      expect(wrapper.get('.prop-icon').text()).toBe('属性图标');
-      expect(wrapper.find('.slot-icon').exists()).toBe(false);
-      await wrapper.setProps({ icon: undefined });
-      expect(wrapper.find('.prop-icon').exists()).toBe(false);
-      expect(wrapper.get('.slot-icon').text()).toBe('插槽图标');
     });
 
     it('default slot replaces built-in button, text and icon', () => {

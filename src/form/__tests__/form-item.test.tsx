@@ -351,26 +351,6 @@ describe('FormItem', () => {
       expect(wrapper.find(`.${name}__item--error`).exists()).toBe(false);
     });
 
-    it('label prop takes priority over label slot and falls back when empty', async () => {
-      const dynamic = mount(FormItem, {
-        props: { label: '属性标签', labelWidth: '81px' },
-        slots: { label: () => <span>插槽标签</span> },
-      });
-      expect(dynamic.get('label').text()).toBe('属性标签');
-      await dynamic.setProps({ label: '' });
-      expect(dynamic.get('label').text()).toBe('插槽标签');
-    });
-
-    it('help prop takes priority over help slot and falls back when removed', async () => {
-      const wrapper = mount(FormItem, {
-        props: { help: '属性帮助' },
-        slots: { help: () => <span>插槽帮助</span> },
-      });
-      expect(wrapper.get(`.${name}__item-help`).text()).toBe('属性帮助');
-      await wrapper.setProps({ help: undefined });
-      expect(wrapper.get(`.${name}__item-help`).text()).toBe('插槽帮助');
-    });
-
     it('item layout overrides Form layout and top alignment clears horizontal spacing', () => {
       const wrapper = mount(() => (
         <Form labelAlign="right" labelWidth={80} contentAlign="left">

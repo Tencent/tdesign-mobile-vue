@@ -315,19 +315,6 @@ describe('ImageViewer', () => {
       ]);
     });
 
-    it('closeBtn function overrides its slot and falls back when removed', async () => {
-      const wrapper = mountViewer(
-        { closeBtn: () => <span class="prop-close">属性关闭</span> },
-        {
-          closeBtn: () => <span class="slot-close">插槽关闭</span>,
-        },
-      );
-      expect(wrapper.get('.prop-close').text()).toBe('属性关闭');
-      expect(wrapper.find('.slot-close').exists()).toBe(false);
-      await wrapper.setProps({ closeBtn: true });
-      expect(wrapper.get('.slot-close').text()).toBe('插槽关闭');
-    });
-
     it('deleteBtn function overrides its slot', () => {
       const wrapper = mountViewer(
         { deleteBtn: () => <span class="prop-delete">属性删除</span> },

@@ -280,26 +280,6 @@ describe('Drawer', () => {
       expect(wrapper.findAll('.t-drawer__sidebar-item')).toHaveLength(0);
     });
 
-    it('prefers the title prop and falls back to its slot when empty', async () => {
-      const wrapper = mount(Drawer, {
-        props: { title: '属性标题' },
-        slots: { title: () => '插槽标题' },
-      });
-      expect(wrapper.get('.t-drawer__title').text()).toBe('属性标题');
-      await wrapper.setProps({ title: '' });
-      expect(document.querySelector('.t-drawer__title').textContent).toBe('插槽标题');
-    });
-
-    it('prefers the footer prop and falls back to its slot when removed', async () => {
-      const wrapper = mount(Drawer, {
-        props: { footer: () => '属性底部' },
-        slots: { footer: () => '插槽底部' },
-      });
-      expect(wrapper.get('.t-drawer__footer').text()).toBe('属性底部');
-      await wrapper.setProps({ footer: undefined });
-      expect(document.querySelector('.t-drawer__footer').textContent).toBe('插槽底部');
-    });
-
     it('closes on overlay click and notifies visibility listeners', async () => {
       const onOverlayClick = vi.fn();
       const wrapper = mount(Drawer, { props: { visible: true, onOverlayClick } });

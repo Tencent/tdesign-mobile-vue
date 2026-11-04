@@ -83,6 +83,25 @@ describe('useTNodeJSX', () => {
     expect(wrapper.text()).toBe('prop content');
   });
 
+  it('falls back to the slot after the prop is removed', async () => {
+    const wrapper = mount(TNodeHookTester, {
+      props: {
+        method: 'useTNodeJSX',
+        node: 'prop content',
+      },
+      slots: {
+        node: 'slot content',
+      },
+    });
+    expect(wrapper.text()).toBe('prop content');
+
+    await wrapper.setProps({ node: undefined });
+    expect(wrapper.text()).toBe('slot content');
+
+    await wrapper.setProps({ node: '' });
+    expect(wrapper.text()).toBe('slot content');
+  });
+
   it('uses the slot when slotFirst is enabled', () => {
     const wrapper = mount(TNodeHookTester, {
       props: {
