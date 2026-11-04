@@ -2,13 +2,7 @@ import { nextTick } from 'vue';
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import CountDown from '../count-down';
-
-const sleep = (duration: number) =>
-  new Promise<void>((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, duration);
-  });
+import { sleep } from '../../shared/util';
 
 describe('CountDown', () => {
   describe('props', () => {
@@ -111,14 +105,29 @@ describe('CountDown', () => {
   });
 
   describe('scenarios', () => {
-    it('visibilitychange pauses while hidden and resumes when visible', async () => {
-      const wrapper = mount(CountDown, { props: { time: 100000, autoStart: false } });
+    it('compensates hidden duration after visibilitychange resumes', async () => {
+      const wrapper = mount(<CountDown time={10000} />);
+      // 先正常计时约 1 秒，剩余约 9 秒
+      await sleep(1000);
+
+      // 页面隐藏约 2 秒：jsdom 的 rAF 不随 document.hidden 暂停，期间计时仍继续
       Object.defineProperty(document, 'hidden', { configurable: true, value: true });
       document.dispatchEvent(new Event('visibilitychange'));
+      // 等待 watch(visibility) 记录 hiddenTime
+      await nextTick();
+      await sleep(2000);
+
+      // 恢复可见：补偿逻辑额外扣减隐藏期间时长（Date.now() - hiddenTime）
       Object.defineProperty(document, 'hidden', { configurable: true, value: false });
       document.dispatchEvent(new Event('visibilitychange'));
       await nextTick();
-      expect(wrapper.classes()).toContain('t-count-down--medium');
+      await sleep(100);
+
+      const remainSeconds = parseInt(wrapper.text().slice(-2), 10);
+      // 未补偿时约剩 7 秒；补偿后约剩 5 秒，留出计时误差余量
+      expect(remainSeconds).toBeGreaterThanOrEqual(2);
+      expect(remainSeconds).toBeLessThanOrEqual(6);
+
       wrapper.unmount();
     });
   });
