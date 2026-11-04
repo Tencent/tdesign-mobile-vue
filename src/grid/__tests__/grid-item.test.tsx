@@ -31,7 +31,7 @@ describe('GridItem', () => {
           <GridItem badge={{ count: 1 }}></GridItem>
         </Grid>
       ));
-      const badge = wrapper.find('.t-badge--basic ');
+      const badge = wrapper.find('.t-badge--basic');
       expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
       expect(badge.exists()).toBeTruthy();
       expect(badge.text()).toBe('1');
@@ -120,9 +120,7 @@ describe('GridItem', () => {
             </Grid>
           );
         });
-        if (l) {
-          expect(wrapper.find('.t-grid-item').classes()).toContain(`t-grid-item--${l}`);
-        }
+        expect(wrapper.find('.t-grid-item').classes()).toContain(`t-grid-item--${l}`);
       });
     });
 
