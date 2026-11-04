@@ -157,19 +157,17 @@ describe('ColorPicker', () => {
   });
 
   describe('events', () => {
-    describe('preset', () => {
-      it('change', async () => {
-        const onChange = vi.fn();
-        const wrapper = mountColorPicker({ onChange });
-        const swatch = wrapper.find('.t-color-picker__swatches-item');
-        await swatch.trigger('click');
+    it('change[preset]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mountColorPicker({ onChange });
+      const swatch = wrapper.find('.t-color-picker__swatches-item');
+      await swatch.trigger('click');
 
-        const result = 'rgb(236, 242, 254)';
-        expect(onChange).toHaveBeenCalledTimes(1);
-        expect(onChange).toHaveBeenLastCalledWith(result, {
-          trigger: 'preset',
-          color: getColorObject(new Color(result)),
-        });
+      const result = 'rgb(236, 242, 254)';
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenLastCalledWith(result, {
+        trigger: 'preset',
+        color: getColorObject(new Color(result)),
       });
     });
 
@@ -201,65 +199,64 @@ describe('ColorPicker', () => {
       testSaturation(true);
     });
 
-    describe('hue slider', () => {
-      it('change', () => {
-        const onChange = vi.fn();
-        const wrapper = mountColorPicker({ onChange, type: 'multiple' });
-        const el = wrapper.find('.t-color-picker__slider').element;
-        mockBoundingClientRect({
-          left: 0,
-          top: 0,
-          width: 300,
-          height: 50,
-        });
-        makeTouch(el, 'touchstart', { pageY: 0, pageX: 0, clientY: 30 });
-        makeTouch(el, 'touchmove', { pageY: 30, pageX: 0, clientY: 30 });
-        makeTouch(el, 'touchend', { pageY: 30, pageX: 40, clientY: 30 });
+    it('change[palette-hue-bar]', () => {
+      const onChange = vi.fn();
+      const wrapper = mountColorPicker({ onChange, type: 'multiple' });
+      const el = wrapper.find('.t-color-picker__slider').element;
+      mockBoundingClientRect({
+        left: 0,
+        top: 0,
+        width: 300,
+        height: 50,
+      });
+      makeTouch(el, 'touchstart', { pageY: 0, pageX: 0, clientY: 30 });
+      makeTouch(el, 'touchmove', { pageY: 30, pageX: 0, clientY: 30 });
+      makeTouch(el, 'touchend', { pageY: 30, pageX: 40, clientY: 30 });
 
-        expect(onChange).toHaveBeenCalledTimes(3);
-        const result = 'rgb(151, 121, 0)';
-        expect(onChange).toHaveBeenLastCalledWith(result, {
-          trigger: 'palette-hue-bar',
-          color: getColorObject(new Color(result)),
-        });
+      expect(onChange).toHaveBeenCalledTimes(3);
+      const result = 'rgb(151, 121, 0)';
+      expect(onChange).toHaveBeenLastCalledWith(result, {
+        trigger: 'palette-hue-bar',
+        color: getColorObject(new Color(result)),
       });
     });
-    describe('alpha slider', () => {
-      it('change', () => {
-        const onChange = vi.fn();
-        const wrapper = mountColorPicker({ onChange, type: 'multiple', enableAlpha: true });
-        const el = wrapper.find('.t-color-picker__slider-wrapper--alpha-type .t-color-picker__slider').element;
-        mockBoundingClientRect({
-          left: 0,
-          top: 0,
-          width: 300,
-          height: 50,
-        });
-        makeTouch(el, 'touchstart', { pageY: 0, pageX: 0, clientY: 30 });
-        makeTouch(el, 'touchmove', { pageY: 30, pageX: 0, clientY: 30 });
-        makeTouch(el, 'touchend', { pageY: 30, pageX: 40, clientY: 30 });
 
-        expect(onChange).toHaveBeenCalledTimes(3);
-        const result = 'rgb(0, 31, 151)';
-        const color = new Color(result);
-        color.alpha = 0.13;
-        expect(onChange).toHaveBeenLastCalledWith(result, {
-          trigger: 'palette-alpha-bar',
-          color: getColorObject(color),
-        });
+    it('change[palette-alpha-bar]', () => {
+      const onChange = vi.fn();
+      const wrapper = mountColorPicker({ onChange, type: 'multiple', enableAlpha: true });
+      const el = wrapper.find('.t-color-picker__slider-wrapper--alpha-type .t-color-picker__slider').element;
+      mockBoundingClientRect({
+        left: 0,
+        top: 0,
+        width: 300,
+        height: 50,
+      });
+      makeTouch(el, 'touchstart', { pageY: 0, pageX: 0, clientY: 30 });
+      makeTouch(el, 'touchmove', { pageY: 30, pageX: 0, clientY: 30 });
+      makeTouch(el, 'touchend', { pageY: 30, pageX: 40, clientY: 30 });
+
+      expect(onChange).toHaveBeenCalledTimes(3);
+      const result = 'rgb(0, 31, 151)';
+      const color = new Color(result);
+      color.alpha = 0.13;
+      expect(onChange).toHaveBeenLastCalledWith(result, {
+        trigger: 'palette-alpha-bar',
+        color: getColorObject(color),
       });
     });
   });
 
   describe('slots', () => {
-    // render 中读取了 header/footer，但未将返回的节点插入最终 VNode。
+    // render 中读取了 header，但未将返回的节点插入最终 VNode。
     it.todo('header');
+    // render 中读取了 footer，但未将返回的节点插入最终 VNode。
     it.todo('footer');
   });
 
   describe('scenarios', () => {
-    // innerValue 仅在 mounted 时同步到 Color，后续没有 watch 处理外部变化。
+    // innerValue 仅在 mounted 时同步到 Color，外部 value 变化缺少 watch 同步到色板。
     it.todo('external value changes update the palette');
+    // 外部 modelValue 变化同样缺少 watch 同步到色板。
     it.todo('external modelValue changes update the palette');
 
     it('RGBA output preserves alpha when selecting a preset', async () => {
