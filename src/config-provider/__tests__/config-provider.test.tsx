@@ -27,10 +27,8 @@ describe('ConfigProvider', () => {
       // 注入的配置覆盖默认语言包对应字段，未覆盖字段（confirm）回退默认值
       expect(wrapper.find('.t-child').text()).toBe('自定义日历标题|确认|tdesign');
     });
-  });
 
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mount(() => <ConfigProvider>tdesign</ConfigProvider>, {});
 
       expect(wrapper.element.innerHTML).toBe('tdesign');

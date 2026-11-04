@@ -30,6 +30,13 @@ describe('Navbar', () => {
       expect(withoutCapsule.find('.t-navbar__capsule').exists()).toBeFalsy();
     });
 
+    it('capsule[slot]', () => {
+      const wrapper = mount(<NavBar title="标题" />, {
+        slots: { capsule: <div class="capsule-content">胶囊</div> },
+      });
+      expect(wrapper.find('.t-navbar__capsule .capsule-content').exists()).toBeTruthy();
+    });
+
     it('fixed[boolean]', async () => {
       // fixed 默认 true
       const wrapper = mount(<NavBar title="标题" />);
@@ -42,6 +49,13 @@ describe('Navbar', () => {
     it('left[function]', () => {
       const wrapper = mount(<NavBar title="标题" left={() => '左侧内容'} />);
       expect(wrapper.get('.t-navbar__left').text()).toContain('左侧内容');
+    });
+
+    it('left[slot]', () => {
+      const wrapper = mount(<NavBar title="标题" />, {
+        slots: { left: <div class="left-content">左侧内容</div> },
+      });
+      expect(wrapper.find('.t-navbar__left .left-content').exists()).toBeTruthy();
     });
 
     it('leftArrow[boolean]', () => {
@@ -75,6 +89,13 @@ describe('Navbar', () => {
       expect(withoutRight.find('.t-navbar__right').exists()).toBeFalsy();
     });
 
+    it('right[slot]', () => {
+      const wrapper = mount(<NavBar title="标题" />, {
+        slots: { right: <div class="right-content">右侧内容</div> },
+      });
+      expect(wrapper.find('.t-navbar__right .right-content').exists()).toBeTruthy();
+    });
+
     it('safeAreaInsetTop[boolean]', async () => {
       // safeAreaInsetTop 默认 true：内容区带顶部安全区类名
       const wrapper = mount(<NavBar title="标题" />);
@@ -97,6 +118,15 @@ describe('Navbar', () => {
       const wrapper = mount(<NavBar title={() => '函数标题'} />);
       expect(wrapper.get('.t-navbar__center').text()).toBe('函数标题');
       // 函数类型标题不使用字符串标题的 span 包装
+      expect(wrapper.find('.t-navbar__center-title').exists()).toBeFalsy();
+    });
+
+    it('title[slot]', () => {
+      const wrapper = mount(<NavBar />, {
+        slots: { title: <div class="title-content">插槽标题</div> },
+      });
+      expect(wrapper.find('.t-navbar__center .title-content').exists()).toBeTruthy();
+      // 插槽标题不使用字符串标题的 span 包装
       expect(wrapper.find('.t-navbar__center-title').exists()).toBeFalsy();
     });
 
@@ -156,38 +186,6 @@ describe('Navbar', () => {
       expect(onRightClick.mock.calls[0]).toEqual([]);
       // 点击右侧区域不应触发左侧事件
       expect(onLeftClick).not.toHaveBeenCalled();
-    });
-  });
-
-  describe('slots', () => {
-    it('capsule', () => {
-      const wrapper = mount(<NavBar title="标题" />, {
-        slots: { capsule: <div class="capsule-content">胶囊</div> },
-      });
-      expect(wrapper.find('.t-navbar__capsule .capsule-content').exists()).toBeTruthy();
-    });
-
-    it('left', () => {
-      const wrapper = mount(<NavBar title="标题" />, {
-        slots: { left: <div class="left-content">左侧内容</div> },
-      });
-      expect(wrapper.find('.t-navbar__left .left-content').exists()).toBeTruthy();
-    });
-
-    it('right', () => {
-      const wrapper = mount(<NavBar title="标题" />, {
-        slots: { right: <div class="right-content">右侧内容</div> },
-      });
-      expect(wrapper.find('.t-navbar__right .right-content').exists()).toBeTruthy();
-    });
-
-    it('title', () => {
-      const wrapper = mount(<NavBar />, {
-        slots: { title: <div class="title-content">插槽标题</div> },
-      });
-      expect(wrapper.find('.t-navbar__center .title-content').exists()).toBeTruthy();
-      // 插槽标题不使用字符串标题的 span 包装
-      expect(wrapper.find('.t-navbar__center-title').exists()).toBeFalsy();
     });
   });
 

@@ -154,6 +154,12 @@ describe('ColorPicker', () => {
         '100%',
       ]);
     });
+
+    // render 中读取了 header，但未将返回的节点插入最终 VNode。
+    it.todo('header[slot]');
+
+    // render 中读取了 footer，但未将返回的节点插入最终 VNode。
+    it.todo('footer[slot]');
   });
 
   describe('events', () => {
@@ -244,13 +250,6 @@ describe('ColorPicker', () => {
         color: getColorObject(color),
       });
     });
-  });
-
-  describe('slots', () => {
-    // render 中读取了 header，但未将返回的节点插入最终 VNode。
-    it.todo('header');
-    // render 中读取了 footer，但未将返回的节点插入最终 VNode。
-    it.todo('footer');
   });
 
   describe('scenarios', () => {

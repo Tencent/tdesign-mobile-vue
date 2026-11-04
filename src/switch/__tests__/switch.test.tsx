@@ -123,6 +123,35 @@ describe('Switch', () => {
       expect(wrapper.find('.t-switch__label #switch-close').exists()).toBe(true);
     });
 
+    it('label[slot]', async () => {
+      // 静态插槽内容渲染在圆点内
+      const wrapper = mount(Switch, {
+        props: {
+          defaultValue: true,
+        },
+        slots: {
+          label: '<span id="switch-label-slot">custom label</span>',
+        },
+      });
+      expect(wrapper.find('.t-switch__label #switch-label-slot').exists()).toBe(true);
+
+      // 作用域插槽接收当前开关值
+      const scoped = mount(Switch, {
+        props: {
+          defaultValue: true,
+        },
+        slots: {
+          label: ({ value }: { value: SwitchValue }) =>
+            value ? <span id="switch-slot-open">开</span> : <span id="switch-slot-close">关</span>,
+        },
+      });
+      expect(scoped.find('.t-switch__label #switch-slot-open').exists()).toBe(true);
+
+      await scoped.trigger('click');
+      expect(scoped.find('.t-switch__label #switch-slot-open').exists()).toBe(false);
+      expect(scoped.find('.t-switch__label #switch-slot-close').exists()).toBe(true);
+    });
+
     it('loading[boolean]', async () => {
       const onChange = vi.fn();
       const wrapper = mount(Switch, {
@@ -342,37 +371,6 @@ describe('Switch', () => {
     // 源码缺口：switch.tsx 的 handleToggle 调用 setInnerValue(state.value) 时未透传点击事件对象，
     // onChange 实际只收到 value 一个参数，文档声明的 context.e（{ e: MouseEvent }）未实现
     it.todo('change context');
-  });
-
-  describe('slots', () => {
-    it('label', async () => {
-      // 静态插槽内容渲染在圆点内
-      const wrapper = mount(Switch, {
-        props: {
-          defaultValue: true,
-        },
-        slots: {
-          label: '<span id="switch-label-slot">custom label</span>',
-        },
-      });
-      expect(wrapper.find('.t-switch__label #switch-label-slot').exists()).toBe(true);
-
-      // 作用域插槽接收当前开关值
-      const scoped = mount(Switch, {
-        props: {
-          defaultValue: true,
-        },
-        slots: {
-          label: ({ value }: { value: SwitchValue }) =>
-            value ? <span id="switch-slot-open">开</span> : <span id="switch-slot-close">关</span>,
-        },
-      });
-      expect(scoped.find('.t-switch__label #switch-slot-open').exists()).toBe(true);
-
-      await scoped.trigger('click');
-      expect(scoped.find('.t-switch__label #switch-slot-open').exists()).toBe(false);
-      expect(scoped.find('.t-switch__label #switch-slot-close').exists()).toBe(true);
-    });
   });
 
   describe('scenarios', () => {

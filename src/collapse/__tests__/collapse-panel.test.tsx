@@ -24,6 +24,11 @@ describe('CollapsePanel', () => {
       expect(wrapper.find('.t-collapse-panel__content').text()).toBe('函数内容');
     });
 
+    test('content[slot]', () => {
+      const wrapper = mountPanel({}, { content: () => [<div>具名内容</div>] });
+      expect(wrapper.find('.t-collapse-panel__content').text()).toBe('具名内容');
+    });
+
     test('default[string]', () => {
       const wrapper = mountPanel({ default: '别名内容' });
       expect(wrapper.find('.t-collapse-panel__content').text()).toBe('别名内容');
@@ -32,6 +37,11 @@ describe('CollapsePanel', () => {
     test('default[function]', () => {
       const wrapper = mountPanel({ default: () => <span>函数别名内容</span> });
       expect(wrapper.find('.t-collapse-panel__content').text()).toBe('函数别名内容');
+    });
+
+    test('default[slot]', () => {
+      const wrapper = mountPanel({}, { default: () => [<div>内容</div>] });
+      expect(wrapper.find('.t-collapse-panel__content > div').html()).toBe('<div>内容</div>');
     });
 
     test('destroyOnCollapse[boolean]', async () => {
@@ -123,6 +133,11 @@ describe('CollapsePanel', () => {
       expect(wrapper.find('.t-collapse-panel__header-icon .custom-expand-icon').text()).toBe('更多');
     });
 
+    test('expandIcon[slot]', () => {
+      const wrapper = mountPanel({}, { expandIcon: () => [<span class="slot-expand">展开</span>] });
+      expect(wrapper.find('.t-collapse-panel__header-icon .slot-expand').text()).toBe('展开');
+    });
+
     test('header[string]', async () => {
       const wrapper = mount({
         setup() {
@@ -143,6 +158,11 @@ describe('CollapsePanel', () => {
     test('header[function]', () => {
       const wrapper = mountPanel({ header: () => <span>函数标题</span> });
       expect(wrapper.find('.t-cell__title-text').text()).toBe('函数标题');
+    });
+
+    test('header[slot]', () => {
+      const wrapper = mountPanel({}, { header: () => [<h4>标题</h4>] });
+      expect(wrapper.find('.t-cell__title h4').html()).toBe('<h4>标题</h4>');
     });
 
     test('headerLeftIcon[function]', async () => {
@@ -166,6 +186,11 @@ describe('CollapsePanel', () => {
       expect(panel.find('.t-collapse-panel__header .custom-left-icon').text()).toBe('图标');
     });
 
+    test('headerLeftIcon[slot]', () => {
+      const wrapper = mountPanel({}, { headerLeftIcon: () => [<span class="slot-left">左图标</span>] });
+      expect(wrapper.find('.t-cell__left-icon .slot-left').text()).toBe('左图标');
+    });
+
     test('headerRightContent[string]', async () => {
       const wrapper = mount({
         setup() {
@@ -185,6 +210,11 @@ describe('CollapsePanel', () => {
     test('headerRightContent[function]', () => {
       const wrapper = mountPanel({ headerRightContent: () => <span>函数操作</span> });
       expect(wrapper.find('.t-cell__note').text()).toBe('函数操作');
+    });
+
+    test('headerRightContent[slot]', () => {
+      const wrapper = mountPanel({}, { headerRightContent: () => [<span>操作</span>] });
+      expect(wrapper.find('.t-cell__note > span').html()).toBe('<span>操作</span>');
     });
 
     test('placement[bottom/top]', async () => {
@@ -220,38 +250,6 @@ describe('CollapsePanel', () => {
       const wrapper = mountPanel({ value: 0 }, {}, { onChange });
       await wrapper.find('.t-collapse-panel__header').trigger('click');
       expect(onChange).toHaveBeenCalledWith([0], { e: expect.any(MouseEvent) });
-    });
-  });
-
-  describe('slots', () => {
-    test('default', () => {
-      const wrapper = mountPanel({}, { default: () => [<div>内容</div>] });
-      expect(wrapper.find('.t-collapse-panel__content > div').html()).toBe('<div>内容</div>');
-    });
-
-    test('content', () => {
-      const wrapper = mountPanel({}, { content: () => [<div>具名内容</div>] });
-      expect(wrapper.find('.t-collapse-panel__content').text()).toBe('具名内容');
-    });
-
-    test('header', () => {
-      const wrapper = mountPanel({}, { header: () => [<h4>标题</h4>] });
-      expect(wrapper.find('.t-cell__title h4').html()).toBe('<h4>标题</h4>');
-    });
-
-    test('headerRightContent', () => {
-      const wrapper = mountPanel({}, { headerRightContent: () => [<span>操作</span>] });
-      expect(wrapper.find('.t-cell__note > span').html()).toBe('<span>操作</span>');
-    });
-
-    test('headerLeftIcon', () => {
-      const wrapper = mountPanel({}, { headerLeftIcon: () => [<span class="slot-left">左图标</span>] });
-      expect(wrapper.find('.t-cell__left-icon .slot-left').text()).toBe('左图标');
-    });
-
-    test('expandIcon', () => {
-      const wrapper = mountPanel({}, { expandIcon: () => [<span class="slot-expand">展开</span>] });
-      expect(wrapper.find('.t-collapse-panel__header-icon .slot-expand').text()).toBe('展开');
     });
   });
 

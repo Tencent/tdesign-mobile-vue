@@ -43,6 +43,17 @@ describe('Avatar', () => {
       expect(wrapper.findComponent(UserIcon).exists()).toBeTruthy();
     });
 
+    it('icon[slot]', async () => {
+      const wrapper = mount(Avatar, {
+        slots: {
+          icon: userIconFunc,
+        },
+      });
+      const icon = wrapper.find('.t-avatar > .t-avatar__icon');
+      expect(icon.exists()).toBeTruthy();
+      expect(wrapper.findComponent(UserIcon).exists()).toBeTruthy();
+    });
+
     it('image[string]', async () => {
       const wrapper = mount(() => <Avatar image={IMAGE} />);
       // jsdom 不触发图片 onload，断言 image 已作为地址透传给内部 img 的 src
@@ -73,6 +84,12 @@ describe('Avatar', () => {
         expect(size.exists()).toBeTruthy();
       });
     });
+
+    it('default[slot]', async () => {
+      const wrapper = mount(() => <Avatar>A</Avatar>);
+      const characterAvatar = wrapper.find('.t-avatar');
+      expect(characterAvatar.text()).toBe('A');
+    });
   });
 
   describe('events', () => {
@@ -86,25 +103,6 @@ describe('Avatar', () => {
       await img.trigger('error');
       expect(onError).toBeCalledTimes(1);
       expect(onError).toHaveBeenCalledWith({ e: expect.any(Event) });
-    });
-  });
-
-  describe('slots', () => {
-    it('default', async () => {
-      const wrapper = mount(() => <Avatar>A</Avatar>);
-      const characterAvatar = wrapper.find('.t-avatar');
-      expect(characterAvatar.text()).toBe('A');
-    });
-
-    it('icon', async () => {
-      const wrapper = mount(Avatar, {
-        slots: {
-          icon: userIconFunc,
-        },
-      });
-      const icon = wrapper.find('.t-avatar > .t-avatar__icon');
-      expect(icon.exists()).toBeTruthy();
-      expect(wrapper.findComponent(UserIcon).exists()).toBeTruthy();
     });
   });
 });

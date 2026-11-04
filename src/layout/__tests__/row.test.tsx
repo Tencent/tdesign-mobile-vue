@@ -32,10 +32,8 @@ describe('Row', () => {
       // 未设置 gutter 时不输出负外边距
       expect(mount(Row).attributes('style')).toBeUndefined();
     });
-  });
 
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mount(Row, { slots: { default: () => <Col span="2">内容</Col> } });
       expect(wrapper.findComponent(Col).text()).toBe('内容');
     });

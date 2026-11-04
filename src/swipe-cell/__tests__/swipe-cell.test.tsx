@@ -76,6 +76,16 @@ describe('SwipeCell', () => {
       expect(wrapper.find('.custom-content').text()).toBe(content);
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(SwipeCell, {
+        slots: {
+          content: () => <TIconApp />,
+        },
+      });
+
+      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+    });
+
     it('default[string]', () => {
       const content = 'default prop content';
       const wrapper = mount(<SwipeCell default={content} />);
@@ -89,6 +99,17 @@ describe('SwipeCell', () => {
 
       expect(wrapper.find('.custom-default').exists()).toBeTruthy();
       expect(wrapper.text()).toContain('default fn content');
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(SwipeCell, {
+        slots: {
+          default: () => <div class="cell-body">单元格内容</div>,
+        },
+      });
+
+      expect(wrapper.find('.cell-body').exists()).toBeTruthy();
+      expect(wrapper.text()).toContain('单元格内容');
     });
 
     it('disabled[boolean]', async () => {
@@ -135,6 +156,31 @@ describe('SwipeCell', () => {
       const wrapper = mount(<SwipeCell content="内容" left={() => <div class="custom-left-btn">左侧操作</div>} />);
 
       expect(wrapper.find('.t-swipe-cell__left .custom-left-btn').exists()).toBeTruthy();
+    });
+
+    it('left[slot]', async () => {
+      const onSlotClick = vi.fn();
+      const onClick = vi.fn();
+      const wrapper = mount(SwipeCell, {
+        props: {
+          content: '内容',
+          onClick,
+        },
+        slots: {
+          left: () => (
+            <div class="left-slot-btn" onClick={onSlotClick}>
+              选择
+            </div>
+          ),
+        },
+      });
+
+      expect(wrapper.find('.t-swipe-cell__left .left-slot-btn').exists()).toBeTruthy();
+
+      // 插槽自定义内容与事件生效，组件 click 事件不触发（插槽写法组件不触发）
+      await wrapper.find('.left-slot-btn').trigger('click');
+      expect(onSlotClick).toHaveBeenCalledTimes(1);
+      expect(onClick).not.toHaveBeenCalled();
     });
 
     it('opened[boolean]', async () => {
@@ -233,6 +279,31 @@ describe('SwipeCell', () => {
       const wrapper = mount(<SwipeCell content="内容" right={() => <div class="custom-right-btn">右侧操作</div>} />);
 
       expect(wrapper.find('.t-swipe-cell__right .custom-right-btn').exists()).toBeTruthy();
+    });
+
+    it('right[slot]', async () => {
+      const onSlotClick = vi.fn();
+      const onClick = vi.fn();
+      const wrapper = mount(SwipeCell, {
+        props: {
+          content: '内容',
+          onClick,
+        },
+        slots: {
+          right: () => (
+            <div class="right-slot-btn" onClick={onSlotClick}>
+              删除
+            </div>
+          ),
+        },
+      });
+
+      expect(wrapper.find('.t-swipe-cell__right .right-slot-btn').exists()).toBeTruthy();
+
+      // 插槽自定义内容与事件生效，组件 click 事件不触发（插槽写法组件不触发）
+      await wrapper.find('.right-slot-btn').trigger('click');
+      expect(onSlotClick).toHaveBeenCalledTimes(1);
+      expect(onClick).not.toHaveBeenCalled();
     });
   });
 
@@ -343,79 +414,6 @@ describe('SwipeCell', () => {
       await wrapper.setProps({ disabled: true });
       await swipeBy($cell, -100);
       expect(onDragstart).toHaveBeenCalledTimes(1);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(SwipeCell, {
-        slots: {
-          default: () => <div class="cell-body">单元格内容</div>,
-        },
-      });
-
-      expect(wrapper.find('.cell-body').exists()).toBeTruthy();
-      expect(wrapper.text()).toContain('单元格内容');
-    });
-
-    it('content', () => {
-      const wrapper = mount(SwipeCell, {
-        slots: {
-          content: () => <TIconApp />,
-        },
-      });
-
-      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
-    });
-
-    it('left', async () => {
-      const onSlotClick = vi.fn();
-      const onClick = vi.fn();
-      const wrapper = mount(SwipeCell, {
-        props: {
-          content: '内容',
-          onClick,
-        },
-        slots: {
-          left: () => (
-            <div class="left-slot-btn" onClick={onSlotClick}>
-              选择
-            </div>
-          ),
-        },
-      });
-
-      expect(wrapper.find('.t-swipe-cell__left .left-slot-btn').exists()).toBeTruthy();
-
-      // 插槽自定义内容与事件生效，组件 click 事件不触发（插槽写法组件不触发）
-      await wrapper.find('.left-slot-btn').trigger('click');
-      expect(onSlotClick).toHaveBeenCalledTimes(1);
-      expect(onClick).not.toHaveBeenCalled();
-    });
-
-    it('right', async () => {
-      const onSlotClick = vi.fn();
-      const onClick = vi.fn();
-      const wrapper = mount(SwipeCell, {
-        props: {
-          content: '内容',
-          onClick,
-        },
-        slots: {
-          right: () => (
-            <div class="right-slot-btn" onClick={onSlotClick}>
-              删除
-            </div>
-          ),
-        },
-      });
-
-      expect(wrapper.find('.t-swipe-cell__right .right-slot-btn').exists()).toBeTruthy();
-
-      // 插槽自定义内容与事件生效，组件 click 事件不触发（插槽写法组件不触发）
-      await wrapper.find('.right-slot-btn').trigger('click');
-      expect(onSlotClick).toHaveBeenCalledTimes(1);
-      expect(onClick).not.toHaveBeenCalled();
     });
   });
 

@@ -129,6 +129,18 @@ describe('Tabs', () => {
       expect($middle.element.nextElementSibling.classList.contains(`${name}__content`)).toBe(true);
     });
 
+    it('middle[slot]', () => {
+      const wrapper = mount(Tabs, {
+        props: { list: tabList },
+        slots: { middle: () => <div class="middle-slot">中间内容</div> },
+      });
+      const $middle = wrapper.find('.middle-slot');
+      expect($middle.exists()).toBe(true);
+      expect($middle.text()).toBe('中间内容');
+      // middle 渲染在导航与内容区之间
+      expect($middle.element.nextElementSibling.classList.contains(`${name}__content`)).toBe(true);
+    });
+
     it('showBottomLine[boolean]', async () => {
       const wrapper = mountTabs({ defaultValue: '1' });
       expect(wrapper.find(`.${name}__track`).exists()).toBe(true);
@@ -311,6 +323,30 @@ describe('Tabs', () => {
       await items[0].trigger('click');
       expect(items[0].classes()).toContain(`${name}__item--active`);
     });
+
+    it('default[slot]', async () => {
+      const wrapper = mount(() => (
+        <Tabs defaultValue="1">
+          <TabPanel value="1" label="标签页一" panel="标签一内容区" />
+          <TabPanel value="2" label="标签页二" panel="标签二内容区" />
+        </Tabs>
+      ));
+      // default 插槽中的 TabPanel 生成导航项
+      const items = wrapper.findAll(`.${name}__item`);
+      expect(items).toHaveLength(tabList.length);
+      expect(items[0].text()).toBe('标签页一');
+      expect(items[0].classes()).toContain(`${name}__item--active`);
+
+      // 面板内容来自 default 插槽，仅激活面板渲染（destroyOnHide 默认为 true）
+      let panels = wrapper.findAll(`.${tabPanelName}`);
+      expect(panels).toHaveLength(1);
+      expect(panels[0].text()).toBe('标签一内容区');
+
+      await items[1].trigger('click');
+      panels = wrapper.findAll(`.${tabPanelName}`);
+      expect(panels).toHaveLength(1);
+      expect(panels[0].text()).toBe('标签二内容区');
+    });
   });
 
   describe('events', () => {
@@ -367,44 +403,6 @@ describe('Tabs', () => {
       await wrapper.setProps({ stickyProps: { offsetTop: 20 } });
       expect(onScroll).toHaveBeenCalledTimes(1);
       expect(onScroll).toHaveBeenCalledWith(expect.any(Number), expect.any(Boolean));
-    });
-  });
-
-  describe('slots', () => {
-    it('middle', () => {
-      const wrapper = mount(Tabs, {
-        props: { list: tabList },
-        slots: { middle: () => <div class="middle-slot">中间内容</div> },
-      });
-      const $middle = wrapper.find('.middle-slot');
-      expect($middle.exists()).toBe(true);
-      expect($middle.text()).toBe('中间内容');
-      // middle 渲染在导航与内容区之间
-      expect($middle.element.nextElementSibling.classList.contains(`${name}__content`)).toBe(true);
-    });
-
-    it('default', async () => {
-      const wrapper = mount(() => (
-        <Tabs defaultValue="1">
-          <TabPanel value="1" label="标签页一" panel="标签一内容区" />
-          <TabPanel value="2" label="标签页二" panel="标签二内容区" />
-        </Tabs>
-      ));
-      // default 插槽中的 TabPanel 生成导航项
-      const items = wrapper.findAll(`.${name}__item`);
-      expect(items).toHaveLength(tabList.length);
-      expect(items[0].text()).toBe('标签页一');
-      expect(items[0].classes()).toContain(`${name}__item--active`);
-
-      // 面板内容来自 default 插槽，仅激活面板渲染（destroyOnHide 默认为 true）
-      let panels = wrapper.findAll(`.${tabPanelName}`);
-      expect(panels).toHaveLength(1);
-      expect(panels[0].text()).toBe('标签一内容区');
-
-      await items[1].trigger('click');
-      panels = wrapper.findAll(`.${tabPanelName}`);
-      expect(panels).toHaveLength(1);
-      expect(panels[0].text()).toBe('标签二内容区');
     });
   });
 

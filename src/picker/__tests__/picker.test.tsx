@@ -121,6 +121,15 @@ describe('Picker', () => {
       expect(wrapper.find('.picker-footer').text()).toBe('自定义底部');
     });
 
+    it('footer[slot]', () => {
+      const wrapper = mount(Picker, {
+        props: { columns: [seasonOptions] },
+        slots: { footer: () => <div class="picker-footer-slot">自定义底部</div> },
+      });
+      expect(wrapper.find('.picker-footer-slot').exists()).toBe(true);
+      expect(wrapper.find('.picker-footer-slot').text()).toBe('自定义底部');
+    });
+
     it('header[string]', () => {
       // header 类型声明为 TNode（运行时 prop 仅声明 Function），传字符串会有预期内的类型告警，这里以类型断言处理
       const wrapper = mount(Picker, {
@@ -137,6 +146,15 @@ describe('Picker', () => {
       const wrapper = mountPicker({ header: () => <div class="picker-header">自定义头部</div> });
       expect(wrapper.find('.picker-header').exists()).toBe(true);
       expect(wrapper.find('.picker-header').text()).toBe('自定义头部');
+    });
+
+    it('header[slot]', () => {
+      const wrapper = mount(Picker, {
+        props: { columns: [seasonOptions] },
+        slots: { header: () => <div class="picker-header-slot">自定义头部</div> },
+      });
+      expect(wrapper.find('.picker-header-slot').exists()).toBe(true);
+      expect(wrapper.find('.picker-header-slot').text()).toBe('自定义头部');
     });
 
     it('keys[object]', async () => {
@@ -172,6 +190,16 @@ describe('Picker', () => {
       expect(itemContainers).toHaveLength(seasonOptions.length);
       expect(itemContainers.map((container) => container.text())).toEqual(
         seasonOptions.map((option, index) => `${option.label}-${index}`),
+      );
+    });
+
+    it('option[slot]', () => {
+      const wrapper = mount(Picker, {
+        props: { columns: [seasonOptions] },
+        slots: { option: (option: PickerColumnItem, index: number) => `${option.label}@${index}` },
+      });
+      expect(wrapper.findAll('.t-picker-item__item').map((container) => container.text())).toEqual(
+        seasonOptions.map((option, index) => `${option.label}@${index}`),
       );
     });
 
@@ -352,36 +380,6 @@ describe('Picker', () => {
       );
       expect(itemContainers.slice(seasonOptions.length).map((container) => container.text())).toEqual(
         monthOptions.map((option) => option.label),
-      );
-    });
-  });
-
-  describe('slots', () => {
-    it('footer', () => {
-      const wrapper = mount(Picker, {
-        props: { columns: [seasonOptions] },
-        slots: { footer: () => <div class="picker-footer-slot">自定义底部</div> },
-      });
-      expect(wrapper.find('.picker-footer-slot').exists()).toBe(true);
-      expect(wrapper.find('.picker-footer-slot').text()).toBe('自定义底部');
-    });
-
-    it('header', () => {
-      const wrapper = mount(Picker, {
-        props: { columns: [seasonOptions] },
-        slots: { header: () => <div class="picker-header-slot">自定义头部</div> },
-      });
-      expect(wrapper.find('.picker-header-slot').exists()).toBe(true);
-      expect(wrapper.find('.picker-header-slot').text()).toBe('自定义头部');
-    });
-
-    it('option', () => {
-      const wrapper = mount(Picker, {
-        props: { columns: [seasonOptions] },
-        slots: { option: (option: PickerColumnItem, index: number) => `${option.label}@${index}` },
-      });
-      expect(wrapper.findAll('.t-picker-item__item').map((container) => container.text())).toEqual(
-        seasonOptions.map((option, index) => `${option.label}@${index}`),
       );
     });
   });

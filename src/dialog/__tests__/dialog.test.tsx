@@ -54,6 +54,13 @@ describe('Dialog', () => {
 
     // 运行时声明 Function，但 isTextStyleBtn 会直接展开 actions，函数输入会报错。
     it.todo('actions[function]');
+    it('actions[slot]', () => {
+      const wrapper = mount(Dialog, {
+        props: { visible: true },
+        slots: { actions: () => <button class="slot-action">自定义操作</button> },
+      });
+      expect(wrapper.find('.t-dialog__footer .slot-action').text()).toBe('自定义操作');
+    });
 
     it('beforeClose[function]', async () => {
       let resolveFn: () => void;
@@ -168,6 +175,19 @@ describe('Dialog', () => {
 
     // 无同名插槽时，renderButtonNode 会丢弃函数返回的节点，仍渲染内置 Button。
     it.todo('cancelBtn[function]');
+    it('cancelBtn[slot]', async () => {
+      const visible = true;
+      const cancelBtn = 'cancel';
+      const wrapper = mount(Dialog, {
+        props: {
+          visible,
+        },
+        slots: {
+          cancelBtn: `<button class="slot-cancel-btn">${cancelBtn}</button>`,
+        },
+      });
+      expect(wrapper.find('.slot-cancel-btn').text()).toBe(cancelBtn);
+    });
 
     it('closeBtn[boolean]', async () => {
       const wrapper = mount(Dialog, {
@@ -225,6 +245,19 @@ describe('Dialog', () => {
 
     // 与 cancelBtn 相同，函数返回的自定义节点没有被渲染。
     it.todo('confirmBtn[function]');
+    it('confirmBtn[slot]', async () => {
+      const visible = true;
+      const confirmBtn = 'confirm';
+      const wrapper = mount(Dialog, {
+        props: {
+          visible,
+        },
+        slots: {
+          confirmBtn: `<button class="slot-confirm-btn">${confirmBtn}</button>`,
+        },
+      });
+      expect(wrapper.find('.slot-confirm-btn').text()).toBe(confirmBtn);
+    });
 
     it('content[string]', async () => {
       const visible = true;
@@ -258,6 +291,11 @@ describe('Dialog', () => {
       expect(wrapper.find('.t-dialog__body').text()).toBe('content is function');
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Dialog, { props: { visible: true }, slots: { content: () => <span>插槽内容</span> } });
+      expect(wrapper.find('.t-dialog__body').text()).toBe('插槽内容');
+    });
+
     it('destroyOnClose[boolean]', async () => {
       const wrapper = mount(Dialog, {
         props: {
@@ -279,6 +317,11 @@ describe('Dialog', () => {
         },
       });
       expect(wrapper.find('.dialog-middle').exists()).toBeTruthy();
+    });
+
+    it('middle[slot]', () => {
+      const wrapper = mount(Dialog, { props: { visible: true }, slots: { middle: () => <span>插槽中间</span> } });
+      expect(wrapper.find('.t-dialog').text()).toContain('插槽中间');
     });
 
     it('overlayProps[object]', async () => {
@@ -344,6 +387,11 @@ describe('Dialog', () => {
       expect(wrapper.find('.t-dialog__header .custom-title').text()).toBe('函数标题');
     });
 
+    it('title[slot]', () => {
+      const wrapper = mount(Dialog, { props: { visible: true }, slots: { title: () => <span>插槽标题</span> } });
+      expect(wrapper.find('.t-dialog__header').text()).toBe('插槽标题');
+    });
+
     it('top[function]', async () => {
       const wrapper = mount(Dialog, {
         props: {
@@ -352,6 +400,11 @@ describe('Dialog', () => {
         },
       });
       expect(wrapper.find('.dialog-top').exists()).toBeTruthy();
+    });
+
+    it('top[slot]', () => {
+      const wrapper = mount(Dialog, { props: { visible: true }, slots: { top: () => <span>插槽顶部</span> } });
+      expect(wrapper.find('.t-dialog').text()).toContain('插槽顶部');
     });
 
     it('visible[boolean]', async () => {
@@ -410,6 +463,14 @@ describe('Dialog', () => {
       });
       expect(document.querySelector('.t-popup').getAttribute('style')).toContain('z-index: 12000');
     });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Dialog, {
+        props: { visible: true },
+        slots: { default: () => <span class="default-content">默认插槽内容</span> },
+      });
+      expect(wrapper.find('.t-dialog__body .default-content').text()).toBe('默认插槽内容');
+    });
   });
 
   describe('events', () => {
@@ -453,71 +514,6 @@ describe('Dialog', () => {
       await wrapper.setProps({ visible: false });
       await sleep(300);
       expect(onClosed).toHaveBeenCalledTimes(1);
-    });
-  });
-
-  describe('slots', () => {
-    it('actions', () => {
-      const wrapper = mount(Dialog, {
-        props: { visible: true },
-        slots: { actions: () => <button class="slot-action">自定义操作</button> },
-      });
-      expect(wrapper.find('.t-dialog__footer .slot-action').text()).toBe('自定义操作');
-    });
-
-    it('default', () => {
-      const wrapper = mount(Dialog, {
-        props: { visible: true },
-        slots: { default: () => <span class="default-content">默认插槽内容</span> },
-      });
-      expect(wrapper.find('.t-dialog__body .default-content').text()).toBe('默认插槽内容');
-    });
-
-    it('title', () => {
-      const wrapper = mount(Dialog, { props: { visible: true }, slots: { title: () => <span>插槽标题</span> } });
-      expect(wrapper.find('.t-dialog__header').text()).toBe('插槽标题');
-    });
-
-    it('content', () => {
-      const wrapper = mount(Dialog, { props: { visible: true }, slots: { content: () => <span>插槽内容</span> } });
-      expect(wrapper.find('.t-dialog__body').text()).toBe('插槽内容');
-    });
-
-    it('top', () => {
-      const wrapper = mount(Dialog, { props: { visible: true }, slots: { top: () => <span>插槽顶部</span> } });
-      expect(wrapper.find('.t-dialog').text()).toContain('插槽顶部');
-    });
-
-    it('middle', () => {
-      const wrapper = mount(Dialog, { props: { visible: true }, slots: { middle: () => <span>插槽中间</span> } });
-      expect(wrapper.find('.t-dialog').text()).toContain('插槽中间');
-    });
-
-    it('confirmBtn', async () => {
-      const visible = true;
-      const confirmBtn = 'confirm';
-      const wrapper = mount(Dialog, {
-        props: {
-          visible,
-        },
-        slots: {
-          confirmBtn: `<button class="slot-confirm-btn">${confirmBtn}</button>`,
-        },
-      });
-      expect(wrapper.find('.slot-confirm-btn').text()).toBe(confirmBtn);
-    });
-    it('cancelBtn', async () => {
-      const visible = true;
-      const cancelBtn = 'cancel';
-      const wrapper = mount(Dialog, {
-        props: {
-          visible,
-        },
-        slots: {
-          cancelBtn: `<button class="slot-cancel-btn">${cancelBtn}</button>`,
-        },
-      });
-      expect(wrapper.find('.slot-cancel-btn').text()).toBe(cancelBtn);
     });
   });
 

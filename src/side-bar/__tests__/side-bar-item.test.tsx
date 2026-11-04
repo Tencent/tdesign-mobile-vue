@@ -103,6 +103,18 @@ describe('SideBarItem', () => {
       expect(wrapper2.find(`.${name}__icon`).exists()).toBe(false);
     });
 
+    it('icon[slot]', () => {
+      const wrapper = mount(
+        <SideBar>
+          <SideBarItem value={0} label="选项一" v-slots={{ icon: () => <div class="slot-icon">插槽图标</div> }} />
+        </SideBar>,
+      );
+
+      const $icon = wrapper.find(`.${name}__icon`);
+      expect($icon.exists()).toBe(true);
+      expect($icon.find('.slot-icon').text()).toBe('插槽图标');
+    });
+
     it('label[string]', () => {
       const wrapper = mount(
         <SideBar>
@@ -147,20 +159,6 @@ describe('SideBarItem', () => {
       expect($items[1].classes()).toContain(`${name}--active`);
       expect($items[1].find(`.${name}__line`).exists()).toBe(true);
       expect($items[0].find(`.${name}__line`).exists()).toBe(false);
-    });
-  });
-
-  describe('slots', () => {
-    it('icon', () => {
-      const wrapper = mount(
-        <SideBar>
-          <SideBarItem value={0} label="选项一" v-slots={{ icon: () => <div class="slot-icon">插槽图标</div> }} />
-        </SideBar>,
-      );
-
-      const $icon = wrapper.find(`.${name}__icon`);
-      expect($icon.exists()).toBe(true);
-      expect($icon.find('.slot-icon').text()).toBe('插槽图标');
     });
   });
 

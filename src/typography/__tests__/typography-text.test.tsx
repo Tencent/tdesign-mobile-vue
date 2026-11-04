@@ -47,6 +47,13 @@ describe('Typography Text', () => {
       expect(wrapper.text()).toBe(shortText);
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Text, {
+        slots: { content: () => shortText },
+      });
+      expect(wrapper.text()).toBe(shortText);
+    });
+
     it('copyable[boolean]', async () => {
       vi.useFakeTimers();
       const wrapper = mount(Text, {
@@ -149,6 +156,14 @@ describe('Typography Text', () => {
       const wrapper = mount(Text, {
         props: { default: () => shortText },
       });
+      expect(wrapper.text()).toBe(shortText);
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Text, {
+        slots: { default: () => shortText },
+      });
+      expect(wrapper.find(`span.${COMPONENT_NAME}`).exists()).toBe(true);
       expect(wrapper.text()).toBe(shortText);
     });
 
@@ -387,23 +402,6 @@ describe('Typography Text', () => {
 
       await wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
       expect(onExpand).toHaveBeenCalledWith(false);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Text, {
-        slots: { default: () => shortText },
-      });
-      expect(wrapper.find(`span.${COMPONENT_NAME}`).exists()).toBe(true);
-      expect(wrapper.text()).toBe(shortText);
-    });
-
-    it('content', () => {
-      const wrapper = mount(Text, {
-        slots: { content: () => shortText },
-      });
-      expect(wrapper.text()).toBe(shortText);
     });
   });
 

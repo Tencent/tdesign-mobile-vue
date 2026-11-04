@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Fab > slots > icon 1`] = `
+exports[`Fab > props > icon[slot] 1`] = `
 <div
   class="t-fab"
   style="right: 16px; bottom: 32px;"

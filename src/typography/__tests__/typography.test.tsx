@@ -10,8 +10,8 @@ const longText =
 const shortText = 'TDesign 是腾讯各业务团队在服务业务过程中沉淀的一套企业级设计体系。';
 
 describe('Typography', () => {
-  describe('slots', () => {
-    it('default', () => {
+  describe('props', () => {
+    it('default[slot]', () => {
       const wrapper = mount(Typography, {
         slots: {
           default: () => longText,

@@ -119,6 +119,24 @@ describe('TabBar', () => {
       await wrapper.setProps({ zIndex: 100 });
       expect(wrapper.attributes('style')).toContain('z-index: 100');
     });
+
+    it('default[slot]', () => {
+      const wrapper = mount(
+        <TabBar>
+          <TabBarItem value="1">标签一</TabBarItem>
+          <TabBarItem value="2">标签二</TabBarItem>
+        </TabBar>,
+      );
+      expect(wrapper.attributes('role')).toBe('tablist');
+      const items = wrapper.findAll('.t-tab-bar-item');
+      expect(items).toHaveLength(2);
+      expect(items[0].text()).toContain('标签一');
+      expect(items[1].text()).toContain('标签二');
+      // 未传默认插槽时渲染空标签栏
+      const empty = mount(TabBar);
+      expect(empty.attributes('role')).toBe('tablist');
+      expect(empty.findAll('.t-tab-bar-item')).toHaveLength(0);
+    });
   });
 
   describe('events', () => {
@@ -159,26 +177,6 @@ describe('TabBar', () => {
       await wrapper.findAll('.t-tab-bar-item__content')[1].trigger('click');
       expect(wrapper.emitted('update:modelValue')).toEqual([['2']]);
       expect(checkedTexts(wrapper)).toEqual(['标签一']);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(
-        <TabBar>
-          <TabBarItem value="1">标签一</TabBarItem>
-          <TabBarItem value="2">标签二</TabBarItem>
-        </TabBar>,
-      );
-      expect(wrapper.attributes('role')).toBe('tablist');
-      const items = wrapper.findAll('.t-tab-bar-item');
-      expect(items).toHaveLength(2);
-      expect(items[0].text()).toContain('标签一');
-      expect(items[1].text()).toContain('标签二');
-      // 未传默认插槽时渲染空标签栏
-      const empty = mount(TabBar);
-      expect(empty.attributes('role')).toBe('tablist');
-      expect(empty.findAll('.t-tab-bar-item')).toHaveLength(0);
     });
   });
 

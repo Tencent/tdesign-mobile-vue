@@ -205,6 +205,16 @@ describe('CheckboxGroup', () => {
       expect(items[0].classes()).toContain(`${name}--checked`);
       expect(items[1].classes()).toContain(`${name}--checked`);
     });
+
+    it('default[slot]', async () => {
+      const wrapper = mount(CheckboxGroup, {
+        slots: { default: () => <Checkbox value="one" label="插槽选项" /> },
+      });
+      const item = wrapper.findComponent(Checkbox);
+      expect(item.text()).toBe('插槽选项');
+      await item.trigger('click');
+      expect(item.classes()).toContain(`${name}--checked`);
+    });
   });
 
   describe('events', () => {
@@ -245,18 +255,6 @@ describe('CheckboxGroup', () => {
         type: 'uncheck',
       });
       expect(onChange).toHaveBeenCalledTimes(2);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', async () => {
-      const wrapper = mount(CheckboxGroup, {
-        slots: { default: () => <Checkbox value="one" label="插槽选项" /> },
-      });
-      const item = wrapper.findComponent(Checkbox);
-      expect(item.text()).toBe('插槽选项');
-      await item.trigger('click');
-      expect(item.classes()).toContain(`${name}--checked`);
     });
   });
 

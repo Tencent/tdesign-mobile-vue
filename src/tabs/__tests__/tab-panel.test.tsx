@@ -129,6 +129,25 @@ describe('TabPanel', () => {
       expect(wrapper.find(`.${name}__item`).text()).toBe('自定义标签');
     });
 
+    it('label[slot]', () => {
+      // 源码直接调用 label()[0] 取插槽内容，插槽函数需返回数组（与模板编译行为一致）
+      const wrapper = mount(() => (
+        <Tabs defaultValue="1">
+          <TabPanel value="1" label="标签页一">
+            {{ label: () => [<b class="label-slot">标签插槽内容</b>] }}
+          </TabPanel>
+          <TabPanel value="2" label="标签页二">
+            内容二
+          </TabPanel>
+        </Tabs>
+      ));
+
+      // label 插槽渲染在导航项上
+      const $slot = wrapper.find(`.${name}__item .label-slot`);
+      expect($slot.exists()).toBe(true);
+      expect($slot.text()).toBe('标签插槽内容');
+    });
+
     it('lazy[boolean]', async () => {
       const wrapper = mount(() => (
         <Tabs defaultValue="1">
@@ -181,6 +200,22 @@ describe('TabPanel', () => {
       expect($panel.text()).toBe('面板内容');
     });
 
+    it('panel[slot]', () => {
+      const wrapper = mount(() => (
+        <Tabs defaultValue="1">
+          <TabPanel value="1" label="标签页一">
+            {{
+              panel: () => <p class="panel-slot">面板插槽内容</p>,
+            }}
+          </TabPanel>
+        </Tabs>
+      ));
+
+      const $slot = wrapper.find(`.${tabPanelName} .panel-slot`);
+      expect($slot.exists()).toBe(true);
+      expect($slot.text()).toBe('面板插槽内容');
+    });
+
     it('value[string]', () => {
       const wrapper = mount(() => (
         <Tabs defaultValue="2">
@@ -217,10 +252,8 @@ describe('TabPanel', () => {
       expect(panels[0].text()).toBe('内容二');
       expect(wrapper.findAll(`.${name}__item`)[1].classes()).toContain(`${name}__item--active`);
     });
-  });
 
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mount(() => (
         <Tabs defaultValue="1">
           <TabPanel value="1" label="标签页一">
@@ -232,41 +265,6 @@ describe('TabPanel', () => {
       const $slot = wrapper.find(`.${tabPanelName} .default-slot`);
       expect($slot.exists()).toBe(true);
       expect($slot.text()).toBe('默认插槽内容');
-    });
-
-    it('panel', () => {
-      const wrapper = mount(() => (
-        <Tabs defaultValue="1">
-          <TabPanel value="1" label="标签页一">
-            {{
-              panel: () => <p class="panel-slot">面板插槽内容</p>,
-            }}
-          </TabPanel>
-        </Tabs>
-      ));
-
-      const $slot = wrapper.find(`.${tabPanelName} .panel-slot`);
-      expect($slot.exists()).toBe(true);
-      expect($slot.text()).toBe('面板插槽内容');
-    });
-
-    it('label', () => {
-      // 源码直接调用 label()[0] 取插槽内容，插槽函数需返回数组（与模板编译行为一致）
-      const wrapper = mount(() => (
-        <Tabs defaultValue="1">
-          <TabPanel value="1" label="标签页一">
-            {{ label: () => [<b class="label-slot">标签插槽内容</b>] }}
-          </TabPanel>
-          <TabPanel value="2" label="标签页二">
-            内容二
-          </TabPanel>
-        </Tabs>
-      ));
-
-      // label 插槽渲染在导航项上
-      const $slot = wrapper.find(`.${name}__item .label-slot`);
-      expect($slot.exists()).toBe(true);
-      expect($slot.text()).toBe('标签插槽内容');
     });
   });
 

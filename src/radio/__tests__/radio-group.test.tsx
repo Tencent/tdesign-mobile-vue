@@ -488,6 +488,16 @@ describe('RadioGroup', () => {
       expect(radios[1].find(`.${name}__icon--checked`).exists()).toBe(true);
       expect(radios[0].find(`.${name}__icon--checked`).exists()).toBe(false);
     });
+
+    it('default[slot]', async () => {
+      const wrapper = mount(RadioGroup, {
+        slots: { default: () => <Radio value="one" label="插槽选项" /> },
+      });
+      const item = wrapper.findComponent(Radio);
+      expect(item.text()).toContain('插槽选项');
+      await item.trigger('click');
+      expect(item.find(`.${name}__icon--checked`).exists()).toBe(true);
+    });
   });
 
   describe('events', () => {
@@ -522,18 +532,6 @@ describe('RadioGroup', () => {
       expect(radio.value).toBe('2');
       expect(onChange).toHaveBeenNthCalledWith(2, '2', { e: expect.any(MouseEvent), name: 'group-name' });
       expect(onChange).toHaveBeenCalledTimes(2);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', async () => {
-      const wrapper = mount(RadioGroup, {
-        slots: { default: () => <Radio value="one" label="插槽选项" /> },
-      });
-      const item = wrapper.findComponent(Radio);
-      expect(item.text()).toContain('插槽选项');
-      await item.trigger('click');
-      expect(item.find(`.${name}__icon--checked`).exists()).toBe(true);
     });
   });
 

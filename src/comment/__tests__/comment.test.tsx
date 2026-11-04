@@ -39,6 +39,9 @@ describe('Comment', () => {
       expect(wrapper.find('.custom-action').exists()).toBe(true);
     });
 
+    // 未传 actions 时提前返回；传数组或函数时又优先渲染 Prop，无法单独使用 actions 插槽。
+    it.todo('actions[slot]');
+
     it('author[string]', () => {
       const wrapper = mount(Comment, {
         props: { author: '张三' },
@@ -49,6 +52,13 @@ describe('Comment', () => {
     it('author[function]', () => {
       const wrapper = mount(Comment, { props: { author: () => <span>函数作者</span> } });
       expect(wrapper.find('.t-comment__author').text()).toBe('函数作者');
+    });
+
+    it('author[slot]', () => {
+      const wrapper = mount(Comment, {
+        slots: { author: () => h('span', { class: 'custom-author' }, '作者') },
+      });
+      expect(wrapper.find('.custom-author').text()).toBe('作者');
     });
 
     it('avatar[string]', () => {
@@ -76,6 +86,13 @@ describe('Comment', () => {
       expect(wrapper.find('.prop-avatar').text()).toBe('自定义头像');
     });
 
+    it('avatar[slot]', () => {
+      const wrapper = mount(Comment, {
+        slots: { avatar: () => h('span', { class: 'custom-avatar' }, 'custom') },
+      });
+      expect(wrapper.find('.custom-avatar').exists()).toBe(true);
+    });
+
     it('content[string]', () => {
       const wrapper = mount(Comment, {
         props: { content: '这是评论内容' },
@@ -90,6 +107,11 @@ describe('Comment', () => {
       expect(wrapper.find('.t-comment__content').text()).toBe('函数评论内容');
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Comment, { slots: { content: () => <span>插槽评论</span> } });
+      expect(wrapper.find('.t-comment__content').text()).toBe('插槽评论');
+    });
+
     it('datetime[string]', () => {
       const wrapper = mount(Comment, {
         props: { datetime: '今天16:38' },
@@ -102,6 +124,11 @@ describe('Comment', () => {
         props: { datetime: () => '昨天20:00' },
       });
       expect(wrapper.find('.t-comment__date').text()).toBe('昨天20:00');
+    });
+
+    it('datetime[slot]', () => {
+      const wrapper = mount(Comment, { slots: { datetime: () => <span>插槽时间</span> } });
+      expect(wrapper.find('.t-comment__date').text()).toBe('插槽时间');
     });
 
     it('folds[object]', async () => {
@@ -155,6 +182,20 @@ describe('Comment', () => {
       const wrapper = mount(Comment, { props: { reply: () => <span>函数回复</span> } });
       expect(wrapper.find('.t-comment__reply-inner').text()).toBe('函数回复');
     });
+
+    it('reply[slot]', () => {
+      const wrapper = mount(Comment, {
+        slots: { reply: () => h('div', { class: 'reply-slot' }, '回复插槽') },
+      });
+      expect(wrapper.find('.reply-slot').exists()).toBe(true);
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Comment, {
+        slots: { default: () => h('div', { class: 'reply-child' }, '嵌套回复') },
+      });
+      expect(wrapper.find('.reply-child').exists()).toBe(true);
+    });
   });
 
   describe('events', () => {
@@ -200,49 +241,6 @@ describe('Comment', () => {
       });
       expect(onFolds).toHaveBeenCalledTimes(3);
     });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Comment, {
-        slots: { default: () => h('div', { class: 'reply-child' }, '嵌套回复') },
-      });
-      expect(wrapper.find('.reply-child').exists()).toBe(true);
-    });
-
-    it('reply', () => {
-      const wrapper = mount(Comment, {
-        slots: { reply: () => h('div', { class: 'reply-slot' }, '回复插槽') },
-      });
-      expect(wrapper.find('.reply-slot').exists()).toBe(true);
-    });
-
-    it('avatar', () => {
-      const wrapper = mount(Comment, {
-        slots: { avatar: () => h('span', { class: 'custom-avatar' }, 'custom') },
-      });
-      expect(wrapper.find('.custom-avatar').exists()).toBe(true);
-    });
-
-    it('author', () => {
-      const wrapper = mount(Comment, {
-        slots: { author: () => h('span', { class: 'custom-author' }, '作者') },
-      });
-      expect(wrapper.find('.custom-author').text()).toBe('作者');
-    });
-
-    it('content', () => {
-      const wrapper = mount(Comment, { slots: { content: () => <span>插槽评论</span> } });
-      expect(wrapper.find('.t-comment__content').text()).toBe('插槽评论');
-    });
-
-    it('datetime', () => {
-      const wrapper = mount(Comment, { slots: { datetime: () => <span>插槽时间</span> } });
-      expect(wrapper.find('.t-comment__date').text()).toBe('插槽时间');
-    });
-
-    // 未传 actions 时提前返回；传数组或函数时又优先渲染 Prop，无法单独使用 actions 插槽。
-    it.todo('actions');
   });
 
   describe('scenarios', () => {

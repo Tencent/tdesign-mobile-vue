@@ -97,6 +97,16 @@ describe('Collapse', () => {
       expect(wrapper.find('.t-collapse-panel__header-icon .custom-expand-icon').text()).toBe('更多');
     });
 
+    test('expandIcon[slot]', () => {
+      const wrapper = mount(Collapse, {
+        slots: {
+          default: () => <CollapsePanel value="one" />,
+          expandIcon: () => <span class="slot-expand">展开</span>,
+        },
+      });
+      expect(wrapper.find('.t-collapse-panel__header-icon .slot-expand').text()).toBe('展开');
+    });
+
     test('expandMutex[boolean]', async () => {
       const val = ref([]);
       const wrapper = mount({
@@ -206,6 +216,13 @@ describe('Collapse', () => {
       await panel2.find('.t-collapse-panel__header').trigger('click');
       expect(panel2.classes()).toContain('t-collapse-panel--expanded');
     });
+
+    test('default[slot]', () => {
+      const wrapper = mount(Collapse, {
+        slots: { default: () => <CollapsePanel value="one" header="插槽面板" /> },
+      });
+      expect(wrapper.findComponent(CollapsePanel).text()).toContain('插槽面板');
+    });
   });
 
   describe('events', () => {
@@ -229,25 +246,6 @@ describe('Collapse', () => {
       await panel.find('.t-collapse-panel__header').trigger('click');
       expect(handleChange).toHaveBeenCalledTimes(2);
       expect(handleChange).toHaveBeenLastCalledWith([], { e: expect.any(MouseEvent) });
-    });
-  });
-
-  describe('slots', () => {
-    test('default', () => {
-      const wrapper = mount(Collapse, {
-        slots: { default: () => <CollapsePanel value="one" header="插槽面板" /> },
-      });
-      expect(wrapper.findComponent(CollapsePanel).text()).toContain('插槽面板');
-    });
-
-    test('expandIcon', () => {
-      const wrapper = mount(Collapse, {
-        slots: {
-          default: () => <CollapsePanel value="one" />,
-          expandIcon: () => <span class="slot-expand">展开</span>,
-        },
-      });
-      expect(wrapper.find('.t-collapse-panel__header-icon .slot-expand').text()).toBe('展开');
     });
   });
 

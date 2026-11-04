@@ -143,6 +143,9 @@ describe('Rate', () => {
       expect(wrapper.findComponent(ThumbDownIcon).exists()).toBeTruthy();
     });
 
+    // 文档将 icon 标注为 Array/Slot/Function，但组件源码未消费 slots 通道（rate.tsx 中无 context.slots 相关逻辑），插槽自定义图标暂无法实现
+    it.todo('icon[slot]');
+
     it('placement[top]', async () => {
       mockRect();
       // 未设置时默认 top
@@ -306,11 +309,6 @@ describe('Rate', () => {
       await icons[4].trigger('click', { pageX: 300 });
       expect(onChange).toHaveBeenCalledTimes(1);
     });
-  });
-
-  describe('slots', () => {
-    // 文档将 icon 标注为 Array/Slot/Function，但组件源码未消费 slots 通道（rate.tsx 中无 context.slots 相关逻辑），插槽自定义图标暂无法实现
-    it.todo('icon');
   });
 
   describe('scenarios', () => {

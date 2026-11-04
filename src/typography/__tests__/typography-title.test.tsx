@@ -28,6 +28,13 @@ describe('Typography Title', () => {
       expect(wrapper.text()).toBe(shortText);
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Title, {
+        slots: { content: () => shortText },
+      });
+      expect(wrapper.text()).toBe(shortText);
+    });
+
     it('default[string]', () => {
       const wrapper = mount(Title, {
         props: { default: shortText },
@@ -41,6 +48,14 @@ describe('Typography Title', () => {
         props: { default: () => shortText },
       });
       expect(wrapper.find('h1').exists()).toBe(true);
+      expect(wrapper.text()).toBe(shortText);
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Title, {
+        slots: { default: () => shortText },
+      });
+      expect(wrapper.find(`h1.${COMPONENT_NAME}`).exists()).toBe(true);
       expect(wrapper.text()).toBe(shortText);
     });
 
@@ -198,23 +213,6 @@ describe('Typography Title', () => {
 
       await wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
       expect(onExpand).toHaveBeenCalledWith(false);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Title, {
-        slots: { default: () => shortText },
-      });
-      expect(wrapper.find(`h1.${COMPONENT_NAME}`).exists()).toBe(true);
-      expect(wrapper.text()).toBe(shortText);
-    });
-
-    it('content', () => {
-      const wrapper = mount(Title, {
-        slots: { content: () => shortText },
-      });
-      expect(wrapper.text()).toBe(shortText);
     });
   });
 

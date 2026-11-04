@@ -52,6 +52,15 @@ describe('NoticeBar', () => {
       expect(wrapper.find('.t-notice-bar__content').text()).toBe('测试');
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(<NoticeBar visible />, {
+        slots: {
+          content: <div class="slot-content">测试</div>,
+        },
+      });
+      expect(wrapper.find('.t-notice-bar__content .slot-content').exists()).toBe(true);
+    });
+
     it('direction[horizontal/vertical]', async () => {
       // 默认 horizontal：不渲染竖向轮播
       const horizontal = mount(<NoticeBar visible content="测试" />);
@@ -139,6 +148,15 @@ describe('NoticeBar', () => {
       expect(wrapper.find('.t-notice-bar__operation').text()).toBe('测试');
     });
 
+    it('operation[slot]', () => {
+      const wrapper = mount(<NoticeBar visible />, {
+        slots: {
+          operation: <div class="slot-operation">测试</div>,
+        },
+      });
+      expect(wrapper.find('.t-notice-bar__operation .slot-operation').exists()).toBe(true);
+    });
+
     it('prefixIcon[boolean]', () => {
       // 默认 true：显示 theme(info) 对应图标
       const wrapper = mount(<NoticeBar visible content="测试" />);
@@ -154,6 +172,15 @@ describe('NoticeBar', () => {
       expect(wrapper.find('.t-notice-bar__prefix-icon .t-icon-app').exists()).toBe(true);
     });
 
+    it('prefixIcon[slot]', () => {
+      const wrapper = mount(<NoticeBar visible />, {
+        slots: {
+          prefixIcon: <div class="slot-prefix-icon">测试</div>,
+        },
+      });
+      expect(wrapper.find('.t-notice-bar__prefix-icon .slot-prefix-icon').exists()).toBe(true);
+    });
+
     it('suffixIcon[function]', () => {
       const wrapper = mount(<NoticeBar visible content="测试" suffixIcon={() => <TIconApp />} />);
       expect(wrapper.find('.t-notice-bar__suffix-icon .t-icon-app').exists()).toBe(true);
@@ -161,6 +188,15 @@ describe('NoticeBar', () => {
       // 默认不渲染后缀图标
       const wrapper2 = mount(<NoticeBar visible content="测试" />);
       expect(wrapper2.find('.t-notice-bar__suffix-icon').exists()).toBe(false);
+    });
+
+    it('suffixIcon[slot]', () => {
+      const wrapper = mount(<NoticeBar visible />, {
+        slots: {
+          suffixIcon: <div class="slot-suffix-icon">测试</div>,
+        },
+      });
+      expect(wrapper.find('.t-notice-bar__suffix-icon .slot-suffix-icon').exists()).toBe(true);
     });
 
     it('theme[info/success/warning/error]', () => {
@@ -258,44 +294,6 @@ describe('NoticeBar', () => {
       wrapper.findComponent(Swiper).vm.$emit('change', 1, { source: 'autoplay' });
       expect(fn).toHaveBeenCalledTimes(1);
       expect(fn).toHaveBeenCalledWith(1, { source: 'autoplay' });
-    });
-  });
-
-  describe('slots', () => {
-    it('content', () => {
-      const wrapper = mount(<NoticeBar visible />, {
-        slots: {
-          content: <div class="slot-content">测试</div>,
-        },
-      });
-      expect(wrapper.find('.t-notice-bar__content .slot-content').exists()).toBe(true);
-    });
-
-    it('operation', () => {
-      const wrapper = mount(<NoticeBar visible />, {
-        slots: {
-          operation: <div class="slot-operation">测试</div>,
-        },
-      });
-      expect(wrapper.find('.t-notice-bar__operation .slot-operation').exists()).toBe(true);
-    });
-
-    it('prefixIcon', () => {
-      const wrapper = mount(<NoticeBar visible />, {
-        slots: {
-          prefixIcon: <div class="slot-prefix-icon">测试</div>,
-        },
-      });
-      expect(wrapper.find('.t-notice-bar__prefix-icon .slot-prefix-icon').exists()).toBe(true);
-    });
-
-    it('suffixIcon', () => {
-      const wrapper = mount(<NoticeBar visible />, {
-        slots: {
-          suffixIcon: <div class="slot-suffix-icon">测试</div>,
-        },
-      });
-      expect(wrapper.find('.t-notice-bar__suffix-icon .slot-suffix-icon').exists()).toBe(true);
     });
   });
 

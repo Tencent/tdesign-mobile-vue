@@ -67,6 +67,13 @@ describe('Progress', () => {
       expect(wrapper.find('.t-progress__info').text()).toEqual('custom');
     });
 
+    it('label[slot]', () => {
+      const wrapper = mount(Progress, {
+        slots: { label: '25%' },
+      });
+      expect(wrapper.find('.t-progress__info').text()).toEqual('25%');
+    });
+
     it('percentage[number]', async () => {
       const wrapper = mount(Progress, {
         props: { percentage: 50 },
@@ -202,15 +209,6 @@ describe('Progress', () => {
         props: { theme: 'circle', percentage: 50, trackColor: 'orange' },
       });
       expect(getComputedStyle(circleWrapper.find('.t-progress__circle-outer').element).stroke).toEqual('orange');
-    });
-  });
-
-  describe('slots', () => {
-    it('label', () => {
-      const wrapper = mount(Progress, {
-        slots: { label: '25%' },
-      });
-      expect(wrapper.find('.t-progress__info').text()).toEqual('25%');
     });
   });
 

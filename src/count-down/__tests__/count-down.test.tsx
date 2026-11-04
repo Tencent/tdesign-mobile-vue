@@ -34,6 +34,17 @@ describe('CountDown', () => {
       expect(wrapper.text()).toContain('自定义结束内容');
     });
 
+    it('content[slot]', async () => {
+      const temp = <div>测试</div>;
+      const wrapper = mount(<CountDown time={1000}></CountDown>, {
+        slots: {
+          content: temp,
+        },
+      });
+      await sleep(1500);
+      expect(wrapper.text()).toContain('测试');
+    });
+
     it('format[string]', async () => {
       const wrapper = mount(<CountDown time={100000} format="mm:ss"></CountDown>);
       expect(wrapper.text()).not.toContain('00:01:40');
@@ -96,19 +107,6 @@ describe('CountDown', () => {
       const wrapper = mount(<CountDown time={1000} onFinish={onFinish}></CountDown>);
       await sleep(1500);
       expect(onFinish).toHaveBeenCalled();
-    });
-  });
-
-  describe('slots', () => {
-    it('content', async () => {
-      const temp = <div>测试</div>;
-      const wrapper = mount(<CountDown time={1000}></CountDown>, {
-        slots: {
-          content: temp,
-        },
-      });
-      await sleep(1500);
-      expect(wrapper.text()).toContain('测试');
     });
   });
 

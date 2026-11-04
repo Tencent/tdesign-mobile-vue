@@ -110,6 +110,22 @@ describe('FormItem', () => {
       expect(wrapper.findComponent(CheckCircleFilledIcon).exists()).toBeTruthy();
     });
 
+    it('help[slot]', () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form>
+              <FormItem label="label" name="name" v-slots={{ help: () => 'slot: help text ' }}>
+                <Input />
+              </FormItem>
+            </Form>
+          );
+        },
+      });
+
+      expect(wrapper.find(`.${name}__item-help`).text()).toBe('slot: help text');
+    });
+
     it('label[string]', () => {
       const wrapper = mount({
         setup() {
@@ -142,6 +158,11 @@ describe('FormItem', () => {
       expect(wrapper.find(`.${name}__label`).text()).toBe('函数标签');
     });
 
+    it('label[slot]', () => {
+      const wrapper = mountItem({}, { label: () => <span>插槽标签</span> });
+      expect(wrapper.get(`.${name}__label label`).text()).toBe('插槽标签');
+    });
+
     it('labelAlign[left/right/top]', () => {
       const labelAlignList: TdFormItemProps['labelAlign'][] = ['left', 'right', 'top'];
 
@@ -162,6 +183,7 @@ describe('FormItem', () => {
         }
       });
     });
+
     it('labelWidth[number]', async () => {
       const wrapper = mount({
         setup() {
@@ -275,33 +297,10 @@ describe('FormItem', () => {
       // FormItem.showErrorMessage = false 时校验失败也不渲染错误提示（优先级高于 Form.showErrorMessage）
       expect(wrapper.find(`.${name}__item-extra`).exists()).toBe(false);
     });
-  });
 
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mountItem({}, { default: () => <input class="slot-input" /> });
       expect(wrapper.get(`.${name}__controls-content .slot-input`).element.tagName).toBe('INPUT');
-    });
-
-    it('label', () => {
-      const wrapper = mountItem({}, { label: () => <span>插槽标签</span> });
-      expect(wrapper.get(`.${name}__label label`).text()).toBe('插槽标签');
-    });
-
-    it('help', () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Form>
-              <FormItem label="label" name="name" v-slots={{ help: () => 'slot: help text ' }}>
-                <Input />
-              </FormItem>
-            </Form>
-          );
-        },
-      });
-
-      expect(wrapper.find(`.${name}__item-help`).text()).toBe('slot: help text');
     });
   });
 

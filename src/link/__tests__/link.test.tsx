@@ -18,6 +18,11 @@ describe('Link', () => {
       expect(wrapper.get('.t-link__content .fn-content').text()).toBe('函数内容');
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Link, { slots: { content: () => <span class="slot-content">具名内容</span> } });
+      expect(wrapper.get('.t-link__content .slot-content').text()).toBe('具名内容');
+    });
+
     it('default[string]', () => {
       // default prop 与默认插槽同名，此处验证 prop 传入通道
       const wrapper = mount(Link, { props: { default: '默认内容' } });
@@ -27,6 +32,11 @@ describe('Link', () => {
     it('default[function]', () => {
       const wrapper = mount(Link, { props: { default: () => <span class="default-content">函数默认内容</span> } });
       expect(wrapper.get('.t-link__content .default-content').text()).toBe('函数默认内容');
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Link, { slots: { default: () => <span>插槽内容</span> } });
+      expect(wrapper.get('.t-link__content').text()).toBe('插槽内容');
     });
 
     it('disabled[boolean]', async () => {
@@ -77,6 +87,11 @@ describe('Link', () => {
       expect(wrapper.get('.t-link__prefix-icon').findComponent(Icon).exists()).toBe(true);
     });
 
+    it('prefixIcon[slot]', () => {
+      const wrapper = mount(Link, { slots: { prefixIcon: () => <Icon /> } });
+      expect(wrapper.get('.t-link__prefix-icon').findComponent(Icon).exists()).toBe(true);
+    });
+
     it('size[small/medium/large]', () => {
       (['small', 'medium', 'large'] as const).forEach((size) => {
         const wrapper = mount(Link, { props: { size }, slots: { default: () => '链接' } });
@@ -87,6 +102,11 @@ describe('Link', () => {
     it('suffixIcon[function]', () => {
       const wrapper = mount(Link, { props: { suffixIcon: () => <Icon /> } });
       expect(wrapper.get('.t-link__suffix-icon').findComponent(Icon).exists()).toBe(true);
+    });
+
+    it('suffixIcon[slot]', () => {
+      const wrapper = mount(Link, { slots: { suffixIcon: () => <TIconApp /> } });
+      expect(wrapper.get('.t-link__suffix-icon').findComponent(TIconApp).exists()).toBe(true);
     });
 
     it('target[string]', () => {
@@ -121,28 +141,6 @@ describe('Link', () => {
       expect(onClick).toHaveBeenCalledTimes(1);
       expect(onClick).toHaveBeenCalledWith(expect.any(MouseEvent));
       expect(wrapper.emitted('click')).toHaveLength(1);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Link, { slots: { default: () => <span>插槽内容</span> } });
-      expect(wrapper.get('.t-link__content').text()).toBe('插槽内容');
-    });
-
-    it('content', () => {
-      const wrapper = mount(Link, { slots: { content: () => <span class="slot-content">具名内容</span> } });
-      expect(wrapper.get('.t-link__content .slot-content').text()).toBe('具名内容');
-    });
-
-    it('prefixIcon', () => {
-      const wrapper = mount(Link, { slots: { prefixIcon: () => <Icon /> } });
-      expect(wrapper.get('.t-link__prefix-icon').findComponent(Icon).exists()).toBe(true);
-    });
-
-    it('suffixIcon', () => {
-      const wrapper = mount(Link, { slots: { suffixIcon: () => <TIconApp /> } });
-      expect(wrapper.get('.t-link__suffix-icon').findComponent(TIconApp).exists()).toBe(true);
     });
   });
 

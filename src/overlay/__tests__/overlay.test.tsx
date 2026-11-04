@@ -91,6 +91,16 @@ describe('Overlay', () => {
         Record<string, string>;
       expect(style['z-index']).toEqual('99');
     });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Overlay, {
+        props: { visible: true },
+        slots: {
+          default: 'my content',
+        },
+      });
+      expect(wrapper.find('.t-overlay').text()).toEqual('my content');
+    });
   });
 
   describe('events', () => {
@@ -138,18 +148,6 @@ describe('Overlay', () => {
       await waitFrame();
       expect(onClose).toHaveBeenCalledTimes(1);
       expect(onClosed).toHaveBeenCalledTimes(1);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Overlay, {
-        props: { visible: true },
-        slots: {
-          default: 'my content',
-        },
-      });
-      expect(wrapper.find('.t-overlay').text()).toEqual('my content');
     });
   });
 });

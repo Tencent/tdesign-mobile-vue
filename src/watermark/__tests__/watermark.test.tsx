@@ -113,6 +113,20 @@ describe('Watermark', () => {
       expect(wrapper.text()).toContain('函数默认内容');
     });
 
+    it('default[slot]', () => {
+      const wrapper = mount(() => (
+        <Watermark
+          {...geometry}
+          watermarkContent={[{ text: '水印文字' }]}
+          v-slots={{ default: () => <div class="covered">被覆盖内容</div> }}
+        />
+      ));
+      expect(wrapper.find('.covered').exists()).toBeTruthy();
+      expect(wrapper.text()).toContain('被覆盖内容');
+      // 水印层注入在插槽内容之上
+      expect(findWatermarkLayer(wrapper)).toBeTruthy();
+    });
+
     it('height[number]', () => {
       // 画布高度 = y + height，填充区域高度 = height
       mountWatermark({ y: 10, height: 60 });
@@ -266,22 +280,6 @@ describe('Watermark', () => {
     it('zIndex[number]', () => {
       const wrapper = mountWatermark({ zIndex: 100 });
       expect(findWatermarkLayer(wrapper)?.attributes('style')).toContain('z-index: 100');
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(() => (
-        <Watermark
-          {...geometry}
-          watermarkContent={[{ text: '水印文字' }]}
-          v-slots={{ default: () => <div class="covered">被覆盖内容</div> }}
-        />
-      ));
-      expect(wrapper.find('.covered').exists()).toBeTruthy();
-      expect(wrapper.text()).toContain('被覆盖内容');
-      // 水印层注入在插槽内容之上
-      expect(findWatermarkLayer(wrapper)).toBeTruthy();
     });
   });
 

@@ -58,6 +58,11 @@ describe('Button', () => {
       expect($button.text()).toBe('function content');
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Button, { slots: { content: () => <span>具名内容</span> } });
+      expect(wrapper.find(`.${name}__content`).text()).toBe('具名内容');
+    });
+
     it('disabled[boolean]', async () => {
       const onClick = vi.fn();
       const disabled = true;
@@ -143,6 +148,11 @@ describe('Button', () => {
       });
       const $button = wrapper.findComponent(Button);
       expect($button.findComponent(TIconApp).exists()).toBeTruthy();
+    });
+
+    it('icon[slot]', () => {
+      const wrapper = mount(Button, { slots: { icon: iconFunc } });
+      expect(wrapper.findComponent(TIconApp).exists()).toBe(true);
     });
 
     it('loading[boolean]', async () => {
@@ -240,6 +250,11 @@ describe('Button', () => {
       expect(wrapper.find('.btn-suffix').exists()).toBeTruthy();
     });
 
+    it('suffix[slot]', () => {
+      const wrapper = mount(Button, { slots: { suffix: () => <span class="slot-suffix">后缀</span> } });
+      expect(wrapper.find('.slot-suffix').text()).toBe('后缀');
+    });
+
     it('tag[button/a/div]', async () => {
       // 默认渲染为 button 标签
       const wrapper = mount(Button, {
@@ -329,6 +344,11 @@ describe('Button', () => {
         expect(variantWrapper.classes()).toContain(`${name}--${value}`);
       });
     });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Button, { slots: { default: () => <span>默认内容</span> } });
+      expect(wrapper.find(`.${name}__content`).text()).toBe('默认内容');
+    });
   });
 
   describe('events', () => {
@@ -340,28 +360,6 @@ describe('Button', () => {
 
       expect(onClick).toHaveBeenCalledTimes(1);
       expect(onClick).toHaveBeenCalledWith(expect.any(MouseEvent));
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Button, { slots: { default: () => <span>默认内容</span> } });
-      expect(wrapper.find(`.${name}__content`).text()).toBe('默认内容');
-    });
-
-    it('content', () => {
-      const wrapper = mount(Button, { slots: { content: () => <span>具名内容</span> } });
-      expect(wrapper.find(`.${name}__content`).text()).toBe('具名内容');
-    });
-
-    it('icon', () => {
-      const wrapper = mount(Button, { slots: { icon: iconFunc } });
-      expect(wrapper.findComponent(TIconApp).exists()).toBe(true);
-    });
-
-    it('suffix', () => {
-      const wrapper = mount(Button, { slots: { suffix: () => <span class="slot-suffix">后缀</span> } });
-      expect(wrapper.find('.slot-suffix').text()).toBe('后缀');
     });
   });
 

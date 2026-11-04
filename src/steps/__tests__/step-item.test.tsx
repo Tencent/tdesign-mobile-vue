@@ -25,6 +25,15 @@ describe('StepItem', () => {
       expect(wrapper.find('.t-step-item__description').text()).toEqual('函数描述');
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem title="标题">{{ content: () => <span class="slot-content">插槽描述</span> }}</StepItem>
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__description .slot-content').exists()).toBeTruthy();
+    });
+
     it('icon[function]', () => {
       const wrapper = mount(() => (
         <Steps>
@@ -38,6 +47,15 @@ describe('StepItem', () => {
 
     // 文档声明 icon 支持 boolean（值为 false 时不显示图标），源码中 false 会回退渲染内置图标，待源码实现后补充
     it.todo('icon[boolean]');
+    it('icon[slot]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem title="标题">{{ icon: () => <span class="slot-icon">插槽图标</span> }}</StepItem>
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__icon .slot-icon').exists()).toBeTruthy();
+      expect(wrapper.find('.t-step-item__circle').exists()).toBeFalsy();
+    });
 
     it('status[default/process/finish/error]', () => {
       const statusList: StepStatus[] = ['process', 'finish', 'error', 'default'];
@@ -79,6 +97,15 @@ describe('StepItem', () => {
       expect(wrapper.find('.t-step-item__title').text()).toEqual('函数标题');
     });
 
+    it('title[slot]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem content="内容">{{ title: () => <span class="slot-title">插槽标题</span> }}</StepItem>
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__title .slot-title').exists()).toBeTruthy();
+    });
+
     it('titleRight[string]', () => {
       const wrapper = mount(() => (
         <Steps layout="vertical">
@@ -97,38 +124,8 @@ describe('StepItem', () => {
       ));
       expect(wrapper.find('.t-step-item__title .title-right').exists()).toBeTruthy();
     });
-  });
 
-  describe('slots', () => {
-    it('content', () => {
-      const wrapper = mount(() => (
-        <Steps>
-          <StepItem title="标题">{{ content: () => <span class="slot-content">插槽描述</span> }}</StepItem>
-        </Steps>
-      ));
-      expect(wrapper.find('.t-step-item__description .slot-content').exists()).toBeTruthy();
-    });
-
-    it('icon', () => {
-      const wrapper = mount(() => (
-        <Steps>
-          <StepItem title="标题">{{ icon: () => <span class="slot-icon">插槽图标</span> }}</StepItem>
-        </Steps>
-      ));
-      expect(wrapper.find('.t-step-item__icon .slot-icon').exists()).toBeTruthy();
-      expect(wrapper.find('.t-step-item__circle').exists()).toBeFalsy();
-    });
-
-    it('title', () => {
-      const wrapper = mount(() => (
-        <Steps>
-          <StepItem content="内容">{{ title: () => <span class="slot-title">插槽标题</span> }}</StepItem>
-        </Steps>
-      ));
-      expect(wrapper.find('.t-step-item__title .slot-title').exists()).toBeTruthy();
-    });
-
-    it('titleRight', () => {
+    it('titleRight[slot]', () => {
       const wrapper = mount(() => (
         <Steps layout="vertical">
           <StepItem title="标题">{{ titleRight: () => <span class="slot-title-right">插槽右侧</span> }}</StepItem>
@@ -137,7 +134,7 @@ describe('StepItem', () => {
       expect(wrapper.find('.t-step-item__title .slot-title-right').exists()).toBeTruthy();
     });
 
-    it('extra', () => {
+    it('extra[slot]', () => {
       const wrapper = mount(() => (
         <Steps layout="vertical">
           <StepItem title="标题" content="内容">

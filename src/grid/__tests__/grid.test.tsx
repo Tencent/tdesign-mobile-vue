@@ -66,10 +66,8 @@ describe('Grid', () => {
         }
       });
     });
-  });
 
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mount(Grid, { slots: { default: () => [<GridItem text="一" />, <GridItem text="二" />] } });
       expect(wrapper.findAllComponents(GridItem)).toHaveLength(2);
       expect(wrapper.text()).toContain('一');

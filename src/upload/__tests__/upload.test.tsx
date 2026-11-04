@@ -183,6 +183,16 @@ describe('Upload', () => {
       expect(wrapper2.find('.t-upload__item--add').exists()).toBe(false);
     });
 
+    it('addBtn[slot]', () => {
+      const wrapper = mount(Upload, {
+        slots: {
+          addBtn: () => <span class="custom-add-btn">custom add</span>,
+        },
+      });
+      expect(wrapper.find('.t-upload__item--add .custom-add-btn').exists()).toBe(true);
+      expect(wrapper.findComponent(AddIcon).exists()).toBe(false);
+    });
+
     it('addContent[string]', () => {
       const wrapper = mount(Upload, {
         props: { addContent: '点击上传' },
@@ -195,6 +205,15 @@ describe('Upload', () => {
         props: { addContent: () => '自定义上传文案' },
       });
       expect(wrapper.find('.t-upload__item--add').text()).toContain('自定义上传文案');
+    });
+
+    it('addContent[slot]', () => {
+      const wrapper = mount(Upload, {
+        slots: {
+          addContent: () => <span class="custom-add-content">custom content</span>,
+        },
+      });
+      expect(wrapper.find('.t-upload__item--add .custom-add-content').exists()).toBe(true);
     });
 
     it('allowUploadDuplicateFile[boolean]', async () => {
@@ -1129,27 +1148,6 @@ describe('Upload', () => {
       // 上传过程中删除待上传文件
       await wrapper.findComponent(CloseIcon).trigger('click');
       expect(onWaitingUploadFilesChange).toHaveBeenCalledWith({ files: [], trigger: 'remove' });
-    });
-  });
-
-  describe('slots', () => {
-    it('addBtn', () => {
-      const wrapper = mount(Upload, {
-        slots: {
-          addBtn: () => <span class="custom-add-btn">custom add</span>,
-        },
-      });
-      expect(wrapper.find('.t-upload__item--add .custom-add-btn').exists()).toBe(true);
-      expect(wrapper.findComponent(AddIcon).exists()).toBe(false);
-    });
-
-    it('addContent', () => {
-      const wrapper = mount(Upload, {
-        slots: {
-          addContent: () => <span class="custom-add-content">custom content</span>,
-        },
-      });
-      expect(wrapper.find('.t-upload__item--add .custom-add-content').exists()).toBe(true);
     });
   });
 

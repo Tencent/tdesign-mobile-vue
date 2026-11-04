@@ -56,18 +56,8 @@ describe('CalendarTemplate', () => {
       const wrapper = mountTemplate({ title: <span class="custom-title">标题节点</span> });
       expect(wrapper.find('.custom-title').text()).toBe('标题节点');
     });
-  });
 
-  describe('events', () => {
-    it('visible-change', async () => {
-      const wrapper = mountTemplate();
-      await wrapper.find('.t-calendar__close-btn').trigger('click');
-      expect(wrapper.emitted('visible-change')).toEqual([[]]);
-    });
-  });
-
-  describe('slots', () => {
-    it('cell', () => {
+    it('cell[slot]', () => {
       const wrapper = mount(CalendarTemplate, {
         global: {
           provide: { templateProps: { minDate, maxDate, value: minDate, type: 'single', switchMode: 'none' } },
@@ -76,6 +66,14 @@ describe('CalendarTemplate', () => {
       });
       expect(wrapper.findAll('.custom-cell')).toHaveLength(31);
       expect(wrapper.find('.custom-cell').text()).toBe('日期1');
+    });
+  });
+
+  describe('events', () => {
+    it('visible-change', async () => {
+      const wrapper = mountTemplate();
+      await wrapper.find('.t-calendar__close-btn').trigger('click');
+      expect(wrapper.emitted('visible-change')).toEqual([[]]);
     });
   });
 

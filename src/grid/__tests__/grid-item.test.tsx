@@ -55,6 +55,13 @@ describe('GridItem', () => {
       expect(wrapper.get(`.${name}-item__description`).text()).toBe('函数描述');
     });
 
+    it('description[slot]', () => {
+      const wrapper = mount(Grid, {
+        slots: { default: () => <GridItem v-slots={{ description: () => <i>描述插槽</i> }} /> },
+      });
+      expect(wrapper.get(`.${name}-item__description i`).text()).toBe('描述插槽');
+    });
+
     it('icon[function]', () => {
       const wrapper = mount(() => (
         <Grid>
@@ -65,6 +72,9 @@ describe('GridItem', () => {
       expect(wrapper.find(`.${name}-item__image .custom-grid-icon`).exists()).toBe(true);
       expect(wrapper.find(`.${name}-item__image img`).exists()).toBe(false);
     });
+
+    // renderImage 先检查 props.icon；未传 icon Prop 时不调用 renderTNodeJSX('icon')，插槽路径不可达。
+    it.todo('icon[slot]');
 
     it('image[string]', () => {
       const wrapper = mount(() => (
@@ -91,6 +101,13 @@ describe('GridItem', () => {
         </Grid>
       ));
       expect(wrapper.get(`.${name}-item__image .custom-image`).text()).toBe('图片节点');
+    });
+
+    it('image[slot]', () => {
+      const wrapper = mount(Grid, {
+        slots: { default: () => <GridItem v-slots={{ image: () => <b>图片插槽</b> }} /> },
+      });
+      expect(wrapper.get(`.${name}-item__image b`).text()).toBe('图片插槽');
     });
 
     it('layout[vertical/horizontal]', () => {
@@ -126,6 +143,11 @@ describe('GridItem', () => {
       ));
       expect(wrapper.get(`.${name}-item__title`).text()).toBe('函数标题');
     });
+
+    it('text[slot]', () => {
+      const wrapper = mount(Grid, { slots: { default: () => <GridItem v-slots={{ text: () => <b>标题插槽</b> }} /> } });
+      expect(wrapper.get(`.${name}-item__title b`).text()).toBe('标题插槽');
+    });
   });
 
   describe('events', () => {
@@ -135,30 +157,6 @@ describe('GridItem', () => {
       await wrapper.get(`.${name}-item`).trigger('click');
       expect(onClick).toHaveBeenCalledWith(expect.any(MouseEvent));
       expect(wrapper.findComponent(GridItem).emitted('click')).toEqual([[expect.any(MouseEvent)]]);
-    });
-  });
-
-  describe('slots', () => {
-    it('text', () => {
-      const wrapper = mount(Grid, { slots: { default: () => <GridItem v-slots={{ text: () => <b>标题插槽</b> }} /> } });
-      expect(wrapper.get(`.${name}-item__title b`).text()).toBe('标题插槽');
-    });
-
-    it('description', () => {
-      const wrapper = mount(Grid, {
-        slots: { default: () => <GridItem v-slots={{ description: () => <i>描述插槽</i> }} /> },
-      });
-      expect(wrapper.get(`.${name}-item__description i`).text()).toBe('描述插槽');
-    });
-
-    // renderImage 先检查 props.icon；未传 icon Prop 时不调用 renderTNodeJSX('icon')，插槽路径不可达。
-    it.todo('icon');
-
-    it('image', () => {
-      const wrapper = mount(Grid, {
-        slots: { default: () => <GridItem v-slots={{ image: () => <b>图片插槽</b> }} /> },
-      });
-      expect(wrapper.get(`.${name}-item__image b`).text()).toBe('图片插槽');
     });
   });
 

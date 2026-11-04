@@ -46,6 +46,13 @@ describe('Ellipsis', () => {
 
     // 源码未实现：ellipsis.tsx 仅读取 content 属性与 default 插槽，未读取 default 属性（未传 content 与插槽时甚至会因缺少插槽而抛错）
     it.todo('default[function]');
+    it('default[slot]', () => {
+      const wrapper = mount(Ellipsis, {
+        props: { ellipsis: true },
+        slots: { default: () => longText },
+      });
+      expect(wrapper.find('p').text()).toBe(longText);
+    });
 
     it('ellipsis[boolean]', () => {
       const ellipsisWrapper = mount(Ellipsis, {
@@ -203,16 +210,6 @@ describe('Ellipsis', () => {
       await nextTick();
       await wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
       expect(onExpand).toHaveBeenCalledWith(false);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Ellipsis, {
-        props: { ellipsis: true },
-        slots: { default: () => longText },
-      });
-      expect(wrapper.find('p').text()).toBe(longText);
     });
   });
 

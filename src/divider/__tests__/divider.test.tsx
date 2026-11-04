@@ -39,6 +39,11 @@ describe('Divider', () => {
       expect(wrapper.get(`.${name}__content .content-node`).text()).toBe(TEXT);
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Divider, { slots: { content: () => <span>{TEXT}</span> } });
+      expect(wrapper.get(`.${name}__content span`).text()).toBe(TEXT);
+    });
+
     it('dashed[boolean]', async () => {
       const wrapper = mount(Divider);
       expect(wrapper.classes()).not.toContain(`${name}--dashed`);
@@ -60,6 +65,11 @@ describe('Divider', () => {
       expect(wrapper.get(`.${name}__content .default-node`).text()).toBe(TEXT);
     });
 
+    it('default[slot]', () => {
+      const wrapper = mount(Divider, { slots: { default: () => <span>{TEXT}</span> } });
+      expect(wrapper.get(`.${name}__content span`).text()).toBe(TEXT);
+    });
+
     it('layout[horizontal/vertical]', async () => {
       const wrapper = mount(Divider);
       expect(wrapper.classes()).toContain(`${name}--horizontal`);
@@ -70,18 +80,6 @@ describe('Divider', () => {
       await wrapper.setProps({ layout: 'horizontal' });
       expect(wrapper.classes()).toContain(`${name}--horizontal`);
       expect(wrapper.classes()).not.toContain(`${name}--vertical`);
-    });
-  });
-
-  describe('slots', () => {
-    it('content', () => {
-      const wrapper = mount(Divider, { slots: { content: () => <span>{TEXT}</span> } });
-      expect(wrapper.get(`.${name}__content span`).text()).toBe(TEXT);
-    });
-
-    it('default', () => {
-      const wrapper = mount(Divider, { slots: { default: () => <span>{TEXT}</span> } });
-      expect(wrapper.get(`.${name}__content span`).text()).toBe(TEXT);
     });
   });
 

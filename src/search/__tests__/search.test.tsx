@@ -37,6 +37,17 @@ describe('Search', () => {
       expect($action.find('.custom-action').text()).toBe('取消');
     });
 
+    it('action[slot]', () => {
+      const wrapper = mount(Search, {
+        slots: {
+          action: () => <span class="slot-action">插槽操作</span>,
+        },
+      });
+      const $action = wrapper.find(`.${name}__search-action`);
+      expect($action.exists()).toBeTruthy();
+      expect($action.find('.slot-action').text()).toBe('插槽操作');
+    });
+
     // autocompleteOptions 在 props.ts 声明但组件源码未消费该属性，联想词渲染逻辑未实现
     it.todo('autocompleteOptions[array]');
 
@@ -150,6 +161,15 @@ describe('Search', () => {
         },
       });
       expect(wrapper.find(`.${name}__input-box .custom-left-icon`).text()).toBe('函数左侧图标');
+    });
+
+    it('leftIcon[slot]', () => {
+      const wrapper = mount(Search, {
+        slots: {
+          leftIcon: () => <span class="slot-left-icon">插槽图标</span>,
+        },
+      });
+      expect(wrapper.find(`.${name}__input-box .slot-left-icon`).text()).toBe('插槽图标');
     });
 
     it('maxcharacter[number]', async () => {
@@ -423,28 +443,6 @@ describe('Search', () => {
       });
       await wrapper.find('input').trigger('compositionend');
       expect(onCompositionend).toBeCalled();
-    });
-  });
-
-  describe('slots', () => {
-    it('action', () => {
-      const wrapper = mount(Search, {
-        slots: {
-          action: () => <span class="slot-action">插槽操作</span>,
-        },
-      });
-      const $action = wrapper.find(`.${name}__search-action`);
-      expect($action.exists()).toBeTruthy();
-      expect($action.find('.slot-action').text()).toBe('插槽操作');
-    });
-
-    it('leftIcon', () => {
-      const wrapper = mount(Search, {
-        slots: {
-          leftIcon: () => <span class="slot-left-icon">插槽图标</span>,
-        },
-      });
-      expect(wrapper.find(`.${name}__input-box .slot-left-icon`).text()).toBe('插槽图标');
     });
   });
 

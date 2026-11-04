@@ -44,6 +44,17 @@ describe('BackTop', () => {
       expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
     });
 
+    it('icon[slot]', () => {
+      const icon = () => <TIconApp />;
+
+      const wrapper = mount(BackTop, {
+        slots: {
+          icon,
+        },
+      });
+      expect(wrapper.find('.t-back-top > svg').classes()).toContain('t-icon');
+    });
+
     it('target[function]', async () => {
       const container = document.createElement('div');
       const target = document.createElement('div');
@@ -121,19 +132,6 @@ describe('BackTop', () => {
       expect(container.scrollTop).toBe(0);
       expect(onToTop).toHaveBeenCalledTimes(1);
       wrapper.unmount();
-    });
-  });
-
-  describe('slots', () => {
-    it('icon', () => {
-      const icon = () => <TIconApp />;
-
-      const wrapper = mount(BackTop, {
-        slots: {
-          icon,
-        },
-      });
-      expect(wrapper.find('.t-back-top > svg').classes()).toContain('t-icon');
     });
   });
 });

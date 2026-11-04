@@ -37,10 +37,8 @@ describe('Col', () => {
       expect(classes).toContain(`${colName}--4`);
       expect(classes).not.toContain(`${colName}--2`);
     });
-  });
 
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mount(Row, { slots: { default: () => <Col span="2">{TEXT}</Col> } });
       expect(wrapper.findComponent(Col).text()).toBe(TEXT);
     });

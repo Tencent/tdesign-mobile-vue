@@ -328,6 +328,28 @@ describe('Swiper', () => {
       expect(getActiveDotIndex(wrapper)).toBe(1);
     });
 
+    it('navigation[slot]', async () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Swiper navigation={null} autoplay={false}>
+              {{
+                default: () =>
+                  images.map((image) => (
+                    <SwiperItem key={image}>
+                      <img src={image} />
+                    </SwiperItem>
+                  )),
+                navigation: () => <div class="custom-navigation">navigation</div>,
+              }}
+            </Swiper>
+          );
+        },
+      });
+      await flush();
+      expect(wrapper.find('.custom-navigation').text()).toBe('navigation');
+    });
+
     // nextMargin 标注【开发中】，组件源码未消费该属性，无差异可断言
     it.todo('nextMargin[number]');
     it.todo('nextMargin[string]');
@@ -349,6 +371,14 @@ describe('Swiper', () => {
       await flush();
       await swipeBy(getContainer(enabled), 200, 50);
       expect(onChangeEnabled).toHaveBeenCalledWith(1, { source: 'touch' });
+    });
+
+    it('default[slot]', async () => {
+      const wrapper = mountSwiper();
+      await flush();
+      const $items = wrapper.findAll(`.${classPrefix}-item`);
+      expect($items).toHaveLength(images.length);
+      expect($items[0].find('img').attributes('src')).toBe(images[0]);
     });
   });
 
@@ -399,38 +429,6 @@ describe('Swiper', () => {
       // transitionend 后复位位移并结束过渡
       expect($container.attributes('style')).toContain('transition: none');
       expect($container.attributes('style')).toContain('transform: translateX(0');
-    });
-  });
-
-  describe('slots', () => {
-    it('default', async () => {
-      const wrapper = mountSwiper();
-      await flush();
-      const $items = wrapper.findAll(`.${classPrefix}-item`);
-      expect($items).toHaveLength(images.length);
-      expect($items[0].find('img').attributes('src')).toBe(images[0]);
-    });
-
-    it('navigation', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Swiper navigation={null} autoplay={false}>
-              {{
-                default: () =>
-                  images.map((image) => (
-                    <SwiperItem key={image}>
-                      <img src={image} />
-                    </SwiperItem>
-                  )),
-                navigation: () => <div class="custom-navigation">navigation</div>,
-              }}
-            </Swiper>
-          );
-        },
-      });
-      await flush();
-      expect(wrapper.find('.custom-navigation').text()).toBe('navigation');
     });
   });
 

@@ -47,6 +47,11 @@ describe('List', () => {
       expect(wrapper.findComponent(TLoading).exists()).toBe(false);
     });
 
+    it('asyncLoading[slot]', () => {
+      const wrapper = mount(List, { slots: { asyncLoading: () => <span class="slot-loading">插槽加载</span> } });
+      expect(wrapper.get(`.${prefix}-list__loading--wrapper .slot-loading`).text()).toBe('插槽加载');
+    });
+
     it('footer[string]', () => {
       const wrapper = mount(List, { props: { footer: 'this is a footer content' } });
       expect(wrapper.text()).toEqual('this is a footer content');
@@ -57,6 +62,11 @@ describe('List', () => {
       expect(wrapper.get('.fn-footer').text()).toEqual('底部内容');
     });
 
+    it('footer[slot]', () => {
+      const wrapper = mount(List, { slots: { footer: () => <span class="slot-footer">插槽底部</span> } });
+      expect(wrapper.get('.slot-footer').text()).toBe('插槽底部');
+    });
+
     it('header[string]', () => {
       const wrapper = mount(List, { props: { header: 'this is a header content' } });
       expect(wrapper.text()).toEqual('this is a header content');
@@ -65,6 +75,19 @@ describe('List', () => {
     it('header[function]', () => {
       const wrapper = mount(List, { props: { header: () => <span class="fn-header">头部内容</span> } });
       expect(wrapper.get('.fn-header').text()).toEqual('头部内容');
+    });
+
+    it('header[slot]', () => {
+      const wrapper = mount(List, { slots: { header: () => <span class="slot-header">插槽头部</span> } });
+      expect(wrapper.get('.slot-header').text()).toBe('插槽头部');
+    });
+
+    it('default[slot]', () => {
+      const LIST_COUNT = 10;
+      const wrapper = mount(List, {
+        slots: { default: Array.from({ length: LIST_COUNT }, (_, index) => <TCell key={index}>{index}</TCell>) },
+      });
+      expect(wrapper.findAllComponents(TCell).length).toEqual(LIST_COUNT);
     });
   });
 
@@ -99,31 +122,6 @@ describe('List', () => {
       const [bottomDistance, scrollTop] = onScroll.mock.calls[0];
       expect(typeof bottomDistance).toBe('number');
       expect(typeof scrollTop).toBe('number');
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const LIST_COUNT = 10;
-      const wrapper = mount(List, {
-        slots: { default: Array.from({ length: LIST_COUNT }, (_, index) => <TCell key={index}>{index}</TCell>) },
-      });
-      expect(wrapper.findAllComponents(TCell).length).toEqual(LIST_COUNT);
-    });
-
-    it('header', () => {
-      const wrapper = mount(List, { slots: { header: () => <span class="slot-header">插槽头部</span> } });
-      expect(wrapper.get('.slot-header').text()).toBe('插槽头部');
-    });
-
-    it('footer', () => {
-      const wrapper = mount(List, { slots: { footer: () => <span class="slot-footer">插槽底部</span> } });
-      expect(wrapper.get('.slot-footer').text()).toBe('插槽底部');
-    });
-
-    it('asyncLoading', () => {
-      const wrapper = mount(List, { slots: { asyncLoading: () => <span class="slot-loading">插槽加载</span> } });
-      expect(wrapper.get(`.${prefix}-list__loading--wrapper .slot-loading`).text()).toBe('插槽加载');
     });
   });
 

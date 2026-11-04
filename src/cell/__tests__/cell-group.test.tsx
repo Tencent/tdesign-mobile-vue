@@ -34,17 +34,15 @@ describe('CellGroup', () => {
       const wrapper2 = mount(() => <CellGroup></CellGroup>);
       expect(wrapper2.find('.t-cell-group__title').exists()).toBe(false);
     });
-  });
 
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(CellGroup, { slots: { default: () => <Cell title="组内单元格" /> } });
-      expect(wrapper.find('.t-cell-group').findComponent(Cell).text()).toBe('组内单元格');
-    });
-
-    it('title', () => {
+    it('title[slot]', () => {
       const wrapper = mount(CellGroup, { slots: { title: () => <span>插槽标题</span> } });
       expect(wrapper.find('.t-cell-group__title').text()).toBe('插槽标题');
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(CellGroup, { slots: { default: () => <Cell title="组内单元格" /> } });
+      expect(wrapper.find('.t-cell-group').findComponent(Cell).text()).toBe('组内单元格');
     });
   });
 

@@ -343,6 +343,12 @@ describe('Form', () => {
 
     // submitWithWarningMessage 组件未消费该属性（提交恒触发 onSubmit，不区分警告态，API 标注【讨论中】），无行为差异可断言
     it.todo('submitWithWarningMessage[boolean]');
+
+    it('default[slot]', () => {
+      const wrapper = mount(Form, { slots: { default: () => <FormItem label="插槽表单项" /> } });
+      expect(wrapper.element.tagName).toBe('FORM');
+      expect(wrapper.findComponent(FormItem).text()).toContain('插槽表单项');
+    });
   });
   describe('events', () => {
     it('submit', async () => {
@@ -435,14 +441,6 @@ describe('Form', () => {
       expect(onValidate).toHaveBeenCalledTimes(1);
       expect(onValidate).toHaveBeenCalledWith({ validateResult: result });
       expect(result).toMatchObject({ name: [{ result: false, message: '姓名必填' }] });
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Form, { slots: { default: () => <FormItem label="插槽表单项" /> } });
-      expect(wrapper.element.tagName).toBe('FORM');
-      expect(wrapper.findComponent(FormItem).text()).toContain('插槽表单项');
     });
   });
 

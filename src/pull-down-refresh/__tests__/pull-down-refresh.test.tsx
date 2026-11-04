@@ -283,6 +283,30 @@ describe('PullDownRefresh', () => {
       loadingWrapper.unmount();
       idleWrapper.unmount();
     });
+
+    it('default[slot]', () => {
+      const wrapper = mount(PullDownRefresh, {
+        slots: { default: () => <div class="slot-default">列表内容</div> },
+      });
+      const slot = wrapper.find('.slot-default');
+      expect(slot.exists()).toBe(true);
+      expect(slot.text()).toBe('列表内容');
+      // 插槽内容渲染在 track 内部
+      expect(wrapper.find(TRACK).find('.slot-default').exists()).toBe(true);
+
+      wrapper.unmount();
+    });
+
+    it('content[slot]', () => {
+      const wrapper = mount(PullDownRefresh, {
+        slots: { content: () => <div class="slot-content">内容插槽</div> },
+      });
+      const slot = wrapper.find('.slot-content');
+      expect(slot.exists()).toBe(true);
+      expect(slot.text()).toBe('内容插槽');
+
+      wrapper.unmount();
+    });
   });
 
   describe('events', () => {
@@ -390,32 +414,6 @@ describe('PullDownRefresh', () => {
       } finally {
         vi.useRealTimers();
       }
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(PullDownRefresh, {
-        slots: { default: () => <div class="slot-default">列表内容</div> },
-      });
-      const slot = wrapper.find('.slot-default');
-      expect(slot.exists()).toBe(true);
-      expect(slot.text()).toBe('列表内容');
-      // 插槽内容渲染在 track 内部
-      expect(wrapper.find(TRACK).find('.slot-default').exists()).toBe(true);
-
-      wrapper.unmount();
-    });
-
-    it('content', () => {
-      const wrapper = mount(PullDownRefresh, {
-        slots: { content: () => <div class="slot-content">内容插槽</div> },
-      });
-      const slot = wrapper.find('.slot-content');
-      expect(slot.exists()).toBe(true);
-      expect(slot.text()).toBe('内容插槽');
-
-      wrapper.unmount();
     });
   });
 

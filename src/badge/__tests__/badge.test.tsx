@@ -33,6 +33,27 @@ describe('Badge', () => {
       expect(wrapper.find(`.${name}__content-text`).text()).toEqual(TEXT);
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Badge, {
+        slots: {
+          content: '插槽徽标内容',
+        },
+      });
+
+      expect(wrapper.find(`.${name}__content`).text()).toBe('插槽徽标内容');
+    });
+
+    it('default[slot] & content[slot]', () => {
+      const wrapper = mount(Badge, {
+        slots: {
+          default: '默认插槽内容',
+          content: '具名插槽内容',
+        },
+      });
+
+      expect(wrapper.find(`.${name}__content`).text()).toBe('默认插槽内容');
+    });
+
     it('count[number]', () => {
       const wrapper = mount(() => (
         <Badge count={5}>
@@ -146,10 +167,8 @@ describe('Badge', () => {
         expect(wrapper.find(`.${name}--basic`).classes()).toContain(`${name}--${size}`);
       });
     });
-  });
 
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mount(Badge, {
         slots: {
           default: '默认内容',
@@ -157,27 +176,6 @@ describe('Badge', () => {
       });
 
       expect(wrapper.find(`.${name}__content`).text()).toBe('默认内容');
-    });
-
-    it('content', () => {
-      const wrapper = mount(Badge, {
-        slots: {
-          content: '插槽徽标内容',
-        },
-      });
-
-      expect(wrapper.find(`.${name}__content`).text()).toBe('插槽徽标内容');
-    });
-
-    it('default & content', () => {
-      const wrapper = mount(Badge, {
-        slots: {
-          default: '默认插槽内容',
-          content: '具名插槽内容',
-        },
-      });
-
-      expect(wrapper.find(`.${name}__content`).text()).toBe('默认插槽内容');
     });
   });
 });

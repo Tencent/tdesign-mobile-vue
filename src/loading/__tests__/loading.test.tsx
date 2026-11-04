@@ -61,6 +61,11 @@ describe('Loading', () => {
       expect(wrapper.get('.fn-default').text()).toBe('函数默认子元素');
     });
 
+    it('default[slot]', () => {
+      const wrapper = mount(Loading, { slots: { default: () => <span class="slot-content">插槽子元素</span> } });
+      expect(wrapper.get('.slot-content').text()).toBe('插槽子元素');
+    });
+
     it('delay[number]', async () => {
       vi.useFakeTimers();
       try {
@@ -120,6 +125,12 @@ describe('Loading', () => {
     it('indicator[function]', () => {
       const wrapper = mount(Loading, { props: { indicator: () => <span class="custom-indicator">指示符</span> } });
       expect(wrapper.get('.custom-indicator').text()).toBe('指示符');
+      expect(wrapper.find('.t-loading__gradient').exists()).toBe(false);
+    });
+
+    it('indicator[slot]', () => {
+      const wrapper = mount(Loading, { slots: { indicator: () => <span class="slot-indicator">插槽指示符</span> } });
+      expect(wrapper.get('.slot-indicator').text()).toBe('插槽指示符');
       expect(wrapper.find('.t-loading__gradient').exists()).toBe(false);
     });
 
@@ -183,6 +194,11 @@ describe('Loading', () => {
       expect(wrapper.get('.t-loading__text .fn-text').text()).toBe('函数文案');
     });
 
+    it('text[slot]', () => {
+      const wrapper = mount(Loading, { slots: { text: () => <span class="slot-text">插槽文案</span> } });
+      expect(wrapper.get('.t-loading__text .slot-text').text()).toBe('插槽文案');
+    });
+
     it('theme[circular/spinner/dots]', () => {
       const circular = mount(Loading, { props: { theme: 'circular' } });
       expect(circular.find('.t-loading__gradient').exists()).toBe(true);
@@ -194,24 +210,6 @@ describe('Loading', () => {
       const dots = mount(Loading, { props: { theme: 'dots' } });
       expect(dots.findAll('.t-loading__dot')).toHaveLength(3);
       expect(dots.find('.t-loading__gradient').exists()).toBe(false);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Loading, { slots: { default: () => <span class="slot-content">插槽子元素</span> } });
-      expect(wrapper.get('.slot-content').text()).toBe('插槽子元素');
-    });
-
-    it('text', () => {
-      const wrapper = mount(Loading, { slots: { text: () => <span class="slot-text">插槽文案</span> } });
-      expect(wrapper.get('.t-loading__text .slot-text').text()).toBe('插槽文案');
-    });
-
-    it('indicator', () => {
-      const wrapper = mount(Loading, { slots: { indicator: () => <span class="slot-indicator">插槽指示符</span> } });
-      expect(wrapper.get('.slot-indicator').text()).toBe('插槽指示符');
-      expect(wrapper.find('.t-loading__gradient').exists()).toBe(false);
     });
   });
 

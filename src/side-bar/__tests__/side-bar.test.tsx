@@ -156,6 +156,22 @@ describe('SideBar', () => {
       expect($items[1].classes()).toContain(`${itemName}--active`);
       expect($items[0].classes()).not.toContain(`${itemName}--active`);
     });
+
+    it('default[slot]', () => {
+      const wrapper = mount(
+        <SideBar>
+          <SideBarItem value={0} label="选项一" />
+          <SideBarItem value={1} label="选项二" />
+          <div class="custom-content">自定义内容</div>
+        </SideBar>,
+      );
+
+      // 默认插槽内容渲染在侧边栏内
+      expect(wrapper.findAll(`.${itemName}`)).toHaveLength(2);
+      expect(wrapper.find('.custom-content').text()).toBe('自定义内容');
+      // 渲染插槽后底部占位节点仍存在
+      expect(wrapper.find(`.${name}__padding`).exists()).toBe(true);
+    });
   });
 
   describe('events', () => {
@@ -234,24 +250,6 @@ describe('SideBar', () => {
       // modelValue 通道不抛出 update:value
       expect(wrapper.findComponent(SideBar).emitted('update:value')).toBeUndefined();
       expect(value.value).toBe(1);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(
-        <SideBar>
-          <SideBarItem value={0} label="选项一" />
-          <SideBarItem value={1} label="选项二" />
-          <div class="custom-content">自定义内容</div>
-        </SideBar>,
-      );
-
-      // 默认插槽内容渲染在侧边栏内
-      expect(wrapper.findAll(`.${itemName}`)).toHaveLength(2);
-      expect(wrapper.find('.custom-content').text()).toBe('自定义内容');
-      // 渲染插槽后底部占位节点仍存在
-      expect(wrapper.find(`.${name}__padding`).exists()).toBe(true);
     });
   });
 

@@ -28,6 +28,13 @@ describe('Typography Paragraph', () => {
 
     // 源码未实现：paragraph.tsx 仅读取 content 属性与 default 插槽，未读取 default 属性（传入后内容不渲染）
     it.todo('default[function]');
+    it('default[slot]', () => {
+      const wrapper = mount(Paragraph, {
+        slots: { default: () => shortText },
+      });
+      expect(wrapper.find(`p.${COMPONENT_NAME}`).exists()).toBe(true);
+      expect(wrapper.text()).toBe(shortText);
+    });
 
     it('ellipsis[boolean]', () => {
       const wrapper = mount(Paragraph, {
@@ -122,16 +129,6 @@ describe('Typography Paragraph', () => {
 
       await wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
       expect(onExpand).toHaveBeenCalledWith(false);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Paragraph, {
-        slots: { default: () => shortText },
-      });
-      expect(wrapper.find(`p.${COMPONENT_NAME}`).exists()).toBe(true);
-      expect(wrapper.text()).toBe(shortText);
     });
   });
 

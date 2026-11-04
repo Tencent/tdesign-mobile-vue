@@ -83,6 +83,15 @@ describe('Calendar', () => {
 
     // useTNodeJSX 将 null 转为 undefined，模板随后使用默认空字符串并渲染确认按钮。
     it.todo('confirmBtn[null]');
+    it('confirmBtn[slot]', async () => {
+      const wrapper = mount(<Calendar visible={true} value={value} />, {
+        slots: {
+          confirmBtn,
+        },
+      });
+      const $confirmBtn = wrapper.find(`.${name}__footer`);
+      expect($confirmBtn.text()).toEqual(confirmBtn);
+    });
 
     it('firstDayOfWeek[number]', async () => {
       const firstDayOfWeek = 1;
@@ -225,6 +234,14 @@ describe('Calendar', () => {
       const wrapper = mount(<Calendar title={() => '自定义标题'} />);
       const $title = wrapper.find(`.${name}__title`);
       expect($title.text()).toEqual('自定义标题');
+    });
+
+    it('title[slot]', () => {
+      const wrapper = mount(Calendar, {
+        props: { usePopup: false, minDate, maxDate },
+        slots: { title: () => <span class="slot-title">插槽标题</span> },
+      });
+      expect(wrapper.find(`.${name}__title .slot-title`).text()).toBe('插槽标题');
     });
 
     it('type[single]', async () => {
@@ -418,26 +435,6 @@ describe('Calendar', () => {
       await $button.trigger('click');
       expect(onConfirm).toHaveBeenCalledTimes(1);
       expect(selectTime).toEqual(time);
-    });
-  });
-
-  describe('slots', () => {
-    it('confirmBtn', async () => {
-      const wrapper = mount(<Calendar visible={true} value={value} />, {
-        slots: {
-          confirmBtn,
-        },
-      });
-      const $confirmBtn = wrapper.find(`.${name}__footer`);
-      expect($confirmBtn.text()).toEqual(confirmBtn);
-    });
-
-    it('title', () => {
-      const wrapper = mount(Calendar, {
-        props: { usePopup: false, minDate, maxDate },
-        slots: { title: () => <span class="slot-title">插槽标题</span> },
-      });
-      expect(wrapper.find(`.${name}__title .slot-title`).text()).toBe('插槽标题');
     });
   });
 

@@ -55,6 +55,19 @@ describe('TabBarItem', () => {
 
     // 源码未支持：iconContent 对渲染结果调用 forEach，传入返回单个 VNode 的渲染函数会抛出 "iconSlot?.forEach is not a function"
     it.todo('icon[function] returning a single VNode node');
+    it('icon[slot]', () => {
+      const wrapper = mountItem(
+        {},
+        { icon: () => <div class="slot-icon">icon</div>, default: () => '标签一' },
+        { value: '1' },
+      );
+      expect(wrapper.find('.t-tab-bar-item__icon .slot-icon').exists()).toBeTruthy();
+      expect(wrapper.find('.t-tab-bar-item__text--small').exists()).toBeTruthy();
+      // 未传 icon：不渲染图标容器，文本不使用小号样式
+      const plain = mountItem({}, { default: () => '标签一' }, { value: '1' });
+      expect(plain.find('.t-tab-bar-item__icon').exists()).toBeFalsy();
+      expect(plain.find('.t-tab-bar-item__text--small').exists()).toBeFalsy();
+    });
 
     it('subTabBar[array]', () => {
       // 配置二级菜单：渲染菜单图标，内容区角色为 button 且默认收起
@@ -78,24 +91,8 @@ describe('TabBarItem', () => {
     it('value[number]', () => {
       expect(checkedTexts(mountTabBar({ value: 2 }, numericBarItems))).toEqual(['标签二']);
     });
-  });
 
-  describe('slots', () => {
-    it('icon', () => {
-      const wrapper = mountItem(
-        {},
-        { icon: () => <div class="slot-icon">icon</div>, default: () => '标签一' },
-        { value: '1' },
-      );
-      expect(wrapper.find('.t-tab-bar-item__icon .slot-icon').exists()).toBeTruthy();
-      expect(wrapper.find('.t-tab-bar-item__text--small').exists()).toBeTruthy();
-      // 未传 icon：不渲染图标容器，文本不使用小号样式
-      const plain = mountItem({}, { default: () => '标签一' }, { value: '1' });
-      expect(plain.find('.t-tab-bar-item__icon').exists()).toBeFalsy();
-      expect(plain.find('.t-tab-bar-item__text--small').exists()).toBeFalsy();
-    });
-
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mountItem({}, { default: () => '标签一' }, { value: '1' });
       expect(wrapper.find('.t-tab-bar-item__text').text()).toContain('标签一');
     });

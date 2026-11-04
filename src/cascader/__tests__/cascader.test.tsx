@@ -214,9 +214,27 @@ describe('Cascader', () => {
       expect(wrapper.find('.custom-close').text()).toBe('关闭');
     });
 
+    it('closeBtn[slot]', () => {
+      const closeBtn = '关闭';
+      const wrapper = mount(<Cascader options={options} />, {
+        slots: {
+          closeBtn,
+        },
+      });
+      const $closeBtn = wrapper.find(`.${name}__close-btn`);
+      expect($closeBtn.text()).toBe(closeBtn);
+    });
+
     it('header[function]', async () => {
       const wrapper = mount(<Cascader options={options} header={() => <div class="cascader-header">头部内容</div>} />);
       expect(wrapper.find('.cascader-header').exists()).toBeTruthy();
+    });
+
+    it('header[slot]', () => {
+      const wrapper = mount(Cascader, {
+        slots: { header: () => <span class="slot-header">插槽头部</span> },
+      });
+      expect(wrapper.find('.slot-header').text()).toBe('插槽头部');
     });
 
     it('keys[object]', async () => {
@@ -260,6 +278,13 @@ describe('Cascader', () => {
       expect(wrapper.find('.cascader-middle').exists()).toBeTruthy();
     });
 
+    it('middleContent[slot]', () => {
+      const wrapper = mount(Cascader, {
+        slots: { middleContent: () => <span class="slot-middle">插槽中间内容</span> },
+      });
+      expect(wrapper.find('.slot-middle').text()).toBe('插槽中间内容');
+    });
+
     it('options[array]', async () => {
       const wrapper = mount(<Cascader options={options} />);
       // 首级选项渲染为 Radio 列表
@@ -289,6 +314,16 @@ describe('Cascader', () => {
         props: { options, placeholder: () => <span class="custom-placeholder">请选择地区</span> },
       });
       expect(wrapper.find('.custom-placeholder').text()).toBe('请选择地区');
+    });
+
+    it('placeholder[slot]', () => {
+      const wrapper = mount(<Cascader options={options} />, {
+        slots: {
+          placeholder: defaultPlaceholder,
+        },
+      });
+      const $placeholder = wrapper.find(`.${name}__step-label`);
+      expect($placeholder.text()).toBe(defaultPlaceholder);
     });
 
     it('subTitles[array]', async () => {
@@ -327,6 +362,17 @@ describe('Cascader', () => {
       const wrapper = mount(<Cascader options={options} title={() => 'Cascader 级联选择器'} />);
       const $title = wrapper.find(`.${name}__title`);
       expect($title.text()).toBe('Cascader 级联选择器');
+    });
+
+    it('title[slot]', () => {
+      const title = 'Cascader 级联选择器';
+      const wrapper = mount(<Cascader options={options} />, {
+        slots: {
+          title,
+        },
+      });
+      const $title = wrapper.find(`.${name}__title`);
+      expect($title.text()).toBe(title);
     });
 
     it('value[string]', async () => {
@@ -470,53 +516,6 @@ describe('Cascader', () => {
       await $radios[clickIndex].find(`.t-radio`).trigger('click');
       expect(onPick).toHaveBeenCalledTimes(1);
       expect(onPick).toHaveBeenCalledWith({ level: 0, index: 0, value: '110000', label: '北京市' });
-    });
-  });
-
-  describe('slots', () => {
-    it('header', () => {
-      const wrapper = mount(Cascader, {
-        slots: { header: () => <span class="slot-header">插槽头部</span> },
-      });
-      expect(wrapper.find('.slot-header').text()).toBe('插槽头部');
-    });
-
-    it('middleContent', () => {
-      const wrapper = mount(Cascader, {
-        slots: { middleContent: () => <span class="slot-middle">插槽中间内容</span> },
-      });
-      expect(wrapper.find('.slot-middle').text()).toBe('插槽中间内容');
-    });
-    it('title', () => {
-      const title = 'Cascader 级联选择器';
-      const wrapper = mount(<Cascader options={options} />, {
-        slots: {
-          title,
-        },
-      });
-      const $title = wrapper.find(`.${name}__title`);
-      expect($title.text()).toBe(title);
-    });
-
-    it('placeholder', () => {
-      const wrapper = mount(<Cascader options={options} />, {
-        slots: {
-          placeholder: defaultPlaceholder,
-        },
-      });
-      const $placeholder = wrapper.find(`.${name}__step-label`);
-      expect($placeholder.text()).toBe(defaultPlaceholder);
-    });
-
-    it('closeBtn', () => {
-      const closeBtn = '关闭';
-      const wrapper = mount(<Cascader options={options} />, {
-        slots: {
-          closeBtn,
-        },
-      });
-      const $closeBtn = wrapper.find(`.${name}__close-btn`);
-      expect($closeBtn.text()).toBe(closeBtn);
     });
   });
 

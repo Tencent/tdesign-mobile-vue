@@ -181,10 +181,8 @@ describe('Skeleton', () => {
       expect($imageCol.attributes('style')).toContain('width: 72px');
       expect($imageCol.attributes('style')).toContain('height: 72px');
     });
-  });
 
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mount(Skeleton, {
         slots: { default: () => <div class="slot-content">加载完成的内容</div> },
       });

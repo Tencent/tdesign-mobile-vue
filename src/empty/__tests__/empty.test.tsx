@@ -17,6 +17,11 @@ describe('Empty', () => {
       expect(dom.text()).toBe('some function action');
     });
 
+    it('action[slot]', () => {
+      const wrapper = mount(Empty, { slots: { action: () => <button>重新加载</button> } });
+      expect(wrapper.get('.t-empty__actions button').text()).toBe('重新加载');
+    });
+
     it('description[string]', () => {
       const description = '描述内容';
       const wrapper = mount(Empty, {
@@ -36,6 +41,11 @@ describe('Empty', () => {
       });
       const dom = wrapper.find('.t-empty__description');
       expect(dom.text()).toBe('函数描述内容');
+    });
+
+    it('description[slot]', () => {
+      const wrapper = mount(Empty, { slots: { description: () => <span>插槽描述</span> } });
+      expect(wrapper.get('.t-empty__description span').text()).toBe('插槽描述');
     });
 
     it('icon[string]', () => {
@@ -59,6 +69,11 @@ describe('Empty', () => {
       expect(dom.text()).toBe('some function icon');
     });
 
+    it('icon[slot]', () => {
+      const wrapper = mount(Empty, { slots: { icon: () => <span>插槽图标</span> } });
+      expect(wrapper.get('.t-empty__icon span').text()).toBe('插槽图标');
+    });
+
     it('image[string]', () => {
       const image = 'some string';
       const wrapper = mount(Empty, {
@@ -78,25 +93,8 @@ describe('Empty', () => {
       expect(wrapper.get('.t-empty__thumb .image-node').text()).toBe('图片节点');
       expect(wrapper.findComponent(TImage).exists()).toBe(false);
     });
-  });
 
-  describe('slots', () => {
-    it('action', () => {
-      const wrapper = mount(Empty, { slots: { action: () => <button>重新加载</button> } });
-      expect(wrapper.get('.t-empty__actions button').text()).toBe('重新加载');
-    });
-
-    it('description', () => {
-      const wrapper = mount(Empty, { slots: { description: () => <span>插槽描述</span> } });
-      expect(wrapper.get('.t-empty__description span').text()).toBe('插槽描述');
-    });
-
-    it('icon', () => {
-      const wrapper = mount(Empty, { slots: { icon: () => <span>插槽图标</span> } });
-      expect(wrapper.get('.t-empty__icon span').text()).toBe('插槽图标');
-    });
-
-    it('image', () => {
+    it('image[slot]', () => {
       const wrapper = mount(Empty, { slots: { image: () => <img class="slot-image" src="empty.png" /> } });
       expect(wrapper.get('.t-empty__thumb .slot-image').attributes('src')).toBe('empty.png');
     });

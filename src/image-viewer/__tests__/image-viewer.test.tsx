@@ -55,9 +55,19 @@ describe('ImageViewer', () => {
       expect(wrapper.findComponent(CloseIcon).exists()).toBe(false);
     });
 
+    it('closeBtn[slot]', () => {
+      const wrapper = mountViewer({}, { closeBtn: () => <span class="slot-close">插槽关闭</span> });
+      expect(wrapper.get('.t-image-viewer__nav-close .slot-close').text()).toBe('插槽关闭');
+    });
+
     it('cover[function]', () => {
       const wrapper = mountViewer({ cover: () => <span class="custom-cover">封面内容</span> });
       expect(wrapper.get('.t-image-viewer__cover .custom-cover').text()).toBe('封面内容');
+    });
+
+    it('cover[slot]', () => {
+      const wrapper = mountViewer({}, { cover: () => <span class="slot-cover">插槽封面</span> });
+      expect(wrapper.get('.t-image-viewer__cover .slot-cover').text()).toBe('插槽封面');
     });
 
     it('deleteBtn[boolean]', async () => {
@@ -72,6 +82,11 @@ describe('ImageViewer', () => {
     it('deleteBtn[function]', () => {
       const wrapper = mountViewer({ deleteBtn: () => <button class="custom-delete">删除图片</button> });
       expect(wrapper.get('.t-image-viewer__nav-delete .custom-delete').text()).toBe('删除图片');
+    });
+
+    it('deleteBtn[slot]', () => {
+      const wrapper = mountViewer({ deleteBtn: true }, { deleteBtn: () => <span class="slot-delete">插槽删除</span> });
+      expect(wrapper.get('.t-image-viewer__nav-delete .slot-delete').text()).toBe('插槽删除');
     });
 
     it('image[function]', () => {
@@ -98,6 +113,20 @@ describe('ImageViewer', () => {
         }),
       );
       expect(wrapper.find('img').exists()).toBe(false);
+    });
+
+    it('image[slot]', () => {
+      const wrapper = mountViewer(
+        { images: [{ url: 'custom.png', align: 'end', extra: { caption: '图片说明' } }] },
+        {
+          image: (params: ImageSlotParams) => (
+            <img class={params.className} src={params.src} data-caption={params.extra?.caption} />
+          ),
+        },
+      );
+      expect(wrapper.get('img').attributes('src')).toBe('custom.png');
+      expect(wrapper.get('img').attributes('data-caption')).toBe('图片说明');
+      expect(wrapper.get('.t-image-viewer__swiper-item').attributes('style')).toContain('align-items: end');
     });
 
     it('images[array]', async () => {
@@ -225,37 +254,6 @@ describe('ImageViewer', () => {
       await flushPromises();
       expect(onIndexChange).toHaveBeenNthCalledWith(2, 1, { trigger: 'prev' });
       expect(onIndexChange).toHaveBeenCalledTimes(2);
-    });
-  });
-
-  describe('slots', () => {
-    it('closeBtn', () => {
-      const wrapper = mountViewer({}, { closeBtn: () => <span class="slot-close">插槽关闭</span> });
-      expect(wrapper.get('.t-image-viewer__nav-close .slot-close').text()).toBe('插槽关闭');
-    });
-
-    it('cover', () => {
-      const wrapper = mountViewer({}, { cover: () => <span class="slot-cover">插槽封面</span> });
-      expect(wrapper.get('.t-image-viewer__cover .slot-cover').text()).toBe('插槽封面');
-    });
-
-    it('deleteBtn', () => {
-      const wrapper = mountViewer({ deleteBtn: true }, { deleteBtn: () => <span class="slot-delete">插槽删除</span> });
-      expect(wrapper.get('.t-image-viewer__nav-delete .slot-delete').text()).toBe('插槽删除');
-    });
-
-    it('image', () => {
-      const wrapper = mountViewer(
-        { images: [{ url: 'custom.png', align: 'end', extra: { caption: '图片说明' } }] },
-        {
-          image: (params: ImageSlotParams) => (
-            <img class={params.className} src={params.src} data-caption={params.extra?.caption} />
-          ),
-        },
-      );
-      expect(wrapper.get('img').attributes('src')).toBe('custom.png');
-      expect(wrapper.get('img').attributes('data-caption')).toBe('图片说明');
-      expect(wrapper.get('.t-image-viewer__swiper-item').attributes('style')).toContain('align-items: end');
     });
   });
 

@@ -232,28 +232,8 @@ describe('Steps', () => {
       expect($dotItems[0].find('.t-step-item__title').text()).toEqual('步骤1');
       expect($dotItems[0].find('.t-step-item__description').text()).toEqual('描述1');
     });
-  });
 
-  describe('events', () => {
-    it('change', async () => {
-      const onChange = vi.fn();
-      const wrapper = mount(() => (
-        <Steps defaultCurrent={1} onChange={onChange}>
-          {renderItems()}
-        </Steps>
-      ));
-      const $items = wrapper.findAllComponents(StepItem);
-      // 点击第 3 项触发 change，回调参数为 (current, previous, context)
-      await $items[2].trigger('click');
-      expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange).toHaveBeenCalledWith(2, 1, { e: expect.any(MouseEvent) });
-      // 非受控模式下 change 后内部进度推进
-      expect($items[2].classes()).toContain('t-step-item--process');
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mount(() => (
         <Steps>
           {{
@@ -271,6 +251,24 @@ describe('Steps', () => {
       expect($items[0].find('.t-step-item__title').text()).toEqual('步骤一');
       // 自定义节点渲染在步骤条根节点内
       expect(wrapper.find('.t-steps .steps-custom-node').exists()).toBeTruthy();
+    });
+  });
+
+  describe('events', () => {
+    it('change', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(() => (
+        <Steps defaultCurrent={1} onChange={onChange}>
+          {renderItems()}
+        </Steps>
+      ));
+      const $items = wrapper.findAllComponents(StepItem);
+      // 点击第 3 项触发 change，回调参数为 (current, previous, context)
+      await $items[2].trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenCalledWith(2, 1, { e: expect.any(MouseEvent) });
+      // 非受控模式下 change 后内部进度推进
+      expect($items[2].classes()).toContain('t-step-item--process');
     });
   });
 

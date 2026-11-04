@@ -209,6 +209,11 @@ describe('Input', () => {
       expect(wrapper.find('.custom-extra').exists()).toBeTruthy();
     });
 
+    it('extra[slot]', async () => {
+      const wrapper = mount(<Input v-slots={{ extra: () => <span class="slot-extra">插槽额外</span> }} />);
+      expect(wrapper.get('.slot-extra').text()).toBe('插槽额外');
+    });
+
     it('format[function]', async () => {
       const value = ref('abc');
       const onChange = vi.fn();
@@ -233,6 +238,11 @@ describe('Input', () => {
       const label = wrapper.find('.t-input__label');
       expect(label.exists()).toBeTruthy();
       expect(label.text()).toBe('函数标题');
+    });
+
+    it('label[slot]', async () => {
+      const wrapper = mount(<Input v-slots={{ label: () => <span class="slot-label">插槽标签</span> }} />);
+      expect(wrapper.get('.t-input__label .slot-label').text()).toBe('插槽标签');
     });
 
     it('layout[vertical/horizontal]', async () => {
@@ -282,6 +292,20 @@ describe('Input', () => {
       expect(wrapper.findComponent(AppIcon).exists()).toBeTruthy();
     });
 
+    it('prefixIcon[slot] & suffixIcon[slot]', async () => {
+      const slots = {
+        prefixIcon: () => <InfoCircleFilledIcon />,
+        suffixIcon: () => <AppIcon />,
+      };
+      const wrapper = mount(<Input label="标题" v-slots={slots} />);
+      const prefixIcon = wrapper.find('.t-input__icon--prefix svg');
+      const suffixIcon = wrapper.find('.t-input__wrap--suffix-icon svg');
+      expect(prefixIcon.exists()).toBeTruthy();
+      expect(suffixIcon.exists()).toBeTruthy();
+      expect(wrapper.findComponent(InfoCircleFilledIcon).exists()).toBeTruthy();
+      expect(wrapper.findComponent(AppIcon).exists()).toBeTruthy();
+    });
+
     it('readonly[boolean]', async () => {
       const value = ref('123');
       const wrapper = mount(<Input label="标题" v-model={value.value} readonly />);
@@ -320,6 +344,11 @@ describe('Input', () => {
       expect(suffix.find('.custom-suffix').text()).toBe('后置内容');
     });
 
+    it('suffix[slot]', async () => {
+      const wrapper = mount(<Input v-slots={{ suffix: () => <span class="slot-suffix">插槽后缀</span> }} />);
+      expect(wrapper.get(`.${name}__wrap--suffix .slot-suffix`).text()).toBe('插槽后缀');
+    });
+
     it('suffixIcon[function]', async () => {
       const wrapper = mount(<Input label="标题" suffixIcon={() => <AppIcon />} />);
       expect(wrapper.find('.t-input__wrap--suffix-icon svg').exists()).toBeTruthy();
@@ -342,6 +371,11 @@ describe('Input', () => {
       const $tips = wrapper.find('.t-input__tips');
       expect($tips.exists()).toBeTruthy();
       expect($tips.text()).toBe('函数错误信息');
+    });
+
+    it('tips[slot]', async () => {
+      const wrapper = mount(<Input v-slots={{ tips: () => <span class="slot-tips">插槽提示</span> }} />);
+      expect(wrapper.get('.t-input__tips .slot-tips').text()).toBe('插槽提示');
     });
 
     it('type[number]', async () => {
@@ -562,42 +596,6 @@ describe('Input', () => {
       await nextTick();
       expect(onCharacterValidate).toBeCalledTimes(1);
       expect(onCharacterValidate).toHaveBeenCalledWith({ error: 'exceed-maximum' });
-    });
-  });
-
-  describe('slots', () => {
-    it('label', async () => {
-      const wrapper = mount(<Input v-slots={{ label: () => <span class="slot-label">插槽标签</span> }} />);
-      expect(wrapper.get('.t-input__label .slot-label').text()).toBe('插槽标签');
-    });
-
-    it('tips', async () => {
-      const wrapper = mount(<Input v-slots={{ tips: () => <span class="slot-tips">插槽提示</span> }} />);
-      expect(wrapper.get('.t-input__tips .slot-tips').text()).toBe('插槽提示');
-    });
-
-    it('suffix', async () => {
-      const wrapper = mount(<Input v-slots={{ suffix: () => <span class="slot-suffix">插槽后缀</span> }} />);
-      expect(wrapper.get(`.${name}__wrap--suffix .slot-suffix`).text()).toBe('插槽后缀');
-    });
-
-    it('extra', async () => {
-      const wrapper = mount(<Input v-slots={{ extra: () => <span class="slot-extra">插槽额外</span> }} />);
-      expect(wrapper.get('.slot-extra').text()).toBe('插槽额外');
-    });
-
-    it('prefixIcon & suffixIcon', async () => {
-      const slots = {
-        prefixIcon: () => <InfoCircleFilledIcon />,
-        suffixIcon: () => <AppIcon />,
-      };
-      const wrapper = mount(<Input label="标题" v-slots={slots} />);
-      const prefixIcon = wrapper.find('.t-input__icon--prefix svg');
-      const suffixIcon = wrapper.find('.t-input__wrap--suffix-icon svg');
-      expect(prefixIcon.exists()).toBeTruthy();
-      expect(suffixIcon.exists()).toBeTruthy();
-      expect(wrapper.findComponent(InfoCircleFilledIcon).exists()).toBeTruthy();
-      expect(wrapper.findComponent(AppIcon).exists()).toBeTruthy();
     });
   });
 

@@ -151,6 +151,11 @@ describe('Textarea', () => {
       expect(label.find('.custom-label').text()).toBe('函数标题');
     });
 
+    it('label[slot]', async () => {
+      const wrapper = mount(<Textarea v-slots={{ label: () => <span class="slot-label">插槽标签</span> }} />);
+      expect(wrapper.get('.t-textarea__label .slot-label').text()).toBe('插槽标签');
+    });
+
     it('layout[vertical/horizontal]', async () => {
       const layoutList = ['vertical', 'horizontal'] as const;
       layoutList.forEach((layout) => {
@@ -307,13 +312,6 @@ describe('Textarea', () => {
 
     // TdTextareaProps.onChange 声明了 context（e），组件调用时未透传该参数
     it.todo('change context includes the input event');
-  });
-
-  describe('slots', () => {
-    it('label', async () => {
-      const wrapper = mount(<Textarea v-slots={{ label: () => <span class="slot-label">插槽标签</span> }} />);
-      expect(wrapper.get('.t-textarea__label .slot-label').text()).toBe('插槽标签');
-    });
   });
 
   describe('instanceFunctions', () => {

@@ -98,6 +98,11 @@ describe('DateTimePicker', () => {
       expect(wrapper.find('.dtp-footer').exists()).toBeTruthy();
     });
 
+    it('footer[slot]', () => {
+      const wrapper = mount(DateTimePicker, { slots: { footer: () => <span class="slot-footer">底部</span> } });
+      expect(wrapper.find('.slot-footer').text()).toBe('底部');
+    });
+
     it('format[string]', async () => {
       const onPick = vi.fn();
       const onConfirm = vi.fn();
@@ -141,6 +146,11 @@ describe('DateTimePicker', () => {
         },
       });
       expect(wrapper.find('.dtp-header').exists()).toBeTruthy();
+    });
+
+    it('header[slot]', () => {
+      const wrapper = mount(DateTimePicker, { slots: { header: () => <span class="slot-header">头部</span> } });
+      expect(wrapper.find('.slot-header').text()).toBe('头部');
     });
 
     it('mode[array]', async () => {
@@ -339,6 +349,7 @@ describe('DateTimePicker', () => {
       const wrapper = mount(DateTimePicker, { props: { modelValue: defaultDateTime, mode: 'date' } });
       expect(wrapper.findAll(`.${prefix}-picker-item__item--active`)).toHaveLength(3);
     });
+
     // 挂载后外部更新 modelValue 的受控联动尚未验证，待补充稳定的列滚动模拟后实现。
     it.todo('modelValue[string] updates after mount');
 
@@ -393,18 +404,6 @@ describe('DateTimePicker', () => {
       expect(onConfirm).toBeCalledTimes(2);
       expect(onChange).toBeCalledTimes(2);
       expect(initValue.value).toEqual(`${ret[touchItemIndex][10 + touchIndex].value}-${addZero(M)}-${addZero(D)}`);
-    });
-  });
-
-  describe('slots', () => {
-    it('header', () => {
-      const wrapper = mount(DateTimePicker, { slots: { header: () => <span class="slot-header">头部</span> } });
-      expect(wrapper.find('.slot-header').text()).toBe('头部');
-    });
-
-    it('footer', () => {
-      const wrapper = mount(DateTimePicker, { slots: { footer: () => <span class="slot-footer">底部</span> } });
-      expect(wrapper.find('.slot-footer').text()).toBe('底部');
     });
   });
 

@@ -35,10 +35,8 @@ describe('TabNavItem', () => {
       expect($icon.find('.custom-icon').exists()).toBe(true);
       expect($icon.text()).toBe('图标');
     });
-  });
 
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mount(TabNavItem, {
         props: { label: '属性标签' },
         slots: { default: () => <span class="default-slot">默认插槽</span> },

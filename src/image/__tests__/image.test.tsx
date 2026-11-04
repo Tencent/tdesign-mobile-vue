@@ -70,6 +70,19 @@ describe('Image', () => {
     // mask 渲染以 slots 为门槛，仅设置 Prop 时仍展示默认图标。
     it.todo('error[string]');
     it.todo('error[function]');
+    it('error[slot]', async () => {
+      const slots = {
+        error: () => '加载失败',
+      };
+      const wrapper = mount(() => <Image src={FAIL_IMAGE} v-slots={slots} />);
+      await nextTick();
+      const $image = wrapper.find(`.${name}__img`);
+      // 手动触发 图片加载失败的回调函数
+      await $image.trigger('error');
+      const status = wrapper.find(`.${name}__mask`);
+      expect(status.exists()).toBeTruthy();
+      expect(status.text()).toBe('加载失败');
+    });
 
     it('fallback[string]', async () => {
       const onError = vi.fn();
@@ -132,6 +145,15 @@ describe('Image', () => {
     // mask 渲染以 slots 为门槛，组件未读取 loading 属性，仅设置 Prop 时仍展示默认图标。
     it.todo('loading[string]');
     it.todo('loading[function]');
+    it('loading[slot]', () => {
+      const slots = {
+        loading: () => <LoadingIcon />,
+      };
+      const wrapper = mount(() => <Image src={IMAGE} v-slots={slots} />);
+      const $status = wrapper.find(`.${name}__mask`);
+      expect($status.exists()).toBeTruthy();
+      expect(wrapper.findComponent(LoadingIcon).exists()).toBeTruthy();
+    });
 
     it('position[string]', async () => {
       positionList.forEach((position) => {
@@ -246,32 +268,6 @@ describe('Image', () => {
       await $image.trigger('error');
       expect(onError).toBeCalledTimes(1);
       expect(onError).toHaveBeenCalledWith({ e: expect.any(Event) });
-    });
-  });
-
-  describe('slots', () => {
-    it('loading', () => {
-      const slots = {
-        loading: () => <LoadingIcon />,
-      };
-      const wrapper = mount(() => <Image src={IMAGE} v-slots={slots} />);
-      const $status = wrapper.find(`.${name}__mask`);
-      expect($status.exists()).toBeTruthy();
-      expect(wrapper.findComponent(LoadingIcon).exists()).toBeTruthy();
-    });
-
-    it('error', async () => {
-      const slots = {
-        error: () => '加载失败',
-      };
-      const wrapper = mount(() => <Image src={FAIL_IMAGE} v-slots={slots} />);
-      await nextTick();
-      const $image = wrapper.find(`.${name}__img`);
-      // 手动触发 图片加载失败的回调函数
-      await $image.trigger('error');
-      const status = wrapper.find(`.${name}__mask`);
-      expect(status.exists()).toBeTruthy();
-      expect(status.text()).toBe('加载失败');
     });
   });
 

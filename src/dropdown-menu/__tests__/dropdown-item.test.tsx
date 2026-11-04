@@ -71,6 +71,21 @@ describe('DropdownItem', () => {
       expect(wrapper.find(`.${prefix}-dropdown-item__confirm-btn`).exists()).toBe(false);
     });
 
+    it('footer[slot]', async () => {
+      const wrapper = mount(() => (
+        <DropdownMenu>
+          <DropdownItem label="菜单" multiple options={options}>
+            {{ footer: () => <div class="slot-footer">插槽底部</div> }}
+          </DropdownItem>
+        </DropdownMenu>
+      ));
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      expect(wrapper.find('.slot-footer').text()).toBe('插槽底部');
+      expect(wrapper.find(`.${prefix}-dropdown-item__reset-btn`).exists()).toBe(false);
+      expect(wrapper.find(`.${prefix}-dropdown-item__confirm-btn`).exists()).toBe(false);
+    });
+
     it('icon[function]', () => {
       const wrapper = mount(() => (
         <DropdownMenu>
@@ -103,6 +118,9 @@ describe('DropdownItem', () => {
       await sleep(200);
       expect(wrapper.find('.single-icon').exists()).toBe(true);
     });
+
+    // 文档声明 icon 插槽，但组件只读取 icon prop，没有消费该插槽。
+    it.todo('icon[slot]');
 
     it('keepLabelActive[boolean]', async () => {
       // keepLabelActive 仅在 multiple = true 且有选中项时生效，保持标题高亮（含菜单收起态）
@@ -403,6 +421,7 @@ describe('DropdownItem', () => {
       expect(value.value).toHaveLength(2);
       expect(value.value).toEqual(expect.arrayContaining(['option_0', 'option_1']));
     });
+
     // 受控值 v-model 联动
     it('modelValue[string]', async () => {
       const value = ref('option_1');
@@ -544,6 +563,20 @@ describe('DropdownItem', () => {
       await wrapper.findAll(`.${prefix}-checkbox`)[0].trigger('click');
       expect(wrapper.findAll(`.${prefix}-checkbox--checked`)).toHaveLength(2);
     });
+
+    it('default[slot]', async () => {
+      const wrapper = mount(() => (
+        <DropdownMenu>
+          <DropdownItem label="菜单" options={options}>
+            {{ default: () => <div class="custom-content">自定义内容</div> }}
+          </DropdownItem>
+        </DropdownMenu>
+      ));
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      expect(wrapper.find(`.${prefix}-dropdown-item__body .custom-content`).text()).toBe('自定义内容');
+      expect(wrapper.find(`.${prefix}-dropdown-item__radio-group`).exists()).toBe(false);
+    });
   });
 
   describe('events', () => {
@@ -645,40 +678,6 @@ describe('DropdownItem', () => {
       expect(wrapper.findAll(`.${prefix}-checkbox--checked`)).toHaveLength(0);
       expect(initial).toEqual(['option_1']);
     });
-  });
-
-  describe('slots', () => {
-    it('default', async () => {
-      const wrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem label="菜单" options={options}>
-            {{ default: () => <div class="custom-content">自定义内容</div> }}
-          </DropdownItem>
-        </DropdownMenu>
-      ));
-      await wrapper.find(`.${name}__item`).trigger('click');
-      await sleep(200);
-      expect(wrapper.find(`.${prefix}-dropdown-item__body .custom-content`).text()).toBe('自定义内容');
-      expect(wrapper.find(`.${prefix}-dropdown-item__radio-group`).exists()).toBe(false);
-    });
-
-    it('footer', async () => {
-      const wrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem label="菜单" multiple options={options}>
-            {{ footer: () => <div class="slot-footer">插槽底部</div> }}
-          </DropdownItem>
-        </DropdownMenu>
-      ));
-      await wrapper.find(`.${name}__item`).trigger('click');
-      await sleep(200);
-      expect(wrapper.find('.slot-footer').text()).toBe('插槽底部');
-      expect(wrapper.find(`.${prefix}-dropdown-item__reset-btn`).exists()).toBe(false);
-      expect(wrapper.find(`.${prefix}-dropdown-item__confirm-btn`).exists()).toBe(false);
-    });
-
-    // 文档声明 icon 插槽，但组件只读取 icon prop，没有消费该插槽。
-    it.todo('icon');
   });
 
   describe('scenarios', () => {

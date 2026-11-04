@@ -274,6 +274,22 @@ describe('Sticky', () => {
       restoreSticky();
       wrapper.unmount();
     });
+
+    it('default[slot]', () => {
+      const wrapper = mountSticky(`
+        <div>
+          <Sticky>
+            <div class="sticky-slot-content">自定义吸顶内容</div>
+          </Sticky>
+        </div>
+      `);
+
+      const slotContent = wrapper.find('.t-sticky__content .sticky-slot-content');
+      expect(slotContent.exists()).toBe(true);
+      expect(slotContent.text()).toBe('自定义吸顶内容');
+
+      wrapper.unmount();
+    });
   });
 
   describe('events', () => {
@@ -309,24 +325,6 @@ describe('Sticky', () => {
       expect(getContentStyle(wrapper)).toBe('z-index: 99; position: fixed; top: 0px;');
 
       restoreSticky();
-      wrapper.unmount();
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mountSticky(`
-        <div>
-          <Sticky>
-            <div class="sticky-slot-content">自定义吸顶内容</div>
-          </Sticky>
-        </div>
-      `);
-
-      const slotContent = wrapper.find('.t-sticky__content .sticky-slot-content');
-      expect(slotContent.exists()).toBe(true);
-      expect(slotContent.text()).toBe('自定义吸顶内容');
-
       wrapper.unmount();
     });
   });

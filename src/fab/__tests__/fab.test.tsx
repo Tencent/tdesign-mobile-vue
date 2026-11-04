@@ -87,6 +87,17 @@ describe('Fab', () => {
       expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
     });
 
+    it('icon[slot]', () => {
+      const icon = () => <TIconApp />;
+      const wrapper = mount(Fab, {
+        slots: {
+          icon,
+        },
+      });
+      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+      expect(wrapper.element).toMatchSnapshot();
+    });
+
     it('magnet[boolean]', async () => {
       const wrapper = mount(Fab, { props: { draggable: true, magnet: true } });
       await nextTick();
@@ -160,6 +171,12 @@ describe('Fab', () => {
       await dragTo(wrapper, 100, 1000, 100, 0);
       expect(position(wrapper)).toEqual({ right: '16px', bottom: '552px' });
     });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Fab, { slots: { default: () => <button class="custom-fab">自定义悬浮按钮</button> } });
+      expect(wrapper.get('.custom-fab').text()).toBe('自定义悬浮按钮');
+      expect(wrapper.findComponent(Button).exists()).toBe(false);
+    });
   });
 
   describe('events', () => {
@@ -195,25 +212,6 @@ describe('Fab', () => {
       await dragTo(wrapper, 100, 100, 50, 50);
       expect(onDragEnd).toHaveBeenCalledTimes(1);
       expect(onDragEnd).toHaveBeenCalledWith({ e: expect.objectContaining({ type: 'touchend' }) });
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Fab, { slots: { default: () => <button class="custom-fab">自定义悬浮按钮</button> } });
-      expect(wrapper.get('.custom-fab').text()).toBe('自定义悬浮按钮');
-      expect(wrapper.findComponent(Button).exists()).toBe(false);
-    });
-
-    it('icon', () => {
-      const icon = () => <TIconApp />;
-      const wrapper = mount(Fab, {
-        slots: {
-          icon,
-        },
-      });
-      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
-      expect(wrapper.element).toMatchSnapshot();
     });
   });
 

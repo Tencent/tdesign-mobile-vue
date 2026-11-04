@@ -68,6 +68,20 @@ describe('Guide', () => {
       expect(counter).toHaveBeenCalledWith(expect.any(Function), { current: 0, total: 2 });
     });
 
+    it('counter[slot]', async () => {
+      await mountGuide(
+        {},
+        {
+          counter: ({ current, total }: { current: number; total: number }) => (
+            <b class="slot-counter">
+              {current + 1}/{total}
+            </b>
+          ),
+        },
+      );
+      expect(getNode('.slot-counter').text()).toBe('1/2');
+    });
+
     it('current[number]', async () => {
       const wrapper = await mountGuide({ current: 0 });
       expect(getNode('.t-guide__title').text()).toBe('第一步');
@@ -185,6 +199,48 @@ describe('Guide', () => {
       expect(getNode('.t-guide__highlight').attributes('style')).toContain('z-index: 4999');
       expect(getNode('.t-guide__overlay').attributes('style')).toContain('z-index: 4998');
     });
+
+    it('title[slot]', async () => {
+      const title = vi.fn(({ currentStepInfo }: { currentStepInfo: GuideStep }) => <b>{currentStepInfo.title}插槽</b>);
+      await mountGuide({}, { title });
+      expect(getNode('.t-guide__title b').text()).toBe('第一步插槽');
+      expect(title).toHaveBeenCalledWith(expect.objectContaining({ currentStepInfo: steps[0] }));
+    });
+
+    it('body[slot]', async () => {
+      await mountGuide(
+        {},
+        { body: ({ currentStepInfo }: { currentStepInfo: GuideStep }) => <b>{currentStepInfo.body}插槽</b> },
+      );
+      expect(getNode('.t-guide__desc b').text()).toBe('第一步说明插槽');
+    });
+
+    it('highlightContent[slot]', async () => {
+      await mountGuide(
+        { mode: 'popover' },
+        {
+          highlightContent: ({ currentStepInfo }: { currentStepInfo: GuideStep }) => (
+            <b class="slot-highlight">{currentStepInfo.title}</b>
+          ),
+        },
+      );
+      expect(getNode('.t-guide__highlight .slot-highlight').text()).toBe('第一步');
+    });
+
+    it('content[slot]', async () => {
+      await mountGuide(
+        { mode: 'popover' },
+        {
+          content: ({ current, total }: { current: number; total: number }) => (
+            <b class="slot-content">
+              {current + 1}/{total}
+            </b>
+          ),
+        },
+      );
+      expect(getNode('.slot-content').text()).toBe('1/2');
+      expect(document.querySelector('.t-guide__tooltip')).toBeNull();
+    });
   });
 
   describe('events', () => {
@@ -233,64 +289,6 @@ describe('Guide', () => {
       expect(onSkip).toHaveBeenCalledTimes(1);
       expect(onSkip).toHaveBeenCalledWith({ e: expect.any(MouseEvent), current: 0, total: 2 });
       expect(onChange).toHaveBeenCalledWith(-1, { e: expect.any(MouseEvent), total: 2 });
-    });
-  });
-
-  describe('slots', () => {
-    it('title', async () => {
-      const title = vi.fn(({ currentStepInfo }: { currentStepInfo: GuideStep }) => <b>{currentStepInfo.title}插槽</b>);
-      await mountGuide({}, { title });
-      expect(getNode('.t-guide__title b').text()).toBe('第一步插槽');
-      expect(title).toHaveBeenCalledWith(expect.objectContaining({ currentStepInfo: steps[0] }));
-    });
-
-    it('body', async () => {
-      await mountGuide(
-        {},
-        { body: ({ currentStepInfo }: { currentStepInfo: GuideStep }) => <b>{currentStepInfo.body}插槽</b> },
-      );
-      expect(getNode('.t-guide__desc b').text()).toBe('第一步说明插槽');
-    });
-
-    it('counter', async () => {
-      await mountGuide(
-        {},
-        {
-          counter: ({ current, total }: { current: number; total: number }) => (
-            <b class="slot-counter">
-              {current + 1}/{total}
-            </b>
-          ),
-        },
-      );
-      expect(getNode('.slot-counter').text()).toBe('1/2');
-    });
-
-    it('highlightContent', async () => {
-      await mountGuide(
-        { mode: 'popover' },
-        {
-          highlightContent: ({ currentStepInfo }: { currentStepInfo: GuideStep }) => (
-            <b class="slot-highlight">{currentStepInfo.title}</b>
-          ),
-        },
-      );
-      expect(getNode('.t-guide__highlight .slot-highlight').text()).toBe('第一步');
-    });
-
-    it('content', async () => {
-      await mountGuide(
-        { mode: 'popover' },
-        {
-          content: ({ current, total }: { current: number; total: number }) => (
-            <b class="slot-content">
-              {current + 1}/{total}
-            </b>
-          ),
-        },
-      );
-      expect(getNode('.slot-content').text()).toBe('1/2');
-      expect(document.querySelector('.t-guide__tooltip')).toBeNull();
     });
   });
 

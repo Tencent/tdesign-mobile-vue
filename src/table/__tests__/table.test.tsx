@@ -82,6 +82,16 @@ describe('Table', () => {
       expect(wrapper.find('tbody td').text()).toBe('空-1-0');
     });
 
+    it('cellEmptyContent[slot]', () => {
+      const wrapper = mount(TTable, {
+        props: { rowKey: 'index', data: emptyCellData, columns },
+        slots: {
+          cellEmptyContent: ({ row, rowIndex }) => <div class="slot-empty-cell">{`空-${row.index}-${rowIndex}`}</div>,
+        },
+      });
+      expect(wrapper.find('tbody td').find('.slot-empty-cell').text()).toBe('空-1-0');
+    });
+
     it('columns[array]', () => {
       // 默认空列配置：渲染数据行但不渲染任何单元格
       const wrapper = mount(TTable, { props: { rowKey: 'index', data } });
@@ -308,6 +318,16 @@ describe('Table', () => {
       expect(wrapper.find(`.${name}__empty`).text()).toBe('空数据');
     });
 
+    it('empty[slot]', () => {
+      const wrapper = mount(TTable, {
+        props: { rowKey: 'index', data: [], columns },
+        slots: { empty: () => <div class="slot-empty">Empty Data Rendered By Slots</div> },
+      });
+      expect(wrapper.find(`.${name}__empty`).exists()).toBe(true);
+      expect(wrapper.find('.slot-empty').exists()).toBe(true);
+      expect(wrapper.find(`.${name}__empty`).text()).toBe('Empty Data Rendered By Slots');
+    });
+
     it('fixedRows[array]', () => {
       const wrapper = mount(TTable, { props: { rowKey: 'index', data, columns, fixedRows: [1, 1] } });
       const rows = wrapper.findAll('tbody > tr');
@@ -339,6 +359,14 @@ describe('Table', () => {
       expect(wrapper.find(`.${name}__bottom-content`).find('.custom-footer-summary').text()).toBe('自定义汇总');
     });
 
+    it('footerSummary[slot]', () => {
+      const wrapper = mount(TTable, {
+        props: { rowKey: 'index', data, columns },
+        slots: { footerSummary: () => <div class="slot-footer">自定义汇总</div> },
+      });
+      expect(wrapper.find(`.${name}__bottom-content`).find('.slot-footer').text()).toBe('自定义汇总');
+    });
+
     it('height[number]', () => {
       const wrapper = mount(TTable, { props: { rowKey: 'index', data, columns, height: 100 } });
       expect(wrapper.find(`.${name}__content`).attributes('style')).toContain('height: 100px');
@@ -365,6 +393,16 @@ describe('Table', () => {
       });
       expect(wrapper.classes(`${name}--loading`)).toBe(true);
       expect(wrapper.find(`.${prefix}-loading`).exists()).toBe(false);
+      expect(wrapper.find(`.${name}__loading--full`).text()).toBe('loading text');
+    });
+
+    it('loading[slot]', () => {
+      const wrapper = mount(TTable, {
+        props: { rowKey: 'index', data, columns },
+        slots: { loading: () => <div class="slot-loading">loading text</div> },
+      });
+      expect(wrapper.find(`.${prefix}-loading`).exists()).toBe(false);
+      expect(wrapper.find(`.${prefix}-icon-loading`).exists()).toBe(false);
       expect(wrapper.find(`.${name}__loading--full`).text()).toBe('loading text');
     });
 
@@ -555,6 +593,35 @@ describe('Table', () => {
         expect(wrapper.classes()).toContain(`${prefix}-vertical-align-${verticalAlign}`);
       });
     });
+
+    it('cell slot named by colKey[slot]', () => {
+      const wrapper = mount(TTable, {
+        props: { rowKey: 'index', data, columns },
+        slots: { applicant: ({ row, rowIndex }) => <div class="col-key-slot">{`${row.applicant}-${rowIndex}`}</div> },
+      });
+      expect(wrapper.find('tbody td').find('.col-key-slot').text()).toBe('内容1-0');
+    });
+
+    it('cell slot named by cell value[slot]', () => {
+      const cellSlotColumns: BaseTableCol[] = [
+        { colKey: 'applicant', title: '标题', cell: 'applicant-cell' },
+        ...columns.slice(1),
+      ];
+      const wrapper = mount(TTable, {
+        props: { rowKey: 'index', data, columns: cellSlotColumns },
+        slots: { 'applicant-cell': ({ row }) => <div class="cell-name-slot">{row.applicant}</div> },
+      });
+      expect(wrapper.find('tbody td').find('.cell-name-slot').text()).toBe('内容1');
+    });
+
+    it('title slot named by title value[slot]', () => {
+      const titleSlotColumns: BaseTableCol[] = [{ colKey: 'applicant', title: 'applicant-title' }, ...columns.slice(1)];
+      const wrapper = mount(TTable, {
+        props: { rowKey: 'index', data, columns: titleSlotColumns },
+        slots: { 'applicant-title': () => <div class="title-name-slot">插槽表头</div> },
+      });
+      expect(wrapper.find('thead th').find('.title-name-slot').text()).toBe('插槽表头');
+    });
   });
 
   describe('events', () => {
@@ -595,75 +662,6 @@ describe('Table', () => {
       // jsdom 中 scrollHeight/scrollTop/clientHeight 均为 0，满足距底部 50px 的阈值
       await wrapper.find(`.${name}__content`).trigger('scroll');
       expect(fn).toHaveBeenCalledTimes(1);
-    });
-  });
-
-  describe('slots', () => {
-    it('empty', () => {
-      const wrapper = mount(TTable, {
-        props: { rowKey: 'index', data: [], columns },
-        slots: { empty: () => <div class="slot-empty">Empty Data Rendered By Slots</div> },
-      });
-      expect(wrapper.find(`.${name}__empty`).exists()).toBe(true);
-      expect(wrapper.find('.slot-empty').exists()).toBe(true);
-      expect(wrapper.find(`.${name}__empty`).text()).toBe('Empty Data Rendered By Slots');
-    });
-
-    it('loading', () => {
-      const wrapper = mount(TTable, {
-        props: { rowKey: 'index', data, columns },
-        slots: { loading: () => <div class="slot-loading">loading text</div> },
-      });
-      expect(wrapper.find(`.${prefix}-loading`).exists()).toBe(false);
-      expect(wrapper.find(`.${prefix}-icon-loading`).exists()).toBe(false);
-      expect(wrapper.find(`.${name}__loading--full`).text()).toBe('loading text');
-    });
-
-    it('cellEmptyContent', () => {
-      const wrapper = mount(TTable, {
-        props: { rowKey: 'index', data: emptyCellData, columns },
-        slots: {
-          cellEmptyContent: ({ row, rowIndex }) => <div class="slot-empty-cell">{`空-${row.index}-${rowIndex}`}</div>,
-        },
-      });
-      expect(wrapper.find('tbody td').find('.slot-empty-cell').text()).toBe('空-1-0');
-    });
-
-    it('footerSummary', () => {
-      const wrapper = mount(TTable, {
-        props: { rowKey: 'index', data, columns },
-        slots: { footerSummary: () => <div class="slot-footer">自定义汇总</div> },
-      });
-      expect(wrapper.find(`.${name}__bottom-content`).find('.slot-footer').text()).toBe('自定义汇总');
-    });
-
-    it('cell slot named by colKey', () => {
-      const wrapper = mount(TTable, {
-        props: { rowKey: 'index', data, columns },
-        slots: { applicant: ({ row, rowIndex }) => <div class="col-key-slot">{`${row.applicant}-${rowIndex}`}</div> },
-      });
-      expect(wrapper.find('tbody td').find('.col-key-slot').text()).toBe('内容1-0');
-    });
-
-    it('cell slot named by cell value', () => {
-      const cellSlotColumns: BaseTableCol[] = [
-        { colKey: 'applicant', title: '标题', cell: 'applicant-cell' },
-        ...columns.slice(1),
-      ];
-      const wrapper = mount(TTable, {
-        props: { rowKey: 'index', data, columns: cellSlotColumns },
-        slots: { 'applicant-cell': ({ row }) => <div class="cell-name-slot">{row.applicant}</div> },
-      });
-      expect(wrapper.find('tbody td').find('.cell-name-slot').text()).toBe('内容1');
-    });
-
-    it('title slot named by title value', () => {
-      const titleSlotColumns: BaseTableCol[] = [{ colKey: 'applicant', title: 'applicant-title' }, ...columns.slice(1)];
-      const wrapper = mount(TTable, {
-        props: { rowKey: 'index', data, columns: titleSlotColumns },
-        slots: { 'applicant-title': () => <div class="title-name-slot">插槽表头</div> },
-      });
-      expect(wrapper.find('thead th').find('.title-name-slot').text()).toBe('插槽表头');
     });
   });
 

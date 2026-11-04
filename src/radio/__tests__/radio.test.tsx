@@ -158,6 +158,17 @@ describe('Radio', () => {
       expect(wrapper.find(`.${name}__description`).text()).toBe('函数描述内容');
     });
 
+    it('content[slot]', () => {
+      const content = 'slot: content content';
+      const wrapper = mount(Radio, {
+        slots: {
+          content,
+        },
+      });
+      const $content = wrapper.find(`.${name}__description`);
+      expect($content.text()).toEqual(content);
+    });
+
     it('contentDisabled[boolean]', async () => {
       const value = ref('1');
       const onChange = vi.fn();
@@ -200,6 +211,15 @@ describe('Radio', () => {
         },
       });
       expect(wrapper.find(`.${name}__title`).text()).toBe('函数别名主文案');
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Radio, {
+        slots: {
+          default: () => <span>默认插槽主文案</span>,
+        },
+      });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('默认插槽主文案');
     });
 
     it('disabled[boolean]', async () => {
@@ -329,6 +349,17 @@ describe('Radio', () => {
       });
       expect(wrapper.find('.custom-label').exists()).toBe(true);
       expect(wrapper.find(`.${name}__title`).text()).toBe('函数主文案');
+    });
+
+    it('label[slot]', () => {
+      const label = 'slot: label content';
+      const wrapper = mount(Radio, {
+        slots: {
+          label,
+        },
+      });
+      const $label = wrapper.find(`.${name}__title`);
+      expect($label.text()).toEqual(label);
     });
 
     // -webkit-line-clamp 依赖 webkit 私有样式，jsdom/cssstyle 会丢弃该样式，无法断言行数
@@ -481,39 +512,6 @@ describe('Radio', () => {
       await wrapper.trigger('click');
       expect(onChange).toHaveBeenNthCalledWith(2, false, { e: expect.any(MouseEvent) });
       expect(onChange).toHaveBeenCalledTimes(2);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Radio, {
-        slots: {
-          default: () => <span>默认插槽主文案</span>,
-        },
-      });
-      expect(wrapper.find(`.${name}__title`).text()).toBe('默认插槽主文案');
-    });
-
-    it('label', () => {
-      const label = 'slot: label content';
-      const wrapper = mount(Radio, {
-        slots: {
-          label,
-        },
-      });
-      const $label = wrapper.find(`.${name}__title`);
-      expect($label.text()).toEqual(label);
-    });
-
-    it('content', () => {
-      const content = 'slot: content content';
-      const wrapper = mount(Radio, {
-        slots: {
-          content,
-        },
-      });
-      const $content = wrapper.find(`.${name}__description`);
-      expect($content.text()).toEqual(content);
     });
   });
 

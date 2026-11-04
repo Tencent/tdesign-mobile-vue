@@ -212,6 +212,27 @@ describe('QRCode', () => {
       expect(wrapper.find('.t-expired__button').exists()).eq(false);
     });
 
+    it('statusRender[slot]', async () => {
+      const onRefresh = vi.fn();
+      const wrapper = mount(QRCode, {
+        props: { value: VALUE, status: 'expired', onRefresh },
+        slots: {
+          statusRender: ({ status, onRefresh: refresh }: StatusRenderInfo) => (
+            <div class="slot-status" onClick={refresh}>
+              自定义{status}
+            </div>
+          ),
+        },
+      });
+      // 插槽内容替换默认过期态渲染
+      expect(wrapper.find('.slot-status').exists()).eq(true);
+      expect(wrapper.find('.slot-status').text()).eq('自定义expired');
+      expect(wrapper.find('.t-expired__text').exists()).eq(false);
+      // 作用域参数透传 status 与 onRefresh
+      await wrapper.find('.slot-status').trigger('click');
+      expect(onRefresh).toHaveBeenCalledTimes(1);
+    });
+
     it('type[canvas]', () => {
       // canvas 模式（默认）：渲染 canvas 元素，根节点无 svg 类名
       const wrapper = mount(QRCode, { props: { value: VALUE } });
@@ -252,29 +273,6 @@ describe('QRCode', () => {
       expect(onRefresh).toHaveBeenCalledTimes(1);
       await wrapper.find('.t-expired__button').trigger('click');
       expect(onRefresh).toHaveBeenCalledTimes(2);
-    });
-  });
-
-  describe('slots', () => {
-    it('statusRender', async () => {
-      const onRefresh = vi.fn();
-      const wrapper = mount(QRCode, {
-        props: { value: VALUE, status: 'expired', onRefresh },
-        slots: {
-          statusRender: ({ status, onRefresh: refresh }: StatusRenderInfo) => (
-            <div class="slot-status" onClick={refresh}>
-              自定义{status}
-            </div>
-          ),
-        },
-      });
-      // 插槽内容替换默认过期态渲染
-      expect(wrapper.find('.slot-status').exists()).eq(true);
-      expect(wrapper.find('.slot-status').text()).eq('自定义expired');
-      expect(wrapper.find('.t-expired__text').exists()).eq(false);
-      // 作用域参数透传 status 与 onRefresh
-      await wrapper.find('.slot-status').trigger('click');
-      expect(onRefresh).toHaveBeenCalledTimes(1);
     });
   });
 

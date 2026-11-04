@@ -150,17 +150,8 @@ describe('Toast', () => {
       });
       expect(wrapper.find(`.${name}`).classes()).toContain(`${name}--loading`);
     });
-  });
 
-  // onClose/onDestroy 由插件 plugin.ts 在 clear 与定时器销毁时调用，组件源码不会触发，见 toast.plugin.test.tsx
-  describe('events', () => {
-    it.todo('onClose');
-
-    it.todo('onDestroy');
-  });
-
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mount(Toast, {
         slots: {
           default: () => '插槽内容',
@@ -168,6 +159,13 @@ describe('Toast', () => {
       });
       expect(wrapper.find(`.${name}__text`).text()).toBe('插槽内容');
     });
+  });
+
+  // onClose/onDestroy 由插件 plugin.ts 在 clear 与定时器销毁时调用，组件源码不会触发，见 toast.plugin.test.tsx
+  describe('events', () => {
+    it.todo('onClose');
+
+    it.todo('onDestroy');
   });
 
   describe('scenarios', () => {

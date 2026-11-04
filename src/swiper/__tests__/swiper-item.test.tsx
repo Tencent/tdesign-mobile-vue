@@ -33,8 +33,8 @@ const getItemStyles = (wrapper: ReturnType<typeof mountWithItems>) =>
   wrapper.findAll(`.${itemClassPrefix}`).map((item) => item.attributes('style') ?? '');
 
 describe('SwiperItem', () => {
-  describe('slots', () => {
-    it('default', async () => {
+  describe('props', () => {
+    it('default[slot]', async () => {
       const wrapper = mount({
         setup() {
           return () => (

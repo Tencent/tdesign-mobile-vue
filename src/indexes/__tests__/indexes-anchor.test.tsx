@@ -28,10 +28,8 @@ describe('IndexesAnchor', () => {
       expect(wrapper.get(`.${name}`).attributes('data-index')).toBe('12');
       expect(wrapper.get(`.${name}__header`).text()).toBe('12');
     });
-  });
 
-  describe('slots', () => {
-    it('default', () => {
+    it('default[slot]', () => {
       const wrapper = mountAnchor({ index: 'A' }, { default: () => h('span', { class: 'anchor-slot' }, '自定义锚点') });
       expect(wrapper.get(`.${name}__slot .anchor-slot`).text()).toBe('自定义锚点');
       expect(wrapper.get(`.${name}__header`).text()).toBe('A');

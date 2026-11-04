@@ -110,6 +110,11 @@ describe('Checkbox', () => {
       expect(wrapper.find('.checkbox-desc').exists()).toBeTruthy();
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Checkbox, { slots: { content: () => <span>插槽描述</span> } });
+      expect(wrapper.find(`.${name}__description`).text()).toBe('插槽描述');
+    });
+
     it('contentDisabled[boolean]', async () => {
       const onChange = vi.fn();
       const wrapper = mount(() => (
@@ -136,6 +141,11 @@ describe('Checkbox', () => {
     it('default[function]', () => {
       const wrapper = mount(Checkbox, { props: { default: () => <span>函数别名主文案</span> } });
       expect(wrapper.find(`.${name}__title`).text()).toBe('函数别名主文案');
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Checkbox, { slots: { default: () => <span>默认主文案</span> } });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('默认主文案');
     });
 
     it('disabled[boolean]', async () => {
@@ -221,6 +231,11 @@ describe('Checkbox', () => {
       expect(wrapper.find('.custom-label').text()).toBe('函数主文案');
     });
 
+    it('label[slot]', () => {
+      const wrapper = mount(Checkbox, { slots: { label: () => <span>插槽主文案</span> } });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('插槽主文案');
+    });
+
     // -webkit-line-clamp 依赖 webkit 私有样式，jsdom/cssstyle 会丢弃该样式，无法断言行数
     it.todo('maxContentRow[number]');
 
@@ -296,23 +311,6 @@ describe('Checkbox', () => {
       await wrapper.trigger('click');
       expect(onChange).toHaveBeenNthCalledWith(2, false, { e: expect.any(MouseEvent) });
       expect(onChange).toHaveBeenCalledTimes(2);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Checkbox, { slots: { default: () => <span>默认主文案</span> } });
-      expect(wrapper.find(`.${name}__title`).text()).toBe('默认主文案');
-    });
-
-    it('label', () => {
-      const wrapper = mount(Checkbox, { slots: { label: () => <span>插槽主文案</span> } });
-      expect(wrapper.find(`.${name}__title`).text()).toBe('插槽主文案');
-    });
-
-    it('content', () => {
-      const wrapper = mount(Checkbox, { slots: { content: () => <span>插槽描述</span> } });
-      expect(wrapper.find(`.${name}__description`).text()).toBe('插槽描述');
     });
   });
 

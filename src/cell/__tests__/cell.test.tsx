@@ -55,6 +55,14 @@ describe('Cell', () => {
       expect(wrapper.find('.t-cell__description .custom-description').text()).toBe('描述节点');
     });
 
+    it('description[slot]', () => {
+      const wrapper = mount(Cell, {
+        props: { title: '标题' },
+        slots: { description: () => <span>插槽描述</span> },
+      });
+      expect(wrapper.find('.t-cell__description').text()).toBe('插槽描述');
+    });
+
     it('hover[boolean]', async () => {
       // hover 为 true 时，触摸按下短暂延迟后出现点击态类名，松开一段时间后移除
       const wrapper = mount(() => <Cell title="单行标题" hover></Cell>);
@@ -87,11 +95,21 @@ describe('Cell', () => {
       expect(wrapper.find('.t-cell__left .custom-image').text()).toBe('主图节点');
     });
 
+    it('image[slot]', () => {
+      const wrapper = mount(Cell, { slots: { image: () => <img class="slot-image" src={avatarUrl} /> } });
+      expect(wrapper.find('.t-cell__left .slot-image').attributes('src')).toBe(avatarUrl);
+    });
+
     it('leftIcon[function]', async () => {
       const wrapper = mount(() => <Cell title="单行标题" leftIcon={appIcon}></Cell>);
       const icon = wrapper.find('.t-cell__left-icon');
       expect(icon.exists()).toBeTruthy();
       expect(wrapper.findComponent(AppIcon).exists()).toBeTruthy();
+    });
+
+    it('leftIcon[slot]', () => {
+      const wrapper = mount(Cell, { slots: { leftIcon: () => <Avatar image={avatarUrl} /> } });
+      expect(wrapper.find('.t-cell__left-icon').findComponent(Avatar).exists()).toBe(true);
     });
 
     it('note[string]', async () => {
@@ -106,6 +124,11 @@ describe('Cell', () => {
       expect(wrapper.find('.t-cell__note').text()).toBe('辅助节点');
     });
 
+    it('note[slot]', () => {
+      const wrapper = mount(Cell, { slots: { note: () => <span>插槽辅助内容</span> } });
+      expect(wrapper.find('.t-cell__note').text()).toBe('插槽辅助内容');
+    });
+
     it('required[boolean]', async () => {
       const wrapper = mount(() => <Cell title="单行标题" required></Cell>);
       const required = wrapper.find('.t-cell__title > .t-cell__title-text > .t-cell--required');
@@ -116,6 +139,11 @@ describe('Cell', () => {
     it('rightIcon[function]', () => {
       const wrapper = mount(Cell, { props: { rightIcon: appIcon } });
       expect(wrapper.find('.t-cell__right-icon').findComponent(AppIcon).exists()).toBe(true);
+    });
+
+    it('rightIcon[slot]', () => {
+      const wrapper = mount(Cell, { slots: { rightIcon: chevronRightIcon } });
+      expect(wrapper.find('.t-cell__right-icon').findComponent(ChevronRightIcon).exists()).toBe(true);
     });
 
     it('title[string]', async () => {
@@ -130,6 +158,16 @@ describe('Cell', () => {
       const wrapper = mount(Cell, { props: { title: () => <span class="custom-title">标题节点</span> } });
       expect(wrapper.find('.t-cell__title-text .custom-title').text()).toBe('标题节点');
     });
+
+    it('title[slot]', () => {
+      const wrapper = mount(Cell, { slots: { title: () => <span>插槽标题</span> } });
+      expect(wrapper.find('.t-cell__title-text').text()).toBe('插槽标题');
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Cell, { slots: { default: () => <span>默认插槽内容</span> } });
+      expect(wrapper.find('.t-cell__note').text()).toBe('默认插槽内容');
+    });
   });
 
   describe('events', () => {
@@ -139,46 +177,6 @@ describe('Cell', () => {
       await wrapper.trigger('click');
       expect(onClick).toHaveBeenCalledTimes(1);
       expect(onClick).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
-    });
-  });
-
-  describe('slots', () => {
-    it('leftIcon', () => {
-      const wrapper = mount(Cell, { slots: { leftIcon: () => <Avatar image={avatarUrl} /> } });
-      expect(wrapper.find('.t-cell__left-icon').findComponent(Avatar).exists()).toBe(true);
-    });
-
-    it('rightIcon', () => {
-      const wrapper = mount(Cell, { slots: { rightIcon: chevronRightIcon } });
-      expect(wrapper.find('.t-cell__right-icon').findComponent(ChevronRightIcon).exists()).toBe(true);
-    });
-
-    it('title', () => {
-      const wrapper = mount(Cell, { slots: { title: () => <span>插槽标题</span> } });
-      expect(wrapper.find('.t-cell__title-text').text()).toBe('插槽标题');
-    });
-
-    it('description', () => {
-      const wrapper = mount(Cell, {
-        props: { title: '标题' },
-        slots: { description: () => <span>插槽描述</span> },
-      });
-      expect(wrapper.find('.t-cell__description').text()).toBe('插槽描述');
-    });
-
-    it('image', () => {
-      const wrapper = mount(Cell, { slots: { image: () => <img class="slot-image" src={avatarUrl} /> } });
-      expect(wrapper.find('.t-cell__left .slot-image').attributes('src')).toBe(avatarUrl);
-    });
-
-    it('note', () => {
-      const wrapper = mount(Cell, { slots: { note: () => <span>插槽辅助内容</span> } });
-      expect(wrapper.find('.t-cell__note').text()).toBe('插槽辅助内容');
-    });
-
-    it('default', () => {
-      const wrapper = mount(Cell, { slots: { default: () => <span>默认插槽内容</span> } });
-      expect(wrapper.find('.t-cell__note').text()).toBe('默认插槽内容');
     });
   });
 

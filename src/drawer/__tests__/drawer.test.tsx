@@ -95,6 +95,11 @@ describe('Drawer', () => {
       expect(wrapper.get('.t-drawer__footer button').text()).toBe('custom footer');
     });
 
+    it('footer[slot]', () => {
+      const wrapper = mount(Drawer, { slots: { footer: () => <button>插槽底部</button> } });
+      expect(wrapper.get('.t-drawer__footer button').text()).toBe('插槽底部');
+    });
+
     it('items[array]', async () => {
       const items = [
         {
@@ -178,6 +183,11 @@ describe('Drawer', () => {
       expect(wrapper.get('.t-drawer__title span').text()).toBe('custom title');
     });
 
+    it('title[slot]', () => {
+      const wrapper = mount(Drawer, { slots: { title: () => <span>插槽标题</span> } });
+      expect(wrapper.get('.t-drawer__title span').text()).toBe('插槽标题');
+    });
+
     it('visible[boolean]', async () => {
       const wrapper = mount(Drawer, {
         props: {
@@ -209,6 +219,11 @@ describe('Drawer', () => {
       expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 666');
       await wrapper.setProps({ zIndex: 2000 });
       expect(document.querySelector<HTMLElement>('.t-popup').style.zIndex).toBe('2000');
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Drawer, { slots: { default: () => <div class="drawer-content">内容</div> } });
+      expect(wrapper.get('.t-drawer .drawer-content').text()).toBe('内容');
     });
   });
 
@@ -254,23 +269,6 @@ describe('Drawer', () => {
       const wrapper = mount(Drawer, { props: { visible: true } });
       await wrapper.find('.t-overlay').trigger('click');
       expect(wrapper.emitted('update:visible')).toEqual([[false]]);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Drawer, { slots: { default: () => <div class="drawer-content">内容</div> } });
-      expect(wrapper.get('.t-drawer .drawer-content').text()).toBe('内容');
-    });
-
-    it('title', () => {
-      const wrapper = mount(Drawer, { slots: { title: () => <span>插槽标题</span> } });
-      expect(wrapper.get('.t-drawer__title span').text()).toBe('插槽标题');
-    });
-
-    it('footer', () => {
-      const wrapper = mount(Drawer, { slots: { footer: () => <button>插槽底部</button> } });
-      expect(wrapper.get('.t-drawer__footer button').text()).toBe('插槽底部');
     });
   });
 

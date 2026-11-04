@@ -117,6 +117,15 @@ describe('Popover', () => {
       wrapper.unmount();
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Popover, {
+        props: { visible: true },
+        slots: { content: () => '插槽内容' },
+      });
+      expect(wrapper.find(`.${name}__content`).text()).toBe('插槽内容');
+      wrapper.unmount();
+    });
+
     it('default[string]', () => {
       const wrapper = mount(Popover, { props: { default: '默认触发' } });
       expect(wrapper.find(`.${name}__wrapper`).text()).toBe('默认触发');
@@ -128,6 +137,14 @@ describe('Popover', () => {
         props: { default: () => <button class="default-fn-trigger">函数触发</button> },
       });
       expect(wrapper.find(`.${name}__wrapper .default-fn-trigger`).text()).toBe('函数触发');
+      wrapper.unmount();
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(() => (
+        <Popover content="气泡内容" v-slots={{ default: () => <button class="trigger-btn">触发按钮</button> }} />
+      ));
+      expect(wrapper.find(`.${name}__wrapper .trigger-btn`).exists()).toBeTruthy();
       wrapper.unmount();
     });
 
@@ -212,6 +229,15 @@ describe('Popover', () => {
     it('triggerElement[function]', () => {
       const wrapper = mount(() => <Popover content="气泡内容" triggerElement={() => '点击触发'} />);
       expect(wrapper.find(`.${name}__wrapper`).text()).toBe('点击触发');
+      wrapper.unmount();
+    });
+
+    it('triggerElement[slot]', () => {
+      const wrapper = mount(Popover, {
+        props: { content: '气泡内容' },
+        slots: { triggerElement: () => <button class="trigger-slot-btn">插槽触发</button> },
+      });
+      expect(wrapper.find(`.${name}__wrapper .trigger-slot-btn`).text()).toBe('插槽触发');
       wrapper.unmount();
     });
 
@@ -300,34 +326,6 @@ describe('Popover', () => {
 
       await wrapper.setProps({ modelValue: true });
       expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
-      wrapper.unmount();
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(() => (
-        <Popover content="气泡内容" v-slots={{ default: () => <button class="trigger-btn">触发按钮</button> }} />
-      ));
-      expect(wrapper.find(`.${name}__wrapper .trigger-btn`).exists()).toBeTruthy();
-      wrapper.unmount();
-    });
-
-    it('content', () => {
-      const wrapper = mount(Popover, {
-        props: { visible: true },
-        slots: { content: () => '插槽内容' },
-      });
-      expect(wrapper.find(`.${name}__content`).text()).toBe('插槽内容');
-      wrapper.unmount();
-    });
-
-    it('triggerElement', () => {
-      const wrapper = mount(Popover, {
-        props: { content: '气泡内容' },
-        slots: { triggerElement: () => <button class="trigger-slot-btn">插槽触发</button> },
-      });
-      expect(wrapper.find(`.${name}__wrapper .trigger-slot-btn`).text()).toBe('插槽触发');
       wrapper.unmount();
     });
   });

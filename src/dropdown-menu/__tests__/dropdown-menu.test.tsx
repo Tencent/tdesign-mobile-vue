@@ -156,6 +156,18 @@ describe('DropdownMenu', () => {
       expect(wrapper.find(`.${prefix}-dropdown-item`).attributes('style')).toContain('z-index: 2000');
       expect(wrapper.find(`.${prefix}-popup`).attributes('style')).toContain('z-index: 2001');
     });
+
+    it('default[slot]', () => {
+      const wrapper = mount(DropdownMenu, {
+        slots: {
+          default: () => [
+            <DropdownItem label="菜单一" options={options} />,
+            <DropdownItem label="菜单二" options={options} />,
+          ],
+        },
+      });
+      expect(wrapper.findAll(`.${name}__title`).map((item) => item.text())).toEqual(['菜单一', '菜单二']);
+    });
   });
 
   describe('events', () => {
@@ -191,20 +203,6 @@ describe('DropdownMenu', () => {
       expect(onMenuClosed).toHaveBeenCalledTimes(2);
       expect(onMenuClosed).toHaveBeenLastCalledWith({ trigger: 'outside' });
       expect(wrapper.find(`.${name}__item--active`).exists()).toBe(false);
-    });
-  });
-
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(DropdownMenu, {
-        slots: {
-          default: () => [
-            <DropdownItem label="菜单一" options={options} />,
-            <DropdownItem label="菜单二" options={options} />,
-          ],
-        },
-      });
-      expect(wrapper.findAll(`.${name}__title`).map((item) => item.text())).toEqual(['菜单一', '菜单二']);
     });
   });
 

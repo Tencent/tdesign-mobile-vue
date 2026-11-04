@@ -41,6 +41,24 @@ describe('PickerItem', () => {
   });
 
   describe('props', () => {
+    it('option[slot]', () => {
+      const wrapper = mount(PickerItem, {
+        props: { options: seasonOptions },
+        slots: {
+          option: (option: PickerColumnItem, index: number) => (
+            <span class="custom-option">{`${option.label}@${index}`}</span>
+          ),
+        },
+      });
+      const itemContainers = wrapper.findAll('.t-picker-item__item');
+      expect(itemContainers.map((container) => container.find('.custom-option').exists())).toEqual(
+        seasonOptions.map(() => true),
+      );
+      expect(itemContainers.map((container) => container.text())).toEqual(
+        seasonOptions.map((option, index) => `${option.label}@${index}`),
+      );
+    });
+
     it('options[array]', () => {
       const options: PickerColumn = [
         { label: '春', value: 'spring' },
@@ -109,26 +127,6 @@ describe('PickerItem', () => {
 
       expect(onPick).toHaveBeenCalledTimes(1);
       expect(onPick).toHaveBeenCalledWith({ value: seasonOptions[2].value, index: 2 });
-    });
-  });
-
-  describe('slots', () => {
-    it('option', () => {
-      const wrapper = mount(PickerItem, {
-        props: { options: seasonOptions },
-        slots: {
-          option: (option: PickerColumnItem, index: number) => (
-            <span class="custom-option">{`${option.label}@${index}`}</span>
-          ),
-        },
-      });
-      const itemContainers = wrapper.findAll('.t-picker-item__item');
-      expect(itemContainers.map((container) => container.find('.custom-option').exists())).toEqual(
-        seasonOptions.map(() => true),
-      );
-      expect(itemContainers.map((container) => container.text())).toEqual(
-        seasonOptions.map((option, index) => `${option.label}@${index}`),
-      );
     });
   });
 

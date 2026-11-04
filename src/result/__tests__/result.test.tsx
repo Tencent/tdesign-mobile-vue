@@ -24,8 +24,22 @@ describe('Result', () => {
       expect(description.text()).toBe('函数描述');
     });
 
+    it('description[slot]', () => {
+      const wrapper = mount(() => <Result v-slots={{ description: () => <span>插槽描述</span> }}></Result>);
+      const description = wrapper.find('.t-result__description');
+      expect(description.exists()).toBeTruthy();
+      expect(description.text()).toBe('插槽描述');
+    });
+
     it('icon[function]', () => {
       const wrapper = mount(() => <Result icon={appIcon}></Result>);
+      const icon = wrapper.find('.t-result__icon');
+      expect(icon.exists()).toBeTruthy();
+      expect(wrapper.findComponent(AppIcon).exists()).toBeTruthy();
+    });
+
+    it('icon[slot]', () => {
+      const wrapper = mount(() => <Result v-slots={{ icon: () => <AppIcon /> }}></Result>);
       const icon = wrapper.find('.t-result__icon');
       expect(icon.exists()).toBeTruthy();
       expect(wrapper.findComponent(AppIcon).exists()).toBeTruthy();
@@ -46,6 +60,13 @@ describe('Result', () => {
       expect(img.attributes('src')).toBe(imageUrl);
       // 函数返回节点时直接渲染该节点，不经过 TImage 组件
       expect(wrapper.findComponent(Image).exists()).toBeFalsy();
+    });
+
+    it('image[slot]', () => {
+      const wrapper = mount(() => <Result v-slots={{ image: () => <Image src={imageUrl} /> }}></Result>);
+      const img = wrapper.find('.t-image__img');
+      expect(img.exists()).toBeTruthy();
+      expect(img.attributes('src')).toBe(imageUrl);
     });
 
     it('theme[default/success/warning/error]', () => {
@@ -82,31 +103,8 @@ describe('Result', () => {
       expect(title.exists()).toBeTruthy();
       expect(title.text()).toBe('函数标题');
     });
-  });
 
-  describe('slots', () => {
-    it('description', () => {
-      const wrapper = mount(() => <Result v-slots={{ description: () => <span>插槽描述</span> }}></Result>);
-      const description = wrapper.find('.t-result__description');
-      expect(description.exists()).toBeTruthy();
-      expect(description.text()).toBe('插槽描述');
-    });
-
-    it('icon', () => {
-      const wrapper = mount(() => <Result v-slots={{ icon: () => <AppIcon /> }}></Result>);
-      const icon = wrapper.find('.t-result__icon');
-      expect(icon.exists()).toBeTruthy();
-      expect(wrapper.findComponent(AppIcon).exists()).toBeTruthy();
-    });
-
-    it('image', () => {
-      const wrapper = mount(() => <Result v-slots={{ image: () => <Image src={imageUrl} /> }}></Result>);
-      const img = wrapper.find('.t-image__img');
-      expect(img.exists()).toBeTruthy();
-      expect(img.attributes('src')).toBe(imageUrl);
-    });
-
-    it('title', () => {
+    it('title[slot]', () => {
       const wrapper = mount(() => <Result v-slots={{ title: () => <span>插槽标题</span> }}></Result>);
       const title = wrapper.find('.t-result__title');
       expect(title.exists()).toBeTruthy();
