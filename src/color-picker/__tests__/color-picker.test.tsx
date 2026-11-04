@@ -168,7 +168,7 @@ describe('ColorPicker', () => {
   });
 
   describe('events', () => {
-    it('change[preset]', async () => {
+    it('change', async () => {
       const onChange = vi.fn();
       const wrapper = mountColorPicker({ onChange });
       const swatch = wrapper.find('.t-color-picker__swatches-item');
@@ -209,8 +209,15 @@ describe('ColorPicker', () => {
       testSaturation();
       testSaturation(true);
     });
+  });
 
-    it('change[palette-hue-bar]', () => {
+  describe('scenarios', () => {
+    // innerValue 仅在 mounted 时同步到 Color，外部 value 变化缺少 watch 同步到色板。
+    it.todo('external value changes update the palette');
+    // 外部 modelValue 变化同样缺少 watch 同步到色板。
+    it.todo('external modelValue changes update the palette');
+
+    it('changes color via the hue bar slider', () => {
       const onChange = vi.fn();
       const wrapper = mountColorPicker({ onChange, type: 'multiple' });
       const el = wrapper.find('.t-color-picker__slider').element;
@@ -232,7 +239,7 @@ describe('ColorPicker', () => {
       });
     });
 
-    it('change[palette-alpha-bar]', () => {
+    it('changes color via the alpha bar slider', () => {
       const onChange = vi.fn();
       const wrapper = mountColorPicker({ onChange, type: 'multiple', enableAlpha: true });
       const el = wrapper.find('.t-color-picker__slider-wrapper--alpha-type .t-color-picker__slider').element;
@@ -255,13 +262,6 @@ describe('ColorPicker', () => {
         color: getColorObject(color),
       });
     });
-  });
-
-  describe('scenarios', () => {
-    // innerValue 仅在 mounted 时同步到 Color，外部 value 变化缺少 watch 同步到色板。
-    it.todo('external value changes update the palette');
-    // 外部 modelValue 变化同样缺少 watch 同步到色板。
-    it.todo('external modelValue changes update the palette');
 
     it('RGBA output preserves alpha when selecting a preset', async () => {
       const onChange = vi.fn();
