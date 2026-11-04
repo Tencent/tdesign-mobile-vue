@@ -594,7 +594,7 @@ describe('Table', () => {
       });
     });
 
-    it('cell slot named by colKey[slot]', () => {
+    it('applicant[slot]', () => {
       const wrapper = mount(TTable, {
         props: { rowKey: 'index', data, columns },
         slots: { applicant: ({ row, rowIndex }) => <div class="col-key-slot">{`${row.applicant}-${rowIndex}`}</div> },
@@ -602,7 +602,7 @@ describe('Table', () => {
       expect(wrapper.find('tbody td').find('.col-key-slot').text()).toBe('内容1-0');
     });
 
-    it('cell slot named by cell value[slot]', () => {
+    it('applicant-cell[slot]', () => {
       const cellSlotColumns: BaseTableCol[] = [
         { colKey: 'applicant', title: '标题', cell: 'applicant-cell' },
         ...columns.slice(1),
@@ -614,7 +614,7 @@ describe('Table', () => {
       expect(wrapper.find('tbody td').find('.cell-name-slot').text()).toBe('内容1');
     });
 
-    it('title slot named by title value[slot]', () => {
+    it('applicant-title[slot]', () => {
       const titleSlotColumns: BaseTableCol[] = [{ colKey: 'applicant', title: 'applicant-title' }, ...columns.slice(1)];
       const wrapper = mount(TTable, {
         props: { rowKey: 'index', data, columns: titleSlotColumns },

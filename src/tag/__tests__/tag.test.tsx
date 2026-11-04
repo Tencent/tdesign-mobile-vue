@@ -10,7 +10,7 @@ const iconFunc = () => h(TIconApp);
 
 const themeList: TdTagProps['theme'][] = ['danger', 'default', 'primary', 'success', 'warning'];
 const variantList: TdTagProps['variant'][] = ['dark', 'light', 'light-outline', 'outline'];
-const sizeList: TdTagProps['size'][] = ['large', 'medium', 'small'];
+const sizeList: TdTagProps['size'][] = ['large', 'medium', 'small', 'extra-large'];
 const shapeList: TdTagProps['shape'][] = ['mark', 'round', 'square'];
 
 describe('Tag', () => {
@@ -36,6 +36,11 @@ describe('Tag', () => {
       expect(wrapper.find('.t-tag__text').text()).toBe('函数内容');
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Tag, { slots: { content: () => <span>内容插槽</span> } });
+      expect(wrapper.get('.t-tag__text').text()).toBe('内容插槽');
+    });
+
     it('default[string]', async () => {
       const wrapper = mount(Tag, {
         props: {
@@ -46,6 +51,16 @@ describe('Tag', () => {
       expect(wrapper.find('.t-tag__text').text()).toBe('default prop 内容');
     });
 
+    it('default[function]', () => {
+      const wrapper = mount(Tag, { props: { default: () => <span>默认函数内容</span> } });
+      expect(wrapper.get('.t-tag__text').text()).toBe('默认函数内容');
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Tag, { slots: { default: () => <span>默认插槽内容</span> } });
+      expect(wrapper.get('.t-tag__text').text()).toBe('默认插槽内容');
+    });
+
     it('disabled[boolean]', async () => {
       const wrapper = mount(() => <Tag disabled>{TEXT}</Tag>);
       expect(wrapper.classes()).toContain('t-tag--disabled');
@@ -54,6 +69,11 @@ describe('Tag', () => {
     it('icon[function]', async () => {
       const wrapper = mount(() => <Tag icon={iconFunc}>{TEXT}</Tag>);
       expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+    });
+
+    it('icon[slot]', () => {
+      const wrapper = mount(Tag, { slots: { icon: iconFunc } });
+      expect(wrapper.findComponent(TIconApp).exists()).toBe(true);
     });
 
     it('maxWidth[string]', async () => {

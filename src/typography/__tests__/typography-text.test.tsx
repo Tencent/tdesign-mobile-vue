@@ -94,7 +94,7 @@ describe('Typography Text', () => {
       expect(copy).toHaveBeenCalledWith(shortText);
     });
 
-    it('copyable[object] text[string]', async () => {
+    it('copyable[text]', async () => {
       const customText = '自定义复制文本';
       const wrapper = mount(Text, {
         props: { copyable: { text: customText } },
@@ -105,7 +105,7 @@ describe('Typography Text', () => {
       expect(copy).toHaveBeenCalledWith(customText);
     });
 
-    it('copyable[object] suffix[string]', () => {
+    it('copyable[suffix-string]', () => {
       const wrapper = mount(Text, {
         props: { copyable: { suffix: 'copy-text' as any } },
         slots: { default: () => shortText },
@@ -113,7 +113,7 @@ describe('Typography Text', () => {
       expect(wrapper.find(`.${COMPONENT_NAME}__copy`).text()).toBe('copy-text');
     });
 
-    it('copyable[object] suffix[function]', async () => {
+    it('copyable[suffix-function]', async () => {
       vi.useFakeTimers();
       const suffix = (h: any, { copied }: any) => h('span', { class: 'custom-icon' }, copied ? '已复制' : '复制');
       const wrapper = mount(Text, {
@@ -131,7 +131,7 @@ describe('Typography Text', () => {
       expect(wrapper.findComponent(CheckIcon).exists()).toBe(true);
     });
 
-    it('copyable[object] suffix[vnode]', () => {
+    it('copyable[suffix-vnode]', () => {
       const wrapper = mount(Text, {
         props: {
           copyable: {
@@ -207,7 +207,7 @@ describe('Typography Text', () => {
       expect(pEl.element.style.textOverflow).toBe('ellipsis');
     });
 
-    it('ellipsis[object] row[number]', () => {
+    it('ellipsis[row]', () => {
       const wrapper = mount(Text, {
         props: { ellipsis: { row: 2 } },
         slots: { default: () => longText },
@@ -216,7 +216,7 @@ describe('Typography Text', () => {
       expect(wrapper.find('p').element.style.overflow).toBe('hidden');
     });
 
-    it('ellipsis[object] expandable[true/false]', () => {
+    it('ellipsis[expandable]', () => {
       const expandableWrapper = mount(Text, {
         props: { ellipsis: { expandable: true } },
         slots: { default: () => longText },
@@ -232,7 +232,7 @@ describe('Typography Text', () => {
       expect(collapsedWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
     });
 
-    it('ellipsis[object] collapsible[true/false]', async () => {
+    it('ellipsis[collapsible]', async () => {
       const collapsibleWrapper = mount(Text, {
         props: { ellipsis: { expandable: true, collapsible: true } },
         slots: { default: () => longText },
@@ -263,7 +263,7 @@ describe('Typography Text', () => {
       expect(unCollapsibleWrapper.find('p').element.style.overflow).toBe('visible');
     });
 
-    it('ellipsis[object] suffix[function]', () => {
+    it('ellipsis[suffix-function]', () => {
       const wrapper = mount(Text, {
         props: {
           ellipsis: {

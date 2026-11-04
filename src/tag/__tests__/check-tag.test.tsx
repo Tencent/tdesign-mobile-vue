@@ -15,8 +15,10 @@ const shapeList: TdCheckTagProps['shape'][] = ['mark', 'round', 'square'];
 describe('CheckTag', () => {
   describe('props', () => {
     it('checked[boolean]', async () => {
-      const wrapper = mount(() => <TCheckTag modelValue={true}>{TEXT}</TCheckTag>);
+      const wrapper = mount(TCheckTag, { props: { checked: true } });
       expect(wrapper.classes()).toContain('t-tag--checked');
+      await wrapper.setProps({ checked: false });
+      expect(wrapper.classes()).not.toContain('t-tag--checked');
     });
 
     it('modelValue[boolean]', async () => {
@@ -45,6 +47,15 @@ describe('CheckTag', () => {
       expect(wrapper.classes()).not.toContain('t-tag--checked');
     });
 
+    it('defaultChecked[boolean]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(TCheckTag, { props: { defaultChecked: true, onChange } });
+      expect(wrapper.classes()).toContain('t-tag--checked');
+      await wrapper.trigger('click');
+      expect(wrapper.classes()).not.toContain('t-tag--checked');
+      expect(onChange).toHaveBeenCalledExactlyOnceWith(false);
+    });
+
     it('closable[boolean]', () => {
       const wrapper = mount(() => <TCheckTag closable>{TEXT}</TCheckTag>);
       // 可关闭标签渲染关闭图标与对应类名
@@ -71,6 +82,36 @@ describe('CheckTag', () => {
       expect(wrapper.text()).toContain('自定义内容');
     });
 
+    it('content[number]', () => {
+      const wrapper = mount(TCheckTag, { props: { content: 42 } });
+      expect(wrapper.get('.t-tag__text').text()).toBe('42');
+    });
+
+    it('content[function]', () => {
+      const wrapper = mount(TCheckTag, { props: { content: () => <span>函数内容</span> } });
+      expect(wrapper.get('.t-tag__text').text()).toBe('函数内容');
+    });
+
+    it('content[slot]', () => {
+      const wrapper = mount(TCheckTag, { slots: { content: () => <span>内容插槽</span> } });
+      expect(wrapper.get('.t-tag__text').text()).toBe('内容插槽');
+    });
+
+    it('default[string]', () => {
+      const wrapper = mount(TCheckTag, { props: { default: '默认属性内容' } });
+      expect(wrapper.get('.t-tag__text').text()).toBe('默认属性内容');
+    });
+
+    it('default[function]', () => {
+      const wrapper = mount(TCheckTag, { props: { default: () => <span>默认函数内容</span> } });
+      expect(wrapper.get('.t-tag__text').text()).toBe('默认函数内容');
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(TCheckTag, { slots: { default: () => <span>默认插槽内容</span> } });
+      expect(wrapper.get('.t-tag__text').text()).toBe('默认插槽内容');
+    });
+
     it('disabled[boolean]', async () => {
       const wrapper = mount(() => <TCheckTag disabled>{TEXT}</TCheckTag>);
       expect(wrapper.classes()).toContain('t-tag--disabled');
@@ -81,6 +122,11 @@ describe('CheckTag', () => {
       expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
     });
 
+    it('icon[slot]', () => {
+      const wrapper = mount(TCheckTag, { slots: { icon: iconFunc } });
+      expect(wrapper.findComponent(TIconApp).exists()).toBe(true);
+    });
+
     it('shape[square/round/mark]', async () => {
       shapeList.forEach((s) => {
         const wrapper = mount(() => <TCheckTag shape={s}>{TEXT}</TCheckTag>);
@@ -88,7 +134,7 @@ describe('CheckTag', () => {
       });
     });
 
-    it('size[small/medium/large/extra-large]', async () => {
+    it('size[small/medium/large]', async () => {
       sizeList.forEach((s) => {
         const wrapper = mount(() => <TCheckTag size={s}>{TEXT}</TCheckTag>);
         expect(wrapper.classes()).toContain(`t-tag--${s}`);

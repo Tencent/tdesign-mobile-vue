@@ -78,7 +78,7 @@ describe('Ellipsis', () => {
       expect(plainWrapper.find('p').element.getAttribute('style')).toBe(null);
     });
 
-    it('ellipsis[object] row[number]', () => {
+    it('ellipsis[row]', () => {
       const wrapper = mount(Ellipsis, {
         props: { ellipsis: { row: 3 } },
         slots: { default: () => longText },
@@ -88,7 +88,7 @@ describe('Ellipsis', () => {
       expect((pEl.element.style as any).WebkitLineClamp).toBe('3');
     });
 
-    it('ellipsis[object] expandable[true/false]', () => {
+    it('ellipsis[expandable]', () => {
       const expandableWrapper = mount(Ellipsis, {
         props: { ellipsis: { expandable: true } },
         slots: { default: () => longText },
@@ -105,7 +105,7 @@ describe('Ellipsis', () => {
       expect(collapsedWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
     });
 
-    it('ellipsis[object] collapsible[true/false]', async () => {
+    it('ellipsis[collapsible]', async () => {
       const collapsibleWrapper = mount(Ellipsis, {
         props: { ellipsis: { expandable: true, collapsible: true } },
         slots: { default: () => longText },
@@ -138,7 +138,7 @@ describe('Ellipsis', () => {
       expect(unCollapsibleWrapper.find('p').element.style.overflow).toBe('visible');
     });
 
-    it('ellipsis[object] suffix[function]', () => {
+    it('ellipsis[suffix-function]', () => {
       const wrapper = mount(Ellipsis, {
         props: {
           ellipsis: {
@@ -155,7 +155,7 @@ describe('Ellipsis', () => {
       expect(symbol.text()).toBe('展开更多');
     });
 
-    it('ellipsis[object] suffix[vnode]', () => {
+    it('ellipsis[suffix-vnode]', () => {
       const wrapper = mount(Ellipsis, {
         props: {
           ellipsis: {

@@ -1,5 +1,5 @@
 import { nextTick, ref } from 'vue';
-import { mount, type DOMWrapper } from '@vue/test-utils';
+import { mount, type DOMWrapper, type VueWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import dayjs from 'dayjs';
 
@@ -64,6 +64,9 @@ const M = currentDate.getMonth() + 1;
 const D = currentDate.getDate();
 const defaultDateTime = `${Y}-${addZero(M)}-${addZero(D)}`;
 
+const getActiveTexts = (wrapper: VueWrapper) =>
+  wrapper.findAll(`.${prefix}-picker-item`).map((column) => column.get(`.${prefix}-picker-item__item--active`).text());
+
 const ret: PickerColumnItem[][] = [];
 const generateColumn = (start: number, end: number, type: string) => {
   const arr: PickerColumnItem[] = [];
@@ -86,6 +89,15 @@ describe('DateTimePicker', () => {
       await wrapper.setProps({ cancelBtn: '取消', confirmBtn: '确定' });
       expect(wrapper.find(`.${prefix}-picker__cancel`).text()).toBe('取消');
       expect(wrapper.find(`.${prefix}-picker__confirm`).text()).toBe('确定');
+    });
+
+    it('end[number]', () => {
+      const end = new Date(2023, 9, 13).getTime();
+      const wrapper = mount(DateTimePicker, {
+        props: { end, defaultValue: '2024-01-01', mode: 'date' },
+      });
+      expect(getActiveTexts(wrapper)).toEqual(['2023 年', '10 月', '13 日']);
+      expect(wrapper.findAllComponents(PickerItem)[0].findAll('.t-picker-item__item').at(-1).text()).toBe('2023 年');
     });
 
     it('footer[function]', async () => {
@@ -266,6 +278,15 @@ describe('DateTimePicker', () => {
       });
     });
 
+    it('start[number]', () => {
+      const start = new Date(2023, 9, 13).getTime();
+      const wrapper = mount(DateTimePicker, {
+        props: { start, defaultValue: '2022-01-01', mode: 'date' },
+      });
+      expect(getActiveTexts(wrapper)).toEqual(['2023 年', '10 月', '13 日']);
+      expect(wrapper.findAllComponents(PickerItem)[0].get('.t-picker-item__item').text()).toBe('2023 年');
+    });
+
     it('steps[object]', async () => {
       // mode = 'minute' 渲染 年/月/日/时/分 5 列，分钟列按 steps.step 间隔生成
       const wrapper = mount(DateTimePicker, {
@@ -325,19 +346,14 @@ describe('DateTimePicker', () => {
         },
       });
 
-      const getActiveTexts = () =>
-        wrapper
-          .findAll(`.${prefix}-picker-item`)
-          .map((column) => column.find(`.${prefix}-picker-item__item--active`).text());
-
       // 受控初值 2023-10-13 同步到年/月/日三列选中态
-      expect(getActiveTexts()).toEqual(['2023 年', '10 月', '13 日']);
+      expect(getActiveTexts(wrapper)).toEqual(['2023 年', '10 月', '13 日']);
 
       // 外部更新受控值，各列选中态跟随
       value.value = '2021-05-01';
       await nextTick();
       await nextTick();
-      expect(getActiveTexts()).toEqual(['2021 年', '5 月', '1 日']);
+      expect(getActiveTexts(wrapper)).toEqual(['2021 年', '5 月', '1 日']);
 
       // 滚动日期列后确认，受控值经 update:value 回写为新日期
       simulateMoveOption(wrapper.findAll(`.${prefix}-picker-item`)[2].element, 2);
@@ -345,17 +361,47 @@ describe('DateTimePicker', () => {
       expect(value.value).toBe('2021-05-03 00:00:00');
     });
 
-    it('modelValue[string]', () => {
-      const wrapper = mount(DateTimePicker, { props: { modelValue: defaultDateTime, mode: 'date' } });
-      expect(wrapper.findAll(`.${prefix}-picker-item__item--active`)).toHaveLength(3);
+    it('value[number]', async () => {
+      const onConfirm = vi.fn();
+      const wrapper = mount(DateTimePicker, {
+        props: { value: new Date(2023, 9, 13).getTime(), mode: 'date', format: 'time-stamp', onConfirm },
+      });
+      expect(getActiveTexts(wrapper)).toEqual(['2023 年', '10 月', '13 日']);
+      const updated = new Date(2021, 4, 1).getTime();
+      await wrapper.setProps({ value: updated });
+      await nextTick();
+      expect(getActiveTexts(wrapper)).toEqual(['2021 年', '5 月', '1 日']);
+      await wrapper.get('.t-picker__confirm').trigger('click');
+      expect(onConfirm).toHaveBeenCalledExactlyOnceWith(updated);
     });
 
-    // 挂载后外部更新 modelValue 的受控联动尚未验证，待补充稳定的列滚动模拟后实现。
-    it.todo('modelValue[string] updates after mount');
+    it('modelValue[string]', () => {
+      const wrapper = mount(DateTimePicker, { props: { modelValue: defaultDateTime, mode: 'date' } });
+      expect(getActiveTexts(wrapper)).toEqual(['2023 年', '10 月', '13 日']);
+    });
+
+    it('modelValue[number]', async () => {
+      const modelValue = new Date(2023, 9, 13).getTime();
+      const onConfirm = vi.fn();
+      const wrapper = mount(DateTimePicker, {
+        props: { modelValue, mode: 'date', format: 'time-stamp', onConfirm },
+      });
+      expect(getActiveTexts(wrapper)).toEqual(['2023 年', '10 月', '13 日']);
+      await wrapper.get('.t-picker__confirm').trigger('click');
+      expect(onConfirm).toHaveBeenCalledExactlyOnceWith(modelValue);
+      expect(wrapper.emitted('update:modelValue')).toEqual([[modelValue]]);
+    });
 
     it('defaultValue[string]', () => {
       const wrapper = mount(DateTimePicker, { props: { defaultValue: defaultDateTime, mode: 'date' } });
-      expect(wrapper.findAll(`.${prefix}-picker-item__item--active`)).toHaveLength(3);
+      expect(getActiveTexts(wrapper)).toEqual(['2023 年', '10 月', '13 日']);
+    });
+
+    it('defaultValue[number]', () => {
+      const wrapper = mount(DateTimePicker, {
+        props: { defaultValue: new Date(2023, 9, 13).getTime(), mode: 'date' },
+      });
+      expect(getActiveTexts(wrapper)).toEqual(['2023 年', '10 月', '13 日']);
     });
   });
 
@@ -408,6 +454,9 @@ describe('DateTimePicker', () => {
   });
 
   describe('scenarios', () => {
+    // modelValue 在 setup 中被复制到独立 ref，外部更新不会同步到日期列。
+    it.todo('external modelValue changes update the selected date');
+
     it('globalConfig labels are used when props do not override them', () => {
       const wrapper = mount(
         <ConfigProvider globalConfig={{ dateTimePicker: { yearLabel: '年号', monthLabel: '月号', dateLabel: '日号' } }}>

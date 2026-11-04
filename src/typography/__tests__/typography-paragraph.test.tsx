@@ -49,7 +49,7 @@ describe('Typography Paragraph', () => {
       expect(pEl.element.style.textOverflow).toBe('ellipsis');
     });
 
-    it('ellipsis[object] row[number]', () => {
+    it('ellipsis[row]', () => {
       const wrapper = mount(Paragraph, {
         props: { ellipsis: { row: 2 } },
         slots: { default: () => longText },
@@ -58,7 +58,7 @@ describe('Typography Paragraph', () => {
       expect(wrapper.find('p').element.style.overflow).toBe('hidden');
     });
 
-    it('ellipsis[object] expandable[true/false]', () => {
+    it('ellipsis[expandable]', () => {
       const expandableWrapper = mount(Paragraph, {
         props: { ellipsis: { expandable: true } },
         slots: { default: () => longText },
@@ -74,7 +74,7 @@ describe('Typography Paragraph', () => {
       expect(collapsedWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
     });
 
-    it('ellipsis[object] collapsible[true/false]', async () => {
+    it('ellipsis[collapsible]', async () => {
       const collapsibleWrapper = mount(Paragraph, {
         props: { ellipsis: { expandable: true, collapsible: true } },
         slots: { default: () => longText },
@@ -99,7 +99,7 @@ describe('Typography Paragraph', () => {
       expect(unCollapsibleWrapper.find('p').element.style.overflow).toBe('visible');
     });
 
-    it('ellipsis[object] suffix[function]', () => {
+    it('ellipsis[suffix-function]', () => {
       const wrapper = mount(Paragraph, {
         props: {
           ellipsis: {

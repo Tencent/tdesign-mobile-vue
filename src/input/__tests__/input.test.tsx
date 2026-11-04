@@ -267,10 +267,19 @@ describe('Input', () => {
     });
 
     it('maxlength[number]', async () => {
-      const value = ref('');
-      const wrapper = mount(<Input label="标题" v-model={value.value} maxlength={10} />);
-      const input = wrapper.find('.t-input__wrap input');
-      expect(input.element.getAttribute('maxlength')).toBe(null);
+      const onChange = vi.fn();
+      const wrapper = mount(Input, { props: { maxlength: 3, onChange } });
+      await wrapper.get('input').setValue('你好世界');
+      expect(wrapper.get('input').element.value).toBe('你好世');
+      expect(onChange).toHaveBeenLastCalledWith('你好世');
+    });
+
+    it('maxlength[string]', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(Input, { props: { maxlength: '3', onChange } });
+      await wrapper.get('input').setValue('你好世界');
+      expect(wrapper.get('input').element.value).toBe('你好世');
+      expect(onChange).toHaveBeenLastCalledWith('你好世');
     });
 
     it('name[string]', async () => {

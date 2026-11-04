@@ -15,7 +15,7 @@ describe('Overlay', () => {
       expect(wrapper.find('.t-overlay').attributes('style')).toContain('background-color: green');
     });
 
-    it('customStyle[object]', async () => {
+    it('customStyle[string]', async () => {
       const customStyle = 'color: red';
       const wrapper = mount(Overlay, {
         props: {

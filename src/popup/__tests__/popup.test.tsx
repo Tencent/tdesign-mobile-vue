@@ -1,220 +1,246 @@
-import { config, mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
-import { ref, nextTick } from 'vue';
+import { DOMWrapper, enableAutoUnmount, mount } from '@vue/test-utils';
+import { afterEach, beforeEach, describe, it, expect, vi } from 'vitest';
+import { nextTick } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import Popup from '../index';
 import type { TdPopupProps } from '../type';
 
-config.global.stubs = {
-  teleport: false,
+const mountPopup = async (props: TdPopupProps = {}, slots = {}) => {
+  const container = document.createElement('div');
+  document.body.appendChild(container);
+  const wrapper = mount(Popup, {
+    props: { ...props, attach: () => container },
+    slots,
+    global: { stubs: { teleport: false, transition: false } },
+  });
+  await nextTick();
+  return { wrapper, content: new DOMWrapper(container) };
 };
 
+const finishTransitions = async () => {
+  await nextTick();
+  await vi.runAllTimersAsync();
+  await nextTick();
+};
+
+beforeEach(() => {
+  vi.useFakeTimers();
+});
+enableAutoUnmount(afterEach);
+afterEach(async () => {
+  await finishTransitions();
+  document.body.innerHTML = '';
+  vi.useRealTimers();
+});
+
 describe('Popup', () => {
-  // test props api
   describe('props', () => {
     it('attach[string]', async () => {
-      const div = document.createElement('div');
-      div.id = 'popup-container';
-      document.body.appendChild(div);
-
-      mount(Popup, {
-        props: {
-          visible: true,
-          attach: '#popup-container',
-        },
-      });
+      const container = document.createElement('div');
+      container.id = 'popup-container';
+      document.body.appendChild(container);
+      mount(Popup, { props: { visible: true, attach: '#popup-container' } });
       await nextTick();
-      expect(document.querySelector('#popup-container .t-popup')).toBeTruthy();
+      expect(container.querySelector('.t-popup')).not.toBeNull();
+    });
+
+    it('attach[function]', async () => {
+      const container = document.createElement('div');
+      document.body.appendChild(container);
+      const attach = vi.fn(() => container);
+      mount(Popup, { props: { visible: true, attach } });
+      await nextTick();
+      expect(attach).toHaveBeenCalled();
+      expect(container.querySelector('.t-popup')).not.toBeNull();
     });
 
     it('closeBtn[boolean]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          closeBtn: true,
-          visible: true,
-        },
-      });
-      expect(wrapper.find('.t-popup__close').exists()).toBeTruthy();
-      // closeBtn = true, 使用默认 CloseIcon
-      expect(wrapper.findComponent(CloseIcon).exists()).toBeTruthy();
-
-      await wrapper.setProps({
-        closeBtn: false,
-      });
-      expect(wrapper.find('.t-popup__close').exists()).toBeFalsy();
+      const { wrapper, content } = await mountPopup({ closeBtn: true, visible: true });
+      expect(wrapper.findComponent(CloseIcon).exists()).toBe(true);
+      await wrapper.setProps({ closeBtn: false });
+      expect(content.find('.t-popup__close').exists()).toBe(false);
     });
 
     it('closeBtn[function]', async () => {
-      const temp = '取消';
-      const wrapper = mount(Popup, {
-        props: {
-          closeBtn: () => {
-            return temp;
-          },
-          visible: true,
-        },
-      });
-      expect(wrapper.find('.t-popup__close').exists()).toBeTruthy();
-      expect(wrapper.find('.t-popup__close').text()).toEqual(temp);
+      const { content } = await mountPopup({ visible: true, closeBtn: () => <span>取消</span> });
+      expect(content.get('.t-popup__close').text()).toBe('取消');
+    });
+
+    it('closeBtn[slot]', async () => {
+      const { content } = await mountPopup({ visible: true }, { closeBtn: () => <span>插槽关闭按钮</span> });
+      expect(content.get('.t-popup__close').text()).toBe('插槽关闭按钮');
     });
 
     it('closeOnOverlayClick[boolean]', async () => {
       const onClose = vi.fn();
-      const wrapper = mount(Popup, {
-        props: {
-          visible: true,
-          closeOnOverlayClick: false,
-          onClose,
-        },
-      });
-      await wrapper.find('.t-overlay').trigger('click');
-      expect(onClose).toBeCalledTimes(0);
+      const { wrapper, content } = await mountPopup({ visible: true, closeOnOverlayClick: false, onClose });
+      await content.get('.t-overlay').trigger('click');
+      expect(onClose).not.toHaveBeenCalled();
+      await wrapper.setProps({ closeOnOverlayClick: true });
+      await content.get('.t-overlay').trigger('click');
+      expect(onClose).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent) });
     });
 
     it('destroyOnClose[boolean]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          visible: true,
-          destroyOnClose: true,
-        },
-      });
-      expect(wrapper.find('.t-popup').exists()).toBeTruthy();
+      const { content } = await mountPopup({ defaultVisible: true, destroyOnClose: true });
+      expect(content.find('.t-popup').exists()).toBe(true);
+      await content.get('.t-overlay').trigger('click');
+      await finishTransitions();
+      expect(content.find('.t-popup').exists()).toBe(false);
 
-      await wrapper.setProps({ visible: false });
-      expect(wrapper.find('.t-popup').exists()).toBeFalsy();
+      const { content: retained } = await mountPopup({ defaultVisible: true, destroyOnClose: false });
+      await retained.get('.t-overlay').trigger('click');
+      await finishTransitions();
+      expect(retained.find('.t-popup').exists()).toBe(true);
+      expect(retained.get('.t-popup').isVisible()).toBe(false);
     });
 
-    // duration 透传 Transition 动画时长，jsdom 中无动画渲染可断言
-    it.todo('duration[number]');
+    it('duration[number]', async () => {
+      const onOpened = vi.fn();
+      const { wrapper } = await mountPopup({ visible: false, duration: 500, onOpened });
+      await wrapper.setProps({ visible: true });
+      await vi.advanceTimersByTimeAsync(400);
+      expect(onOpened).not.toHaveBeenCalled();
+      await finishTransitions();
+      expect(onOpened).toHaveBeenCalledTimes(1);
+    });
 
     it('overlayProps[object]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          visible: true,
-          overlayProps: { zIndex: 2000 },
-        },
-      });
-      expect(wrapper.find('.t-overlay').attributes('style')).toContain('z-index: 2000');
+      const { content } = await mountPopup({ visible: true, overlayProps: { zIndex: 2000 } });
+      expect(content.get('.t-overlay').attributes('style')).toContain('z-index: 2000');
     });
 
     it('placement[top/left/right/bottom/center]', async () => {
-      const placementList: TdPopupProps['placement'][] = ['top', 'left', 'right', 'bottom', 'center'];
-      placementList.forEach((placement) => {
-        const wrapper = mount(() => <Popup visible={true} placement={placement} />);
-        const $popup = wrapper.find('.t-popup');
-        expect($popup.classes()).toContain(`t-popup--${placement}`);
-      });
+      const placements: TdPopupProps['placement'][] = ['top', 'left', 'right', 'bottom', 'center'];
+      await Promise.all(
+        placements.map(async (placement) => {
+          const { content } = await mountPopup({ visible: true, placement });
+          expect(content.get('.t-popup').classes()).toContain(`t-popup--${placement}`);
+        }),
+      );
     });
 
     it('preventScrollThrough[boolean]', async () => {
-      mount(Popup, {
-        props: {
-          visible: true,
-          preventScrollThrough: true,
-        },
-      });
+      const { wrapper } = await mountPopup({ visible: true, preventScrollThrough: true });
       expect(document.body.classList.contains('t-popup--lock')).toBe(true);
+      await wrapper.setProps({ preventScrollThrough: false });
+      expect(document.body.classList.contains('t-popup--lock')).toBe(false);
     });
 
     it('showOverlay[boolean]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          visible: true,
-        },
-      });
-      expect(wrapper.find('.t-overlay').isVisible()).toBeTruthy();
-
-      const wrapper2 = mount(Popup, {
-        props: {
-          visible: true,
-          showOverlay: false,
-        },
-      });
-      // 遮罩 DOM 由 Overlay v-show 控制，隐藏态不可见
-      const overlay = wrapper2.find('.t-overlay');
-      expect(overlay.exists()).toBe(true);
-      expect(overlay.isVisible()).toBe(false);
+      const { wrapper, content } = await mountPopup({ visible: true });
+      expect(content.get('.t-overlay').isVisible()).toBe(true);
+      await wrapper.setProps({ showOverlay: false });
+      await finishTransitions();
+      expect(content.get('.t-overlay').isVisible()).toBe(false);
     });
 
-    // 动画名透传依赖 Transition 渲染时序，jsdom 中无法稳定断言实际过渡效果。
-    it.todo('transitionName[string]');
+    it('transitionName[string]', async () => {
+      const { wrapper, content } = await mountPopup({ visible: false, transitionName: 'custom-popup' });
+      await wrapper.setProps({ visible: true });
+      expect(content.get('.t-popup').classes()).toContain('custom-popup-enter-active');
+      await finishTransitions();
+      expect(content.get('.t-popup').classes()).not.toContain('custom-popup-enter-active');
+    });
 
-    // jsdom 中 Transition 显隐时序不可控，visible 切换后的可见性与 onOpen 触发时机无法稳定断言。
-    it.todo('visible[boolean]');
+    it('visible[boolean]', async () => {
+      const { wrapper, content } = await mountPopup({ visible: false });
+      expect(content.get('.t-popup').isVisible()).toBe(false);
+      await wrapper.setProps({ visible: true });
+      await finishTransitions();
+      expect(content.get('.t-popup').isVisible()).toBe(true);
+      await wrapper.setProps({ visible: false });
+      await finishTransitions();
+      expect(content.get('.t-popup').isVisible()).toBe(false);
+    });
+
+    it('modelValue[boolean]', async () => {
+      const { wrapper, content } = await mountPopup({ modelValue: false, closeBtn: true });
+      expect(content.get('.t-popup').isVisible()).toBe(false);
+      await wrapper.setProps({ modelValue: true });
+      await finishTransitions();
+      expect(content.get('.t-popup').isVisible()).toBe(true);
+      await content.get('.t-popup__close').trigger('click');
+      expect(wrapper.emitted('update:modelValue')).toEqual([[false, 'close-btn']]);
+      await wrapper.setProps({ modelValue: false });
+      await finishTransitions();
+      expect(content.get('.t-popup').isVisible()).toBe(false);
+    });
 
     it('defaultVisible[boolean]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          defaultVisible: true,
-        },
-      });
-      expect(wrapper.find('.t-popup').exists()).toBeTruthy();
+      const { content } = await mountPopup({ defaultVisible: true, closeBtn: true });
+      expect(content.get('.t-popup').isVisible()).toBe(true);
+      await content.get('.t-popup__close').trigger('click');
+      await finishTransitions();
+      expect(content.get('.t-popup').isVisible()).toBe(false);
     });
 
     it('zIndex[number]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          zIndex: 15000,
-          visible: true,
-        },
-      });
-      expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 15000');
-      await wrapper.setProps({
-        zIndex: 17000,
-      });
-      // 更新后内容已 teleport 到 body；此前用例的 popup 也会挂载到 body，断言存在任一匹配实例
-      const popups = Array.from(document.querySelectorAll<HTMLElement>('.t-popup'));
-      expect(popups.some((el) => el.getAttribute('style')?.includes('z-index: 17000'))).toBe(true);
+      const { wrapper, content } = await mountPopup({ zIndex: 15000, visible: true });
+      expect(content.get('.t-popup').attributes('style')).toContain('z-index: 15000');
+      await wrapper.setProps({ zIndex: 17000 });
+      expect(content.get('.t-popup').attributes('style')).toContain('z-index: 17000');
+    });
+
+    it('default[slot]', async () => {
+      const { content } = await mountPopup({ visible: true }, { default: () => <span>弹出层内容</span> });
+      expect(content.get('.t-popup').text()).toBe('弹出层内容');
+    });
+
+    it('content[slot]', async () => {
+      const { content } = await mountPopup({ visible: true }, { content: () => <span>具名内容</span> });
+      expect(content.get('.t-popup').text()).toBe('具名内容');
     });
   });
 
-  // test events
   describe('events', () => {
     it('visibleChange', async () => {
       const onVisibleChange = vi.fn();
-      const open = vi.fn();
-      const opened = vi.fn();
-      const close = vi.fn();
-      const closed = vi.fn();
-      const visible = ref(true);
-      const wrapper = mount({
-        render() {
-          return (
-            <Popup
-              placement="bottom"
-              transition-name="slide-fade"
-              closeBtn={true}
-              visible={visible.value}
-              onVisibleChange={onVisibleChange}
-              onOpen={open}
-              onOpened={opened}
-              onClose={close}
-              onClosed={closed}
-            />
-          );
-        },
-      });
+      const { wrapper, content } = await mountPopup({ visible: false, closeBtn: true, onVisibleChange });
+      await wrapper.setProps({ visible: true });
+      await finishTransitions();
+      expect(onVisibleChange).toHaveBeenCalledExactlyOnceWith(true, 'document');
+      await content.get('.t-overlay').trigger('click');
+      expect(onVisibleChange).toHaveBeenNthCalledWith(2, false, 'overlay');
+      await content.get('.t-popup__close').trigger('click');
+      expect(onVisibleChange).toHaveBeenNthCalledWith(3, false, 'close-btn');
+      expect(onVisibleChange).toHaveBeenCalledTimes(3);
+    });
 
-      const $popup = wrapper.find('.t-popup');
-      const $overlay = wrapper.find('.t-overlay');
-      const $closeBtn = wrapper.find('.t-popup__close');
+    it('close', async () => {
+      const onClose = vi.fn();
+      const { content } = await mountPopup({ visible: true, closeBtn: true, onClose });
+      await content.get('.t-overlay').trigger('click');
+      expect(onClose).toHaveBeenNthCalledWith(1, { e: expect.any(MouseEvent) });
+      await content.get('.t-popup__close').trigger('click');
+      expect(onClose).toHaveBeenNthCalledWith(2, { e: expect.any(MouseEvent) });
+      expect(onClose).toHaveBeenCalledTimes(2);
+    });
 
-      await $overlay.trigger('click');
+    it('open', async () => {
+      const onOpen = vi.fn();
+      const { wrapper } = await mountPopup({ visible: false, onOpen });
+      expect(onOpen).not.toHaveBeenCalled();
+      await wrapper.setProps({ visible: true });
+      expect(onOpen).toHaveBeenCalledExactlyOnceWith();
+    });
 
-      expect(onVisibleChange).toBeCalledTimes(1);
-      expect(close).toBeCalledTimes(1);
+    it('opened', async () => {
+      const onOpened = vi.fn();
+      const { wrapper } = await mountPopup({ visible: false, onOpened });
+      await wrapper.setProps({ visible: true });
+      expect(onOpened).not.toHaveBeenCalled();
+      await finishTransitions();
+      expect(onOpened).toHaveBeenCalledExactlyOnceWith();
+    });
 
-      await $closeBtn.trigger('click');
-      expect(onVisibleChange).toBeCalledTimes(2);
-      expect(close).toBeCalledTimes(2);
-
-      const $transition = wrapper.findAllComponents({ name: 'transition' }); // => 通过 `name` 找到 transition
-      expect($transition).toHaveLength(2);
-
-      expect($transition.at(0).exists()).toBeTruthy();
-      expect($transition.at(1).exists()).toBeTruthy();
-
-      // 理论上点击遮罩层可以触发 transition 的 after-leave 事件（onClosed），但测试环境中不会触发，closed 暂无法断言。
+    it('closed', async () => {
+      const onClosed = vi.fn();
+      const { wrapper } = await mountPopup({ visible: true, onClosed });
+      await wrapper.setProps({ visible: false });
+      expect(onClosed).not.toHaveBeenCalled();
+      await finishTransitions();
+      expect(onClosed).toHaveBeenCalledExactlyOnceWith();
     });
   });
 });

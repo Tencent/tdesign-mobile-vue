@@ -167,8 +167,8 @@ describe('useResizeObserver', () => {
     });
   });
 
-  // Issue: https://github.com/Tencent/tdesign-mobile-vue/issues/2270
   describe('callback triggering (shouldTrigger / issue #2270)', () => {
+    // Issue: https://github.com/Tencent/tdesign-mobile-vue/issues/2270
     it('triggers the callback with becameVisible true when size changes from 0 to non-zero', () => {
       const cb = vi.fn();
       mountWithHook(() => ({ ...useResizeObserver(ref<HTMLElement | null>(document.createElement('div')), cb) }));
@@ -179,6 +179,7 @@ describe('useResizeObserver', () => {
       expect(cb.mock.calls[0][0]).toMatchObject({ width: 100, height: 50, becameVisible: true });
     });
 
+    // Issue: https://github.com/Tencent/tdesign-mobile-vue/issues/2270
     it('triggers the callback with becameVisible false on ordinary size changes', () => {
       const cb = vi.fn();
       mountWithHook(() => ({ ...useResizeObserver(ref<HTMLElement | null>(document.createElement('div')), cb) }));
@@ -191,6 +192,7 @@ describe('useResizeObserver', () => {
       expect(cb.mock.calls[1][0]).toMatchObject({ width: 120, becameVisible: false });
     });
 
+    // Issue: https://github.com/Tencent/tdesign-mobile-vue/issues/2270
     it('does not trigger the callback when size stays unchanged', () => {
       const cb = vi.fn();
       mountWithHook(() => ({ ...useResizeObserver(ref<HTMLElement | null>(document.createElement('div')), cb) }));
@@ -202,6 +204,7 @@ describe('useResizeObserver', () => {
       expect(cb).toHaveBeenCalledTimes(1);
     });
 
+    // Issue: https://github.com/Tencent/tdesign-mobile-vue/issues/2270
     it('triggers no callback when both onResize and onVisibilityChange are false', () => {
       const cb = vi.fn();
       mountWithHook(() => ({
@@ -216,6 +219,7 @@ describe('useResizeObserver', () => {
       expect(cb).not.toHaveBeenCalled();
     });
 
+    // Issue: https://github.com/Tencent/tdesign-mobile-vue/issues/2270
     it('useVisibilityObserver triggers only once on invisible-to-visible transition', () => {
       const cb = vi.fn();
       mountWithHook(() => ({ ...useVisibilityObserver(ref<HTMLElement | null>(document.createElement('div')), cb) }));

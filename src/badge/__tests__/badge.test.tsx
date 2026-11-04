@@ -43,17 +43,6 @@ describe('Badge', () => {
       expect(wrapper.find(`.${name}__content`).text()).toBe('插槽徽标内容');
     });
 
-    it('default[slot] & content[slot]', () => {
-      const wrapper = mount(Badge, {
-        slots: {
-          default: '默认插槽内容',
-          content: '具名插槽内容',
-        },
-      });
-
-      expect(wrapper.find(`.${name}__content`).text()).toBe('默认插槽内容');
-    });
-
     it('count[number]', () => {
       const wrapper = mount(() => (
         <Badge count={5}>
@@ -176,6 +165,19 @@ describe('Badge', () => {
       });
 
       expect(wrapper.find(`.${name}__content`).text()).toBe('默认内容');
+    });
+  });
+
+  describe('scenarios', () => {
+    it('default slot takes priority over content slot', () => {
+      const wrapper = mount(Badge, {
+        slots: {
+          default: '默认插槽内容',
+          content: '具名插槽内容',
+        },
+      });
+
+      expect(wrapper.find(`.${name}__content`).text()).toBe('默认插槽内容');
     });
   });
 });

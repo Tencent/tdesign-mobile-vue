@@ -1,27 +1,40 @@
 import { DOMWrapper, enableAutoUnmount, mount } from '@vue/test-utils';
-import { afterEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { nextTick } from 'vue';
 import type { Plugin } from 'vue';
 import { DialogPlugin } from '../index';
 import type { DialogInstance, TdDialogProps } from '../type';
-import { sleep } from '../../shared/util';
 
 const body = new DOMWrapper(document.body);
 let handler: DialogInstance | undefined;
+
+const finishTransitions = async () => {
+  await nextTick();
+  await vi.runAllTimersAsync();
+  await nextTick();
+};
+
+beforeEach(() => {
+  vi.useFakeTimers();
+});
 
 enableAutoUnmount((unmount) => {
   afterEach(async () => {
     if (handler) {
       // 隐藏态直接 destroy 不会触发 closed，先显示以确保插件创建的 app 能卸载。
+      // 必须先完成离场及重新入场，避免清空 DOM 后仍有过渡回调执行。
+      await finishTransitions();
       handler.show();
-      await nextTick();
+      await finishTransitions();
       handler.destroy();
-      await nextTick();
-      await sleep(300);
+      await finishTransitions();
+      expect(body.find('.t-dialog').exists()).toBe(false);
+      expect(body.find('.t-overlay').exists()).toBe(false);
     }
     unmount();
     document.body.innerHTML = '';
     handler = undefined;
+    vi.useRealTimers();
   });
 });
 
@@ -58,7 +71,7 @@ describe('DialogPlugin', () => {
       await nextTick();
       expect(body.get('.t-dialog').isVisible()).toBe(true);
       handler.hide();
-      await sleep(300);
+      await finishTransitions();
       expect(body.get('.t-dialog').isVisible()).toBe(false);
       expect(body.get('.t-overlay').isVisible()).toBe(false);
       handler.show();
@@ -90,10 +103,10 @@ describe('DialogPlugin', () => {
       const onClosed = vi.fn();
       handler = DialogPlugin.show({ content: '待销毁的对话框', onClosed });
       await nextTick();
-      await sleep(300);
+      await finishTransitions();
       expect(body.get('.t-dialog').isVisible()).toBe(true);
       handler.destroy();
-      await sleep(300);
+      await finishTransitions();
       expect(onClosed).toHaveBeenCalledTimes(1);
       expect(document.querySelector('.t-dialog')).toBeNull();
       expect(document.querySelector('.t-overlay')).toBeNull();
@@ -139,7 +152,7 @@ describe('DialogPlugin', () => {
       } else {
         expect(onClose).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent), trigger });
       }
-      await sleep(300);
+      await finishTransitions();
       expect(body.get('.t-dialog').isVisible()).toBe(false);
       expect(onClosed).toHaveBeenCalledTimes(1);
     });
