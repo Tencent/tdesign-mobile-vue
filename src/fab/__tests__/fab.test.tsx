@@ -1,4 +1,4 @@
-import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { enableAutoUnmount, mount, type VueWrapper } from '@vue/test-utils';
 import { afterEach, beforeEach, describe, it, expect, vi } from 'vitest';
 import { nextTick } from 'vue';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
@@ -26,13 +26,13 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-const position = (wrapper) => ({
+const position = (wrapper: VueWrapper<any>) => ({
   right: (wrapper.element as HTMLElement).style.right,
   bottom: (wrapper.element as HTMLElement).style.bottom,
 });
 
 // 模拟一次悬浮球拖拽手势（起点 -> 终点）
-const dragTo = async (wrapper, startX, startY, endX, endY) => {
+const dragTo = async (wrapper: VueWrapper<any>, startX: number, startY: number, endX: number, endY: number) => {
   await wrapper.trigger('touchstart', { touches: [{ pageX: startX, pageY: startY }] });
   await wrapper.trigger('touchmove', { touches: [{ pageX: endX, pageY: endY }] });
   await wrapper.trigger('touchend', { touches: [{ pageX: endX, pageY: endY }] });
