@@ -3,6 +3,7 @@ import { afterEach, describe, it, expect, vi } from 'vitest';
 import { ref } from 'vue';
 import { Icon, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Link from '../link';
+import Form from '../../form';
 
 enableAutoUnmount(afterEach);
 
@@ -158,25 +159,27 @@ describe('Link', () => {
     });
 
     it('inherits disabled from form', async () => {
-      const disabled = ref(true);
+      const formDisabled = ref(true);
       const onClick = vi.fn();
-      const wrapper = mount(Link, {
-        props: { href: 'https://tdesign.tencent.com', onClick },
-        slots: { default: () => '链接' },
-        global: { provide: { formDisabled: { disabled } } },
-      });
+      const wrapper = mount(() => (
+        <Form disabled={formDisabled.value}>
+          <Link href="https://tdesign.tencent.com" onClick={onClick} v-slots={{ default: () => '链接' }} />
+        </Form>
+      ));
+      const getLink = () => wrapper.findComponent(Link);
+
       // 表单禁用：移除 href 并标记 aria-disabled
-      expect(wrapper.attributes('href')).toBeUndefined();
-      expect(wrapper.attributes('aria-disabled')).toBe('true');
+      expect(getLink().attributes('href')).toBeUndefined();
+      expect(getLink().attributes('aria-disabled')).toBe('true');
 
       // handleClick 仅判断自身 disabled，表单禁用仍会触发点击
-      await wrapper.trigger('click');
+      await getLink().trigger('click');
       expect(onClick).toHaveBeenCalledTimes(1);
 
-      disabled.value = false;
+      formDisabled.value = false;
       await wrapper.vm.$nextTick();
-      expect(wrapper.attributes('href')).toBe('https://tdesign.tencent.com');
-      expect(wrapper.attributes('aria-disabled')).toBe('false');
+      expect(getLink().attributes('href')).toBe('https://tdesign.tencent.com');
+      expect(getLink().attributes('aria-disabled')).toBe('false');
     });
 
     // 表单禁用时点击仍触发（handleClick 只判断 props.disabled），与 href/aria 行为不一致。
