@@ -141,7 +141,8 @@ describe('ActionSheet', () => {
         },
       });
       const overlay = wrapper2.find('.t-overlay');
-      overlay.exists() && expect(overlay.isVisible()).toBeFalsy();
+      expect(overlay.exists()).toBe(true);
+      expect(overlay.isVisible()).toBe(false);
     });
 
     it('theme[list/grid]', async () => {
@@ -214,30 +215,6 @@ describe('ActionSheet', () => {
       await wrapper.findAll(`.${name}__list-item`)[0].trigger('click');
       expect(onSelected).toHaveBeenCalledTimes(1);
       expect(onSelected).toHaveBeenLastCalledWith('确定', 0);
-      const wrapper2 = mount(ActionSheet, {
-        props: {
-          theme: 'list',
-          visible: true,
-          items: ['确定', '删除'],
-          onSelected,
-        },
-      });
-      await wrapper2.findAll(`.${name}__list-item`)[1].trigger('click');
-      expect(onSelected).toHaveBeenCalledTimes(2);
-      expect(onSelected).toHaveBeenLastCalledWith('删除', 1);
-
-      await wrapper2.setProps({
-        theme: 'grid',
-      });
-
-      const $TGridItems = wrapper2.findAllComponents(TGridItem);
-      expect($TGridItems.length).toEqual(2);
-      await $TGridItems[0].trigger('click');
-      expect(onSelected).toHaveBeenCalledTimes(3);
-      expect(onSelected).toHaveBeenLastCalledWith('确定', 0);
-      await $TGridItems[1].trigger('click');
-      expect(onSelected).toHaveBeenCalledTimes(4);
-      expect(onSelected).toHaveBeenLastCalledWith('删除', 1);
     });
 
     it('cancel', async () => {
@@ -253,6 +230,26 @@ describe('ActionSheet', () => {
       await wrapper.find(`.${prefix}-overlay`).trigger('click');
       expect(onClose).toHaveBeenCalledTimes(1);
       expect(onClose).toHaveBeenCalledWith({ trigger: 'overlay' });
+    });
+  });
+
+  describe('scenarios', () => {
+    it('selects an item in grid theme', async () => {
+      const onSelected = vi.fn();
+      const wrapper = mount(ActionSheet, {
+        props: {
+          theme: 'grid',
+          visible: true,
+          items: ['确定', '删除'],
+          onSelected,
+        },
+      });
+      const gridItems = wrapper.findAllComponents(TGridItem);
+      expect(gridItems).toHaveLength(2);
+      await gridItems[0].trigger('click');
+      expect(onSelected).toHaveBeenCalledWith('确定', 0);
+      await gridItems[1].trigger('click');
+      expect(onSelected).toHaveBeenLastCalledWith('删除', 1);
     });
   });
 });

@@ -59,8 +59,10 @@ describe('ActionSheetGrid', () => {
       expect(wrapper.emitted('selected')).toEqual([[1]]);
       expect(onSelected).toHaveBeenCalledWith(1);
     });
+  });
 
-    it('selected[paged index]', async () => {
+  describe('scenarios', () => {
+    it('selects the correct item on a later page', async () => {
       const onSelected = vi.fn();
       const wrapper = mount(ActionSheetGrid, {
         props: {

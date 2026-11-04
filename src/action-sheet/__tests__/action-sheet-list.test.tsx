@@ -13,17 +13,19 @@ describe('ActionSheetList', () => {
       const wrapper = mount(ActionSheetList, {
         props: {
           items: [
-            { label: '选项零' },
+            { label: '选项零', badge: { count: 1 } },
             {
               label: '选项一',
               description: '描述一',
               color: 'red',
               icon: 'icon-name',
               suffixIcon: () => <span>suffix-icon</span>,
+              badge: { dot: true },
             },
             {
               label: '选项二',
               disabled: true,
+              badge: { content: 'new' },
             },
           ],
         },
@@ -39,37 +41,36 @@ describe('ActionSheetList', () => {
       expect(items[1].find(`.${name}__list-item-icon--suffix`).text()).toContain('suffix-icon');
       expect(items[2].classes()).toContain(`${name}__list-item--disabled`);
       expect(items[2].attributes('disabled')).toBeDefined();
-    });
-
-    it('items[array]', () => {
-      const wrapper = mount(ActionSheetList, {
-        props: {
-          items: [
-            { label: '数字徽标', badge: { count: 1 } },
-            { label: '点徽标', badge: { dot: true } },
-            { label: '自定义徽标', badge: { content: 'new' } },
-          ],
-        },
-      });
-
       expect(wrapper.findAllComponents(TBadge)).toHaveLength(2);
-      expect(wrapper.text()).toContain('自定义徽标');
     });
 
-    it('icon[function] & suffixIcon[function]', () => {
+    it('icon[function]', () => {
       const wrapper = mount(ActionSheetList, {
         props: {
           items: [
             {
               label: '自定义图标',
               icon: () => <span class="custom-icon">图标</span>,
-              suffixIcon: () => <span class="custom-suffix-icon">后缀</span>,
             },
           ],
         },
       });
 
       expect(wrapper.find('.custom-icon').text()).toBe('图标');
+    });
+
+    it('suffixIcon[function]', () => {
+      const wrapper = mount(ActionSheetList, {
+        props: {
+          items: [
+            {
+              label: '自定义后缀图标',
+              suffixIcon: () => <span class="custom-suffix-icon">后缀</span>,
+            },
+          ],
+        },
+      });
+
       expect(wrapper.find('.custom-suffix-icon').text()).toBe('后缀');
     });
   });
@@ -89,8 +90,10 @@ describe('ActionSheetList', () => {
       expect(wrapper.emitted('selected')).toEqual([[1]]);
       expect(onSelected).toHaveBeenCalledWith(1);
     });
+  });
 
-    it('selected[disabled item]', async () => {
+  describe('scenarios', () => {
+    it('does not select a disabled item', async () => {
       const onSelected = vi.fn();
       const wrapper = mount(ActionSheetList, {
         props: {
