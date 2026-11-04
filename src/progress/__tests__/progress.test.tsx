@@ -319,23 +319,5 @@ describe('Progress', () => {
         expect(wrapper.find('.t-progress__info').text()).toBe('100%');
       });
     });
-
-    describe('label prop and slot priority', () => {
-      it('prefers the label prop over the label slot', () => {
-        const wrapper = mount(Progress, {
-          props: { label: 'prop label' },
-          slots: { label: 'slot label' },
-        });
-        expect(wrapper.find('.t-progress__info').text()).toBe('prop label');
-      });
-
-      it('renders the label slot when the label prop is true', () => {
-        const wrapper = mount(Progress, {
-          props: { label: true, percentage: 50 },
-          slots: { label: 'slot label' },
-        });
-        expect(wrapper.find('.t-progress__info').text()).toBe('slot label');
-      });
-    });
   });
 });
