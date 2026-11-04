@@ -1,452 +1,640 @@
 import { mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
+import { nextTick } from 'vue';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
-import { ref } from 'vue';
 import SwipeCell from '../swipe-cell';
-import { useSwipe } from '../useSwipe';
+import type { SwipeActionItem, SwipeCellInstanceFunctions } from '../type';
 import { trigger } from '../../image-viewer/__tests__/touch';
 
-const move = async (target, offsetX = 120, startX = 0, offsetY = 0, startY = 0) => {
-  await trigger(target, 'touchstart', startX, startY);
-  await trigger(target, 'touchmove', startX + offsetX, startY + offsetY);
-  return async () => trigger(target, 'touchend', startX + offsetX, startY + offsetY);
-};
+const BUTTON_WIDTH = 80;
+/** 右侧菜单：两个操作按钮 */
+const RIGHT_ACTIONS: SwipeActionItem[] = [
+  { text: '编辑', className: 'edit-btn' },
+  { text: '删除', className: 'delete-btn' },
+];
+/** 左侧菜单：单个操作按钮 */
+const LEFT_ACTIONS: SwipeActionItem[] = [{ text: '选择', className: 'favor-btn' }];
+const RIGHT_WIDTH = BUTTON_WIDTH * 2;
+const LEFT_WIDTH = BUTTON_WIDTH;
+
+type SwipeTarget = Parameters<typeof trigger>[0];
+
+/**
+ * jsdom 中 clientWidth 恒为 0，菜单测宽（setPanelWidth）与回弹阈值计算（threshold）无法触发。
+ * 按元素 class 映射确定宽度：操作按钮 80px，菜单宽度 = 实际渲染的按钮数 × 按钮宽度（空菜单为 0），
+ * 滑动位移与回弹位置由此可精确换算。
+ */
+function mockPanelWidth() {
+  return vi.spyOn(Element.prototype, 'clientWidth', 'get').mockImplementation(function (this: HTMLElement) {
+    if (this.classList.contains('t-swipe-cell__left') || this.classList.contains('t-swipe-cell__right')) {
+      return this.querySelectorAll('.t-swipe-cell__content').length * BUTTON_WIDTH;
+    }
+    if (this.classList.contains('t-swipe-cell__content')) return BUTTON_WIDTH;
+    return 0;
+  });
+}
+
+/**
+ * 模拟一次完整手势：touchstart(0,0) → touchmove(dx,dy) → touchend(dx,dy)。
+ * 先等待一个 tick，确保 useSwipe 通过 post-flush watcher 挂载的触摸监听已生效。
+ */
+async function swipeBy(target: SwipeTarget, dx: number, dy = 0) {
+  await nextTick();
+  await trigger(target, 'touchstart', 0, 0);
+  await trigger(target, 'touchmove', dx, dy);
+  await trigger(target, 'touchend', dx, dy);
+}
+
+/** 当前单元格主体位移（wrapper 的 transform） */
+function getTransform(wrapper: ReturnType<typeof mount>) {
+  return (wrapper.find('.t-swipe-cell__wrapper').element as HTMLElement).style.transform;
+}
+
+/** 右侧二次确认内容容器（右侧菜单最后一个子元素） */
+function getSureRightEl(wrapper: ReturnType<typeof mount>) {
+  return wrapper.find('.t-swipe-cell__right').element.lastElementChild as HTMLElement;
+}
 
 describe('SwipeCell', () => {
+  afterEach(() => {
+    // 还原 clientWidth mock 与 vi.fn，避免影响其它用例
+    vi.restoreAllMocks();
+  });
+
   describe('props', () => {
-    // it(' disabled', async () => {
-    // const swipeAction = [{ text: '编辑', className: 't-button--primary',style: 'width: 60px' }];
-
-    // const content = 'content is a string';
-    // const wrapper = mount(SwipeCell, {
-    //   props: {
-    //     content,
-    //     right: swipeAction,
-    //   },
-    // });
-    // wrapper.vm.$nextTick();
-    // const $target = wrapper.find('.t-swipe-cell__wrapper');
-    // // disabled = true, 滑动操作无效
-    // await wrapper.setProps({ disabled: true });
-    // let touchend = await move($target);
-    // //wrapper.find('.t-swipe-cell__wrapper').element.style.transform
-    // touchend();
-    // expect(wrapper.vm.initData.moving).toBe(false);
-
-    // disabled = false, 开启滑动操作
-    // await wrapper.setProps({ disabled: false });
-    // console.log(wrapper.find('.t-swipe-cell__wrapper').element.style.transform);
-    // touchend = await move($target);
-    // await move($target,-120);
-    // wrapper.vm.$nextTick();
-    // expect(wrapper.vm.initData.moving).toBe(true);
-    //
-
-    // console.log(wrapper.find('.t-swipe-cell__wrapper').element.style.transform);
-    // expect(wrapper.vm.initData.moving).toBe(false);
-
-    // it(' opened', async () => {
-    //   const onClick = vi.fn();
-    //   const onChange = vi.fn();
-    //   const swipeAction = [
-    //     { text: '默认' },
-    //     { text: '删除' },
-    //   ];
-
-    //   const content = 'content is a string';
-    //   const wrapper = mount(SwipeCell, {
-    //     props: {
-    //       content,
-    //       left: swipeAction,
-    //       right: swipeAction,
-    //       onClick,
-    //       onChange,
-    //     },
-    //   });
-
-    //   wrapper.vm.initData.leftWidth = 120;
-    //   await wrapper.setProps({ opened: [true, false] });
-    //   expect(onChange).toBeCalledTimes(1);
-    //   expect(onChange).toHaveBeenCalledWith('left');
-
-    //   const $buttons = wrapper.findAll('.t-swipe-cell__content');
-    //   $buttons.at(0).trigger('click');
-    //   expect(onClick).toBeCalledTimes(1);
-    //   expect(onChange).toBeCalledTimes(2);
-    //   expect(onChange).toHaveBeenCalledWith(undefined);
-
-    //   wrapper.vm.initData.rightWidth = 120;
-    //   await wrapper.setProps({ opened: [false, true] });
-    //   expect(onChange).toBeCalledTimes(3);
-    //   expect(onChange).toHaveBeenCalledWith('right');
-
-    //   $buttons.at(0).trigger('click');
-    //   expect(onClick).toBeCalledTimes(2);
-    //   expect(onChange).toBeCalledTimes(4);
-    //   expect(onChange).toHaveBeenCalledWith(undefined);
-    // });
-
-    it('content[string]', async () => {
+    it('content[string]', () => {
       const content = 'content is a string';
       const wrapper = mount(<SwipeCell content={content} />);
 
       expect(wrapper.text()).toBe(content);
     });
 
-    it('default[string]', async () => {
+    it('content[function]', () => {
+      const content = 'content is a string';
+      const wrapper = mount(<SwipeCell content={() => <div class="custom-content">{content}</div>} />);
+
+      expect(wrapper.find('.custom-content').text()).toBe(content);
+    });
+
+    it('default[string]', () => {
       const content = 'default prop content';
       const wrapper = mount(<SwipeCell default={content} />);
 
-      // default prop 通道优先于 content prop 渲染单元格内容
+      // default prop 通道同样渲染单元格内容
       expect(wrapper.text()).toBe(content);
     });
 
-    it('content[function]', async () => {
-      const content = 'content is a string';
-      const wrapper = mount(<SwipeCell content={() => <div class="swipe-cell__content">{content}</div>} />);
+    it('default[function]', () => {
+      const wrapper = mount(<SwipeCell default={() => <div class="custom-default">default fn content</div>} />);
 
-      const $content = wrapper.find('.swipe-cell__content');
-      expect($content.text()).toBe(content);
+      expect(wrapper.find('.custom-default').exists()).toBeTruthy();
+      expect(wrapper.text()).toContain('default fn content');
     });
 
-    // wrapper.unmount();
-    // touchend = await move($target);
-    // expect(wrapper.vm.initData.moving).toBe(false);
-    // touchend();
-    // expect(wrapper.vm.initData.moving).toBe(false);
-    // });
-    it('left[array]', async () => {
-      const onClick = vi.fn();
+    it('disabled[boolean]', async () => {
+      mockPanelWidth();
       const onChange = vi.fn();
-      const swipeAction = [
-        {
-          icon: <TIconApp />,
-          text: '编辑',
-          className: 't-button--primary',
-          sure: 'sure-confirm',
-        },
-      ];
+      const onDragstart = vi.fn();
+      const wrapper = mount(
+        <SwipeCell content="内容" right={RIGHT_ACTIONS} disabled onChange={onChange} onDragstart={onDragstart} />,
+      );
+      const $cell = wrapper.find('.t-swipe-cell');
 
-      const content = 'content is a string';
-      const wrapper = mount(SwipeCell, {
-        props: {
-          content,
-          left: swipeAction,
-          onClick,
-          onChange,
-        },
-        slots: {
-          'sure-confirm': () => (
-            <div class="t-button--primary_sure">
-              <TIconApp />
-            </div>
-          ),
-        },
-      });
+      // 禁用滑动：位移不变、不触发滑动事件
+      await swipeBy($cell, -100);
+      expect(onDragstart).not.toHaveBeenCalled();
+      expect(onChange).not.toHaveBeenCalled();
+      expect(getTransform(wrapper)).toBe('translate3d(0px, 0, 0)');
 
-      // wrapper.vm.initData.leftWidth = 60;
-      // await wrapper.setProps({ opened: true });
-      // expect(onChange).toBeCalledTimes(1);
-      // expect(onChange).toHaveBeenCalledWith('left');
-
-      const $buttons = wrapper.findAll('.t-button--primary');
-      await $buttons.at(0).trigger('click');
-      expect(onClick).toBeCalledTimes(0);
-      // expect(onChange).toBeCalledTimes(1);
-
-      const $sure = wrapper.find('.t-button--primary_sure');
-      expect($sure.exists()).toBeTruthy();
-      // expect(wrapper.vm.showSureLeft).toBe(true);
-
-      // const $target = wrapper.find('.t-swipe-cell__content');
-      // let touchend = await move($target);
-      // expect(wrapper.vm.initData.moving).toBe(true);
-      // await touchend();
-      // expect(wrapper.vm.initData.moving).toBe(false);
-      // expect(wrapper.vm.showSureLeft).toBe(false);
+      // 恢复启用后同一手势可以正常打开菜单
+      await wrapper.setProps({ disabled: false });
+      await swipeBy($cell, -100);
+      expect(onDragstart).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenCalledWith('right');
+      expect(getTransform(wrapper)).toBe(`translate3d(-${RIGHT_WIDTH}px, 0, 0)`);
     });
 
-    it('left[function]', async () => {
-      const wrapper = mount(<SwipeCell left={() => <div class="custom-left-btn">左侧操作</div>} content="内容" />);
-      expect(wrapper.find('.custom-left-btn').exists()).toBeTruthy();
+    it('left[array]', () => {
+      const wrapper = mount(
+        <SwipeCell
+          content="内容"
+          left={[{ text: '编辑', className: 'left-btn', icon: <TIconApp />, style: { backgroundColor: 'red' } }]}
+        />,
+      );
+
+      const $btn = wrapper.find('.t-swipe-cell__left .left-btn');
+      expect($btn.exists()).toBeTruthy();
+      expect($btn.find('.t-swipe-cell__text').text()).toBe('编辑');
+      // icon 渲染为操作项图标节点
+      expect($btn.find('.t-swipe-cell__icon').exists()).toBeTruthy();
+      // 自定义 style 透传到操作项
+      expect($btn.attributes('style')).toContain('background-color: red');
     });
 
-    it('right[array]', async () => {
-      const onClick = vi.fn();
+    it('left[function]', () => {
+      const wrapper = mount(<SwipeCell content="内容" left={() => <div class="custom-left-btn">左侧操作</div>} />);
+
+      expect(wrapper.find('.t-swipe-cell__left .custom-left-btn').exists()).toBeTruthy();
+    });
+
+    it('opened[boolean]', async () => {
+      mockPanelWidth();
       const onChange = vi.fn();
-      const swipeAction = [
-        { text: '默认', className: 't-button--primary' },
-        {
-          text: '删除',
-          className: 't-button--danger',
-          sure: (
-            <div class="t-button--danger_sure">
-              <TIconApp />
-            </div>
-          ),
-        },
-      ];
+      const wrapper = mount(
+        <SwipeCell content="内容" left={LEFT_ACTIONS} right={RIGHT_ACTIONS} opened onChange={onChange} />,
+      );
+      await nextTick();
 
-      const content = 'content is a string';
-      const wrapper = mount(SwipeCell, {
-        props: {
-          content,
-          right: swipeAction,
-          onClick,
-          onChange,
-        },
-      });
+      // 同时配置左右菜单时优先打开右侧
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenCalledWith('right');
+      expect(getTransform(wrapper)).toBe(`translate3d(-${RIGHT_WIDTH}px, 0, 0)`);
 
-      // wrapper.vm.initData.rightWidth = 120;
-      // await wrapper.setProps({ opened: true });
-      // expect(onChange).toBeCalledTimes(1);
-      // expect(onChange).toHaveBeenCalledWith('right');
+      // 置为 false 收起菜单
+      await wrapper.setProps({ opened: false });
+      expect(onChange).toHaveBeenCalledTimes(2);
+      expect(onChange).toHaveBeenLastCalledWith(undefined);
+      expect(getTransform(wrapper)).toBe('translate3d(0px, 0, 0)');
 
-      const $buttons = wrapper.findAll('.t-swipe-cell__content');
-      $buttons.at(0).trigger('click');
-      expect(onClick).toBeCalledTimes(1);
-      // expect(onChange).toBeCalledTimes(2);
-      // expect(onChange).toHaveBeenCalledWith(undefined);
-
-      await $buttons.at(1).trigger('click');
-      expect(onClick).toBeCalledTimes(1);
-      // expect(onChange).toBeCalledTimes(2);
-
-      const $sure = wrapper.find('.t-button--danger_sure');
-      expect($sure.exists()).toBeTruthy();
-      // expect(wrapper.vm.showSureRight).toBe(true);
-
-      // const $target = wrapper.find('.t-swipe-cell__content');
-      // let touchend = await move($target, -120);
-      // expect(wrapper.vm.initData.moving).toBe(true);
-      // await touchend();
-      // expect(wrapper.vm.initData.moving).toBe(false);
-      // expect(wrapper.vm.showSureRight).toBe(false);
+      // 仅配置左侧菜单时打开左侧
+      const leftOnly = mount(<SwipeCell content="内容" left={LEFT_ACTIONS} opened onChange={vi.fn()} />);
+      await nextTick();
+      expect(getTransform(leftOnly)).toBe(`translate3d(${LEFT_WIDTH}px, 0, 0)`);
     });
 
-    it('right[function]', async () => {
-      const wrapper = mount(<SwipeCell right={() => <div class="custom-right-btn">右侧操作</div>} content="内容" />);
-      expect(wrapper.find('.custom-right-btn').exists()).toBeTruthy();
+    it('opened[array]', async () => {
+      mockPanelWidth();
+
+      // [left, right] = [false, true] 打开右侧菜单
+      const rightChange = vi.fn();
+      const rightCase = mount(
+        <SwipeCell
+          content="内容"
+          left={LEFT_ACTIONS}
+          right={RIGHT_ACTIONS}
+          opened={[false, true]}
+          onChange={rightChange}
+        />,
+      );
+      await nextTick();
+      expect(rightChange).toHaveBeenCalledWith('right');
+      expect(getTransform(rightCase)).toBe(`translate3d(-${RIGHT_WIDTH}px, 0, 0)`);
+
+      // [left, right] = [true, false] 打开左侧菜单
+      const leftChange = vi.fn();
+      const leftCase = mount(
+        <SwipeCell
+          content="内容"
+          left={LEFT_ACTIONS}
+          right={RIGHT_ACTIONS}
+          opened={[true, false]}
+          onChange={leftChange}
+        />,
+      );
+      await nextTick();
+      expect(leftChange).toHaveBeenCalledWith('left');
+      expect(getTransform(leftCase)).toBe(`translate3d(${LEFT_WIDTH}px, 0, 0)`);
+
+      // 两侧均为 true 时优先右侧
+      const bothChange = vi.fn();
+      const bothCase = mount(
+        <SwipeCell
+          content="内容"
+          left={LEFT_ACTIONS}
+          right={RIGHT_ACTIONS}
+          opened={[true, true]}
+          onChange={bothChange}
+        />,
+      );
+      await nextTick();
+      expect(bothChange).toHaveBeenCalledTimes(1);
+      expect(bothChange).toHaveBeenCalledWith('right');
+      expect(getTransform(bothCase)).toBe(`translate3d(-${RIGHT_WIDTH}px, 0, 0)`);
+
+      // 从打开态切回 [false, false] 收起菜单
+      await bothCase.setProps({ opened: [false, false] });
+      expect(bothChange).toHaveBeenCalledTimes(2);
+      expect(bothChange).toHaveBeenLastCalledWith(undefined);
+      expect(getTransform(bothCase)).toBe('translate3d(0px, 0, 0)');
+    });
+
+    it('right[array]', () => {
+      const wrapper = mount(<SwipeCell content="内容" right={RIGHT_ACTIONS} />);
+
+      const $btns = wrapper.findAll('.t-swipe-cell__right .t-swipe-cell__content');
+      expect($btns).toHaveLength(2);
+      expect($btns[0].text()).toBe('编辑');
+      expect($btns[1].text()).toBe('删除');
+      // 未传 style 时兜底 height: 100%
+      expect($btns[0].attributes('style')).toContain('height: 100%');
+    });
+
+    it('right[function]', () => {
+      const wrapper = mount(<SwipeCell content="内容" right={() => <div class="custom-right-btn">右侧操作</div>} />);
+
+      expect(wrapper.find('.t-swipe-cell__right .custom-right-btn').exists()).toBeTruthy();
     });
   });
 
   describe('events', () => {
     it('change', async () => {
+      mockPanelWidth();
       const onChange = vi.fn();
-      const swipeAction = [
-        { text: '默认', className: 't-button--primary' },
-        { text: '删除', className: 't-button--danger' },
-      ];
+      const wrapper = mount(<SwipeCell content="内容" left={LEFT_ACTIONS} right={RIGHT_ACTIONS} onChange={onChange} />);
+      const $cell = wrapper.find('.t-swipe-cell');
 
-      const content = 'content is a string';
-      const wrapper = mount(SwipeCell, {
-        props: {
-          content,
-          right: swipeAction,
-          onChange,
-        },
-      });
+      // 左滑打开右侧菜单
+      await swipeBy($cell, -100);
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenLastCalledWith('right');
 
-      // wrapper.vm.initData.rightWidth = 120;
-      // await wrapper.setProps({ opened: true });
-      // expect(onChange).toBeCalledTimes(1);
-      // expect(onChange).toHaveBeenCalledWith('right');
+      // 已打开状态再次左滑（回弹）不重复触发
+      await swipeBy($cell, -20);
+      expect(onChange).toHaveBeenCalledTimes(1);
 
-      const $buttons = wrapper.findAll('.t-swipe-cell__content');
-      $buttons.at(0).trigger('click');
-      // expect(onChange).toBeCalledTimes(2);
-      // expect(onChange).toHaveBeenCalledWith(undefined);
+      // 点击操作项自动收回菜单
+      await wrapper.find('.t-swipe-cell__right .edit-btn').trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(2);
+      expect(onChange).toHaveBeenLastCalledWith(undefined);
+
+      // 右滑打开左侧菜单
+      await swipeBy($cell, 60);
+      expect(onChange).toHaveBeenCalledTimes(3);
+      expect(onChange).toHaveBeenLastCalledWith('left');
     });
+
     it('click', async () => {
+      mockPanelWidth();
       const onClick = vi.fn();
-      const swipeAction = [
-        { text: '默认', className: 't-button--primary' },
-        { text: '删除', className: 't-button--danger' },
-      ];
+      const actionOnClick = vi.fn();
+      const rightActions: SwipeActionItem[] = [{ text: '编辑' }, { text: '删除', onClick: actionOnClick }];
+      const wrapper = mount(<SwipeCell content="内容" left={LEFT_ACTIONS} right={rightActions} onClick={onClick} />);
 
-      const content = 'content is a string';
-      const wrapper = mount(SwipeCell, {
-        props: {
-          content: () => <div class="swipe-cell__content">{content}</div>,
-          right: swipeAction,
-          onClick,
-        },
-      });
+      // 点击操作项透传 action 与 source
+      const $rightBtns = wrapper.findAll('.t-swipe-cell__right .t-swipe-cell__content');
+      await $rightBtns[0].trigger('click');
+      expect(onClick).toHaveBeenCalledTimes(1);
+      expect(onClick).toHaveBeenLastCalledWith(expect.objectContaining({ text: '编辑' }), 'right');
+      expect(actionOnClick).not.toHaveBeenCalled();
 
-      // wrapper.vm.initData.rightWidth = 120;
-      await wrapper.setProps({ opened: true });
+      // 操作项自带 onClick 时执行自身回调，组件 click 事件不再触发
+      await $rightBtns[1].trigger('click');
+      expect(actionOnClick).toHaveBeenCalledTimes(1);
+      expect(onClick).toHaveBeenCalledTimes(1);
 
-      const $buttons = wrapper.findAll('.t-swipe-cell__content');
-      $buttons.at(0).trigger('click');
-      expect(onClick).toBeCalledTimes(1);
+      // 左侧操作项 source 为 left
+      await wrapper.find('.t-swipe-cell__left .t-swipe-cell__content').trigger('click');
+      expect(onClick).toHaveBeenCalledTimes(2);
+      expect(onClick).toHaveBeenLastCalledWith(expect.objectContaining({ text: '选择' }), 'left');
     });
-    it('dragstart & dragend', async () => {
-      const onDragstart = vi.fn();
+
+    it('dragend', async () => {
+      mockPanelWidth();
       const onDragend = vi.fn();
-      const swipeAction = [
-        { text: '默认', className: 't-button--primary' },
-        { text: '删除', className: 't-button--danger' },
-      ];
+      const wrapper = mount(<SwipeCell content="内容" right={RIGHT_ACTIONS} onDragend={onDragend} />);
+      const $cell = wrapper.find('.t-swipe-cell');
+      await nextTick();
 
-      const content = 'content is a string';
-      const wrapper = mount(SwipeCell, {
-        props: {
-          content,
-          right: swipeAction,
-          onDragstart,
-          onDragend,
-        },
-      });
+      // 完整水平滑动松手后触发一次
+      await swipeBy($cell, -100);
+      expect(onDragend).toHaveBeenCalledTimes(1);
 
-      const $swipeCell = wrapper.find('.t-swipe-cell');
-      const $buttons = wrapper.findAll('.t-swipe-cell__content');
+      // 轻微移动（未达到拖拽阈值）后抬起不触发
+      await swipeBy($cell, -2);
+      expect(onDragend).toHaveBeenCalledTimes(1);
 
-      // 水平滑动，dragstart 触发一次，touchend 后 dragend 触发一次
-      const touchend = await move($swipeCell, -120);
-      expect(onDragstart).toBeCalledTimes(1);
-      expect(onDragend).toBeCalledTimes(0);
-      await touchend();
-      expect(onDragstart).toBeCalledTimes(1);
-      expect(onDragend).toBeCalledTimes(1);
+      // 垂直滑动不触发
+      await swipeBy($cell, 0, -50);
+      expect(onDragend).toHaveBeenCalledTimes(1);
 
-      // 点击操作项，不触发 dragstart / dragend
-      await $buttons.at(0).trigger('click');
-      expect(onDragstart).toBeCalledTimes(1);
-      expect(onDragend).toBeCalledTimes(1);
-
-      // 操作项上轻微移动后抬起（点击场景），不触发 dragstart / dragend
-      const tapEnd = await move($buttons.at(1), -2);
-      await tapEnd();
-      expect(onDragstart).toBeCalledTimes(1);
-      expect(onDragend).toBeCalledTimes(1);
-
-      // 从操作项开始真实水平滑动，同样触发 dragstart / dragend
-      const actionDragEnd = await move($buttons.at(1), -120);
-      expect(onDragstart).toBeCalledTimes(2);
-      expect(onDragend).toBeCalledTimes(1);
-      await actionDragEnd();
-      expect(onDragstart).toBeCalledTimes(2);
-      expect(onDragend).toBeCalledTimes(2);
-
-      // 垂直滑动，不触发 dragstart / dragend
-      const verticalEnd = await move($swipeCell, 0, 0, -50, 0);
-      await verticalEnd();
-      expect(onDragstart).toBeCalledTimes(2);
-      expect(onDragend).toBeCalledTimes(2);
-
-      // 禁用状态开始手势后恢复启用，不应继承上一次 dragging 状态
+      // 禁用状态滑动不触发；恢复后正常触发且不继承禁用期间的拖拽状态
       await wrapper.setProps({ disabled: true });
-      const disabledEnd = await move($swipeCell, -120);
-      await disabledEnd();
+      await swipeBy($cell, -100);
+      expect(onDragend).toHaveBeenCalledTimes(1);
       await wrapper.setProps({ disabled: false });
-      const nextDragEnd = await move($swipeCell, -120);
-      expect(onDragstart).toBeCalledTimes(3);
-      await nextDragEnd();
-      expect(onDragend).toBeCalledTimes(3);
+      await swipeBy($cell, -100);
+      expect(onDragend).toHaveBeenCalledTimes(2);
+    });
+
+    it('dragstart', async () => {
+      mockPanelWidth();
+      const onDragstart = vi.fn();
+      const wrapper = mount(<SwipeCell content="内容" right={RIGHT_ACTIONS} onDragstart={onDragstart} />);
+      const $cell = wrapper.find('.t-swipe-cell');
+      await nextTick();
+
+      // 位移未达到 distance(10px) 前不触发
+      await trigger($cell, 'touchstart', 0, 0);
+      await trigger($cell, 'touchmove', -8, 0);
+      expect(onDragstart).not.toHaveBeenCalled();
+
+      // 达到后首次触发，同一手势内继续移动不重复触发
+      await trigger($cell, 'touchmove', -20, 0);
+      expect(onDragstart).toHaveBeenCalledTimes(1);
+      await trigger($cell, 'touchmove', -60, 0);
+      await trigger($cell, 'touchend', -60, 0);
+      expect(onDragstart).toHaveBeenCalledTimes(1);
+
+      // 垂直滑动不触发
+      await swipeBy($cell, 0, -50);
+      expect(onDragstart).toHaveBeenCalledTimes(1);
+
+      // 禁用状态不触发
+      await wrapper.setProps({ disabled: true });
+      await swipeBy($cell, -100);
+      expect(onDragstart).toHaveBeenCalledTimes(1);
     });
   });
 
   describe('slots', () => {
-    it('content', async () => {
-      const icon = () => <TIconApp />;
+    it('default', () => {
       const wrapper = mount(SwipeCell, {
         slots: {
-          content: icon,
+          default: () => <div class="cell-body">单元格内容</div>,
         },
       });
-      const $content = wrapper;
-      expect($content.findComponent(TIconApp).exists()).toBeTruthy();
+
+      expect(wrapper.find('.cell-body').exists()).toBeTruthy();
+      expect(wrapper.text()).toContain('单元格内容');
     });
+
+    it('content', () => {
+      const wrapper = mount(SwipeCell, {
+        slots: {
+          content: () => <TIconApp />,
+        },
+      });
+
+      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+    });
+
     it('left', async () => {
+      const onSlotClick = vi.fn();
       const onClick = vi.fn();
-      const left = () => (
-        <div class="delete-btn" onClick={onClick}>
-          删除
-        </div>
-      );
-      const content = 'content is a string';
       const wrapper = mount(SwipeCell, {
+        props: {
+          content: '内容',
+          onClick,
+        },
         slots: {
-          default: () => <div class="swipe-cell__content">{content}</div>,
-          left,
+          left: () => (
+            <div class="left-slot-btn" onClick={onSlotClick}>
+              选择
+            </div>
+          ),
         },
       });
 
-      expect(wrapper.find('.delete-btn').exists()).toBeTruthy();
+      expect(wrapper.find('.t-swipe-cell__left .left-slot-btn').exists()).toBeTruthy();
 
-      const $button = wrapper.find('.delete-btn');
-      // wrapper.vm.initData.leftWidth = 60;
-      await wrapper.setProps({ opened: true });
-      $button.trigger('click');
-      expect(onClick).toBeCalledTimes(1);
+      // 插槽自定义内容与事件生效，组件 click 事件不触发（插槽写法组件不触发）
+      await wrapper.find('.left-slot-btn').trigger('click');
+      expect(onSlotClick).toHaveBeenCalledTimes(1);
+      expect(onClick).not.toHaveBeenCalled();
     });
+
     it('right', async () => {
+      const onSlotClick = vi.fn();
       const onClick = vi.fn();
-      const right = () => (
-        <div class="delete-btn" onClick={onClick}>
-          删除
-        </div>
-      );
-      const content = 'content is a string';
       const wrapper = mount(SwipeCell, {
+        props: {
+          content: '内容',
+          onClick,
+        },
         slots: {
-          default: () => <div class="swipe-cell__content">{content}</div>,
-          right,
+          right: () => (
+            <div class="right-slot-btn" onClick={onSlotClick}>
+              删除
+            </div>
+          ),
         },
       });
 
-      expect(wrapper.find('.delete-btn').exists()).toBeTruthy();
+      expect(wrapper.find('.t-swipe-cell__right .right-slot-btn').exists()).toBeTruthy();
 
-      const $button = wrapper.find('.delete-btn');
-      // wrapper.vm.initData.rightWidth = 60;
-      await wrapper.setProps({ opened: true });
-      $button.trigger('click');
-      expect(onClick).toBeCalledTimes(1);
+      // 插槽自定义内容与事件生效，组件 click 事件不触发（插槽写法组件不触发）
+      await wrapper.find('.right-slot-btn').trigger('click');
+      expect(onSlotClick).toHaveBeenCalledTimes(1);
+      expect(onClick).not.toHaveBeenCalled();
     });
   });
-  // describe('functions', () => {
-  //   it(' useSwipe', async () => {
-  //     const right = [
-  //       { text: '编辑', className: 't-button--primary' },
-  //       { text: '删除', className: 't-button--danger' },
-  //     ];
-  //     const content = 'content is a string';
-  //     const wrapper = mount(<SwipeCell ref={swipeRef} content={() => <div class="swipe-cell__content">{content}</div>} right={right} />);
-  //     const swipeCell = wrapper.findComponent(SwipeCell);
-  //     const {
-  //       lengthX, lengthY, stop, direction,
-  //     } = useSwipe(wrapper, {
-  //       listenerOptions: {
-  //         capture: true,
-  //       }
-  //     });
-  //     // wrapper.vm.initData.rightWidth = 60;
-  //     // 左滑
-  //     let touchend = await move(swipeCell, -60);
-  //     expect(lengthX.value).toBe(60);
-  //     expect(lengthY.value).toBe(0);
-  //     expect(wrapper.vm.initData.moving).toBe(true);
-  //     expect(wrapper.vm.initData.moved).toBe(true);
-  //     expect(direction.value).toBe('left');
-  //     await touchend();
-  //     expect(wrapper.vm.initData.moving).toBe(false);
-  //     expect(wrapper.vm.initData.moved).toBe(true);
-  //     expect(wrapper.vm.initData.status).toBe('open');
-  //     // 原地
-  //     touchend = await move(swipeCell, 0);
-  //     expect(lengthX.value).toBe(0);
-  //     expect(lengthY.value).toBe(0);
-  //     expect(wrapper.vm.initData.moving).toBe(false);
-  //     expect(wrapper.vm.initData.moved).toBe(false);
-  //     expect(direction.value).toBe('none');
-  //     await touchend();
-  //     // 上滑
-  //     touchend = await move(swipeCell, 0, 0, -50, 0);
-  //     expect(lengthX.value).toBe(0);
-  //     expect(lengthY.value).toBe(50);
-  //     expect(wrapper.vm.initData.moving).toBe(false);
-  //     expect(wrapper.vm.initData.moved).toBe(false);
-  //     expect(direction.value).toBe('up');
-  //   });
-  // });
+
+  describe('instanceFunctions', () => {
+    it('showSure', async () => {
+      mockPanelWidth();
+      const wrapper = mount(<SwipeCell content="内容" right={RIGHT_ACTIONS} />);
+      const instance = wrapper.vm as unknown as SwipeCellInstanceFunctions;
+      await nextTick();
+
+      // 未显示时二次确认内容为空，位移在菜单宽度之外
+      const $sure = getSureRightEl(wrapper);
+      expect($sure.textContent).toBe('');
+      expect($sure.style.transform).toBe(`translate3d(${RIGHT_WIDTH}px, 0, 0)`);
+
+      // string 内容直接渲染
+      instance.showSure?.('确认删除？');
+      await nextTick();
+      await nextTick();
+      expect($sure.textContent).toBe('确认删除？');
+      expect($sure.style.transform).toBe('translate3d(0, 0, 0)');
+
+      // TNode 函数内容渲染为节点
+      instance.showSure?.(() => <div class="sure-fn">函数确认内容</div>);
+      await nextTick();
+      await nextTick();
+      expect(wrapper.find('.sure-fn').exists()).toBeTruthy();
+      expect($sure.textContent).toBe('函数确认内容');
+    });
+
+    // 源码缺口：showSure 的第二参数 onClick 被存入 handleSureClick ref，
+    // 但 swipe-cell.tsx 中二次确认容器的 onClick 写作 `(e) => handleSureClick`（返回 ref 本身，未执行 .value），
+    // 点击二次确认内容不会执行回调、也不会收起菜单，待源码修复后补充断言。
+    it.todo('showSure 的 onClick 回调在点击二次确认内容时执行');
+  });
+
+  describe('scenarios', () => {
+    describe('right menu swiping', () => {
+      it('opens at full width when released past 30% threshold', async () => {
+        mockPanelWidth();
+        const wrapper = mount(<SwipeCell content="内容" right={RIGHT_ACTIONS} />);
+        const $cell = wrapper.find('.t-swipe-cell');
+
+        await swipeBy($cell, -100);
+        // 松手后回弹至右侧菜单完整宽度
+        expect(getTransform(wrapper)).toBe(`translate3d(-${RIGHT_WIDTH}px, 0, 0)`);
+        // 菜单容器宽度按测量值渲染
+        expect(wrapper.find('.t-swipe-cell__right').attributes('style')).toContain(`width: ${RIGHT_WIDTH}px`);
+        // 松手后操作项恢复过渡动画
+        const $btn = wrapper.findAll('.t-swipe-cell__right .t-swipe-cell__content')[1];
+        expect(($btn.element as HTMLElement).style.transition).toBe('transform .6s cubic-bezier(0.18, 0.89, 0.32, 1)');
+      });
+
+      it('closes back when released below 30% threshold', async () => {
+        mockPanelWidth();
+        const wrapper = mount(<SwipeCell content="内容" right={RIGHT_ACTIONS} />);
+        const $cell = wrapper.find('.t-swipe-cell');
+
+        // 位移 20px < 160px * 0.3，松手收回
+        await swipeBy($cell, -20);
+        expect(getTransform(wrapper)).toBe('translate3d(0px, 0, 0)');
+      });
+
+      it('clamps drag offset to menu width', async () => {
+        mockPanelWidth();
+        const wrapper = mount(<SwipeCell content="内容" right={RIGHT_ACTIONS} />);
+        const $cell = wrapper.find('.t-swipe-cell');
+        const $buttons = wrapper.findAll('.t-swipe-cell__right .t-swipe-cell__content');
+        await nextTick();
+
+        await trigger($cell, 'touchstart', 0, 0);
+        await trigger($cell, 'touchmove', -100, 0);
+        // 拖拽中位移跟随手指，第二个按钮按剩余展开比例联动位移
+        expect(getTransform(wrapper)).toBe('translate3d(-100px, 0, 0)');
+        expect(($buttons[1].element as HTMLElement).style.transform).toBe('translate3d(-30px, 0, 0)');
+        // 拖拽中操作项 transition 置空
+        expect(($buttons[1].element as HTMLElement).style.transition).toBe('none');
+
+        // 超过菜单宽度后被钳制
+        await trigger($cell, 'touchmove', -300, 0);
+        expect(getTransform(wrapper)).toBe(`translate3d(-${RIGHT_WIDTH}px, 0, 0)`);
+
+        await trigger($cell, 'touchend', -300, 0);
+        expect(getTransform(wrapper)).toBe(`translate3d(-${RIGHT_WIDTH}px, 0, 0)`);
+      });
+
+      it('stays open on small rebound drag and closes beyond threshold', async () => {
+        mockPanelWidth();
+        const wrapper = mount(<SwipeCell content="内容" right={RIGHT_ACTIONS} />);
+        const $cell = wrapper.find('.t-swipe-cell');
+
+        await swipeBy($cell, -100);
+        expect(getTransform(wrapper)).toBe(`translate3d(-${RIGHT_WIDTH}px, 0, 0)`);
+
+        // 打开态小幅右滑（剩余展开比例 > 70%）松手，回弹保持打开
+        await swipeBy($cell, 40);
+        expect(getTransform(wrapper)).toBe(`translate3d(-${RIGHT_WIDTH}px, 0, 0)`);
+
+        // 右滑超过阈值松手，菜单关闭
+        await swipeBy($cell, 60);
+        expect(getTransform(wrapper)).toBe('translate3d(0px, 0, 0)');
+      });
+    });
+
+    describe('left menu swiping', () => {
+      it('opens at full width when released past 30% threshold', async () => {
+        mockPanelWidth();
+        const wrapper = mount(<SwipeCell content="内容" left={LEFT_ACTIONS} />);
+        const $cell = wrapper.find('.t-swipe-cell');
+
+        await swipeBy($cell, 60);
+        expect(getTransform(wrapper)).toBe(`translate3d(${LEFT_WIDTH}px, 0, 0)`);
+        expect(wrapper.find('.t-swipe-cell__left').attributes('style')).toContain(`width: ${LEFT_WIDTH}px`);
+      });
+
+      it('clamps drag offset to menu width', async () => {
+        mockPanelWidth();
+        const wrapper = mount(<SwipeCell content="内容" left={LEFT_ACTIONS} />);
+        const $cell = wrapper.find('.t-swipe-cell');
+
+        await swipeBy($cell, 200);
+        expect(getTransform(wrapper)).toBe(`translate3d(${LEFT_WIDTH}px, 0, 0)`);
+      });
+    });
+
+    describe('click away', () => {
+      it('closes opened menu on outside touchstart', async () => {
+        mockPanelWidth();
+        const onChange = vi.fn();
+        const wrapper = mount(<SwipeCell content="内容" right={RIGHT_ACTIONS} onChange={onChange} />);
+        const $cell = wrapper.find('.t-swipe-cell');
+
+        await swipeBy($cell, -100);
+        expect(getTransform(wrapper)).toBe(`translate3d(-${RIGHT_WIDTH}px, 0, 0)`);
+
+        // 点击组件外区域收起菜单
+        await trigger(document.body, 'touchstart', 0, 0);
+        expect(getTransform(wrapper)).toBe('translate3d(0px, 0, 0)');
+        expect(onChange).toHaveBeenLastCalledWith(undefined);
+      });
+    });
+
+    describe('content channels priority', () => {
+      it('default slot overrides content prop', () => {
+        const wrapper = mount(SwipeCell, {
+          props: {
+            content: 'content prop 内容',
+          },
+          slots: {
+            default: () => <div class="default-slot">default slot 内容</div>,
+          },
+        });
+
+        expect(wrapper.find('.default-slot').exists()).toBeTruthy();
+        expect(wrapper.text()).toContain('default slot 内容');
+        expect(wrapper.text()).not.toContain('content prop 内容');
+      });
+
+      it('content prop overrides content slot', () => {
+        const wrapper = mount(SwipeCell, {
+          props: {
+            content: 'content prop 内容',
+          },
+          slots: {
+            content: () => <div class="content-slot">content slot 内容</div>,
+          },
+        });
+
+        expect(wrapper.text()).toContain('content prop 内容');
+        expect(wrapper.find('.content-slot').exists()).toBeFalsy();
+      });
+
+      it('default prop overrides default slot', () => {
+        const wrapper = mount(SwipeCell, {
+          props: {
+            default: 'default prop 内容',
+          },
+          slots: {
+            default: () => <div class="default-slot">default slot 内容</div>,
+          },
+        });
+
+        expect(wrapper.text()).toContain('default prop 内容');
+        expect(wrapper.find('.default-slot').exists()).toBeFalsy();
+      });
+    });
+
+    describe('sure confirm flow', () => {
+      it('shows sure content after clicking action with sure and hides it on next swipe', async () => {
+        mockPanelWidth();
+        const onClick = vi.fn();
+        const wrapper = mount(
+          <SwipeCell
+            content="内容"
+            right={[{ text: '删除', className: 'delete-btn', sure: () => <div class="sure-content">确认删除？</div> }]}
+            onClick={onClick}
+          />,
+        );
+        const $cell = wrapper.find('.t-swipe-cell');
+
+        // 打开右侧菜单后点击带二次确认的操作项
+        await swipeBy($cell, -100);
+        const $sure = getSureRightEl(wrapper);
+        expect($sure.textContent).toBe('');
+
+        await wrapper.find('.t-swipe-cell__right .delete-btn').trigger('click');
+        await nextTick();
+        await nextTick();
+        // 二次确认内容展开，自动收回与 click 事件被挂起（待确认后执行）
+        expect(wrapper.find('.sure-content').exists()).toBeTruthy();
+        expect($sure.style.transform).toBe('translate3d(0, 0, 0)');
+        expect(getTransform(wrapper)).toBe(`translate3d(-${BUTTON_WIDTH}px, 0, 0)`);
+        expect(onClick).not.toHaveBeenCalled();
+
+        // 继续滑动隐藏二次确认内容并回弹至菜单完整宽度
+        await swipeBy($cell, -20);
+        expect($sure.style.transform).toBe(`translate3d(${BUTTON_WIDTH}px, 0, 0)`);
+        expect(getTransform(wrapper)).toBe(`translate3d(-${BUTTON_WIDTH}px, 0, 0)`);
+      });
+    });
+  });
 });
