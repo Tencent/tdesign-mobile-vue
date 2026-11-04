@@ -3,6 +3,7 @@ import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import Button from '../../button/index';
 import Calendar from '../calendar';
+import type { TDate } from '../type';
 import { sleep } from '../../shared/util';
 import Popup from '../../popup';
 
@@ -21,8 +22,8 @@ const value = new Date(year, month, day);
 const rangeValue = [new Date(year, month, day)];
 const confirmBtn = 'confirmBtn';
 
-const dayFormat = (date, character) => {
-  const D = new Date(date);
+const dayFormat = (date: Date | number | string | number[], character?: string) => {
+  const D = new Date(date as string | number);
   const year = D.getFullYear();
   const month = D.getMonth() + 1;
   const dates = D.getDate();
@@ -92,7 +93,7 @@ describe('Calendar', () => {
 
     it('format[function]', async () => {
       const suffix = '¥60'; // 每一个日期后均自定义 suffix = '¥60'
-      const format = (day) => {
+      const format = (day: TDate) => {
         day.suffix = suffix;
         return day;
       };
