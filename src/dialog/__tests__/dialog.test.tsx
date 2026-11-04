@@ -518,7 +518,7 @@ describe('Dialog', () => {
   });
 
   describe('scenarios', () => {
-    it('should support custom onClick in actions', async () => {
+    it('runs custom onClick from actions', async () => {
       const onClick = vi.fn();
       const onCancel = vi.fn();
       const onClose = vi.fn();
@@ -542,7 +542,7 @@ describe('Dialog', () => {
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
     });
 
-    it('should close dialog when action has no onClick', async () => {
+    it('closes via the cancel channel when an action has no onClick', async () => {
       const onCancel = vi.fn();
       const onClose = vi.fn();
       const wrapper = mount(Dialog, {
@@ -561,7 +561,7 @@ describe('Dialog', () => {
       expect(onClose).toHaveBeenCalledWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
     });
 
-    it('should trigger each action onClick independently', async () => {
+    it('triggers each action onClick independently', async () => {
       const onClickA = vi.fn();
       const onClickB = vi.fn();
       const wrapper = mount(Dialog, {
@@ -586,7 +586,7 @@ describe('Dialog', () => {
       expect(onClickB).toHaveBeenCalledTimes(1);
     });
 
-    it('should run action onClick before beforeClose intercepts closing', async () => {
+    it('runs action onClick before beforeClose intercepts closing', async () => {
       const onClick = vi.fn();
       const onCancel = vi.fn();
       // beforeClose reject 阻止关闭

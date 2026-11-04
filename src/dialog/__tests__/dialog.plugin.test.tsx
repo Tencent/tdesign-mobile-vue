@@ -160,7 +160,7 @@ describe('DialogPlugin', () => {
     // 隐藏后 destroy 不触发 closed，index.ts 中的 app.unmount/root.remove 不会执行。
     it.todo('destroys a hidden dialog and removes its mount node');
 
-    it('use plugin', async () => {
+    it('installs as a global plugin exposing $dialog', async () => {
       const wrapper = mount(() => <div />, { global: { plugins: [DialogPlugin as unknown as Plugin] } });
       const { $dialog } = wrapper.vm as unknown as { $dialog: typeof DialogPlugin };
       expect($dialog).toBe(DialogPlugin);
