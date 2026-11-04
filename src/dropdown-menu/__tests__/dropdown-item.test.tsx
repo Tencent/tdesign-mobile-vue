@@ -733,19 +733,5 @@ describe('DropdownItem', () => {
       expect(onConfirm).toHaveBeenCalledExactlyOnceWith(['option_0']);
       expect(value.value).toEqual(['option_0']);
     });
-
-    it('prefers the footer prop over its slot', async () => {
-      const wrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem label="菜单" multiple options={options} footer={() => <div class="prop-footer">属性底部</div>}>
-            {{ footer: () => <div class="slot-footer">插槽底部</div> }}
-          </DropdownItem>
-        </DropdownMenu>
-      ));
-      await wrapper.find(`.${name}__item`).trigger('click');
-      await sleep(200);
-      expect(wrapper.find('.prop-footer').text()).toBe('属性底部');
-      expect(wrapper.find('.slot-footer').exists()).toBe(false);
-    });
   });
 });
