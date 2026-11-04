@@ -202,7 +202,8 @@ describe('Indexes', () => {
       expect(onChange).toBeCalledTimes(2);
     });
 
-    it('touch', async () => {
+    // 触摸滑动侧边栏通道：滑动切换激活项仅触发 change，不触发 select
+    it('change[touch]', async () => {
       const onSelect = vi.fn();
       const onChange = vi.fn();
       const wrapper = mountIndexes({ onSelect, onChange });
