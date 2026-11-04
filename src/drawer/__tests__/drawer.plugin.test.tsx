@@ -96,10 +96,11 @@ describe('DrawerPlugin', () => {
 
     it('use plugin', () => {
       const wrapper = mount(() => <div />, { global: { plugins: [DrawerPlugin] } });
-      expect(typeof wrapper.vm.$drawer).toBe('function');
+      const { $drawer } = wrapper.vm as unknown as { $drawer: typeof DrawerPlugin };
+      expect(typeof $drawer).toBe('function');
       expect(document.body.textContent).not.toContain(title);
 
-      const handler = wrapper.vm.$drawer({ items: [{ title }] });
+      const handler = $drawer({ items: [{ title }] });
       handlers.add(handler);
       expect(document.body.textContent).toContain(title);
     });
