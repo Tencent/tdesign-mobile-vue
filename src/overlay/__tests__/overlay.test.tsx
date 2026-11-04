@@ -93,18 +93,6 @@ describe('Overlay', () => {
     });
   });
 
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Overlay, {
-        props: { visible: true },
-        slots: {
-          default: 'my content',
-        },
-      });
-      expect(wrapper.find('.t-overlay').text()).toEqual('my content');
-    });
-  });
-
   describe('events', () => {
     it('click', async () => {
       const onClick = vi.fn();
@@ -122,7 +110,7 @@ describe('Overlay', () => {
       });
     });
 
-    it('open / opened / close / closed', async () => {
+    it('open & opened & close & closed', async () => {
       const onOpen = vi.fn();
       const onOpened = vi.fn();
       const onClose = vi.fn();
@@ -150,6 +138,18 @@ describe('Overlay', () => {
       await waitFrame();
       expect(onClose).toHaveBeenCalledTimes(1);
       expect(onClosed).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('slots', () => {
+    it('default', () => {
+      const wrapper = mount(Overlay, {
+        props: { visible: true },
+        slots: {
+          default: 'my content',
+        },
+      });
+      expect(wrapper.find('.t-overlay').text()).toEqual('my content');
     });
   });
 });
