@@ -427,6 +427,52 @@ describe('Cascader', () => {
     });
   });
 
+  describe('events', () => {
+    it('change', async () => {
+      const onChange = vi.fn();
+      const leaf = { label: '叶子节点', value: 'leaf' };
+      const wrapper = mount(Cascader, { props: { options: [leaf], onChange } });
+      await wrapper.findComponent(Radio).find(`.${prefix}-radio`).trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenCalledWith('leaf', [leaf]);
+    });
+
+    it('close', async () => {
+      const onClose = vi.fn();
+      const wrapper = mount(Cascader, { props: { options, onClose } });
+      const $closeBtn = wrapper.find(`.${name}__close-btn`);
+      await $closeBtn.trigger('click');
+      expect(onClose).toHaveBeenCalledTimes(1);
+      expect(onClose).toHaveBeenLastCalledWith('close-btn');
+
+      const finishWrapper = mount(Cascader, {
+        props: { options: [{ label: '叶子节点', value: 'leaf' }], onClose },
+      });
+      await finishWrapper.findComponent(Radio).find(`.${prefix}-radio`).trigger('click');
+      expect(onClose).toHaveBeenCalledTimes(2);
+      expect(onClose).toHaveBeenLastCalledWith('finish');
+    });
+
+    // Popup 传递字符串 'overlay'，Cascader 却读取参数的 trigger 属性，实际点击不会触发该回调。
+    it.todo('close[overlay]');
+
+    it('pick', async () => {
+      const onPick = vi.fn();
+      const wrapper = mount(<Cascader options={options} onPick={onPick} />);
+      const $cascaderSteps = wrapper.findAll(`.${name}__step`);
+      // 无默认 value 值，初始化时 steps.length = 1
+      expect($cascaderSteps).toHaveLength(1);
+      const $radios = wrapper.findAllComponents(Radio);
+      expect($radios).toHaveLength(options.length);
+
+      // 模拟点击 第1项
+      const clickIndex = 0;
+      await $radios[clickIndex].find(`.t-radio`).trigger('click');
+      expect(onPick).toHaveBeenCalledTimes(1);
+      expect(onPick).toHaveBeenCalledWith({ level: 0, index: 0, value: '110000', label: '北京市' });
+    });
+  });
+
   describe('slots', () => {
     it('header', () => {
       const wrapper = mount(Cascader, {
@@ -474,6 +520,22 @@ describe('Cascader', () => {
     });
   });
 
+  describe('instanceFunctions', () => {
+    it('reset', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(Cascader, { props: { options, defaultValue: '120119', onChange } });
+      await nextTick();
+
+      const instance = wrapper.vm as typeof wrapper.vm & { reset: () => void };
+      instance.reset();
+      await nextTick();
+
+      expect(onChange).toHaveBeenCalledWith(undefined, []);
+      expect(document.querySelectorAll(`.${name}__step`)).toHaveLength(1);
+      expect(document.querySelector(`.${name}__step-label`).textContent).toBe('选择选项');
+    });
+  });
+
   describe('scenarios', () => {
     it('title prop takes priority over title slot', () => {
       const wrapper = mount(Cascader, {
@@ -518,68 +580,6 @@ describe('Cascader', () => {
       });
       expect(wrapper.find('.prop-placeholder').text()).toBe('属性提示');
       expect(wrapper.find('.slot-placeholder').exists()).toBe(false);
-    });
-  });
-
-  describe('events', () => {
-    it('change', async () => {
-      const onChange = vi.fn();
-      const leaf = { label: '叶子节点', value: 'leaf' };
-      const wrapper = mount(Cascader, { props: { options: [leaf], onChange } });
-      await wrapper.findComponent(Radio).find(`.${prefix}-radio`).trigger('click');
-      expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange).toHaveBeenCalledWith('leaf', [leaf]);
-    });
-
-    it('close', async () => {
-      const onClose = vi.fn();
-      const wrapper = mount(Cascader, { props: { options, onClose } });
-      const $closeBtn = wrapper.find(`.${name}__close-btn`);
-      await $closeBtn.trigger('click');
-      expect(onClose).toHaveBeenCalledTimes(1);
-      expect(onClose).toHaveBeenLastCalledWith('close-btn');
-
-      const finishWrapper = mount(Cascader, {
-        props: { options: [{ label: '叶子节点', value: 'leaf' }], onClose },
-      });
-      await finishWrapper.findComponent(Radio).find(`.${prefix}-radio`).trigger('click');
-      expect(onClose).toHaveBeenCalledTimes(2);
-      expect(onClose).toHaveBeenLastCalledWith('finish');
-    });
-
-    // Popup 传递字符串 'overlay'，Cascader 却读取参数的 trigger 属性，实际点击不会触发该回调。
-    it.todo('close[overlay]');
-
-    it('pick', async () => {
-      const onPick = vi.fn();
-      const wrapper = mount(<Cascader options={options} onPick={onPick} />);
-      const $cascaderSteps = wrapper.findAll(`.${name}__step`);
-      // 无默认 value 值，初始化时 steps.length = 1
-      expect($cascaderSteps).toHaveLength(1);
-      const $radios = wrapper.findAllComponents(Radio);
-      expect($radios).toHaveLength(options.length);
-
-      // 模拟点击 第1项
-      const clickIndex = 0;
-      await $radios[clickIndex].find(`.t-radio`).trigger('click');
-      expect(onPick).toHaveBeenCalledTimes(1);
-      expect(onPick).toHaveBeenCalledWith({ level: 0, index: 0, value: '110000', label: '北京市' });
-    });
-  });
-
-  describe('instanceFunctions', () => {
-    it('reset', async () => {
-      const onChange = vi.fn();
-      const wrapper = mount(Cascader, { props: { options, defaultValue: '120119', onChange } });
-      await nextTick();
-
-      const instance = wrapper.vm as typeof wrapper.vm & { reset: () => void };
-      instance.reset();
-      await nextTick();
-
-      expect(onChange).toHaveBeenCalledWith(undefined, []);
-      expect(document.querySelectorAll(`.${name}__step`)).toHaveLength(1);
-      expect(document.querySelector(`.${name}__step-label`).textContent).toBe('选择选项');
     });
   });
 });
