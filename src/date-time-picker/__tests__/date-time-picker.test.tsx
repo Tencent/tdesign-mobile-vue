@@ -143,7 +143,7 @@ describe('DateTimePicker', () => {
       expect(wrapper.find('.dtp-header').exists()).toBeTruthy();
     });
 
-    it('mode[string]', async () => {
+    it('mode[array]', async () => {
       const onPick = vi.fn();
       const wrapper = mount(DateTimePicker, {
         props: {
@@ -225,7 +225,7 @@ describe('DateTimePicker', () => {
       expect(getDateColumnTexts()).toEqual(['1 日', '2 日', '3 日']);
     });
 
-    it('start & end', async () => {
+    it('start[string] & end[string]', async () => {
       const start = '2020-6-30 10:00:00';
       const end = '2025-10-10 10:10:10';
       const startYear = start.split('-')[0];
@@ -276,7 +276,7 @@ describe('DateTimePicker', () => {
       expect(wrapper2.findAll(`.${prefix}-picker-item`)[4].findAll(`.${prefix}-picker-item__item`)).toHaveLength(60);
     });
 
-    it('title & confirmBtn & cancelBtn', async () => {
+    it('title[string] & confirmBtn[string] & cancelBtn[string]', async () => {
       const title = '';
       const confirmBtn = '';
       const cancelBtn = '';
@@ -307,17 +307,6 @@ describe('DateTimePicker', () => {
       expect($cancelButton.text()).toBe(newCancelBtn || '取消');
     });
 
-    it('defaultValue[string]', () => {
-      const wrapper = mount(DateTimePicker, { props: { defaultValue: defaultDateTime, mode: 'date' } });
-      expect(wrapper.findAll(`.${prefix}-picker-item__item--active`)).toHaveLength(3);
-    });
-
-    it('modelValue[string]', () => {
-      const wrapper = mount(DateTimePicker, { props: { modelValue: defaultDateTime, mode: 'date' } });
-      expect(wrapper.findAll(`.${prefix}-picker-item__item--active`)).toHaveLength(3);
-    });
-    it.todo('modelValue[string] updates after mount');
-
     it('value[string]', async () => {
       const value = ref(defaultDateTime);
       const wrapper = mount({
@@ -344,6 +333,18 @@ describe('DateTimePicker', () => {
       simulateMoveOption(wrapper.findAll(`.${prefix}-picker-item`)[2].element, 2);
       await wrapper.find(`.${prefix}-picker__confirm`).trigger('click');
       expect(value.value).toBe('2021-05-03 00:00:00');
+    });
+
+    it('modelValue[string]', () => {
+      const wrapper = mount(DateTimePicker, { props: { modelValue: defaultDateTime, mode: 'date' } });
+      expect(wrapper.findAll(`.${prefix}-picker-item__item--active`)).toHaveLength(3);
+    });
+    // 挂载后外部更新 modelValue 的受控联动尚未验证，待补充稳定的列滚动模拟后实现。
+    it.todo('modelValue[string] updates after mount');
+
+    it('defaultValue[string]', () => {
+      const wrapper = mount(DateTimePicker, { props: { defaultValue: defaultDateTime, mode: 'date' } });
+      expect(wrapper.findAll(`.${prefix}-picker-item__item--active`)).toHaveLength(3);
     });
   });
 
