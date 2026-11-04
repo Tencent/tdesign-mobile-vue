@@ -200,5 +200,24 @@ describe('TabBarItem', () => {
       expect(onChange).toHaveBeenLastCalledWith(2);
       expect(checkedTexts(wrapper)).toEqual(['标签三']);
     });
+
+    it('badge aria label follows tabBar global config', () => {
+      const iconSlots = { icon: () => <div class="custom-icon">icon</div> };
+      const getAriaLabel = (wrapper: ReturnType<typeof mountItem>) =>
+        wrapper.find('.t-tab-bar-item__content').attributes('aria-label');
+
+      // 无徽标：回退默认 TabBar
+      expect(getAriaLabel(mountItem({}, iconSlots))).toBe('TabBar');
+      // 圆点徽标：newsAriaLabel
+      expect(getAriaLabel(mountItem({ badgeProps: { dot: true } }, iconSlots))).toBe('有新的消息');
+      // count 为 "..."：moreNewsAriaLabel
+      expect(getAriaLabel(mountItem({ badgeProps: { count: '...' } }, iconSlots))).toBe('有很多消息');
+      // 数字 count 未超 maxCount：haveNewsAriaLabel 模板
+      expect(getAriaLabel(mountItem({ badgeProps: { count: 16 } }, iconSlots))).toBe('有 16 条消息');
+      // 数字 count 超过 maxCount：haveMoreNewsAriaLabel 模板
+      expect(getAriaLabel(mountItem({ badgeProps: { count: 100, maxCount: 99 } }, iconSlots))).toBe('有 99+ 条消息');
+      // 非数字 count：原样输出
+      expect(getAriaLabel(mountItem({ badgeProps: { count: 'New' } }, iconSlots))).toBe('New');
+    });
   });
 });
