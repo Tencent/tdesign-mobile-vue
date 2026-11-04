@@ -45,6 +45,21 @@ describe('AvatarGroup', () => {
       expect(wrapper.find('.custom-collapse').text()).toBe('查看更多');
     });
 
+    it('max[number]', () => {
+      const wrapper = mount(() => (
+        <AvatarGroup max={2}>
+          <Avatar image={IMAGE}></Avatar>
+          <Avatar image={IMAGE}></Avatar>
+          <Avatar image={IMAGE}></Avatar>
+          <Avatar image={IMAGE}></Avatar>
+          <Avatar image={IMAGE}></Avatar>
+        </AvatarGroup>
+      ));
+      const avatarList = wrapper.findAllComponents(Avatar);
+      expect(avatarList.length).toBe(3);
+      expect(avatarList[avatarList.length - 1].text()).toBe('+3');
+    });
+
     it('shape[circle/round]', () => {
       shapeList.forEach((s) => {
         const wrapper = mount(() => (
@@ -59,21 +74,6 @@ describe('AvatarGroup', () => {
           expect(avatar.classes()).toContain(`t-avatar--${s}`);
         });
       });
-    });
-
-    it('max[number]', () => {
-      const wrapper = mount(() => (
-        <AvatarGroup max={2}>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-        </AvatarGroup>
-      ));
-      const avatarList = wrapper.findAllComponents(Avatar);
-      expect(avatarList.length).toBe(3);
-      expect(avatarList[avatarList.length - 1].text()).toBe('+3');
     });
 
     it('size[string]', () => {
