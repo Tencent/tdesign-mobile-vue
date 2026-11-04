@@ -87,7 +87,9 @@ describe('Overlay', () => {
       await wrapper.setProps({
         zIndex: 99,
       });
-      expect(getComputedStyle(wrapper.find('.t-overlay').element)['z-index']).toEqual('99');
+      const style = getComputedStyle(wrapper.find('.t-overlay').element) as CSSStyleDeclaration &
+        Record<string, string>;
+      expect(style['z-index']).toEqual('99');
     });
   });
 
