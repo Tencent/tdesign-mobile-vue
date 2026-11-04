@@ -1,4 +1,3 @@
-import { ref } from 'vue';
 import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { afterEach, describe, it, expect, vi } from 'vitest';
 import List from '../index';
@@ -130,7 +129,7 @@ describe('List', () => {
       const wrapper = mount(ConfigProvider, {
         props: { globalConfig: { list: { loading: 'Loading...', loadingMoreText: 'Load more' } } },
         slots: {
-          default: () => <List asyncLoading={ref('loading').value} v-slots={{ default: () => <TCell>内容</TCell> }} />,
+          default: () => <List asyncLoading="loading" v-slots={{ default: () => <TCell>内容</TCell> }} />,
         },
       });
       expect(wrapper.findComponent(TLoading).props('text')).toBe('Loading...');
