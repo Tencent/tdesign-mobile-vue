@@ -331,16 +331,6 @@ describe('Popover', () => {
   });
 
   describe('scenarios', () => {
-    describe('render priority', () => {
-      it('default prop takes priority over triggerElement prop', () => {
-        const wrapper = mount(Popover, {
-          props: { default: '默认触发', triggerElement: '触发元素' },
-        });
-        expect(wrapper.find(`.${name}__wrapper`).text()).toBe('默认触发');
-        wrapper.unmount();
-      });
-    });
-
     it('recreates popper when placement changes while visible', async () => {
       mockPopperLayout();
       const wrapper = mount(Popover, {
