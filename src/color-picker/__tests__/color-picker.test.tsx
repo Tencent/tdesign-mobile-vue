@@ -10,7 +10,13 @@ const mountColorPicker = (props: TdColorPickerProps) =>
     props,
   });
 
-const makeTouch = (el, eventName, touchPosition) => {
+interface TouchPosition {
+  pageX: number;
+  pageY: number;
+  clientY: number;
+}
+
+const makeTouch = (el: Element, eventName: string, touchPosition: TouchPosition) => {
   const event = new Event(eventName);
   if (touchPosition) {
     Object.defineProperty(event, 'changedTouches', { value: [touchPosition] });
@@ -19,8 +25,8 @@ const makeTouch = (el, eventName, touchPosition) => {
   el.dispatchEvent(event);
 };
 
-const mockBoundingClientRect = (info) => {
-  vi.spyOn(window.HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue(info);
+const mockBoundingClientRect = (info: Partial<DOMRect>) => {
+  vi.spyOn(window.HTMLElement.prototype, 'getBoundingClientRect').mockReturnValue(info as DOMRect);
 };
 
 afterEach(() => {
@@ -33,7 +39,7 @@ describe('ColorPicker', () => {
     it.todo('clearable[boolean]');
 
     it('enableAlpha[boolean]', () => {
-      const testEnableAlpha = (enableAlpha) => {
+      const testEnableAlpha = (enableAlpha?: TdColorPickerProps['enableAlpha']) => {
         const wrapper = mountColorPicker({ enableAlpha, type: 'multiple' });
         const alphaDom = wrapper.findAll('.t-color-picker__slider-wrapper--alpha-type');
         expect(alphaDom).toHaveLength(enableAlpha ? 1 : 0);
@@ -69,7 +75,7 @@ describe('ColorPicker', () => {
     });
 
     it('format[RGB/HEX]', () => {
-      const testFormat = (format, target) => {
+      const testFormat = (format: TdColorPickerProps['format'], target: string) => {
         const wrapper = mountColorPicker({ format, type: 'multiple' });
         const dom = wrapper.find('.t-color-picker__format-item--first');
         expect(dom.element.innerHTML).toBe(target);
@@ -87,7 +93,7 @@ describe('ColorPicker', () => {
     });
 
     it('swatchColors[array]', () => {
-      const testSwatchColors = (swatchColors, target) => {
+      const testSwatchColors = (swatchColors: TdColorPickerProps['swatchColors'], target: number) => {
         const wrapper = mountColorPicker({ swatchColors });
         const dom = wrapper.findAll('.t-color-picker__swatches-item');
         expect(dom).toHaveLength(target);
@@ -100,7 +106,7 @@ describe('ColorPicker', () => {
 
     it('type[base/multiple]', () => {
       // base 仅展示系统预设内容；multiple 额外渲染色板（饱和度面板）
-      const testType = (type, target) => {
+      const testType = (type: TdColorPickerProps['type'], target: number) => {
         const wrapper = mountColorPicker({ type });
         // 未传 type 时默认 base
         expect(wrapper.find('.t-color-picker__body').classes()).toContain(`t-color-picker__body--${type || 'base'}`);
