@@ -129,6 +129,7 @@ describe('Image', () => {
       expect(wrapper.find(`.${name}__mask`).exists()).toBeFalsy();
     });
 
+    // mask 渲染以 slots 为门槛，组件未读取 loading 属性，仅设置 Prop 时仍展示默认图标。
     it.todo('loading[string]');
     it.todo('loading[function]');
 
@@ -331,8 +332,8 @@ describe('Image', () => {
     // src 更新只修改 realSrc，没有重置 isLoading/isError。
     it.todo('resets loading and error state when the image source changes');
 
-    describe('状态流转', () => {
-      it('默认加载中状态展示 loading 图标，加载完成后遮罩消失', async () => {
+    describe('state transitions', () => {
+      it('shows the loading icon while loading and hides the mask once loaded', async () => {
         const wrapper = mount(() => <Image src={IMAGE} />);
         await nextTick();
         const $image = wrapper.find(`.${name}__img`);
@@ -341,7 +342,7 @@ describe('Image', () => {
         expect(wrapper.find(`.${name}__mask`).exists()).toBeFalsy();
       });
 
-      it('加载失败后默认展示关闭图标', async () => {
+      it('shows the close icon after loading fails', async () => {
         const wrapper = mount(() => <Image src={FAIL_IMAGE} />);
         await nextTick();
         const $image = wrapper.find(`.${name}__img`);
@@ -352,7 +353,7 @@ describe('Image', () => {
       });
     });
 
-    describe('prop 与 slot 优先级', () => {
+    describe('prop and slot priority', () => {
       it('loading function takes priority and falls back to its slot when removed', async () => {
         const wrapper = mount(Image, {
           props: { src: IMAGE, loading: () => <span class="prop-loading">属性加载中</span> },
@@ -378,7 +379,7 @@ describe('Image', () => {
         expect(wrapper.find('.prop-error').exists()).toBe(false);
       });
 
-      it('loading 同时设置 prop 与 slot 时优先渲染 prop 内容', () => {
+      it('loading prop takes priority over loading slot', () => {
         const slots = {
           loading: () => 'SLOT加载中',
         };
@@ -388,7 +389,7 @@ describe('Image', () => {
         expect($status.text()).toBe('PROP加载中');
       });
 
-      it('error 同时设置 prop 与 slot 时优先渲染 prop 内容', async () => {
+      it('error prop takes priority over error slot', async () => {
         const slots = {
           error: () => 'SLOT加载失败',
         };
