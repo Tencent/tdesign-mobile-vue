@@ -169,6 +169,16 @@ describe('Typography Text', () => {
       expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--disabled`);
     });
 
+    it('disabled[boolean] & theme[primary]', () => {
+      const wrapper = mount(Text, {
+        props: { theme: 'primary', disabled: true },
+        slots: { default: () => shortText },
+      });
+      // disabled 优先级高于 theme，只保留禁用样式类
+      expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--disabled`);
+      expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).not.toContain(`${COMPONENT_NAME}--primary`);
+    });
+
     it('ellipsis[boolean]', () => {
       const wrapper = mount(Text, {
         props: { ellipsis: true },
@@ -340,16 +350,6 @@ describe('Typography Text', () => {
         slots: { default: () => shortText },
       });
       expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--error`);
-    });
-
-    it('disabled[boolean] & theme[primary]', () => {
-      const wrapper = mount(Text, {
-        props: { theme: 'primary', disabled: true },
-        slots: { default: () => shortText },
-      });
-      // disabled 优先级高于 theme，只保留禁用样式类
-      expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--disabled`);
-      expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).not.toContain(`${COMPONENT_NAME}--primary`);
     });
 
     it('underline[boolean]', () => {
