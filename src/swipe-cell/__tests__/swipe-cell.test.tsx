@@ -449,7 +449,7 @@ describe('SwipeCell', () => {
     // 源码缺口：showSure 的第二参数 onClick 被存入 handleSureClick ref，
     // 但 swipe-cell.tsx 中二次确认容器的 onClick 写作 `(e) => handleSureClick`（返回 ref 本身，未执行 .value），
     // 点击二次确认内容不会执行回调、也不会收起菜单，待源码修复后补充断言。
-    it.todo('showSure 的 onClick 回调在点击二次确认内容时执行');
+    it.todo('showSure onClick callback executes on sure content click');
   });
 
   describe('scenarios', () => {
