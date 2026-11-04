@@ -3,6 +3,7 @@ import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import ColorPicker from '../index';
 import { getColorObject, Color } from '../../_common/js/color-picker';
+import { getFormatList } from '../helper';
 import type { TdColorPickerProps } from '../type';
 
 const mountColorPicker = (props: TdColorPickerProps) =>
@@ -88,7 +89,11 @@ describe('ColorPicker', () => {
       const formats = ['HEX8', 'RGBA', 'HSL', 'HSLA', 'HSV', 'HSVA', 'CMYK', 'CSS'] as const;
       formats.forEach((format) => {
         const wrapper = mountColorPicker({ format, type: 'multiple' });
-        expect(wrapper.find('.t-color-picker__format-item--first').text()).toBe(format);
+        const first = wrapper.find('.t-color-picker__format-item--first');
+        expect(first.text()).toBe(format);
+        const actualValues = wrapper.findAll('.t-color-picker__format-input').map((item) => item.text());
+        const [_, expectedValues] = getFormatList(format, new Color('#001f97'));
+        expect(actualValues).toEqual(expectedValues.map(String));
       });
     });
 

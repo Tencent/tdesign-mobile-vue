@@ -116,6 +116,8 @@ describe('ActionSheet', () => {
         },
       });
       expect(wrapper.find(`.${name}__content`).exists()).toEqual(true);
+      expect(wrapper.find(`.${name}__footer`).exists()).toEqual(true);
+      expect(wrapper.find(`.${name}__footer`).text()).toContain('取消');
       await wrapper.setProps({
         showCancel: false,
       });

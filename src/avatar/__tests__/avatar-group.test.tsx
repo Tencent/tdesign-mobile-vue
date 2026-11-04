@@ -86,7 +86,11 @@ describe('AvatarGroup', () => {
         ));
         expect(wrapper.classes()).toContain('t-avatar-group');
         expect(wrapper.classes()).toContain(`t-avatar-group-offset-right-${s}`);
-        expect(wrapper.findAll('.t-avatar')).toHaveLength(2);
+        const avatars = wrapper.findAll('.t-avatar');
+        expect(avatars).toHaveLength(2);
+        avatars.forEach((avatar) => {
+          expect(avatar.classes()).toContain(`t-avatar--${s}`);
+        });
       });
     });
   });

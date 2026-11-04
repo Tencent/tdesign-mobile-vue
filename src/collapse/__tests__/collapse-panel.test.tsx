@@ -64,7 +64,12 @@ describe('CollapsePanel', () => {
       expect(wrapper.findAll('.t-collapse-panel__content')).toHaveLength(0);
 
       const retained = mountPanel({ content: '保留内容', destroyOnCollapse: false });
-      expect(retained.find('.t-collapse-panel__content').text()).toBe('保留内容');
+      const retainedContent = retained.find('.t-collapse-panel__content');
+      expect(retainedContent.exists()).toBe(true);
+      expect(retainedContent.text()).toBe('保留内容');
+      expect(retained.find('.t-collapse-panel__body').attributes('style')).toContain('grid-template-rows: 0fr');
+      await retained.find('.t-collapse-panel__header').trigger('click');
+      expect(retained.find('.t-collapse-panel__body').attributes('style')).toContain('grid-template-rows: 1fr');
     });
 
     test('disabled[boolean]', async () => {

@@ -111,6 +111,17 @@ describe('Badge', () => {
       expect(inner.attributes('style').includes(`left: calc(100% + ${offset[0]}px); top: ${offset[1]}px`)).toBeTruthy();
     });
 
+    it('offset[unit strings]', () => {
+      const wrapper = mount(() => (
+        <Badge count={1} offset={['10em', '8rem']}>
+          <Button>按钮</Button>
+        </Badge>
+      ));
+      const style = wrapper.find(`.${name}--basic`).attributes('style');
+      expect(style).toContain('left: calc(100% + 10em)');
+      expect(style).toContain('top: 8rem');
+    });
+
     it('shape[circle/square/bubble/ribbon/ribbon-right/ribbon-left/triangle-right/triangle-left]', () => {
       const shapes = [
         'circle',

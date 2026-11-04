@@ -208,7 +208,7 @@ describe('Calendar', () => {
       await wrapper2.findAll(`.${name}-header__icon`)[1].trigger('click');
       expect(onPanelChange).toHaveBeenCalledWith({ year: 2022, month: 2 });
       // 交互后内容已 teleport 到 body，从 document 查询
-      expect(document.querySelector(`.${name}-header__title`).textContent).toContain('2');
+      expect(document.querySelector(`.${name}-header__title`).textContent).toContain('2022 年 2');
 
       // switchMode = year-month：额外支持切年，共 4 个切换按钮
       const wrapper3 = mount(
