@@ -99,7 +99,7 @@ describe('Badge', () => {
       expect(inner.text()).toEqual(`${maxCount}+`);
     });
 
-    it('offset[array]', () => {
+    it('offset[array<number>]', () => {
       const count = 100;
       const offset = [20, 30];
       const wrapper = mount(() => (
@@ -111,7 +111,7 @@ describe('Badge', () => {
       expect(inner.attributes('style').includes(`left: calc(100% + ${offset[0]}px); top: ${offset[1]}px`)).toBeTruthy();
     });
 
-    it('offset[unit strings]', () => {
+    it('offset[array<string>]', () => {
       const wrapper = mount(() => (
         <Badge count={1} offset={['10em', '8rem']}>
           <Button>按钮</Button>
