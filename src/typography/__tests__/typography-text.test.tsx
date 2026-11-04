@@ -1,8 +1,13 @@
 import { h, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
-import { afterEach, beforeEach, describe, it, expect, vi } from 'vitest';
+import { afterEach, describe, it, expect, vi } from 'vitest';
+import { CheckIcon, CopyIcon } from 'tdesign-icons-vue-next';
 import Text from '../text';
 import Ellipsis from '../ellipsis';
+import { copy } from '../../_util/copy-to-clipboard';
+
+// 固定剪贴板行为：将复制工具替换为确定的 mock，便于断言被复制的文本
+vi.mock('../../_util/copy-to-clipboard', () => ({ copy: vi.fn() }));
 
 const prefix = 't';
 const COMPONENT_NAME = `${prefix}-typography`;
@@ -12,16 +17,9 @@ const longText =
 const shortText = 'TDesign 是腾讯各业务团队在服务业务过程中沉淀的一套企业级设计体系。';
 
 describe('Typography Text', () => {
-  beforeEach(() => {
-    Object.defineProperty(document, 'execCommand', {
-      configurable: true,
-      value: vi.fn(() => true),
-    });
-  });
-
   afterEach(() => {
-    Reflect.deleteProperty(document, 'execCommand');
-    vi.restoreAllMocks();
+    vi.clearAllMocks();
+    vi.useRealTimers();
   });
 
   describe('props', () => {
@@ -38,103 +36,18 @@ describe('Typography Text', () => {
       const wrapper = mount(Text, {
         props: { content: shortText },
       });
-      expect(wrapper.find(`.${COMPONENT_NAME}`).exists()).toBe(true);
-      expect(wrapper.text()).toContain(shortText);
+      expect(wrapper.find(`span.${COMPONENT_NAME}`).exists()).toBe(true);
+      expect(wrapper.text()).toBe(shortText);
     });
 
     it('content[function]', () => {
       const wrapper = mount(Text, {
         props: { content: () => shortText },
       });
-      expect(wrapper.text()).toContain(shortText);
+      expect(wrapper.text()).toBe(shortText);
     });
 
-    it('copyable[boolean]', () => {
-      const wrapper = mount(Text, {
-        props: { copyable: true },
-        slots: { default: () => shortText },
-      });
-      expect(wrapper.find(`.${COMPONENT_NAME}__copy`).exists()).toBe(true);
-    });
-
-    it('copyable[object] with onCopy callback', async () => {
-      const handleCopy = vi.fn();
-      const wrapper = mount(Text, {
-        props: {
-          copyable: {
-            onCopy: handleCopy,
-          },
-        },
-        slots: { default: () => shortText },
-      });
-
-      const copyBtn = wrapper.find(`.${COMPONENT_NAME}__copy`);
-      expect(copyBtn.exists()).toBe(true);
-
-      await copyBtn.trigger('click');
-      expect(handleCopy).toHaveBeenCalled();
-    });
-
-    it('copyable[object] with custom text', async () => {
-      const customText = '自定义复制文本';
-      const handleCopy = vi.fn();
-      const wrapper = mount(Text, {
-        props: {
-          copyable: {
-            text: customText,
-            onCopy: handleCopy,
-          },
-        },
-        slots: { default: () => shortText },
-      });
-
-      const copyBtn = wrapper.find(`.${COMPONENT_NAME}__copy`);
-      await copyBtn.trigger('click');
-      expect(handleCopy).toHaveBeenCalled();
-    });
-
-    it('copyable[object] with custom suffix function', () => {
-      const suffix = (h, { copied }) => h('span', { class: 'custom-icon' }, copied ? '已复制' : '复制');
-      const wrapper = mount(Text, {
-        props: {
-          copyable: {
-            suffix,
-          },
-        },
-        slots: { default: () => shortText },
-      });
-
-      expect(wrapper.find('.custom-icon').exists()).toBe(true);
-    });
-
-    it('copyable[object] with VNode suffix', () => {
-      const wrapper = mount(Text, {
-        props: {
-          copyable: {
-            suffix: h('span', { class: 'vnode-suffix' }, '复制'),
-          },
-        },
-        slots: { default: () => shortText },
-      });
-
-      expect(wrapper.find('.vnode-suffix').exists()).toBe(true);
-    });
-
-    it('copyable[object] with string suffix', () => {
-      const wrapper = mount(Text, {
-        props: {
-          copyable: {
-            suffix: 'copy-text',
-          },
-        },
-        slots: { default: () => shortText },
-      });
-
-      // String suffix is rendered as-is
-      expect(wrapper.find(`.${COMPONENT_NAME}__copy`).exists()).toBe(true);
-    });
-
-    it('copyable icon changes after click', async () => {
+    it('copyable[boolean]', async () => {
       vi.useFakeTimers();
       const wrapper = mount(Text, {
         props: { copyable: true },
@@ -142,48 +55,101 @@ describe('Typography Text', () => {
       });
 
       const copyBtn = wrapper.find(`.${COMPONENT_NAME}__copy`);
+      expect(copyBtn.exists()).toBe(true);
+      // 默认展示复制图标
+      expect(wrapper.findComponent(CopyIcon).exists()).toBe(true);
+      expect(wrapper.findComponent(CheckIcon).exists()).toBe(false);
+
       await copyBtn.trigger('click');
       await nextTick();
+      expect(copy).toHaveBeenCalledWith(shortText);
+      // 复制后展示已复制图标
+      expect(wrapper.findComponent(CopyIcon).exists()).toBe(false);
+      expect(wrapper.findComponent(CheckIcon).exists()).toBe(true);
 
-      // After click, should show CheckIcon
-      expect(wrapper.find(`.${COMPONENT_NAME}__copy`).exists()).toBe(true);
-
-      // After 1500ms, should revert
+      // 1500ms 后恢复复制图标
       vi.advanceTimersByTime(1500);
       await nextTick();
+      expect(wrapper.findComponent(CopyIcon).exists()).toBe(true);
+      expect(wrapper.findComponent(CheckIcon).exists()).toBe(false);
+    });
 
+    it('copyable[object]', async () => {
+      const wrapper = mount(Text, {
+        props: { copyable: {} },
+        slots: { default: () => shortText },
+      });
       expect(wrapper.find(`.${COMPONENT_NAME}__copy`).exists()).toBe(true);
-      vi.useRealTimers();
+      // 未配置 suffix 时使用默认复制图标
+      expect(wrapper.findComponent(CopyIcon).exists()).toBe(true);
+
+      await wrapper.find(`.${COMPONENT_NAME}__copy`).trigger('click');
+      expect(copy).toHaveBeenCalledWith(shortText);
     });
 
-    it('copyable with string content copies text', async () => {
-      const handleCopy = vi.fn();
+    it('copyable[object] text[string]', async () => {
+      const customText = '自定义复制文本';
       const wrapper = mount(Text, {
-        props: {
-          content: shortText,
-          copyable: {
-            onCopy: handleCopy,
-          },
-        },
+        props: { copyable: { text: customText } },
+        slots: { default: () => shortText },
       });
 
       await wrapper.find(`.${COMPONENT_NAME}__copy`).trigger('click');
-      expect(handleCopy).toHaveBeenCalled();
+      expect(copy).toHaveBeenCalledWith(customText);
     });
 
-    it('copyable with no text content returns empty', async () => {
-      const handleCopy = vi.fn();
+    it('copyable[object] suffix[string]', () => {
+      const wrapper = mount(Text, {
+        props: { copyable: { suffix: 'copy-text' as any } },
+        slots: { default: () => shortText },
+      });
+      expect(wrapper.find(`.${COMPONENT_NAME}__copy`).text()).toBe('copy-text');
+    });
+
+    it('copyable[object] suffix[function]', async () => {
+      vi.useFakeTimers();
+      const suffix = (h: any, { copied }: any) => h('span', { class: 'custom-icon' }, copied ? '已复制' : '复制');
+      const wrapper = mount(Text, {
+        props: { copyable: { suffix } },
+        slots: { default: () => shortText },
+      });
+
+      expect(wrapper.find('.custom-icon').exists()).toBe(true);
+      expect(wrapper.find('.custom-icon').text()).toBe('复制');
+
+      await wrapper.find(`.${COMPONENT_NAME}__copy`).trigger('click');
+      await nextTick();
+      // 已复制状态下隐藏自定义 suffix，回落为默认的已复制图标
+      expect(wrapper.find('.custom-icon').exists()).toBe(false);
+      expect(wrapper.findComponent(CheckIcon).exists()).toBe(true);
+    });
+
+    it('copyable[object] suffix[vnode]', () => {
       const wrapper = mount(Text, {
         props: {
           copyable: {
-            onCopy: handleCopy,
+            // 运行时支持 VNode 后缀（类型声明仅包含 TNode 函数，需断言）
+            suffix: h('span', { class: 'vnode-suffix' }, '复制') as any,
           },
         },
-        slots: { default: () => h('div', {}, 'nested') },
+        slots: { default: () => shortText },
       });
+      expect(wrapper.find('.vnode-suffix').exists()).toBe(true);
+      expect(wrapper.find('.vnode-suffix').text()).toBe('复制');
+    });
 
-      await wrapper.find(`.${COMPONENT_NAME}__copy`).trigger('click');
-      expect(handleCopy).toHaveBeenCalled();
+    it('default[string]', () => {
+      const wrapper = mount(Text, {
+        props: { default: shortText },
+      });
+      expect(wrapper.text()).toBe(shortText);
+    });
+
+    it('default[function]', () => {
+      const wrapper = mount(Text, {
+        props: { default: () => shortText },
+      });
+      expect(wrapper.text()).toBe(shortText);
     });
 
     it('delete[boolean]', () => {
@@ -192,6 +158,7 @@ describe('Typography Text', () => {
         slots: { default: () => shortText },
       });
       expect(wrapper.find('del').exists()).toBe(true);
+      expect(wrapper.find('del').text()).toBe(shortText);
     });
 
     it('disabled[boolean]', () => {
@@ -207,123 +174,84 @@ describe('Typography Text', () => {
         props: { ellipsis: true },
         slots: { default: () => longText },
       });
-      // When ellipsis is true, it should render through Ellipsis component
       expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
+      expect(wrapper.text()).toContain(longText);
+      const pEl = wrapper.find('p');
+      expect(pEl.exists()).toBe(true);
+      expect(pEl.element.style.overflow).toBe('hidden');
+      expect(pEl.element.style.textOverflow).toBe('ellipsis');
     });
 
-    it('ellipsis[object] with row', () => {
+    it('ellipsis[object] row[number]', () => {
       const wrapper = mount(Text, {
-        props: {
-          ellipsis: {
-            row: 2,
-          },
-        },
+        props: { ellipsis: { row: 2 } },
         slots: { default: () => longText },
       });
-      expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
+      expect(wrapper.findComponent(Ellipsis).props('ellipsis')).toEqual({ row: 2 });
+      expect(wrapper.find('p').element.style.overflow).toBe('hidden');
     });
 
-    it('ellipsis[object] with expandable', async () => {
-      const onExpand = vi.fn();
-      const wrapper = mount(Text, {
-        props: {
-          ellipsis: {
-            row: 1,
-            expandable: true,
-            onExpand,
-          },
-        },
+    it('ellipsis[object] expandable[true/false]', () => {
+      const expandableWrapper = mount(Text, {
+        props: { ellipsis: { expandable: true } },
         slots: { default: () => longText },
       });
+      const symbol = expandableWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
+      expect(symbol.exists()).toBe(true);
+      expect(symbol.text()).toBe('展开');
 
-      await nextTick();
-      const expandSymbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
-      expect(expandSymbol.exists()).toBe(true);
-
-      await expandSymbol.trigger('click');
-      expect(onExpand).toHaveBeenCalledWith(true);
+      const collapsedWrapper = mount(Text, {
+        props: { ellipsis: { expandable: false } },
+        slots: { default: () => longText },
+      });
+      expect(collapsedWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
     });
 
-    it('ellipsis[object] with collapsible', async () => {
-      const onExpand = vi.fn();
-      const wrapper = mount(Text, {
-        props: {
-          ellipsis: {
-            row: 1,
-            expandable: true,
-            collapsible: true,
-            onExpand,
-          },
-        },
+    it('ellipsis[object] collapsible[true/false]', async () => {
+      const collapsibleWrapper = mount(Text, {
+        props: { ellipsis: { expandable: true, collapsible: true } },
         slots: { default: () => longText },
       });
 
-      await nextTick();
-      const expandSymbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
-      await expandSymbol.trigger('click');
-      expect(onExpand).toHaveBeenCalledWith(true);
-
-      // After expanding, should show collapse symbol
-      await nextTick();
-      const collapseSymbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
+      // 展开后出现「收起」按钮，且内容样式恢复完整展示
+      await collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
+      const collapseSymbol = collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
       expect(collapseSymbol.exists()).toBe(true);
+      expect(collapseSymbol.text()).toBe('收起');
+      expect((collapseSymbol.element as HTMLElement).style.marginRight).toBe('0px');
+      expect(collapsibleWrapper.find('p').element.style.overflow).toBe('visible');
+      expect(collapsibleWrapper.find('p').element.style.display).toBe('initial');
 
+      // 再次点击收起，恢复省略样式与「展开」按钮
       await collapseSymbol.trigger('click');
-      expect(onExpand).toHaveBeenCalledWith(false);
-    });
+      const expandSymbol = collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
+      expect(expandSymbol.text()).toBe('展开');
+      expect(collapsibleWrapper.find('p').element.style.overflow).toBe('hidden');
 
-    it('ellipsis[object] with collapsible=false', async () => {
-      const onExpand = vi.fn();
-      const wrapper = mount(Text, {
-        props: {
-          ellipsis: {
-            row: 1,
-            expandable: true,
-            collapsible: false,
-            onExpand,
-          },
-        },
+      const unCollapsibleWrapper = mount(Text, {
+        props: { ellipsis: { expandable: true, collapsible: false } },
         slots: { default: () => longText },
       });
-
-      await nextTick();
-      const expandSymbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
-      await expandSymbol.trigger('click');
-
-      // After expanding with collapsible=false, no collapse symbol should appear
-      await nextTick();
-      expect(wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
+      await unCollapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
+      // collapsible 为 false 时展开后不再出现任何按钮，内容保持完整展示
+      expect(unCollapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
+      expect(unCollapsibleWrapper.find('p').element.style.overflow).toBe('visible');
     });
 
-    it('ellipsis[object] with custom suffix', async () => {
+    it('ellipsis[object] suffix[function]', () => {
       const wrapper = mount(Text, {
         props: {
           ellipsis: {
             expandable: true,
-            suffix: (h, { expanded }) => h('span', { class: 'custom-suffix' }, expanded ? '收起' : '更多'),
+            suffix: (h: any, { expanded }: any) => h('span', { class: 'custom-suffix' }, expanded ? '收起' : '更多'),
           },
         },
         slots: { default: () => longText },
       });
-
-      await nextTick();
-      const expandSymbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
-      expect(expandSymbol.exists()).toBe(true);
-    });
-
-    it('copyable with function content copies empty string', async () => {
-      const handleCopy = vi.fn();
-      const wrapper = mount(Text, {
-        props: {
-          content: () => shortText,
-          copyable: {
-            onCopy: handleCopy,
-          },
-        },
-      });
-
-      await wrapper.find(`.${COMPONENT_NAME}__copy`).trigger('click');
-      expect(handleCopy).toHaveBeenCalled();
+      const symbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
+      expect(symbol.exists()).toBe(true);
+      expect(symbol.find('.custom-suffix').exists()).toBe(true);
+      expect(symbol.text()).toBe('更多');
     });
 
     it('italic[boolean]', () => {
@@ -332,6 +260,7 @@ describe('Typography Text', () => {
         slots: { default: () => shortText },
       });
       expect(wrapper.find('i').exists()).toBe(true);
+      expect(wrapper.find('i').text()).toBe(shortText);
     });
 
     it('keyboard[boolean]', () => {
@@ -340,6 +269,7 @@ describe('Typography Text', () => {
         slots: { default: () => shortText },
       });
       expect(wrapper.find('kbd').exists()).toBe(true);
+      expect(wrapper.find('kbd').text()).toBe(shortText);
     });
 
     it('mark[boolean]', () => {
@@ -347,18 +277,20 @@ describe('Typography Text', () => {
         props: { mark: true },
         slots: { default: () => shortText },
       });
-      expect(wrapper.find('mark').exists()).toBe(true);
+      const markEl = wrapper.find('mark');
+      expect(markEl.exists()).toBe(true);
+      expect(markEl.element.style.backgroundColor).toBe('');
     });
 
-    it('mark[string] with color', () => {
-      const color = '#07c160';
+    it('mark[string]', () => {
       const wrapper = mount(Text, {
-        props: { mark: color },
+        props: { mark: '#07c160' },
         slots: { default: () => shortText },
       });
-      expect(wrapper.find('mark').exists()).toBe(true);
-      // jsdom converts hex to rgb format
-      expect(wrapper.find('mark').element.style.backgroundColor).toBe('rgb(7, 193, 96)');
+      const markEl = wrapper.find('mark');
+      expect(markEl.exists()).toBe(true);
+      // jsdom 会将十六进制颜色转换为 rgb 格式
+      expect(markEl.element.style.backgroundColor).toBe('rgb(7, 193, 96)');
     });
 
     it('strong[boolean]', () => {
@@ -367,6 +299,7 @@ describe('Typography Text', () => {
         slots: { default: () => shortText },
       });
       expect(wrapper.find('strong').exists()).toBe(true);
+      expect(wrapper.find('strong').text()).toBe(shortText);
     });
 
     it('theme[primary]', () => {
@@ -409,11 +342,12 @@ describe('Typography Text', () => {
       expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--error`);
     });
 
-    it('theme should not add class when disabled', () => {
+    it('disabled[boolean] & theme[primary]', () => {
       const wrapper = mount(Text, {
         props: { theme: 'primary', disabled: true },
         slots: { default: () => shortText },
       });
+      // disabled 优先级高于 theme，只保留禁用样式类
       expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--disabled`);
       expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).not.toContain(`${COMPONENT_NAME}--primary`);
     });
@@ -424,6 +358,35 @@ describe('Typography Text', () => {
         slots: { default: () => shortText },
       });
       expect(wrapper.find('u').exists()).toBe(true);
+      expect(wrapper.find('u').text()).toBe(shortText);
+    });
+  });
+
+  describe('events', () => {
+    it('copy', async () => {
+      const onCopy = vi.fn();
+      const wrapper = mount(Text, {
+        props: { copyable: { onCopy } },
+        slots: { default: () => shortText },
+      });
+
+      await wrapper.find(`.${COMPONENT_NAME}__copy`).trigger('click');
+      expect(onCopy).toHaveBeenCalledTimes(1);
+      expect(copy).toHaveBeenCalledWith(shortText);
+    });
+
+    it('expand', async () => {
+      const onExpand = vi.fn();
+      const wrapper = mount(Text, {
+        props: { ellipsis: { expandable: true, collapsible: true, onExpand } },
+        slots: { default: () => longText },
+      });
+
+      await wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
+      expect(onExpand).toHaveBeenCalledWith(true);
+
+      await wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
+      expect(onExpand).toHaveBeenCalledWith(false);
     });
   });
 
@@ -432,51 +395,81 @@ describe('Typography Text', () => {
       const wrapper = mount(Text, {
         slots: { default: () => shortText },
       });
-      expect(wrapper.text()).toContain(shortText);
+      expect(wrapper.find(`span.${COMPONENT_NAME}`).exists()).toBe(true);
+      expect(wrapper.text()).toBe(shortText);
     });
 
     it('content', () => {
       const wrapper = mount(Text, {
         slots: { content: () => shortText },
       });
-      expect(wrapper.text()).toContain(shortText);
+      expect(wrapper.text()).toBe(shortText);
     });
   });
 
   describe('scenarios', () => {
-    it('ellipsis and :copyable together renders copy in ellipsis mode', () => {
+    it('ellipsis[boolean] & copyable[boolean]', () => {
       const wrapper = mount(Text, {
-        props: {
-          ellipsis: true,
-          copyable: true,
-        },
+        props: { ellipsis: true, copyable: true },
         slots: { default: () => longText },
       });
       expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
+      // 省略模式下复制按钮由 Ellipsis 渲染
       expect(wrapper.find(`.${COMPONENT_NAME}__copy`).exists()).toBe(true);
     });
 
-    it('multiple decorations combined', () => {
+    it('multiple decorations nested in fixed order', () => {
       const wrapper = mount(Text, {
         props: {
           strong: true,
-          italic: true,
           underline: true,
+          delete: true,
           code: true,
+          mark: true,
+          keyboard: true,
+          italic: true,
         },
         slots: { default: () => shortText },
       });
-      expect(wrapper.find('strong').exists()).toBe(true);
-      expect(wrapper.find('i').exists()).toBe(true);
-      expect(wrapper.find('u').exists()).toBe(true);
-      expect(wrapper.find('code').exists()).toBe(true);
+      // 修饰标签按 strong/underline/delete/code/mark/keyboard/italic 依次向外嵌套
+      expect(wrapper.find('i kbd mark code del u strong').exists()).toBe(true);
+      expect(wrapper.find('i kbd mark code del u strong').text()).toBe(shortText);
     });
 
-    it('without ellipsis renders as span', () => {
+    it('renders as span without ellipsis', () => {
       const wrapper = mount(Text, {
         slots: { default: () => shortText },
       });
-      expect(wrapper.find('span').exists()).toBe(true);
+      expect(wrapper.find(`span.${COMPONENT_NAME}`).exists()).toBe(true);
+      expect(wrapper.findComponent(Ellipsis).exists()).toBe(false);
+    });
+
+    it('default slot takes precedence over content prop', () => {
+      const wrapper = mount(Text, {
+        props: { content: 'content-prop' },
+        slots: { default: () => 'default-slot' },
+      });
+      expect(wrapper.text()).toBe('default-slot');
+    });
+
+    it('derives copy text from nested vnode children', async () => {
+      const wrapper = mount(Text, {
+        props: { copyable: true },
+        slots: { default: () => [h('b', {}, 'Bold'), ' plain', h('i', {}, ' italic')] },
+      });
+
+      await wrapper.find(`.${COMPONENT_NAME}__copy`).trigger('click');
+      expect(copy).toHaveBeenCalledWith('Bold plain italic');
+    });
+
+    it('copies empty string when content is a function', async () => {
+      const wrapper = mount(Text, {
+        props: { content: () => shortText, copyable: true },
+      });
+
+      await wrapper.find(`.${COMPONENT_NAME}__copy`).trigger('click');
+      // 函数内容无法提取文本，复制内容为空字符串
+      expect(copy).toHaveBeenCalledWith('');
     });
   });
 });

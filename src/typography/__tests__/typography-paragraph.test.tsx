@@ -1,4 +1,3 @@
-import { h, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Paragraph from '../paragraph';
@@ -17,17 +16,18 @@ describe('Typography Paragraph', () => {
       const wrapper = mount(Paragraph, {
         props: { content: shortText },
       });
-      expect(wrapper.find('p').exists()).toBe(true);
-      expect(wrapper.text()).toContain(shortText);
+      expect(wrapper.find(`p.${COMPONENT_NAME}`).exists()).toBe(true);
+      expect(wrapper.text()).toBe(shortText);
     });
 
-    it('content[function]', () => {
-      const wrapper = mount(Paragraph, {
-        props: { content: () => shortText },
-      });
-      // Paragraph renders function content via TNode mechanism
-      expect(wrapper.find(`.${COMPONENT_NAME}`).exists()).toBe(true);
-    });
+    // 源码未实现：paragraph.tsx 直接渲染 props.content，未按 TNode 执行函数，函数内容会被渲染为函数源码文本
+    it.todo('content[function]');
+
+    // 源码未实现：paragraph.tsx 仅读取 content 属性与 default 插槽，未读取 default 属性（传入后内容不渲染）
+    it.todo('default[string]');
+
+    // 源码未实现：paragraph.tsx 仅读取 content 属性与 default 插槽，未读取 default 属性（传入后内容不渲染）
+    it.todo('default[function]');
 
     it('ellipsis[boolean]', () => {
       const wrapper = mount(Paragraph, {
@@ -35,63 +35,93 @@ describe('Typography Paragraph', () => {
         slots: { default: () => longText },
       });
       expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
+      expect(wrapper.text()).toContain(longText);
+      const pEl = wrapper.find('p');
+      expect(pEl.exists()).toBe(true);
+      expect(pEl.element.style.overflow).toBe('hidden');
+      expect(pEl.element.style.textOverflow).toBe('ellipsis');
     });
 
-    it('ellipsis[object] with expandable', async () => {
-      const onExpand = vi.fn();
+    it('ellipsis[object] row[number]', () => {
       const wrapper = mount(Paragraph, {
-        props: {
-          ellipsis: {
-            row: 2,
-            expandable: true,
-            onExpand,
-          },
-        },
+        props: { ellipsis: { row: 2 } },
+        slots: { default: () => longText },
+      });
+      expect(wrapper.findComponent(Ellipsis).props('ellipsis')).toEqual({ row: 2 });
+      expect(wrapper.find('p').element.style.overflow).toBe('hidden');
+    });
+
+    it('ellipsis[object] expandable[true/false]', () => {
+      const expandableWrapper = mount(Paragraph, {
+        props: { ellipsis: { expandable: true } },
+        slots: { default: () => longText },
+      });
+      const symbol = expandableWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
+      expect(symbol.exists()).toBe(true);
+      expect(symbol.text()).toBe('展开');
+
+      const collapsedWrapper = mount(Paragraph, {
+        props: { ellipsis: { expandable: false } },
+        slots: { default: () => longText },
+      });
+      expect(collapsedWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
+    });
+
+    it('ellipsis[object] collapsible[true/false]', async () => {
+      const collapsibleWrapper = mount(Paragraph, {
+        props: { ellipsis: { expandable: true, collapsible: true } },
         slots: { default: () => longText },
       });
 
-      await nextTick();
-      const expandSymbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
-      expect(expandSymbol.exists()).toBe(true);
-
-      await expandSymbol.trigger('click');
-      expect(onExpand).toHaveBeenCalledWith(true);
-    });
-
-    it('ellipsis[object] with collapsible', async () => {
-      const onExpand = vi.fn();
-      const wrapper = mount(Paragraph, {
-        props: {
-          ellipsis: {
-            expandable: true,
-            collapsible: true,
-            onExpand,
-          },
-        },
-        slots: { default: () => longText },
-      });
-
-      await nextTick();
-      const expandSymbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
-      await expandSymbol.trigger('click');
-
-      await nextTick();
-      const collapseSymbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
+      await collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
+      const collapseSymbol = collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
       expect(collapseSymbol.exists()).toBe(true);
-      expect(collapseSymbol.text()).toContain('收起');
+      expect(collapseSymbol.text()).toBe('收起');
+      expect(collapsibleWrapper.find('p').element.style.overflow).toBe('visible');
+
+      await collapseSymbol.trigger('click');
+      expect(collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).text()).toBe('展开');
+      expect(collapsibleWrapper.find('p').element.style.overflow).toBe('hidden');
+
+      const unCollapsibleWrapper = mount(Paragraph, {
+        props: { ellipsis: { expandable: true, collapsible: false } },
+        slots: { default: () => longText },
+      });
+      await unCollapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
+      expect(unCollapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
+      expect(unCollapsibleWrapper.find('p').element.style.overflow).toBe('visible');
     });
 
-    it('ellipsis[object] without expandable', () => {
+    it('ellipsis[object] suffix[function]', () => {
       const wrapper = mount(Paragraph, {
         props: {
           ellipsis: {
-            row: 2,
-            expandable: false,
+            expandable: true,
+            suffix: (h: any, { expanded }: any) => h('span', { class: 'custom-suffix' }, expanded ? '收起' : '更多'),
           },
         },
         slots: { default: () => longText },
       });
-      expect(wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
+      const symbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
+      expect(symbol.exists()).toBe(true);
+      expect(symbol.find('.custom-suffix').exists()).toBe(true);
+      expect(symbol.text()).toBe('更多');
+    });
+  });
+
+  describe('events', () => {
+    it('expand', async () => {
+      const onExpand = vi.fn();
+      const wrapper = mount(Paragraph, {
+        props: { ellipsis: { expandable: true, collapsible: true, onExpand } },
+        slots: { default: () => longText },
+      });
+
+      await wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
+      expect(onExpand).toHaveBeenCalledWith(true);
+
+      await wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
+      expect(onExpand).toHaveBeenCalledWith(false);
     });
   });
 
@@ -100,17 +130,35 @@ describe('Typography Paragraph', () => {
       const wrapper = mount(Paragraph, {
         slots: { default: () => shortText },
       });
-      expect(wrapper.find('p').exists()).toBe(true);
-      expect(wrapper.text()).toContain(shortText);
+      expect(wrapper.find(`p.${COMPONENT_NAME}`).exists()).toBe(true);
+      expect(wrapper.text()).toBe(shortText);
     });
   });
 
   describe('scenarios', () => {
-    it('renders as p tag with class', () => {
+    it('renders as p tag with typography class', () => {
       const wrapper = mount(Paragraph, {
         slots: { default: () => shortText },
       });
       expect(wrapper.find(`p.${COMPONENT_NAME}`).exists()).toBe(true);
+      expect(wrapper.findComponent(Ellipsis).exists()).toBe(false);
+    });
+
+    it('ellipsis[boolean] & content[string]', () => {
+      const wrapper = mount(Paragraph, {
+        props: { ellipsis: true, content: longText },
+      });
+      expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
+      expect(wrapper.text()).toContain(longText);
+    });
+
+    it('content prop takes precedence over default slot', () => {
+      const wrapper = mount(Paragraph, {
+        props: { content: 'content-prop' },
+        slots: { default: () => 'default-slot' },
+      });
+      // 与 Text/Title 不同，Paragraph 优先渲染 content 属性
+      expect(wrapper.text()).toBe('content-prop');
     });
   });
 });

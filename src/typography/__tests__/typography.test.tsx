@@ -17,31 +17,34 @@ describe('Typography', () => {
           default: () => longText,
         },
       });
-      expect(wrapper.find(`.${COMPONENT_NAME}`).exists()).toBe(true);
-      expect(wrapper.text()).toContain(longText);
+      expect(wrapper.find(`span.${COMPONENT_NAME}`).exists()).toBe(true);
+      expect(wrapper.text()).toBe(longText);
     });
   });
 
   describe('scenarios', () => {
-    it('renders as Text component wrapper', () => {
+    it('renders default slot through the built-in Text component', () => {
       const wrapper = mount(Typography, {
         slots: {
           default: () => shortText,
         },
       });
+      expect(wrapper.findComponent(Text).exists()).toBe(true);
       expect(wrapper.find(`.${COMPONENT_NAME}`).exists()).toBe(true);
+      expect(wrapper.text()).toBe(shortText);
     });
 
-    it('renders without default slot content', () => {
+    it('renders an empty container without default slot', () => {
       const wrapper = mount(Typography);
       expect(wrapper.find(`.${COMPONENT_NAME}`).exists()).toBe(true);
+      expect(wrapper.text()).toBe('');
     });
 
-    it('exports all sub-components', () => {
-      expect(Typography).toBeDefined();
-      expect(Text).toBeDefined();
-      expect(Title).toBeDefined();
-      expect(Paragraph).toBeDefined();
+    it('exports Text Title and Paragraph sub-components', () => {
+      expect((Typography as any).name).toBe('TTypography');
+      expect((Text as any).name).toBe('TTypographyText');
+      expect((Title as any).name).toBe('TTypographyTitle');
+      expect((Paragraph as any).name).toBe('TTypographyParagraph');
     });
   });
 });
