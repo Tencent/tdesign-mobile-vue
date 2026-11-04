@@ -63,7 +63,7 @@ describe('upload/xhr real progress', () => {
     vi.useRealTimers();
   });
 
-  it('useMockProgress=false 时，真实上传进度应触发 onProgress(type=real)', () => {
+  it('useMockProgress=false fires onProgress with real progress', () => {
     const onProgress = vi.fn();
     const toUploadFiles = [createFile()];
     xhr({
@@ -98,7 +98,7 @@ describe('upload/xhr real progress', () => {
     expect(onProgress.mock.calls[2][0].files[0].percent).toBe(100);
   });
 
-  it('开启模拟进度时，真实进度落后于当前展示进度不触发，反超后以 real 触发', () => {
+  it('real progress behind the displayed mock progress is ignored until it overtakes', () => {
     vi.useFakeTimers();
     const onProgress = vi.fn();
     const toUploadFiles = [createFile()];
