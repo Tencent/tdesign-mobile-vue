@@ -356,6 +356,10 @@ describe('Cascader', () => {
       const $title = wrapper.find(`.${name}__title`);
 
       expect($title.text()).toBe(TEXT);
+
+      // 不传 title 时使用全局配置的默认标题
+      const wrapper2 = mount(<Cascader options={options} />);
+      expect(wrapper2.find(`.${name}__title`).text()).toBe('标题');
     });
 
     it('title[function]', async () => {
@@ -451,12 +455,10 @@ describe('Cascader', () => {
     });
 
     it('visible[boolean]', async () => {
-      const onPick = vi.fn();
       const wrapper = mount(Cascader, {
         props: {
           visible: false,
           options: itemList,
-          onPick,
         },
       });
       expect(wrapper.find(`.${name}`).isVisible()).toBe(false);
@@ -464,12 +466,6 @@ describe('Cascader', () => {
         visible: true,
       });
       expect(wrapper.findComponent(Popup).props('modelValue')).toBe(true);
-
-      const $radios = wrapper.findAllComponents(Radio);
-
-      // 模拟点击 第1项，禁用态，点击不会触发pick事件
-      await $radios[0].find(`.${prefix}-radio`).trigger('click');
-      expect(onPick).toHaveBeenCalledTimes(0);
     });
   });
 
@@ -499,9 +495,6 @@ describe('Cascader', () => {
       expect(onClose).toHaveBeenLastCalledWith('finish');
     });
 
-    // Popup 传递字符串 'overlay'，Cascader 却读取参数的 trigger 属性，实际点击不会触发该回调。
-    it.todo('close[overlay]');
-
     it('pick', async () => {
       const onPick = vi.fn();
       const wrapper = mount(<Cascader options={options} onPick={onPick} />);
@@ -516,6 +509,11 @@ describe('Cascader', () => {
       await $radios[clickIndex].find(`.t-radio`).trigger('click');
       expect(onPick).toHaveBeenCalledTimes(1);
       expect(onPick).toHaveBeenCalledWith({ level: 0, index: 0, value: '110000', label: '北京市' });
+
+      // 禁用项点击不触发 pick
+      const disabledWrapper = mount(<Cascader options={itemList} onPick={onPick} />);
+      await disabledWrapper.findAllComponents(Radio)[0].find(`.${prefix}-radio`).trigger('click');
+      expect(onPick).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -533,5 +531,10 @@ describe('Cascader', () => {
       expect(document.querySelectorAll(`.${name}__step`)).toHaveLength(1);
       expect(document.querySelector(`.${name}__step-label`).textContent).toBe('选择选项');
     });
+  });
+
+  describe('scenarios', () => {
+    // Popup 传递字符串 'overlay'，Cascader 却读取参数的 trigger 属性，实际点击遮罩不会触发 close 回调。
+    it.todo('closes via overlay click');
   });
 });
