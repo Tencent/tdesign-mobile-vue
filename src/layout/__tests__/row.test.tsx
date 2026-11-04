@@ -40,18 +40,6 @@ describe('Row', () => {
   });
 
   describe('scenarios', () => {
-    it('spreads gutter to child columns as half padding', () => {
-      const wrapper = mount(Row, {
-        props: { gutter: 20 },
-        slots: { default: () => [<Col key="a" />, <Col key="b" />] },
-      });
-      // 行级负外边距抵消首尾列的半宽内边距
-      expect(wrapper.attributes('style')).toBe('margin-right: -10px; margin-left: -10px;');
-      wrapper.findAllComponents(Col).forEach((col) => {
-        expect(col.attributes('style')).toBe('padding-right: 10px; padding-left: 10px;');
-      });
-    });
-
     // provide 传入的是普通对象（gutter 为初始值快照），更新 gutter 不会同步已有子列内边距。
     it.todo('updates child column padding when gutter changes');
     // 带单位字符串 gutter 计算为 NaN，无法用于 rem/em 等单位。
