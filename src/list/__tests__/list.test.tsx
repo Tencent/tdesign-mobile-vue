@@ -68,31 +68,6 @@ describe('List', () => {
     });
   });
 
-  describe('slots', () => {
-    it('default', () => {
-      const LIST_COUNT = 10;
-      const wrapper = mount(List, {
-        slots: { default: Array.from({ length: LIST_COUNT }, (_, index) => <TCell key={index}>{index}</TCell>) },
-      });
-      expect(wrapper.findAllComponents(TCell).length).toEqual(LIST_COUNT);
-    });
-
-    it('header', () => {
-      const wrapper = mount(List, { slots: { header: () => <span class="slot-header">插槽头部</span> } });
-      expect(wrapper.get('.slot-header').text()).toBe('插槽头部');
-    });
-
-    it('footer', () => {
-      const wrapper = mount(List, { slots: { footer: () => <span class="slot-footer">插槽底部</span> } });
-      expect(wrapper.get('.slot-footer').text()).toBe('插槽底部');
-    });
-
-    it('asyncLoading', () => {
-      const wrapper = mount(List, { slots: { asyncLoading: () => <span class="slot-loading">插槽加载</span> } });
-      expect(wrapper.get(`.${prefix}-list__loading--wrapper .slot-loading`).text()).toBe('插槽加载');
-    });
-  });
-
   describe('events', () => {
     it('loadMore', async () => {
       const onLoadMore = vi.fn();
@@ -124,6 +99,31 @@ describe('List', () => {
       const [bottomDistance, scrollTop] = onScroll.mock.calls[0];
       expect(typeof bottomDistance).toBe('number');
       expect(typeof scrollTop).toBe('number');
+    });
+  });
+
+  describe('slots', () => {
+    it('default', () => {
+      const LIST_COUNT = 10;
+      const wrapper = mount(List, {
+        slots: { default: Array.from({ length: LIST_COUNT }, (_, index) => <TCell key={index}>{index}</TCell>) },
+      });
+      expect(wrapper.findAllComponents(TCell).length).toEqual(LIST_COUNT);
+    });
+
+    it('header', () => {
+      const wrapper = mount(List, { slots: { header: () => <span class="slot-header">插槽头部</span> } });
+      expect(wrapper.get('.slot-header').text()).toBe('插槽头部');
+    });
+
+    it('footer', () => {
+      const wrapper = mount(List, { slots: { footer: () => <span class="slot-footer">插槽底部</span> } });
+      expect(wrapper.get('.slot-footer').text()).toBe('插槽底部');
+    });
+
+    it('asyncLoading', () => {
+      const wrapper = mount(List, { slots: { asyncLoading: () => <span class="slot-loading">插槽加载</span> } });
+      expect(wrapper.get(`.${prefix}-list__loading--wrapper .slot-loading`).text()).toBe('插槽加载');
     });
   });
 
