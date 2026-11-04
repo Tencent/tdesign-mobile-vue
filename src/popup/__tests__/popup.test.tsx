@@ -12,9 +12,7 @@ config.global.stubs = {
 describe('Popup', () => {
   // test props api
   describe('props', () => {
-    const onOpen = vi.fn();
-
-    it('attach', async () => {
+    it('attach[string]', async () => {
       const div = document.createElement('div');
       div.id = 'popup-container';
       document.body.appendChild(div);
@@ -138,36 +136,11 @@ describe('Popup', () => {
       expect(overlay.isVisible()).toBe(false);
     });
 
-    it('transitionName[string]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          placement: 'top',
-        },
-      });
-      // expect(wrapper.vm.contentTransitionName).toBe(`slide-${wrapper.vm.placement}`);
-      // await wrapper.setProps({
-      //   transitionName: 'slide-fade',
-      // });
-      // expect(wrapper.vm.contentTransitionName).toBe(wrapper.vm.transitionName);
-    });
+    // 动画名透传依赖 Transition 渲染时序，jsdom 中无法稳定断言实际过渡效果。
+    it.todo('transitionName[string]');
 
-    it('visible[boolean]', async () => {
-      const wrapper = mount(Popup, {
-        props: {
-          visible: false,
-          onOpen,
-        },
-      });
-
-      // expect(wrapper.find('.t-popup').isVisible()).toBe(false);
-      // expect(wrapper.find('.t-overlay').attributes('style')).toContain('display: none');
-      // await wrapper.setProps({
-      //   visible: true,
-      // });
-      // expect(wrapper.vm.currentVisible).toBe(true);
-      // expect(wrapper.find('.t-popup').isVisible()).toBe(true);
-      // expect(onOpen).toBeCalledTimes(1);
-    });
+    // jsdom 中 Transition 显隐时序不可控，visible 切换后的可见性与 onOpen 触发时机无法稳定断言。
+    it.todo('visible[boolean]');
 
     it('defaultVisible[boolean]', async () => {
       const wrapper = mount(Popup, {
@@ -241,10 +214,7 @@ describe('Popup', () => {
       expect($transition.at(0).exists()).toBeTruthy();
       expect($transition.at(1).exists()).toBeTruthy();
 
-      // 理论上点击遮罩层，可以触发 transition 的 after-leave 事件，但在测试环境中并没有触发。
-      // 手动触发 afterLeave
-      // wrapper.findComponent(Popup).vm.afterLeave();
-      // expect(closed).toBeCalledTimes(1);
+      // 理论上点击遮罩层可以触发 transition 的 after-leave 事件（onClosed），但测试环境中不会触发，closed 暂无法断言。
     });
   });
 });
