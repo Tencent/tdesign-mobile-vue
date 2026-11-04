@@ -1,9 +1,10 @@
-import { h } from 'vue';
+import { h, nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Button from '../button';
 import Loading from '../../loading';
+import Form from '../../form';
 
 const prefix = 't';
 const name = `${prefix}-button`;
@@ -167,13 +168,15 @@ describe('Button', () => {
       });
       const $button = wrapper.findComponent(Button);
 
-      // loading = true，不触发 click
+      // loading = true，带 loading 样式类且不触发 click
+      expect($button.classes()).toContain(`${name}--loading`);
       await $button.trigger('click');
       expect(onClick).not.toBeCalled();
       // loading = false
       await wrapper.setProps({
         loading: false,
       });
+      expect($button.classes()).not.toContain(`${name}--loading`);
       await $button.trigger('click');
       expect(onClick).toBeCalled();
     });
@@ -375,59 +378,83 @@ describe('Button', () => {
       expect(wrapper.findComponent(TIconApp).exists()).toBe(true);
     });
 
-    describe('tag rendering', () => {
-      it('native button: role/type', async () => {
-        const wrapper = mount(Button, {
-          props: {
-            content: TEXT,
-            type: 'submit',
-          },
-        });
-        // 原生 button 隐含 role=button，不再冗余输出 role 属性
-        expect(wrapper.element.tagName.toLowerCase()).toBe('button');
-        expect(wrapper.element.hasAttribute('role')).toBeFalsy();
-        // 原生 button 输出 type 属性
-        expect(wrapper.element.getAttribute('type')).toBe('submit');
-      });
+    it('inherits disabled from form', async () => {
+      const onClick = vi.fn();
+      const buttonDisabled = ref<boolean | undefined>(undefined);
+      const wrapper = mount(() => (
+        <Form disabled>
+          <Button disabled={buttonDisabled.value} onClick={onClick}>
+            {TEXT}
+          </Button>
+        </Form>
+      ));
 
-      it('custom tag: role/type', async () => {
-        const wrapper = mount(Button, {
-          props: {
-            content: TEXT,
-            tag: 'div',
-            type: 'submit',
-          },
-        });
-        // 非原生标签显式输出 role=button
-        expect(wrapper.element.getAttribute('role')).toBe('button');
-        // 非原生标签不输出 type 属性
-        expect(wrapper.element.hasAttribute('type')).toBeFalsy();
-      });
+      // 跟随表单禁用：带禁用样式且点击无效
+      expect(wrapper.find(`.${name}--disabled`).exists()).toBe(true);
 
-      it('tag disabled', async () => {
-        const onClick = vi.fn();
-        // 非原生标签禁用时：不设置 disabled，改用 aria-disabled + tabindex="-1"
-        const wrapper = mount(Button, {
-          props: {
-            content: TEXT,
-            tag: 'a',
-            disabled: true,
-            onClick,
-          },
-        });
-        expect(wrapper.element.tagName.toLowerCase()).toBe('a');
-        expect(wrapper.element.hasAttribute('disabled')).toBeFalsy();
-        expect(wrapper.element.getAttribute('aria-disabled')).toBe('true');
-        expect(wrapper.element.getAttribute('tabindex')).toBe('-1');
-        await wrapper.trigger('click');
-        expect(onClick).not.toHaveBeenCalled();
+      await wrapper.find(`.${name}`).trigger('click');
+      expect(onClick).not.toHaveBeenCalled();
 
-        await wrapper.setProps({ disabled: false });
-        expect(wrapper.element.hasAttribute('aria-disabled')).toBe(false);
-        expect(wrapper.element.getAttribute('tabindex')).toBe('0');
-        await wrapper.trigger('click');
-        expect(onClick).toHaveBeenCalledTimes(1);
+      // 组件自身 disabled=false 优先于表单禁用
+      buttonDisabled.value = false;
+      await nextTick();
+      expect(wrapper.find(`.${name}--disabled`).exists()).toBe(false);
+
+      await wrapper.find(`.${name}`).trigger('click');
+      expect(onClick).toHaveBeenCalledTimes(1);
+    });
+
+    it('native button renders type without redundant role', async () => {
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+          type: 'submit',
+        },
       });
+      // 原生 button 隐含 role=button，不再冗余输出 role 属性
+      expect(wrapper.element.tagName.toLowerCase()).toBe('button');
+      expect(wrapper.element.hasAttribute('role')).toBeFalsy();
+      // 原生 button 输出 type 属性
+      expect(wrapper.element.getAttribute('type')).toBe('submit');
+    });
+
+    it('custom tag renders role instead of type', async () => {
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+          tag: 'div',
+          type: 'submit',
+        },
+      });
+      // 非原生标签显式输出 role=button
+      expect(wrapper.element.getAttribute('role')).toBe('button');
+      // 非原生标签不输出 type 属性
+      expect(wrapper.element.hasAttribute('type')).toBeFalsy();
+    });
+
+    it('disabled custom tag uses aria-disabled and blocks click', async () => {
+      const onClick = vi.fn();
+      // 非原生标签禁用时：不设置 disabled，改用 aria-disabled + tabindex="-1"
+      const wrapper = mount(Button, {
+        props: {
+          content: TEXT,
+          tag: 'a',
+          disabled: true,
+          onClick,
+        },
+      });
+      expect(wrapper.element.tagName.toLowerCase()).toBe('a');
+      expect(wrapper.element.hasAttribute('disabled')).toBeFalsy();
+      expect(wrapper.element.getAttribute('aria-disabled')).toBe('true');
+      expect(wrapper.element.getAttribute('tabindex')).toBe('-1');
+      await wrapper.trigger('click');
+      expect(onClick).not.toHaveBeenCalled();
+
+      await wrapper.setProps({ disabled: false });
+      expect(wrapper.element.hasAttribute('aria-disabled')).toBe(false);
+      expect(wrapper.element.getAttribute('tabindex')).toBe('0');
+      await wrapper.trigger('click');
+      expect(onClick).toHaveBeenCalledTimes(1);
     });
   });
 });
