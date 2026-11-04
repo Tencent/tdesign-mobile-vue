@@ -1,64 +1,165 @@
 import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
-import { beforeAll, vi } from 'vitest';
+import { afterEach, beforeAll, vi } from 'vitest';
 import PullDownRefresh from '../index';
+import type { TdPullDownRefreshProps } from '../type';
 import { MockResizeObserver, trigger } from './utils';
+
+const TRACK = '.t-pull-down-refresh__track';
+const TIPS = '.t-pull-down-refresh__tips';
+const LOADING_BAR = '.t-pull-down-refresh__loading';
+const TEXT = '.t-pull-down-refresh__text';
+const LOADING_TEXT = '.t-pull-down-refresh__loading .t-loading__text';
+const LOADING_ICON = '.t-pull-down-refresh__loading .t-loading';
+const LOOSING_CLASS = 't-pull-down-refresh__track--loosing';
+
+// 自定义提示语，按状态索引断言：0 pulling / 1 loosing / 2 loading / 3 success
+const LOADING_TEXTS = ['自定义下拉', '自定义松手', '自定义加载', '自定义完成'];
+
+// 默认全局提示语（zh_CN locale）
+const DEFAULT_TEXTS = ['下拉刷新', '松手刷新', '正在刷新', '刷新完成'];
+
+/**
+ * 挂载组件并模拟 useElementSize 的量测结果：
+ * maxBar(tips) 量测高度 80px、loadingBar 量测高度 50px（默认阈值 loadingBarHeight = 50）。
+ * touchmove 阶段 distance = max(0, min(量测 maxBarHeight, easeDistance(diffY, 量测 loadingBarHeight)))。
+ */
+async function mountRefresh(props: Partial<TdPullDownRefreshProps> = {}) {
+  const wrapper = mount(<PullDownRefresh loadingTexts={LOADING_TEXTS} {...props} />);
+  await nextTick();
+  await wrapper.find(TIPS).trigger('resize', { height: 80 });
+  await wrapper.find(LOADING_BAR).trigger('resize', { height: 50 });
+  return wrapper;
+}
 
 describe('PullDownRefresh', () => {
   beforeAll(() => {
     global.ResizeObserver = MockResizeObserver;
   });
 
-  describe('props', () => {
-    it('loadingBarHeight[number]', async () => {
-      const wrapper = mount(<PullDownRefresh value={true} loadingBarHeight={30} />);
-      const loadingBar = wrapper.find('.t-pull-down-refresh__loading');
-      expect(window.getComputedStyle(loadingBar.element).getPropertyValue('max-height')).toBe(`${30}px`);
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
 
-      await wrapper.setProps({ loadingBarHeight: '90px' });
-      expect(window.getComputedStyle(loadingBar.element).getPropertyValue('max-height')).toBe(`${90}px`);
+  describe('props', () => {
+    it('disabled[boolean]', async () => {
+      // 对照：未禁用时相同手势可触发下拉刷新
+      const refreshable = vi.fn();
+      const wrapper = await mountRefresh({ onRefresh: refreshable });
+      const track = wrapper.find(TRACK);
+      await trigger(track, 'touchstart', 50, 0);
+      await trigger(track, 'touchmove', 50, 70);
+      await trigger(track, 'touchmove', 50, 200);
+      await trigger(track, 'touchend', 50, 200);
+      expect(refreshable).toHaveBeenCalledTimes(1);
+
+      // 禁用后：手势不进入加载态，轨迹不位移
+      const disabledRefresh = vi.fn();
+      const disabledWrapper = await mountRefresh({ disabled: true, onRefresh: disabledRefresh });
+      const disabledTrack = disabledWrapper.find(TRACK);
+      await trigger(disabledTrack, 'touchstart', 50, 0);
+      await trigger(disabledTrack, 'touchmove', 50, 70);
+      await trigger(disabledTrack, 'touchmove', 50, 200);
+      await trigger(disabledTrack, 'touchend', 50, 200);
+      expect(disabledRefresh).not.toHaveBeenCalled();
+      expect(disabledTrack.attributes('style')).toContain('translate3d(0, 0px, 0)');
+
+      wrapper.unmount();
+      disabledWrapper.unmount();
     });
 
-    it('loadingTexts & maxBarHeight', async () => {
-      const status = ref(false);
-      const loadingTexts = ['pulling', 'loosing', 'loading', 'success'];
-      const maxBarHeight = ref(80);
-      const onChange = vi.fn((value) => {
-        status.value = value;
-      });
-      const onRefresh = vi.fn(() => {
-        setTimeout(() => {
-          status.value = false;
-        }, 2000);
-      });
+    it('loadingBarHeight[number]', async () => {
+      const wrapper = await mountRefresh({ loadingBarHeight: 100 });
+      const loadingBar = wrapper.find(LOADING_BAR);
+      // 数字按 px 处理：max-height 100px；(80 - 100) / 2 = -10px 偏移
+      expect(loadingBar.attributes('style')).toContain('max-height: 100px');
+      expect(loadingBar.attributes('style')).toContain('translateY(-10px)');
 
-      const wrapper = mount(
-        <PullDownRefresh
-          value={status.value}
-          loadingTexts={loadingTexts}
-          maxBarHeight={maxBarHeight.value}
-          onChange={onChange}
-          onRefresh={onRefresh}
-        />,
-      );
-      const track = wrapper.find('.t-pull-down-refresh__track');
-      const maxBar = wrapper.find('.t-pull-down-refresh__tips');
+      // 阈值为 100：ease(70, 50) = 60 < 100，仍处于 pulling 态，文案取 loadingTexts[0]
+      const track = wrapper.find(TRACK);
+      await trigger(track, 'touchstart', 50, 0);
+      await trigger(track, 'touchmove', 50, 70);
+      expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[0]);
 
+      wrapper.unmount();
+    });
+
+    it('loadingBarHeight[string]', async () => {
+      const wrapper = await mountRefresh({ loadingBarHeight: '40px' });
+      const loadingBar = wrapper.find(LOADING_BAR);
+      expect(loadingBar.attributes('style')).toContain('max-height: 40px');
+      expect(loadingBar.attributes('style')).toContain('translateY(20px)');
+
+      const track = wrapper.find(TRACK);
+      await trigger(track, 'touchstart', 50, 0);
+      // 30 < 40：pulling 态
+      await trigger(track, 'touchmove', 50, 30);
+      expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[0]);
+      // ease(70, 50) = 60 >= 40：loosing 态
+      await trigger(track, 'touchmove', 50, 70);
+      expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[1]);
+
+      wrapper.unmount();
+    });
+
+    it('loadingProps[object]', async () => {
+      const wrapper = await mountRefresh({ value: true, loadingProps: { layout: 'vertical' } });
+      const loading = wrapper.find(LOADING_ICON);
+      expect(loading.exists()).toBe(true);
+      // loadingProps 透传至 Loading 组件
+      expect(loading.classes()).toContain('t-loading--vertical');
+
+      wrapper.unmount();
+    });
+
+    it('loadingTexts[array]', async () => {
+      const loadingTexts = ['下拉-0', '松手-1', '加载-2', '完成-3'];
+      const wrapper = await mountRefresh({ loadingTexts });
+      const track = wrapper.find(TRACK);
+      await trigger(track, 'touchstart', 50, 0);
+      // 20 < 50：pulling 态取 loadingTexts[0]
+      await trigger(track, 'touchmove', 50, 20);
+      expect(wrapper.find(TEXT).text()).toBe(loadingTexts[0]);
+      // ease(70, 50) = 60 >= 50：loosing 态取 loadingTexts[1]
+      await trigger(track, 'touchmove', 50, 70);
+      expect(wrapper.find(TEXT).text()).toBe(loadingTexts[1]);
+
+      wrapper.unmount();
+    });
+
+    it('maxBarHeight[number]', async () => {
+      const wrapper = mount(<PullDownRefresh maxBarHeight={120} />);
+      const tips = wrapper.find(TIPS);
       await nextTick();
-      maxBar.trigger('resize', {
-        height: 80,
-      });
+      // 数字按 px 处理：提示区高度 120px
+      expect(tips.attributes('style')).toContain('height: 120px');
 
-      trigger(track, 'touchstart', 50, 0);
-      await wrapper.setProps({ maxBarHeight: '80px' });
-      trigger(track, 'touchmove', 50, 20);
-      trigger(track, 'touchmove', 50, 70);
-      trigger(track, 'touchmove', 50, 120);
-      trigger(track, 'touchmove', 50, 170);
-      // expect(wrapper.vm.loadingText).toBe('loosing');
-      expect(window.getComputedStyle(maxBar.element).height).toBe(`${80}px`);
-      trigger(track, 'touchend', 50, 170);
-      expect(wrapper.element).toMatchSnapshot();
+      // 量测 maxBarHeight = 120：ease(400, 50) = 150，位移被钳制在 120px
+      await tips.trigger('resize', { height: 120 });
+      await wrapper.find(LOADING_BAR).trigger('resize', { height: 50 });
+      const track = wrapper.find(TRACK);
+      await trigger(track, 'touchstart', 50, 0);
+      await trigger(track, 'touchmove', 50, 400);
+      expect(track.attributes('style')).toContain('translate3d(0, 120px, 0)');
+
+      wrapper.unmount();
+    });
+
+    it('maxBarHeight[string]', async () => {
+      const wrapper = mount(<PullDownRefresh maxBarHeight="160px" />);
+      const tips = wrapper.find(TIPS);
+      await nextTick();
+      expect(tips.attributes('style')).toContain('height: 160px');
+
+      // 量测 maxBarHeight = 160：ease(800, 50) = 250，位移被钳制在 160px
+      await tips.trigger('resize', { height: 160 });
+      await wrapper.find(LOADING_BAR).trigger('resize', { height: 50 });
+      const track = wrapper.find(TRACK);
+      await trigger(track, 'touchstart', 50, 0);
+      await trigger(track, 'touchmove', 50, 800);
+      expect(track.attributes('style')).toContain('translate3d(0, 160px, 0)');
+
+      wrapper.unmount();
     });
 
     it('refreshTimeout[number]', async () => {
@@ -67,7 +168,7 @@ describe('PullDownRefresh', () => {
         const onTimeout = vi.fn();
         const status = ref(false);
         // 受控模式：onChange 回写 status，加载态在超时窗口内保持
-        const onChange = vi.fn((value) => {
+        const onChange = vi.fn((value: boolean) => {
           status.value = value;
         });
         const wrapper = mount(() => (
@@ -80,17 +181,17 @@ describe('PullDownRefresh', () => {
           />
         ));
 
-        const track = wrapper.find('.t-pull-down-refresh__track');
-        const maxBar = wrapper.find('.t-pull-down-refresh__tips');
+        const track = wrapper.find(TRACK);
+        const tips = wrapper.find(TIPS);
         await nextTick();
-        maxBar.trigger('resize', { height: 80 });
+        await tips.trigger('resize', { height: 80 });
+        await wrapper.find(LOADING_BAR).trigger('resize', { height: 50 });
 
         // 下拉松手进入加载态
-        trigger(track, 'touchstart', 50, 0);
-        trigger(track, 'touchmove', 50, 70);
-        trigger(track, 'touchmove', 50, 200);
-        trigger(track, 'touchend', 50, 200);
-        await nextTick();
+        await trigger(track, 'touchstart', 50, 0);
+        await trigger(track, 'touchmove', 50, 70);
+        await trigger(track, 'touchmove', 50, 200);
+        await trigger(track, 'touchend', 50, 200);
         expect(onChange).toHaveBeenCalledWith(true);
         expect(onTimeout).not.toHaveBeenCalled();
 
@@ -108,112 +209,32 @@ describe('PullDownRefresh', () => {
         vi.useRealTimers();
       }
     });
-  });
 
-  describe('events', () => {
-    it('transitionend', async () => {
-      const wrapper = mount(<PullDownRefresh value={true} loadingBarHeight={30} maxBarHeight={80} />);
-
-      const track = wrapper.find('.t-pull-down-refresh__track');
-      track.trigger(`transitionend`);
-    });
-
-    it('timeout', async () => {
-      const status = ref(false);
-      const refreshTimeout = 500;
-      const onChange = vi.fn((value) => {
-        status.value = value;
-      });
-      const onRefresh = vi.fn(() => {
-        setTimeout(() => {
-          status.value = false;
-        }, 800); // 大于设定值
-      });
-      const onTimeout = vi.fn();
-
+    it('value[boolean]', async () => {
+      const status = ref(true);
+      const onRefresh = vi.fn();
       const wrapper = mount(() => (
-        <PullDownRefresh
-          value={status.value}
-          refreshTimeout={refreshTimeout}
-          onChange={onChange}
-          onRefresh={onRefresh}
-          onTimeout={onTimeout}
-        />
+        <PullDownRefresh value={status.value} loadingTexts={LOADING_TEXTS} onRefresh={onRefresh} />
       ));
-
-      const target = wrapper.find('.t-pull-down-refresh__track');
-      const maxBar = wrapper.find('.t-pull-down-refresh__tips');
-
       await nextTick();
-      maxBar.trigger('resize', {
-        height: 80,
-      });
+      // 受控 true：量测 loadingBar 高度后进入 loading 态，渲染 Loading 组件与 loadingTexts[2]
+      await wrapper.find(LOADING_BAR).trigger('resize', { height: 50 });
+      expect(wrapper.find(LOADING_ICON).exists()).toBe(true);
+      expect(wrapper.find(LOADING_TEXT).text()).toBe(LOADING_TEXTS[2]);
 
-      trigger(target, 'touchstart', 50, 0);
-      trigger(target, 'touchmove', 50, 20);
-      trigger(target, 'touchmove', 50, 70);
-      trigger(target, 'touchmove', 50, 120);
-      trigger(target, 'touchmove', 50, 200);
-      trigger(target, 'touchend', 50, 200);
+      // 加载中手势被禁止，不触发刷新
+      const track = wrapper.find(TRACK);
+      await trigger(track, 'touchstart', 50, 0);
+      await trigger(track, 'touchmove', 50, 200);
+      await trigger(track, 'touchend', 50, 200);
+      expect(onRefresh).not.toHaveBeenCalled();
 
-      await new Promise((resolve, reject) => {
-        setTimeout(() => resolve(), 1000); // 超时 1000ms
-      });
-
-      // expect(wrapper.emitted()).toHaveProperty('update:value'); // useModel 受控模式
-
-      expect(onChange).toHaveBeenCalled();
-      expect(onRefresh).toHaveBeenCalled();
-      expect(onTimeout).toHaveBeenCalled();
+      // 父组件置回 false：收起加载态，文案取 loadingTexts[3]
+      status.value = false;
+      await nextTick();
+      expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[3]);
 
       wrapper.unmount();
-    });
-
-    it('disabled[boolean]', async () => {
-      // 对照：相同手势未禁用时触发下拉刷新
-      const refreshable = vi.fn();
-      const wrapper = mount(<PullDownRefresh onRefresh={refreshable} />);
-      const track = wrapper.find('.t-pull-down-refresh__track');
-      const maxBar = wrapper.find('.t-pull-down-refresh__tips');
-      await nextTick();
-      maxBar.trigger('resize', { height: 80 });
-      trigger(track, 'touchstart', 50, 0);
-      trigger(track, 'touchmove', 50, 70);
-      trigger(track, 'touchmove', 50, 200);
-      trigger(track, 'touchend', 50, 200);
-      await nextTick();
-      expect(refreshable).toHaveBeenCalledTimes(1);
-
-      // disabled 后相同手势不进入加载态，轨迹不位移
-      const disabledRefresh = vi.fn();
-      const disabledWrapper = mount(<PullDownRefresh disabled onRefresh={disabledRefresh} />);
-      const disabledTrack = disabledWrapper.find('.t-pull-down-refresh__track');
-      const disabledMaxBar = disabledWrapper.find('.t-pull-down-refresh__tips');
-      await nextTick();
-      disabledMaxBar.trigger('resize', { height: 80 });
-      trigger(disabledTrack, 'touchstart', 50, 0);
-      trigger(disabledTrack, 'touchmove', 50, 70);
-      trigger(disabledTrack, 'touchmove', 50, 200);
-      trigger(disabledTrack, 'touchend', 50, 200);
-      await nextTick();
-      expect(disabledRefresh).not.toHaveBeenCalled();
-      expect(disabledTrack.attributes('style')).toContain('translate3d(0, 0px, 0)');
-
-      wrapper.unmount();
-      disabledWrapper.unmount();
-    });
-
-    it('loadingProps[object]', async () => {
-      const wrapper = mount(<PullDownRefresh value loadingProps={{ class: 'custom-loading' }} />);
-      const loadingBar = wrapper.find('.t-pull-down-refresh__loading');
-      await nextTick();
-      // 模拟 loading 元素高度，使组件进入 loading 状态渲染 Loading 组件
-      loadingBar.trigger('resize', { height: 50 });
-      await nextTick();
-      const loading = wrapper.find('.t-pull-down-refresh__loading .t-loading');
-      expect(loading.exists()).toBe(true);
-      // loadingProps 透传至 Loading 组件
-      expect(loading.classes()).toContain('custom-loading');
     });
 
     it('modelValue[boolean]', async () => {
@@ -224,15 +245,14 @@ describe('PullDownRefresh', () => {
           return () => <PullDownRefresh v-model:modelValue={status.value} onRefresh={onRefresh} />;
         },
       });
-      const track = wrapper.find('.t-pull-down-refresh__track');
-      const maxBar = wrapper.find('.t-pull-down-refresh__tips');
+      const track = wrapper.find(TRACK);
       await nextTick();
-      maxBar.trigger('resize', { height: 80 });
-      trigger(track, 'touchstart', 50, 0);
-      trigger(track, 'touchmove', 50, 70);
-      trigger(track, 'touchmove', 50, 200);
-      trigger(track, 'touchend', 50, 200);
-      await nextTick();
+      await wrapper.find(TIPS).trigger('resize', { height: 80 });
+      await wrapper.find(LOADING_BAR).trigger('resize', { height: 50 });
+      await trigger(track, 'touchstart', 50, 0);
+      await trigger(track, 'touchmove', 50, 70);
+      await trigger(track, 'touchmove', 50, 200);
+      await trigger(track, 'touchend', 50, 200);
       // 松手进入加载态时通过 v-model:modelValue 更新为 true
       expect(status.value).toBe(true);
       expect(onRefresh).toHaveBeenCalledTimes(1);
@@ -243,32 +263,328 @@ describe('PullDownRefresh', () => {
     it('defaultValue[boolean]', async () => {
       // defaultValue 为 true：初始即加载态，触摸手势被禁止
       const loadingRefresh = vi.fn();
-      const loadingWrapper = mount(<PullDownRefresh defaultValue onRefresh={loadingRefresh} />);
-      const loadingTrack = loadingWrapper.find('.t-pull-down-refresh__track');
-      const loadingMaxBar = loadingWrapper.find('.t-pull-down-refresh__tips');
-      await nextTick();
-      loadingMaxBar.trigger('resize', { height: 80 });
-      trigger(loadingTrack, 'touchstart', 50, 0);
-      trigger(loadingTrack, 'touchmove', 50, 200);
-      trigger(loadingTrack, 'touchend', 50, 200);
-      await nextTick();
+      const loadingWrapper = await mountRefresh({ defaultValue: true, onRefresh: loadingRefresh });
+      const loadingTrack = loadingWrapper.find(TRACK);
+      expect(loadingWrapper.find(LOADING_ICON).exists()).toBe(true);
+      await trigger(loadingTrack, 'touchstart', 50, 0);
+      await trigger(loadingTrack, 'touchmove', 50, 200);
+      await trigger(loadingTrack, 'touchend', 50, 200);
       expect(loadingRefresh).not.toHaveBeenCalled();
 
       // defaultValue 为 false：非受控初始收起态，手势正常触发刷新
       const idleRefresh = vi.fn();
-      const idleWrapper = mount(<PullDownRefresh defaultValue={false} onRefresh={idleRefresh} />);
-      const idleTrack = idleWrapper.find('.t-pull-down-refresh__track');
-      const idleMaxBar = idleWrapper.find('.t-pull-down-refresh__tips');
-      await nextTick();
-      idleMaxBar.trigger('resize', { height: 80 });
-      trigger(idleTrack, 'touchstart', 50, 0);
-      trigger(idleTrack, 'touchmove', 50, 200);
-      trigger(idleTrack, 'touchend', 50, 200);
-      await nextTick();
+      const idleWrapper = await mountRefresh({ defaultValue: false, onRefresh: idleRefresh });
+      const idleTrack = idleWrapper.find(TRACK);
+      await trigger(idleTrack, 'touchstart', 50, 0);
+      await trigger(idleTrack, 'touchmove', 50, 200);
+      await trigger(idleTrack, 'touchend', 50, 200);
       expect(idleRefresh).toHaveBeenCalledTimes(1);
 
       loadingWrapper.unmount();
       idleWrapper.unmount();
+    });
+  });
+
+  describe('events', () => {
+    it('change', async () => {
+      vi.useFakeTimers();
+      try {
+        const onChange = vi.fn();
+        const wrapper = await mountRefresh({ refreshTimeout: 1000, onChange });
+        const track = wrapper.find(TRACK);
+        await trigger(track, 'touchstart', 50, 0);
+        await trigger(track, 'touchmove', 50, 70);
+        await trigger(track, 'touchend', 50, 70);
+        // 松手进入加载态：change(true)
+        expect(onChange).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenNthCalledWith(1, true);
+
+        // 刷新超时自动收起：change(false)
+        vi.advanceTimersByTime(1000);
+        expect(onChange).toHaveBeenCalledTimes(2);
+        expect(onChange).toHaveBeenNthCalledWith(2, false);
+
+        wrapper.unmount();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('refresh', async () => {
+      const onRefresh = vi.fn();
+      const wrapper = await mountRefresh({ onRefresh });
+      const track = wrapper.find(TRACK);
+
+      // 未超过下拉阈值松手：不触发 refresh，轨迹复位
+      await trigger(track, 'touchstart', 50, 0);
+      await trigger(track, 'touchmove', 50, 20);
+      await trigger(track, 'touchend', 50, 20);
+      expect(onRefresh).not.toHaveBeenCalled();
+      expect(track.attributes('style')).toContain('translate3d(0, 0px, 0)');
+
+      // 超过阈值松手：触发一次 refresh
+      await trigger(track, 'touchstart', 50, 0);
+      await trigger(track, 'touchmove', 50, 70);
+      await trigger(track, 'touchend', 50, 70);
+      expect(onRefresh).toHaveBeenCalledTimes(1);
+
+      wrapper.unmount();
+    });
+
+    it('scrolltolower', async () => {
+      vi.useFakeTimers();
+      try {
+        const onScrolltolower = vi.fn();
+        const wrapper = mount(<PullDownRefresh onScrolltolower={onScrolltolower} />);
+        await nextTick();
+        // jsdom 无滚动父元素时监听 window，且页面默认视为已触底
+        window.dispatchEvent(new Event('scroll'));
+        window.dispatchEvent(new Event('scroll'));
+        // throttle 300ms（leading: false）：窗口内合并为一次 trailing 调用
+        vi.advanceTimersByTime(299);
+        expect(onScrolltolower).not.toHaveBeenCalled();
+        vi.advanceTimersByTime(1);
+        expect(onScrolltolower).toHaveBeenCalledTimes(1);
+
+        // 卸载后移除监听，不再触发
+        wrapper.unmount();
+        window.dispatchEvent(new Event('scroll'));
+        vi.advanceTimersByTime(300);
+        expect(onScrolltolower).toHaveBeenCalledTimes(1);
+
+        // 加载态时不触发
+        const loadingScrolltolower = vi.fn();
+        const loadingWrapper = mount(<PullDownRefresh value onScrolltolower={loadingScrolltolower} />);
+        await nextTick();
+        window.dispatchEvent(new Event('scroll'));
+        vi.advanceTimersByTime(300);
+        expect(loadingScrolltolower).not.toHaveBeenCalled();
+
+        loadingWrapper.unmount();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('timeout', async () => {
+      vi.useFakeTimers();
+      try {
+        const onTimeout = vi.fn();
+        const wrapper = await mountRefresh({ refreshTimeout: 500, onTimeout });
+        const track = wrapper.find(TRACK);
+        await trigger(track, 'touchstart', 50, 0);
+        await trigger(track, 'touchmove', 50, 70);
+        await trigger(track, 'touchend', 50, 70);
+
+        // 未到 refreshTimeout 不触发
+        vi.advanceTimersByTime(499);
+        expect(onTimeout).not.toHaveBeenCalled();
+
+        // 到达后触发一次，并自动收起进入 success 态（loadingTexts[3]）
+        vi.advanceTimersByTime(1);
+        expect(onTimeout).toHaveBeenCalledTimes(1);
+        await nextTick();
+        expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[3]);
+
+        wrapper.unmount();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+  });
+
+  describe('slots', () => {
+    it('default', () => {
+      const wrapper = mount(PullDownRefresh, {
+        slots: { default: () => <div class="slot-default">列表内容</div> },
+      });
+      const slot = wrapper.find('.slot-default');
+      expect(slot.exists()).toBe(true);
+      expect(slot.text()).toBe('列表内容');
+      // 插槽内容渲染在 track 内部
+      expect(wrapper.find(TRACK).find('.slot-default').exists()).toBe(true);
+
+      wrapper.unmount();
+    });
+
+    it('content', () => {
+      const wrapper = mount(PullDownRefresh, {
+        slots: { content: () => <div class="slot-content">内容插槽</div> },
+      });
+      const slot = wrapper.find('.slot-content');
+      expect(slot.exists()).toBe(true);
+      expect(slot.text()).toBe('内容插槽');
+
+      wrapper.unmount();
+    });
+  });
+
+  describe('scenarios', () => {
+    it('pull to refresh lifecycle', async () => {
+      vi.useFakeTimers();
+      try {
+        const onChange = vi.fn();
+        const onRefresh = vi.fn();
+        const onTimeout = vi.fn();
+        const wrapper = await mountRefresh({ refreshTimeout: 1000, onChange, onRefresh, onTimeout });
+        const track = wrapper.find(TRACK);
+
+        // 初始：收起状态，无提示语
+        expect(track.attributes('style')).toContain('translate3d(0, 0px, 0)');
+        expect(wrapper.find(TEXT).text()).toBe('');
+
+        // pulling：位移 20px，文案取 loadingTexts[0]，移除 loosing 类名
+        await trigger(track, 'touchstart', 50, 0);
+        await trigger(track, 'touchmove', 50, 20);
+        expect(track.attributes('style')).toContain('translate3d(0, 20px, 0)');
+        expect(track.classes()).not.toContain(LOOSING_CLASS);
+        expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[0]);
+
+        // loosing：缓动后位移 60px，文案取 loadingTexts[1]
+        await trigger(track, 'touchmove', 50, 70);
+        expect(track.attributes('style')).toContain('translate3d(0, 60px, 0)');
+        expect(track.classes()).toContain(LOOSING_CLASS);
+        expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[1]);
+
+        // 松手进入 loading：位移固定为 loadingBarHeight(50px)，渲染 Loading 组件与 loadingTexts[2]
+        await trigger(track, 'touchend', 50, 70);
+        expect(onChange).toHaveBeenNthCalledWith(1, true);
+        expect(onRefresh).toHaveBeenCalledTimes(1);
+        expect(wrapper.find(LOADING_ICON).exists()).toBe(true);
+        expect(wrapper.find(LOADING_TEXT).text()).toBe(LOADING_TEXTS[2]);
+        expect(track.attributes('style')).toContain('translate3d(0, 50px, 0)');
+
+        // 刷新超时收起：change(false) + onTimeout，文案取 loadingTexts[3]，延时收起前保持 50px
+        vi.advanceTimersByTime(1000);
+        await nextTick();
+        expect(onTimeout).toHaveBeenCalledTimes(1);
+        expect(onChange).toHaveBeenNthCalledWith(2, false);
+        expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[3]);
+        expect(track.attributes('style')).toContain('translate3d(0, 50px, 0)');
+
+        // success 提示 300ms 后轨迹收起，transitionend 前仍展示 success 文案
+        vi.advanceTimersByTime(300);
+        await nextTick();
+        expect(track.attributes('style')).toContain('translate3d(0, 0px, 0)');
+        expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[3]);
+
+        // transitionend 后回到 initial：文案清空
+        await track.trigger('transitionend');
+        expect(wrapper.find(TEXT).text()).toBe('');
+        expect(track.attributes('style')).toContain('translate3d(0, 0px, 0)');
+
+        wrapper.unmount();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('horizontal swipe does not trigger refresh', async () => {
+      const onRefresh = vi.fn();
+      const onChange = vi.fn();
+      const wrapper = await mountRefresh({ onRefresh, onChange });
+      const track = wrapper.find(TRACK);
+      // 横向位移 70px、纵向 10px：判定为左右移动，不进入下拉逻辑
+      await trigger(track, 'touchstart', 50, 0);
+      await trigger(track, 'touchmove', 120, 10);
+      await trigger(track, 'touchmove', 190, 6);
+      await trigger(track, 'touchend', 190, 6);
+      expect(track.attributes('style')).toContain('translate3d(0, 0px, 0)');
+      expect(onRefresh).not.toHaveBeenCalled();
+      expect(onChange).not.toHaveBeenCalled();
+      expect(wrapper.find(TEXT).text()).toBe('');
+
+      wrapper.unmount();
+    });
+
+    it('falls back to global loadingTexts when prop is empty', async () => {
+      vi.useFakeTimers();
+      try {
+        // 不传 loadingTexts（默认 []）：回退到全局配置文案，同样按索引断言
+        const wrapper = mount(<PullDownRefresh refreshTimeout={1000} />);
+        await nextTick();
+        await wrapper.find(TIPS).trigger('resize', { height: 80 });
+        await wrapper.find(LOADING_BAR).trigger('resize', { height: 50 });
+        const track = wrapper.find(TRACK);
+
+        await trigger(track, 'touchstart', 50, 0);
+        await trigger(track, 'touchmove', 50, 20);
+        expect(wrapper.find(TEXT).text()).toBe(DEFAULT_TEXTS[0]);
+        await trigger(track, 'touchmove', 50, 70);
+        expect(wrapper.find(TEXT).text()).toBe(DEFAULT_TEXTS[1]);
+        await trigger(track, 'touchend', 50, 70);
+        expect(wrapper.find(LOADING_TEXT).text()).toBe(DEFAULT_TEXTS[2]);
+
+        // 超时收起后展示 DEFAULT_TEXTS[3]
+        vi.advanceTimersByTime(1000);
+        await nextTick();
+        expect(wrapper.find(TEXT).text()).toBe(DEFAULT_TEXTS[3]);
+
+        wrapper.unmount();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('finishing refresh before timeout skips timeout event', async () => {
+      vi.useFakeTimers();
+      try {
+        const status = ref(false);
+        const onChange = vi.fn((value: boolean) => {
+          status.value = value;
+        });
+        const onTimeout = vi.fn();
+        const wrapper = mount(() => (
+          <PullDownRefresh
+            value={status.value}
+            loadingTexts={LOADING_TEXTS}
+            refreshTimeout={1000}
+            onChange={onChange}
+            onRefresh={() => {
+              // 300ms 后主动结束刷新，早于 refreshTimeout
+              setTimeout(() => {
+                status.value = false;
+              }, 300);
+            }}
+            onTimeout={onTimeout}
+          />
+        ));
+        const track = wrapper.find(TRACK);
+        await nextTick();
+        await wrapper.find(TIPS).trigger('resize', { height: 80 });
+        await wrapper.find(LOADING_BAR).trigger('resize', { height: 50 });
+
+        await trigger(track, 'touchstart', 50, 0);
+        await trigger(track, 'touchmove', 50, 70);
+        await trigger(track, 'touchend', 50, 70);
+        expect(onChange).toHaveBeenCalledWith(true);
+
+        // 刷新在 300ms 完成：进入 success 态（loadingTexts[3]）
+        vi.advanceTimersByTime(300);
+        await nextTick();
+        expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[3]);
+
+        // 越过 refreshTimeout：加载已结束，不触发 onTimeout
+        vi.advanceTimersByTime(700);
+        expect(onTimeout).not.toHaveBeenCalled();
+
+        wrapper.unmount();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('renders default slot over content slot', () => {
+      const wrapper = mount(PullDownRefresh, {
+        slots: {
+          default: () => <div class="slot-default">默认插槽</div>,
+          content: () => <div class="slot-content">内容插槽</div>,
+        },
+      });
+      expect(wrapper.find('.slot-default').exists()).toBe(true);
+      expect(wrapper.find('.slot-content').exists()).toBe(false);
+
+      wrapper.unmount();
     });
   });
 });
