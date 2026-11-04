@@ -5,7 +5,7 @@ import AvatarGroup from '../avatar-group';
 
 const IMAGE = 'https://tdesign.gtimg.com/site/avatar.jpg';
 const sizeList = ['small', 'medium', 'large'];
-const shapeList = ['circle', 'round'];
+const shapeList = ['circle', 'round'] as const;
 
 describe('AvatarGroup', () => {
   describe('props', () => {
