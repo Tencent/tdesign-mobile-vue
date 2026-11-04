@@ -227,7 +227,11 @@ describe('Calendar', () => {
       const title = '选择出发日期';
       const wrapper = mount(<Calendar title={title} />);
       const $title = wrapper.find(`.${name}__title`);
-      expect($title.text()).toEqual(title || '请选择日期');
+      expect($title.text()).toEqual(title);
+
+      // 不传 title 时使用全局配置的默认标题
+      const wrapper2 = mount(<Calendar />);
+      expect(wrapper2.find(`.${name}__title`).text()).toEqual('请选择日期');
     });
 
     it('title[function]', async () => {
