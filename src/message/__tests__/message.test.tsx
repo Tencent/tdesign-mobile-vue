@@ -205,35 +205,6 @@ describe('Message', () => {
     });
   });
 
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(
-        <Message visible v-slots={{ default: () => <span class="slot-content">插槽消息</span> }} />,
-      );
-      expect(wrapper.get(`.${name}__text .slot-content`).text()).toBe('插槽消息');
-    });
-
-    it('content', () => {
-      const wrapper = mount(<Message visible v-slots={{ content: () => <span class="slot-text">具名消息</span> }} />);
-      expect(wrapper.get(`.${name}__text .slot-text`).text()).toBe('具名消息');
-    });
-
-    it('icon', () => {
-      const wrapper = mount(<Message visible content="这是一条消息通知" v-slots={{ icon: () => h(TIconApp) }} />);
-      expect(wrapper.get(`.${name}__icon--left`).findComponent(TIconApp).exists()).toBe(true);
-    });
-
-    it('link', () => {
-      const wrapper = mount(<Message visible content="这是一条消息通知" v-slots={{ link: () => h(TIconApp) }} />);
-      expect(wrapper.get(`.${name}__link`).findComponent(TIconApp).exists()).toBe(true);
-    });
-
-    it('closeBtn', () => {
-      const wrapper = mount(<Message visible v-slots={{ closeBtn: () => <span class="slot-close">插槽关闭</span> }} />);
-      expect(wrapper.get(`.${name}__close-wrap .slot-close`).text()).toBe('插槽关闭');
-    });
-  });
-
   describe('events', () => {
     it('closeBtnClick', async () => {
       const onCloseBtnClick = vi.fn();
@@ -262,6 +233,35 @@ describe('Message', () => {
       await wrapper.setProps({ visible: true });
       vi.advanceTimersByTime(1000);
       expect(onDurationEnd).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('slots', () => {
+    it('default', () => {
+      const wrapper = mount(
+        <Message visible v-slots={{ default: () => <span class="slot-content">插槽消息</span> }} />,
+      );
+      expect(wrapper.get(`.${name}__text .slot-content`).text()).toBe('插槽消息');
+    });
+
+    it('content', () => {
+      const wrapper = mount(<Message visible v-slots={{ content: () => <span class="slot-text">具名消息</span> }} />);
+      expect(wrapper.get(`.${name}__text .slot-text`).text()).toBe('具名消息');
+    });
+
+    it('icon', () => {
+      const wrapper = mount(<Message visible content="这是一条消息通知" v-slots={{ icon: () => h(TIconApp) }} />);
+      expect(wrapper.get(`.${name}__icon--left`).findComponent(TIconApp).exists()).toBe(true);
+    });
+
+    it('link', () => {
+      const wrapper = mount(<Message visible content="这是一条消息通知" v-slots={{ link: () => h(TIconApp) }} />);
+      expect(wrapper.get(`.${name}__link`).findComponent(TIconApp).exists()).toBe(true);
+    });
+
+    it('closeBtn', () => {
+      const wrapper = mount(<Message visible v-slots={{ closeBtn: () => <span class="slot-close">插槽关闭</span> }} />);
+      expect(wrapper.get(`.${name}__close-wrap .slot-close`).text()).toBe('插槽关闭');
     });
   });
 
