@@ -257,6 +257,6 @@ describe('Skeleton', () => {
 
     // 源码缺口：loading 在 delay 到期前切回 false 时，watch 中遗留的 setTimeout 未被清除，
     // 回调仍会把 isShow 置回 true，导致 loading=false 时闪现骨架屏，待修复后补充断言
-    it.todo('delay & loading 快速切换时不应闪现骨架屏');
+    it.todo('does not flash the skeleton when delay & loading toggle rapidly');
   });
 });
