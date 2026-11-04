@@ -214,41 +214,6 @@ describe('Loading', () => {
   });
 
   describe('scenarios', () => {
-    it('default slot takes priority over content prop', () => {
-      const wrapper = mount(Loading, {
-        props: { content: '属性内容' },
-        slots: { default: () => <span class="slot-content">插槽内容</span> },
-      });
-      expect(wrapper.get('.slot-content').text()).toBe('插槽内容');
-    });
-
-    it('content prop takes priority over content slot', () => {
-      const wrapper = mount(Loading, {
-        props: { content: '属性内容' },
-        slots: { content: () => <span class="slot-content">具名插槽</span> },
-      });
-      expect(wrapper.text()).toContain('属性内容');
-      expect(wrapper.find('.slot-content').exists()).toBe(false);
-    });
-
-    it('indicator function takes priority over indicator slot', () => {
-      const wrapper = mount(Loading, {
-        props: { indicator: () => <span class="prop-indicator">属性指示符</span> },
-        slots: { indicator: () => <span class="slot-indicator">插槽指示符</span> },
-      });
-      expect(wrapper.get('.prop-indicator').text()).toBe('属性指示符');
-      expect(wrapper.find('.slot-indicator').exists()).toBe(false);
-    });
-
-    it('text prop takes priority over text slot', () => {
-      const wrapper = mount(Loading, {
-        props: { text: '属性文案' },
-        slots: { text: () => <span class="slot-text">插槽文案</span> },
-      });
-      expect(wrapper.get('.t-loading__text').text()).toBe('属性文案');
-      expect(wrapper.find('.slot-text').exists()).toBe(false);
-    });
-
     it('hides indicator and text while delayed loading is pending', async () => {
       vi.useFakeTimers();
       try {

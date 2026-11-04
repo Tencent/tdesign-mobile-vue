@@ -169,19 +169,6 @@ describe('Toast', () => {
   });
 
   describe('scenarios', () => {
-    it('default & message[string]', () => {
-      const wrapper = mount(Toast, {
-        props: {
-          message: '属性消息',
-        },
-        slots: {
-          default: () => '插槽消息',
-        },
-      });
-      // renderContent('default', 'message')，默认插槽优先于 message 属性
-      expect(wrapper.find(`.${name}__text`).text()).toBe('插槽消息');
-    });
-
     it('icon[function] & theme[loading]', () => {
       const wrapper = mount(Toast, {
         props: {

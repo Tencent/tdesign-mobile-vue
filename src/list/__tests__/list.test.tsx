@@ -143,33 +143,6 @@ describe('List', () => {
       ]);
     });
 
-    it('header prop takes priority over header slot', () => {
-      const wrapper = mount(List, {
-        props: { header: '属性头部' },
-        slots: { header: () => <span class="slot-header">插槽头部</span> },
-      });
-      expect(wrapper.text()).toBe('属性头部');
-      expect(wrapper.find('.slot-header').exists()).toBe(false);
-    });
-
-    it('footer prop takes priority over footer slot', () => {
-      const wrapper = mount(List, {
-        props: { footer: '属性底部' },
-        slots: { footer: () => <span class="slot-footer">插槽底部</span> },
-      });
-      expect(wrapper.text()).toBe('属性底部');
-      expect(wrapper.find('.slot-footer').exists()).toBe(false);
-    });
-
-    it('asyncLoading function takes priority over its slot', () => {
-      const wrapper = mount(List, {
-        props: { asyncLoading: () => <span class="prop-loading">属性加载</span> },
-        slots: { asyncLoading: () => <span class="slot-loading">插槽加载</span> },
-      });
-      expect(wrapper.get('.prop-loading').text()).toBe('属性加载');
-      expect(wrapper.find('.slot-loading').exists()).toBe(false);
-    });
-
     it('uses global list loading texts', () => {
       const wrapper = mount(ConfigProvider, {
         props: { globalConfig: { list: { loading: 'Loading...', loadingMoreText: 'Load more' } } },

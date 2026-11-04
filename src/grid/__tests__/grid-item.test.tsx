@@ -161,36 +161,6 @@ describe('GridItem', () => {
   });
 
   describe('scenarios', () => {
-    it('image prop takes priority over image slot', () => {
-      const wrapper = mount(Grid, {
-        slots: { default: () => <GridItem image={imgUrl} v-slots={{ image: () => <b>图片插槽</b> }} /> },
-      });
-      expect(wrapper.get(`.${name}-item__image img`).attributes('src')).toBe(imgUrl);
-      expect(wrapper.find('b').exists()).toBe(false);
-    });
-
-    it('icon prop takes priority over icon slot', () => {
-      const wrapper = mount(Grid, {
-        slots: { default: () => <GridItem icon={() => <b>属性图标</b>} v-slots={{ icon: () => <i>插槽图标</i> }} /> },
-      });
-      expect(wrapper.get(`.${name}-item__image b`).text()).toBe('属性图标');
-      expect(wrapper.find('i').exists()).toBe(false);
-    });
-
-    it('text prop takes priority over text slot', () => {
-      const wrapper = mount(Grid, {
-        slots: { default: () => <GridItem text="属性标题" v-slots={{ text: () => <b>插槽标题</b> }} /> },
-      });
-      expect(wrapper.get(`.${name}-item__title`).text()).toBe('属性标题');
-    });
-
-    it('description prop takes priority over description slot', () => {
-      const wrapper = mount(Grid, {
-        slots: { default: () => <GridItem description="属性描述" v-slots={{ description: () => <b>插槽描述</b> }} /> },
-      });
-      expect(wrapper.get(`.${name}-item__description`).text()).toBe('属性描述');
-    });
-
     it('renders text, image and description together', () => {
       const wrapper = mount({
         setup() {

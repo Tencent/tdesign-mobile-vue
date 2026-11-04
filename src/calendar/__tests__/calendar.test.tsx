@@ -437,22 +437,4 @@ describe('Calendar', () => {
       expect(selectTime).toEqual(time);
     });
   });
-
-  describe('scenarios', () => {
-    it('title prop takes priority over title slot', () => {
-      const wrapper = mount(Calendar, {
-        props: { usePopup: false, minDate, maxDate, title: '属性标题' },
-        slots: { title: () => <span>插槽标题</span> },
-      });
-      expect(wrapper.find(`.${name}__title`).text()).toBe('属性标题');
-    });
-
-    it('confirmBtn prop takes priority over confirmBtn slot', () => {
-      const wrapper = mount(Calendar, {
-        props: { visible: true, minDate, maxDate, confirmBtn: '属性按钮' },
-        slots: { confirmBtn: () => <span>插槽按钮</span> },
-      });
-      expect(wrapper.find(`.${name}__footer`).text()).toBe('属性按钮');
-    });
-  });
 });

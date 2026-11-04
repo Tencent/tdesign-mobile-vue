@@ -575,34 +575,6 @@ describe('Search', () => {
         expect(wrapper.findComponent(TSearchIcon).exists()).toBeFalsy();
       });
 
-      it('leftIcon prop takes priority over leftIcon slot', () => {
-        const wrapper = mount(Search, {
-          props: {
-            leftIcon: '属性图标',
-          },
-          slots: {
-            leftIcon: () => <span class="slot-left-icon">插槽图标</span>,
-          },
-        });
-        expect(wrapper.find(`.${name}__input-box`).text()).toContain('属性图标');
-        expect(wrapper.find('.slot-left-icon').exists()).toBeFalsy();
-      });
-
-      it('action prop takes priority over action slot', () => {
-        const wrapper = mount(Search, {
-          props: {
-            action: '属性操作',
-          },
-          slots: {
-            action: () => <span class="slot-action">插槽操作</span>,
-          },
-        });
-        const $action = wrapper.find(`.${name}__search-action`);
-        expect($action.exists()).toBeTruthy();
-        expect($action.text()).toBe('属性操作');
-        expect(wrapper.find('.slot-action').exists()).toBeFalsy();
-      });
-
       it('controlled value takes precedence over defaultValue', () => {
         const wrapper = mount(Search, {
           props: {

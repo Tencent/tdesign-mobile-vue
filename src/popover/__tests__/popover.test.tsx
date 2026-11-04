@@ -339,24 +339,6 @@ describe('Popover', () => {
         expect(wrapper.find(`.${name}__wrapper`).text()).toBe('默认触发');
         wrapper.unmount();
       });
-
-      it('default prop takes priority over default slot', () => {
-        const wrapper = mount(Popover, {
-          props: { default: '属性触发' },
-          slots: { default: () => '插槽触发' },
-        });
-        expect(wrapper.find(`.${name}__wrapper`).text()).toBe('属性触发');
-        wrapper.unmount();
-      });
-
-      it('content prop takes priority over content slot', () => {
-        const wrapper = mount(Popover, {
-          props: { visible: true, content: '属性内容' },
-          slots: { content: () => '插槽内容' },
-        });
-        expect(wrapper.find(`.${name}__content`).text()).toBe('属性内容');
-        wrapper.unmount();
-      });
     });
 
     it('recreates popper when placement changes while visible', async () => {

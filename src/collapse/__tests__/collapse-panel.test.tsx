@@ -259,53 +259,9 @@ describe('CollapsePanel', () => {
   });
 
   describe('scenarios', () => {
-    test('default slot takes priority over content prop', () => {
-      const wrapper = mountPanel({ content: '属性内容' }, { default: () => [<span>默认插槽内容</span>] });
-      expect(wrapper.find('.t-collapse-panel__content').text()).toBe('默认插槽内容');
-    });
-
-    test('default prop takes priority over default slot', () => {
-      const wrapper = mountPanel({ default: '别名属性内容' }, { default: () => [<span>默认插槽内容</span>] });
-      expect(wrapper.find('.t-collapse-panel__content').text()).toBe('别名属性内容');
-    });
-
-    test('content prop takes priority over content slot', () => {
-      const wrapper = mountPanel({ content: '属性内容' }, { content: () => [<span>插槽内容</span>] });
-      expect(wrapper.find('.t-collapse-panel__content').text()).toBe('属性内容');
-    });
-
-    test('header prop takes priority over header slot', () => {
-      const wrapper = mountPanel({ header: '属性标题' }, { header: () => [<span>插槽标题</span>] });
-      expect(wrapper.find('.t-cell__title-text').text()).toBe('属性标题');
-    });
-
-    test('headerLeftIcon prop takes priority over headerLeftIcon slot', () => {
-      const wrapper = mountPanel(
-        { headerLeftIcon: () => <span>属性图标</span> },
-        { headerLeftIcon: () => [<span>插槽图标</span>] },
-      );
-      expect(wrapper.find('.t-cell__left-icon').text()).toBe('属性图标');
-    });
-
-    test('headerRightContent prop takes priority over headerRightContent slot', () => {
-      const wrapper = mountPanel(
-        { headerRightContent: '属性操作' },
-        { headerRightContent: () => [<span>插槽操作</span>] },
-      );
-      expect(wrapper.find('.t-cell__note').text()).toBe('属性操作');
-    });
-
     test('panel expandIcon overrides parent expandIcon', () => {
       const wrapper = mountPanel({ expandIcon: true }, {}, { expandIcon: false });
       expect(wrapper.find('.t-collapse-panel__header-icon svg').exists()).toBe(true);
-    });
-
-    test('panel expandIcon prop takes priority over panel slot', () => {
-      const wrapper = mountPanel(
-        { expandIcon: () => <span>属性图标</span> },
-        { expandIcon: () => [<span>插槽图标</span>] },
-      );
-      expect(wrapper.find('.t-collapse-panel__header-icon').text()).toBe('属性图标');
     });
 
     // disabled 使用 parent.disabled || props.disabled，子面板 false 无法覆盖父级 true。

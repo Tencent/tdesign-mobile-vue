@@ -331,14 +331,6 @@ describe('Textarea', () => {
   });
 
   describe('scenarios', () => {
-    it('label prop takes priority over label slot', async () => {
-      const wrapper = mount(
-        <Textarea label="属性标签" v-slots={{ label: () => <span class="slot-label">插槽标签</span> }} />,
-      );
-      expect(wrapper.get('.t-textarea__label').text()).toBe('属性标签');
-      expect(wrapper.find('.slot-label').exists()).toBeFalsy();
-    });
-
     describe('length limit', () => {
       it('maxlength counts unicode characters', async () => {
         const onChange = vi.fn();

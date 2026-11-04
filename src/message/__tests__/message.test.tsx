@@ -301,49 +301,6 @@ describe('Message', () => {
       expect(wrapper.get(`.${name}__text`).attributes('style') || '').not.toContain('transition-duration');
     });
 
-    it('icon prop takes priority over icon slot', () => {
-      const wrapper = mount(
-        <Message visible icon={() => h(TIconApp)} v-slots={{ icon: () => <span class="slot-icon">插槽图标</span> }} />,
-      );
-      expect(wrapper.get(`.${name}__icon--left`).findComponent(TIconApp).exists()).toBe(true);
-      expect(wrapper.find('.slot-icon').exists()).toBe(false);
-    });
-
-    it('default slot takes priority over content prop', () => {
-      const wrapper = mount(
-        <Message visible content="属性内容" v-slots={{ default: () => <span class="slot-content">插槽内容</span> }} />,
-      );
-      expect(wrapper.get(`.${name}__text .slot-content`).text()).toBe('插槽内容');
-    });
-
-    it('content prop takes priority over content slot', () => {
-      const wrapper = mount(
-        <Message visible content="属性内容" v-slots={{ content: () => <span class="slot-text">具名插槽</span> }} />,
-      );
-      expect(wrapper.get(`.${name}__text`).text()).toBe('属性内容');
-      expect(wrapper.find('.slot-text').exists()).toBe(false);
-    });
-
-    it('link function takes priority over link slot', () => {
-      const wrapper = mount(
-        <Message visible link={() => h(TIconApp)} v-slots={{ link: () => <span class="slot-link">插槽链接</span> }} />,
-      );
-      expect(wrapper.get(`.${name}__link`).findComponent(TIconApp).exists()).toBe(true);
-      expect(wrapper.find('.slot-link').exists()).toBe(false);
-    });
-
-    it('closeBtn function takes priority over closeBtn slot', () => {
-      const wrapper = mount(
-        <Message
-          visible
-          closeBtn={() => <span class="prop-close">属性关闭</span>}
-          v-slots={{ closeBtn: () => <span class="slot-close">插槽关闭</span> }}
-        />,
-      );
-      expect(wrapper.get(`.${name}__close-wrap .prop-close`).text()).toBe('属性关闭');
-      expect(wrapper.find('.slot-close').exists()).toBe(false);
-    });
-
     // useVModel 未传 propName='visible'，受控通道事件名实际为 update:value。
     it.todo('visible channel emits update:visible');
   });

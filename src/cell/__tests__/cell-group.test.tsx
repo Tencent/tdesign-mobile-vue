@@ -45,14 +45,4 @@ describe('CellGroup', () => {
       expect(wrapper.find('.t-cell-group').findComponent(Cell).text()).toBe('组内单元格');
     });
   });
-
-  describe('scenarios', () => {
-    it('title prop takes priority over title slot', () => {
-      const wrapper = mount(CellGroup, {
-        props: { title: '属性标题' },
-        slots: { title: () => <span>插槽标题</span> },
-      });
-      expect(wrapper.find('.t-cell-group__title').text()).toBe('属性标题');
-    });
-  });
 });

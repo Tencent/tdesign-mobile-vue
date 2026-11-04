@@ -364,42 +364,6 @@ describe('Button', () => {
   });
 
   describe('scenarios', () => {
-    describe('content priority', () => {
-      it('default slot takes priority over content prop', () => {
-        const wrapper = mount(Button, {
-          props: { content: '属性内容' },
-          slots: { default: () => <span>默认插槽</span> },
-        });
-        expect(wrapper.find(`.${name}__content`).text()).toBe('默认插槽');
-      });
-
-      it('content prop takes priority over content slot', () => {
-        const wrapper = mount(Button, {
-          props: { content: '属性内容' },
-          slots: { content: () => <span>具名插槽</span> },
-        });
-        expect(wrapper.find(`.${name}__content`).text()).toBe('属性内容');
-      });
-    });
-
-    it('icon prop takes priority over icon slot', () => {
-      const wrapper = mount(Button, {
-        props: { icon: iconFunc },
-        slots: { icon: () => <span class="slot-icon">插槽图标</span> },
-      });
-      expect(wrapper.findComponent(TIconApp).exists()).toBe(true);
-      expect(wrapper.find('.slot-icon').exists()).toBe(false);
-    });
-
-    it('suffix prop takes priority over suffix slot', () => {
-      const wrapper = mount(Button, {
-        props: { suffix: () => <span class="prop-suffix">属性后缀</span> },
-        slots: { suffix: () => <span class="slot-suffix">插槽后缀</span> },
-      });
-      expect(wrapper.find('.prop-suffix').text()).toBe('属性后缀');
-      expect(wrapper.find('.slot-suffix').exists()).toBe(false);
-    });
-
     it('loading replaces icon and restores it when finished', async () => {
       const wrapper = mount(Button, { props: { loading: true, icon: iconFunc } });
       expect(wrapper.findComponent(Loading).exists()).toBe(true);

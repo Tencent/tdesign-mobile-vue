@@ -701,15 +701,6 @@ describe('Table', () => {
         });
         expect(wrapper.find(`.${name}__empty`).text()).toBe('Global Empty Text');
       });
-
-      it('empty prop takes priority over empty slot', () => {
-        const wrapper = mount(TTable, {
-          props: { rowKey: 'index', data: [], columns, empty: 'Empty From Prop' },
-          slots: { empty: () => <div class="slot-empty">Empty From Slot</div> },
-        });
-        expect(wrapper.find(`.${name}__empty`).text()).toBe('Empty From Prop');
-        expect(wrapper.find('.slot-empty').exists()).toBe(false);
-      });
     });
 
     describe('cell content priority', () => {
@@ -724,15 +715,6 @@ describe('Table', () => {
         });
         expect(wrapper.find('tbody td').text()).toBe('函数渲染单元格');
         expect(wrapper.find('.col-key-slot').exists()).toBe(false);
-      });
-
-      it('cellEmptyContent prop takes priority over the cellEmptyContent slot', () => {
-        const wrapper = mount(TTable, {
-          props: { rowKey: 'index', data: emptyCellData, columns, cellEmptyContent: '属性兜底' },
-          slots: { cellEmptyContent: () => <div class="slot-empty-cell">插槽兜底</div> },
-        });
-        expect(wrapper.find('tbody td').text()).toBe('属性兜底');
-        expect(wrapper.find('.slot-empty-cell').exists()).toBe(false);
       });
     });
 

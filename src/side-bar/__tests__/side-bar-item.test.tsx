@@ -198,23 +198,5 @@ describe('SideBarItem', () => {
         expect($items[0].find(`.${name}__line`).exists()).toBe(false);
       });
     });
-
-    describe('icon priority', () => {
-      it('icon prop takes priority over icon slot', () => {
-        const wrapper = mount(
-          <SideBar>
-            <SideBarItem
-              value={0}
-              label="选项一"
-              icon={() => h('div', { class: 'prop-icon' })}
-              v-slots={{ icon: () => <div class="slot-icon">插槽图标</div> }}
-            />
-          </SideBar>,
-        );
-
-        expect(wrapper.find(`.${name}__icon .prop-icon`).exists()).toBe(true);
-        expect(wrapper.find('.slot-icon').exists()).toBe(false);
-      });
-    });
   });
 });

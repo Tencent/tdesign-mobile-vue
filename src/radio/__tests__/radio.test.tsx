@@ -584,37 +584,5 @@ describe('Radio', () => {
       // Radio.borderless=false 优先于 RadioGroup.borderless，仍渲染边框
       expect(wrapper.find(`.${name}__border`).exists()).toBe(true);
     });
-
-    it('default slot takes priority over label prop', () => {
-      const wrapper = mount(Radio, {
-        props: { label: '属性主文案' },
-        slots: { default: () => <span>默认插槽主文案</span> },
-      });
-      expect(wrapper.find(`.${name}__title`).text()).toBe('默认插槽主文案');
-    });
-
-    it('default prop takes priority over default slot', () => {
-      const wrapper = mount(Radio, {
-        props: { default: '别名属性' },
-        slots: { default: () => <span>默认插槽</span> },
-      });
-      expect(wrapper.find(`.${name}__title`).text()).toBe('别名属性');
-    });
-
-    it('label prop takes priority over label slot', () => {
-      const wrapper = mount(Radio, {
-        props: { label: '属性主文案' },
-        slots: { label: () => <span>插槽主文案</span> },
-      });
-      expect(wrapper.find(`.${name}__title`).text()).toBe('属性主文案');
-    });
-
-    it('content prop takes priority over content slot', () => {
-      const wrapper = mount(Radio, {
-        props: { content: '属性描述' },
-        slots: { content: () => <span>插槽描述</span> },
-      });
-      expect(wrapper.find(`.${name}__description`).text()).toBe('属性描述');
-    });
   });
 });

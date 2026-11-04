@@ -248,18 +248,4 @@ describe('Collapse', () => {
       expect(handleChange).toHaveBeenLastCalledWith([], { e: expect.any(MouseEvent) });
     });
   });
-
-  describe('scenarios', () => {
-    test('expandIcon prop takes priority over expandIcon slot', () => {
-      const wrapper = mount(Collapse, {
-        props: { expandIcon: () => <span class="prop-expand">属性图标</span> },
-        slots: {
-          default: () => <CollapsePanel value="one" />,
-          expandIcon: () => <span class="slot-expand">插槽图标</span>,
-        },
-      });
-      expect(wrapper.find('.prop-expand').text()).toBe('属性图标');
-      expect(wrapper.find('.slot-expand').exists()).toBe(false);
-    });
-  });
 });

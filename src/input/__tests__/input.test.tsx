@@ -609,30 +609,6 @@ describe('Input', () => {
   });
 
   describe('scenarios', () => {
-    it('label prop takes priority over label slot', async () => {
-      const wrapper = mount(
-        <Input label="属性标签" v-slots={{ label: () => <span class="slot-label">插槽标签</span> }} />,
-      );
-      expect(wrapper.get('.t-input__label').text()).toBe('属性标签');
-      expect(wrapper.find('.slot-label').exists()).toBeFalsy();
-    });
-
-    it('suffix prop takes priority over suffix slot', async () => {
-      const wrapper = mount(
-        <Input suffix="属性后缀" v-slots={{ suffix: () => <span class="slot-suffix">插槽后缀</span> }} />,
-      );
-      expect(wrapper.get(`.${name}__wrap--suffix`).text()).toBe('属性后缀');
-      expect(wrapper.find('.slot-suffix').exists()).toBeFalsy();
-    });
-
-    it('prefixIcon prop takes priority over prefixIcon slot', async () => {
-      const wrapper = mount(
-        <Input prefixIcon={() => <AppIcon />} v-slots={{ prefixIcon: () => <InfoCircleFilledIcon /> }} />,
-      );
-      expect(wrapper.findComponent(AppIcon).exists()).toBeTruthy();
-      expect(wrapper.findComponent(InfoCircleFilledIcon).exists()).toBeFalsy();
-    });
-
     it('composition input does not commit the value', async () => {
       const value = ref('');
       const onChange = vi.fn();

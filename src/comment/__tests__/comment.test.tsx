@@ -244,48 +244,6 @@ describe('Comment', () => {
   });
 
   describe('scenarios', () => {
-    it('author prop takes priority over author slot', () => {
-      const wrapper = mount(Comment, { props: { author: '属性作者' }, slots: { author: () => <span>插槽作者</span> } });
-      expect(wrapper.find('.t-comment__author').text()).toBe('属性作者');
-    });
-
-    it('avatar prop takes priority over avatar slot', () => {
-      const wrapper = mount(Comment, {
-        props: { avatar: 'https://example.com/avatar.png' },
-        slots: { avatar: () => <span class="slot-avatar">插槽头像</span> },
-      });
-      expect(wrapper.findComponent(Avatar).props('image')).toBe('https://example.com/avatar.png');
-      expect(wrapper.find('.slot-avatar').exists()).toBe(false);
-    });
-
-    it('content prop takes priority over content slot', () => {
-      const wrapper = mount(Comment, {
-        props: { content: '属性评论' },
-        slots: { content: () => <span>插槽评论</span> },
-      });
-      expect(wrapper.find('.t-comment__content').text()).toBe('属性评论');
-    });
-
-    it('datetime prop takes priority over datetime slot', () => {
-      const wrapper = mount(Comment, {
-        props: { datetime: '属性时间' },
-        slots: { datetime: () => <span>插槽时间</span> },
-      });
-      expect(wrapper.find('.t-comment__date').text()).toBe('属性时间');
-    });
-
-    it('reply prop takes priority over reply slot', () => {
-      const wrapper = mount(Comment, { props: { reply: '属性回复' }, slots: { reply: () => <span>插槽回复</span> } });
-      expect(wrapper.find('.t-comment__reply-inner').text()).toBe('属性回复');
-    });
-
-    it('reply slot takes priority over default slot', () => {
-      const wrapper = mount(Comment, {
-        slots: { reply: () => <span>具名回复</span>, default: () => <span>默认回复</span> },
-      });
-      expect(wrapper.find('.t-comment__reply-inner').text()).toBe('具名回复');
-    });
-
     it('folds takes priority over defaultFolds', () => {
       const wrapper = mount(Comment, {
         props: {

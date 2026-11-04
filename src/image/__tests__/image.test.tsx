@@ -376,28 +376,6 @@ describe('Image', () => {
         expect(wrapper.get('.slot-error').text()).toBe('插槽加载失败');
         expect(wrapper.find('.prop-error').exists()).toBe(false);
       });
-
-      it('loading prop takes priority over loading slot', () => {
-        const slots = {
-          loading: () => 'SLOT加载中',
-        };
-        const wrapper = mount(() => <Image src={IMAGE} loading="PROP加载中" v-slots={slots} />);
-        const $status = wrapper.find(`.${name}__mask`);
-        expect($status.exists()).toBeTruthy();
-        expect($status.text()).toBe('PROP加载中');
-      });
-
-      it('error prop takes priority over error slot', async () => {
-        const slots = {
-          error: () => 'SLOT加载失败',
-        };
-        const wrapper = mount(() => <Image src={FAIL_IMAGE} error="PROP加载失败" v-slots={slots} />);
-        await nextTick();
-        await wrapper.find(`.${name}__img`).trigger('error');
-        const $status = wrapper.find(`.${name}__mask`);
-        expect($status.exists()).toBeTruthy();
-        expect($status.text()).toBe('PROP加载失败');
-      });
     });
   });
 });

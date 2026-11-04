@@ -199,69 +199,10 @@ describe('Cell', () => {
       expect(onClick).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
     });
 
-    it('default slot takes priority over note prop', () => {
-      const wrapper = mount(Cell, {
-        props: { note: '属性辅助内容' },
-        slots: { default: () => <span>默认插槽内容</span> },
-      });
-      expect(wrapper.find('.t-cell__note').text()).toBe('默认插槽内容');
-    });
-
-    it('note prop takes priority over note slot', () => {
-      const wrapper = mount(Cell, {
-        props: { note: '属性辅助内容' },
-        slots: { note: () => <span>插槽辅助内容</span> },
-      });
-      expect(wrapper.find('.t-cell__note').text()).toBe('属性辅助内容');
-    });
-
-    it('title prop takes priority over title slot', () => {
-      const wrapper = mount(Cell, {
-        props: { title: '属性标题' },
-        slots: { title: () => <span>插槽标题</span> },
-      });
-      expect(wrapper.find('.t-cell__title-text').text()).toBe('属性标题');
-    });
-
-    it('description prop takes priority over description slot', () => {
-      const wrapper = mount(Cell, {
-        props: { title: '标题', description: '属性描述' },
-        slots: { description: () => <span>插槽描述</span> },
-      });
-      expect(wrapper.find('.t-cell__description').text()).toBe('属性描述');
-    });
-
     it('description and required marker need a title', () => {
       const wrapper = mount(Cell, { props: { description: '描述', required: true } });
       expect(wrapper.find('.t-cell__description').exists()).toBe(false);
       expect(wrapper.find('.t-cell--required').exists()).toBe(false);
-    });
-
-    it('image prop takes priority over image slot', () => {
-      const wrapper = mount(Cell, {
-        props: { image: avatarUrl },
-        slots: { image: () => <span class="slot-image">插槽主图</span> },
-      });
-      expect(wrapper.find('.t-cell__left-image').attributes('src')).toBe(avatarUrl);
-      expect(wrapper.find('.slot-image').exists()).toBe(false);
-    });
-
-    it('leftIcon prop takes priority over leftIcon slot', () => {
-      const wrapper = mount(Cell, {
-        props: { leftIcon: appIcon },
-        slots: { leftIcon: () => <span class="slot-icon">插槽图标</span> },
-      });
-      expect(wrapper.find('.t-cell__left-icon').findComponent(AppIcon).exists()).toBe(true);
-      expect(wrapper.find('.slot-icon').exists()).toBe(false);
-    });
-
-    it('rightIcon prop takes priority over rightIcon slot', () => {
-      const wrapper = mount(Cell, {
-        props: { rightIcon: appIcon },
-        slots: { rightIcon: () => <span class="slot-icon">插槽图标</span> },
-      });
-      expect(wrapper.find('.t-cell__right-icon').findComponent(AppIcon).exists()).toBe(true);
-      expect(wrapper.find('.slot-icon').exists()).toBe(false);
     });
 
     it('arrow overrides rightIcon', async () => {

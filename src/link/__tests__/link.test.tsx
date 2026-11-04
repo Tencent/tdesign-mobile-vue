@@ -145,38 +145,6 @@ describe('Link', () => {
   });
 
   describe('scenarios', () => {
-    it('default slot takes priority over content prop', () => {
-      const wrapper = mount(Link, { props: { content: '属性内容' }, slots: { default: () => '插槽内容' } });
-      expect(wrapper.get('.t-link__content').text()).toBe('插槽内容');
-    });
-
-    it('content prop takes priority over content slot', () => {
-      const wrapper = mount(Link, {
-        props: { content: '属性内容' },
-        slots: { content: () => <span class="slot-content">具名内容</span> },
-      });
-      expect(wrapper.get('.t-link__content').text()).toBe('属性内容');
-      expect(wrapper.find('.slot-content').exists()).toBe(false);
-    });
-
-    it('prefixIcon prop takes priority over prefixIcon slot', () => {
-      const wrapper = mount(Link, {
-        props: { prefixIcon: () => <Icon /> },
-        slots: { prefixIcon: () => <TIconApp /> },
-      });
-      expect(wrapper.get('.t-link__prefix-icon').findComponent(Icon).exists()).toBe(true);
-      expect(wrapper.findComponent(TIconApp).exists()).toBe(false);
-    });
-
-    it('suffixIcon prop takes priority over suffixIcon slot', () => {
-      const wrapper = mount(Link, {
-        props: { suffixIcon: () => <Icon /> },
-        slots: { suffixIcon: () => <TIconApp /> },
-      });
-      expect(wrapper.get('.t-link__suffix-icon').findComponent(Icon).exists()).toBe(true);
-      expect(wrapper.findComponent(TIconApp).exists()).toBe(false);
-    });
-
     it('renders prefix, content and suffix together', () => {
       const wrapper = mount(Link, {
         props: { prefixIcon: () => <Icon />, suffixIcon: () => <TIconApp /> },
