@@ -4,6 +4,7 @@ import { CloseIcon } from 'tdesign-icons-vue-next';
 import { nextTick } from 'vue';
 import Dialog from '../dialog';
 import Button from '../../button/button';
+import type { TdButtonProps } from '../../button';
 
 import prefixConfig from '../../config';
 import { sleep } from '../../shared/util';
@@ -23,10 +24,15 @@ describe('Dialog', () => {
   describe('props', () => {
     it('actions[array]', async () => {
       const onClose = vi.fn();
+      // class 非 TdButtonProps 声明属性，运行时作为 attr 透传到按钮 DOM
+      const actions: Array<TdButtonProps & { class?: string }> = [
+        { content: '一等奖' },
+        { content: '再来一次', theme: 'danger', class: 'custom-action' },
+      ];
       const wrapper = mount(Dialog, {
         props: {
           visible: true,
-          actions: [{ content: '一等奖' }, { content: '再来一次', theme: 'danger', class: 'custom-action' }],
+          actions,
           onClose,
         },
       });
@@ -111,12 +117,12 @@ describe('Dialog', () => {
     });
 
     it('buttonLayout[horizontal/vertical]', async () => {
-      const confirmBtn = {
+      const confirmBtn: TdButtonProps = {
         content: '确认',
         variant: 'text',
         size: 'large',
       };
-      const cancelBtn = {
+      const cancelBtn: TdButtonProps = {
         content: '取消',
         variant: 'text',
         size: 'large',

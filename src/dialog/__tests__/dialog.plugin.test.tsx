@@ -1,8 +1,9 @@
 import { DOMWrapper, enableAutoUnmount, mount } from '@vue/test-utils';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { nextTick } from 'vue';
+import type { Plugin } from 'vue';
 import { DialogPlugin } from '../index';
-import type { DialogInstance } from '../type';
+import type { DialogInstance, TdDialogProps } from '../type';
 import { sleep } from '../../shared/util';
 
 const body = new DOMWrapper(document.body);
@@ -70,9 +71,11 @@ describe('DialogPlugin', () => {
       const originalConfirm = vi.fn();
       const updatedConfirm = vi.fn();
       handler = DialogPlugin.show({ content: 'Hello Vue', confirmBtn: '确认', onConfirm: originalConfirm });
+      // update 运行时支持 string 快捷更新内容（见 src/dialog/index.ts），DialogInstance 类型仅声明了对象入参
+      const update = handler.update as (options: Partial<TdDialogProps> | string) => void;
       await nextTick();
       expect(body.get('.t-dialog__body').text()).toBe('Hello Vue');
-      handler.update('Hello TDesign');
+      update('Hello TDesign');
       await nextTick();
       expect(body.get('.t-dialog__body').text()).toBe('Hello TDesign');
       handler.update({ content: 'Hello Vapor', onConfirm: updatedConfirm });
@@ -145,9 +148,10 @@ describe('DialogPlugin', () => {
     it.todo('destroys a hidden dialog and removes its mount node');
 
     it('use plugin', async () => {
-      const wrapper = mount(() => <div />, { global: { plugins: [DialogPlugin] } });
-      expect(wrapper.vm.$dialog).toBe(DialogPlugin);
-      handler = wrapper.vm.$dialog.show('全局插件对话框');
+      const wrapper = mount(() => <div />, { global: { plugins: [DialogPlugin as unknown as Plugin] } });
+      const { $dialog } = wrapper.vm as unknown as { $dialog: typeof DialogPlugin };
+      expect($dialog).toBe(DialogPlugin);
+      handler = $dialog.show('全局插件对话框');
       await nextTick();
       expect(body.get('.t-dialog__body').text()).toBe('全局插件对话框');
     });
