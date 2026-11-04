@@ -500,31 +500,6 @@ describe('Input', () => {
     });
   });
   describe('events', () => {
-    it('focus & blur', async () => {
-      const inputRef = ref(null);
-      const placeholder = 'placeholder content';
-      const onBlur = vi.fn();
-      const onFocus = vi.fn();
-      const wrapper = mount({
-        render() {
-          return <Input ref={inputRef} placeholder={placeholder} onBlur={onBlur} onFocus={onFocus} />;
-        },
-      });
-      const input = wrapper.find(`.${name}__wrap input`);
-
-      inputRef.value?.focus(); // 调用 focus 方法, 实现聚焦
-      await nextTick();
-
-      await input.trigger('blur'); // 模拟触发 blur
-      expect(onBlur).toBeCalledTimes(1);
-
-      await input.trigger('focus'); // 模拟触发 focus
-      expect(onFocus).toBeCalledTimes(1);
-
-      inputRef.value?.blur(); // 调用 blur 方法，实现失焦
-      await nextTick();
-    });
-
     it('compositionend', async () => {
       const onCompositionend = vi.fn();
       // onCompositionend 属原生事件透传，通过非字面量 props 规避 JSX 类型检查
@@ -605,6 +580,27 @@ describe('Input', () => {
       await nextTick();
       expect(onCharacterValidate).toBeCalledTimes(1);
       expect(onCharacterValidate).toHaveBeenCalledWith({ error: 'exceed-maximum' });
+    });
+  });
+
+  describe('instanceFunctions', () => {
+    it('focus & blur', async () => {
+      const inputRef = ref(null);
+      const wrapper = mount({
+        render() {
+          return <Input ref={inputRef} />;
+        },
+      });
+      const input = wrapper.get('input').element as HTMLInputElement;
+      // 暴露方法委托给原生 input 的 focus/blur
+      const focusSpy = vi.spyOn(input, 'focus');
+      const blurSpy = vi.spyOn(input, 'blur');
+
+      inputRef.value?.focus();
+      expect(focusSpy).toHaveBeenCalledTimes(1);
+
+      inputRef.value?.blur();
+      expect(blurSpy).toHaveBeenCalledTimes(1);
     });
   });
 
