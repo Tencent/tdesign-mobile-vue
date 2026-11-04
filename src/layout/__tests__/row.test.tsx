@@ -11,6 +11,16 @@ enableAutoUnmount(afterEach);
 
 describe('Row', () => {
   describe('props', () => {
+    it('gutter[string]', () => {
+      // 数字字符串按 px 数值参与计算
+      expect(mount(Row, { props: { gutter: '100' } }).attributes('style')).toBe(
+        'margin-right: -50px; margin-left: -50px;',
+      );
+
+      // 带单位字符串参与除法得到 NaN，样式无效
+      expect(mount(Row, { props: { gutter: '2rem' } }).attributes('style')).toBeUndefined();
+    });
+
     it('gutter[number]', async () => {
       const wrapper = mount(Row, { props: { gutter: 100 } });
       expect(wrapper.attributes('style')).toBe('margin-right: -50px; margin-left: -50px;');
@@ -21,16 +31,6 @@ describe('Row', () => {
 
       // 未设置 gutter 时不输出负外边距
       expect(mount(Row).attributes('style')).toBeUndefined();
-    });
-
-    it('gutter[string]', () => {
-      // 数字字符串按 px 数值参与计算
-      expect(mount(Row, { props: { gutter: '100' } }).attributes('style')).toBe(
-        'margin-right: -50px; margin-left: -50px;',
-      );
-
-      // 带单位字符串参与除法得到 NaN，样式无效
-      expect(mount(Row, { props: { gutter: '2rem' } }).attributes('style')).toBeUndefined();
     });
   });
 
