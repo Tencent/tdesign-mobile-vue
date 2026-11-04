@@ -313,12 +313,17 @@ describe('Calendar', () => {
       expect(wrapper.find(`.${name}__dates-item--selected`).text()).toBe('20');
     });
 
-    // calendar.tsx 和 template.tsx 仅消费 value，尚未接入 modelValue/defaultValue。
+    // calendar.tsx 和 template.tsx 仅消费 value，尚未接入受控属性 modelValue 的数字时间戳形式。
     it.todo('modelValue[number]');
+    // 同上，multiple/range 场景的数组形式。
     it.todo('modelValue[array]');
+    // 同上，Date 对象形式。
     it.todo('modelValue[Date]');
+    // 组件尚未实现 defaultValue 非受控初值，选中值当前仅由 value 驱动。
     it.todo('defaultValue[number]');
+    // 同上，multiple/range 场景的数组形式。
     it.todo('defaultValue[array]');
+    // 同上，Date 对象形式。
     it.todo('defaultValue[Date]');
 
     it('visible[boolean]', async () => {
@@ -332,44 +337,6 @@ describe('Calendar', () => {
         visible: true,
       });
       expect(wrapper.findComponent(Popup).props('visible')).toBe(true);
-    });
-  });
-
-  describe('slots', () => {
-    it('confirmBtn', async () => {
-      const wrapper = mount(<Calendar visible={true} value={value} />, {
-        slots: {
-          confirmBtn,
-        },
-      });
-      const $confirmBtn = wrapper.find(`.${name}__footer`);
-      expect($confirmBtn.text()).toEqual(confirmBtn);
-    });
-
-    it('title', () => {
-      const wrapper = mount(Calendar, {
-        props: { usePopup: false, minDate, maxDate },
-        slots: { title: () => <span class="slot-title">插槽标题</span> },
-      });
-      expect(wrapper.find(`.${name}__title .slot-title`).text()).toBe('插槽标题');
-    });
-  });
-
-  describe('scenarios', () => {
-    it('title prop takes priority over title slot', () => {
-      const wrapper = mount(Calendar, {
-        props: { usePopup: false, minDate, maxDate, title: '属性标题' },
-        slots: { title: () => <span>插槽标题</span> },
-      });
-      expect(wrapper.find(`.${name}__title`).text()).toBe('属性标题');
-    });
-
-    it('confirmBtn prop takes priority over confirmBtn slot', () => {
-      const wrapper = mount(Calendar, {
-        props: { visible: true, minDate, maxDate, confirmBtn: '属性按钮' },
-        slots: { confirmBtn: () => <span>插槽按钮</span> },
-      });
-      expect(wrapper.find(`.${name}__footer`).text()).toBe('属性按钮');
     });
   });
 
@@ -401,6 +368,7 @@ describe('Calendar', () => {
       expect(onScroll).toHaveBeenCalledTimes(1);
       expect(onScroll).toHaveBeenCalledWith({ e: expect.any(Event) });
     });
+
     it('confirm', async () => {
       const time = ref('');
       const character = '-';
@@ -450,6 +418,44 @@ describe('Calendar', () => {
       await $button.trigger('click');
       expect(onConfirm).toHaveBeenCalledTimes(1);
       expect(selectTime).toEqual(time);
+    });
+  });
+
+  describe('slots', () => {
+    it('confirmBtn', async () => {
+      const wrapper = mount(<Calendar visible={true} value={value} />, {
+        slots: {
+          confirmBtn,
+        },
+      });
+      const $confirmBtn = wrapper.find(`.${name}__footer`);
+      expect($confirmBtn.text()).toEqual(confirmBtn);
+    });
+
+    it('title', () => {
+      const wrapper = mount(Calendar, {
+        props: { usePopup: false, minDate, maxDate },
+        slots: { title: () => <span class="slot-title">插槽标题</span> },
+      });
+      expect(wrapper.find(`.${name}__title .slot-title`).text()).toBe('插槽标题');
+    });
+  });
+
+  describe('scenarios', () => {
+    it('title prop takes priority over title slot', () => {
+      const wrapper = mount(Calendar, {
+        props: { usePopup: false, minDate, maxDate, title: '属性标题' },
+        slots: { title: () => <span>插槽标题</span> },
+      });
+      expect(wrapper.find(`.${name}__title`).text()).toBe('属性标题');
+    });
+
+    it('confirmBtn prop takes priority over confirmBtn slot', () => {
+      const wrapper = mount(Calendar, {
+        props: { visible: true, minDate, maxDate, confirmBtn: '属性按钮' },
+        slots: { confirmBtn: () => <span>插槽按钮</span> },
+      });
+      expect(wrapper.find(`.${name}__footer`).text()).toBe('属性按钮');
     });
   });
 });
