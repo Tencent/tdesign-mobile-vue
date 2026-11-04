@@ -1,8 +1,15 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { useConfig, provideConfig } from '../useConfig';
 import type { GlobalConfigProvider } from '../type';
 
 describe('ConfigProvider hooks', () => {
+  // 在 setup 外调用 provideConfig 以模拟非组件环境，静音 Vue 对 provide() 的警告
+  vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
   describe('useConfig', () => {
     it('diff config', () => {
       const testConfig = (

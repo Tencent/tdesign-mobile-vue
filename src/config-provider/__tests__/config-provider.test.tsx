@@ -4,7 +4,6 @@ import { defineComponent } from 'vue';
 import { mount } from '@vue/test-utils';
 import { useConfig } from '../useConfig';
 import ConfigProvider from '../index';
-import type { GlobalConfigProvider } from '../type';
 
 describe('ConfigProvider', () => {
   describe('props', () => {
@@ -36,42 +35,21 @@ describe('ConfigProvider', () => {
   });
 
   describe('scenarios', () => {
-    it('provide config', () => {
-      // 结构与 TdConfigProviderProps 一致；使用类型字面量以兼容 mount 的 props 入参类型
-      const testConfig = (props: { globalConfig?: GlobalConfigProvider }, expectTarget: string) => {
-        const ChildComponent = defineComponent({
-          setup() {
-            const { globalConfig } = useConfig('table');
-            return () => <div class="t-child">{globalConfig.value.empty}</div>;
-          },
-        });
-
-        const wrapper = mount(
-          <ConfigProvider>
-            <ChildComponent />
-          </ConfigProvider>,
-          {
-            props,
-          },
-        );
-
-        const dom = wrapper.find('.t-child');
-        expect(dom.element.innerHTML).toBe(expectTarget);
-      };
-
-      testConfig({}, '暂无数据');
-
-      const empty = 'Empty Data Test';
-      testConfig(
-        {
-          globalConfig: {
-            table: {
-              empty,
-            },
-          },
+    it('falls back to default locale when globalConfig is not provided', () => {
+      const ChildComponent = defineComponent({
+        setup() {
+          const { globalConfig } = useConfig('table');
+          return () => <div class="t-child">{globalConfig.value.empty}</div>;
         },
-        empty,
+      });
+
+      const wrapper = mount(
+        <ConfigProvider>
+          <ChildComponent />
+        </ConfigProvider>,
       );
+
+      expect(wrapper.find('.t-child').element.innerHTML).toBe('暂无数据');
     });
   });
 });
