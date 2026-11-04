@@ -1,5 +1,5 @@
 import { nextTick, ref } from 'vue';
-import { mount } from '@vue/test-utils';
+import { mount, type DOMWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import dayjs from 'dayjs';
 
@@ -8,8 +8,9 @@ import ConfigProvider from '../../config-provider';
 import PickerItem from '../../picker/picker-item';
 import { DEFAULT_ITEM_HEIGHT } from '../../picker/picker.class';
 import { DEFAULT_WHEEL_CONFIG } from '../../picker/constants';
+import type { PickerColumnItem } from '../../picker/type';
 
-const makeTouch = (el, eventName, touchPosition) => {
+const makeTouch = (el: Element, eventName: string, touchPosition?: { pageY: number }) => {
   const event = new Event(eventName);
   if (touchPosition) {
     Object.defineProperty(event, 'changedTouches', { value: [touchPosition] });
@@ -18,7 +19,7 @@ const makeTouch = (el, eventName, touchPosition) => {
   el.dispatchEvent(event);
 };
 
-const simulateMoveOption = async (optionContainerEl, distance) => {
+const simulateMoveOption = async (optionContainerEl: Element, distance: number) => {
   makeTouch(optionContainerEl, 'touchstart', { pageY: 0 });
   makeTouch(optionContainerEl, 'touchmove', { pageY: -distance * DEFAULT_ITEM_HEIGHT });
 
@@ -32,7 +33,7 @@ const simulateMoveOption = async (optionContainerEl, distance) => {
 const prefix = 't';
 const name = `${prefix}-date-time-picker`;
 
-const renderLabel = (type, value) => {
+const renderLabel = (type: string, value: number): string => {
   if (type === 'year') {
     return `${value}年`;
   }
@@ -42,15 +43,15 @@ const renderLabel = (type, value) => {
   if (type === 'date') {
     return `${value}日`;
   }
-  return value;
+  return String(value);
 };
 
-const addZero = (el) => {
+const addZero = (el: number) => {
   return el < 10 ? `0${el}` : el;
 };
 
 // 获取当前月份的天数
-const getDateCount = (Y, M) => {
+const getDateCount = (Y: number, M: number) => {
   const d = new Date(Y, M, 0);
   return d.getDate();
 };
@@ -63,9 +64,9 @@ const M = currentDate.getMonth() + 1;
 const D = currentDate.getDate();
 const defaultDateTime = `${Y}-${addZero(M)}-${addZero(D)}`;
 
-const ret = [];
-const generateColumn = (start, end, type) => {
-  const arr = [];
+const ret: PickerColumnItem[][] = [];
+const generateColumn = (start: number, end: number, type: string) => {
+  const arr: PickerColumnItem[] = [];
   for (let i = start; i <= end; i++) {
     const value = i.toString();
     arr.push({
@@ -194,7 +195,7 @@ describe('DateTimePicker', () => {
       const $pickerItems = wrapper.findAllComponents(PickerItem);
       expect($pickerItems.length).toEqual(3);
 
-      const res = {};
+      const res: Record<string, DOMWrapper<Element>[]> = {};
       $pickerItems.forEach((item, index) => {
         res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`);
       });
@@ -239,11 +240,11 @@ describe('DateTimePicker', () => {
         },
       });
       const $pickerItems = wrapper.findAllComponents(PickerItem);
-      const res = {};
+      const res: Record<string, DOMWrapper<Element>[]> = {};
       $pickerItems.forEach((item, index) => {
         res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`);
       });
-      expect(res[precisionRankRecord[0]].length).toEqual(endYear - startYear + 1);
+      expect(res[precisionRankRecord[0]].length).toEqual(Number(endYear) - Number(startYear) + 1);
 
       // 设置到最后一天
       await wrapper.setProps({ value: end });
