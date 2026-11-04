@@ -1,8 +1,9 @@
-import { ref } from 'vue';
+import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { CheckIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import Switch from '../switch';
+import Form from '../../form';
 import type { SwitchValue, TdSwitchProps } from '../type';
 
 // 运行时支持 VNode 数组作为双态图标，类型声明为 TNode[]，按仓库惯例统一断言
@@ -377,50 +378,43 @@ describe('Switch', () => {
     describe('form context', () => {
       it('inherits disabled from form', async () => {
         const onChange = vi.fn();
-        const wrapper = mount(Switch, {
-          props: {
-            onChange,
-          },
-          global: {
-            provide: {
-              formDisabled: { disabled: ref(true) },
-            },
-          },
-        });
-        // 跟随表单禁用：带禁用样式且点击无效
-        expect(wrapper.classes()).toContain('t-switch--disabled');
+        const switchDisabled = ref<boolean | undefined>(undefined);
+        const wrapper = mount(() => (
+          <Form disabled>
+            <Switch disabled={switchDisabled.value} onChange={onChange} />
+          </Form>
+        ));
+        const getSwitch = () => wrapper.findComponent(Switch);
 
-        await wrapper.trigger('click');
+        // 跟随表单禁用：带禁用样式且点击无效
+        expect(getSwitch().classes()).toContain('t-switch--disabled');
+
+        await getSwitch().trigger('click');
         expect(onChange).not.toHaveBeenCalled();
 
         // 组件自身 disabled=false 优先于表单禁用
-        await wrapper.setProps({ disabled: false });
-        expect(wrapper.classes()).not.toContain('t-switch--disabled');
+        switchDisabled.value = false;
+        await nextTick();
+        expect(getSwitch().classes()).not.toContain('t-switch--disabled');
 
-        await wrapper.trigger('click');
+        await getSwitch().trigger('click');
         expect(onChange).toHaveBeenCalledTimes(1);
-        expect(wrapper.classes()).toContain('t-switch--checked');
+        expect(getSwitch().classes()).toContain('t-switch--checked');
       });
 
       it('inherits readonly from form', async () => {
         const onChange = vi.fn();
-        const wrapper = mount(Switch, {
-          props: {
-            defaultValue: true,
-            onChange,
-          },
-          global: {
-            provide: {
-              formReadonly: { readonly: ref(true) },
-            },
-          },
-        });
+        const wrapper = mount(() => (
+          <Form readonly>
+            <Switch defaultValue onChange={onChange} />
+          </Form>
+        ));
         // 只读不添加禁用样式，但不可切换
-        expect(wrapper.classes()).not.toContain('t-switch--disabled');
+        expect(wrapper.findComponent(Switch).classes()).not.toContain('t-switch--disabled');
 
-        await wrapper.trigger('click');
+        await wrapper.findComponent(Switch).trigger('click');
         expect(onChange).not.toHaveBeenCalled();
-        expect(wrapper.classes()).toContain('t-switch--checked');
+        expect(wrapper.findComponent(Switch).classes()).toContain('t-switch--checked');
       });
     });
 

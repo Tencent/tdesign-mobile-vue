@@ -3,6 +3,7 @@ import { mount, type VueWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { CloseCircleFilledIcon as TIconClear, SearchIcon as TSearchIcon } from 'tdesign-icons-vue-next';
 import Search from '../search';
+import Form from '../../form';
 
 const prefix = 't';
 const name = `${prefix}-search`;
@@ -507,60 +508,48 @@ describe('Search', () => {
     describe('form context', () => {
       it('inherits disabled from form', async () => {
         const disabled = ref(true);
-        const wrapper = mount(Search, {
-          props: {
-            value: '关键字',
-          },
-          global: {
-            provide: {
-              formDisabled: { disabled },
-            },
-          },
-        });
-        expect(wrapper.find('input').attributes('disabled')).toBeDefined();
+        const wrapper = mount(() => (
+          <Form disabled={disabled.value}>
+            <Search value="关键字" />
+          </Form>
+        ));
+        const getSearch = () => wrapper.findComponent(Search);
+
+        expect(getSearch().find('input').attributes('disabled')).toBeDefined();
         // 表单禁用时同样不渲染清空按钮
-        expect(wrapper.findComponent(TIconClear).exists()).toBeFalsy();
+        expect(getSearch().findComponent(TIconClear).exists()).toBeFalsy();
 
         disabled.value = false;
         await nextTick();
-        expect(wrapper.find('input').attributes('disabled')).toBeUndefined();
-        expect(wrapper.findComponent(TIconClear).exists()).toBeTruthy();
+        expect(getSearch().find('input').attributes('disabled')).toBeUndefined();
+        expect(getSearch().findComponent(TIconClear).exists()).toBeTruthy();
       });
 
       it('search disabled takes priority over form disabled', async () => {
-        const disabled = ref(true);
-        const wrapper = mount(Search, {
-          props: {
-            disabled: false,
-          },
-          global: {
-            provide: {
-              formDisabled: { disabled },
-            },
-          },
-        });
+        const searchDisabled = ref<boolean | undefined>(false);
+        const wrapper = mount(() => (
+          <Form disabled>
+            <Search disabled={searchDisabled.value} />
+          </Form>
+        ));
         // Search.disabled = false 优先于 Form.disabled = true
-        expect(wrapper.find('input').attributes('disabled')).toBeUndefined();
+        expect(wrapper.findComponent(Search).find('input').attributes('disabled')).toBeUndefined();
 
-        await wrapper.setProps({ disabled: true });
-        expect(wrapper.find('input').attributes('disabled')).toBeDefined();
+        searchDisabled.value = true;
+        await nextTick();
+        expect(wrapper.findComponent(Search).find('input').attributes('disabled')).toBeDefined();
       });
 
       it('form readonly state makes the input readonly', () => {
-        const readonly = ref(true);
-        const wrapper = mount(Search, {
-          props: {
-            value: '关键字',
-          },
-          global: {
-            provide: {
-              formReadonly: { readonly },
-            },
-          },
-        });
-        expect(wrapper.find('input').attributes('readonly')).toBeDefined();
+        const wrapper = mount(() => (
+          <Form readonly>
+            <Search value="关键字" />
+          </Form>
+        ));
+        const search = wrapper.findComponent(Search);
+        expect(search.find('input').attributes('readonly')).toBeDefined();
         // 表单只读时同样不渲染清空按钮
-        expect(wrapper.findComponent(TIconClear).exists()).toBeFalsy();
+        expect(search.findComponent(TIconClear).exists()).toBeFalsy();
       });
     });
 

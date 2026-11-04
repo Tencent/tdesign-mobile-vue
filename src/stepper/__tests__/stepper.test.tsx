@@ -2,6 +2,7 @@ import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Stepper from '../stepper';
+import Form from '../../form';
 
 const name = 't-stepper';
 
@@ -492,51 +493,44 @@ describe('Stepper', () => {
     describe('form context', () => {
       it('inherits disabled from form', async () => {
         const onChange = vi.fn();
-        const wrapper = mount(Stepper, {
-          props: {
-            value: 1,
-            onChange,
-          },
-          global: {
-            provide: {
-              formDisabled: { disabled: ref(true) },
-            },
-          },
-        });
-        // 跟随表单禁用：按钮禁用态、输入框不可用、点击无效
-        expect(wrapper.find(`.${name}__minus`).classes()).toContain(`${name}--normal-disabled`);
-        expect(wrapper.find(`.${name}__plus`).classes()).toContain(`${name}--normal-disabled`);
-        expect(wrapper.find(`.${name}__input`).attributes('disabled')).toBeDefined();
+        const stepperDisabled = ref<boolean | undefined>(undefined);
+        const wrapper = mount(() => (
+          <Form disabled>
+            <Stepper value={1} disabled={stepperDisabled.value} onChange={onChange} />
+          </Form>
+        ));
+        const getStepper = () => wrapper.findComponent(Stepper);
 
-        await wrapper.find(`.${name}__plus`).trigger('click');
+        // 跟随表单禁用：按钮禁用态、输入框不可用、点击无效
+        expect(getStepper().find(`.${name}__minus`).classes()).toContain(`${name}--normal-disabled`);
+        expect(getStepper().find(`.${name}__plus`).classes()).toContain(`${name}--normal-disabled`);
+        expect(getStepper().find(`.${name}__input`).attributes('disabled')).toBeDefined();
+
+        await getStepper().find(`.${name}__plus`).trigger('click');
         expect(onChange).not.toHaveBeenCalled();
 
         // 组件自身 disabled=false 优先于表单禁用
-        await wrapper.setProps({ disabled: false });
-        expect(wrapper.find(`.${name}__minus`).classes()).not.toContain(`${name}--normal-disabled`);
-        await wrapper.find(`.${name}__plus`).trigger('click');
+        stepperDisabled.value = false;
+        await nextTick();
+        expect(getStepper().find(`.${name}__minus`).classes()).not.toContain(`${name}--normal-disabled`);
+        await getStepper().find(`.${name}__plus`).trigger('click');
         expect(onChange).toHaveBeenCalledWith('2');
       });
 
       it('inherits readonly from form', async () => {
         const onChange = vi.fn();
-        const wrapper = mount(Stepper, {
-          props: {
-            value: 1,
-            onChange,
-          },
-          global: {
-            provide: {
-              formReadonly: { readonly: ref(true) },
-            },
-          },
-        });
+        const wrapper = mount(() => (
+          <Form readonly>
+            <Stepper value={1} onChange={onChange} />
+          </Form>
+        ));
+        const stepper = wrapper.findComponent(Stepper);
         // 只读态：输入框只读、按钮不可用且点击不触发 change
-        expect(wrapper.find(`.${name}__minus`).classes()).toContain(`${name}--normal-disabled`);
-        expect(wrapper.find(`.${name}__plus`).classes()).toContain(`${name}--normal-disabled`);
-        expect(wrapper.find(`.${name}__input`).attributes('readonly')).toBeDefined();
+        expect(stepper.find(`.${name}__minus`).classes()).toContain(`${name}--normal-disabled`);
+        expect(stepper.find(`.${name}__plus`).classes()).toContain(`${name}--normal-disabled`);
+        expect(stepper.find(`.${name}__input`).attributes('readonly')).toBeDefined();
 
-        await wrapper.find(`.${name}__plus`).trigger('click');
+        await stepper.find(`.${name}__plus`).trigger('click');
         expect(onChange).not.toHaveBeenCalled();
       });
     });

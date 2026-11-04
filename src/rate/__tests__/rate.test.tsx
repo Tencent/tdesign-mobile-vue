@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { ThumbUpIcon, ThumbDownIcon, StarFilledIcon } from 'tdesign-icons-vue-next';
 import Rate from '../rate';
+import Form from '../../form';
 import ConfigProvider from '../../config-provider';
 import { trigger } from '../../image-viewer/__tests__/touch';
 
@@ -455,40 +456,39 @@ describe('Rate', () => {
     describe('form context', () => {
       it('inherits disabled from form', async () => {
         mockRect();
+        const formDisabled = ref(true);
+        const rateDisabled = ref<boolean | undefined>(undefined);
         const onChange = vi.fn();
-        const wrapper = mount(Rate, {
-          props: { onChange },
-          global: {
-            provide: {
-              formDisabled: { disabled: ref(true) },
-            },
-          },
-        });
-        expect(wrapper.classes()).toContain(`${name}--disabled`);
-        await wrapper.findAll(`.${name}__icon`)[2].trigger('click', { pageX: 150 });
+        const wrapper = mount(() => (
+          <Form disabled={formDisabled.value}>
+            <Rate disabled={rateDisabled.value} onChange={onChange} />
+          </Form>
+        ));
+        const getRate = () => wrapper.findComponent(Rate);
+
+        expect(getRate().classes()).toContain(`${name}--disabled`);
+        await getRate().findAll(`.${name}__icon`)[2].trigger('click', { pageX: 150 });
         expect(onChange).not.toHaveBeenCalled();
 
         // 组件自身 disabled=false 优先于表单禁用
-        await wrapper.setProps({ disabled: false });
-        expect(wrapper.classes()).not.toContain(`${name}--disabled`);
-        await wrapper.findAll(`.${name}__icon`)[2].trigger('click', { pageX: 150 });
+        rateDisabled.value = false;
+        await nextTick();
+        expect(getRate().classes()).not.toContain(`${name}--disabled`);
+        await getRate().findAll(`.${name}__icon`)[2].trigger('click', { pageX: 150 });
         expect(onChange).toHaveBeenCalledWith(3);
       });
 
       it('inherits readonly from form', async () => {
         mockRect();
         const onChange = vi.fn();
-        const wrapper = mount(Rate, {
-          props: { onChange },
-          global: {
-            provide: {
-              formReadonly: { readonly: ref(true) },
-            },
-          },
-        });
+        const wrapper = mount(() => (
+          <Form readonly>
+            <Rate onChange={onChange} />
+          </Form>
+        ));
         // readonly 不带禁用样式，但不可交互
-        expect(wrapper.classes()).not.toContain(`${name}--disabled`);
-        await wrapper.findAll(`.${name}__icon`)[2].trigger('click', { pageX: 150 });
+        expect(wrapper.findComponent(Rate).classes()).not.toContain(`${name}--disabled`);
+        await wrapper.findComponent(Rate).findAll(`.${name}__icon`)[2].trigger('click', { pageX: 150 });
         expect(onChange).not.toHaveBeenCalled();
       });
     });

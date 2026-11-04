@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Radio from '../radio';
 import RadioGroup from '../radio-group';
+import Form from '../../form';
 import type { TdRadioProps } from '../type';
 import config from '../../config';
 
@@ -518,11 +519,13 @@ describe('Radio', () => {
   describe('scenarios', () => {
     it('explicit disabled overrides group and form disabled states', async () => {
       const onChange = vi.fn();
-      const wrapper = mount(RadioGroup, {
-        props: { disabled: true, onChange },
-        global: { provide: { formDisabled: { disabled: ref(true) } } },
-        slots: { default: () => <Radio value="one" label="选项一" disabled={false} /> },
-      });
+      const wrapper = mount(() => (
+        <Form disabled>
+          <RadioGroup disabled onChange={onChange}>
+            <Radio value="one" label="选项一" disabled={false} />
+          </RadioGroup>
+        </Form>
+      ));
       // Radio.disabled=false 优先于 RadioGroup.disabled 与 Form.disabled
       await wrapper.find(`.${name}`).trigger('click');
       expect(wrapper.find(`.${name}__icon--checked`).exists()).toBe(true);
@@ -532,11 +535,13 @@ describe('Radio', () => {
     it('inherits disabled from form', async () => {
       const formDisabled = ref(true);
       const onChange = vi.fn();
-      const wrapper = mount(RadioGroup, {
-        props: { onChange },
-        global: { provide: { formDisabled: { disabled: formDisabled } } },
-        slots: { default: () => <Radio value="one" label="选项一" /> },
-      });
+      const wrapper = mount(() => (
+        <Form disabled={formDisabled.value}>
+          <RadioGroup onChange={onChange}>
+            <Radio value="one" label="选项一" />
+          </RadioGroup>
+        </Form>
+      ));
 
       // 表单禁用下，Radio 与 RadioGroup 均未设置 disabled 时继承禁用态
       await wrapper.find(`.${name}`).trigger('click');
