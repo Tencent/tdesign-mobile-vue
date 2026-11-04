@@ -411,6 +411,51 @@ describe('Dialog', () => {
       expect(document.querySelector('.t-popup').getAttribute('style')).toContain('z-index: 12000');
     });
   });
+
+  describe('events', () => {
+    it('cancel', async () => {
+      const onCancel = vi.fn();
+      const onClose = vi.fn();
+      const wrapper = mount(Dialog, { props: { visible: true, cancelBtn: '取消', onCancel, onClose } });
+      await wrapper.findComponent(Button).trigger('click');
+      expect(onCancel).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent) });
+      expect(onClose).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
+      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
+    });
+
+    it('close', async () => {
+      const onClose = vi.fn();
+      const wrapper = mount(Dialog, { props: { visible: true, closeBtn: true, onClose } });
+      await wrapper.findComponent(CloseIcon).trigger('click');
+      expect(onClose).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent), trigger: 'close-btn' });
+      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
+    });
+
+    it('overlayClick', async () => {
+      const onOverlayClick = vi.fn();
+      const wrapper = mount(Dialog, { props: { visible: true, closeOnOverlayClick: true, onOverlayClick } });
+      await wrapper.find('.t-overlay').trigger('click');
+      expect(onOverlayClick).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent) });
+      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
+    });
+
+    it('confirm', async () => {
+      const onConfirm = vi.fn();
+      const wrapper = mount(Dialog, { props: { visible: true, confirmBtn: '确认', onConfirm } });
+      await wrapper.findComponent(Button).trigger('click');
+      expect(onConfirm).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
+      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
+    });
+
+    it('closed', async () => {
+      const onClosed = vi.fn();
+      const wrapper = mount(Dialog, { props: { visible: true, onClosed } });
+      await wrapper.setProps({ visible: false });
+      await sleep(300);
+      expect(onClosed).toHaveBeenCalledTimes(1);
+    });
+  });
+
   describe('slots', () => {
     it('actions', () => {
       const wrapper = mount(Dialog, {
@@ -473,49 +518,6 @@ describe('Dialog', () => {
         },
       });
       expect(wrapper.find('.slot-cancel-btn').text()).toBe(cancelBtn);
-    });
-  });
-  describe('events', () => {
-    it('cancel', async () => {
-      const onCancel = vi.fn();
-      const onClose = vi.fn();
-      const wrapper = mount(Dialog, { props: { visible: true, cancelBtn: '取消', onCancel, onClose } });
-      await wrapper.findComponent(Button).trigger('click');
-      expect(onCancel).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent) });
-      expect(onClose).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent), trigger: 'cancel' });
-      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
-    });
-
-    it('close', async () => {
-      const onClose = vi.fn();
-      const wrapper = mount(Dialog, { props: { visible: true, closeBtn: true, onClose } });
-      await wrapper.findComponent(CloseIcon).trigger('click');
-      expect(onClose).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent), trigger: 'close-btn' });
-      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
-    });
-
-    it('overlayClick', async () => {
-      const onOverlayClick = vi.fn();
-      const wrapper = mount(Dialog, { props: { visible: true, closeOnOverlayClick: true, onOverlayClick } });
-      await wrapper.find('.t-overlay').trigger('click');
-      expect(onOverlayClick).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent) });
-      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
-    });
-
-    it('confirm', async () => {
-      const onConfirm = vi.fn();
-      const wrapper = mount(Dialog, { props: { visible: true, confirmBtn: '确认', onConfirm } });
-      await wrapper.findComponent(Button).trigger('click');
-      expect(onConfirm).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
-      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
-    });
-
-    it('closed', async () => {
-      const onClosed = vi.fn();
-      const wrapper = mount(Dialog, { props: { visible: true, onClosed } });
-      await wrapper.setProps({ visible: false });
-      await sleep(300);
-      expect(onClosed).toHaveBeenCalledTimes(1);
     });
   });
 
