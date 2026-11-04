@@ -1,5 +1,5 @@
 import { ref, nextTick } from 'vue';
-import { mount } from '@vue/test-utils';
+import { mount, enableAutoUnmount } from '@vue/test-utils';
 import type { VueWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi, beforeAll, afterAll, afterEach } from 'vitest';
 import {
@@ -22,6 +22,9 @@ import TImageViewer from '../../image-viewer';
 import Upload from '../upload';
 import type { RequestMethodResponse, UploadFile } from '../type';
 import { trigger } from '@/image-viewer/__tests__/touch';
+
+// 模拟进度的真实定时器可能晚于用例断言触发，自动卸载组件可避免残留渲染在环境销毁后执行
+enableAutoUnmount(afterEach);
 
 // 组件通过 ref 暴露的实例方法（expose），vm 类型上不可见，需断言收敛
 type UploadInstanceFunctions = {
