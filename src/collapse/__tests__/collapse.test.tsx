@@ -149,9 +149,7 @@ describe('Collapse', () => {
             );
           },
         });
-        if (theme) {
-          expect(wrapper.classes()).toContain(`t-collapse--${theme}`);
-        }
+        expect(wrapper.classes()).toContain(`t-collapse--${theme}`);
       });
     });
 
