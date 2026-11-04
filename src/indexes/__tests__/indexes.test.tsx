@@ -201,9 +201,23 @@ describe('Indexes', () => {
       await $items[1].trigger('click');
       expect(onChange).toBeCalledTimes(2);
     });
+  });
 
-    // 触摸滑动侧边栏通道：滑动切换激活项仅触发 change，不触发 select
-    it('change[touch]', async () => {
+  describe('scenarios', () => {
+    it('renders the sidebar and anchor sections from indexList', () => {
+      const wrapper = mountIndexes({ showFullIndex: true });
+      // 侧边栏按 indexList 逐项渲染
+      const sidebarItems = wrapper.findAll(`.${indexesClass}__sidebar-item`);
+      expect(sidebarItems.map((item) => item.text())).toEqual(indexList.map(String));
+      sidebarItems.forEach((item, index) => {
+        expect(item.attributes('data-index')).toBe(String(indexList[index]));
+      });
+      // 每个锚点对应一组单元格
+      expect(wrapper.findAll(`.${indexesAnchorClass}`)).toHaveLength(list.length);
+      expect(wrapper.findAll('.indexes-cell')).toHaveLength(list.length * children.length);
+    });
+
+    it('swiping the sidebar switches indexes without emitting select', async () => {
       const onSelect = vi.fn();
       const onChange = vi.fn();
       const wrapper = mountIndexes({ onSelect, onChange });
@@ -225,21 +239,6 @@ describe('Indexes', () => {
       );
       expect(onSelect).toBeCalledTimes(1);
       expect(onChange).toBeCalledTimes(2);
-    });
-  });
-
-  describe('scenarios', () => {
-    it('renders the sidebar and anchor sections from indexList', () => {
-      const wrapper = mountIndexes({ showFullIndex: true });
-      // 侧边栏按 indexList 逐项渲染
-      const sidebarItems = wrapper.findAll(`.${indexesClass}__sidebar-item`);
-      expect(sidebarItems.map((item) => item.text())).toEqual(indexList.map(String));
-      sidebarItems.forEach((item, index) => {
-        expect(item.attributes('data-index')).toBe(String(indexList[index]));
-      });
-      // 每个锚点对应一组单元格
-      expect(wrapper.findAll(`.${indexesAnchorClass}`)).toHaveLength(list.length);
-      expect(wrapper.findAll('.indexes-cell')).toHaveLength(list.length * children.length);
     });
 
     it('shows the sidebar tips after selecting and hides them after one second', async () => {
