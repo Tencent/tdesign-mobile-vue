@@ -1,7 +1,52 @@
-import { isFunction, get, isObject } from 'lodash-es';
-import { CellData, RowClassNameParams, TableColumnClassName, TableRowData, TdBaseTableProps } from '../type';
+import { isFunction, get, isObject, isString } from 'lodash-es';
+import { h } from 'vue';
+import {
+  BaseTableCellParams,
+  CellData,
+  RowClassNameParams,
+  TableColumnClassName,
+  TableRowData,
+  TdBaseTableProps,
+} from '../type';
 import { ClassName, HTMLElementAttributes } from '../../common';
 import { SkipSpansValue } from '../hooks/useRowspanAndColspan';
+
+/**
+ * 计算单元格渲染内容。
+ * 优先级：序号列 > col.cell > 插槽 > col.render > get(row, colKey) > cellEmptyContent
+ */
+export function renderCell(
+  params: BaseTableCellParams<TableRowData>,
+  slots: Record<string, any>,
+  cellEmptyContent?: TdBaseTableProps['cellEmptyContent'],
+) {
+  const { col, row, rowIndex } = params;
+  // 序号列
+  if (col.colKey === 'serial-number') {
+    return rowIndex + 1;
+  }
+  if (isFunction(col.cell)) {
+    return col.cell(h, params);
+  }
+  if (slots[col.colKey]) {
+    return slots[col.colKey](params);
+  }
+  if (isString(col.cell) && slots?.[col.cell]) {
+    return slots[col.cell](params);
+  }
+  if (isFunction(col.render)) {
+    return col.render(h, { ...params, type: 'cell' });
+  }
+  const r = get(row, col.colKey);
+  // 0 和 false 属于正常可用值，不走空值兜底
+  if (![undefined, '', null].includes(r)) return r;
+  if (cellEmptyContent) {
+    return isFunction(cellEmptyContent) ? cellEmptyContent(h, params) : cellEmptyContent;
+  }
+  if (slots.cellEmptyContent) return slots.cellEmptyContent(params);
+  if (slots['cell-empty-content']) return slots['cell-empty-content'](params);
+  return r;
+}
 
 export function toString(obj: any): string {
   return Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();

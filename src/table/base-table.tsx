@@ -1,5 +1,5 @@
-import { defineComponent, computed, h, ref, SetupContext, toRefs, inject, watch } from 'vue';
-import { get, isFunction, isString } from 'lodash-es';
+import { defineComponent, computed, h, ref, toRefs, inject, watch } from 'vue';
+import { get } from 'lodash-es';
 import baseTableProps from './base-table-props';
 import useClassName from './hooks/useClassName';
 import useStyle, { formatCSSUnit } from './hooks/useStyle';
@@ -15,10 +15,11 @@ import {
   handleCellSpan,
   isFirstColumnInSpan,
   isLastRowInSpan,
+  renderCell,
 } from './utils';
 import { ClassName } from '../common';
 
-import { BaseTableCellParams, BaseTableCol, TableRowData, TdBaseTableProps } from './type';
+import { BaseTableCol, TableRowData, TdBaseTableProps } from './type';
 import TLoading from '../loading';
 import { TdLoadingProps } from '../loading/type';
 import { useConfig } from '../config-provider/useConfig';
@@ -28,7 +29,7 @@ import { tableInternalKey, BaseTableColumns } from './interface';
 export default defineComponent({
   name: 'TBaseTable',
   props: baseTableProps,
-  emits: ['cell-click', 'row-click', 'scroll', 'scroll-to-bottom'],
+  emits: ['cell-click', 'row-click'],
   setup(props, context) {
     const tableRef = ref();
     const theadRef = ref();
@@ -102,8 +103,6 @@ export default defineComponent({
 
     const tbodyClasses = computed(() => [tableBaseClass.body]);
 
-    const ellipsisClasses = computed(() => [`${classPrefix}-table__ellipsis`, `${classPrefix}-text-ellipsis`]);
-
     const handleRowClick = (row: TableRowData, rowIndex: number, e: MouseEvent) => {
       props.onRowClick?.({ row, index: rowIndex, e });
     };
@@ -126,46 +125,6 @@ export default defineComponent({
     ]);
 
     const tableElmClasses = computed(() => [[tableLayoutClasses[props.tableLayout || 'fixed']]]);
-
-    const renderCell = (
-      params: BaseTableCellParams<TableRowData>,
-      slots: SetupContext['slots'],
-      cellEmptyContent?: TdBaseTableProps['cellEmptyContent'],
-    ) => {
-      const { col, row, rowIndex } = params;
-      // support serial number column
-      if (col.colKey === 'serial-number') {
-        return rowIndex + 1;
-      }
-
-      if (isFunction(col.cell)) {
-        return col.cell(h, params);
-      }
-
-      if (slots[col.colKey]) {
-        return slots[col.colKey](params);
-      }
-
-      if (isString(col.cell) && slots?.[col.cell]) {
-        return slots[col.cell](params);
-      }
-
-      if (isFunction(col.render)) {
-        return col.render(h, { ...params, type: 'cell' });
-      }
-
-      const r = get(row, col.colKey);
-      // 0 和 false 属于正常可用值，不能使用兜底逻辑 cellEmptyContent
-      if (![undefined, '', null].includes(r)) return r;
-
-      // cellEmptyContent 作为空数据兜底显示，用户可自定义
-      if (cellEmptyContent) {
-        return isFunction(cellEmptyContent) ? cellEmptyContent(h, params) : cellEmptyContent;
-      }
-      if (context.slots.cellEmptyContent) return context.slots.cellEmptyContent(params);
-      if (context.slots['cell-empty-content']) return context.slots['cell-empty-content'](params);
-      return r;
-    };
 
     const loadingClasses = computed(() => [`${classPrefix}-table__loading--full`]);
 
@@ -306,9 +265,7 @@ export default defineComponent({
                     }}
                     {...cellSpans}
                   >
-                    <div class={td_item.ellipsis && ellipsisClasses.value}>
-                      {renderCell(params, context.slots, props.cellEmptyContent)}
-                    </div>
+                    <div>{renderCell(params, context.slots, props.cellEmptyContent)}</div>
                   </td>
                 );
               })}
@@ -382,9 +339,7 @@ export default defineComponent({
                     style={thStyles.style}
                     data-colKey={item_th.colKey}
                   >
-                    <div class={(item_th.ellipsisTitle || item_th.ellipsis) && ellipsisClasses.value}>
-                      {renderTitle(context.slots, item_th, index_th)}
-                    </div>
+                    <div>{renderTitle(context.slots, item_th, index_th)}</div>
                   </th>
                 );
               })}
