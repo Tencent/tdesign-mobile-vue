@@ -16,6 +16,9 @@
     <tdesign-demo-block summary="带边框表格样式" :padding="true">
       <borderedDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="单元格超出省略的表格" :padding="true">
+      <ellipsisDemo />
+    </tdesign-demo-block>
     <tdesign-demo-block summary="可自定义样式的表格" :padding="true">
       <customRowStyle />
     </tdesign-demo-block>
@@ -48,4 +51,5 @@ import dragSortDemo from './drag-sort.vue';
 import loadingDemo from './loading.vue';
 import selectDemo from './select.vue';
 import filterSortDemo from './filter-sort.vue';
+import ellipsisDemo from './ellipsis.vue';
 </script>

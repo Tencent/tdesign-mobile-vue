@@ -11,7 +11,10 @@ import useDragSort from './hooks/useDragSort';
 import useRowExpand from './hooks/useRowExpand';
 import { renderTitle, renderTitleWidthIcon } from './hooks/useTableHeader';
 import { tableInternalKey, PrimaryTableRef } from './interface';
-import type { PageInfo, PaginationProps, PrimaryTableCol, TableRowData } from './type';
+import Ellipsis from './ellipsis';
+import { resolveEllipsis } from './utils/ellipsis';
+import { renderCell } from './utils';
+import type { PageInfo, PaginationProps, PrimaryTableCol, TableRowData, BaseTableCellParams } from './type';
 
 export default defineComponent({
   name: 'TPrimaryTable',
@@ -36,8 +39,14 @@ export default defineComponent({
     const p = props as any;
     const primaryTableRef = ref<PrimaryTableRef>();
     const innerPagination = ref<PaginationProps | undefined>(p.pagination);
-    const { tableDraggableClasses, tableBaseClass, tableSelectedClasses, tableSortClasses, tableFilterClasses } =
-      useClassName();
+    const {
+      classPrefix,
+      tableDraggableClasses,
+      tableBaseClass,
+      tableSelectedClasses,
+      tableSortClasses,
+      tableFilterClasses,
+    } = useClassName();
 
     // 行选中功能
     const {
@@ -97,19 +106,70 @@ export default defineComponent({
           }
         }
         if (item.sorter || item.filter) {
+          // 排序/过滤列：title 由 renderTitleWidthIcon 渲染，内部处理超出省略
           const titleContent = renderTitle(context.slots, item, i);
           const { sorter } = item;
           const { filter } = item;
+          const { ellipsisTitle } = item;
           item.title = (_renderFn: any, params: any) => {
             const sortIconResult = sorter ? renderSortIcon(params) : null;
             const filterIconResult = filter ? renderFilterIcon(params) : null;
+            const attach = primaryTableRef.value?.tableContentElement;
             return renderTitleWidthIcon(
               [titleContent, sortIconResult, filterIconResult].filter(Boolean) as any,
               tableSortClasses,
               tableFilterClasses,
+              params.col,
+              params.colIndex,
+              ellipsisTitle,
+              attach,
+              { classPrefix, ellipsisOverlayClassName: '' },
             );
           };
           item.ellipsisTitle = false;
+        } else {
+          // 普通列：按需将 title 包装为超出省略浮层（ellipsisTitle 优先级高于 ellipsis）
+          const titleEllipsis = resolveEllipsis(item.ellipsisTitle !== undefined ? item.ellipsisTitle : item.ellipsis, {
+            col: item,
+            colIndex: i,
+          });
+          if (titleEllipsis.enabled) {
+            const titleContent = renderTitle(context.slots, item, i);
+            item.title = () => (
+              <Ellipsis
+                classPrefix={classPrefix}
+                popupContent={(titleEllipsis.content ?? titleContent) as any}
+                popupProps={titleEllipsis.props}
+              >
+                {titleContent}
+              </Ellipsis>
+            );
+            item.ellipsisTitle = false;
+          }
+        }
+
+        // 单元格超出省略
+        if (item.ellipsis) {
+          const { ellipsis, cell: oldCell, render: oldRender } = item;
+          const { cellEmptyContent } = p;
+          item.cell = (h2: any, cellParams: BaseTableCellParams<TableRowData>) => {
+            // 复用原始 cell/render，避免 cell 被替换后无限递归
+            const baseParams = {
+              ...cellParams,
+              col: { ...cellParams.col, cell: oldCell, render: oldRender },
+            } as BaseTableCellParams<TableRowData>;
+            const cellNode = renderCell(baseParams, context.slots, cellEmptyContent);
+            const resolved = resolveEllipsis(ellipsis, cellParams);
+            return (
+              <Ellipsis
+                classPrefix={classPrefix}
+                popupContent={(resolved.content ?? cellNode) as any}
+                popupProps={resolved.props}
+              >
+                {cellNode}
+              </Ellipsis>
+            );
+          };
         }
         if (item.children?.length) {
           item.children = getColumns(item.children);
