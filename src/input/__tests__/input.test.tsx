@@ -94,7 +94,7 @@ describe('Input', () => {
       expect(handleClear).toBeCalled();
     });
 
-    it('clearTrigger[always] with disabled', async () => {
+    it('clearTrigger[always] & disabled[boolean]', async () => {
       const value = ref('123');
       const handleClear = vi.fn();
       const wrapper = mount(
@@ -107,7 +107,7 @@ describe('Input', () => {
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
     });
 
-    it('clearTrigger[always] with readonly', async () => {
+    it('clearTrigger[always] & readonly[boolean]', async () => {
       const value = ref('123');
       const handleClear = vi.fn();
       const wrapper = mount(
@@ -136,7 +136,7 @@ describe('Input', () => {
       expect(handleClear).toBeCalled();
     });
 
-    it('clearTrigger[focus] with disabled', async () => {
+    it('clearTrigger[focus] & disabled[boolean]', async () => {
       const value = ref('123');
       const handleClear = vi.fn();
       const wrapper = mount(
@@ -154,7 +154,7 @@ describe('Input', () => {
       expect(wrapper.find('.t-icon-close-circle-filled').exists()).toBeTruthy();
     });
 
-    it('clearTrigger[focus] with readonly', async () => {
+    it('clearTrigger[focus] & readonly[boolean]', async () => {
       const value = ref('123');
       const handleClear = vi.fn();
       const wrapper = mount(
@@ -365,7 +365,7 @@ describe('Input', () => {
       expect(attrDom1.attributes('type')).toBe('password');
     });
 
-    it('type[password] with disabled', async () => {
+    it('type[password] & disabled[boolean]', async () => {
       const wrapper = mount(<Input label="标题" type="password" disabled />);
       expect(wrapper.find('.t-icon-browse-off').exists()).toBeTruthy();
       wrapper.find('.t-icon-browse-off').trigger('click');
