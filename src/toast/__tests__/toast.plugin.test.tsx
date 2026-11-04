@@ -170,7 +170,7 @@ describe('ToastPlugin', () => {
       }
     });
 
-    it('use plugin', () => {
+    it('installs as a global plugin exposing $toast', () => {
       const wrapper = mount(() => <div></div>, { global: { plugins: [ToastPlugin] } });
       const { $toast } = wrapper.vm as unknown as { $toast: typeof ToastPlugin };
 
