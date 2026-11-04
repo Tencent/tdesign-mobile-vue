@@ -54,7 +54,7 @@ describe('TabBarItem', () => {
     });
 
     // 源码未支持：iconContent 对渲染结果调用 forEach，传入返回单个 VNode 的渲染函数会抛出 "iconSlot?.forEach is not a function"
-    it.todo('icon[function] 返回单个 VNode 节点');
+    it.todo('icon[function] returning a single VNode node');
 
     it('subTabBar[array]', () => {
       // 配置二级菜单：渲染菜单图标，内容区角色为 button 且默认收起

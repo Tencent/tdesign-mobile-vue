@@ -77,22 +77,22 @@ describe('useResizeObserver', () => {
     (window as any).ResizeObserver = OriginalResizeObserver;
   });
 
-  describe('启停控制（根因1）', () => {
-    it('immediate 默认 true：挂载后立即观察目标元素', () => {
+  describe('start/stop control (root cause 1)', () => {
+    it('observes the target element right after mount when immediate defaults to true', () => {
       const el = document.createElement('div');
       mountWithHook(() => ({ ...useResizeObserver(ref<HTMLElement | null>(el), vi.fn()) }));
 
       expect(observedEls()).toContain(el);
     });
 
-    it('immediate:false：挂载后不观察', () => {
+    it('does not observe after mount when immediate is false', () => {
       const el = document.createElement('div');
       mountWithHook(() => ({ ...useResizeObserver(ref<HTMLElement | null>(el), vi.fn(), { immediate: false }) }));
 
       expect(MockResizeObserver.instances.length).toBe(0);
     });
 
-    it('未调用 start 时 target 变化不会自动启动观察（根因1核心回归防护）', async () => {
+    it('does not auto-start observation when target changes before start is called (root cause 1 regression guard)', async () => {
       const el = document.createElement('div');
       const { api } = mountWithHook(() => {
         const elRef = ref<HTMLElement | null>(null);
@@ -106,7 +106,7 @@ describe('useResizeObserver', () => {
       expect(MockResizeObserver.instances.length).toBe(0);
     });
 
-    it('调用 start() 后，target 变化会断开旧元素并观察新元素', async () => {
+    it('disconnects the old element and observes the new one on target change after start is called', async () => {
       const el1 = document.createElement('div');
       const el2 = document.createElement('div');
       const { api } = mountWithHook(() => {
@@ -125,7 +125,7 @@ describe('useResizeObserver', () => {
       expect(observedEls()).toContain(el2);
     });
 
-    it('调用 stop() 后断开观察，且后续 target 变化不再自动重建', async () => {
+    it('disconnects after stop and no longer rebuilds on subsequent target changes', async () => {
       const el1 = document.createElement('div');
       const el2 = document.createElement('div');
       const { api } = mountWithHook(() => {
@@ -147,7 +147,7 @@ describe('useResizeObserver', () => {
       expect(observedEls()).not.toContain(el2);
     });
 
-    it('组件卸载时自动断开观察', () => {
+    it('disconnects automatically when the component unmounts', () => {
       const el = document.createElement('div');
       const { wrapper } = mountWithHook(() => ({ ...useResizeObserver(ref<HTMLElement | null>(el), vi.fn()) }));
 
@@ -157,7 +157,7 @@ describe('useResizeObserver', () => {
       expect(obs.disconnectCount).toBeGreaterThan(0);
     });
 
-    it('环境不支持 ResizeObserver 时 isSupported 为 false 且不创建观察器', () => {
+    it('reports isSupported as false and creates no observer when ResizeObserver is unsupported', () => {
       (window as any).ResizeObserver = undefined;
       const el = document.createElement('div');
       const { api } = mountWithHook(() => ({ ...useResizeObserver(ref<HTMLElement | null>(el), vi.fn()) }));
@@ -168,8 +168,8 @@ describe('useResizeObserver', () => {
   });
 
   // Issue: https://github.com/Tencent/tdesign-mobile-vue/issues/2270
-  describe('回调触发逻辑（shouldTrigger / issue #2270）', () => {
-    it('onResize 场景下尺寸 0→非0（becameVisible）也触发回调，且 becameVisible 为 true', () => {
+  describe('callback triggering (shouldTrigger / issue #2270)', () => {
+    it('triggers the callback with becameVisible true when size changes from 0 to non-zero', () => {
       const cb = vi.fn();
       mountWithHook(() => ({ ...useResizeObserver(ref<HTMLElement | null>(document.createElement('div')), cb) }));
 
@@ -179,7 +179,7 @@ describe('useResizeObserver', () => {
       expect(cb.mock.calls[0][0]).toMatchObject({ width: 100, height: 50, becameVisible: true });
     });
 
-    it('普通尺寸变化触发回调，becameVisible 为 false', () => {
+    it('triggers the callback with becameVisible false on ordinary size changes', () => {
       const cb = vi.fn();
       mountWithHook(() => ({ ...useResizeObserver(ref<HTMLElement | null>(document.createElement('div')), cb) }));
 
@@ -191,7 +191,7 @@ describe('useResizeObserver', () => {
       expect(cb.mock.calls[1][0]).toMatchObject({ width: 120, becameVisible: false });
     });
 
-    it('尺寸未变化时不触发回调', () => {
+    it('does not trigger the callback when size stays unchanged', () => {
       const cb = vi.fn();
       mountWithHook(() => ({ ...useResizeObserver(ref<HTMLElement | null>(document.createElement('div')), cb) }));
 
@@ -202,7 +202,7 @@ describe('useResizeObserver', () => {
       expect(cb).toHaveBeenCalledTimes(1);
     });
 
-    it('onResize:false 且 onVisibilityChange:false 时不触发任何回调', () => {
+    it('triggers no callback when both onResize and onVisibilityChange are false', () => {
       const cb = vi.fn();
       mountWithHook(() => ({
         ...useResizeObserver(ref<HTMLElement | null>(document.createElement('div')), cb, {
@@ -216,7 +216,7 @@ describe('useResizeObserver', () => {
       expect(cb).not.toHaveBeenCalled();
     });
 
-    it('useVisibilityObserver 仅在不可见→可见时触发一次', () => {
+    it('useVisibilityObserver triggers only once on invisible-to-visible transition', () => {
       const cb = vi.fn();
       mountWithHook(() => ({ ...useVisibilityObserver(ref<HTMLElement | null>(document.createElement('div')), cb) }));
 
