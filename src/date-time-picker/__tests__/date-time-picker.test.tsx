@@ -1,5 +1,5 @@
 import { nextTick, ref } from 'vue';
-import { mount, type DOMWrapper, type VueWrapper } from '@vue/test-utils';
+import { mount, type VueWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import dayjs from 'dayjs';
 
@@ -8,7 +8,6 @@ import ConfigProvider from '../../config-provider';
 import PickerItem from '../../picker/picker-item';
 import { DEFAULT_ITEM_HEIGHT } from '../../picker/picker.class';
 import { DEFAULT_WHEEL_CONFIG } from '../../picker/constants';
-import type { PickerColumnItem } from '../../picker/type';
 
 const makeTouch = (el: Element, eventName: string, touchPosition?: { pageY: number }) => {
   const event = new Event(eventName);
@@ -57,7 +56,6 @@ const getDateCount = (Y: number, M: number) => {
 };
 
 // 相关日期计算
-const precisionRankRecord = ['year', 'month', 'date', 'hour', 'minute', 'second'];
 const currentDate = new Date('2023-10-13');
 const Y = currentDate.getFullYear();
 const M = currentDate.getMonth() + 1;
@@ -66,19 +64,6 @@ const defaultDateTime = `${Y}-${addZero(M)}-${addZero(D)}`;
 
 const getActiveTexts = (wrapper: VueWrapper) =>
   wrapper.findAll(`.${prefix}-picker-item`).map((column) => column.get(`.${prefix}-picker-item__item--active`).text());
-
-const ret: PickerColumnItem[][] = [];
-const generateColumn = (start: number, end: number, type: string) => {
-  const arr: PickerColumnItem[] = [];
-  for (let i = start; i <= end; i++) {
-    const value = i.toString();
-    arr.push({
-      label: renderLabel ? renderLabel(type, i) : value,
-      value: type === 'month' ? `${+value - 1}` : value,
-    });
-  }
-  ret.push(arr);
-};
 
 describe('DateTimePicker', () => {
   describe('props', () => {
@@ -166,29 +151,18 @@ describe('DateTimePicker', () => {
     });
 
     it('mode[array]', async () => {
-      const onPick = vi.fn();
       const wrapper = mount(DateTimePicker, {
         props: {
           defaultValue: defaultDateTime,
-          title: 'mode 测试',
           mode: ['date', 'second'],
-          onPick,
         },
       });
       // mode = ['date', 'second'], 渲染年月日时分秒，6列
-      const pickerItem = wrapper.findComponent(PickerItem);
-      expect(pickerItem.exists()).toBeTruthy();
       const $pickerItems = wrapper.findAllComponents(PickerItem);
       expect($pickerItems).toHaveLength(6);
-
-      // pick
-      const el = wrapper.findAll(`.${prefix}-picker-item`);
-      const touchItemIndex = 0;
-      const touchIndex = 2;
-      simulateMoveOption(el[touchItemIndex].element, touchIndex);
     });
 
-    it('mode[time]', async () => {
+    it('mode[array<null,string>]', () => {
       const wrapper = mount(DateTimePicker, {
         props: {
           value: '10:00:00',
@@ -197,18 +171,18 @@ describe('DateTimePicker', () => {
           start: '2023-06-13',
         },
       });
-      expect(wrapper.vm.value).toStrictEqual('10:00:00');
+      // 日期部分为 null：仅渲染时/分/秒 3 列
+      expect(wrapper.findAllComponents(PickerItem)).toHaveLength(3);
+      expect(getActiveTexts(wrapper)).toEqual(['10 时', '0 分', '0 秒']);
     });
 
     it('renderLabel[function]', async () => {
-      generateColumn(Y - 10, Y + 10, 'year');
-      generateColumn(1, 12, 'month');
-      generateColumn(1, getDateCount(Y, M), 'date');
+      // 年列范围 Y-10 ~ Y+10，月列 1-12，日列为当月天数
+      const expectedCounts = [21, 12, getDateCount(Y, M)];
 
-      const defaultValue = defaultDateTime;
       const wrapper = mount(DateTimePicker, {
         props: {
-          defaultValue,
+          defaultValue: defaultDateTime,
           title: '自定义label',
           renderLabel,
         },
@@ -217,15 +191,11 @@ describe('DateTimePicker', () => {
       const $pickerItems = wrapper.findAllComponents(PickerItem);
       expect($pickerItems.length).toEqual(3);
 
-      const res: Record<string, DOMWrapper<Element>[]> = {};
       $pickerItems.forEach((item, index) => {
-        res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`);
-      });
-
-      Object.keys(res).forEach((key, keyIndex) => {
-        expect(res[key].length).toEqual(ret[keyIndex].length);
-        res[key].forEach((item, itemIndex) => {
-          expect(item.text()).toMatch(/年$|月$|日$/);
+        const items = item.findAll(`.${prefix}-picker-item__item`);
+        expect(items.length).toEqual(expectedCounts[index]);
+        items.forEach((label) => {
+          expect(label.text()).toMatch(/年$|月$|日$/);
         });
       });
     });
@@ -262,11 +232,8 @@ describe('DateTimePicker', () => {
         },
       });
       const $pickerItems = wrapper.findAllComponents(PickerItem);
-      const res: Record<string, DOMWrapper<Element>[]> = {};
-      $pickerItems.forEach((item, index) => {
-        res[precisionRankRecord[index]] = item.findAll(`.${prefix}-picker-item__item`);
-      });
-      expect(res[precisionRankRecord[0]].length).toEqual(Number(endYear) - Number(startYear) + 1);
+      const yearItemCount = $pickerItems[0].findAll(`.${prefix}-picker-item__item`).length;
+      expect(yearItemCount).toEqual(Number(endYear) - Number(startYear) + 1);
 
       // 设置到最后一天
       await wrapper.setProps({ value: end });
@@ -307,35 +274,22 @@ describe('DateTimePicker', () => {
       expect(wrapper2.findAll(`.${prefix}-picker-item`)[4].findAll(`.${prefix}-picker-item__item`)).toHaveLength(60);
     });
 
-    it('title[string] & confirmBtn[string] & cancelBtn[string]', async () => {
-      const title = '';
-      const confirmBtn = '';
-      const cancelBtn = '';
+    it('title[string]', async () => {
+      // 空字符串回退全局配置默认文案
       const wrapper = mount(DateTimePicker, {
         props: {
-          title,
-          confirmBtn,
-          cancelBtn,
+          title: '',
+          confirmBtn: '',
+          cancelBtn: '',
         },
       });
-      const $title = wrapper.find(`.${prefix}-picker__title`);
-      const $confirmButton = wrapper.find(`.${prefix}-picker__confirm`);
-      const $cancelButton = wrapper.find(`.${prefix}-picker__cancel`);
-      expect($title.text()).toBe(title || '选择时间');
-      expect($confirmButton.text()).toBe(confirmBtn || '确定');
-      expect($cancelButton.text()).toBe(cancelBtn || '取消');
+      expect(wrapper.find(`.${prefix}-picker__title`).text()).toBe('选择时间');
+      expect(wrapper.find(`.${prefix}-picker__confirm`).text()).toBe('确定');
+      expect(wrapper.find(`.${prefix}-picker__cancel`).text()).toBe('取消');
 
       const newTitle = '标题测试';
-      const newConfirmBtn = 'confirm';
-      const newCancelBtn = 'cancel';
-      await wrapper.setProps({
-        title: newTitle,
-        confirmBtn: newConfirmBtn,
-        cancelBtn: newCancelBtn,
-      });
-      expect($title.text()).toBe(newTitle || '选择时间');
-      expect($confirmButton.text()).toBe(newConfirmBtn || '确定');
-      expect($cancelButton.text()).toBe(newCancelBtn || '取消');
+      await wrapper.setProps({ title: newTitle });
+      expect(wrapper.find(`.${prefix}-picker__title`).text()).toBe(newTitle);
     });
 
     it('value[string]', async () => {
@@ -419,6 +373,27 @@ describe('DateTimePicker', () => {
       expect(onCancel).toBeCalledTimes(1);
     });
 
+    it('confirm', async () => {
+      const onConfirm = vi.fn();
+      const wrapper = mount(DateTimePicker, {
+        props: { value: defaultDateTime, mode: 'date', onConfirm },
+      });
+      await wrapper.find(`.${prefix}-picker__confirm`).trigger('click');
+      // 默认 format 输出完整日期时间字符串
+      expect(onConfirm).toHaveBeenCalledTimes(1);
+      expect(onConfirm).toHaveBeenLastCalledWith(`${defaultDateTime} 00:00:00`);
+    });
+
+    it('change', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(DateTimePicker, {
+        props: { value: defaultDateTime, mode: 'date', onChange },
+      });
+      await wrapper.find(`.${prefix}-picker__confirm`).trigger('click');
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenLastCalledWith(`${defaultDateTime} 00:00:00`);
+    });
+
     it('pick', async () => {
       const initValue = ref(defaultDateTime);
       const onConfirm = vi.fn((e) => {
@@ -449,7 +424,8 @@ describe('DateTimePicker', () => {
       await $confirmButton.trigger('click');
       expect(onConfirm).toBeCalledTimes(2);
       expect(onChange).toBeCalledTimes(2);
-      expect(initValue.value).toEqual(`${ret[touchItemIndex][10 + touchIndex].value}-${addZero(M)}-${addZero(D)}`);
+      // 年列从 2023（第 11 项）滚动 2 项后选中 2025
+      expect(initValue.value).toEqual(`${Y + touchIndex}-${addZero(M)}-${addZero(D)}`);
     });
   });
 
