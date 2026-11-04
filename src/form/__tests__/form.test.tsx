@@ -8,6 +8,7 @@ import Input from '../../input';
 import { ConfigProvider } from '../../config-provider';
 import Radio, { RadioGroup } from '../../radio';
 import config from '../../config';
+import { sleep } from '../../shared/util';
 import type { Data, FormRules, FormValidateParams, FormValidateResult } from '../type';
 
 const { prefix } = config;
@@ -15,13 +16,6 @@ const { prefix } = config;
 const name = `${prefix}-form`;
 
 enableAutoUnmount(afterEach);
-
-const sleep = (duration: number) =>
-  new Promise<void>((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, duration);
-  });
 
 describe('Form', () => {
   describe('props', () => {

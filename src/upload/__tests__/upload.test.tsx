@@ -23,6 +23,7 @@ import ConfigProvider from '../../config-provider';
 import Upload from '../upload';
 import type { RequestMethodResponse, UploadFile } from '../type';
 import { trigger } from '@/image-viewer/__tests__/touch';
+import { sleep } from '../../shared/util';
 
 // 模拟进度的真实定时器可能晚于用例断言触发，自动卸载组件可避免残留渲染在环境销毁后执行
 enableAutoUnmount(afterEach);
@@ -70,13 +71,6 @@ const successUrl = 'https://tdesign.gtimg.com/site/source/figma-pc.png';
 
 const requestMethod = (_files: UploadFile | UploadFile[]): Promise<RequestMethodResponse> =>
   Promise.resolve({ status: 'success', response: { url: successUrl } });
-
-const sleep = (timeout: number) =>
-  new Promise<void>((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, timeout);
-  });
 
 const triggerUploadFile = (wrapper: VueWrapper<any>, fileList: File[]) => {
   const target = wrapper.find('input');

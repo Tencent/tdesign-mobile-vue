@@ -6,17 +6,13 @@ import Cell from '../cell';
 import type { TdCellProps } from '../type';
 import Avatar from '../../avatar/avatar';
 import Form from '../../form';
+import { sleep } from '../../shared/util';
 import { trigger } from '@/image-viewer/__tests__/touch';
 
 const appIcon = () => h(AppIcon);
 const chevronRightIcon = () => h(ChevronRightIcon);
 const alignList: TdCellProps['align'][] = ['bottom', 'middle', 'top'];
 const avatarUrl = 'https://tdesign.gtimg.com/mobile/demos/avatar_1.png';
-
-const sleep = (timeout: number) =>
-  new Promise((resolve) => {
-    setTimeout(resolve, timeout);
-  });
 
 describe('Cell', () => {
   describe('props', () => {
