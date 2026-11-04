@@ -178,9 +178,9 @@ describe('Table', () => {
         { colKey: 'status', title: '状态' },
       ];
       const wrapper = mount(TTable, { props: { rowKey: 'index', data, columns: ellipsisColumns } });
-      const ths = wrapper.findAll('thead th');
-      expect(ths[0].classes()).toContain(`${name}-td--ellipsis`);
-      expect(ths[1].classes(`${name}-td--ellipsis`)).toBe(false);
+      const thList = wrapper.findAll('thead th');
+      expect(thList[0].classes()).toContain(`${name}-td--ellipsis`);
+      expect(thList[1].classes(`${name}-td--ellipsis`)).toBe(false);
       const td = wrapper.find('tbody tr').find('td');
       expect(td.classes()).toContain(`${name}-td--ellipsis`);
       expect(td.find('div').classes()).toEqual([`${name}__ellipsis`, `${prefix}-text-ellipsis`]);
@@ -213,13 +213,13 @@ describe('Table', () => {
       await waitForFixedPosition();
       expect(wrapper.classes(`${name}--column-fixed`)).toBe(true);
 
-      const ths = wrapper.findAll('thead th');
-      expect(ths[0].classes(`${name}__cell--fixed-left`)).toBe(true);
-      expect(ths[0].classes(`${name}__cell--fixed-left-last`)).toBe(true);
-      expect(ths[0].attributes('style')).toContain('left: 0px');
-      expect(ths[2].classes(`${name}__cell--fixed-right`)).toBe(true);
-      expect(ths[2].classes(`${name}__cell--fixed-right-first`)).toBe(true);
-      expect(ths[2].attributes('style')).toContain('right: 0px');
+      const thList = wrapper.findAll('thead th');
+      expect(thList[0].classes(`${name}__cell--fixed-left`)).toBe(true);
+      expect(thList[0].classes(`${name}__cell--fixed-left-last`)).toBe(true);
+      expect(thList[0].attributes('style')).toContain('left: 0px');
+      expect(thList[2].classes(`${name}__cell--fixed-right`)).toBe(true);
+      expect(thList[2].classes(`${name}__cell--fixed-right-first`)).toBe(true);
+      expect(thList[2].attributes('style')).toContain('right: 0px');
 
       const tds = wrapper.find('tbody tr').findAll('td');
       expect(tds[0].classes(`${name}__cell--fixed-left-last`)).toBe(true);
