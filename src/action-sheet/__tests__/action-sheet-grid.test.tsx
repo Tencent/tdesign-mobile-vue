@@ -7,6 +7,18 @@ const { prefix } = config;
 
 describe('ActionSheetGrid', () => {
   describe('props', () => {
+    it('items[array]', () => {
+      const wrapper = mount(ActionSheetGrid, {
+        props: {
+          items: [{ label: '选项一' }, { label: '选项二' }],
+        },
+      });
+
+      expect(wrapper.findAll(`.${prefix}-grid-item`)).toHaveLength(2);
+      expect(wrapper.text()).toContain('选项一');
+      expect(wrapper.text()).toContain('选项二');
+    });
+
     it('count[number]', async () => {
       const wrapper = mount(ActionSheetGrid, {
         props: {
@@ -29,18 +41,6 @@ describe('ActionSheetGrid', () => {
         count: 2,
       });
       expect(wrapper.findAll(`.${prefix}-grid`)).toHaveLength(2);
-    });
-
-    it('items[array]', () => {
-      const wrapper = mount(ActionSheetGrid, {
-        props: {
-          items: [{ label: '选项一' }, { label: '选项二' }],
-        },
-      });
-
-      expect(wrapper.findAll(`.${prefix}-grid-item`)).toHaveLength(2);
-      expect(wrapper.text()).toContain('选项一');
-      expect(wrapper.text()).toContain('选项二');
     });
   });
 

@@ -90,7 +90,7 @@ describe('ActionSheetList', () => {
       expect(onSelected).toHaveBeenCalledWith(1);
     });
 
-    it('disabled item', async () => {
+    it('selected[disabled item]', async () => {
       const onSelected = vi.fn();
       const wrapper = mount(ActionSheetList, {
         props: {
