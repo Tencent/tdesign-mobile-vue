@@ -94,7 +94,7 @@ describe('DrawerPlugin', () => {
       expect(document.body.classList.contains('t-popup--lock')).toBe(false);
     });
 
-    it('use plugin', () => {
+    it('installs as a global plugin exposing $drawer', () => {
       const wrapper = mount(() => <div />, { global: { plugins: [DrawerPlugin] } });
       const { $drawer } = wrapper.vm as unknown as { $drawer: typeof DrawerPlugin };
       expect(typeof $drawer).toBe('function');
