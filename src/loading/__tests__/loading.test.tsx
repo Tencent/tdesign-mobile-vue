@@ -50,6 +50,11 @@ describe('Loading', () => {
       expect(wrapper.get('.custom-content').text()).toBe('自定义内容');
     });
 
+    it('content[slot]', () => {
+      const wrapper = mount(Loading, { slots: { content: () => <span class="slot-content">插槽内容</span> } });
+      expect(wrapper.get('.slot-content').text()).toBe('插槽内容');
+    });
+
     it('default[string]', () => {
       // default prop 与默认插槽同名，此处验证 prop 传入通道
       const wrapper = mount(Loading, { props: { default: '默认子元素' } });

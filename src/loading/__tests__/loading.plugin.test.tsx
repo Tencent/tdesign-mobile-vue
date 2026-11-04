@@ -21,7 +21,7 @@ describe('LoadingPlugin', () => {
       expect(document.body.querySelector('.t-loading')).toBeFalsy();
     });
 
-    it('use plugin', async () => {
+    it('installs as a global plugin exposing $loading', async () => {
       const wrapper = mount(() => <div></div>, { global: { plugins: [LoadingPlugin] } });
       const { $loading } = wrapper.vm as unknown as { $loading: typeof LoadingPlugin };
       expect(document.body.textContent).not.toContain('测试');
