@@ -7,11 +7,13 @@ import ConfigProvider from '../../config-provider';
 import Avatar from '../../avatar';
 import type { CommentActionItem, CommentFold } from '../type';
 
+// folds.content 的声明类型仅接受 TNode 函数，但组件实际按字符串/字符串组直接渲染（见 comment.tsx foldsContent），
+// 这里以双重断言收敛到声明类型，参考 watermark 测试的 as unknown as 模式。
 const DEFAULT_FOLDS_CONTENT = {
   collapsed: '展开回复',
   partial: ['展开更多回复', '收起'],
   expanded: '收起',
-};
+} as unknown as NonNullable<CommentFold['content']>;
 
 describe('Comment', () => {
   describe('props', () => {
@@ -459,7 +461,9 @@ describe('Comment', () => {
                           state: 'collapsed',
                           total: 5,
                           step: 3,
-                          content: { collapsed: '自定义展开文案' },
+                          content: {
+                            collapsed: '自定义展开文案',
+                          } as unknown as NonNullable<CommentFold['content']>,
                         },
                       },
                       { reply: () => h('div', { class: 'reply-item' }, 'reply') },
@@ -497,7 +501,9 @@ describe('Comment', () => {
                           state: 'partial',
                           total: 5,
                           step: 3,
-                          content: { partial: ['自定义更多回复', '自定义收起'] },
+                          content: {
+                            partial: ['自定义更多回复', '自定义收起'],
+                          } as unknown as NonNullable<CommentFold['content']>,
                         },
                       },
                       { reply: () => h('div', { class: 'reply-item' }, 'reply') },
