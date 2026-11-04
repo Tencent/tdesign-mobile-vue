@@ -286,7 +286,7 @@ describe('Watermark', () => {
   });
 
   describe('scenarios', () => {
-    it('属性更新后重新生成水印层', async () => {
+    it('regenerates the watermark layer after props change', async () => {
       const wrapper = mount(Watermark, {
         props: { ...geometry, watermarkContent: [{ text: '初始水印' }] },
       });
@@ -304,13 +304,13 @@ describe('Watermark', () => {
       expect(toDataURL.mock.calls.length).toBeGreaterThan(generatedCount);
     });
 
-    it('default 属性与 content 属性同时设置时 default 优先', () => {
+    it('default prop takes precedence over content prop when both are set', () => {
       const wrapper = mount(() => <Watermark default="default 内容" content="content 内容" />);
       expect(wrapper.text()).toContain('default 内容');
       expect(wrapper.text()).not.toContain('content 内容');
     });
 
-    it('default 插槽优先于 content 属性', () => {
+    it('default slot takes precedence over content prop', () => {
       const wrapper = mount(() => (
         <Watermark content="content 内容" v-slots={{ default: () => <div class="covered">插槽内容</div> }} />
       ));
@@ -319,7 +319,7 @@ describe('Watermark', () => {
       expect(wrapper.text()).not.toContain('content 内容');
     });
 
-    it('图片水印在图片加载完成后绘制并注入', async () => {
+    it('draws and injects the image watermark after the image loads', async () => {
       vi.stubGlobal('Image', FakeImage);
       const wrapper = mountWatermark({ watermarkContent: { url: 'https://tdesign.gtimg.com/watermark.png' } });
       // 图片加载完成前不生成水印层
@@ -332,7 +332,7 @@ describe('Watermark', () => {
       vi.unstubAllGlobals();
     });
 
-    it('灰阶图片水印通过临时画布做像素级处理', async () => {
+    it('processes grayscale image watermark pixels through a temporary canvas', async () => {
       vi.stubGlobal('Image', FakeImage);
       mountWatermark({ watermarkContent: { url: 'https://tdesign.gtimg.com/watermark.png', isGrayscale: true } });
       await flushPromises();
@@ -346,7 +346,7 @@ describe('Watermark', () => {
       vi.unstubAllGlobals();
     });
 
-    it('hexagonal 布局的图片水印错位绘制两次', async () => {
+    it('draws the image watermark twice with staggered offsets in hexagonal layout', async () => {
       vi.stubGlobal('Image', FakeImage);
       mountWatermark({ layout: 'hexagonal', watermarkContent: { url: 'https://tdesign.gtimg.com/watermark.png' } });
       await flushPromises();
