@@ -2,6 +2,7 @@ import { mount } from '@vue/test-utils';
 import { ref, nextTick } from 'vue';
 import { describe, it, expect, vi } from 'vitest';
 import Checkbox, { CheckboxGroup } from '../index';
+import Form from '../../form';
 import config from '../../config';
 
 const { prefix } = config;
@@ -250,8 +251,9 @@ describe('Checkbox', () => {
       expect(wrapper.classes()).toContain(`${name}--right`);
     });
 
-    it('placement[default]', async () => {
+    it('placement[left]', async () => {
       const wrapper = mount(() => <Checkbox>选项</Checkbox>);
+      // 默认值 left：图标在左、内容在右
       expect(wrapper.classes()).toContain(`${name}--left`);
     });
 
@@ -317,11 +319,14 @@ describe('Checkbox', () => {
   describe('scenarios', () => {
     it('explicit disabled overrides group and form disabled states', async () => {
       const onChange = vi.fn();
-      const wrapper = mount(CheckboxGroup, {
-        props: { disabled: true, onChange },
-        global: { provide: { formDisabled: { disabled: ref(true) } } },
-        slots: { default: () => <Checkbox value="one" disabled={false} /> },
-      });
+      const wrapper = mount(() => (
+        <Form disabled>
+          <CheckboxGroup disabled onChange={onChange}>
+            <Checkbox value="one" disabled={false} />
+          </CheckboxGroup>
+        </Form>
+      ));
+      // Checkbox.disabled=false 优先于 CheckboxGroup.disabled 与 Form.disabled
       await wrapper.findComponent(Checkbox).trigger('click');
       expect(onChange).toHaveBeenCalledWith(['one'], expect.objectContaining({ type: 'check' }));
     });

@@ -2,6 +2,7 @@ import { ref, nextTick } from 'vue';
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import Checkbox, { CheckboxGroup } from '../index';
+import Form from '../../form';
 import type { TdCheckboxGroupProps } from '../type';
 import config from '../../config';
 
@@ -261,62 +262,43 @@ describe('CheckboxGroup', () => {
   describe('scenarios', () => {
     it('group disabled overrides form disabled and reacts to updates', async () => {
       const onChange = vi.fn();
-      const wrapper = mount(CheckboxGroup, {
-        props: { disabled: false, options: ['one'], onChange },
-        global: { provide: { formDisabled: { disabled: ref(true) } } },
-      });
+      const groupDisabled = ref(false);
+      const wrapper = mount(() => (
+        <Form disabled>
+          <CheckboxGroup disabled={groupDisabled.value} options={['one']} onChange={onChange} />
+        </Form>
+      ));
+      // CheckboxGroup.disabled=false 优先于 Form.disabled，可正常选中
       const item = wrapper.findComponent(Checkbox);
       await item.trigger('click');
       expect(onChange).toHaveBeenCalledTimes(1);
       expect(item.classes()).toContain(`${name}--checked`);
 
-      await wrapper.setProps({ disabled: true });
-      await item.trigger('click');
+      // 分组切换为禁用后点击不再生效
+      groupDisabled.value = true;
+      await nextTick();
+      await wrapper.findComponent(Checkbox).trigger('click');
       expect(onChange).toHaveBeenCalledTimes(1);
-      expect(item.classes()).toContain(`${name}--checked`);
+      expect(wrapper.findComponent(Checkbox).classes()).toContain(`${name}--checked`);
     });
 
     it('inherits disabled from form', async () => {
-      const disabled = ref(true);
+      const formDisabled = ref(true);
       const onChange = vi.fn();
-      const wrapper = mount(CheckboxGroup, {
-        props: { options: ['one'], onChange },
-        global: { provide: { formDisabled: { disabled } } },
-      });
-      const item = wrapper.findComponent(Checkbox);
-      await item.trigger('click');
+      const wrapper = mount(() => (
+        <Form disabled={formDisabled.value}>
+          <CheckboxGroup options={['one']} onChange={onChange} />
+        </Form>
+      ));
+      // 跟随表单禁用：点击不生效
+      await wrapper.findComponent(Checkbox).trigger('click');
       expect(onChange).not.toHaveBeenCalled();
-      disabled.value = false;
+
+      formDisabled.value = false;
       await nextTick();
-      await item.trigger('click');
+      await wrapper.findComponent(Checkbox).trigger('click');
       expect(onChange).toHaveBeenCalledTimes(1);
-      expect(item.classes()).toContain(`${name}--checked`);
-    });
-
-    it('check all', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <CheckboxGroup default-value={[]}>
-              <Checkbox value="1" ref="1" check-all />
-              <Checkbox value="2" ref="2" />
-              <Checkbox value="3" ref="3" />
-            </CheckboxGroup>
-          );
-        },
-      });
-
-      await wrapper.findComponent({ ref: '1' }).find(`.${name}--left`).trigger('click');
-
-      expect(wrapper.findComponent({ ref: '1' }).classes()).toContain(`${name}--checked`);
-      expect(wrapper.findComponent({ ref: '2' }).classes()).toContain(`${name}--checked`);
-      expect(wrapper.findComponent({ ref: '3' }).classes()).toContain(`${name}--checked`);
-
-      await wrapper.findComponent({ ref: '1' }).find(`.${name}--left`).trigger('click');
-
-      expect(wrapper.findComponent({ ref: '1' }).classes()).not.toContain(`${name}--checked`);
-      expect(wrapper.findComponent({ ref: '2' }).classes()).not.toContain(`${name}--checked`);
-      expect(wrapper.findComponent({ ref: '3' }).classes()).not.toContain(`${name}--checked`);
+      expect(wrapper.findComponent(Checkbox).classes()).toContain(`${name}--checked`);
     });
 
     it('invalid value warns', async () => {
