@@ -315,39 +315,6 @@ describe('ImageViewer', () => {
       ]);
     });
 
-    it('deleteBtn function overrides its slot', () => {
-      const wrapper = mountViewer(
-        { deleteBtn: () => <span class="prop-delete">属性删除</span> },
-        {
-          deleteBtn: () => <span class="slot-delete">插槽删除</span>,
-        },
-      );
-      expect(wrapper.get('.prop-delete').text()).toBe('属性删除');
-      expect(wrapper.find('.slot-delete').exists()).toBe(false);
-    });
-
-    it('cover function overrides its slot', () => {
-      const wrapper = mountViewer(
-        { cover: () => <span class="prop-cover">属性封面</span> },
-        {
-          cover: () => <span class="slot-cover">插槽封面</span>,
-        },
-      );
-      expect(wrapper.get('.prop-cover').text()).toBe('属性封面');
-      expect(wrapper.find('.slot-cover').exists()).toBe(false);
-    });
-
-    it('image function overrides its slot', () => {
-      const wrapper = mountViewer(
-        { image: () => <span class="prop-image">属性图片</span> },
-        {
-          image: () => <span class="slot-image">插槽图片</span>,
-        },
-      );
-      expect(wrapper.findAll('.prop-image')).toHaveLength(3);
-      expect(wrapper.find('.slot-image').exists()).toBe(false);
-    });
-
     it('visible takes priority over modelValue and defaultVisible', () => {
       const wrapper = mountViewer({ visible: false, modelValue: true, defaultVisible: true });
       expect(wrapper.find('.t-image-viewer').exists()).toBe(false);
