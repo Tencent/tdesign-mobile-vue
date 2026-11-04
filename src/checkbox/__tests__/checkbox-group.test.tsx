@@ -354,7 +354,7 @@ describe('CheckboxGroup', () => {
       expect(target.classes()).toContain(`${name}--checked`);
     });
 
-    it('options 优先于 slot 渲染选项', () => {
+    it('options take priority over default slot', () => {
       const wrapper = mount(() => (
         <CheckboxGroup options={[{ label: '选项一', value: '1' }]}>
           <Checkbox value="2" label="slot 选项" />
@@ -365,7 +365,7 @@ describe('CheckboxGroup', () => {
       expect(wrapper.text()).not.toContain('slot 选项');
     });
 
-    it('slot 选项数量动态变化时同步', async () => {
+    it('slot options sync when slot content changes dynamically', async () => {
       const showExtra = ref(false);
       const wrapper = mount({
         setup() {
