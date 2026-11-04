@@ -126,34 +126,6 @@ describe('GridItem', () => {
       ));
       expect(wrapper.get(`.${name}-item__title`).text()).toBe('函数标题');
     });
-
-    it('renders text, image and description together', () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <Grid>
-              {{
-                default: () =>
-                  items2.map((item, index) => {
-                    return (
-                      <GridItem text={item.text + index} description={item.description + index} image={item.image} />
-                    );
-                  }),
-              }}
-            </Grid>
-          );
-        },
-      });
-
-      const $gridItems = wrapper.findAll(`.${name}-item`);
-      $gridItems.forEach((item, index) => {
-        expect(item.find(`.${name}-item__title`).text()).toEqual(items2[index].text + index);
-        expect(item.find(`.${name}-item__description`).text()).toEqual(items2[index].description + index);
-        const $img = item.find(`.${name}-item__image img`);
-        expect($img.exists()).toBeTruthy();
-        expect($img.attributes('src')).toBe(imgUrl);
-      });
-    });
   });
 
   describe('events', () => {
@@ -219,6 +191,34 @@ describe('GridItem', () => {
         slots: { default: () => <GridItem description="属性描述" v-slots={{ description: () => <b>插槽描述</b> }} /> },
       });
       expect(wrapper.get(`.${name}-item__description`).text()).toBe('属性描述');
+    });
+
+    it('renders text, image and description together', () => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Grid>
+              {{
+                default: () =>
+                  items2.map((item, index) => {
+                    return (
+                      <GridItem text={item.text + index} description={item.description + index} image={item.image} />
+                    );
+                  }),
+              }}
+            </Grid>
+          );
+        },
+      });
+
+      const $gridItems = wrapper.findAll(`.${name}-item`);
+      $gridItems.forEach((item, index) => {
+        expect(item.find(`.${name}-item__title`).text()).toEqual(items2[index].text + index);
+        expect(item.find(`.${name}-item__description`).text()).toEqual(items2[index].description + index);
+        const $img = item.find(`.${name}-item__image img`);
+        expect($img.exists()).toBeTruthy();
+        expect($img.attributes('src')).toBe(imgUrl);
+      });
     });
   });
 });
