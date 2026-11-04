@@ -276,7 +276,7 @@ describe('CheckboxGroup', () => {
       expect(item.classes()).toContain(`${name}--checked`);
     });
 
-    it('group inherits form disabled when disabled is unspecified', async () => {
+    it('inherits disabled from form', async () => {
       const disabled = ref(true);
       const onChange = vi.fn();
       const wrapper = mount(CheckboxGroup, {

@@ -529,7 +529,7 @@ describe('Radio', () => {
       expect(onChange).toHaveBeenCalledTimes(1);
     });
 
-    it('inherits form disabled when radio and group unspecified', async () => {
+    it('inherits disabled from form', async () => {
       const formDisabled = ref(true);
       const onChange = vi.fn();
       const wrapper = mount(RadioGroup, {

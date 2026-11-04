@@ -5,6 +5,7 @@ import { ChevronRightIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Cell from '../cell';
 import type { TdCellProps } from '../type';
 import Avatar from '../../avatar/avatar';
+import Form from '../../form';
 import { trigger } from '@/image-viewer/__tests__/touch';
 
 const appIcon = () => h(AppIcon);
@@ -181,20 +182,21 @@ describe('Cell', () => {
   });
 
   describe('scenarios', () => {
-    it('form disabled state prevents clicks and restores them when enabled', async () => {
-      const disabled = ref(true);
+    it('inherits disabled from form', async () => {
       const onClick = vi.fn();
-      const wrapper = mount(Cell, {
-        props: { title: '标题', onClick },
-        global: { provide: { formDisabled: { disabled } } },
-      });
+      const formDisabled = ref(true);
+      const wrapper = mount(() => (
+        <Form disabled={formDisabled.value}>
+          <Cell title="标题" onClick={onClick} />
+        </Form>
+      ));
 
-      await wrapper.trigger('click');
+      await wrapper.find('.t-cell').trigger('click');
       expect(onClick).not.toHaveBeenCalled();
 
-      disabled.value = false;
+      formDisabled.value = false;
       await nextTick();
-      await wrapper.trigger('click');
+      await wrapper.find('.t-cell').trigger('click');
       expect(onClick).toHaveBeenCalledTimes(1);
       expect(onClick).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
     });

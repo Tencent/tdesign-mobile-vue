@@ -934,7 +934,7 @@ describe('Slider', () => {
     });
 
     describe('form context', () => {
-      it('disables the slider inside a disabled form', async () => {
+      it('inherits disabled from form', async () => {
         const onChange = vi.fn();
 
         const wrapper = mount(() => (

@@ -157,7 +157,7 @@ describe('Link', () => {
       ]);
     });
 
-    it('inherits form disabled state for href and aria-disabled', async () => {
+    it('inherits disabled from form', async () => {
       const disabled = ref(true);
       const onClick = vi.fn();
       const wrapper = mount(Link, {

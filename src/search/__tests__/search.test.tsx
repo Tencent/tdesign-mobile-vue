@@ -505,7 +505,7 @@ describe('Search', () => {
     });
 
     describe('form context', () => {
-      it('form disabled state disables the search input', async () => {
+      it('inherits disabled from form', async () => {
         const disabled = ref(true);
         const wrapper = mount(Search, {
           props: {
