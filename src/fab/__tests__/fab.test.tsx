@@ -162,25 +162,6 @@ describe('Fab', () => {
     });
   });
 
-  describe('slots', () => {
-    it('default', () => {
-      const wrapper = mount(Fab, { slots: { default: () => <button class="custom-fab">自定义悬浮按钮</button> } });
-      expect(wrapper.get('.custom-fab').text()).toBe('自定义悬浮按钮');
-      expect(wrapper.findComponent(Button).exists()).toBe(false);
-    });
-
-    it('icon', () => {
-      const icon = () => <TIconApp />;
-      const wrapper = mount(Fab, {
-        slots: {
-          icon,
-        },
-      });
-      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
-      expect(wrapper.element).toMatchSnapshot();
-    });
-  });
-
   describe('events', () => {
     it('click', async () => {
       const onClick = vi.fn();
@@ -217,6 +198,25 @@ describe('Fab', () => {
     });
   });
 
+  describe('slots', () => {
+    it('default', () => {
+      const wrapper = mount(Fab, { slots: { default: () => <button class="custom-fab">自定义悬浮按钮</button> } });
+      expect(wrapper.get('.custom-fab').text()).toBe('自定义悬浮按钮');
+      expect(wrapper.findComponent(Button).exists()).toBe(false);
+    });
+
+    it('icon', () => {
+      const icon = () => <TIconApp />;
+      const wrapper = mount(Fab, {
+        slots: {
+          icon,
+        },
+      });
+      expect(wrapper.findComponent(TIconApp).exists()).toBeTruthy();
+      expect(wrapper.element).toMatchSnapshot();
+    });
+  });
+
   describe('scenarios', () => {
     // TODO: 跨端跟进 Fab 动态 style 更新：mobile-react 的 DOM 位置读取、小程序的 moveStyle 覆盖及位置缓存
     // 均存在潜在同步风险，需在各端补回归测试确认后再决定修复；当前未修改这两个仓库。
@@ -234,6 +234,7 @@ describe('Fab', () => {
       expect(position(wrapper)).toEqual({ right: '60px', bottom: '90px' });
     });
 
+    // 同样依赖 style watcher 修复：拖拽启用期间更新字符串样式时，位置基准仍取自旧 DOM，断言会失败。
     it.todo('updates string style while dragging remains enabled', async () => {
       const wrapper = mount(Fab, { props: { draggable: true } });
       await nextTick();
@@ -244,6 +245,7 @@ describe('Fab', () => {
       expect(position(wrapper)).toEqual({ right: '60px', bottom: '90px' });
     });
 
+    // 同样依赖 style watcher 修复：拖拽启用期间更新对象样式时，位置基准仍取自旧 DOM，断言会失败。
     it.todo('updates object style while dragging remains enabled', async () => {
       const wrapper = mount(Fab, { props: { draggable: true } });
       await nextTick();
