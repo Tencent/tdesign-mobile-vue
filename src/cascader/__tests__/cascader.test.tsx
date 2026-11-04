@@ -7,6 +7,7 @@ import type { TdCascaderProps } from '../type';
 import Radio from '../../radio/index';
 import { Tabs as TTabs } from '../../tabs';
 import Popup from '../../popup';
+import ConfigProvider from '../../config-provider';
 import prefixConfig from '../../config';
 import { sleep } from '../../shared/util';
 
@@ -530,6 +531,19 @@ describe('Cascader', () => {
       expect(onChange).toHaveBeenCalledWith(undefined, []);
       expect(document.querySelectorAll(`.${name}__step`)).toHaveLength(1);
       expect(document.querySelector(`.${name}__step-label`).textContent).toBe('选择选项');
+    });
+  });
+
+  describe('globalConfig', () => {
+    it('cascader', () => {
+      // placeholder prop 默认值非空会遮蔽全局配置，显式传空串走全局配置回退
+      const wrapper = mount(
+        <ConfigProvider globalConfig={{ cascader: { title: '选择所在地区', placeholder: '请选择地区' } }}>
+          <Cascader options={options} placeholder="" />
+        </ConfigProvider>,
+      );
+      expect(wrapper.find(`.${name}__title`).text()).toBe('选择所在地区');
+      expect(wrapper.find(`.${name}__step-label`).text()).toBe('请选择地区');
     });
   });
 

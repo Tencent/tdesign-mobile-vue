@@ -19,6 +19,7 @@ import {
 } from 'tdesign-icons-vue-next';
 import TImage from '../../image';
 import TImageViewer from '../../image-viewer';
+import ConfigProvider from '../../config-provider';
 import Upload from '../upload';
 import type { RequestMethodResponse, UploadFile } from '../type';
 import { trigger } from '@/image-viewer/__tests__/touch';
@@ -1249,6 +1250,24 @@ describe('Upload', () => {
 
     // upload 暴露的是 setup 执行时 inputRef.value 的快照（此时 input 尚未挂载，值恒为 undefined），源码未能暴露真实 input 元素
     it.todo('upload');
+  });
+
+  describe('globalConfig', () => {
+    it('upload', () => {
+      const wrapper = mount(
+        <ConfigProvider globalConfig={{ upload: { progress: { uploadingText: 'Uploading...', failText: 'Failed!' } } }}>
+          <Upload
+            defaultFiles={[
+              { name: 'a.png', raw: mockFileFoo, type: 'image/png', status: 'progress' },
+              { name: 'b.png', raw: mockFileFoo, type: 'image/png', status: 'fail' },
+            ]}
+          />
+        </ConfigProvider>,
+      );
+      const texts = wrapper.findAll('.t-upload__progress-text');
+      expect(texts[0].text()).toBe('Uploading...');
+      expect(texts[1].text()).toBe('Failed!');
+    });
   });
 
   describe('scenarios', () => {

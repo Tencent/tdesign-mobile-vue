@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { ThumbUpIcon, ThumbDownIcon, StarFilledIcon } from 'tdesign-icons-vue-next';
 import Rate from '../rate';
+import ConfigProvider from '../../config-provider';
 import { trigger } from '../../image-viewer/__tests__/touch';
 
 const prefix = 't';
@@ -308,6 +309,24 @@ describe('Rate', () => {
       await wrapper.setProps({ value: 5 });
       await icons[4].trigger('click', { pageX: 300 });
       expect(onChange).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('globalConfig', () => {
+    it('rate', () => {
+      const wrapper = mount(
+        <ConfigProvider globalConfig={{ rate: { valueText: '{value} stars', noValueText: 'Not rated' } }}>
+          <Rate defaultValue={3} showText />
+        </ConfigProvider>,
+      );
+      expect(wrapper.find(`.${name}__text`).text()).toBe('3 stars');
+
+      const wrapper2 = mount(
+        <ConfigProvider globalConfig={{ rate: { noValueText: 'Not rated' } }}>
+          <Rate showText />
+        </ConfigProvider>,
+      );
+      expect(wrapper2.find(`.${name}__text`).text()).toBe('Not rated');
     });
   });
 

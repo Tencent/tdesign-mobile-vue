@@ -621,6 +621,57 @@ describe('Form', () => {
     });
   });
 
+  describe('globalConfig', () => {
+    it('form requiredMarkPosition falls back when unset', async () => {
+      const wrapper = mount(() => (
+        <ConfigProvider globalConfig={{ form: { requiredMarkPosition: 'right' } }}>
+          <Form>
+            <FormItem requiredMark label="姓名" />
+          </Form>
+        </ConfigProvider>
+      ));
+      await nextTick();
+      expect(wrapper.get(`.${name}__label`).classes()).toContain(`${name}__label--required-right`);
+    });
+    it('form colonText/errorMessage', async () => {
+      // eslint-disable-next-line no-template-curly-in-string
+      const required = '请填写${name}';
+      const wrapper = mount(() => (
+        <ConfigProvider globalConfig={{ form: { colonText: ':', errorMessage: { required } } }}>
+          <Form colon data={{ name: '' }} rules={{ name: [{ required: true }] }}>
+            <FormItem label="姓名" name="name">
+              <Input />
+            </FormItem>
+          </Form>
+        </ConfigProvider>
+      ));
+      expect(wrapper.get(`.${name}__label`).text()).toBe('姓名:');
+      await wrapper.findComponent(Form).vm.$.exposed.validate();
+      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('请填写姓名');
+    });
+    it('form overridden by Form errorMessage and requiredMarkPosition', async () => {
+      const wrapper = mount(() => (
+        <ConfigProvider
+          globalConfig={{ form: { requiredMarkPosition: 'right', errorMessage: { required: '全局错误' } } }}
+        >
+          <Form
+            requiredMarkPosition="left"
+            data={{ name: '' }}
+            rules={{ name: [{ required: true }] }}
+            errorMessage={{ required: '表单错误' }}
+          >
+            <FormItem label="姓名" name="name">
+              <Input />
+            </FormItem>
+          </Form>
+        </ConfigProvider>
+      ));
+      expect(wrapper.get(`.${name}__label`).classes()).not.toContain(`${name}__label--required-right`);
+      await wrapper.findComponent(Form).vm.$.exposed.validate();
+      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('表单错误');
+    });
+  });
+
   describe('scenarios', () => {
     describe('validation rules', () => {
       let wrapper: VueWrapper;
@@ -884,35 +935,6 @@ describe('Form', () => {
       });
     });
 
-    it('requiredMarkPosition falls back to ConfigProvider global config', async () => {
-      const wrapper = mount(() => (
-        <ConfigProvider globalConfig={{ form: { requiredMarkPosition: 'right' } }}>
-          <Form>
-            <FormItem requiredMark label="姓名" />
-          </Form>
-        </ConfigProvider>
-      ));
-      await nextTick();
-      expect(wrapper.get(`.${name}__label`).classes()).toContain(`${name}__label--required-right`);
-    });
-
-    it('global form locale supplies colon and validation messages', async () => {
-      // eslint-disable-next-line no-template-curly-in-string
-      const required = '请填写${name}';
-      const wrapper = mount(() => (
-        <ConfigProvider globalConfig={{ form: { colonText: ':', errorMessage: { required } } }}>
-          <Form colon data={{ name: '' }} rules={{ name: [{ required: true }] }}>
-            <FormItem label="姓名" name="name">
-              <Input />
-            </FormItem>
-          </Form>
-        </ConfigProvider>
-      ));
-      expect(wrapper.get(`.${name}__label`).text()).toBe('姓名:');
-      await wrapper.findComponent(Form).vm.$.exposed.validate();
-      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('请填写姓名');
-    });
-
     it('does not validate FormItems after they are unmounted', async () => {
       const showField = ref(true);
       const wrapper = mount(() => (
@@ -925,28 +947,6 @@ describe('Form', () => {
       showField.value = false;
       await nextTick();
       expect(await form.vm.$.exposed.validate()).toBe(true);
-    });
-
-    it('Form errorMessage and requiredMarkPosition override global configuration', async () => {
-      const wrapper = mount(() => (
-        <ConfigProvider
-          globalConfig={{ form: { requiredMarkPosition: 'right', errorMessage: { required: '全局错误' } } }}
-        >
-          <Form
-            requiredMarkPosition="left"
-            data={{ name: '' }}
-            rules={{ name: [{ required: true }] }}
-            errorMessage={{ required: '表单错误' }}
-          >
-            <FormItem label="姓名" name="name">
-              <Input />
-            </FormItem>
-          </Form>
-        </ConfigProvider>
-      ));
-      expect(wrapper.get(`.${name}__label`).classes()).not.toContain(`${name}__label--required-right`);
-      await wrapper.findComponent(Form).vm.$.exposed.validate();
-      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('表单错误');
     });
 
     // needRequiredMark 未读取 globalConfig.form.requiredMark，只读取 Form/FormItem 属性和 required 规则。

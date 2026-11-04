@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { afterEach, beforeAll, vi } from 'vitest';
 import PullDownRefresh from '../index';
 import type { TdPullDownRefreshProps } from '../type';
+import ConfigProvider from '../../config-provider';
 import { MockResizeObserver, trigger } from './utils';
 
 const TRACK = '.t-pull-down-refresh__track';
@@ -409,6 +410,36 @@ describe('PullDownRefresh', () => {
         expect(onTimeout).toHaveBeenCalledTimes(1);
         await nextTick();
         expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[3]);
+
+        wrapper.unmount();
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+  });
+
+  describe('globalConfig', () => {
+    it('pullDownRefresh', async () => {
+      vi.useFakeTimers();
+      try {
+        // 不传 loadingTexts prop：提示语来自全局配置
+        const wrapper = mount(
+          <ConfigProvider globalConfig={{ pullDownRefresh: { loadingTexts: LOADING_TEXTS } }}>
+            <PullDownRefresh refreshTimeout={1000} />
+          </ConfigProvider>,
+        );
+        await nextTick();
+        await wrapper.find(TIPS).trigger('resize', { height: 80 });
+        await wrapper.find(LOADING_BAR).trigger('resize', { height: 50 });
+        const track = wrapper.find(TRACK);
+
+        await trigger(track, 'touchstart', 50, 0);
+        await trigger(track, 'touchmove', 50, 20);
+        expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[0]);
+        await trigger(track, 'touchmove', 50, 70);
+        expect(wrapper.find(TEXT).text()).toBe(LOADING_TEXTS[1]);
+        await trigger(track, 'touchend', 50, 70);
+        expect(wrapper.find(LOADING_TEXT).text()).toBe(LOADING_TEXTS[2]);
 
         wrapper.unmount();
       } finally {

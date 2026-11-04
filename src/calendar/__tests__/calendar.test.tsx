@@ -6,6 +6,7 @@ import Calendar from '../calendar';
 import type { TDate } from '../type';
 import { sleep } from '../../shared/util';
 import Popup from '../../popup';
+import ConfigProvider from '../../config-provider';
 
 enableAutoUnmount(afterEach);
 
@@ -439,6 +440,18 @@ describe('Calendar', () => {
       await $button.trigger('click');
       expect(onConfirm).toHaveBeenCalledTimes(1);
       expect(selectTime).toEqual(time);
+    });
+  });
+
+  describe('globalConfig', () => {
+    it('calendar', () => {
+      const wrapper = mount(
+        <ConfigProvider globalConfig={{ calendar: { title: '选择出行日期', confirm: '好滴' } }}>
+          <Calendar visible value={value} minDate={minDate} maxDate={maxDate} />
+        </ConfigProvider>,
+      );
+      expect(wrapper.find(`.${name}__title`).text()).toBe('选择出行日期');
+      expect(wrapper.findComponent(Button).text()).toBe('好滴');
     });
   });
 });

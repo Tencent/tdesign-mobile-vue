@@ -5,6 +5,7 @@ import type { TdActionSheetProps } from '../type';
 import MenuGrid from '../action-sheet-grid';
 import { GridItem as TGridItem } from '../../grid/index';
 import TBadge from '../../badge/index';
+import ConfigProvider from '../../config-provider';
 import config from '../../config';
 
 const { prefix } = config;
@@ -230,6 +231,17 @@ describe('ActionSheet', () => {
       await wrapper.find(`.${prefix}-overlay`).trigger('click');
       expect(onClose).toHaveBeenCalledTimes(1);
       expect(onClose).toHaveBeenCalledWith({ trigger: 'overlay' });
+    });
+  });
+
+  describe('globalConfig', () => {
+    it('actionSheet', () => {
+      const wrapper = mount(
+        <ConfigProvider globalConfig={{ actionSheet: { cancel: 'Close' } }}>
+          <ActionSheet visible items={['选项一']} />
+        </ConfigProvider>,
+      );
+      expect(wrapper.find(`.${name}__footer`).text()).toBe('Close');
     });
   });
 

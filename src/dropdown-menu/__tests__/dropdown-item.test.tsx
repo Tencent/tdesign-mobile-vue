@@ -3,6 +3,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { ref } from 'vue';
 import { DropdownMenu, DropdownItem } from '../index';
 import { sleep } from '../../shared/util';
+import ConfigProvider from '../../config-provider';
 import type { DropdownOption } from '../type';
 
 const prefix = 't';
@@ -677,6 +678,22 @@ describe('DropdownItem', () => {
       expect(onReset).toHaveBeenCalledExactlyOnceWith([]);
       expect(wrapper.findAll(`.${prefix}-checkbox--checked`)).toHaveLength(0);
       expect(initial).toEqual(['option_1']);
+    });
+  });
+
+  describe('globalConfig', () => {
+    it('dropdownMenu', async () => {
+      const wrapper = mount(() => (
+        <ConfigProvider globalConfig={{ dropdownMenu: { reset: 'Reset', confirm: 'Done' } }}>
+          <DropdownMenu>
+            <DropdownItem label="菜单" multiple options={options} />
+          </DropdownMenu>
+        </ConfigProvider>
+      ));
+      await wrapper.find(`.${name}__item`).trigger('click');
+      await sleep(200);
+      expect(wrapper.find(`.${prefix}-dropdown-item__reset-btn`).text()).toBe('Reset');
+      expect(wrapper.find(`.${prefix}-dropdown-item__confirm-btn`).text()).toBe('Done');
     });
   });
 

@@ -5,6 +5,7 @@ import Picker from '../picker';
 import PickerItem from '../picker-item';
 import { DEFAULT_ITEM_HEIGHT } from '../picker.class';
 import { DEFAULT_WHEEL_CONFIG } from '../constants';
+import ConfigProvider from '../../config-provider';
 import { makeTouch, simulateMoveOption, seasonOptions } from './mount';
 import type { PickerColumn, PickerColumnItem, PickerValue, TdPickerProps } from '../type';
 
@@ -381,6 +382,18 @@ describe('Picker', () => {
       expect(itemContainers.slice(seasonOptions.length).map((container) => container.text())).toEqual(
         monthOptions.map((option) => option.label),
       );
+    });
+  });
+
+  describe('globalConfig', () => {
+    it('picker', () => {
+      const wrapper = mount(
+        <ConfigProvider globalConfig={{ picker: { cancel: 'Cancel', confirm: 'Confirm' } }}>
+          <Picker columns={[seasonOptions]} defaultValue={[seasonOptions[0].value]} />
+        </ConfigProvider>,
+      );
+      expect(wrapper.find('.t-picker__cancel').text()).toBe('Cancel');
+      expect(wrapper.find('.t-picker__confirm').text()).toBe('Confirm');
     });
   });
 

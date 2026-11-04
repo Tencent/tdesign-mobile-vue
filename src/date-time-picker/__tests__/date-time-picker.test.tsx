@@ -429,11 +429,8 @@ describe('DateTimePicker', () => {
     });
   });
 
-  describe('scenarios', () => {
-    // modelValue 在 setup 中被复制到独立 ref，外部更新不会同步到日期列。
-    it.todo('external modelValue changes update the selected date');
-
-    it('globalConfig labels are used when props do not override them', () => {
+  describe('globalConfig', () => {
+    it('dateTimePicker', () => {
       const wrapper = mount(
         <ConfigProvider globalConfig={{ dateTimePicker: { yearLabel: '年号', monthLabel: '月号', dateLabel: '日号' } }}>
           <DateTimePicker defaultValue={defaultDateTime} mode="date" />
@@ -444,5 +441,10 @@ describe('DateTimePicker', () => {
       expect(columns[1].find(`.${prefix}-picker-item__item--active`).text()).toContain('月号');
       expect(columns[2].find(`.${prefix}-picker-item__item--active`).text()).toContain('日号');
     });
+  });
+
+  describe('scenarios', () => {
+    // modelValue 在 setup 中被复制到独立 ref，外部更新不会同步到日期列。
+    it.todo('external modelValue changes update the selected date');
   });
 });

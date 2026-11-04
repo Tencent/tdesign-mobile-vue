@@ -276,36 +276,37 @@ describe('QRCode', () => {
     });
   });
 
+  describe('globalConfig', () => {
+    it('qrcode', () => {
+      const globalConfig = {
+        qrcode: { expiredText: '二维码已失效', refreshText: '重新生成', scannedText: '已扫描过啦' },
+      };
+      const wrapper = mount(
+        <ConfigProvider globalConfig={globalConfig}>
+          <QRCode value={VALUE} status="expired" onRefresh={() => {}} />
+        </ConfigProvider>,
+      );
+      expect(wrapper.find('.t-expired__text').text()).eq('二维码已失效');
+      expect(wrapper.find('.t-expired__button').text()).contain('重新生成');
+
+      const scannedWrapper = mount(
+        <ConfigProvider globalConfig={globalConfig}>
+          <QRCode value={VALUE} status="scanned" />
+        </ConfigProvider>,
+      );
+      expect(scannedWrapper.find('.t-scanned').text()).contain('已扫描过啦');
+    });
+  });
+
   describe('scenarios', () => {
-    describe('global config', () => {
-      it('renders default zh-CN status texts', () => {
-        const wrapper = mount(QRCode, { props: { value: VALUE, status: 'expired', onRefresh: () => {} } });
-        expect(wrapper.find('.t-expired__text').text()).eq('二维码过期');
-        expect(wrapper.find('.t-expired__button').text()).contain('点击刷新');
+    // 默认使用全局配置（zh_CN 语言包）的状态文案
+    it('renders default zh-CN status texts', () => {
+      const wrapper = mount(QRCode, { props: { value: VALUE, status: 'expired', onRefresh: () => {} } });
+      expect(wrapper.find('.t-expired__text').text()).eq('二维码过期');
+      expect(wrapper.find('.t-expired__button').text()).contain('点击刷新');
 
-        const scannedWrapper = mount(QRCode, { props: { value: VALUE, status: 'scanned' } });
-        expect(scannedWrapper.find('.t-scanned').text()).contain('已扫描');
-      });
-
-      it('ConfigProvider globalConfig.qrcode overrides default texts', () => {
-        const globalConfig = {
-          qrcode: { expiredText: '二维码已失效', refreshText: '重新生成', scannedText: '已扫描过啦' },
-        };
-        const wrapper = mount(
-          <ConfigProvider globalConfig={globalConfig}>
-            <QRCode value={VALUE} status="expired" onRefresh={() => {}} />
-          </ConfigProvider>,
-        );
-        expect(wrapper.find('.t-expired__text').text()).eq('二维码已失效');
-        expect(wrapper.find('.t-expired__button').text()).contain('重新生成');
-
-        const scannedWrapper = mount(
-          <ConfigProvider globalConfig={globalConfig}>
-            <QRCode value={VALUE} status="scanned" />
-          </ConfigProvider>,
-        );
-        expect(scannedWrapper.find('.t-scanned').text()).contain('已扫描过啦');
-      });
+      const scannedWrapper = mount(QRCode, { props: { value: VALUE, status: 'scanned' } });
+      expect(scannedWrapper.find('.t-scanned').text()).contain('已扫描');
     });
 
     describe('status rendering', () => {

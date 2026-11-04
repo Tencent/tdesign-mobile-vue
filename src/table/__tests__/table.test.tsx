@@ -685,6 +685,16 @@ describe('Table', () => {
     });
   });
 
+  describe('globalConfig', () => {
+    it('table', () => {
+      const wrapper = mount(ConfigProvider, {
+        props: { globalConfig: { table: { empty: 'Global Empty Text' } } },
+        slots: { default: () => <TTable rowKey="index" data={[]} columns={columns} /> },
+      });
+      expect(wrapper.find(`.${name}__empty`).text()).toBe('Global Empty Text');
+    });
+  });
+
   describe('scenarios', () => {
     describe('empty content', () => {
       it('renders the default global empty text when data is empty', () => {
@@ -692,14 +702,6 @@ describe('Table', () => {
         expect(wrapper.find(`.${name}__empty`).text()).toBe('暂无数据');
         // 空数据行横跨全部列
         expect(wrapper.find(`.${name}__empty-row`).find('td').attributes('colspan')).toBe(String(columns.length));
-      });
-
-      it('renders ConfigProvider globalConfig table empty text', () => {
-        const wrapper = mount(ConfigProvider, {
-          props: { globalConfig: { table: { empty: 'Global Empty Text' } } },
-          slots: { default: () => <TTable rowKey="index" data={[]} columns={columns} /> },
-        });
-        expect(wrapper.find(`.${name}__empty`).text()).toBe('Global Empty Text');
       });
     });
 

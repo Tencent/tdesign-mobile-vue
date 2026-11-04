@@ -292,6 +292,49 @@ describe('Guide', () => {
     });
   });
 
+  describe('globalConfig', () => {
+    it('guide', async () => {
+      const wrapper = mount(ConfigProvider, {
+        props: { globalConfig: { guide: { next: 'Next', skip: 'Skip', back: 'Back', finish: 'Finish' } } },
+        slots: { default: () => <Guide mode="dialog" defaultCurrent={0} steps={steps} /> },
+      });
+      wrappers.push(wrapper);
+      await flushPromises();
+      expect(getNode('.t-guide__next').text()).toContain('Next');
+      expect(getNode('.t-guide__skip').text()).toBe('Skip');
+      await click('.t-guide__next');
+      expect(getNode('.t-guide__back').text()).toBe('Back');
+      expect(getNode('.t-guide__finish').text()).toContain('Finish');
+    });
+    it('guide overridden by button props', async () => {
+      const wrapper = mount(ConfigProvider, {
+        props: { globalConfig: { guide: { next: 'Next', skip: 'Skip', back: 'Back', finish: 'Finish' } } },
+        slots: {
+          default: () => (
+            <Guide
+              mode="dialog"
+              defaultCurrent={0}
+              steps={steps}
+              nextButtonProps={{ content: '前进' }}
+              skipButtonProps={{ content: '跳过引导' }}
+              backButtonProps={{ content: '返回起点' }}
+              finishButtonProps={{ content: '结束引导' }}
+            />
+          ),
+        },
+      });
+      wrappers.push(wrapper);
+      await flushPromises();
+      expect(getNode('.t-guide__next').text()).toContain('前进');
+      expect(getNode('.t-guide__next').text()).not.toContain('Next');
+      expect(getNode('.t-guide__skip').text()).toBe('跳过引导');
+      await click('.t-guide__next');
+      expect(getNode('.t-guide__back').text()).toBe('返回起点');
+      expect(getNode('.t-guide__finish').text()).toContain('结束引导');
+      expect(getNode('.t-guide__finish').text()).not.toContain('Finish');
+    });
+  });
+
   describe('scenarios', () => {
     it('current overrides modelValue and defaultCurrent', async () => {
       await mountGuide({ current: 0, modelValue: 1, defaultCurrent: 1 });
@@ -428,48 +471,6 @@ describe('Guide', () => {
         steps: [{ ...steps[0], highlightContent: () => <b class="custom-highlight">自定义高亮</b> }],
       });
       expect(document.querySelector('.custom-highlight')).toBeNull();
-    });
-
-    it('uses global guide button text', async () => {
-      const wrapper = mount(ConfigProvider, {
-        props: { globalConfig: { guide: { next: 'Next', skip: 'Skip', back: 'Back', finish: 'Finish' } } },
-        slots: { default: () => <Guide mode="dialog" defaultCurrent={0} steps={steps} /> },
-      });
-      wrappers.push(wrapper);
-      await flushPromises();
-      expect(getNode('.t-guide__next').text()).toContain('Next');
-      expect(getNode('.t-guide__skip').text()).toBe('Skip');
-      await click('.t-guide__next');
-      expect(getNode('.t-guide__back').text()).toBe('Back');
-      expect(getNode('.t-guide__finish').text()).toContain('Finish');
-    });
-
-    it('button props override global guide button text', async () => {
-      const wrapper = mount(ConfigProvider, {
-        props: { globalConfig: { guide: { next: 'Next', skip: 'Skip', back: 'Back', finish: 'Finish' } } },
-        slots: {
-          default: () => (
-            <Guide
-              mode="dialog"
-              defaultCurrent={0}
-              steps={steps}
-              nextButtonProps={{ content: '前进' }}
-              skipButtonProps={{ content: '跳过引导' }}
-              backButtonProps={{ content: '返回起点' }}
-              finishButtonProps={{ content: '结束引导' }}
-            />
-          ),
-        },
-      });
-      wrappers.push(wrapper);
-      await flushPromises();
-      expect(getNode('.t-guide__next').text()).toContain('前进');
-      expect(getNode('.t-guide__next').text()).not.toContain('Next');
-      expect(getNode('.t-guide__skip').text()).toBe('跳过引导');
-      await click('.t-guide__next');
-      expect(getNode('.t-guide__back').text()).toBe('返回起点');
-      expect(getNode('.t-guide__finish').text()).toContain('结束引导');
-      expect(getNode('.t-guide__finish').text()).not.toContain('Finish');
     });
 
     // Guide 没有 onBeforeUnmount 清理 LOCK_CLASS。

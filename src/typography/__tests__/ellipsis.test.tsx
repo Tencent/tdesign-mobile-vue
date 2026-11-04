@@ -1,4 +1,4 @@
-import { h, defineComponent, nextTick } from 'vue';
+import { h, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { afterAll, beforeAll, describe, it, expect, vi } from 'vitest';
 import Ellipsis from '../ellipsis';
@@ -213,36 +213,12 @@ describe('Ellipsis', () => {
     });
   });
 
-  describe('scenarios', () => {
-    it('uses globalConfig expandText and collapseText', async () => {
+  describe('globalConfig', () => {
+    it('typography', async () => {
       const wrapper = mount(
-        defineComponent({
-          setup() {
-            return () =>
-              h(
-                ConfigProvider,
-                {
-                  globalConfig: {
-                    typography: {
-                      expandText: 'More',
-                      collapseText: 'Less',
-                    },
-                  },
-                },
-                () =>
-                  h(
-                    Ellipsis,
-                    {
-                      ellipsis: {
-                        expandable: true,
-                        collapsible: true,
-                      },
-                    },
-                    { default: () => longText },
-                  ),
-              );
-          },
-        }),
+        <ConfigProvider globalConfig={{ typography: { expandText: 'More', collapseText: 'Less' } }}>
+          <Ellipsis ellipsis={{ expandable: true, collapsible: true }}>{longText}</Ellipsis>
+        </ConfigProvider>,
       );
 
       const expandSymbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);

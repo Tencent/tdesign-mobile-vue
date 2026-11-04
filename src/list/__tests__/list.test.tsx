@@ -125,6 +125,26 @@ describe('List', () => {
     });
   });
 
+  describe('globalConfig', () => {
+    it('list', () => {
+      const wrapper = mount(ConfigProvider, {
+        props: { globalConfig: { list: { loading: 'Loading...', loadingMoreText: 'Load more' } } },
+        slots: {
+          default: () => <List asyncLoading={ref('loading').value} v-slots={{ default: () => <TCell>内容</TCell> }} />,
+        },
+      });
+      expect(wrapper.findComponent(TLoading).props('text')).toBe('Loading...');
+
+      const loadMoreWrapper = mount(ConfigProvider, {
+        props: { globalConfig: { list: { loading: 'Loading...', loadingMoreText: 'Load more' } } },
+        slots: {
+          default: () => <List asyncLoading="load-more" v-slots={{ default: () => <TCell>内容</TCell> }} />,
+        },
+      });
+      expect(loadMoreWrapper.findComponent(TLoading).props('text')).toBe('Load more');
+    });
+  });
+
   describe('scenarios', () => {
     it('renders header, items, loading area and footer in order', () => {
       const wrapper = mount(List, {
@@ -141,16 +161,6 @@ describe('List', () => {
         't-list__loading--wrapper',
         'order-footer',
       ]);
-    });
-
-    it('uses global list loading texts', () => {
-      const wrapper = mount(ConfigProvider, {
-        props: { globalConfig: { list: { loading: 'Loading...', loadingMoreText: 'Load more' } } },
-        slots: {
-          default: () => <List asyncLoading={ref('loading').value} v-slots={{ default: () => <TCell>内容</TCell> }} />,
-        },
-      });
-      expect(wrapper.findComponent(TLoading).props('text')).toBe('Loading...');
     });
   });
 });

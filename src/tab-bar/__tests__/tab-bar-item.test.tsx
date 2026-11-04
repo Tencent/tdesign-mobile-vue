@@ -3,6 +3,7 @@ import { mount } from '@vue/test-utils';
 import { h } from 'vue';
 import TabBar from '../tab-bar';
 import TabBarItem from '../tab-bar-item';
+import ConfigProvider from '../../config-provider';
 import type { SubTabBarItem } from '../type';
 import { checkedTexts, mountTabBar, numericBarItems, subTabBarItems, unnamedBarItems } from './mount';
 
@@ -95,6 +96,22 @@ describe('TabBarItem', () => {
     it('default[slot]', () => {
       const wrapper = mountItem({}, { default: () => '标签一' }, { value: '1' });
       expect(wrapper.find('.t-tab-bar-item__text').text()).toContain('标签一');
+    });
+  });
+
+  describe('globalConfig', () => {
+    it('tabBar', () => {
+      const iconSlots = { icon: () => <div class="custom-icon">icon</div> };
+      const wrapper = mount(
+        <ConfigProvider globalConfig={{ tabBar: { newsAriaLabel: 'new messages' } }}>
+          <TabBar>
+            <TabBarItem value="1" badgeProps={{ dot: true }} v-slots={iconSlots}>
+              标签一
+            </TabBarItem>
+          </TabBar>
+        </ConfigProvider>,
+      );
+      expect(wrapper.find('.t-tab-bar-item__content').attributes('aria-label')).toBe('new messages');
     });
   });
 
