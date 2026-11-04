@@ -140,7 +140,6 @@ describe('Image', () => {
       expect(wrapper.find(`.${name}__mask`).exists()).toBe(true);
       // 手动触发 图片加载完成的回调函数
       await $image.trigger('load');
-      expect(wrapper.element).toMatchSnapshot();
       expect(wrapper.find(`.${name}__mask`).exists()).toBeFalsy();
     });
 

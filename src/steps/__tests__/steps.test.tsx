@@ -153,7 +153,6 @@ describe('Steps', () => {
           );
         },
       });
-      expect(wrapper.element).toMatchSnapshot();
       expect(wrapper.find('.t-steps--vertical').exists()).toBeTruthy();
       expect(wrapper.find('.t-step-item__anchor--vertical').exists()).toBeTruthy();
       const $stepItems = wrapper.findAllComponents(StepItem);

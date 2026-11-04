@@ -229,9 +229,17 @@ describe('Indexes', () => {
   });
 
   describe('scenarios', () => {
-    it('render', () => {
+    it('renders the sidebar and anchor sections from indexList', () => {
       const wrapper = mountIndexes({ showFullIndex: true });
-      expect(wrapper.element).toMatchSnapshot();
+      // 侧边栏按 indexList 逐项渲染
+      const sidebarItems = wrapper.findAll(`.${indexesClass}__sidebar-item`);
+      expect(sidebarItems.map((item) => item.text())).toEqual(indexList.map(String));
+      sidebarItems.forEach((item, index) => {
+        expect(item.attributes('data-index')).toBe(String(indexList[index]));
+      });
+      // 每个锚点对应一组单元格
+      expect(wrapper.findAll(`.${indexesAnchorClass}`)).toHaveLength(list.length);
+      expect(wrapper.findAll('.indexes-cell')).toHaveLength(list.length * children.length);
     });
 
     it('shows the sidebar tips after selecting and hides them after one second', async () => {

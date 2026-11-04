@@ -4,9 +4,13 @@ import Spinner from '../icon/spinner';
 
 describe('Spinner', () => {
   describe('scenarios', () => {
-    it('renders spinner lines', () => {
+    it('renders twelve spinner lines with sequential classes', () => {
       const wrapper = mount(() => <Spinner />);
-      expect(wrapper.element).toMatchSnapshot();
+      const lines = wrapper.findAll('.t-loading__spinner--line');
+      expect(lines).toHaveLength(12);
+      lines.forEach((line, index) => {
+        expect(line.classes()).toContain(`t-loading__spinner--line-${index + 1}`);
+      });
     });
   });
 });
