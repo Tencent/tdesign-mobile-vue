@@ -41,24 +41,6 @@ describe('PickerItem', () => {
   });
 
   describe('props', () => {
-    it('option[slot]', () => {
-      const wrapper = mount(PickerItem, {
-        props: { options: seasonOptions },
-        slots: {
-          option: (option: PickerColumnItem, index: number) => (
-            <span class="custom-option">{`${option.label}@${index}`}</span>
-          ),
-        },
-      });
-      const itemContainers = wrapper.findAll('.t-picker-item__item');
-      expect(itemContainers.map((container) => container.find('.custom-option').exists())).toEqual(
-        seasonOptions.map(() => true),
-      );
-      expect(itemContainers.map((container) => container.text())).toEqual(
-        seasonOptions.map((option, index) => `${option.label}@${index}`),
-      );
-    });
-
     it('options[array]', () => {
       const options: PickerColumn = [
         { label: '春', value: 'spring' },
@@ -116,6 +98,25 @@ describe('PickerItem', () => {
       await nextTick();
       // 未设置时使用默认过渡时长
       expect(defaults.wrapper.find<HTMLUListElement>('.t-picker-item').element.style.transitionDuration).toBe('460ms');
+    });
+
+    // option 插槽未在 picker-item.tsx 中声明（经 Picker 父级透传），置于分组末尾
+    it('option[slot]', () => {
+      const wrapper = mount(PickerItem, {
+        props: { options: seasonOptions },
+        slots: {
+          option: (option: PickerColumnItem, index: number) => (
+            <span class="custom-option">{`${option.label}@${index}`}</span>
+          ),
+        },
+      });
+      const itemContainers = wrapper.findAll('.t-picker-item__item');
+      expect(itemContainers.map((container) => container.find('.custom-option').exists())).toEqual(
+        seasonOptions.map(() => true),
+      );
+      expect(itemContainers.map((container) => container.text())).toEqual(
+        seasonOptions.map((option, index) => `${option.label}@${index}`),
+      );
     });
   });
 
