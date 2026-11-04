@@ -3,8 +3,8 @@ import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import CountDown from '../count-down';
 
-const sleep = (duration) =>
-  new Promise((resolve) => {
+const sleep = (duration: number) =>
+  new Promise<void>((resolve) => {
     setTimeout(() => {
       resolve();
     }, duration);
