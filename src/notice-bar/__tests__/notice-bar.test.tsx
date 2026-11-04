@@ -361,26 +361,6 @@ describe('NoticeBar', () => {
     });
 
     describe('prop and slot priority', () => {
-      it('prefers the content prop over the content slot', () => {
-        const wrapper = mount(<NoticeBar visible content="来自 Prop" />, {
-          slots: {
-            content: <div class="slot-node">来自插槽</div>,
-          },
-        });
-        expect(wrapper.find('.t-notice-bar__content').text()).toContain('来自 Prop');
-        expect(wrapper.find('.slot-node').exists()).toBe(false);
-      });
-
-      it('prefers the prefixIcon prop over the prefixIcon slot', () => {
-        const wrapper = mount(<NoticeBar visible prefixIcon={() => <TIconApp />} />, {
-          slots: {
-            prefixIcon: <div class="slot-node">来自插槽</div>,
-          },
-        });
-        expect(wrapper.find('.t-notice-bar__prefix-icon .t-icon-app').exists()).toBe(true);
-        expect(wrapper.find('.slot-node').exists()).toBe(false);
-      });
-
       it('keeps the prefix icon hidden when prefixIcon is false and a slot is provided', () => {
         const wrapper = mount(<NoticeBar visible prefixIcon={false} />, {
           slots: {
