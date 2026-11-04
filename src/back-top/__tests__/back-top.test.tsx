@@ -21,6 +21,7 @@ describe('BackTop', () => {
 
       wrapper.unmount();
       expect(div.onscroll).toBeNull();
+      div.remove();
     });
 
     it('fixed[boolean]', async () => {
@@ -105,14 +106,24 @@ describe('BackTop', () => {
     });
 
     it('visibilityHeight[number]', async () => {
-      const wrapper = mount(<BackTop visibilityHeight={0} />);
-      // 初始不可见
+      const container = document.documentElement;
+      const originalScrollTop = container.scrollTop;
+      const originalOnScroll = container.onscroll;
+      const wrapper = mount(<BackTop visibilityHeight={100} />);
+
       expect(wrapper.find('.t-back-top').attributes('style')).toContain('display: none');
-      // 滚动距离达到 visibilityHeight 后可见
-      document.documentElement.scrollTop = 10;
-      document.documentElement.dispatchEvent(new Event('scroll'));
+      container.scrollTop = 99;
+      container.dispatchEvent(new Event('scroll'));
+      await nextTick();
+      expect(wrapper.find('.t-back-top').attributes('style')).toContain('display: none');
+
+      container.scrollTop = 100;
+      container.dispatchEvent(new Event('scroll'));
       await nextTick();
       expect(wrapper.find('.t-back-top').attributes('style')).not.toContain('display: none');
+      wrapper.unmount();
+      container.scrollTop = originalScrollTop;
+      container.onscroll = originalOnScroll;
     });
   });
 
