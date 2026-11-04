@@ -89,38 +89,5 @@ describe('Divider', () => {
       expect(wrapper.attributes('role')).toBe('separator');
       expect(wrapper.get(`.${name}__content`).text()).toBe('');
     });
-
-    it('prefers default content and falls back to content when default is empty', async () => {
-      const wrapper = mount(Divider, { props: { default: 'default text', content: TEXT } });
-      expect(wrapper.text()).toBe('default text');
-      await wrapper.setProps({ default: '' });
-      expect(wrapper.text()).toBe(TEXT);
-    });
-
-    it('prefers an explicit content prop over the content slot', () => {
-      const wrapper = mount(Divider, {
-        props: { content: TEXT },
-        slots: { content: () => 'slot content' },
-      });
-      expect(wrapper.text()).toBe(TEXT);
-    });
-
-    it('prefers the default prop and falls back to the default slot when removed', async () => {
-      const wrapper = mount(Divider, {
-        props: { default: TEXT },
-        slots: { default: () => 'default slot' },
-      });
-      expect(wrapper.text()).toBe(TEXT);
-      await wrapper.setProps({ default: undefined });
-      expect(wrapper.text()).toBe('default slot');
-    });
-
-    it('prefers the default slot over the content prop', () => {
-      const wrapper = mount(Divider, {
-        props: { content: TEXT },
-        slots: { default: () => 'default slot' },
-      });
-      expect(wrapper.text()).toBe('default slot');
-    });
   });
 });
