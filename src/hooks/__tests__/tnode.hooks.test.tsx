@@ -1,6 +1,6 @@
 import { defineComponent } from 'vue';
 import { mount } from '@vue/test-utils';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { useContent, useTNodeDefault, useTNodeJSX } from '../tnode';
 
 const TNodeHookTester = defineComponent({
@@ -11,8 +11,15 @@ const TNodeHookTester = defineComponent({
       required: true,
     },
     node: [String, Function, Boolean],
-    default: String,
+    valueDisplay: [String, Function, Boolean],
+    default: [String, Function, Boolean],
     content: String,
+    params: Object,
+    defaultNode: [String, Object],
+    name: {
+      type: String,
+      default: 'node',
+    },
     slotFirst: Boolean,
   },
   setup(props) {
@@ -24,18 +31,25 @@ const TNodeHookTester = defineComponent({
       if (props.method === 'useTNodeJSX') {
         return (
           <div>
-            {renderTNode('node', {
-              params: { label: 'prop content' },
-              defaultNode: 'fallback content',
+            {renderTNode(props.name, {
+              params: props.params || { label: 'prop content' },
+              defaultNode: props.defaultNode || 'fallback content',
               slotFirst: props.slotFirst,
             })}
           </div>
         );
       }
       if (props.method === 'useTNodeDefault') {
-        return <div>{renderTNodeDefault('node', { defaultNode: 'fallback content' })}</div>;
+        return <div>{renderTNodeDefault(props.name, { defaultNode: props.defaultNode || 'fallback content' })}</div>;
       }
-      return <div>{renderContent('default', 'content', { defaultNode: 'fallback content' })}</div>;
+      return (
+        <div>
+          {renderContent('default', 'content', {
+            defaultNode: props.defaultNode || 'fallback content',
+            params: props.params,
+          })}
+        </div>
+      );
     };
   },
 });
@@ -116,6 +130,53 @@ describe('useTNodeJSX', () => {
 
     expect(wrapper.text()).toBe('slot content');
   });
+
+  it('renders a function prop with the supplied params', () => {
+    const renderNode = vi.fn((_h: unknown, params: { label: string }) => <span>{params.label}</span>);
+    const wrapper = mount(TNodeHookTester, {
+      props: {
+        method: 'useTNodeJSX',
+        node: renderNode,
+        params: { label: 'custom params' },
+      },
+    });
+
+    expect(wrapper.text()).toBe('custom params');
+    expect(renderNode).toHaveBeenCalledWith(expect.any(Function), { label: 'custom params' });
+  });
+
+  it('renders the slot or defaultNode when the prop is true', () => {
+    const withSlot = mount(TNodeHookTester, {
+      props: { method: 'useTNodeJSX', node: true },
+      slots: { node: 'slot content' },
+    });
+    const withoutSlot = mount(TNodeHookTester, {
+      props: { method: 'useTNodeJSX', node: true },
+    });
+
+    expect(withSlot.text()).toBe('slot content');
+    expect(withoutSlot.text()).toBe('fallback content');
+  });
+
+  it('does not render when the prop is false or null', async () => {
+    const wrapper = mount(TNodeHookTester, {
+      props: { method: 'useTNodeJSX', node: false },
+      slots: { node: 'slot content' },
+    });
+
+    expect(wrapper.text()).toBe('');
+    await wrapper.setProps({ node: null });
+    expect(wrapper.text()).toBe('');
+  });
+
+  it('supports kebab-case slots for camelCase names', () => {
+    const wrapper = mount(TNodeHookTester, {
+      props: { method: 'useTNodeJSX', name: 'valueDisplay' },
+      slots: { 'value-display': 'kebab slot content' },
+    });
+
+    expect(wrapper.text()).toBe('kebab slot content');
+  });
 });
 
 describe('useTNodeDefault', () => {
@@ -138,6 +199,18 @@ describe('useTNodeDefault', () => {
     });
 
     expect(wrapper.text()).toBe('prop content');
+  });
+
+  it('uses defaultNode when the rendered prop is false', () => {
+    const wrapper = mount(TNodeHookTester, {
+      props: {
+        method: 'useTNodeDefault',
+        node: false,
+        defaultNode: 'custom fallback',
+      },
+    });
+
+    expect(wrapper.text()).toBe('custom fallback');
   });
 });
 
@@ -184,5 +257,31 @@ describe('useContent', () => {
 
     await wrapper.setProps({ content: '' });
     expect(wrapper.text()).toBe('fallback content');
+  });
+
+  it('passes params to function props for both content names', () => {
+    const renderContent = vi.fn((_h: unknown, params: { value: string }) => <span>{params.value}</span>);
+    const wrapper = mount(TNodeHookTester, {
+      props: {
+        method: 'useContent',
+        default: renderContent,
+        params: { value: 'content params' },
+      },
+    });
+
+    expect(wrapper.text()).toBe('content params');
+    expect(renderContent).toHaveBeenCalledWith(expect.any(Function), { value: 'content params' });
+  });
+
+  it('uses the second prop when the first content prop is false', () => {
+    const wrapper = mount(TNodeHookTester, {
+      props: {
+        method: 'useContent',
+        default: false,
+        content: 'second content',
+      },
+    });
+
+    expect(wrapper.text()).toBe('second content');
   });
 });
