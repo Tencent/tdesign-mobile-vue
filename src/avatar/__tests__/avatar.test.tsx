@@ -65,8 +65,9 @@ describe('Avatar', () => {
     });
 
     it('imageProps[object]', async () => {
-      const wrapper = mount(() => <Avatar image={IMAGE} imageProps={{ alt: '头像' }} />);
+      const wrapper = mount(() => <Avatar image={IMAGE} imageProps={{ alt: '头像', fit: 'cover' }} />);
       expect(wrapper.find('img').attributes('alt')).toBe('头像');
+      expect(wrapper.find('img').attributes('style')).toContain('object-fit: cover');
     });
 
     it('shape[circle/round]', async () => {
@@ -83,6 +84,11 @@ describe('Avatar', () => {
         const size = wrapper.find(`.t-avatar--${s}`);
         expect(size.exists()).toBeTruthy();
       });
+
+      const customSizeWrapper = mount(() => <Avatar image={IMAGE} size="24px" />);
+      const avatar = customSizeWrapper.find('.t-avatar');
+      expect(avatar.attributes('style')).toContain('width: 24px');
+      expect(avatar.attributes('style')).toContain('height: 24px');
     });
 
     it('default[slot]', async () => {

@@ -111,4 +111,32 @@ describe('AvatarGroup', () => {
       expect(onCollapsedItemClick).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
     });
   });
+
+  describe('scenarios', () => {
+    it('avatar shape takes precedence over group shape', () => {
+      const wrapper = mount(() => (
+        <AvatarGroup shape="circle">
+          <Avatar image={IMAGE} />
+          <Avatar image={IMAGE} shape="round" />
+        </AvatarGroup>
+      ));
+      const avatars = wrapper.findAll('.t-avatar');
+
+      expect(avatars[0].classes()).toContain('t-avatar--circle');
+      expect(avatars[1].classes()).toContain('t-avatar--round');
+    });
+
+    it('avatar size takes precedence over group size', () => {
+      const wrapper = mount(() => (
+        <AvatarGroup size="large">
+          <Avatar image={IMAGE} />
+          <Avatar image={IMAGE} size="small" />
+        </AvatarGroup>
+      ));
+      const avatars = wrapper.findAll('.t-avatar');
+
+      expect(avatars[0].classes()).toContain('t-avatar--large');
+      expect(avatars[1].classes()).toContain('t-avatar--small');
+    });
+  });
 });
