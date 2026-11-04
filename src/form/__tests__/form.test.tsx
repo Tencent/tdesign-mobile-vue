@@ -24,338 +24,6 @@ const sleep = (duration: number) =>
   });
 
 describe('Form', () => {
-  describe('scenarios', () => {
-    describe('validation rules', () => {
-      let wrapper: VueWrapper;
-      let rules: Ref<FormRules>;
-      let formData: Ref<Data>;
-      let form: VueWrapper;
-      let onValidate: ReturnType<typeof vi.fn>;
-      beforeEach(() => {
-        rules = ref<FormRules>({});
-        formData = ref({
-          name: '',
-          time: undefined,
-          gender: '',
-        });
-        onValidate = vi.fn();
-        wrapper = mount(
-          () => (
-            <Form rules={rules.value} data={formData.value} onValidate={onValidate}>
-              <FormItem label="name" name="name">
-                <Input v-model={formData.value.name} />
-              </FormItem>
-              <FormItem label="radio" name="radio">
-                <RadioGroup v-model={formData.value.gender} class="box" borderless>
-                  <Radio block={false} name="radio" value="man" label="男" />
-                  <Radio block={false} name="radio" value="women" label="女" />
-                  <Radio block={false} name="radio" value="secret" label="保密" />
-                </RadioGroup>
-              </FormItem>
-            </Form>
-          ),
-          { attachTo: document.body },
-        );
-        form = wrapper.findComponent(Form);
-      });
-      const validate = async (params?: FormValidateParams): Promise<FormValidateResult<Data>> => {
-        await nextTick();
-        const res = await form.vm.$.exposed.validate(params);
-        return res;
-      };
-      const expectToFailure = (res: FormValidateResult<Data>) => {
-        expect(res).not.toBe(true);
-        if (typeof res !== 'boolean') {
-          expect(
-            Object.values(res).some((results) => Array.isArray(results) && results.some((result) => !result.result)),
-          ).toBe(true);
-        }
-      };
-      const expectToSuccess = (res: FormValidateResult<Data>) => {
-        expect(res).toBe(true);
-      };
-
-      it('boolean', async () => {
-        rules.value = { radio: [{ boolean: true }] };
-
-        formData.value.radio = 'true';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.radio = true;
-        res = await validate();
-        expectToSuccess(res);
-      });
-
-      it('email', async () => {
-        rules.value = { name: [{ email: true }] };
-
-        formData.value.name = '123.com';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = 'test@gmail.com';
-        res = await validate();
-        expectToSuccess(res);
-      });
-
-      it('enum', async () => {
-        rules.value = { name: [{ enum: ['primary', 'info', 'warning'] }] };
-
-        formData.value.name = '123';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = 'info';
-        res = await validate();
-        expectToSuccess(res);
-      });
-
-      it('idcard', async () => {
-        rules.value = { name: [{ idcard: true }] };
-
-        formData.value.name = '123456789012345678';
-        let res = await validate();
-        expectToSuccess(res);
-
-        formData.value.name = '12345678901234567x';
-        res = await validate();
-        expectToSuccess(res);
-
-        formData.value.name = '123456789012345';
-        res = await validate();
-        expectToSuccess(res);
-      });
-
-      it('len', async () => {
-        rules.value = { name: [{ len: 7 }] };
-
-        formData.value.name = '12345';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = '1234567';
-        res = await validate();
-        expectToSuccess(res);
-
-        formData.value.name = 'success';
-        res = await validate();
-        expectToSuccess(res);
-      });
-
-      it('max', async () => {
-        rules.value = { name: [{ max: 7 }] };
-
-        formData.value.name = 'failure!';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = 'success';
-        res = await validate();
-        expectToSuccess(res);
-
-        formData.value.name = '12345';
-        res = await validate();
-        expectToSuccess(res);
-      });
-
-      it('min', async () => {
-        rules.value = { name: [{ min: 5 }] };
-
-        formData.value.name = 'fail';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = 'success';
-        res = await validate();
-        expectToSuccess(res);
-
-        formData.value.name = '12345';
-        res = await validate();
-        expectToSuccess(res);
-      });
-
-      it('message', async () => {
-        rules.value = { name: [{ required: true, message: 'custom error message' }] };
-        await validate();
-        expect(form.find(`.${name}__item-extra`).text()).toBe('custom error message');
-      });
-
-      it('number', async () => {
-        rules.value = { name: [{ number: true }] };
-
-        formData.value.name = 'fail';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = 123.4;
-        res = await validate();
-        expectToSuccess(res);
-
-        formData.value.name = 0x123;
-        res = await validate();
-        expectToSuccess(res);
-
-        formData.value.name = 0o110;
-        res = await validate();
-        expectToSuccess(res);
-
-        formData.value.name = 0b110;
-        res = await validate();
-        expectToSuccess(res);
-
-        formData.value.name = 1e5;
-        res = await validate();
-        expectToSuccess(res);
-      });
-
-      it('pattern', async () => {
-        rules.value = { name: [{ pattern: /@qq.com/ }] };
-
-        formData.value.name = 'test@fail.com';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = 'test@qq.com';
-        res = await validate();
-        expectToSuccess(res);
-      });
-
-      it('required', async () => {
-        rules.value = { name: [{ required: true }] };
-
-        formData.value.name = '';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = 'test';
-        res = await validate();
-        expectToSuccess(res);
-      });
-
-      it('telnumber', async () => {
-        rules.value = { name: [{ telnumber: true }] };
-
-        formData.value.name = '19999';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = '15333333333';
-        res = await validate();
-        expectToSuccess(res);
-      });
-
-      it('type', async () => {
-        rules.value = { name: [{ required: true, type: 'error' }] };
-        await validate();
-        expect(form.find(`.${prefix}-form__item-tips`).classes(`${name}__item--error`)).toBeTruthy();
-
-        rules.value = { name: [{ required: true, type: 'warning' }] };
-        await validate();
-        expect(form.find(`.${prefix}-form__item-tips`).classes(`${name}__item--warning`)).toBeTruthy();
-      });
-      it('url', async () => {
-        rules.value = { name: [{ url: true }] };
-        formData.value.name = 'test';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = 'tdesign.tencent.com/vue-next';
-        res = await validate();
-        expectToSuccess(res);
-      });
-      it('validator', async () => {
-        const isNumber = (val: unknown) => typeof val === 'number';
-        rules.value = { name: [{ validator: (val) => isNumber(val) }] };
-        formData.value.name = 'string';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = 123;
-        res = await validate();
-        expectToSuccess(res);
-      });
-      it('whitespace', async () => {
-        rules.value = { name: [{ whitespace: true }] };
-        formData.value.name = ' ';
-        let res = await validate();
-        expectToFailure(res);
-
-        formData.value.name = '';
-        res = await validate();
-        expectToSuccess(res);
-      });
-    });
-
-    it('requiredMarkPosition falls back to ConfigProvider global config', async () => {
-      const wrapper = mount(() => (
-        <ConfigProvider globalConfig={{ form: { requiredMarkPosition: 'right' } }}>
-          <Form>
-            <FormItem requiredMark label="姓名" />
-          </Form>
-        </ConfigProvider>
-      ));
-      await nextTick();
-      expect(wrapper.get(`.${name}__label`).classes()).toContain(`${name}__label--required-right`);
-    });
-
-    it('global form locale supplies colon and validation messages', async () => {
-      // eslint-disable-next-line no-template-curly-in-string
-      const required = '请填写${name}';
-      const wrapper = mount(() => (
-        <ConfigProvider globalConfig={{ form: { colonText: ':', errorMessage: { required } } }}>
-          <Form colon data={{ name: '' }} rules={{ name: [{ required: true }] }}>
-            <FormItem label="姓名" name="name">
-              <Input />
-            </FormItem>
-          </Form>
-        </ConfigProvider>
-      ));
-      expect(wrapper.get(`.${name}__label`).text()).toBe('姓名:');
-      await wrapper.findComponent(Form).vm.$.exposed.validate();
-      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('请填写姓名');
-    });
-
-    it('does not validate FormItems after they are unmounted', async () => {
-      const showField = ref(true);
-      const wrapper = mount(() => (
-        <Form data={{ name: '' }} rules={{ name: [{ required: true, message: '姓名必填' }] }}>
-          {showField.value && <FormItem name="name" label="姓名" />}
-        </Form>
-      ));
-      const form = wrapper.findComponent(Form);
-      expect(await form.vm.$.exposed.validate()).not.toBe(true);
-      showField.value = false;
-      await nextTick();
-      expect(await form.vm.$.exposed.validate()).toBe(true);
-    });
-
-    it('Form errorMessage and requiredMarkPosition override global configuration', async () => {
-      const wrapper = mount(() => (
-        <ConfigProvider
-          globalConfig={{ form: { requiredMarkPosition: 'right', errorMessage: { required: '全局错误' } } }}
-        >
-          <Form
-            requiredMarkPosition="left"
-            data={{ name: '' }}
-            rules={{ name: [{ required: true }] }}
-            errorMessage={{ required: '表单错误' }}
-          >
-            <FormItem label="姓名" name="name">
-              <Input />
-            </FormItem>
-          </Form>
-        </ConfigProvider>
-      ));
-      expect(wrapper.get(`.${name}__label`).classes()).not.toContain(`${name}__label--required-right`);
-      await wrapper.findComponent(Form).vm.$.exposed.validate();
-      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('表单错误');
-    });
-
-    // needRequiredMark 未读取 globalConfig.form.requiredMark，只读取 Form/FormItem 属性和 required 规则。
-    it.todo('global form requiredMark controls required markers');
-  });
-
   describe('props', () => {
     let wrapper: VueWrapper;
     beforeEach(() => {
@@ -953,5 +621,337 @@ describe('Form', () => {
       expect(onReset).toHaveBeenCalledTimes(3);
       expect(data.value).toMatchObject({ name: '', age: 18 });
     });
+  });
+
+  describe('scenarios', () => {
+    describe('validation rules', () => {
+      let wrapper: VueWrapper;
+      let rules: Ref<FormRules>;
+      let formData: Ref<Data>;
+      let form: VueWrapper;
+      let onValidate: ReturnType<typeof vi.fn>;
+      beforeEach(() => {
+        rules = ref<FormRules>({});
+        formData = ref({
+          name: '',
+          time: undefined,
+          gender: '',
+        });
+        onValidate = vi.fn();
+        wrapper = mount(
+          () => (
+            <Form rules={rules.value} data={formData.value} onValidate={onValidate}>
+              <FormItem label="name" name="name">
+                <Input v-model={formData.value.name} />
+              </FormItem>
+              <FormItem label="radio" name="radio">
+                <RadioGroup v-model={formData.value.gender} class="box" borderless>
+                  <Radio block={false} name="radio" value="man" label="男" />
+                  <Radio block={false} name="radio" value="women" label="女" />
+                  <Radio block={false} name="radio" value="secret" label="保密" />
+                </RadioGroup>
+              </FormItem>
+            </Form>
+          ),
+          { attachTo: document.body },
+        );
+        form = wrapper.findComponent(Form);
+      });
+      const validate = async (params?: FormValidateParams): Promise<FormValidateResult<Data>> => {
+        await nextTick();
+        const res = await form.vm.$.exposed.validate(params);
+        return res;
+      };
+      const expectToFailure = (res: FormValidateResult<Data>) => {
+        expect(res).not.toBe(true);
+        if (typeof res !== 'boolean') {
+          expect(
+            Object.values(res).some((results) => Array.isArray(results) && results.some((result) => !result.result)),
+          ).toBe(true);
+        }
+      };
+      const expectToSuccess = (res: FormValidateResult<Data>) => {
+        expect(res).toBe(true);
+      };
+
+      it('boolean', async () => {
+        rules.value = { radio: [{ boolean: true }] };
+
+        formData.value.radio = 'true';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.radio = true;
+        res = await validate();
+        expectToSuccess(res);
+      });
+
+      it('email', async () => {
+        rules.value = { name: [{ email: true }] };
+
+        formData.value.name = '123.com';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = 'test@gmail.com';
+        res = await validate();
+        expectToSuccess(res);
+      });
+
+      it('enum', async () => {
+        rules.value = { name: [{ enum: ['primary', 'info', 'warning'] }] };
+
+        formData.value.name = '123';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = 'info';
+        res = await validate();
+        expectToSuccess(res);
+      });
+
+      it('idcard', async () => {
+        rules.value = { name: [{ idcard: true }] };
+
+        formData.value.name = '123456789012345678';
+        let res = await validate();
+        expectToSuccess(res);
+
+        formData.value.name = '12345678901234567x';
+        res = await validate();
+        expectToSuccess(res);
+
+        formData.value.name = '123456789012345';
+        res = await validate();
+        expectToSuccess(res);
+      });
+
+      it('len', async () => {
+        rules.value = { name: [{ len: 7 }] };
+
+        formData.value.name = '12345';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = '1234567';
+        res = await validate();
+        expectToSuccess(res);
+
+        formData.value.name = 'success';
+        res = await validate();
+        expectToSuccess(res);
+      });
+
+      it('max', async () => {
+        rules.value = { name: [{ max: 7 }] };
+
+        formData.value.name = 'failure!';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = 'success';
+        res = await validate();
+        expectToSuccess(res);
+
+        formData.value.name = '12345';
+        res = await validate();
+        expectToSuccess(res);
+      });
+
+      it('min', async () => {
+        rules.value = { name: [{ min: 5 }] };
+
+        formData.value.name = 'fail';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = 'success';
+        res = await validate();
+        expectToSuccess(res);
+
+        formData.value.name = '12345';
+        res = await validate();
+        expectToSuccess(res);
+      });
+
+      it('message', async () => {
+        rules.value = { name: [{ required: true, message: 'custom error message' }] };
+        await validate();
+        expect(form.find(`.${name}__item-extra`).text()).toBe('custom error message');
+      });
+
+      it('number', async () => {
+        rules.value = { name: [{ number: true }] };
+
+        formData.value.name = 'fail';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = 123.4;
+        res = await validate();
+        expectToSuccess(res);
+
+        formData.value.name = 0x123;
+        res = await validate();
+        expectToSuccess(res);
+
+        formData.value.name = 0o110;
+        res = await validate();
+        expectToSuccess(res);
+
+        formData.value.name = 0b110;
+        res = await validate();
+        expectToSuccess(res);
+
+        formData.value.name = 1e5;
+        res = await validate();
+        expectToSuccess(res);
+      });
+
+      it('pattern', async () => {
+        rules.value = { name: [{ pattern: /@qq.com/ }] };
+
+        formData.value.name = 'test@fail.com';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = 'test@qq.com';
+        res = await validate();
+        expectToSuccess(res);
+      });
+
+      it('required', async () => {
+        rules.value = { name: [{ required: true }] };
+
+        formData.value.name = '';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = 'test';
+        res = await validate();
+        expectToSuccess(res);
+      });
+
+      it('telnumber', async () => {
+        rules.value = { name: [{ telnumber: true }] };
+
+        formData.value.name = '19999';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = '15333333333';
+        res = await validate();
+        expectToSuccess(res);
+      });
+
+      it('type', async () => {
+        rules.value = { name: [{ required: true, type: 'error' }] };
+        await validate();
+        expect(form.find(`.${prefix}-form__item-tips`).classes(`${name}__item--error`)).toBeTruthy();
+
+        rules.value = { name: [{ required: true, type: 'warning' }] };
+        await validate();
+        expect(form.find(`.${prefix}-form__item-tips`).classes(`${name}__item--warning`)).toBeTruthy();
+      });
+      it('url', async () => {
+        rules.value = { name: [{ url: true }] };
+        formData.value.name = 'test';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = 'tdesign.tencent.com/vue-next';
+        res = await validate();
+        expectToSuccess(res);
+      });
+      it('validator', async () => {
+        const isNumber = (val: unknown) => typeof val === 'number';
+        rules.value = { name: [{ validator: (val) => isNumber(val) }] };
+        formData.value.name = 'string';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = 123;
+        res = await validate();
+        expectToSuccess(res);
+      });
+      it('whitespace', async () => {
+        rules.value = { name: [{ whitespace: true }] };
+        formData.value.name = ' ';
+        let res = await validate();
+        expectToFailure(res);
+
+        formData.value.name = '';
+        res = await validate();
+        expectToSuccess(res);
+      });
+    });
+
+    it('requiredMarkPosition falls back to ConfigProvider global config', async () => {
+      const wrapper = mount(() => (
+        <ConfigProvider globalConfig={{ form: { requiredMarkPosition: 'right' } }}>
+          <Form>
+            <FormItem requiredMark label="姓名" />
+          </Form>
+        </ConfigProvider>
+      ));
+      await nextTick();
+      expect(wrapper.get(`.${name}__label`).classes()).toContain(`${name}__label--required-right`);
+    });
+
+    it('global form locale supplies colon and validation messages', async () => {
+      // eslint-disable-next-line no-template-curly-in-string
+      const required = '请填写${name}';
+      const wrapper = mount(() => (
+        <ConfigProvider globalConfig={{ form: { colonText: ':', errorMessage: { required } } }}>
+          <Form colon data={{ name: '' }} rules={{ name: [{ required: true }] }}>
+            <FormItem label="姓名" name="name">
+              <Input />
+            </FormItem>
+          </Form>
+        </ConfigProvider>
+      ));
+      expect(wrapper.get(`.${name}__label`).text()).toBe('姓名:');
+      await wrapper.findComponent(Form).vm.$.exposed.validate();
+      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('请填写姓名');
+    });
+
+    it('does not validate FormItems after they are unmounted', async () => {
+      const showField = ref(true);
+      const wrapper = mount(() => (
+        <Form data={{ name: '' }} rules={{ name: [{ required: true, message: '姓名必填' }] }}>
+          {showField.value && <FormItem name="name" label="姓名" />}
+        </Form>
+      ));
+      const form = wrapper.findComponent(Form);
+      expect(await form.vm.$.exposed.validate()).not.toBe(true);
+      showField.value = false;
+      await nextTick();
+      expect(await form.vm.$.exposed.validate()).toBe(true);
+    });
+
+    it('Form errorMessage and requiredMarkPosition override global configuration', async () => {
+      const wrapper = mount(() => (
+        <ConfigProvider
+          globalConfig={{ form: { requiredMarkPosition: 'right', errorMessage: { required: '全局错误' } } }}
+        >
+          <Form
+            requiredMarkPosition="left"
+            data={{ name: '' }}
+            rules={{ name: [{ required: true }] }}
+            errorMessage={{ required: '表单错误' }}
+          >
+            <FormItem label="姓名" name="name">
+              <Input />
+            </FormItem>
+          </Form>
+        </ConfigProvider>
+      ));
+      expect(wrapper.get(`.${name}__label`).classes()).not.toContain(`${name}__label--required-right`);
+      await wrapper.findComponent(Form).vm.$.exposed.validate();
+      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('表单错误');
+    });
+
+    // needRequiredMark 未读取 globalConfig.form.requiredMark，只读取 Form/FormItem 属性和 required 规则。
+    it.todo('global form requiredMark controls required markers');
   });
 });
