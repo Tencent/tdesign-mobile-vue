@@ -1,19 +1,22 @@
+/* eslint-disable vue/one-component-per-file -- 测试文件中内联 defineComponent 构造子组件 */
 import { describe, it, expect } from 'vitest';
+import { defineComponent } from 'vue';
 import { mount } from '@vue/test-utils';
 import { useConfig } from '../useConfig';
 import ConfigProvider from '../index';
+import type { GlobalConfigProvider } from '../type';
 
 describe('ConfigProvider', () => {
   describe('props', () => {
     it('globalConfig[object]', () => {
-      const ChildComponent = {
+      const ChildComponent = defineComponent({
         setup() {
           const { globalConfig, classPrefix } = useConfig('calendar');
           return () => (
             <div class="t-child">{`${globalConfig.value.title}|${globalConfig.value.confirm}|${classPrefix.value}`}</div>
           );
         },
-      };
+      });
 
       const wrapper = mount(() => (
         <ConfigProvider globalConfig={{ classPrefix: 'tdesign', calendar: { title: '自定义日历标题' } }}>
@@ -36,13 +39,14 @@ describe('ConfigProvider', () => {
 
   describe('scenarios', () => {
     it('provide config', () => {
-      const testConfig = (props, expectTarget) => {
-        const ChildComponent = {
+      // 结构与 TdConfigProviderProps 一致；使用类型字面量以兼容 mount 的 props 入参类型
+      const testConfig = (props: { globalConfig?: GlobalConfigProvider }, expectTarget: string) => {
+        const ChildComponent = defineComponent({
           setup() {
             const { globalConfig } = useConfig('table');
             return () => <div class="t-child">{globalConfig.value.empty}</div>;
           },
-        };
+        });
 
         const wrapper = mount(
           <ConfigProvider>
