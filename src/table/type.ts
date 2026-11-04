@@ -5,11 +5,11 @@
  * */
 
 import { LoadingProps } from '../loading';
+import { PopupProps } from '../popup';
 import { CheckboxGroupValue } from '../checkbox';
 import { SortableEvent, SortableOptions } from 'sortablejs';
 import { CheckboxProps } from '../checkbox';
 import { RadioProps } from '../radio';
-import { PopupProps } from '../popup';
 import { InputProps } from '../input';
 import type { TNode, OptionData, ClassName, Styles, HTMLElementAttributes, ComponentType } from '../common';
 
@@ -163,14 +163,20 @@ export interface BaseTableCol<T extends TableRowData = TableRowData> {
    */
   colKey?: string;
   /**
-   * 单元格和表头内容超出时，是否显示省略号。如果仅希望单元格超出省略，可设置 `ellipsisTitle = false`。<br/> 值为 `true`，则超出省略浮层默认显示单元格内容；<br/>值类型为 `Function` 则自定义超出省略浮中层显示的内容。<br /> 请注意单元格超出省略的两个基本点：1. 内容元素是内联元素或样式（自定义单元格内容时需特别注意）；2. 内容超出父元素
+   * 单元格和表头内容超出时，是否显示省略号。如果仅希望单元格超出省略，可设置 `ellipsisTitle = false`。<br/> 值为 `true`，则超出省略浮层默认显示单元格内容；<br/>值类型为 `Function` 则自定义超出省略浮中层显示的内容。<br/>值类型为 `Object`，则自动透传属性到 Popup 组件，可用于调整弹窗方向等特性。<br/> 同时透传 Popup 属性和自定义浮层内容，请使用 `{ props: { showOverlay: false }, content: () => 'something' }`。<br /> 请注意单元格超出省略的两个基本点：1. 内容元素是内联元素或样式（自定义单元格内容时需特别注意）；2. 内容超出父元素
    * @default false
    */
-  ellipsis?: boolean | TNode<BaseTableCellParams<T>>;
+  ellipsis?:
+    | boolean
+    | TNode<BaseTableCellParams<T>>
+    | PopupProps
+    | { props: PopupProps; content: TNode<BaseTableCellParams<T>> };
   /**
-   * 表头内容超出时，是否显示省略号。优先级高于 `ellipsis`。<br/>值为 `true`，则超出省略的浮层默认显示表头全部内容；<br/>值类型为 `Function` 用于自定义超出省略浮层显示的表头内容
+   * 表头内容超出时，是否显示省略号。优先级高于 `ellipsis`。<br/>值为 `true`，则超出省略的浮层默认显示表头全部内容；<br/>值类型为 `Function` 用于自定义超出省略浮层显示的表头内容；<br/>值类型为 `Object`，则自动透传属性到 Popup 组件，可用于调整弹窗方向等特性。<br/> 同时透传 Popup 属性和自定义浮层内容，请使用 `{ props: { showOverlay: false }, content: () => 'something' }`
+   * @default undefinde
    */
-  ellipsisTitle?: boolean | TNode<BaseTableColParams<T>>;
+  ellipsisTitle?:
+    boolean | TNode<BaseTableColParams<T>> | PopupProps | { props: PopupProps; content: TNode<BaseTableColParams<T>> };
   /**
    * 固定列显示位置
    * @default left
@@ -354,7 +360,7 @@ export interface PrimaryTableCol<T extends TableRowData = TableRowData> extends 
   'cell' | 'title' | 'render' | 'children'
 > {
   /**
-   * 自定义单元格渲染，优先级高于 render。泛型 T 指表格数据类型
+   * 自定义单元格渲染。值类型为 Function 表示以函数形式渲染单元格。值类型为 string 表示使用插槽渲染，插槽名称为 cell 的值。默认使用 colKey 作为插槽名称。优先级高于 render。泛型 T 指表格数据类型
    */
   cell?: string | TNode<PrimaryTableCellParams<T>>;
   /**
