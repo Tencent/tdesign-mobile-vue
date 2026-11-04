@@ -16,7 +16,7 @@ describe('Grid', () => {
     it('align[left/center]', () => {
       (['left', 'center'] as const).forEach((align) => {
         const wrapper = mount(Grid, { props: { align }, slots: { default: () => <GridItem /> } });
-        expect(wrapper.get(`.${name}-item`).element.style.textAlign).toBe(align);
+        expect((wrapper.get(`.${name}-item`).element as HTMLElement).style.textAlign).toBe(align);
       });
     });
 
@@ -32,11 +32,11 @@ describe('Grid', () => {
 
     it('column[number]', async () => {
       const wrapper = mount(Grid, { props: { column: 5 }, slots: { default: () => <GridItem /> } });
-      expect(wrapper.element.style.gridTemplateColumns).toBe('repeat(5, 1fr)');
-      expect(wrapper.get(`.${name}-item`).element.style.flexBasis).toBe('20%');
+      expect((wrapper.element as HTMLElement).style.gridTemplateColumns).toBe('repeat(5, 1fr)');
+      expect((wrapper.get(`.${name}-item`).element as HTMLElement).style.flexBasis).toBe('20%');
       await wrapper.setProps({ column: 2 });
-      expect(wrapper.element.style.gridTemplateColumns).toBe('repeat(2, 1fr)');
-      expect(wrapper.get(`.${name}-item`).element.style.flexBasis).toBe('50%');
+      expect((wrapper.element as HTMLElement).style.gridTemplateColumns).toBe('repeat(2, 1fr)');
+      expect((wrapper.get(`.${name}-item`).element as HTMLElement).style.flexBasis).toBe('50%');
     });
 
     it('gutter[number]', () => {
@@ -48,10 +48,10 @@ describe('Grid', () => {
     it('hover[boolean]', async () => {
       const enabled = mount(Grid, { props: { hover: true }, slots: { default: () => <GridItem /> } });
       const disabled = mount(Grid, { slots: { default: () => <GridItem /> } });
-      await trigger(enabled.get(`.${name}-item`), 'touchstart');
+      await trigger(enabled.get(`.${name}-item`).element, 'touchstart');
       await sleep(60);
       expect(enabled.get(`.${name}-item`).classes()).toContain(`${name}-item--hover`);
-      await trigger(disabled.get(`.${name}-item`), 'touchstart');
+      await trigger(disabled.get(`.${name}-item`).element, 'touchstart');
       await sleep(60);
       expect(disabled.get(`.${name}-item`).classes()).not.toContain(`${name}-item--hover`);
     });
@@ -89,7 +89,7 @@ describe('Grid', () => {
       const wrapper = mount(Grid, { props: { column: 0 }, slots: { default: () => <GridItem /> } });
       expect(wrapper.classes()).toContain(`${name}--auto-size`);
       expect(wrapper.attributes('style') || '').not.toContain('grid-template-columns');
-      expect(wrapper.get(`.${name}-item`).element.style.flexBasis).toBe('');
+      expect((wrapper.get(`.${name}-item`).element as HTMLElement).style.flexBasis).toBe('');
     });
   });
 });
