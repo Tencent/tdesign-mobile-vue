@@ -1,4 +1,4 @@
-import { h, ref, nextTick } from 'vue';
+import { defineComponent, h, ref, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
@@ -111,20 +111,23 @@ describe('CheckTag', () => {
     });
 
     it('change', async () => {
-      const wrapper = mount({
-        data() {
-          return {
-            checked: false,
-          };
-        },
-        render() {
-          return (
-            <TCheckTag onChange={() => (this.checked = !this.checked)} checked={this.checked}>
-              {TEXT}
-            </TCheckTag>
-          );
-        },
-      });
+      // defineComponent 仅为补充 data 的 this 类型标注，运行时返回原 options 对象
+      const wrapper = mount(
+        defineComponent({
+          data() {
+            return {
+              checked: false,
+            };
+          },
+          render() {
+            return (
+              <TCheckTag onChange={() => (this.checked = !this.checked)} checked={this.checked}>
+                {TEXT}
+              </TCheckTag>
+            );
+          },
+        }),
+      );
       await wrapper.trigger('click');
       expect(wrapper.vm.checked).toBe(true);
       await wrapper.trigger('click');
