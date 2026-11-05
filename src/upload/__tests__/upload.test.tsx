@@ -1,5 +1,5 @@
 import { ref, nextTick } from 'vue';
-import { mount, enableAutoUnmount } from '@vue/test-utils';
+import { mount, enableAutoUnmount, flushPromises } from '@vue/test-utils';
 import type { VueWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi, beforeAll, afterAll, afterEach } from 'vitest';
 import {
@@ -170,48 +170,52 @@ describe('Upload', () => {
     });
 
     it('addBtn[boolean]', () => {
-      // 默认展示添加按钮
-      const wrapper = mount(Upload);
-      expect(wrapper.findComponent(AddIcon).exists()).toBe(true);
-      expect(wrapper.find('.t-upload__item--add').exists()).toBe(true);
-      // 关闭后隐藏添加按钮
-      const wrapper2 = mount(Upload, {
-        props: { addBtn: false },
-      });
-      expect(wrapper2.find('.t-upload__item--add').exists()).toBe(false);
+      for (const theme of ['grid', 'list'] as const) {
+        const selector = theme === 'grid' ? '.t-upload__item--add' : '.t-upload__list-trigger';
+        const wrapper = mount(Upload, { props: { theme } });
+        expect(wrapper.find(selector).exists()).toBe(true);
+        if (theme === 'grid') expect(wrapper.findComponent(AddIcon).exists()).toBe(true);
+        const hiddenWrapper = mount(Upload, { props: { theme, addBtn: false } });
+        expect(hiddenWrapper.find(selector).exists()).toBe(false);
+      }
     });
 
     it('addBtn[slot]', () => {
-      const wrapper = mount(Upload, {
-        slots: {
-          addBtn: () => <span class="custom-add-btn">custom add</span>,
-        },
-      });
-      expect(wrapper.find('.t-upload__item--add .custom-add-btn').exists()).toBe(true);
-      expect(wrapper.findComponent(AddIcon).exists()).toBe(false);
+      for (const theme of ['grid', 'list'] as const) {
+        const wrapper = mount(Upload, {
+          props: { theme },
+          slots: { addBtn: () => <span class="custom-add-btn">custom add</span> },
+        });
+        expect(wrapper.find('.custom-add-btn').text()).toBe('custom add');
+        expect(wrapper.findComponent(AddIcon).exists()).toBe(false);
+      }
     });
 
     it('addContent[string]', () => {
-      const wrapper = mount(Upload, {
-        props: { addContent: '点击上传' },
-      });
-      expect(wrapper.find('.t-upload__item--add').text()).toContain('点击上传');
+      for (const theme of ['grid', 'list'] as const) {
+        const wrapper = mount(Upload, { props: { theme, addContent: '点击上传' } });
+        const selector = theme === 'grid' ? '.t-upload__item--add' : '.t-upload__list-trigger';
+        expect(wrapper.find(selector).text()).toBe('点击上传');
+      }
     });
 
     it('addContent[function]', () => {
-      const wrapper = mount(Upload, {
-        props: { addContent: () => '自定义上传文案' },
-      });
-      expect(wrapper.find('.t-upload__item--add').text()).toContain('自定义上传文案');
+      for (const theme of ['grid', 'list'] as const) {
+        const wrapper = mount(Upload, {
+          props: { theme, addContent: () => <span class="custom-add-content">自定义上传文案</span> },
+        });
+        expect(wrapper.find('.custom-add-content').text()).toBe('自定义上传文案');
+      }
     });
 
     it('addContent[slot]', () => {
-      const wrapper = mount(Upload, {
-        slots: {
-          addContent: () => <span class="custom-add-content">custom content</span>,
-        },
-      });
-      expect(wrapper.find('.t-upload__item--add .custom-add-content').exists()).toBe(true);
+      for (const theme of ['grid', 'list'] as const) {
+        const wrapper = mount(Upload, {
+          props: { theme },
+          slots: { addContent: () => <span class="custom-add-content">custom content</span> },
+        });
+        expect(wrapper.find('.custom-add-content').text()).toBe('custom content');
+      }
     });
 
     it('allowUploadDuplicateFile[boolean]', async () => {
@@ -329,7 +333,7 @@ describe('Upload', () => {
 
     it('data[function]', async () => {
       useMockXMLHttpRequest();
-      // type.ts 声明 data 支持 function（props.ts 运行时仅声明 Object，传入函数会有 Vue 类型告警）
+      // 函数接收当前上传文件，返回值作为额外请求字段
       const data = vi.fn((files: UploadFile[]) => ({ count: files.length, fileName: files[0].name }));
       const wrapper = mount(Upload, {
         props: { action, data },
@@ -349,6 +353,23 @@ describe('Upload', () => {
       // 点击添加按钮不触发文件选择，也不触发 clickUpload 事件
       await wrapper.find('.t-upload__item--add').trigger('click');
       expect(onClickUpload).not.toHaveBeenCalled();
+
+      for (const theme of ['grid', 'list'] as const) {
+        const disabledWrapper = mount(Upload, {
+          props: {
+            theme,
+            disabled: true,
+            defaultFiles: [
+              ...imageFiles(['success']),
+              { ...imageFiles(['progress'])[0], status: 'progress' },
+              { ...imageFiles(['fail'])[0], status: 'fail' },
+              { name: 'document.txt', status: 'success' },
+            ],
+          },
+        });
+        // 只有可预览且非上传中/失败的图片显示禁用遮罩
+        expect(disabledWrapper.findAll('.t-upload__disabled-mask')).toHaveLength(1);
+      }
     });
 
     it('draggable[boolean]', async () => {
@@ -664,6 +685,19 @@ describe('Upload', () => {
       expect(wrapper.findComponent(CloseIcon).exists()).toBe(true);
       await wrapper.setProps({ removeBtn: false });
       expect(wrapper.findComponent(CloseIcon).exists()).toBe(false);
+
+      await Promise.all(
+        (['grid', 'list'] as const).map(async (theme) => {
+          const icon = theme === 'grid' ? CloseIcon : DeleteIcon;
+          const files = imageFiles(['a', 'b', 'c']);
+          files[0].removeBtn = true;
+          files[1].removeBtn = false;
+          const fileWrapper = mount(Upload, { props: { theme, removeBtn: false, defaultFiles: files } });
+          expect(fileWrapper.findAllComponents(icon)).toHaveLength(1);
+          await fileWrapper.setProps({ removeBtn: true });
+          expect(fileWrapper.findAllComponents(icon)).toHaveLength(2);
+        }),
+      );
     });
 
     it('requestMethod[function]', async () => {
@@ -1063,6 +1097,25 @@ describe('Upload', () => {
           currentFiles: [expect.objectContaining({ name: 'foo.png' })],
         }),
       );
+
+      const onRealProgress = vi.fn();
+      const realWrapper = mount(Upload, {
+        props: { action, useMockProgress: false, onProgress: onRealProgress },
+      });
+      triggerUploadFile(realWrapper, [mockFileBar]);
+      await vi.advanceTimersByTimeAsync(0);
+      const event = new ProgressEvent('progress', { loaded: 43, total: 100, lengthComputable: true });
+      mockXHRInstances[1].upload.onprogress?.(event);
+      await nextTick();
+      expect(onRealProgress).toHaveBeenCalledWith({
+        e: event,
+        type: 'real',
+        percent: 43,
+        file: expect.objectContaining({ name: 'bar.png', percent: 43 }),
+        currentFiles: [expect.objectContaining({ name: 'bar.png', percent: 43 })],
+        XMLHttpRequest: mockXHRInstances[1],
+      });
+      expect(realWrapper.find('.t-upload__progress-text').text()).toBe('43%');
     });
 
     it('remove', async () => {
@@ -1265,7 +1318,95 @@ describe('Upload', () => {
   });
 
   describe('scenarios', () => {
+    describe('asynchronous validation', () => {
+      it.each([true, false])(
+        'waits for batch validation before adding files with autoUpload %s',
+        async (autoUpload) => {
+          let resolveValidation: (allowed: boolean) => void = () => {};
+          const beforeAllFilesUpload = vi.fn(
+            () =>
+              new Promise<boolean>((resolve) => {
+                resolveValidation = resolve;
+              }),
+          );
+          const beforeUpload = vi.fn(async (file: UploadFile) => file.name !== 'bar.png');
+          const uploadMethod = vi.fn(requestMethod);
+          const onChange = vi.fn();
+          const onValidate = vi.fn();
+          const wrapper = mount(Upload, {
+            props: {
+              autoUpload,
+              multiple: true,
+              beforeAllFilesUpload,
+              beforeUpload,
+              requestMethod: uploadMethod,
+              onChange,
+              onValidate,
+            },
+          });
+          triggerUploadFile(wrapper, [mockFileFoo, mockFileBar]);
+          await flushPromises();
+          expect(beforeAllFilesUpload).toHaveBeenCalledTimes(1);
+          // 整批校验和单文件校验并行执行，但整批结果返回前不能添加或上传
+          expect(beforeUpload).toHaveBeenCalledTimes(2);
+          expect(uploadMethod).not.toHaveBeenCalled();
+          expect(onChange).not.toHaveBeenCalled();
+
+          resolveValidation(true);
+          await flushPromises();
+          expect(beforeUpload).toHaveBeenCalledTimes(2);
+          expect(onValidate).toHaveBeenCalledWith({
+            type: 'CUSTOM_BEFORE_UPLOAD',
+            files: [expect.objectContaining({ name: 'bar.png' })],
+          });
+          expect(onChange).toHaveBeenCalledWith(
+            [expect.objectContaining({ name: 'foo.png', status: autoUpload ? 'success' : 'waiting' })],
+            expect.objectContaining({ trigger: 'add' }),
+          );
+          expect(uploadMethod).toHaveBeenCalledTimes(autoUpload ? 1 : 0);
+        },
+      );
+
+      it('does not add files when asynchronous batch validation rejects them', async () => {
+        const onChange = vi.fn();
+        const onValidate = vi.fn();
+        const beforeUpload = vi.fn(() => true);
+        const wrapper = mount(Upload, {
+          props: { autoUpload: false, beforeAllFilesUpload: async () => false, beforeUpload, onChange, onValidate },
+        });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        await flushPromises();
+        expect(beforeUpload).toHaveBeenCalledTimes(1);
+        expect(onChange).not.toHaveBeenCalled();
+        expect(onValidate).toHaveBeenCalledWith({
+          type: 'BEFORE_ALL_FILES_UPLOAD',
+          files: [expect.objectContaining({ name: 'foo.png' })],
+        });
+      });
+    });
+
     describe('upload flow', () => {
+      it('keeps a local image preview until unmount and revokes its object URL', async () => {
+        const createObjectURL = vi.mocked(URL.createObjectURL);
+        const revokeObjectURL = vi.mocked(URL.revokeObjectURL);
+        createObjectURL.mockClear();
+        revokeObjectURL.mockClear();
+        const wrapper = mount(Upload, { props: { autoUpload: false, multiple: true } });
+        triggerUploadFile(wrapper, [mockFileFoo]);
+        await flushPromises();
+        const url = createObjectURL.mock.results[0].value;
+        expect(createObjectURL).toHaveBeenCalledExactlyOnceWith(mockFileFoo);
+        expect(wrapper.findComponent(TImage).props('src')).toBe(url);
+
+        // 后续追加文件保留已有预览地址，不重复创建 object URL
+        triggerUploadFile(wrapper, [new File(['text'], 'notes.txt', { type: 'text/plain' })]);
+        await flushPromises();
+        expect(createObjectURL).toHaveBeenCalledTimes(1);
+        expect(revokeObjectURL).not.toHaveBeenCalled();
+        wrapper.unmount();
+        expect(revokeObjectURL).toHaveBeenCalledExactlyOnceWith(url);
+      });
+
       it('auto upload transitions from progress to success', async () => {
         let resolveUpload: (res: RequestMethodResponse) => void = () => {};
         const wrapper = mount(Upload, {
@@ -1347,6 +1488,30 @@ describe('Upload', () => {
     });
 
     describe('preview and delete', () => {
+      it('filters non-images when mapping a mixed list to the viewer and handles close', async () => {
+        const onPreview = vi.fn();
+        const wrapper = mount(Upload, {
+          props: {
+            theme: 'list',
+            onPreview,
+            defaultFiles: [{ name: 'notes.txt', status: 'success' }, ...imageFiles(['a', 'b'])],
+          },
+        });
+        await wrapper.findAll('.t-upload__list-item')[2].trigger('click');
+        const viewer = wrapper.findComponent(TImageViewer);
+        expect(onPreview).toHaveBeenCalledWith({
+          file: expect.objectContaining({ name: 'b.png' }),
+          index: 2,
+          e: expect.any(MouseEvent),
+        });
+        expect(viewer.props('images')).toEqual(['https://a.png', 'https://b.png']);
+        expect(viewer.props('index')).toBe(1);
+        expect(viewer.props('visible')).toBe(true);
+        viewer.vm.$emit('close', { visible: false });
+        await nextTick();
+        expect(viewer.props('visible')).toBe(false);
+      });
+
       it('opens viewer with the clicked image index', async () => {
         const wrapper = mount(Upload, {
           props: { defaultFiles: imageFiles(['a', 'b']) },
@@ -1380,6 +1545,7 @@ describe('Upload', () => {
           [expect.objectContaining({ name: 'a.png' }), expect.objectContaining({ name: 'c.png' })],
           expect.objectContaining({ trigger: 'remove', index: 1, file: expect.objectContaining({ name: 'b.png' }) }),
         );
+        expect(wrapper.findComponent(TImageViewer).props('visible')).toBe(false);
       });
 
       it('grid theme deletes single uploaded file', async () => {
@@ -1404,6 +1570,42 @@ describe('Upload', () => {
     });
 
     describe('status display', () => {
+      it('list falls back to default status text and handles zero or missing sizes', () => {
+        const wrapper = mount(Upload, {
+          props: {
+            theme: 'list',
+            defaultFiles: [
+              { name: 'progress.txt', status: 'progress', percent: 0 },
+              { name: 'failed.txt', status: 'fail' },
+              { name: 'empty.txt', status: 'success', size: 0 },
+              { name: 'unknown.txt', status: 'success' },
+            ],
+          },
+        });
+        const descriptions = wrapper.findAll('.t-upload__list-item-size').map((item) => item.text());
+        expect(descriptions).toEqual(['上传中...', '上传失败', '0 Bytes', '']);
+      });
+
+      it('uses MIME types when file names do not provide an extension', () => {
+        const wrapper = mount(Upload, {
+          props: {
+            theme: 'list',
+            defaultFiles: [
+              { name: 'sheet', type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' },
+              { name: 'slides', type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation' },
+              { name: 'document', type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' },
+              { name: 'archive', raw: new File([], 'archive', { type: 'application/x-compressed' }) },
+              {},
+            ],
+          },
+        });
+        expect(wrapper.findComponent(FileExcelFilledIcon).exists()).toBe(true);
+        expect(wrapper.findComponent(FilePowerpointFilledIcon).exists()).toBe(true);
+        expect(wrapper.findComponent(FileWordFilledIcon).exists()).toBe(true);
+        expect(wrapper.findComponent(FileZipFilledIcon).exists()).toBe(true);
+        expect(wrapper.findComponent(File1Icon).exists()).toBe(true);
+      });
+
       it('grid shows progress and fail masks', async () => {
         const wrapper = mount(Upload, {
           props: {
@@ -1484,6 +1686,56 @@ describe('Upload', () => {
     });
 
     describe('drag sort', () => {
+      it.each(['grid', 'list'] as const)('cancels a %s drag and restores the displayed order', async (theme) => {
+        vi.useFakeTimers();
+        const onDrop = vi.fn();
+        const onChange = vi.fn();
+        const wrapper = mount(Upload, {
+          props: {
+            theme,
+            draggable: true,
+            onDrop,
+            onChange,
+            defaultFiles: [{ name: 'notes.txt', status: 'success' }, ...imageFiles(['a'])],
+          },
+        });
+        const items = wrapper.findAll('[data-drag-key]');
+        await trigger(items[0], 'touchstart', 10, 10);
+        await vi.advanceTimersByTimeAsync(300);
+        // 两种布局的文件浮层都保留文件名，列表拖拽时隐藏删除入口
+        expect(document.body.textContent).toContain('notes.txt');
+        if (theme === 'list') expect(wrapper.findComponent(DeleteIcon).exists()).toBe(false);
+        await trigger(items[0], 'touchmove', 60, 60);
+        await trigger(items[0], 'touchcancel', 60, 60);
+        expect(wrapper.classes()).not.toContain('t-upload--dragging');
+        expect(document.body.querySelector('.t-upload__drag-clone, .t-upload__list-item')).toBeNull();
+        expect(wrapper.findAll('[data-drag-key]').map((item) => item.attributes('data-drag-key'))).toEqual(
+          items.map((item) => item.attributes('data-drag-key')),
+        );
+        expect(onDrop).not.toHaveBeenCalled();
+        expect(onChange).not.toHaveBeenCalled();
+      });
+
+      it('suppresses preview during dragging and for 300ms after a long press', async () => {
+        vi.useFakeTimers();
+        const onPreview = vi.fn();
+        const wrapper = mount(Upload, {
+          props: { draggable: true, onPreview, defaultFiles: imageFiles(['a', 'b']) },
+        });
+        const item = wrapper.find('[data-drag-key]');
+        await trigger(item, 'touchstart', 10, 10);
+        await vi.advanceTimersByTimeAsync(300);
+        await wrapper.find('.t-upload__image').trigger('click');
+        expect(onPreview).not.toHaveBeenCalled();
+        await trigger(item, 'touchend', 10, 10);
+        await wrapper.find('.t-upload__image').trigger('click');
+        expect(onPreview).not.toHaveBeenCalled();
+        await vi.advanceTimersByTimeAsync(300);
+        await wrapper.find('.t-upload__image').trigger('click');
+        expect(onPreview).toHaveBeenCalledTimes(1);
+        expect(wrapper.findComponent(TImageViewer).props('visible')).toBe(true);
+      });
+
       it('reorders items and syncs rendered order after drop', async () => {
         vi.useFakeTimers();
         vi.stubGlobal('requestAnimationFrame', (cb: (time: number) => void) => {

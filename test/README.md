@@ -30,7 +30,7 @@ pnpm run test:unit-coverage
 
 ### 组件快照测试 `snap`
 
-组件 `demos` 目录下的示例快照测试由 `npm run test:demo` 生成在各组件 `__tests__/demo.test.jsx`，通过 `pnpm run test:snap` 运行，不适用组件单测的四类分组。`test/snap/` 目录为历史遗留入口，当前 `vitest.config.mjs` 的 `include` 不会收集其中用例。
+组件 `demos` 目录下的示例快照测试由 `npm run test:demo` 生成在各组件 `__tests__/demo.test.jsx`，通过 `pnpm run test:snap` 运行，不适用组件单测的分组规范。`test/snap/` 目录为历史遗留入口，当前 `vitest.config.mjs` 的 `include` 不会收集其中用例。
 
 ```bash
 # 快照
@@ -72,6 +72,7 @@ pnpm run test:snap-update
 - `props`：验证不同 Props（含插槽输入通道）对组件渲染和行为的影响。
 - `events`：验证事件触发时机及回调参数。
 - `instanceFunctions`：验证组件通过 ref 暴露的实例方法。
+- `globalConfig`：验证通过 ConfigProvider 注入的组件全局配置对渲染和行为的影响，与 `props` 等分组同级，不放入 `scenarios`。
 - `scenarios`：验证多 API 联动、完整交互流程、不同模式和边界情况。
 
 遵循以下原则：
@@ -79,11 +80,11 @@ pnpm run test:snap-update
 - 分组按需创建，不保留空的 `describe`。
 - `props` 分组内的用例按组件属性声明顺序排列（主组件为 `props.ts`，子组件为 `*-props.ts`）；`it.todo` 同样参与排序；插槽用例按同名 Prop 的声明位置穿插（如 `it('icon[function]')` 之后接 `it('icon[slot]')`），未在声明文件中找到的属性名或插槽名（如 `default`）置于分组末尾，保持原有相对顺序。
 - 组件根 `describe` 下不直接放置 `it` 或 `test`。
-- 能明确归属于单一公开 API 类型的测试放入前三类；跨多个 API 或无法归属于单一 API 的完整行为放入 `scenarios`。
+- 能明确归属于单一公开 API 类型的测试放入 `props`、`events` 或 `instanceFunctions`；全局配置测试放入 `globalConfig`；其余跨多个 API 或无法归属于单一 API 的完整行为放入 `scenarios`。
 - `scenarios` 可继续按具体功能嵌套分组，例如 `keyboard interaction`、`range selection` 或 `edge cases`，避免使用 `others`、`misc` 等含义模糊的名称。
 - 当 Prop 和 Slot 提供相同能力时，在 `props` 分组内分别验证各自的输入通道；两者同时使用时的优先级、覆盖和回退规则放入 `scenarios`。
 - 为修复 Issue 新增或补充的回归测试，应在对应的 `it` 或 `test` 紧邻上方以 `// Issue: <完整 Issue URL>` 标注来源，不只填写 Issue 编号。该规则适用于所有分组，不限于 `scenarios`。
-- hooks、utils 等非组件测试不强制使用上述四类分组；子组件测试仍遵循组件测试分组规范。
+- hooks、utils 等非组件测试不强制使用上述分组；子组件测试仍遵循组件测试分组规范。
 
 ```ts
 // Issue: https://github.com/Tencent/tdesign-mobile-vue/issues/1234
@@ -122,6 +123,11 @@ describe('ComponentName', () => {
 
   // 组件实例方法测试：验证通过 ref 暴露的方法
   describe('instanceFunctions', () => {});
+
+  // 全局配置测试：验证通过 ConfigProvider 注入的组件配置
+  describe('globalConfig', () => {
+    it('componentName', () => {});
+  });
 
   // 综合场景测试：验证多 API 联动、交互流程和边界情况
   describe('scenarios', () => {});
