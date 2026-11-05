@@ -112,7 +112,7 @@ describe('DateTimePicker', () => {
       });
 
       // 滚动日期列（13 日 → 15 日），pick 事件按 format 输出
-      simulateMoveOption(wrapper.findAll(`.${prefix}-picker-item`)[2].element, 2);
+      await simulateMoveOption(wrapper.findAll(`.${prefix}-picker-item`)[2].element, 2);
       expect(onPick).toHaveBeenLastCalledWith('2023/10/15');
 
       // confirm 事件同样按 format 输出
