@@ -111,19 +111,15 @@ describe('Table', () => {
       ).toEqual(['内容1', '0', '内容', '内容']);
     });
 
-    it('columns.align[left/center/right]', () => {
-      const alignColumns: BaseTableCol[] = [
-        { colKey: 'applicant', title: '标题', align: 'center' },
-        { colKey: 'status', title: '状态', align: 'left' },
-        { colKey: 'channel', title: '渠道', align: 'right' },
-      ];
+    it.each([
+      ['left', false],
+      ['center', true],
+      ['right', true],
+    ] as const)('columns.align[%s]', (align, hasClass) => {
+      const alignColumns: BaseTableCol[] = [{ colKey: 'applicant', title: '标题', align }];
       const wrapper = mount(TTable, { props: { rowKey: 'index', data, columns: alignColumns } });
-      const tds = wrapper.find('tbody tr').findAll('td');
-      expect(tds[0].classes(`${prefix}-align-center`)).toBe(true);
-      // left 为默认对齐方式，不额外添加类名
-      expect(tds[1].classes(`${prefix}-align-left`)).toBe(false);
-      expect(tds[2].classes(`${prefix}-align-right`)).toBe(true);
-      expect(wrapper.findAll('thead th')[0].classes(`${prefix}-align-center`)).toBe(true);
+      expect(wrapper.find('tbody td').classes(`${prefix}-align-${align}`)).toBe(hasClass);
+      expect(wrapper.find('thead th').classes(`${prefix}-align-${align}`)).toBe(hasClass);
     });
 
     it('columns.cell[function]', () => {

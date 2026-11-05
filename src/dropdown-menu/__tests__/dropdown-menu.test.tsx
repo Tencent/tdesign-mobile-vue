@@ -28,22 +28,18 @@ describe('DropdownMenu', () => {
       expect(wrapper2.find(`.${name}__item--active`).exists()).toBe(true);
     });
 
-    it('direction[down/up]', async () => {
-      // direction = down（默认）：标题栏箭头朝下
-      const wrapper = mountMenu();
-      expect(wrapper.find('.t-icon-caret-down-small').exists()).toBe(true);
-      expect(wrapper.find('.t-icon-caret-up-small').exists()).toBe(false);
+    it.each([
+      ['down', 'top', '.t-icon-caret-down-small'],
+      ['up', 'bottom', '.t-icon-caret-up-small'],
+    ] as const)('direction[%s]', async (direction, placement, icon) => {
+      const wrapper = mountMenu({ direction });
+      expect(wrapper.find(icon).exists()).toBe(true);
+      expect(wrapper.find(direction === 'down' ? '.t-icon-caret-up-small' : '.t-icon-caret-down-small').exists()).toBe(
+        false,
+      );
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
-      expect(wrapper.findComponent(Popup).props('placement')).toBe('top');
-
-      // direction = up：标题栏箭头朝上
-      const wrapper2 = mountMenu({ direction: 'up' });
-      expect(wrapper2.find('.t-icon-caret-up-small').exists()).toBe(true);
-      expect(wrapper2.find('.t-icon-caret-down-small').exists()).toBe(false);
-      await wrapper2.find(`.${name}__item`).trigger('click');
-      await sleep(200);
-      expect(wrapper2.findComponent(Popup).props('placement')).toBe('bottom');
+      expect(wrapper.findComponent(Popup).props('placement')).toBe(placement);
     });
 
     // duration 仅透传给内部 Popup 控制过渡动画时长，此处断言透传结果

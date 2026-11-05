@@ -825,22 +825,15 @@ describe('Upload', () => {
       expect(onProgress2).not.toHaveBeenCalled();
     });
 
-    it('theme[grid/list]', () => {
-      // 默认宫格布局
-      const grid = mount(Upload, {
-        props: { defaultFiles: imageFiles(['a']) },
-      });
-      expect(grid.find('.t-upload--grid').exists()).toBe(true);
-      expect(grid.find('.t-upload__item--add').exists()).toBe(true);
-      expect(grid.find('.t-upload__image').exists()).toBe(true);
-
-      // 列表布局
-      const listWrapper = mount(Upload, {
-        props: { theme: 'list', defaultFiles: imageFiles(['a', 'b']) },
-      });
-      expect(listWrapper.find('.t-upload--list').exists()).toBe(true);
-      expect(listWrapper.find('.t-upload__list-trigger').exists()).toBe(true);
-      expect(listWrapper.findAll('.t-upload__list-item')).toHaveLength(2);
+    it.each([
+      ['grid', ['a'], '.t-upload__item--add'],
+      ['list', ['a', 'b'], '.t-upload__list-trigger'],
+    ] as const)('theme[%s]', (theme, files, triggerSelector) => {
+      const wrapper = mount(Upload, { props: { theme, defaultFiles: imageFiles(files) } });
+      expect(wrapper.find(`.t-upload--${theme}`).exists()).toBe(true);
+      expect(wrapper.find(triggerSelector).exists()).toBe(true);
+      if (theme === 'grid') expect(wrapper.find('.t-upload__image').exists()).toBe(true);
+      else expect(wrapper.findAll('.t-upload__list-item')).toHaveLength(files.length);
     });
 
     // value 在 props.ts 声明，但组件 v-model 基于 files/modelValue 实现（useUpload 仅读取 files、modelValue、defaultFiles），value 未被消费

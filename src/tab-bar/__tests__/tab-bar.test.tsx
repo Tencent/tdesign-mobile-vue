@@ -55,9 +55,8 @@ describe('TabBar', () => {
       expect(wrapper.classes()).not.toContain('t-tab-bar--safe');
     });
 
-    it('shape[normal/round]', () => {
-      expect(mountTabBar({ shape: 'normal' }).classes()).toContain('t-tab-bar--normal');
-      expect(mountTabBar({ shape: 'round' }).classes()).toContain('t-tab-bar--round');
+    it.each(['normal', 'round'] as const)('shape[%s]', (shape) => {
+      expect(mountTabBar({ shape }).classes()).toContain(`t-tab-bar--${shape}`);
     });
 
     it('split[boolean]', () => {
@@ -66,10 +65,9 @@ describe('TabBar', () => {
       expect(mountTabBar({ split: false }).find('.t-tab-bar-item--split').exists()).toBeFalsy();
     });
 
-    it('theme[normal/tag]', () => {
+    it.each(['normal', 'tag'] as const)('theme[%s]', (theme) => {
       // theme 作用于子项内容区
-      expect(mountTabBar({ theme: 'normal' }).find('.t-tab-bar-item__content--normal').exists()).toBeTruthy();
-      expect(mountTabBar({ theme: 'tag' }).find('.t-tab-bar-item__content--tag').exists()).toBeTruthy();
+      expect(mountTabBar({ theme }).find(`.t-tab-bar-item__content--${theme}`).exists()).toBe(true);
     });
 
     it('value[string]', () => {

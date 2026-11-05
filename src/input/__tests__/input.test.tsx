@@ -191,10 +191,13 @@ describe('Input', () => {
       expect(input.element.hasAttribute('disabled')).toBeTruthy();
     });
 
-    it('enterkeyhint[enter/done/go/next/previous/search/send]', async () => {
-      const wrapper = mount(<Input enterkeyhint="search" />);
-      expect(wrapper.find('input').attributes('enterkeyhint')).toBe('search');
-    });
+    it.each(['enter', 'done', 'go', 'next', 'previous', 'search', 'send'] as const)(
+      'enterkeyhint[%s]',
+      (enterkeyhint) => {
+        const wrapper = mount(<Input enterkeyhint={enterkeyhint} />);
+        expect(wrapper.find('input').attributes('enterkeyhint')).toBe(enterkeyhint);
+      },
+    );
 
     it('extra[function]', async () => {
       const wrapper = mount(<Input extra={() => <div class="custom-extra">额外内容</div>} />);

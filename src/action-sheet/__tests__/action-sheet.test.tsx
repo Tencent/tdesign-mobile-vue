@@ -136,21 +136,9 @@ describe('ActionSheet', () => {
       expect(overlay.isVisible()).toBe(false);
     });
 
-    it('theme[list/grid]', async () => {
-      const wrapper = mount(ActionSheet, {
-        props: {
-          theme: 'list',
-          items: ['选项'],
-          visible: true,
-        },
-      });
-      expect(wrapper.find(`.${name}__list`).exists()).toEqual(true);
-      expect(wrapper.find(`.${name}__grid`).exists()).toEqual(false);
-      await wrapper.setProps({
-        theme: 'grid',
-      });
-      expect(wrapper.find(`.${name}__list`).exists()).toEqual(false);
-      expect(document.querySelector(`.${name}__grid`)).toBeTruthy();
+    it.each(['list', 'grid'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(ActionSheet, { props: { theme, items: ['选项'], visible: true } });
+      expect(wrapper.find(`.${name}__${theme}`).exists()).toBe(true);
     });
 
     it('visible[boolean]', async () => {

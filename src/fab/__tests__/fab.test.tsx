@@ -62,21 +62,15 @@ describe('Fab', () => {
       expect(position(staticWrapper)).toEqual({ right: '16px', bottom: '32px' });
     });
 
-    it('draggable[all/vertical/horizontal]', async () => {
-      const all = mount(Fab, { props: { draggable: 'all' } });
+    it.each([
+      ['all', { right: '66px', bottom: '82px' }],
+      ['vertical', { right: '16px', bottom: '82px' }],
+      ['horizontal', { right: '66px', bottom: '32px' }],
+    ] as const)('draggable[%s]', async (draggable, expected) => {
+      const wrapper = mount(Fab, { props: { draggable } });
       await nextTick();
-      await dragTo(all, 100, 100, 50, 50);
-      expect(position(all)).toEqual({ right: '66px', bottom: '82px' });
-
-      const vertical = mount(Fab, { props: { draggable: 'vertical' } });
-      await nextTick();
-      await dragTo(vertical, 100, 100, 50, 50);
-      expect(position(vertical)).toEqual({ right: '16px', bottom: '82px' });
-
-      const horizontal = mount(Fab, { props: { draggable: 'horizontal' } });
-      await nextTick();
-      await dragTo(horizontal, 100, 100, 50, 50);
-      expect(position(horizontal)).toEqual({ right: '66px', bottom: '32px' });
+      await dragTo(wrapper, 100, 100, 50, 50);
+      expect(position(wrapper)).toEqual(expected);
     });
 
     it('icon[function]', async () => {
@@ -112,16 +106,14 @@ describe('Fab', () => {
       expect(unsnapped.classes()).not.toContain('t-fab--animation');
     });
 
-    it('magnet[left/right]', async () => {
-      const left = mount(Fab, { props: { draggable: true, magnet: 'left' } });
+    it.each([
+      ['left', '312px'],
+      ['right', '0px'],
+    ] as const)('magnet[%s]', async (magnet, right) => {
+      const wrapper = mount(Fab, { props: { draggable: true, magnet } });
       await nextTick();
-      await dragTo(left, 100, 100, 50, 50);
-      expect(position(left)).toEqual({ right: '312px', bottom: '82px' });
-
-      const right = mount(Fab, { props: { draggable: true, magnet: 'right' } });
-      await nextTick();
-      await dragTo(right, 100, 100, 50, 50);
-      expect(position(right)).toEqual({ right: '0px', bottom: '82px' });
+      await dragTo(wrapper, 100, 100, 50, 50);
+      expect(position(wrapper)).toEqual({ right, bottom: '82px' });
     });
 
     it('style[string]', () => {

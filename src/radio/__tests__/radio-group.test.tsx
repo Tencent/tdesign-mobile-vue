@@ -76,22 +76,10 @@ describe('RadioGroup', () => {
       expect(wrapper2.findAll(`.${name}__border`)).toHaveLength(1);
     });
 
-    it('direction[vertical/horizontal]', () => {
-      // 默认值为 vertical，子项同步垂直类名
-      const wrapper = mount(RadioGroup, {
-        props: { options: ['选项一', '选项二'] },
-      });
-      expect(wrapper.classes()).toContain(`${name}-group--vertical`);
-      expect(wrapper.classes()).not.toContain(`${name}-group--horizontal`);
-      expect(wrapper.findAll(`.${name}--horizontal`)).toHaveLength(0);
-
-      // horizontal 排列时分组与子项同步水平类名
-      const wrapper2 = mount(RadioGroup, {
-        props: { direction: 'horizontal', options: ['选项一', '选项二'] },
-      });
-      expect(wrapper2.classes()).toContain(`${name}-group--horizontal`);
-      expect(wrapper2.classes()).not.toContain(`${name}-group--vertical`);
-      expect(wrapper2.findAll(`.${name}--horizontal`)).toHaveLength(2);
+    it.each(['vertical', 'horizontal'] as const)('direction[%s]', (direction) => {
+      const wrapper = mount(RadioGroup, { props: { direction, options: ['选项一', '选项二'] } });
+      expect(wrapper.classes()).toContain(`${name}-group--${direction}`);
+      expect(wrapper.findAll(`.${name}--${direction}`)).toHaveLength(2);
     });
 
     it('disabled[boolean]', async () => {
@@ -119,7 +107,7 @@ describe('RadioGroup', () => {
       expect(wrapper.findAll(`.${name}__icon--checked`)).toHaveLength(1);
     });
 
-    it('icon[circle/line/dot/none]', async () => {
+    it.each(['circle', 'line', 'dot', 'none'] as const)('icon[%s]', async (icon) => {
       const options: TdRadioGroupProps['options'] = [
         { label: '选项一', value: '1' },
         { label: '选项二', value: '2' },
@@ -127,33 +115,27 @@ describe('RadioGroup', () => {
       const wrapper = mount(RadioGroup, {
         props: {
           defaultValue: '1',
-          icon: 'circle',
+          icon,
           options,
         },
       });
 
-      // circle：选中渲染填充型图标，未选中渲染空心圆
-      let icons = wrapper.findAll(`.${name}__icon`);
-      expect(icons[0].find('.t-icon-check-circle-filled').exists()).toBe(true);
-      expect(icons[1].find(`.${name}__icon-circle`).exists()).toBe(true);
-
-      // line：选中渲染描边型对勾，未选中渲染占位元素
-      await wrapper.setProps({ icon: 'line' });
-      icons = wrapper.findAll(`.${name}__icon`);
-      expect(icons[0].find('.t-icon-check').exists()).toBe(true);
-      expect(icons[1].find('.placeholder').exists()).toBe(true);
-
-      // dot：选中渲染圆点，未选中渲染空心圆
-      await wrapper.setProps({ icon: 'dot' });
-      icons = wrapper.findAll(`.${name}__icon`);
-      expect(icons[0].find(`.${name}__icon-dot`).exists()).toBe(true);
-      expect(icons[1].find(`.${name}__icon-circle`).exists()).toBe(true);
-
-      // none：选中与未选中均不渲染图标
-      await wrapper.setProps({ icon: 'none' });
-      icons = wrapper.findAll(`.${name}__icon`);
-      expect(icons[0].element.children).toHaveLength(0);
-      expect(icons[1].element.children).toHaveLength(0);
+      const icons = wrapper.findAll(`.${name}__icon`);
+      const selected = icons[0];
+      const unselected = icons[1];
+      if (icon === 'circle') {
+        expect(selected.find('.t-icon-check-circle-filled').exists()).toBe(true);
+        expect(unselected.find(`.${name}__icon-circle`).exists()).toBe(true);
+      } else if (icon === 'line') {
+        expect(selected.find('.t-icon-check').exists()).toBe(true);
+        expect(unselected.find('.placeholder').exists()).toBe(true);
+      } else if (icon === 'dot') {
+        expect(selected.find(`.${name}__icon-dot`).exists()).toBe(true);
+        expect(unselected.find(`.${name}__icon-circle`).exists()).toBe(true);
+      } else {
+        expect(selected.element.children).toHaveLength(0);
+        expect(unselected.element.children).toHaveLength(0);
+      }
     });
 
     it('icon[array]', () => {
@@ -259,19 +241,18 @@ describe('RadioGroup', () => {
       expect(radios[1].find(`.${name}__icon--checked`).exists()).toBe(false);
     });
 
-    it('placement[left/right]', () => {
+    it.each(['left', 'right'] as const)('placement[%s]', (placement) => {
       const wrapper = mount(() => (
-        <RadioGroup placement="right">
-          <Radio name="radio" value="1" label="选项一"></Radio>
-          <Radio name="radio" value="2" label="选项二"></Radio>
+        <RadioGroup placement={placement}>
+          <Radio name="radio" value="1" label="选项一" />
+          <Radio name="radio" value="2" label="选项二" />
         </RadioGroup>
       ));
       const radios = wrapper.findAll(`.${name}`);
-      // 分组 placement 低于子项 placement，未单独设置时子项跟随分组
       radios.forEach((radio) => {
-        expect(radio.classes()).toContain(`${name}--right`);
+        expect(radio.classes()).toContain(`${name}--${placement}`);
       });
-      expect(radios[0].find(`.${name}__icon--right`).exists()).toBe(true);
+      expect(radios[0].find(`.${name}__icon--${placement}`).exists()).toBe(true);
     });
 
     it('readonly[boolean]', async () => {

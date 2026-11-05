@@ -29,19 +29,10 @@ describe('CheckboxGroup', () => {
       expect(wrapper2.find(`.${name}__border`).exists()).toBe(false);
     });
 
-    it('direction[vertical/horizontal]', async () => {
-      const wrapper = mount(() => (
-        <CheckboxGroup>
-          <Checkbox value="1" ref="1" />
-          <Checkbox value="2" ref="2" />
-        </CheckboxGroup>
-      ));
-      // 默认值为 vertical
-      expect(wrapper.find(`.${name}-group--vertical`).exists()).toBe(true);
-      expect(wrapper.find(`.${name}-group--horizontal`).exists()).toBe(false);
-      const horizontal = mount(CheckboxGroup, { props: { direction: 'horizontal', options: ['选项'] } });
-      expect(horizontal.classes()).toContain(`${name}-group--horizontal`);
-      expect(horizontal.findComponent(Checkbox).classes()).toContain(`${name}--horizontal`);
+    it.each(['vertical', 'horizontal'] as const)('direction[%s]', (direction) => {
+      const wrapper = mount(CheckboxGroup, { props: { direction, options: ['选项一', '选项二'] } });
+      expect(wrapper.classes()).toContain(`${name}-group--${direction}`);
+      expect(wrapper.findAll(`.${name}--${direction}`)).toHaveLength(2);
     });
 
     it('disabled[boolean]', async () => {

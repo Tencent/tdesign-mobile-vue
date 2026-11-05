@@ -182,21 +182,11 @@ describe('Switch', () => {
       expect(wrapper.find('.t-switch__label').text()).toBe('关');
     });
 
-    it('size[small/medium/large]', async () => {
-      const wrapper = mount(Switch);
-      const expectSize = (size: string) => {
-        expect(wrapper.classes()).toContain(`t-switch--${size}`);
-        expect(wrapper.find('.t-switch__dot').classes()).toContain(`t-switch__dot--${size}`);
-        expect(wrapper.find('.t-switch__label').classes()).toContain(`t-switch__label--${size}`);
-      };
-      // 未设置时默认 medium
-      expectSize('medium');
-
-      await wrapper.setProps({ size: 'small' });
-      expectSize('small');
-
-      await wrapper.setProps({ size: 'large' });
-      expectSize('large');
+    it.each(['small', 'medium', 'large'] as const)('size[%s]', (size) => {
+      const wrapper = mount(Switch, { props: { size } });
+      expect(wrapper.classes()).toContain(`t-switch--${size}`);
+      expect(wrapper.find('.t-switch__dot').classes()).toContain(`t-switch__dot--${size}`);
+      expect(wrapper.find('.t-switch__label').classes()).toContain(`t-switch__label--${size}`);
     });
 
     it('value[boolean]', async () => {

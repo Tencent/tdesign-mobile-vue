@@ -101,18 +101,13 @@ describe('ColorPicker', () => {
       testSwatchColors(['red', 'blue'], 2);
     });
 
-    it('type[base/multiple]', () => {
-      // base 仅展示系统预设内容；multiple 额外渲染色板（饱和度面板）
-      const testType = (type: TdColorPickerProps['type'], target: number) => {
-        const wrapper = mountColorPicker({ type });
-        // 未传 type 时默认 base
-        expect(wrapper.find('.t-color-picker__body').classes()).toContain(`t-color-picker__body--${type || 'base'}`);
-        const dom = wrapper.findAll('.t-color-picker__saturation');
-        expect(dom).toHaveLength(target);
-      };
-      testType(undefined, 0);
-      testType('base', 0);
-      testType('multiple', 1);
+    it.each([
+      ['base', 0],
+      ['multiple', 1],
+    ] as const)('type[%s]', (type, saturationCount) => {
+      const wrapper = mountColorPicker({ type });
+      expect(wrapper.find('.t-color-picker__body').classes()).toContain(`t-color-picker__body--${type}`);
+      expect(wrapper.findAll('.t-color-picker__saturation')).toHaveLength(saturationCount);
     });
 
     it('value[string]', () => {

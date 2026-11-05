@@ -58,17 +58,14 @@ describe('NoticeBar', () => {
       expect(wrapper.find('.t-notice-bar__content .slot-content').exists()).toBe(true);
     });
 
-    it('direction[horizontal/vertical]', async () => {
-      // 默认 horizontal：不渲染竖向轮播
-      const horizontal = mount(<NoticeBar visible content="测试" />);
-      expect(horizontal.find('.t-notice-bar__content').exists()).toBe(true);
-      expect(horizontal.find('.t-notice-bar__content--vertical').exists()).toBe(false);
-
-      // vertical + 数组内容：渲染竖向轮播
-      const vertical = mount(<NoticeBar visible direction="vertical" content={['君不见', '高堂明镜悲白发']} />);
+    it.each([
+      ['horizontal', '测试'],
+      ['vertical', ['君不见', '高堂明镜悲白发']],
+    ] as const)('direction[%s]', async (direction, content) => {
+      const wrapper = mount(<NoticeBar visible direction={direction} content={content} />);
       await nextTick();
-      expect(vertical.find('.t-notice-bar__content--vertical').exists()).toBe(true);
-      expect(vertical.findComponent(Swiper).props('direction')).toBe('vertical');
+      expect(wrapper.find('.t-notice-bar__content--vertical').exists()).toBe(direction === 'vertical');
+      if (direction === 'vertical') expect(wrapper.findComponent(Swiper).props('direction')).toBe('vertical');
     });
 
     it('interval[number]', async () => {

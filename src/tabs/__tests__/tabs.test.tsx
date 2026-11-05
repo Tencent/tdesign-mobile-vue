@@ -77,29 +77,18 @@ describe('Tabs', () => {
       expect(wrapper.find(`.${name}__track`).attributes('style')).toContain('transition-duration: 500ms');
     });
 
-    it('bottomLineMode[fixed/auto/full]', async () => {
+    it.each([
+      ['fixed', 'translateX(128px)', undefined],
+      ['auto', 'translateX(110px)', 'width: 56px'],
+      ['full', 'translateX(100px)', 'width: 88px'],
+    ] as const)('bottomLineMode[%s]', async (bottomLineMode, transform, width) => {
       mockTabLayout();
-
-      // fixed（默认）：下划线固定宽度并居中于激活项，不设置 width
-      const fixedWrapper = mountTabs({ defaultValue: '1' });
-      await fixedWrapper.findAll(`.${name}__item`)[1].trigger('click');
-      const fixedStyle = fixedWrapper.find(`.${name}__track`).attributes('style');
-      expect(fixedStyle).toContain('transform: translateX(128px)');
-      expect(fixedStyle).not.toContain('width');
-
-      // auto：下划线宽度与激活项内容一致，并随内容偏移：100 + 10 = 110
-      const autoWrapper = mountTabs({ defaultValue: '1', bottomLineMode: 'auto' });
-      await autoWrapper.findAll(`.${name}__item`)[1].trigger('click');
-      const autoStyle = autoWrapper.find(`.${name}__track`).attributes('style');
-      expect(autoStyle).toContain('width: 56px');
-      expect(autoStyle).toContain('transform: translateX(110px)');
-
-      // full：下划线宽度与激活项整项一致
-      const fullWrapper = mountTabs({ defaultValue: '1', bottomLineMode: 'full' });
-      await fullWrapper.findAll(`.${name}__item`)[1].trigger('click');
-      const fullStyle = fullWrapper.find(`.${name}__track`).attributes('style');
-      expect(fullStyle).toContain('width: 88px');
-      expect(fullStyle).toContain('transform: translateX(100px)');
+      const wrapper = mountTabs({ defaultValue: '1', bottomLineMode });
+      await wrapper.findAll(`.${name}__item`)[1].trigger('click');
+      const style = wrapper.find(`.${name}__track`).attributes('style');
+      expect(style).toContain(`transform: ${transform}`);
+      if (width) expect(style).toContain(width);
+      else expect(style).not.toContain('width');
     });
 
     it('list[array]', async () => {
@@ -222,28 +211,25 @@ describe('Tabs', () => {
       expect(onChange).toHaveBeenCalledTimes(1);
     });
 
-    it('theme[line/tag/card]', async () => {
-      // line（默认）：渲染底部激活线条
-      const lineWrapper = mountTabs({ defaultValue: '1' });
-      expect(lineWrapper.find(`.${name}__scroll`).classes()).toContain(`${name}__scroll--line`);
-      expect(lineWrapper.findAll(`.${name}__item--line`)).toHaveLength(tabList.length);
-      expect(lineWrapper.find(`.${name}__track`).exists()).toBe(true);
-
-      // tag：激活项内容高亮，不渲染线条
-      const tagWrapper = mountTabs({ defaultValue: '1', theme: 'tag' });
-      expect(tagWrapper.find(`.${name}__track`).exists()).toBe(false);
-      const innerItems = tagWrapper.findAll(`.${name}__item-inner`);
-      expect(innerItems[0].classes()).toContain(`${name}__item-inner--active`);
-      expect(innerItems[1].classes()).not.toContain(`${name}__item-inner--active`);
-
-      // card：激活项前后渲染装饰，切换后装饰跟随激活项
-      const cardWrapper = mountTabs({ defaultValue: '1', theme: 'card' });
-      expect(cardWrapper.find(`.${name}__track`).exists()).toBe(false);
-      expect(cardWrapper.findAll(`.${name}__item-prefix`)).toHaveLength(0);
-      expect(cardWrapper.findAll(`.${name}__item-suffix`)).toHaveLength(1);
-      await cardWrapper.findAll(`.${name}__item`)[1].trigger('click');
-      expect(cardWrapper.findAll(`.${name}__item-prefix`)).toHaveLength(1);
-      expect(cardWrapper.findAll(`.${name}__item-suffix`)).toHaveLength(0);
+    it.each(['line', 'tag', 'card'] as const)('theme[%s]', async (theme) => {
+      const wrapper = mountTabs({ defaultValue: '1', theme });
+      if (theme === 'line') {
+        expect(wrapper.find(`.${name}__scroll`).classes()).toContain(`${name}__scroll--line`);
+        expect(wrapper.findAll(`.${name}__item--line`)).toHaveLength(tabList.length);
+        expect(wrapper.find(`.${name}__track`).exists()).toBe(true);
+      } else if (theme === 'tag') {
+        expect(wrapper.find(`.${name}__track`).exists()).toBe(false);
+        const innerItems = wrapper.findAll(`.${name}__item-inner`);
+        expect(innerItems[0].classes()).toContain(`${name}__item-inner--active`);
+        expect(innerItems[1].classes()).not.toContain(`${name}__item-inner--active`);
+      } else {
+        expect(wrapper.find(`.${name}__track`).exists()).toBe(false);
+        expect(wrapper.findAll(`.${name}__item-prefix`)).toHaveLength(0);
+        expect(wrapper.findAll(`.${name}__item-suffix`)).toHaveLength(1);
+        await wrapper.findAll(`.${name}__item`)[1].trigger('click');
+        expect(wrapper.findAll(`.${name}__item-prefix`)).toHaveLength(1);
+        expect(wrapper.findAll(`.${name}__item-suffix`)).toHaveLength(0);
+      }
     });
 
     it('value[string]', async () => {

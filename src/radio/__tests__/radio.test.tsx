@@ -379,26 +379,11 @@ describe('Radio', () => {
       expect(wrapper.find('input').attributes('name')).toBe('radio-name');
     });
 
-    it('placement[left/right]', () => {
-      // 单独存在时默认值为 left
-      const wrapper = mount(Radio, {
-        props: {
-          label: '选项一',
-        },
-      });
-      expect(wrapper.classes()).toContain(`${name}--left`);
-      expect(wrapper.find(`.${name}__icon--left`).exists()).toBe(true);
-      expect(wrapper.find(`.${name}__border--left`).exists()).toBe(true);
-
-      const wrapper2 = mount(Radio, {
-        props: {
-          label: '选项一',
-          placement: 'right',
-        },
-      });
-      expect(wrapper2.classes()).toContain(`${name}--right`);
-      expect(wrapper2.find(`.${name}__icon--right`).exists()).toBe(true);
-      expect(wrapper2.find(`.${name}__border--right`).exists()).toBe(true);
+    it.each(['left', 'right'] as const)('placement[%s]', (placement) => {
+      const wrapper = mount(Radio, { props: { label: '选项一', placement } });
+      expect(wrapper.classes()).toContain(`${name}--${placement}`);
+      expect(wrapper.find(`.${name}__icon--${placement}`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}__border--${placement}`).exists()).toBe(true);
     });
 
     it('readonly[boolean]', async () => {

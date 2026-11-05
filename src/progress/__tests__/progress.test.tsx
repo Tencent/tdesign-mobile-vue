@@ -167,25 +167,15 @@ describe('Progress', () => {
     // 但 getCircleStokeWidth 未实现该限制，超过 size/2 时环形进度仍会照常输出，待源码补充后再验收
     it.todo('strokeWidth[number] does not render circle progress when exceeding half of size');
 
-    it('theme[line/plump/circle]', () => {
-      // 默认 line（thin 形态）
-      const wrapper = mount(Progress, {
-        props: { percentage: 50 },
-      });
-      expect(wrapper.find('.t-progress--thin').exists()).toBe(true);
+    it.each(['line', 'plump', 'circle'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(Progress, { props: { percentage: 50, theme } });
+      if (theme === 'line') expect(wrapper.find('.t-progress--thin').exists()).toBe(true);
+      if (theme === 'plump') expect(wrapper.find('.t-progress__bar').classes()).toContain('t-progress--plump');
+      if (theme === 'circle') {
+        expect(wrapper.find('.t-progress--circle').exists()).toBe(true);
+        expect(wrapper.find('svg').exists()).toBe(true);
+      }
       expect(wrapper.text()).toBe('50%');
-
-      const wrapper2 = mount(Progress, {
-        props: { percentage: 50, theme: 'plump' },
-      });
-      expect(wrapper2.find('.t-progress__bar').classes()).toContain('t-progress--plump');
-      expect(wrapper2.text()).toBe('50%');
-
-      const wrapper3 = mount(Progress, {
-        props: { percentage: 50, theme: 'circle' },
-      });
-      expect(wrapper3.find('.t-progress--circle').exists()).toBe(true);
-      expect(wrapper3.find('svg').exists()).toBe(true);
     });
 
     it('trackColor[string]', async () => {

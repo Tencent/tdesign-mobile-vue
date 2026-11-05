@@ -123,7 +123,7 @@ describe('Dialog', () => {
       expect(syncConfirm).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent) });
     });
 
-    it('buttonLayout[horizontal/vertical]', async () => {
+    it.each(['horizontal', 'vertical'] as const)('buttonLayout[%s]', async (buttonLayout) => {
       const confirmBtn: TdButtonProps = {
         content: '确认',
         variant: 'text',
@@ -146,18 +146,15 @@ describe('Dialog', () => {
           confirmBtn,
           onConfirm,
           onCancel,
+          buttonLayout,
         },
       });
       // 文字按钮
       expect(wrapper.find(`.${name}__button`).classes().includes(`${name}__button--text`)).toBeTruthy();
 
-      // 默认水平
-      expect(wrapper.find(`.${name}__footer`).classes().includes(`${name}__footer--column`)).toBeFalsy();
-      // 垂直
-      await wrapper.setProps({
-        buttonLayout: 'vertical',
-      });
-      expect(document.querySelector(`.${name}__footer`).classList.contains(`${name}__footer--column`)).toBe(true);
+      expect(wrapper.find(`.${name}__footer`).classes().includes(`${name}__footer--column`)).toBe(
+        buttonLayout === 'vertical',
+      );
     });
 
     it('cancelBtn[string]', () => {

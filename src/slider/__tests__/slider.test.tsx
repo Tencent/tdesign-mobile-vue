@@ -334,37 +334,23 @@ describe('Slider', () => {
       expect(onChange).toHaveBeenLastCalledWith(0.6);
     });
 
-    it('theme[default/capsule]', async () => {
+    it.each(['default', 'capsule'] as const)('theme[%s]', async (theme) => {
       const onChange = vi.fn();
       mockElementRect(HORIZONTAL_RECT);
-
-      const wrapper = mount(Slider, {
-        props: {
-          value: 30,
-          theme: 'default',
-        },
-      });
+      const wrapper = mount(Slider, { props: { value: 30, theme, onChange } });
       await nextTick();
-      expect(wrapper.find(`.${classPrefix}__bar`).classes()).toContain(`${classPrefix}__bar--default`);
-      expect(wrapper.find(`.${classPrefix}__line`).classes()).toContain(`${classPrefix}__line--default`);
+      expect(wrapper.find(`.${classPrefix}__bar`).classes()).toContain(`${classPrefix}__bar--${theme}`);
+      expect(wrapper.find(`.${classPrefix}__line`).classes()).toContain(`${classPrefix}__line--${theme}`);
 
-      const capsule = mount(Slider, {
-        props: {
-          value: 30,
-          theme: 'capsule',
-          onChange,
-        },
-      });
-      await nextTick();
-      expect(capsule.find(`.${classPrefix}__bar`).classes()).toContain(`${classPrefix}__bar--capsule`);
+      if (theme === 'capsule') {
+        // capsule 主题滑轨宽度包含半滑块宽度：343 - 20 - 6 = 317，0.3 * 317 + 10 = 105.1
+        const style = wrapper.find(`.${classPrefix}__line--single`).attributes('style');
+        expect(getStyleValue(style, 'width')).toBeCloseTo(105.1);
 
-      // capsule 主题滑轨宽度包含半滑块宽度：343 - 20 - 6 = 317，0.3 * 317 + 10 = 105.1
-      const style = capsule.find(`.${classPrefix}__line--single`).attributes('style');
-      expect(getStyleValue(style, 'width')).toBeCloseTo(105.1);
-
-      // 点击换算扣除半滑块宽度：(200 - 16 - 10) / 317 * 100 = 54.89 → 55
-      await capsule.find(`.${classPrefix}__line`).trigger('click', { clientX: 200 });
-      expect(onChange).toHaveBeenCalledWith(55);
+        // 点击换算扣除半滑块宽度：(200 - 16 - 10) / 317 * 100 = 54.89 → 55
+        await wrapper.find(`.${classPrefix}__line`).trigger('click', { clientX: 200 });
+        expect(onChange).toHaveBeenCalledWith(55);
+      }
     });
 
     it('value[number]', async () => {

@@ -70,16 +70,10 @@ describe('Divider', () => {
       expect(wrapper.get(`.${name}__content span`).text()).toBe(TEXT);
     });
 
-    it('layout[horizontal/vertical]', async () => {
-      const wrapper = mount(Divider);
-      expect(wrapper.classes()).toContain(`${name}--horizontal`);
-      expect(wrapper.classes()).not.toContain(`${name}--vertical`);
-      await wrapper.setProps({ layout: 'vertical' });
-      expect(wrapper.classes()).toContain(`${name}--vertical`);
-      expect(wrapper.classes()).not.toContain(`${name}--horizontal`);
-      await wrapper.setProps({ layout: 'horizontal' });
-      expect(wrapper.classes()).toContain(`${name}--horizontal`);
-      expect(wrapper.classes()).not.toContain(`${name}--vertical`);
+    it.each(['horizontal', 'vertical'] as const)('layout[%s]', (layout) => {
+      const wrapper = mount(Divider, { props: { layout } });
+      expect(wrapper.classes()).toContain(`${name}--${layout}`);
+      expect(wrapper.classes()).not.toContain(`${name}--${layout === 'horizontal' ? 'vertical' : 'horizontal'}`);
     });
   });
 

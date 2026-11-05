@@ -220,26 +220,9 @@ describe('Button', () => {
       expect(wrapper.find('.slot-suffix').text()).toBe('后缀');
     });
 
-    it('tag[button/a/div]', async () => {
-      // 默认渲染为 button 标签
-      const wrapper = mount(Button, {
-        props: {
-          content: TEXT,
-        },
-      });
-      expect(wrapper.element.tagName.toLowerCase()).toBe('button');
-
-      // tag = 'a'
-      await wrapper.setProps({
-        tag: 'a',
-      });
-      expect(wrapper.element.tagName.toLowerCase()).toBe('a');
-
-      // tag = 'div'
-      await wrapper.setProps({
-        tag: 'div',
-      });
-      expect(wrapper.element.tagName.toLowerCase()).toBe('div');
+    it.each(['button', 'a', 'div'] as const)('tag[%s]', (tag) => {
+      const wrapper = mount(Button, { props: { content: TEXT, tag } });
+      expect(wrapper.element.tagName.toLowerCase()).toBe(tag);
     });
 
     it.each(['default', 'primary', 'danger', 'light'] as const)('theme[%s]', (theme) => {

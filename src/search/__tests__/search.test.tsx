@@ -64,27 +64,16 @@ describe('Search', () => {
       expect(wrapper2.find(`.${name}--center`).exists()).toBeFalsy();
     });
 
-    it('clearTrigger[always/focus]', async () => {
-      // clearTrigger = 'focus'：输入框有值但未聚焦时不显示清空按钮，聚焦后显示
-      const wrapper = mount(Search, {
-        props: {
-          value: '关键字',
-          clearTrigger: 'focus',
-        },
-      });
-      expect(wrapper.findComponent(TIconClear).exists()).toBe(false);
-      // useFocus 的监听在 post-flush 挂载，先等一个 tick 再聚焦
-      await nextTick();
-      await wrapper.find('input').trigger('focus');
-      expect(wrapper.findComponent(TIconClear).exists()).toBe(true);
-
-      // 默认 'always'：输入框有值即显示清空按钮
-      const wrapper2 = mount(Search, {
-        props: {
-          value: '关键字',
-        },
-      });
-      expect(wrapper2.findComponent(TIconClear).exists()).toBe(true);
+    it.each(['always', 'focus'] as const)('clearTrigger[%s]', async (clearTrigger) => {
+      const wrapper = mount(Search, { props: { value: '关键字', clearTrigger } });
+      if (clearTrigger === 'focus') {
+        expect(wrapper.findComponent(TIconClear).exists()).toBe(false);
+        await nextTick();
+        await wrapper.find('input').trigger('focus');
+        expect(wrapper.findComponent(TIconClear).exists()).toBe(true);
+      } else {
+        expect(wrapper.findComponent(TIconClear).exists()).toBe(true);
+      }
     });
 
     it('clearable[boolean]', () => {
@@ -264,17 +253,9 @@ describe('Search', () => {
       expect($list.text()).toContain('第二个结果');
     });
 
-    it('shape[square/round]', async () => {
-      const wrapper = mount(Search, {});
-      const $inputBox = wrapper.find(`.${name}__input-box`);
-      // shape 默认值取 'square'
-      expect($inputBox.classes()).toContain(`${name}__input-box--square`);
-
-      await wrapper.setProps({
-        shape: 'round',
-      });
-      expect($inputBox.classes()).not.toContain(`${name}__input-box--square`);
-      expect($inputBox.classes()).toContain(`${name}__input-box--round`);
+    it.each(['square', 'round'] as const)('shape[%s]', (shape) => {
+      const wrapper = mount(Search, { props: { shape } });
+      expect(wrapper.find(`.${name}__input-box`).classes()).toContain(`${name}__input-box--${shape}`);
     });
 
     it('value[string]', async () => {
