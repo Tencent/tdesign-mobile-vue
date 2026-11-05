@@ -144,7 +144,7 @@ const restoreXMLHttpRequest = () => {
   window.XMLHttpRequest = OriginXMLHttpRequest;
 };
 
-const imageFiles = (names: string[]): UploadFile[] =>
+const imageFiles = (names: readonly string[]): UploadFile[] =>
   names.map((name) => ({ name: `${name}.png`, url: `https://${name}.png`, type: 'image/png', status: 'success' }));
 
 describe('Upload', () => {

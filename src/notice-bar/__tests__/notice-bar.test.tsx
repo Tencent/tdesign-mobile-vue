@@ -60,7 +60,7 @@ describe('NoticeBar', () => {
 
     it.each([
       ['horizontal', '测试'],
-      ['vertical', ['君不见', '高堂明镜悲白发']],
+      ['vertical', ['君不见', '高堂明镜悲白发'] as string[]],
     ] as const)('direction[%s]', async (direction, content) => {
       const wrapper = mount(<NoticeBar visible direction={direction} content={content} />);
       await nextTick();

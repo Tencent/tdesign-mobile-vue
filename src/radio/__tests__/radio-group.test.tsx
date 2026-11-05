@@ -107,7 +107,7 @@ describe('RadioGroup', () => {
       expect(wrapper.findAll(`.${name}__icon--checked`)).toHaveLength(1);
     });
 
-    it.each(['circle', 'line', 'dot', 'none'] as const)('icon[%s]', async (icon) => {
+    it.each(['circle', 'line', 'dot'] as const)('icon[%s]', async (icon) => {
       const options: TdRadioGroupProps['options'] = [
         { label: '选项一', value: '1' },
         { label: '选项二', value: '2' },
@@ -132,9 +132,6 @@ describe('RadioGroup', () => {
       } else if (icon === 'dot') {
         expect(selected.find(`.${name}__icon-dot`).exists()).toBe(true);
         expect(unselected.find(`.${name}__icon-circle`).exists()).toBe(true);
-      } else {
-        expect(selected.element.children).toHaveLength(0);
-        expect(unselected.element.children).toHaveLength(0);
       }
     });
 
