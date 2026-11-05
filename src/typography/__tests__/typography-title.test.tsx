@@ -1,7 +1,9 @@
-import { mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { afterEach, describe, it, expect, vi } from 'vitest';
 import Title from '../title';
 import Ellipsis from '../ellipsis';
+
+enableAutoUnmount(afterEach);
 
 const prefix = 't';
 const COMPONENT_NAME = `${prefix}-typography`;
@@ -22,10 +24,9 @@ describe('Typography Title', () => {
 
     it('content[function]', () => {
       const wrapper = mount(Title, {
-        props: { content: () => shortText },
+        props: { content: () => <em class="function-content">{shortText}</em> },
       });
-      expect(wrapper.find('h1').exists()).toBe(true);
-      expect(wrapper.text()).toBe(shortText);
+      expect(wrapper.get('h1 .function-content').text()).toBe(shortText);
     });
 
     it('content[slot]', () => {
@@ -45,10 +46,9 @@ describe('Typography Title', () => {
 
     it('default[function]', () => {
       const wrapper = mount(Title, {
-        props: { default: () => shortText },
+        props: { default: () => <em class="function-default">{shortText}</em> },
       });
-      expect(wrapper.find('h1').exists()).toBe(true);
-      expect(wrapper.text()).toBe(shortText);
+      expect(wrapper.get('h1 .function-default').text()).toBe(shortText);
     });
 
     it('default[slot]', () => {
@@ -72,18 +72,7 @@ describe('Typography Title', () => {
       expect(pEl.element.style.textOverflow).toBe('ellipsis');
     });
 
-    it('ellipsis[boolean] & content[string]', () => {
-      const wrapper = mount(Title, {
-        props: {
-          ellipsis: true,
-          content: longText,
-        },
-      });
-      expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
-      expect(wrapper.text()).toContain(longText);
-    });
-
-    it('ellipsis[row]', () => {
+    it('ellipsis[object]', () => {
       const wrapper = mount(Title, {
         props: { ellipsis: { row: 3 } },
         slots: { default: () => longText },
@@ -217,6 +206,41 @@ describe('Typography Title', () => {
   });
 
   describe('scenarios', () => {
+    it('ellipsis[boolean] & content[string]', () => {
+      const wrapper = mount(Title, {
+        props: { ellipsis: true, content: longText },
+      });
+      expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
+      expect(wrapper.text()).toContain(longText);
+    });
+
+    // 源码未实现：content 属性透传到 Ellipsis 后覆盖含标题标签的插槽，配置的 level 不再渲染
+    it.todo('preserves the heading level when the content prop is ellipsized');
+
+    it('updates heading level across plain and ellipsis modes', async () => {
+      const wrapper = mount(Title, {
+        props: { level: 'h2' },
+        slots: { default: () => shortText },
+      });
+      await wrapper.setProps({ level: 'h4', ellipsis: { row: 2 } });
+      expect(wrapper.find('h2').exists()).toBe(false);
+      expect(wrapper.get('p h4').text()).toBe(shortText);
+      await wrapper.setProps({ level: 'h5', ellipsis: false });
+      expect(wrapper.get('h5').text()).toBe(shortText);
+      expect(wrapper.findComponent(Ellipsis).exists()).toBe(false);
+    });
+
+    it('preserves custom attributes and classes on the heading', () => {
+      const wrapper = mount(Title, {
+        attrs: { id: 'heading', class: 'custom-heading', 'aria-label': '标题' },
+        slots: { default: () => shortText },
+      });
+      const heading = wrapper.get('h1');
+      expect(heading.attributes('id')).toBe('heading');
+      expect(heading.attributes('aria-label')).toBe('标题');
+      expect(heading.classes()).toEqual(expect.arrayContaining([COMPONENT_NAME, 'custom-heading']));
+    });
+
     it('renders heading tag with typography class', () => {
       const wrapper = mount(Title, {
         props: { level: 'h2' },

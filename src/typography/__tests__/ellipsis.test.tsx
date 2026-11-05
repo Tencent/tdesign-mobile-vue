@@ -1,8 +1,10 @@
-import { h, nextTick } from 'vue';
-import { mount } from '@vue/test-utils';
-import { afterAll, beforeAll, describe, it, expect, vi } from 'vitest';
+import { h, nextTick, ref } from 'vue';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { afterAll, afterEach, beforeAll, describe, it, expect, vi } from 'vitest';
 import Ellipsis from '../ellipsis';
 import ConfigProvider from '../../config-provider';
+
+enableAutoUnmount(afterEach);
 
 const prefix = 't';
 const COMPONENT_NAME = `${prefix}-typography`;
@@ -13,7 +15,10 @@ const longText =
 const CLAMP_STORE = '__webkitLineClamp';
 
 describe('Ellipsis', () => {
+  let originalLineClamp: PropertyDescriptor | undefined;
+
   beforeAll(() => {
+    originalLineClamp = Object.getOwnPropertyDescriptor(CSSStyleDeclaration.prototype, 'WebkitLineClamp');
     // jsdom 的 cssstyle 不支持 -webkit-line-clamp，注入存取器以便断言省略行数
     Object.defineProperty(CSSStyleDeclaration.prototype, 'WebkitLineClamp', {
       configurable: true,
@@ -27,7 +32,11 @@ describe('Ellipsis', () => {
   });
 
   afterAll(() => {
-    Reflect.deleteProperty(CSSStyleDeclaration.prototype, 'WebkitLineClamp');
+    if (originalLineClamp) {
+      Object.defineProperty(CSSStyleDeclaration.prototype, 'WebkitLineClamp', originalLineClamp);
+    } else {
+      Reflect.deleteProperty(CSSStyleDeclaration.prototype, 'WebkitLineClamp');
+    }
   });
 
   describe('props', () => {
@@ -40,6 +49,12 @@ describe('Ellipsis', () => {
       });
       expect(wrapper.text()).toBe(longText);
     });
+
+    // 源码未实现：ellipsis.tsx 直接渲染 content 属性，未执行 TNode 函数
+    it.todo('content[function]');
+
+    // 源码未实现：ellipsis.tsx 未读取 content 插槽
+    it.todo('content[slot]');
 
     // 源码未实现：ellipsis.tsx 仅读取 content 属性与 default 插槽，未读取 default 属性（未传 content 与插槽时甚至会因缺少插槽而抛错）
     it.todo('default[string]');
@@ -78,7 +93,7 @@ describe('Ellipsis', () => {
       expect(plainWrapper.find('p').element.getAttribute('style')).toBe(null);
     });
 
-    it('ellipsis[row]', () => {
+    it('ellipsis[object]', async () => {
       const wrapper = mount(Ellipsis, {
         props: { ellipsis: { row: 3 } },
         slots: { default: () => longText },
@@ -86,6 +101,9 @@ describe('Ellipsis', () => {
       const pEl = wrapper.find('p');
       expect(pEl.element.style.overflow).toBe('hidden');
       expect((pEl.element.style as any).WebkitLineClamp).toBe('3');
+      await wrapper.setProps({ ellipsis: { row: 5 } });
+      expect((pEl.element.style as any).WebkitLineClamp).toBe('5');
+      expect(wrapper.text()).toBe(longText);
     });
 
     it('ellipsis[expandable]', () => {
@@ -138,12 +156,16 @@ describe('Ellipsis', () => {
       expect(unCollapsibleWrapper.find('p').element.style.overflow).toBe('visible');
     });
 
-    it('ellipsis[suffix-function]', () => {
+    it('ellipsis[suffix-function]', async () => {
+      const suffix = vi.fn((_h: typeof h, { expanded }: { expanded: boolean }) => (
+        <span class="my-suffix">{expanded ? '收起' : '展开更多'}</span>
+      ));
       const wrapper = mount(Ellipsis, {
         props: {
           ellipsis: {
             expandable: true,
-            suffix: (h: any, { expanded }: any) => h('span', { class: 'my-suffix' }, expanded ? '收起' : '展开更多'),
+            collapsible: true,
+            suffix,
           },
         },
         slots: { default: () => longText },
@@ -153,6 +175,13 @@ describe('Ellipsis', () => {
       expect(symbol.exists()).toBe(true);
       expect(symbol.find('.my-suffix').exists()).toBe(true);
       expect(symbol.text()).toBe('展开更多');
+      expect(suffix).toHaveBeenCalledWith(h, { expanded: false });
+
+      await symbol.trigger('click');
+      expect(wrapper.find('.my-suffix').exists()).toBe(false);
+      expect(wrapper.get(`.${COMPONENT_NAME}-ellipsis-symbol`).text()).toBe('收起');
+      await wrapper.get(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
+      expect(wrapper.get('.my-suffix').text()).toBe('展开更多');
     });
 
     it('ellipsis[suffix-vnode]', () => {
@@ -173,7 +202,7 @@ describe('Ellipsis', () => {
       expect(symbol.text()).toBe('查看更多');
     });
 
-    it('renderCopy[function]', () => {
+    it('renderCopy[function]', async () => {
       const renderCopy = () => h('span', { class: 'copy-btn' }, '复制');
       const wrapper = mount(Ellipsis, {
         props: {
@@ -187,6 +216,9 @@ describe('Ellipsis', () => {
       const symbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
       expect(symbol.exists()).toBe(true);
       expect((symbol.element as HTMLElement).style.marginRight).toBe('8px');
+      await wrapper.setProps({ renderCopy: undefined });
+      expect(wrapper.find('.copy-btn').exists()).toBe(false);
+      expect((symbol.element as HTMLElement).style.marginRight).toBe('0px');
     });
   });
 
@@ -215,11 +247,12 @@ describe('Ellipsis', () => {
 
   describe('globalConfig', () => {
     it('typography', async () => {
-      const wrapper = mount(
-        <ConfigProvider globalConfig={{ typography: { expandText: 'More', collapseText: 'Less' } }}>
+      const globalConfig = ref({ typography: { expandText: 'More', collapseText: 'Less' } });
+      const wrapper = mount(() => (
+        <ConfigProvider globalConfig={globalConfig.value}>
           <Ellipsis ellipsis={{ expandable: true, collapsible: true }}>{longText}</Ellipsis>
-        </ConfigProvider>,
-      );
+        </ConfigProvider>
+      ));
 
       const expandSymbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
       expect(expandSymbol.text()).toBe('More');
@@ -229,6 +262,23 @@ describe('Ellipsis', () => {
 
       const collapseSymbol = wrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
       expect(collapseSymbol.text()).toBe('Less');
+
+      globalConfig.value = { typography: { expandText: '展开全文', collapseText: '收起全文' } };
+      await nextTick();
+      expect(collapseSymbol.text()).toBe('收起全文');
+      await collapseSymbol.trigger('click');
+      expect(wrapper.get(`.${COMPONENT_NAME}-ellipsis-symbol`).text()).toBe('展开全文');
+    });
+
+    it('typography falls back to default labels when configured text is empty', async () => {
+      const wrapper = mount(() => (
+        <ConfigProvider globalConfig={{ typography: { expandText: '', collapseText: '' } }}>
+          <Ellipsis ellipsis={{ expandable: true, collapsible: true }}>{longText}</Ellipsis>
+        </ConfigProvider>
+      ));
+      expect(wrapper.get(`.${COMPONENT_NAME}-ellipsis-symbol`).text()).toBe('展开');
+      await wrapper.get(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
+      expect(wrapper.get(`.${COMPONENT_NAME}-ellipsis-symbol`).text()).toBe('收起');
     });
   });
 });

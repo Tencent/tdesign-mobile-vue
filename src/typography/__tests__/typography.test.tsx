@@ -1,6 +1,8 @@
-import { mount } from '@vue/test-utils';
-import { describe, it, expect } from 'vitest';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { afterEach, describe, it, expect } from 'vitest';
 import { Typography, Text, Title, Paragraph } from '../index';
+
+enableAutoUnmount(afterEach);
 
 const prefix = 't';
 const COMPONENT_NAME = `${prefix}-typography`;
@@ -23,6 +25,20 @@ describe('Typography', () => {
   });
 
   describe('scenarios', () => {
+    it('forwards text props and custom attributes to its rendered content', () => {
+      const wrapper = mount(Typography, {
+        attrs: { strong: true, theme: 'success', id: 'typography-content', 'aria-label': '文本' },
+        slots: { default: () => shortText },
+      });
+      const text = wrapper.getComponent(Text);
+      expect(text.props('strong')).toBe(true);
+      expect(text.props('theme')).toBe('success');
+      expect(wrapper.get('strong').text()).toBe(shortText);
+      expect(text.classes()).toContain(`${COMPONENT_NAME}--success`);
+      expect(text.attributes('id')).toBe('typography-content');
+      expect(text.attributes('aria-label')).toBe('文本');
+    });
+
     it('renders default slot through the built-in Text component', () => {
       const wrapper = mount(Typography, {
         slots: {

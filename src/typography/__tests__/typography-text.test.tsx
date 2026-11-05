@@ -1,6 +1,6 @@
 import { h, nextTick } from 'vue';
-import { mount } from '@vue/test-utils';
-import { afterEach, describe, it, expect, vi } from 'vitest';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { afterEach, beforeEach, describe, it, expect, vi } from 'vitest';
 import { CheckIcon, CopyIcon } from 'tdesign-icons-vue-next';
 import Text from '../text';
 import Ellipsis from '../ellipsis';
@@ -8,6 +8,8 @@ import { copy } from '../../_util/copy-to-clipboard';
 
 // 固定剪贴板行为：将复制工具替换为确定的 mock，便于断言被复制的文本
 vi.mock('../../_util/copy-to-clipboard', () => ({ copy: vi.fn() }));
+
+enableAutoUnmount(afterEach);
 
 const prefix = 't';
 const COMPONENT_NAME = `${prefix}-typography`;
@@ -17,7 +19,12 @@ const longText =
 const shortText = 'TDesign 是腾讯各业务团队在服务业务过程中沉淀的一套企业级设计体系。';
 
 describe('Typography Text', () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+  });
+
   afterEach(() => {
+    vi.clearAllTimers();
     vi.clearAllMocks();
     vi.useRealTimers();
   });
@@ -42,9 +49,9 @@ describe('Typography Text', () => {
 
     it('content[function]', () => {
       const wrapper = mount(Text, {
-        props: { content: () => shortText },
+        props: { content: () => <b class="function-content">{shortText}</b> },
       });
-      expect(wrapper.text()).toBe(shortText);
+      expect(wrapper.get('.function-content').text()).toBe(shortText);
     });
 
     it('content[slot]', () => {
@@ -55,7 +62,6 @@ describe('Typography Text', () => {
     });
 
     it('copyable[boolean]', async () => {
-      vi.useFakeTimers();
       const wrapper = mount(Text, {
         props: { copyable: true },
         slots: { default: () => shortText },
@@ -79,6 +85,8 @@ describe('Typography Text', () => {
       await nextTick();
       expect(wrapper.findComponent(CopyIcon).exists()).toBe(true);
       expect(wrapper.findComponent(CheckIcon).exists()).toBe(false);
+      await wrapper.setProps({ copyable: false });
+      expect(wrapper.find(`.${COMPONENT_NAME}__copy`).exists()).toBe(false);
     });
 
     it('copyable[object]', async () => {
@@ -114,8 +122,9 @@ describe('Typography Text', () => {
     });
 
     it('copyable[suffix-function]', async () => {
-      vi.useFakeTimers();
-      const suffix = (h: any, { copied }: any) => h('span', { class: 'custom-icon' }, copied ? '已复制' : '复制');
+      const suffix = vi.fn((_h: typeof h, { copied }: { copied: boolean }) => (
+        <span class="custom-icon">{copied ? '已复制' : '复制'}</span>
+      ));
       const wrapper = mount(Text, {
         props: { copyable: { suffix } },
         slots: { default: () => shortText },
@@ -123,12 +132,17 @@ describe('Typography Text', () => {
 
       expect(wrapper.find('.custom-icon').exists()).toBe(true);
       expect(wrapper.find('.custom-icon').text()).toBe('复制');
+      expect(suffix).toHaveBeenCalledWith(h, { copied: false });
 
       await wrapper.find(`.${COMPONENT_NAME}__copy`).trigger('click');
       await nextTick();
       // 已复制状态下隐藏自定义 suffix，回落为默认的已复制图标
       expect(wrapper.find('.custom-icon').exists()).toBe(false);
       expect(wrapper.findComponent(CheckIcon).exists()).toBe(true);
+
+      await vi.advanceTimersByTimeAsync(1500);
+      expect(wrapper.get('.custom-icon').text()).toBe('复制');
+      expect(wrapper.findComponent(CheckIcon).exists()).toBe(false);
     });
 
     it('copyable[suffix-vnode]', () => {
@@ -154,9 +168,9 @@ describe('Typography Text', () => {
 
     it('default[function]', () => {
       const wrapper = mount(Text, {
-        props: { default: () => shortText },
+        props: { default: () => <b class="function-default">{shortText}</b> },
       });
-      expect(wrapper.text()).toBe(shortText);
+      expect(wrapper.get('.function-default').text()).toBe(shortText);
     });
 
     it('default[slot]', () => {
@@ -184,16 +198,6 @@ describe('Typography Text', () => {
       expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--disabled`);
     });
 
-    it('disabled[boolean] & theme[primary]', () => {
-      const wrapper = mount(Text, {
-        props: { theme: 'primary', disabled: true },
-        slots: { default: () => shortText },
-      });
-      // disabled 优先级高于 theme，只保留禁用样式类
-      expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).toContain(`${COMPONENT_NAME}--disabled`);
-      expect(wrapper.find(`.${COMPONENT_NAME}`).classes()).not.toContain(`${COMPONENT_NAME}--primary`);
-    });
-
     it('ellipsis[boolean]', () => {
       const wrapper = mount(Text, {
         props: { ellipsis: true },
@@ -207,13 +211,18 @@ describe('Typography Text', () => {
       expect(pEl.element.style.textOverflow).toBe('ellipsis');
     });
 
-    it('ellipsis[row]', () => {
+    it('ellipsis[object]', async () => {
       const wrapper = mount(Text, {
         props: { ellipsis: { row: 2 } },
         slots: { default: () => longText },
       });
       expect(wrapper.findComponent(Ellipsis).props('ellipsis')).toEqual({ row: 2 });
       expect(wrapper.find('p').element.style.overflow).toBe('hidden');
+
+      await wrapper.setProps({ ellipsis: false });
+      expect(wrapper.findComponent(Ellipsis).exists()).toBe(false);
+      expect(wrapper.element.tagName).toBe('SPAN');
+      expect(wrapper.text()).toBe(longText);
     });
 
     it('ellipsis[expandable]', () => {
@@ -406,7 +415,20 @@ describe('Typography Text', () => {
   });
 
   describe('scenarios', () => {
-    it('ellipsis[boolean] & copyable[boolean]', () => {
+    it('disabled[boolean] & theme[primary]', async () => {
+      const wrapper = mount(Text, {
+        props: { theme: 'primary', disabled: true },
+        slots: { default: () => shortText },
+      });
+      // disabled 优先级高于 theme，只保留禁用样式类
+      expect(wrapper.classes()).toContain(`${COMPONENT_NAME}--disabled`);
+      expect(wrapper.classes()).not.toContain(`${COMPONENT_NAME}--primary`);
+      await wrapper.setProps({ disabled: false });
+      expect(wrapper.classes()).not.toContain(`${COMPONENT_NAME}--disabled`);
+      expect(wrapper.classes()).toContain(`${COMPONENT_NAME}--primary`);
+    });
+
+    it('ellipsis[boolean] & copyable[boolean]', async () => {
       const wrapper = mount(Text, {
         props: { ellipsis: true, copyable: true },
         slots: { default: () => longText },
@@ -414,6 +436,11 @@ describe('Typography Text', () => {
       expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
       // 省略模式下复制按钮由 Ellipsis 渲染
       expect(wrapper.find(`.${COMPONENT_NAME}__copy`).exists()).toBe(true);
+      await wrapper.get(`.${COMPONENT_NAME}__copy`).trigger('click');
+      expect(copy).toHaveBeenCalledExactlyOnceWith(longText);
+      expect(wrapper.findComponent(CheckIcon).exists()).toBe(true);
+      await vi.advanceTimersByTimeAsync(1500);
+      expect(wrapper.findComponent(CopyIcon).exists()).toBe(true);
     });
 
     it('multiple decorations nested in fixed order', () => {
@@ -433,6 +460,50 @@ describe('Typography Text', () => {
       expect(wrapper.find('i kbd mark code del u strong').exists()).toBe(true);
       expect(wrapper.find('i kbd mark code del u strong').text()).toBe(shortText);
     });
+
+    it('removes decoration tags when their props are disabled', async () => {
+      const wrapper = mount(Text, {
+        props: { code: true, delete: true, italic: true, keyboard: true, mark: true, strong: true, underline: true },
+        slots: { default: () => shortText },
+      });
+      await wrapper.setProps({
+        code: false,
+        delete: false,
+        italic: false,
+        keyboard: false,
+        mark: false,
+        strong: false,
+        underline: false,
+      });
+      expect(wrapper.find('code, del, i, kbd, mark, strong, u').exists()).toBe(false);
+      expect(wrapper.text()).toBe(shortText);
+    });
+
+    it('copies string content without navigating or bubbling the click', async () => {
+      const onParentClick = vi.fn();
+      const wrapper = mount(() => (
+        <a href="#copy-target" onClick={onParentClick}>
+          <Text content={shortText} copyable />
+        </a>
+      ));
+      const text = wrapper.getComponent(Text);
+      const event = new MouseEvent('click', { bubbles: true, cancelable: true });
+      text.get(`.${COMPONENT_NAME}__copy`).element.dispatchEvent(event);
+      await nextTick();
+      expect(copy).toHaveBeenCalledExactlyOnceWith(shortText);
+      expect(event.defaultPrevented).toBe(true);
+      expect(onParentClick).not.toHaveBeenCalled();
+    });
+
+    it('copies the latest content after the prop changes', async () => {
+      const wrapper = mount(Text, { props: { content: '初始文本', copyable: true } });
+      await wrapper.setProps({ content: '更新文本' });
+      await wrapper.get(`.${COMPONENT_NAME}__copy`).trigger('click');
+      expect(copy).toHaveBeenCalledExactlyOnceWith('更新文本');
+    });
+
+    // 源码未实现：content 属性透传到 Ellipsis 后覆盖已包装的插槽内容，strong 等修饰标签丢失
+    it.todo('preserves decoration tags when the content prop is ellipsized');
 
     it('renders as span without ellipsis', () => {
       const wrapper = mount(Text, {

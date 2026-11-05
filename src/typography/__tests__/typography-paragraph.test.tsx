@@ -1,7 +1,9 @@
-import { mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { afterEach, describe, it, expect, vi } from 'vitest';
 import Paragraph from '../paragraph';
 import Ellipsis from '../ellipsis';
+
+enableAutoUnmount(afterEach);
 
 const prefix = 't';
 const COMPONENT_NAME = `${prefix}-typography`;
@@ -22,6 +24,9 @@ describe('Typography Paragraph', () => {
 
     // 源码未实现：paragraph.tsx 直接渲染 props.content，未按 TNode 执行函数，函数内容会被渲染为函数源码文本
     it.todo('content[function]');
+
+    // 源码未实现：paragraph.tsx 未读取 content 插槽
+    it.todo('content[slot]');
 
     // 源码未实现：paragraph.tsx 仅读取 content 属性与 default 插槽，未读取 default 属性（传入后内容不渲染）
     it.todo('default[string]');
@@ -49,7 +54,7 @@ describe('Typography Paragraph', () => {
       expect(pEl.element.style.textOverflow).toBe('ellipsis');
     });
 
-    it('ellipsis[row]', () => {
+    it('ellipsis[object]', () => {
       const wrapper = mount(Paragraph, {
         props: { ellipsis: { row: 2 } },
         slots: { default: () => longText },
@@ -133,6 +138,20 @@ describe('Typography Paragraph', () => {
   });
 
   describe('scenarios', () => {
+    it('updates content and switches between paragraph and ellipsis modes', async () => {
+      const wrapper = mount(Paragraph, {
+        props: { content: '初始内容' },
+        slots: { default: () => '后备内容' },
+      });
+      await wrapper.setProps({ content: '更新内容', ellipsis: { row: 2 } });
+      expect(wrapper.get('p').text()).toBe('更新内容');
+      expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
+      await wrapper.setProps({ content: '', ellipsis: false });
+      expect(wrapper.findComponent(Ellipsis).exists()).toBe(false);
+      expect(wrapper.element.tagName).toBe('P');
+      expect(wrapper.text()).toBe('后备内容');
+    });
+
     it('renders as p tag with typography class', () => {
       const wrapper = mount(Paragraph, {
         slots: { default: () => shortText },
