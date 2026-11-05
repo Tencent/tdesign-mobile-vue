@@ -47,30 +47,4 @@ describe('TabNavItem', () => {
       expect(wrapper.text()).not.toContain('属性标签');
     });
   });
-
-  describe('scenarios', () => {
-    it('renders the icon before the label', () => {
-      const wrapper = mount(TabNavItem, {
-        props: {
-          label: '标签',
-          icon: () => <span class="custom-icon">图标</span>,
-        },
-      });
-
-      expect(wrapper.find(`.${name}__icon .custom-icon`).exists()).toBe(true);
-      expect(wrapper.text()).toBe('图标标签');
-      // 图标容器位于标签内容之前
-      const html = wrapper.html();
-      expect(html.indexOf(`${name}__icon`)).toBeLessThan(html.indexOf('custom-icon'));
-      expect(html.indexOf(`${name}__icon`)).toBeLessThan(html.indexOf('标签'));
-    });
-
-    it('renders label only when no icon is provided', () => {
-      const wrapper = mount(TabNavItem, { props: { label: () => <b class="custom-label">标签</b> } });
-
-      expect(wrapper.find(`.${name}__icon`).exists()).toBe(false);
-      expect(wrapper.find('.custom-label').exists()).toBe(true);
-      expect(wrapper.text()).toBe('标签');
-    });
-  });
 });

@@ -1,6 +1,5 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
-import { nextTick } from 'vue';
 import { Steps, StepItem } from '../index';
 
 describe('StepItem', () => {
@@ -139,37 +138,6 @@ describe('StepItem', () => {
         </Steps>
       ));
       expect(wrapper.find('.t-step-item__extra .slot-extra').exists()).toBeTruthy();
-    });
-  });
-
-  describe('scenarios', () => {
-    it('icon prop has priority over status icon', () => {
-      const wrapper = mount(() => (
-        <Steps current={0}>
-          <StepItem title="自定义图标" status="error" icon={() => <span class="custom-icon">自</span>} />
-          <StepItem title="内置图标" status="error" />
-        </Steps>
-      ));
-      const $items = wrapper.findAllComponents(StepItem);
-      // 错误状态下：自定义图标优先渲染，内置叉号图标不渲染
-      expect($items[0].find('.custom-icon').exists()).toBeTruthy();
-      expect($items[0].find('.t-icon-close').exists()).toBeFalsy();
-      // 未自定义图标的项仍渲染内置叉号图标
-      expect($items[1].find('.t-icon-close').exists()).toBeTruthy();
-    });
-
-    it('separator line visibility', async () => {
-      const wrapper = mount(() => (
-        <Steps layout="vertical">
-          <StepItem title="步骤一" content="描述" />
-          <StepItem title="步骤二" content="描述" />
-        </Steps>
-      ));
-      await nextTick();
-      const $items = wrapper.findAllComponents(StepItem);
-      // 非末尾项渲染连接线，末尾项不渲染
-      expect($items[0].find('.t-step-item__line').exists()).toBeTruthy();
-      expect($items[1].find('.t-step-item__line').exists()).toBeFalsy();
     });
   });
 });

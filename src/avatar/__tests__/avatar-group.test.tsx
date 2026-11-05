@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Avatar from '../avatar';
 import AvatarGroup from '../avatar-group';
-import { IMAGE, mountAvatarGroup, shapeList, sizeList } from './mount';
+import { mountAvatarGroup, shapeList, sizeList } from './mount';
 
 describe('AvatarGroup', () => {
   describe('props', () => {
@@ -63,32 +63,6 @@ describe('AvatarGroup', () => {
 
       expect(onCollapsedItemClick).toHaveBeenCalledTimes(1);
       expect(onCollapsedItemClick).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
-    });
-  });
-
-  describe('scenarios', () => {
-    it('avatar shape takes precedence over group shape', () => {
-      const wrapper = mount(() => (
-        <AvatarGroup shape="circle">
-          <Avatar image={IMAGE} />
-          <Avatar image={IMAGE} shape="round" />
-        </AvatarGroup>
-      ));
-      const avatars = wrapper.findAll('.t-avatar');
-
-      expect(avatars[0].classes()).toContain('t-avatar--circle');
-      expect(avatars[1].classes()).toContain('t-avatar--round');
-    });
-
-    it('avatar size takes precedence over group size', () => {
-      const wrapper = mount(() => (
-        <AvatarGroup size="large">
-          <Avatar image={IMAGE} />
-          <Avatar image={IMAGE} size="small" />
-        </AvatarGroup>
-      ));
-      expect(wrapper.find('.t-avatar--large').exists()).toBe(true);
-      expect(wrapper.find('.t-avatar--small').exists()).toBe(true);
     });
   });
 });

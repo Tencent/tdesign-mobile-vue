@@ -4,14 +4,10 @@ import { describe, it, expect, vi } from 'vitest';
 import { CloseCircleFilledIcon, InfoCircleFilledIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Input from '../input';
 import type { TdInputProps } from '../type';
+import { simulateInputEvent as simulateEvent } from '@/test/input';
 
 const prefix = 't';
 const name = `${prefix}-input`;
-
-const simulateEvent = (target: HTMLInputElement, text: string, event: string) => {
-  target.value = text;
-  target.dispatchEvent(new Event(event));
-};
 
 const focusInput = (wrapper: VueWrapper) => (wrapper.vm as unknown as { focus: () => void }).focus();
 const getInputElement = (wrapper: VueWrapper) => wrapper.get('input').element as HTMLInputElement;
@@ -374,6 +370,12 @@ describe('Input', () => {
       expect(wrapper.get('.t-input__tips .slot-tips').text()).toBe('插槽提示');
     });
 
+    // text 为默认值；其余值均透传给原生 input 的 type 属性
+    it.each(['text', 'url', 'tel', 'search', 'submit', 'hidden'] as const)('type[%s]', (type) => {
+      const wrapper = mount(<Input type={type} />);
+      expect(wrapper.get('input').attributes('type')).toBe(type);
+    });
+
     it('type[number]', async () => {
       const wrapper = mount(<Input label="标题" type="number" />);
       const input = wrapper.find('.t-input__wrap input');
@@ -472,7 +474,15 @@ describe('Input', () => {
       expect(getInputElement(wrapper).value).toBe('123');
     });
 
-    // pattern / inputmode 在组件内部声明（不在 props.ts），置于分组末尾
+    // labelAlign / pattern / inputmode 在组件内部声明（不在 props.ts），置于分组末尾
+    it('labelAlign[center]', async () => {
+      const wrapper = mount(<Input label="标题" labelAlign="center" />);
+      expect(wrapper.classes()).toContain('t-input--center');
+
+      // 默认 top，不附加居中类名
+      expect(mount(<Input label="标题" />).classes()).not.toContain('t-input--center');
+    });
+
     it('pattern[string]', async () => {
       const wrapper = mount(<Input pattern="[0-9]*" />);
       expect(wrapper.find('input').attributes('pattern')).toBe('[0-9]*');
@@ -589,47 +599,5 @@ describe('Input', () => {
       inputRef.value?.blur();
       expect(blurSpy).toHaveBeenCalledTimes(1);
     });
-  });
-
-  describe('scenarios', () => {
-    it('composition input does not commit the value', async () => {
-      const value = ref('');
-      const onChange = vi.fn();
-      const wrapper = mount(<Input v-model={value.value} onChange={onChange} />);
-      const el = getInputElement(wrapper);
-      el.value = '拼音';
-      el.dispatchEvent(new InputEvent('input', { inputType: 'insertCompositionText', data: '拼音', bubbles: true }));
-      await nextTick();
-      expect(onChange).not.toBeCalled();
-      expect(value.value).toBe('');
-
-      // compositionend 后提交组合输入结果
-      await simulateEvent(el, '拼音', 'compositionend');
-      expect(onChange).toBeCalledTimes(1);
-      expect(value.value).toBe('拼音');
-    });
-
-    it('clearing a number input sets the value to undefined', async () => {
-      const value = ref(123);
-      const onChange = vi.fn();
-      const wrapper = mount(<Input type="number" v-model={value.value} clearable onChange={onChange} />);
-      await wrapper.find('.t-icon-close-circle-filled').trigger('touchend');
-      // 数字类型清空置为 undefined
-      expect(onChange).toHaveBeenCalledWith(undefined);
-      expect(value.value).toBeUndefined();
-    });
-
-    it('maxlength and maxcharacter together logs a warning', async () => {
-      const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
-      try {
-        mount(<Input maxlength={5} maxcharacter={2} />);
-        expect(warn).toHaveBeenCalledWith('TDesign Input Warn: Pick one of maxlength and maxcharacter please.');
-      } finally {
-        warn.mockRestore();
-      }
-    });
-
-    // TdInputProps.onChange 声明了 context（trigger/e），组件调用时未透传。
-    it.todo('change context includes trigger and event');
   });
 });

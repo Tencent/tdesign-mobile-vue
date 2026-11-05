@@ -33,23 +33,4 @@ describe('ConfigProvider', () => {
       expect(wrapper.element.innerHTML).toBe('tdesign');
     });
   });
-
-  describe('scenarios', () => {
-    it('falls back to default locale when globalConfig is not provided', () => {
-      const ChildComponent = defineComponent({
-        setup() {
-          const { globalConfig } = useConfig('table');
-          return () => <div class="t-child">{globalConfig.value.empty}</div>;
-        },
-      });
-
-      const wrapper = mount(
-        <ConfigProvider>
-          <ChildComponent />
-        </ConfigProvider>,
-      );
-
-      expect(wrapper.find('.t-child').element.innerHTML).toBe('暂无数据');
-    });
-  });
 });

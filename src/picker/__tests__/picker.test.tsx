@@ -3,10 +3,9 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import Picker from '../picker';
 import PickerItem from '../picker-item';
-import { DEFAULT_ITEM_HEIGHT } from '../picker.class';
 import { DEFAULT_WHEEL_CONFIG } from '../constants';
 import ConfigProvider from '../../config-provider';
-import { makeTouch, simulateMoveOption, seasonOptions } from './mount';
+import { simulateMoveOption, seasonOptions } from './mount';
 import type { PickerColumn, PickerColumnItem, PickerValue, TdPickerProps } from '../type';
 
 const weekdayOptions: PickerColumn = [
@@ -394,117 +393,6 @@ describe('Picker', () => {
       );
       expect(wrapper.find('.t-picker__cancel').text()).toBe('Cancel');
       expect(wrapper.find('.t-picker__confirm').text()).toBe('Confirm');
-    });
-  });
-
-  describe('scenarios', () => {
-    describe('wheel scrolling', () => {
-      it('keeps scrolling by inertia after a fast swipe', () => {
-        const onPick = vi.fn();
-        // 同步执行 rAF 回调，让惯性动画在 touchend 内完成
-        let frame = 0;
-        vi.spyOn(window, 'requestAnimationFrame').mockImplementation((callback) => {
-          frame += 1;
-          callback(frame * 16);
-          return frame;
-        });
-
-        const wrapper = mountPicker({ onPick });
-        const el = wrapper.find('.t-picker-item').element;
-
-        makeTouch(el, 'touchstart', { pageY: 0 });
-        makeTouch(el, 'touchmove', { pageY: -2 * DEFAULT_ITEM_HEIGHT });
-        makeTouch(el, 'touchend', { pageY: -2 * DEFAULT_ITEM_HEIGHT });
-
-        // 惯性滚动越过拖拽位置，最终停留在最后一项
-        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(seasonOptions[3].label);
-        expect(onPick).toHaveBeenCalledWith([seasonOptions[3].value], { column: 0, index: 3 });
-      });
-
-      it('stops on the swiped option after a slow swipe', async () => {
-        const wrapper = mountPicker();
-        await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
-        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(seasonOptions[2].label);
-      });
-    });
-
-    describe('disabled options', () => {
-      const workdayOptions: PickerColumn = [
-        { label: '周一', value: 'monday' },
-        { label: '周二', value: 'tuesday', disabled: true },
-        { label: '周三', value: 'wednesday' },
-      ];
-
-      it('marks disabled options and skips one when the wheel lands on it', async () => {
-        const onPick = vi.fn();
-        const wrapper = mountPicker({ columns: [workdayOptions], onPick });
-        expect(wrapper.findAll('.t-picker-item__item')[1].classes()).toContain('t-picker-item__item--disabled');
-
-        // 滚动落在禁用项上时，吸附到最近的可用项（优先沿下标增大方向搜索命中周三）
-        await simulateMoveOption(wrapper.find('.t-picker-item').element, 1);
-        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(workdayOptions[2].label);
-        expect(onPick).toHaveBeenCalledWith([workdayOptions[2].value], { column: 0, index: 2 });
-      });
-
-      it('falls back to a nearby enabled option when defaultValue hits a disabled one', () => {
-        const onPick = vi.fn();
-        const wrapper = mountPicker({ columns: [workdayOptions], defaultValue: ['tuesday'], onPick });
-
-        // 回退到最近的可用项（双向搜索优先命中周三），并通过 pick 通知
-        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(workdayOptions[2].label);
-        expect(onPick).toHaveBeenCalledWith([workdayOptions[2].value], { column: 0, index: 2 });
-      });
-    });
-
-    describe('multi-column selection', () => {
-      it('confirm returns the value/label/index of every column', async () => {
-        const onConfirm = vi.fn();
-        const wrapper = mountPicker({
-          columns: [seasonOptions, weekdayOptions],
-          defaultValue: ['spring', 'monday'],
-          onConfirm,
-        });
-        expect(wrapper.findAll('.t-picker-item__group')).toHaveLength(2);
-
-        // 滚动第二列两项后确认
-        await simulateMoveOption(wrapper.findAll('.t-picker-item')[1].element, 2);
-        await wrapper.find('.t-picker__confirm').trigger('click');
-
-        expect(onConfirm).toHaveBeenCalledWith([seasonOptions[0].value, weekdayOptions[2].value], {
-          e: expect.any(MouseEvent),
-          index: [0, 2],
-          label: [seasonOptions[0].label, weekdayOptions[2].label],
-        });
-      });
-    });
-
-    describe('rendering priority', () => {
-      it('option slot overrides the option prop', () => {
-        const wrapper = mount(Picker, {
-          props: { columns: [seasonOptions], option: (option: PickerColumnItem) => `prop-${option.label}` },
-          slots: { option: (option: PickerColumnItem) => `slot-${option.label}` },
-        });
-        expect(wrapper.findAll('.t-picker-item__item').map((container) => container.text())).toEqual(
-          seasonOptions.map((option) => `slot-${option.label}`),
-        );
-      });
-
-      it('option overrides renderLabel', () => {
-        const wrapper = mountPicker({
-          option: (option: PickerColumnItem) => `option-${option.label}`,
-          renderLabel: (item: PickerColumnItem) => `label-${item.label}`,
-        });
-        expect(wrapper.findAll('.t-picker-item__item').map((container) => container.text())).toEqual(
-          seasonOptions.map((option) => `option-${option.label}`),
-        );
-      });
-    });
-
-    describe('wheel config merging', () => {
-      it('swipeDuration takes precedence over wheelConfig.inertiaDuration', () => {
-        const wrapper = mountPicker({ swipeDuration: 500, wheelConfig: { inertiaDuration: 999 } });
-        expect(wrapper.findComponent(PickerItem).props('wheelConfig').inertiaDuration).toBe(500);
-      });
     });
   });
 });

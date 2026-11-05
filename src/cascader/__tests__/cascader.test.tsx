@@ -1,9 +1,8 @@
-import { ref, h, nextTick } from 'vue';
+import { ref, nextTick } from 'vue';
 import { enableAutoUnmount, mount, DOMWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { AppIcon as TIconApp, CloseIcon } from 'tdesign-icons-vue-next';
+import { CloseIcon } from 'tdesign-icons-vue-next';
 import Cascader from '../cascader';
-import type { TdCascaderProps } from '../type';
 import Radio from '../../radio/index';
 import { Tabs as TTabs } from '../../tabs';
 import Popup from '../../popup';
@@ -21,7 +20,6 @@ enableAutoUnmount(afterEach);
 const name = `${prefix}-cascader`;
 
 const TEXT = 'tdesign-mobile-vue';
-const iconFunc = () => h(TIconApp);
 const address = ref('120119');
 const options = [
   {
@@ -534,10 +532,5 @@ describe('Cascader', () => {
       expect(wrapper.find(`.${name}__title`).text()).toBe('选择所在地区');
       expect(wrapper.find(`.${name}__step-label`).text()).toBe('请选择地区');
     });
-  });
-
-  describe('scenarios', () => {
-    // Popup 传递字符串 'overlay'，Cascader 却读取参数的 trigger 属性，实际点击遮罩不会触发 close 回调。
-    it.todo('closes via overlay click');
   });
 });

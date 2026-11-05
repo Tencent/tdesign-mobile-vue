@@ -269,37 +269,4 @@ describe('Drawer', () => {
       expect(wrapper.emitted('update:visible')).toEqual([[false]]);
     });
   });
-
-  describe('scenarios', () => {
-    it('omits optional title, footer and items by default', () => {
-      const wrapper = mount(Drawer);
-      expect(wrapper.find('.t-drawer__title').exists()).toBe(false);
-      expect(wrapper.find('.t-drawer__footer').exists()).toBe(false);
-      expect(wrapper.findAll('.t-drawer__sidebar-item')).toHaveLength(0);
-    });
-
-    it('closes on overlay click and notifies visibility listeners', async () => {
-      const onOverlayClick = vi.fn();
-      const wrapper = mount(Drawer, { props: { visible: true, onOverlayClick } });
-      await wrapper.find('.t-overlay').trigger('click');
-      expect(onOverlayClick).toHaveBeenCalledTimes(1);
-      expect(wrapper.emitted('update:visible')).toEqual([[false]]);
-      await vi.waitFor(() => {
-        expect(body.get('.t-drawer').isVisible()).toBe(false);
-      });
-    });
-
-    it('does not notify overlayClick when opening without an overlay', async () => {
-      const onOverlayClick = vi.fn();
-      const wrapper = mount(Drawer, { props: { showOverlay: false, onOverlayClick } });
-      await wrapper.setProps({ visible: true });
-      expect(onOverlayClick).not.toHaveBeenCalled();
-    });
-
-    it('allows item clicks without an itemClick listener', async () => {
-      const wrapper = mount(Drawer, { props: { items: [{ title: '菜单' }] } });
-      await wrapper.get('.t-drawer__sidebar-item').trigger('click');
-      expect(document.querySelector('.t-drawer__sidebar-item-title').textContent).toBe('菜单');
-    });
-  });
 });

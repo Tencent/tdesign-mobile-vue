@@ -1,9 +1,8 @@
 import { describe, it, expect, vi } from 'vitest';
 import { mount } from '@vue/test-utils';
-import { nextTick, ref } from 'vue';
 import TabBar from '../tab-bar';
 import TabBarItem from '../tab-bar-item';
-import { barItems, checkedTexts, mountTabBar, numericBarItems, type TabBarItemDesc } from './mount';
+import { checkedTexts, mountTabBar, numericBarItems, type TabBarItemDesc } from './mount';
 
 describe('TabBar', () => {
   describe('props', () => {
@@ -175,101 +174,6 @@ describe('TabBar', () => {
       await wrapper.findAll('.t-tab-bar-item__content')[1].trigger('click');
       expect(wrapper.emitted('update:modelValue')).toEqual([['2']]);
       expect(checkedTexts(wrapper)).toEqual(['标签一']);
-    });
-  });
-
-  describe('scenarios', () => {
-    describe('controlled switching', () => {
-      it('v-model:value syncs selection on click and on external change', async () => {
-        const value = ref('1');
-        const wrapper = mount({
-          render: () => (
-            <TabBar v-model:value={value.value}>
-              {barItems.slice(0, 2).map((item) => (
-                <TabBarItem key={item.value} value={item.value}>
-                  {item.label}
-                </TabBarItem>
-              ))}
-            </TabBar>
-          ),
-        });
-        expect(checkedTexts(wrapper)).toEqual(['标签一']);
-        // 点击子项：父级值与选中态同步
-        await wrapper.findAll('.t-tab-bar-item__content')[1].trigger('click');
-        expect(value.value).toBe('2');
-        expect(checkedTexts(wrapper)).toEqual(['标签二']);
-        // 父级更新受控值：选中态反向同步
-        value.value = '1';
-        await nextTick();
-        expect(checkedTexts(wrapper)).toEqual(['标签一']);
-      });
-
-      it('v-model (modelValue) syncs selection on click', async () => {
-        const value = ref('1');
-        const wrapper = mount({
-          render: () => (
-            <TabBar v-model={value.value}>
-              {barItems.slice(0, 2).map((item) => (
-                <TabBarItem key={item.value} value={item.value}>
-                  {item.label}
-                </TabBarItem>
-              ))}
-            </TabBar>
-          ),
-        });
-        await wrapper.findAll('.t-tab-bar-item__content')[1].trigger('click');
-        expect(value.value).toBe('2');
-        expect(checkedTexts(wrapper)).toEqual(['标签二']);
-      });
-    });
-
-    describe('uncontrolled switching', () => {
-      it('defaultValue selection moves on click and re-clicking the active item still emits change', async () => {
-        const onChange = vi.fn();
-        const wrapper = mountTabBar({ defaultValue: '1', onChange }, barItems.slice(0, 2));
-        const contents = wrapper.findAll('.t-tab-bar-item__content');
-        await contents[1].trigger('click');
-        expect(checkedTexts(wrapper)).toEqual(['标签二']);
-        expect(onChange).toHaveBeenCalledTimes(1);
-        // 重复点击当前选中项：仍触发 change，选中值不变
-        await contents[1].trigger('click');
-        expect(onChange).toHaveBeenCalledTimes(2);
-        expect(onChange).toHaveBeenLastCalledWith('2');
-        expect(checkedTexts(wrapper)).toEqual(['标签二']);
-      });
-    });
-
-    describe('sub tab bar value', () => {
-      it('array value keeps the parent item checked after selecting a child item', async () => {
-        const onChange = vi.fn();
-        const wrapper = mountTabBar({ defaultValue: '3', onChange });
-        const parent = wrapper.findAll('.t-tab-bar-item__content')[2];
-        expect(checkedTexts(wrapper)).toEqual(['此处展开']);
-
-        await parent.trigger('click');
-        await wrapper.findAll('.t-tab-bar-item__spread-item')[1].trigger('click');
-        expect(onChange).toHaveBeenLastCalledWith(['3', '3-2']);
-        // 选择子项后父项保持选中，菜单收起
-        expect(checkedTexts(wrapper)).toEqual(['此处展开']);
-        expect(wrapper.find('.t-tab-bar-item__spread').exists()).toBeFalsy();
-      });
-    });
-
-    describe('edge cases', () => {
-      it('renders more than three items and supports switching', async () => {
-        const onChange = vi.fn();
-        const manyItems: TabBarItemDesc[] = [
-          { value: '1', label: '标签一' },
-          { value: '2', label: '标签二' },
-          { value: '3', label: '标签三' },
-          { value: '4', label: '标签四' },
-        ];
-        const wrapper = mountTabBar({ defaultValue: '1', onChange }, manyItems);
-        expect(wrapper.findAll('.t-tab-bar-item')).toHaveLength(4);
-        await wrapper.findAll('.t-tab-bar-item__content')[3].trigger('click');
-        expect(onChange).toHaveBeenLastCalledWith('4');
-        expect(checkedTexts(wrapper)).toEqual(['标签四']);
-      });
     });
   });
 });

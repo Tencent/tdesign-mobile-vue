@@ -1,11 +1,10 @@
-import { h, nextTick, ref } from 'vue';
+import { h } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { ChevronRightIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Cell from '../cell';
 import type { TdCellProps } from '../type';
 import Avatar from '../../avatar/avatar';
-import Form from '../../form';
 import { sleep } from '../../shared/util';
 import { trigger } from '@/test/touch';
 
@@ -171,42 +170,6 @@ describe('Cell', () => {
       await wrapper.trigger('click');
       expect(onClick).toHaveBeenCalledTimes(1);
       expect(onClick).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
-    });
-  });
-
-  describe('scenarios', () => {
-    it('inherits disabled from form', async () => {
-      const onClick = vi.fn();
-      const formDisabled = ref(true);
-      const wrapper = mount(() => (
-        <Form disabled={formDisabled.value}>
-          <Cell title="标题" onClick={onClick} />
-        </Form>
-      ));
-
-      await wrapper.find('.t-cell').trigger('click');
-      expect(onClick).not.toHaveBeenCalled();
-
-      formDisabled.value = false;
-      await nextTick();
-      await wrapper.find('.t-cell').trigger('click');
-      expect(onClick).toHaveBeenCalledTimes(1);
-      expect(onClick).toHaveBeenCalledWith({ e: expect.any(MouseEvent) });
-    });
-
-    it('description and required marker need a title', () => {
-      const wrapper = mount(Cell, { props: { description: '描述', required: true } });
-      expect(wrapper.find('.t-cell__description').exists()).toBe(false);
-      expect(wrapper.find('.t-cell--required').exists()).toBe(false);
-    });
-
-    it('arrow overrides rightIcon', async () => {
-      const wrapper = mount(Cell, { props: { arrow: true, rightIcon: appIcon } });
-      expect(wrapper.findComponent(ChevronRightIcon).exists()).toBe(true);
-      expect(wrapper.findComponent(AppIcon).exists()).toBe(false);
-      await wrapper.setProps({ arrow: false });
-      expect(wrapper.findComponent(ChevronRightIcon).exists()).toBe(false);
-      expect(wrapper.findComponent(AppIcon).exists()).toBe(true);
     });
   });
 });

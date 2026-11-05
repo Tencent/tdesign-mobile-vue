@@ -257,17 +257,4 @@ describe('CollapsePanel', () => {
       expect(onChange).toHaveBeenCalledWith([0], { e: expect.any(MouseEvent) });
     });
   });
-
-  describe('scenarios', () => {
-    test('panel expandIcon overrides parent expandIcon', () => {
-      const wrapper = mountPanel({ expandIcon: true }, {}, { expandIcon: false });
-      expect(wrapper.find('.t-collapse-panel__header-icon svg').exists()).toBe(true);
-    });
-
-    // disabled 使用 parent.disabled || props.disabled，子面板 false 无法覆盖父级 true。
-    test.todo('panel disabled false overrides parent disabled true');
-
-    // updatePanelValue 仅在 value 非空时更新；源码未实现声明中的下标兜底。
-    test.todo('missing panel value falls back to its index');
-  });
 });

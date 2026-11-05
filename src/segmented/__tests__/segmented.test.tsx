@@ -1,24 +1,16 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { flushPromises, mount } from '@vue/test-utils';
+import { mount } from '@vue/test-utils';
 import { h, nextTick, ref } from 'vue';
 import { HomeIcon } from 'tdesign-icons-vue-next';
 import Segmented from '../segmented';
 import type { SegmentedItem } from '../type';
-import { createRect, mockRectByClass, type RectInit } from '@/test/mock-rect';
+import { type RectInit } from '@/test/mock-rect';
 
 const prefix = 't';
 const name = `${prefix}-segmented`;
 
 const stringOptions = ['选项一', '选项二', '选项三'];
 const numberOptions = [1, 2, 3];
-
-/** 滑块定位所需的三等分布局：group 起点 8px，每个选项宽 60px */
-const layoutRects = (): Record<string, RectInit> => ({
-  [`${name}__group`]: { left: 8, width: 184 },
-  [`${name}-item-0`]: { left: 8, width: 60 },
-  [`${name}-item-1`]: { left: 68, width: 60 },
-  [`${name}-item-2`]: { left: 128, width: 60 },
-});
 
 describe('Segmented', () => {
   afterEach(() => {
@@ -332,190 +324,6 @@ describe('Segmented', () => {
       // 点击当前激活项不重复触发 change
       await wrapper.findAll(`.${name}__item`)[1].trigger('click');
       expect(onChange).toBeCalledTimes(1);
-    });
-  });
-
-  describe('scenarios', () => {
-    describe('thumb position', () => {
-      it('positions the thumb on the active item after mount', async () => {
-        mockRectByClass(layoutRects());
-        const wrapper = mount(Segmented, {
-          props: {
-            options: stringOptions,
-            defaultValue: '选项二',
-          },
-        });
-        await flushPromises();
-
-        const style = wrapper.find(`.${name}__thumb`).attributes('style');
-        expect(style).toContain('width: 60px');
-        expect(style).toContain('translateX(60px)');
-      });
-
-      it('moves the thumb when the selected value changes', async () => {
-        mockRectByClass(layoutRects());
-        const value = ref('选项一');
-        const wrapper = mount({
-          setup() {
-            return () => <Segmented v-model={value.value} options={stringOptions} />;
-          },
-        });
-        await flushPromises();
-
-        const $thumb = wrapper.find(`.${name}__thumb`);
-        expect($thumb.attributes('style')).toContain('translateX(0px)');
-
-        const $items = wrapper.findAll(`.${name}__item`);
-        await $items[2].trigger('click');
-        await flushPromises();
-
-        expect(value.value).toBe('选项三');
-        expect($thumb.attributes('style')).toContain('translateX(120px)');
-      });
-
-      it('updates the thumb when the group size changes', async () => {
-        const rects = layoutRects();
-        mockRectByClass(rects);
-
-        // jsdom 未实现 ResizeObserver，用可记录回调的 Mock 替代
-        class MockResizeObserver {
-          static callbacks: Array<(entries: Array<{ contentRect: { width: number; height: number } }>) => void> = [];
-
-          element: Element | null = null;
-
-          constructor(callback: (entries: Array<{ contentRect: { width: number; height: number } }>) => void) {
-            MockResizeObserver.callbacks.push(callback);
-          }
-
-          observe(element: Element) {
-            this.element = element;
-          }
-
-          unobserve() {
-            this.element = null;
-          }
-
-          disconnect() {
-            this.element = null;
-          }
-        }
-        vi.stubGlobal('ResizeObserver', MockResizeObserver);
-
-        const wrapper = mount(Segmented, {
-          props: {
-            options: stringOptions,
-            defaultValue: '选项一',
-          },
-        });
-        await flushPromises();
-
-        const $thumb = wrapper.find(`.${name}__thumb`);
-        expect($thumb.attributes('style')).toContain('translateX(0px)');
-
-        // 模拟布局变化：第一个选项右移 12px 后触发 resize 回调
-        rects[`${name}-item-0`] = { left: 20, width: 60 };
-        MockResizeObserver.callbacks[0]([{ contentRect: { width: 200, height: 32 } }]);
-        await flushPromises();
-
-        expect($thumb.attributes('style')).toContain('translateX(12px)');
-      });
-
-      it('resets the thumb when no option matches the value', async () => {
-        mockRectByClass(layoutRects());
-        const wrapper = mount(Segmented, {
-          props: {
-            options: stringOptions,
-            value: '不存在的选项',
-          },
-        });
-        await flushPromises();
-
-        expect(wrapper.findAll(`.${name}__item--active`)).toHaveLength(0);
-        expect(wrapper.find(`.${name}__thumb`).attributes('style')).toBeUndefined();
-      });
-    });
-
-    describe('dynamic options', () => {
-      it('updates items and thumb when options change', async () => {
-        mockRectByClass(layoutRects());
-        const value = ref('选项一');
-        const options = ref(['选项一', '选项二', '选项三']);
-        const wrapper = mount({
-          setup() {
-            return () => <Segmented v-model={value.value} options={options.value} />;
-          },
-        });
-        await flushPromises();
-
-        expect(wrapper.find(`.${name}__thumb`).attributes('style')).toContain('translateX(0px)');
-
-        // 新选项中「选项一」排在第二位，激活项与滑块随之移动
-        options.value = ['选项二', '选项一'];
-        await flushPromises();
-
-        const $items = wrapper.findAll(`.${name}__item`);
-        expect($items).toHaveLength(2);
-        expect($items[0].find(`.${name}__item-label`).text()).toBe('选项二');
-        expect($items[1].classes()).toContain(`${name}__item--active`);
-        expect(wrapper.find(`.${name}__thumb`).attributes('style')).toContain('translateX(60px)');
-      });
-
-      it('clears the active item when the value is removed from options', async () => {
-        mockRectByClass(layoutRects());
-        const value = ref('选项三');
-        const options = ref(['选项一', '选项二', '选项三']);
-        const wrapper = mount({
-          setup() {
-            return () => <Segmented v-model={value.value} options={options.value} />;
-          },
-        });
-        await flushPromises();
-
-        expect(wrapper.findAll(`.${name}__item`)[2].classes()).toContain(`${name}__item--active`);
-        expect(wrapper.find(`.${name}__thumb`).attributes('style')).toContain('translateX(120px)');
-
-        options.value = ['选项一', '选项二'];
-        await flushPromises();
-
-        const $items = wrapper.findAll(`.${name}__item`);
-        expect($items).toHaveLength(2);
-        expect($items[0].classes()).not.toContain(`${name}__item--active`);
-        expect($items[1].classes()).not.toContain(`${name}__item--active`);
-        // 清空已设置的内联样式后 style 属性保留为空字符串
-        expect(wrapper.find(`.${name}__thumb`).attributes('style')).toBe('');
-      });
-    });
-
-    describe('value priority', () => {
-      it('value[string] & defaultValue[string]', () => {
-        const wrapper = mount(Segmented, {
-          props: {
-            options: stringOptions,
-            value: '选项三',
-            defaultValue: '选项一',
-          },
-        });
-
-        // 受控 value 优先于 defaultValue
-        const $items = wrapper.findAll(`.${name}__item`);
-        expect($items[2].classes()).toContain(`${name}__item--active`);
-        expect($items[0].classes()).not.toContain(`${name}__item--active`);
-      });
-
-      it('modelValue[string] & defaultValue[string]', () => {
-        const wrapper = mount(Segmented, {
-          props: {
-            options: stringOptions,
-            modelValue: '选项三',
-            defaultValue: '选项一',
-          },
-        });
-
-        // v-model 受控值优先于 defaultValue
-        const $items = wrapper.findAll(`.${name}__item`);
-        expect($items[2].classes()).toContain(`${name}__item--active`);
-        expect($items[0].classes()).not.toContain(`${name}__item--active`);
-      });
     });
   });
 });

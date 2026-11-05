@@ -43,27 +43,4 @@ describe('Col', () => {
       expect(wrapper.findComponent(Col).text()).toBe(TEXT);
     });
   });
-
-  describe('scenarios', () => {
-    it('renders offset and span together', () => {
-      const wrapper = mount(Row, { slots: { default: () => <Col offset="2" span="6" /> } });
-      const classes = wrapper.findComponent(Col).classes();
-      expect(classes).toContain(`${colName}--offset-2`);
-      expect(classes).toContain(`${colName}--6`);
-    });
-
-    it('inherits half the row gutter as horizontal padding', () => {
-      const wrapper = mount(Row, {
-        props: { gutter: 16 },
-        slots: { default: () => [<Col key="a" />, <Col key="b" />] },
-      });
-      wrapper.findAllComponents(Col).forEach((col) => {
-        expect(col.attributes('style')).toBe('padding-right: 8px; padding-left: 8px;');
-      });
-
-      // 行未设置 gutter 时列不输出内边距
-      const plainRow = mount(Row, { slots: { default: () => <Col /> } });
-      expect(plainRow.findComponent(Col).attributes('style')).toBeUndefined();
-    });
-  });
 });

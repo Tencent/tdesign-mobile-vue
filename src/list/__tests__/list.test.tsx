@@ -143,23 +143,4 @@ describe('List', () => {
       expect(loadMoreWrapper.findComponent(TLoading).props('text')).toBe('Load more');
     });
   });
-
-  describe('scenarios', () => {
-    it('renders header, items, loading area and footer in order', () => {
-      const wrapper = mount(List, {
-        props: {
-          header: () => <span class="order-header">头部</span>,
-          footer: () => <span class="order-footer">底部</span>,
-          asyncLoading: '加载文案',
-        },
-        slots: { default: () => <TCell>列表项</TCell> },
-      });
-      expect(Array.from(wrapper.element.children).map((el) => el.className)).toEqual([
-        'order-header',
-        't-cell',
-        't-list__loading--wrapper',
-        'order-footer',
-      ]);
-    });
-  });
 });

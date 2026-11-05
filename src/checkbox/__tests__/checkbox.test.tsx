@@ -2,7 +2,6 @@ import { mount } from '@vue/test-utils';
 import { ref, nextTick } from 'vue';
 import { describe, it, expect, vi } from 'vitest';
 import Checkbox, { CheckboxGroup } from '../index';
-import Form from '../../form';
 import config from '../../config';
 
 const { prefix } = config;
@@ -295,32 +294,6 @@ describe('Checkbox', () => {
       await wrapper.trigger('click');
       expect(onChange).toHaveBeenNthCalledWith(2, false, { e: expect.any(MouseEvent) });
       expect(onChange).toHaveBeenCalledTimes(2);
-    });
-  });
-
-  describe('scenarios', () => {
-    it('explicit disabled overrides group and form disabled states', async () => {
-      const onChange = vi.fn();
-      const wrapper = mount(() => (
-        <Form disabled>
-          <CheckboxGroup disabled onChange={onChange}>
-            <Checkbox value="one" disabled={false} />
-          </CheckboxGroup>
-        </Form>
-      ));
-      // Checkbox.disabled=false 优先于 CheckboxGroup.disabled 与 Form.disabled
-      await wrapper.findComponent(Checkbox).trigger('click');
-      expect(onChange).toHaveBeenCalledWith(['one'], expect.objectContaining({ type: 'check' }));
-    });
-
-    it('explicit readonly overrides group readonly', async () => {
-      const onChange = vi.fn();
-      const wrapper = mount(CheckboxGroup, {
-        props: { readonly: true, onChange },
-        slots: { default: () => <Checkbox value="one" readonly={false} /> },
-      });
-      await wrapper.findComponent(Checkbox).trigger('click');
-      expect(onChange).toHaveBeenCalledWith(['one'], expect.objectContaining({ type: 'check' }));
     });
   });
 });

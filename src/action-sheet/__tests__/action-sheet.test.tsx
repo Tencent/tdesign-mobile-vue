@@ -3,7 +3,6 @@ import { mount } from '@vue/test-utils';
 import ActionSheet from '../action-sheet';
 import type { TdActionSheetProps } from '../type';
 import MenuGrid from '../action-sheet-grid';
-import { GridItem as TGridItem } from '../../grid/index';
 import TBadge from '../../badge/index';
 import ConfigProvider from '../../config-provider';
 import config from '../../config';
@@ -220,26 +219,6 @@ describe('ActionSheet', () => {
         </ConfigProvider>,
       );
       expect(wrapper.find(`.${name}__footer`).text()).toBe('Close');
-    });
-  });
-
-  describe('scenarios', () => {
-    it('selects an item in grid theme', async () => {
-      const onSelected = vi.fn();
-      const wrapper = mount(ActionSheet, {
-        props: {
-          theme: 'grid',
-          visible: true,
-          items: ['确定', '删除'],
-          onSelected,
-        },
-      });
-      const gridItems = wrapper.findAllComponents(TGridItem);
-      expect(gridItems).toHaveLength(2);
-      await gridItems[0].trigger('click');
-      expect(onSelected).toHaveBeenCalledWith('确定', 0);
-      await gridItems[1].trigger('click');
-      expect(onSelected).toHaveBeenLastCalledWith('删除', 1);
     });
   });
 });

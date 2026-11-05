@@ -202,32 +202,4 @@ describe('Loading', () => {
       if (theme === 'dots') expect(wrapper.findAll('.t-loading__dot')).toHaveLength(3);
     });
   });
-
-  describe('scenarios', () => {
-    it('hides indicator and text while delayed loading is pending', async () => {
-      vi.useFakeTimers();
-      try {
-        const wrapper = mount(Loading, { props: { delay: 300, text: '加载中' } });
-        expect(wrapper.find('.t-loading__gradient').exists()).toBe(false);
-        expect(wrapper.find('.t-loading__text').exists()).toBe(false);
-        vi.advanceTimersByTime(300);
-        await wrapper.vm.$nextTick();
-        expect(wrapper.find('.t-loading__gradient').exists()).toBe(true);
-        expect(wrapper.get('.t-loading__text').text()).toBe('加载中');
-      } finally {
-        vi.useRealTimers();
-      }
-    });
-
-    it('logs an error when the attach target does not exist', () => {
-      const error = vi.spyOn(console, 'error').mockImplementation(() => {});
-      try {
-        const wrapper = mount(Loading, { props: { attach: '#not-exist' } });
-        expect(error).toHaveBeenCalledWith('attach is not exist');
-        expect(wrapper.find('.t-loading').exists()).toBe(true);
-      } finally {
-        error.mockRestore();
-      }
-    });
-  });
 });

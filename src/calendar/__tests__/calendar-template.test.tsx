@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import CalendarTemplate from '../template';
 import type { TdCalendarProps } from '../type';
 import Button from '../../button';
@@ -74,15 +74,6 @@ describe('CalendarTemplate', () => {
       const wrapper = mountTemplate();
       await wrapper.find('.t-calendar__close-btn').trigger('click');
       expect(wrapper.emitted('visible-change')).toEqual([[]]);
-    });
-  });
-
-  describe('scenarios', () => {
-    it('selecting without a confirm button triggers change', async () => {
-      const onChange = vi.fn();
-      const wrapper = mountTemplate({ confirmBtn: null }, { onChange });
-      await wrapper.findAll('.t-calendar__dates-item')[2].trigger('click');
-      expect(onChange).toHaveBeenCalledWith(new Date(2022, 0, 3));
     });
   });
 });

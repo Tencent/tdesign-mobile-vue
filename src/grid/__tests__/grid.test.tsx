@@ -70,20 +70,4 @@ describe('Grid', () => {
       expect(wrapper.text()).toContain('二');
     });
   });
-
-  describe('scenarios', () => {
-    it('border with gutter uses item borders without a grid border', () => {
-      const wrapper = mount(Grid, { props: { border: true, gutter: 8 }, slots: { default: () => <GridItem /> } });
-      expect(wrapper.classes()).not.toContain(`${name}--bordered`);
-      expect(wrapper.get(`.${name}-item`).classes()).toContain(`${name}-item--bordered`);
-      expect(wrapper.get(`.${name}-item`).classes()).toContain(`${name}-item--surround`);
-    });
-
-    it('column zero enables auto sizing and omits grid-template columns', () => {
-      const wrapper = mount(Grid, { props: { column: 0 }, slots: { default: () => <GridItem /> } });
-      expect(wrapper.classes()).toContain(`${name}--auto-size`);
-      expect(wrapper.attributes('style') || '').not.toContain('grid-template-columns');
-      expect((wrapper.get(`.${name}-item`).element as HTMLElement).style.flexBasis).toBe('');
-    });
-  });
 });

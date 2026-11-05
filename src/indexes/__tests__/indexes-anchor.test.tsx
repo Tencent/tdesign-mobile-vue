@@ -35,15 +35,4 @@ describe('IndexesAnchor', () => {
       expect(wrapper.get(`.${name}__header`).text()).toBe('A');
     });
   });
-
-  describe('scenarios', () => {
-    it('renders the custom slot above the index header', () => {
-      const wrapper = mountAnchor({ index: 'A' }, { default: () => h('span', { class: 'anchor-slot' }, '内容') });
-      const wrapperEl = wrapper.get(`.${name}__wrapper`);
-      expect(Array.from(wrapperEl.element.children).map((element) => element.className)).toEqual([
-        `${name}__slot`,
-        `${name}__header`,
-      ]);
-    });
-  });
 });

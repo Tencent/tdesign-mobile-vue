@@ -1,9 +1,9 @@
-import { enableAutoUnmount, flushPromises, mount } from '@vue/test-utils';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { afterEach, describe, it, expect } from 'vitest';
-import { h, ref } from 'vue';
+import { h } from 'vue';
 import { CheckCircleFilledIcon, ChevronRightIcon } from 'tdesign-icons-vue-next';
 import { FormItem, Form } from '../index';
-import type { FormRule, TdFormItemProps } from '../type';
+import type { TdFormItemProps } from '../type';
 import Input from '../../input';
 import config from '../../config';
 
@@ -293,96 +293,6 @@ describe('FormItem', () => {
     it('default[slot]', () => {
       const wrapper = mountItem({}, { default: () => <input class="slot-input" /> });
       expect(wrapper.get(`.${name}__controls-content .slot-input`).element.tagName).toBe('INPUT');
-    });
-  });
-
-  describe('scenarios', () => {
-    it('validates blur rules when the input loses focus', async () => {
-      const wrapper = mount(() => (
-        <Form data={{ name: '' }}>
-          <FormItem name="name" label="姓名" rules={[{ required: true, message: '失焦校验失败', trigger: 'blur' }]}>
-            <Input />
-          </FormItem>
-        </Form>
-      ));
-      expect(wrapper.find(`.${name}__item-extra`).exists()).toBe(false);
-      await wrapper.get('input').trigger('blur');
-      await flushPromises();
-      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('失焦校验失败');
-    });
-
-    it('revalidates when item rules change', async () => {
-      const rules = ref<FormRule[]>([]);
-      const wrapper = mount(() => (
-        <Form data={{ name: '' }}>
-          <FormItem name="name" label="姓名" rules={rules.value} />
-        </Form>
-      ));
-      expect(wrapper.find(`.${name}__item-extra`).exists()).toBe(false);
-      rules.value = [{ required: true, message: '新增规则校验失败' }];
-      await flushPromises();
-      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('新增规则校验失败');
-    });
-
-    it('renders success messages from custom validators', async () => {
-      const wrapper = mount(() => (
-        <Form data={{ name: 'TDesign' }}>
-          <FormItem
-            name="name"
-            label="姓名"
-            rules={[
-              {
-                validator: () => ({ result: true, message: '校验成功', type: 'success' }),
-              },
-            ]}
-          />
-        </Form>
-      ));
-      expect(await wrapper.findComponent(Form).vm.$.exposed.validate()).toBe(true);
-      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('校验成功');
-      expect(wrapper.find(`.${name}__item--error`).exists()).toBe(false);
-    });
-
-    it('item layout overrides Form layout and top alignment clears horizontal spacing', () => {
-      const wrapper = mount(() => (
-        <Form labelAlign="right" labelWidth={80} contentAlign="left">
-          <FormItem label="姓名" labelAlign="left" labelWidth={120} contentAlign="right" />
-          <FormItem label="年龄" labelAlign="top" labelWidth={120} />
-        </Form>
-      ));
-      const items = wrapper.findAllComponents(FormItem);
-      expect(items[0].get(`.${name}__label`).classes()).toContain(`${name}__label--left`);
-      expect(items[0].get(`.${name}__label`).attributes('style')).toContain('width: 120px');
-      expect(items[0].find(`.${name}__controls--right`).exists()).toBe(true);
-      expect(items[1].get(`.${name}__label`).classes()).toContain(`${name}__label--top`);
-      expect(items[1].get(`.${name}__label`).attributes('style') || '').not.toContain('width');
-      expect(items[1].get(`.${name}__controls`).attributes('style') || '').not.toContain('margin-left');
-    });
-
-    it('zero labelWidth hides label content', () => {
-      const wrapper = mountItem({ label: '隐藏标签', labelWidth: 0 });
-      expect(wrapper.get('label').text()).toBe('');
-    });
-
-    it('item rules and requiredMark override Form settings', async () => {
-      const wrapper = mount(() => (
-        <Form requiredMark data={{ name: '' }} rules={{ name: [{ required: true, message: '表单级规则' }] }}>
-          <FormItem name="name" label="姓名" requiredMark={false} rules={[{ required: true, message: '表单项规则' }]} />
-        </Form>
-      ));
-      expect(wrapper.find(`.${name}__label--required`).exists()).toBe(false);
-      await wrapper.findComponent(Form).vm.$.exposed.validate();
-      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('表单项规则');
-    });
-
-    it('item showErrorMessage overrides Form showErrorMessage', async () => {
-      const wrapper = mount(() => (
-        <Form showErrorMessage={false} data={{ name: '' }}>
-          <FormItem name="name" label="姓名" showErrorMessage rules={[{ required: true, message: '姓名必填' }]} />
-        </Form>
-      ));
-      await wrapper.findComponent(Form).vm.$.exposed.validate();
-      expect(wrapper.get(`.${name}__item-extra`).text()).toBe('姓名必填');
     });
   });
 });

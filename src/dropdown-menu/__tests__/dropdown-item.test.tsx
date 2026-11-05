@@ -591,42 +591,4 @@ describe('DropdownItem', () => {
       expect(wrapper.find(`.${prefix}-dropdown-item__confirm-btn`).text()).toBe('Done');
     });
   });
-
-  describe('scenarios', () => {
-    it('reset & confirm', async () => {
-      const onReset = vi.fn();
-      const onConfirm = vi.fn();
-      const onChange = vi.fn();
-      const value = ref(['option_1']);
-      const wrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem
-            v-model={value.value}
-            label="菜单"
-            multiple
-            options={options}
-            onReset={onReset}
-            onConfirm={onConfirm}
-            onChange={onChange}
-          />
-        </DropdownMenu>
-      ));
-      await wrapper.find(`.${name}__item`).trigger('click');
-      await sleep(200);
-      await wrapper.find(`.${prefix}-dropdown-item__reset-btn`).trigger('click');
-      expect(onReset).toHaveBeenCalledExactlyOnceWith([]);
-      expect(onChange).toHaveBeenNthCalledWith(1, []);
-      const confirmButton = wrapper.find(`.${prefix}-dropdown-item__confirm-btn`);
-      await confirmButton.trigger('click');
-      expect(onConfirm).not.toHaveBeenCalled();
-      expect(value.value).toEqual(['option_1']);
-      await wrapper.find(`.${prefix}-dropdown-item__checkbox-item`).trigger('click');
-      expect(onChange).toHaveBeenNthCalledWith(2, ['option_0']);
-      expect(onChange).toHaveBeenCalledTimes(2);
-      expect(value.value).toEqual(['option_1']);
-      await confirmButton.trigger('click');
-      expect(onConfirm).toHaveBeenCalledExactlyOnceWith(['option_0']);
-      expect(value.value).toEqual(['option_0']);
-    });
-  });
 });

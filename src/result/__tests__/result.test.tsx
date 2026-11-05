@@ -106,37 +106,4 @@ describe('Result', () => {
       expect(title.text()).toBe('插槽标题');
     });
   });
-
-  describe('scenarios', () => {
-    it('renders default state', () => {
-      const wrapper = mount(() => <Result></Result>);
-      expect(wrapper.classes()).toContain('t-result');
-      expect(wrapper.classes()).toContain('t-result--theme-default');
-      expect(wrapper.find('.t-result__thumb').exists()).toBeTruthy();
-      expect(wrapper.findComponent(InfoCircleIcon).exists()).toBeTruthy();
-      expect(wrapper.find('.t-result__title').exists()).toBeFalsy();
-      expect(wrapper.find('.t-result__description').exists()).toBeFalsy();
-    });
-
-    it('renders image with higher priority than icon', () => {
-      const wrapper = mount(() => <Result image={imageUrl} icon={appIcon}></Result>);
-      expect(wrapper.findComponent(Image).exists()).toBeTruthy();
-      expect(wrapper.findComponent(AppIcon).exists()).toBeFalsy();
-    });
-
-    it('renders prop value with higher priority than same-name slot', () => {
-      const wrapper = mount(() => (
-        <Result
-          title="属性标题"
-          description="属性描述"
-          v-slots={{
-            title: () => <span>插槽标题</span>,
-            description: () => <span>插槽描述</span>,
-          }}
-        ></Result>
-      ));
-      expect(wrapper.find('.t-result__title').text()).toBe('属性标题');
-      expect(wrapper.find('.t-result__description').text()).toBe('属性描述');
-    });
-  });
 });

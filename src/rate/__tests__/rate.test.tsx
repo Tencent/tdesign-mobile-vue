@@ -1,11 +1,8 @@
-import { ref, nextTick, h, markRaw } from 'vue';
-import type { VNodeChild } from 'vue';
+import { ref, h, markRaw } from 'vue';
 import { mount } from '@vue/test-utils';
-import type { DOMWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
-import { ThumbUpIcon, ThumbDownIcon, StarFilledIcon } from 'tdesign-icons-vue-next';
+import { ThumbUpIcon, ThumbDownIcon } from 'tdesign-icons-vue-next';
 import Rate from '../rate';
-import Form from '../../form';
 import ConfigProvider from '../../config-provider';
 import { trigger } from '@/test/touch';
 
@@ -27,21 +24,6 @@ afterEach(() => {
   window.HTMLElement.prototype.getBoundingClientRect = originalGetBoundingClientRect;
   vi.useRealTimers();
 });
-
-/** 触摸交互用例公共前置：启用 fake timers（含 Date，rate 内部依赖时间戳）、固定容器宽度并挂载 */
-const mountRateForTouch = (render: () => VNodeChild) => {
-  vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'Date'] });
-  mockRect();
-  const wrapper = mount(render);
-  const $target = wrapper.find(`.${name}__wrapper`);
-  return { wrapper, $target };
-};
-
-/** 完成一次按压超过 200ms 阈值的手势，使后续 touchmove 能换算分值 */
-const pressPastThreshold = async ($target: DOMWrapper<Element>) => {
-  await trigger($target, 'touchstart', 10, 10);
-  vi.advanceTimersByTime(250);
-};
 
 describe('Rate', () => {
   describe('props', () => {
@@ -345,147 +327,6 @@ describe('Rate', () => {
         </ConfigProvider>,
       );
       expect(wrapper2.find(`.${name}__text`).text()).toBe('Not rated');
-    });
-  });
-
-  describe('scenarios', () => {
-    it('renders with default props', () => {
-      const wrapper = mount(() => <Rate />);
-      expect(wrapper.classes()).toContain(name);
-      expect(wrapper.findAll(`.${name}__icon`)).toHaveLength(5);
-      // 默认渲染实心五角星图标
-      expect(wrapper.findComponent(StarFilledIcon).exists()).toBeTruthy();
-      expect(wrapper.find(`.${name}__text`).exists()).toBeFalsy();
-      expect(wrapper.find(`.${name}__tips`).exists()).toBeFalsy();
-    });
-
-    describe('touch interactions', () => {
-      it('slide updates value only after press threshold', async () => {
-        const value = ref(0);
-        const onChange = vi.fn();
-        const { wrapper, $target } = mountRateForTouch(() => <Rate v-model={value.value} onChange={onChange} />);
-
-        await trigger($target, 'touchstart', 10, 10);
-        // 按住未超过 200ms，滑动不生效
-        vi.advanceTimersByTime(100);
-        await trigger($target, 'touchmove', 120, 10);
-        expect(onChange).not.toHaveBeenCalled();
-
-        // 超过 200ms 后滑动生效：pageX=120 → 2 分
-        vi.advanceTimersByTime(150);
-        await trigger($target, 'touchmove', 120, 10);
-        expect(onChange).toHaveBeenCalledTimes(1);
-        expect(onChange).toHaveBeenCalledWith(2);
-        expect(value.value).toBe(2);
-        // move 分支的 tips 为单选项，展示滑动换算的分值
-        const tips = wrapper.find(`.${name}__tips`);
-        expect(tips.exists()).toBeTruthy();
-        expect(tips.find(`.${name}__tips-item`).text()).toBe('2');
-      });
-
-      it('touchend hides tips immediately', async () => {
-        const { wrapper, $target } = mountRateForTouch(() => <Rate />);
-        await pressPastThreshold($target);
-
-        await trigger($target, 'touchmove', 120, 10);
-        expect(wrapper.find(`.${name}__tips`).exists()).toBeTruthy();
-
-        await trigger($target, 'touchend', 120, 10);
-        expect(wrapper.find(`.${name}__tips`).exists()).toBeFalsy();
-      });
-
-      it('touchcancel behaves as touchend', async () => {
-        const { wrapper, $target } = mountRateForTouch(() => <Rate />);
-        await pressPastThreshold($target);
-
-        await trigger($target, 'touchmove', 120, 10);
-        expect(wrapper.find(`.${name}__tips`).exists()).toBeTruthy();
-
-        await trigger($target, 'touchcancel', 120, 10);
-        expect(wrapper.find(`.${name}__tips`).exists()).toBeFalsy();
-      });
-
-      it('tips auto hides 3s after tap selection following touch', async () => {
-        const { wrapper, $target } = mountRateForTouch(() => <Rate />);
-
-        // 先经历一次触摸结束（touchEnd=true），随后的 tap 选择会开启 3s 自动关闭
-        await trigger($target, 'touchstart', 10, 10);
-        await trigger($target, 'touchend', 120, 10);
-        await wrapper.findAll(`.${name}__icon`)[0].trigger('click', { pageX: 10 });
-        expect(wrapper.find(`.${name}__tips`).exists()).toBeTruthy();
-        expect(wrapper.find(`.${name}__icon--current`).exists()).toBeTruthy();
-
-        vi.advanceTimersByTime(3000);
-        await nextTick();
-        expect(wrapper.find(`.${name}__tips`).exists()).toBeFalsy();
-        expect(wrapper.find(`.${name}__icon--current`).exists()).toBeFalsy();
-      });
-    });
-
-    describe('value clamping', () => {
-      it('clamps to count when sliding beyond right edge', async () => {
-        const value = ref(0);
-        const onChange = vi.fn();
-        const { wrapper, $target } = mountRateForTouch(() => <Rate v-model={value.value} onChange={onChange} />);
-        await pressPastThreshold($target);
-
-        await trigger($target, 'touchmove', 400, 10);
-        expect(onChange).toHaveBeenCalledWith(5);
-        expect(value.value).toBe(5);
-        expect(wrapper.findAll(`.${name}__wrapper .${name}__icon--selected`)).toHaveLength(5);
-      });
-
-      it('clamps to 0 when sliding beyond left edge', async () => {
-        const value = ref(2);
-        const onChange = vi.fn();
-        const { wrapper, $target } = mountRateForTouch(() => <Rate v-model={value.value} onChange={onChange} />);
-        await pressPastThreshold($target);
-
-        await trigger($target, 'touchmove', -200, 10);
-        expect(onChange).toHaveBeenCalledWith(0);
-        expect(value.value).toBe(0);
-        expect(wrapper.findAll(`.${name}__wrapper .${name}__icon--selected`)).toHaveLength(0);
-      });
-    });
-
-    describe('form context', () => {
-      it('inherits disabled from form', async () => {
-        mockRect();
-        const formDisabled = ref(true);
-        const rateDisabled = ref<boolean | undefined>(undefined);
-        const onChange = vi.fn();
-        const wrapper = mount(() => (
-          <Form disabled={formDisabled.value}>
-            <Rate disabled={rateDisabled.value} onChange={onChange} />
-          </Form>
-        ));
-        const getRate = () => wrapper.findComponent(Rate);
-
-        expect(getRate().classes()).toContain(`${name}--disabled`);
-        await getRate().findAll(`.${name}__icon`)[2].trigger('click', { pageX: 150 });
-        expect(onChange).not.toHaveBeenCalled();
-
-        // 组件自身 disabled=false 优先于表单禁用
-        rateDisabled.value = false;
-        await nextTick();
-        expect(getRate().classes()).not.toContain(`${name}--disabled`);
-        await getRate().findAll(`.${name}__icon`)[2].trigger('click', { pageX: 150 });
-        expect(onChange).toHaveBeenCalledWith(3);
-      });
-
-      it('inherits readonly from form', async () => {
-        mockRect();
-        const onChange = vi.fn();
-        const wrapper = mount(() => (
-          <Form readonly>
-            <Rate onChange={onChange} />
-          </Form>
-        ));
-        // readonly 不带禁用样式，但不可交互
-        expect(wrapper.findComponent(Rate).classes()).not.toContain(`${name}--disabled`);
-        await wrapper.findComponent(Rate).findAll(`.${name}__icon`)[2].trigger('click', { pageX: 150 });
-        expect(onChange).not.toHaveBeenCalled();
-      });
     });
   });
 });

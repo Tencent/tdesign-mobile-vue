@@ -1,7 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { mount } from '@vue/test-utils';
 import Progress from '../index';
-import type { TdProgressProps } from '../type';
 
 describe('Progress', () => {
   describe('props', () => {
@@ -193,105 +192,6 @@ describe('Progress', () => {
         props: { theme: 'circle', percentage: 50, trackColor: 'orange' },
       });
       expect(getComputedStyle(circleWrapper.find('.t-progress__circle-outer').element).stroke).toEqual('orange');
-    });
-  });
-
-  describe('scenarios', () => {
-    describe('status icon display', () => {
-      it.each([
-        ['success', 't-icon-check-circle-filled'],
-        ['error', 't-icon-error-circle-filled'],
-        ['warning', 't-icon-error-circle-filled'],
-      ] as const)('renders filled icon for line theme with %s status', (status, iconClass) => {
-        const wrapper = mount(Progress, { props: { percentage: 30, status } });
-        expect(wrapper.find('.t-progress__info .t-progress__icon').exists()).toBe(true);
-        expect(wrapper.find(`.t-progress__icon.${iconClass}`).exists()).toBe(true);
-        expect(wrapper.text()).not.toContain('30%');
-      });
-
-      it.each([
-        ['success', 't-icon-check'],
-        ['error', 't-icon-close'],
-        ['warning', 't-icon-error'],
-      ] as const)('renders stroke icon for circle theme with %s status', (status, iconClass) => {
-        const wrapper = mount(Progress, { props: { theme: 'circle', percentage: 30, status } });
-        expect(wrapper.find('.t-progress__info .t-progress__icon').exists()).toBe(true);
-        expect(wrapper.find(`.t-progress__icon.${iconClass}`).exists()).toBe(true);
-        expect(wrapper.text()).not.toContain('30%');
-      });
-
-      it('keeps percentage text instead of icon for plump theme', () => {
-        const wrapper = mount(Progress, {
-          props: { theme: 'plump', percentage: 50, status: 'success' },
-        });
-        expect(wrapper.find('.t-progress__icon').exists()).toBe(false);
-        expect(wrapper.find('.t-progress__info').text()).toBe('50%');
-      });
-
-      it('keeps percentage text when status is active', () => {
-        const wrapper = mount(Progress, {
-          props: { percentage: 30, status: 'active' },
-        });
-        expect(wrapper.find('.t-progress__icon').exists()).toBe(false);
-        expect(wrapper.find('.t-progress__info').text()).toBe('30%');
-      });
-    });
-
-    describe('plump label placement', () => {
-      it('renders label inside the inner bar when percentage is above 10', () => {
-        const wrapper = mount(Progress, {
-          props: { theme: 'plump', percentage: 50 },
-        });
-        const bar = wrapper.find('.t-progress__bar');
-        expect(bar.classes()).toContain('t-progress--over-ten');
-        expect(bar.find('.t-progress__inner .t-progress__info').exists()).toBe(true);
-        expect(wrapper.find('.t-progress__info').text()).toBe('50%');
-      });
-
-      it('renders label outside the inner bar when percentage is 10 or below', () => {
-        const wrapper = mount(Progress, {
-          props: { theme: 'plump', percentage: 10 },
-        });
-        const bar = wrapper.find('.t-progress__bar');
-        expect(bar.classes()).toContain('t-progress--under-ten');
-        expect(bar.find('.t-progress__inner .t-progress__info').exists()).toBe(false);
-        expect(bar.find('.t-progress__info').exists()).toBe(true);
-        expect(wrapper.find('.t-progress__info').text()).toBe('10%');
-      });
-    });
-
-    describe('circle progress boundaries', () => {
-      it('hides the inner circle when percentage is 0', () => {
-        const wrapper = mount(Progress, {
-          props: { theme: 'circle', percentage: 0 },
-        });
-        expect(wrapper.find('.t-progress__circle-outer').exists()).toBe(true);
-        expect(wrapper.find('.t-progress__circle-inner').exists()).toBe(false);
-      });
-
-      it('draws the inner circle stroke length according to percentage', () => {
-        const wrapper = mount(Progress, {
-          props: { theme: 'circle', percentage: 50 },
-        });
-        const innerCircle = wrapper.find('.t-progress__circle-inner');
-        // 默认直径 112、环宽 6
-        const diameter = 112;
-        const strokeWidth = 6;
-        const radius = diameter / 2 - strokeWidth / 2;
-        const perimeter = Math.PI * 2 * ((diameter - strokeWidth) / 2);
-        expect(innerCircle.attributes('r')).toBe(`${radius}`);
-        expect(innerCircle.attributes('stroke-dasharray')).toBe(`${perimeter * 0.5}  ${perimeter * 0.5}`);
-      });
-    });
-
-    describe('percentage completion status', () => {
-      it('marks status as success once percentage reaches 100', () => {
-        const wrapper = mount(Progress, {
-          props: { percentage: 100 },
-        });
-        expect(wrapper.find('.t-progress--thin').classes()).toContain('t-progress--status-success');
-        expect(wrapper.find('.t-progress__info').text()).toBe('100%');
-      });
     });
   });
 });

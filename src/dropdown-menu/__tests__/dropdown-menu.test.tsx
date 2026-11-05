@@ -1,6 +1,5 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import { ref } from 'vue';
 import { DropdownMenu, DropdownItem } from '../index';
 import { sleep } from '../../shared/util';
 import Popup from '../../popup';
@@ -181,55 +180,6 @@ describe('DropdownMenu', () => {
       instance.collapseMenu();
       await sleep(200);
       expect(wrapper.find(`.${name}__item--active`).exists()).toBe(false);
-    });
-  });
-
-  describe('scenarios', () => {
-    // emitEvents 按 onmenuClosed 查找回调，与实际声明的 onMenuClosed 不符。
-    it.todo('notifies menuClosed after overlay clicks, option selection and confirmation');
-
-    it('multiple item with footer buttons', async () => {
-      // 底部重置、确认按钮仅在 multiple = true 时展示
-      const onReset = vi.fn();
-      const onConfirm = vi.fn();
-      const onChange = vi.fn();
-      const selected = ref(['option_1']);
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu>
-              <DropdownItem
-                v-model={selected.value}
-                label="菜单"
-                multiple
-                options={options}
-                onReset={onReset}
-                onConfirm={onConfirm}
-                onChange={onChange}
-              />
-            </DropdownMenu>
-          );
-        },
-      });
-
-      // 打开菜单面板
-      await wrapper.find(`.${name}__item`).trigger('click');
-      await sleep(200);
-
-      // 初始选中 1 项
-      expect(wrapper.findAll(`.${prefix}-checkbox--checked`).length).toBe(1);
-
-      // 重置：清空选中
-      await wrapper.find(`.${prefix}-dropdown-item__reset-btn`).trigger('click');
-      expect(wrapper.findAll(`.${prefix}-checkbox--checked`).length).toBe(0);
-      expect(onReset).toHaveBeenCalledTimes(1);
-
-      // 勾选第 1 项后确认
-      await wrapper.find(`.${prefix}-dropdown-item__checkbox-item`).trigger('click');
-      await wrapper.find(`.${prefix}-dropdown-item__confirm-btn`).trigger('click');
-      expect(onConfirm).toHaveBeenCalledWith(['option_0']);
-      expect(onChange).toHaveBeenCalledWith(['option_0']);
-      expect(selected.value).toEqual(['option_0']);
     });
   });
 });

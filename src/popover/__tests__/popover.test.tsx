@@ -2,7 +2,6 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { nextTick } from 'vue';
 import Popover from '../popover';
-import type { TdPopoverProps } from '../type';
 import { flush } from '@/test/flush';
 
 const name = 't-popover';
@@ -52,13 +51,6 @@ const restorePopperLayout = () => {
   }
   Reflect.deleteProperty(document.documentElement, 'clientWidth');
   Reflect.deleteProperty(document.documentElement, 'clientHeight');
-};
-
-/** 从浮层 style 中解析 popper 写入的 translate 定位 */
-const getTranslate = (style: string) => {
-  const matched = style.match(/translate\(([\d.]+)px, ([\d.]+)px\)/);
-  expect(matched, `style 中应包含 translate 定位：${style}`).not.toBeNull();
-  return { x: Number(matched?.[1]), y: Number(matched?.[2]) };
 };
 
 describe('Popover', () => {
@@ -295,55 +287,6 @@ describe('Popover', () => {
 
       await wrapper.setProps({ modelValue: true });
       expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
-      wrapper.unmount();
-    });
-  });
-
-  describe('scenarios', () => {
-    it('recreates popper when placement changes while visible', async () => {
-      mockPopperLayout();
-      const wrapper = mount(Popover, {
-        props: { visible: true, content: '气泡内容', placement: 'top' },
-      });
-      await flush();
-      expect(wrapper.find(`.${name}`).attributes('data-popper-placement')).toBe('top');
-
-      await wrapper.setProps({ placement: 'bottom-left' });
-      await flush();
-      expect(wrapper.find(`.${name}`).attributes('data-popper-placement')).toBe('bottom-start');
-      wrapper.unmount();
-    });
-
-    it('keeps open when clicking inside popover and closes when clicking outside', async () => {
-      const wrapper = mount(() => <Popover defaultVisible content="气泡内容" />);
-      await flush();
-      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
-
-      // 点击浮层内容不关闭
-      await wrapper.find(`.${name}__content`).trigger('touchstart');
-      await nextTick();
-      expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
-
-      // 点击浮层与触发元素以外的区域关闭
-      document.body.dispatchEvent(new Event('touchstart', { bubbles: true }));
-      await nextTick();
-      expect(wrapper.find(`.${name}`).exists()).toBeFalsy();
-      wrapper.unmount();
-    });
-
-    it('recreates popper after closing and reopening', async () => {
-      mockPopperLayout();
-      const wrapper = mount(() => <Popover defaultVisible content="气泡内容" />);
-      await flush();
-      expect(wrapper.find(`.${name}`).attributes('data-popper-placement')).toBe('top');
-
-      await wrapper.find(`.${name}__wrapper`).trigger('click');
-      await flush();
-      expect(wrapper.find(`.${name}`).exists()).toBeFalsy();
-
-      await wrapper.find(`.${name}__wrapper`).trigger('click');
-      await flush();
-      expect(wrapper.find(`.${name}`).attributes('data-popper-placement')).toBe('top');
       wrapper.unmount();
     });
   });

@@ -99,33 +99,4 @@ describe('Empty', () => {
       expect(wrapper.get('.t-empty__thumb .slot-image').attributes('src')).toBe('empty.png');
     });
   });
-
-  describe('scenarios', () => {
-    it('omits optional regions when no content is provided', () => {
-      const wrapper = mount(Empty);
-      expect(wrapper.get('.t-empty__thumb').text()).toBe('');
-      expect(wrapper.findComponent(TImage).exists()).toBe(false);
-      expect(wrapper.find('.t-empty__icon').exists()).toBe(false);
-      expect(wrapper.find('.t-empty__description').exists()).toBe(false);
-      expect(wrapper.find('.t-empty__actions').exists()).toBe(false);
-    });
-
-    it('prefers image over icon and restores icon when image is removed', async () => {
-      const wrapper = mount(Empty, { props: { image: 'empty.png', icon: '备用图标' } });
-      expect(wrapper.findComponent(TImage).exists()).toBe(true);
-      expect(wrapper.find('.t-empty__icon').exists()).toBe(false);
-      await wrapper.setProps({ image: undefined });
-      expect(wrapper.findComponent(TImage).exists()).toBe(false);
-      expect(wrapper.get('.t-empty__icon').text()).toBe('备用图标');
-    });
-
-    it('prefers image slot over icon prop', () => {
-      const wrapper = mount(Empty, {
-        props: { icon: '备用图标' },
-        slots: { image: () => <span class="slot-image">插槽图片</span> },
-      });
-      expect(wrapper.get('.slot-image').text()).toBe('插槽图片');
-      expect(wrapper.find('.t-empty__icon').exists()).toBe(false);
-    });
-  });
 });

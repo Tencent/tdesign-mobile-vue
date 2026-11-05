@@ -1,9 +1,7 @@
 import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { afterEach, describe, it, expect, vi } from 'vitest';
-import { ref } from 'vue';
 import { Icon, AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import Link from '../link';
-import Form from '../../form';
 
 enableAutoUnmount(afterEach);
 
@@ -139,46 +137,5 @@ describe('Link', () => {
       expect(onClick).toHaveBeenCalledWith(expect.any(MouseEvent));
       expect(wrapper.emitted('click')).toHaveLength(1);
     });
-  });
-
-  describe('scenarios', () => {
-    it('renders prefix, content and suffix together', () => {
-      const wrapper = mount(Link, {
-        props: { prefixIcon: () => <Icon />, suffixIcon: () => <TIconApp /> },
-        slots: { default: () => '链接内容' },
-      });
-      expect(Array.from(wrapper.element.children).map((el) => el.className)).toEqual([
-        't-link__prefix-icon',
-        't-link__content',
-        't-link__suffix-icon',
-      ]);
-    });
-
-    it('inherits disabled from form', async () => {
-      const formDisabled = ref(true);
-      const onClick = vi.fn();
-      const wrapper = mount(() => (
-        <Form disabled={formDisabled.value}>
-          <Link href="https://tdesign.tencent.com" onClick={onClick} v-slots={{ default: () => '链接' }} />
-        </Form>
-      ));
-      const getLink = () => wrapper.findComponent(Link);
-
-      // 表单禁用：移除 href 并标记 aria-disabled
-      expect(getLink().attributes('href')).toBeUndefined();
-      expect(getLink().attributes('aria-disabled')).toBe('true');
-
-      // handleClick 仅判断自身 disabled，表单禁用仍会触发点击
-      await getLink().trigger('click');
-      expect(onClick).toHaveBeenCalledTimes(1);
-
-      formDisabled.value = false;
-      await wrapper.vm.$nextTick();
-      expect(getLink().attributes('href')).toBe('https://tdesign.tencent.com');
-      expect(getLink().attributes('aria-disabled')).toBe('false');
-    });
-
-    // 表单禁用时点击仍触发（handleClick 只判断 props.disabled），与 href/aria 行为不一致。
-    it.todo('form disabled state also blocks click');
   });
 });

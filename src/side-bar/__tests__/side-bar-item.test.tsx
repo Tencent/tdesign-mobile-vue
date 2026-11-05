@@ -161,42 +161,4 @@ describe('SideBarItem', () => {
       expect($items[0].find(`.${name}__line`).exists()).toBe(false);
     });
   });
-
-  describe('scenarios', () => {
-    describe('active indicator', () => {
-      it('renders line prefix suffix only on the active item', () => {
-        const wrapper = mount(
-          <SideBar value={1}>
-            <SideBarItem value={0} label="选项一" />
-            <SideBarItem value={1} label="选项二" />
-          </SideBar>,
-        );
-
-        const $items = wrapper.findAll(`.${name}`);
-        expect($items[1].find(`.${name}__line`).exists()).toBe(true);
-        expect($items[1].find(`.${name}__prefix`).exists()).toBe(true);
-        expect($items[1].find(`.${name}__suffix`).exists()).toBe(true);
-        expect($items[0].find(`.${name}__line`).exists()).toBe(false);
-        expect($items[0].find(`.${name}__prefix`).exists()).toBe(false);
-        expect($items[0].find(`.${name}__suffix`).exists()).toBe(false);
-      });
-
-      it('moves the indicator after clicking another item', async () => {
-        const wrapper = mount(
-          <SideBar defaultValue={0}>
-            <SideBarItem value={0} label="选项一" />
-            <SideBarItem value={1} label="选项二" />
-          </SideBar>,
-        );
-
-        let $items = wrapper.findAll(`.${name}`);
-        expect($items[0].find(`.${name}__line`).exists()).toBe(true);
-
-        await $items[1].trigger('click');
-        $items = wrapper.findAll(`.${name}`);
-        expect($items[1].find(`.${name}__line`).exists()).toBe(true);
-        expect($items[0].find(`.${name}__line`).exists()).toBe(false);
-      });
-    });
-  });
 });

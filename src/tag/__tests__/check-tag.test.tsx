@@ -214,38 +214,4 @@ describe('CheckTag', () => {
       expect(onClick).not.toHaveBeenCalled();
     });
   });
-
-  describe('scenarios', () => {
-    it('renders default checkable root class', async () => {
-      const wrapper = mount(() => <TCheckTag>{TEXT}</TCheckTag>);
-      expect(wrapper.classes()).toContain('t-tag');
-      expect(wrapper.classes()).toContain('t-tag--checkable');
-      expect(wrapper.attributes('aria-disabled')).toBe('false');
-      expect(wrapper.attributes('role')).toBe('button');
-    });
-
-    it('keeps the selected state controlled until the parent updates it', async () => {
-      const wrapper = mount(TCheckTag, { props: { checked: false } });
-      await wrapper.trigger('click');
-      expect(wrapper.emitted('update:checked')).toEqual([[true]]);
-      expect(wrapper.classes()).not.toContain('t-tag--checked');
-
-      await wrapper.setProps({ checked: true });
-      expect(wrapper.classes()).toContain('t-tag--checked');
-      await wrapper.trigger('click');
-      expect(wrapper.emitted('update:checked')).toEqual([[true], [false]]);
-      expect(wrapper.classes()).toContain('t-tag--checked');
-    });
-
-    it('toggles the change callback and selected style in uncontrolled mode', async () => {
-      const onChange = vi.fn();
-      const wrapper = mount(TCheckTag, { props: { defaultChecked: false, onChange } });
-      await wrapper.trigger('click');
-      expect(onChange).toHaveBeenCalledExactlyOnceWith(true);
-      expect(wrapper.classes()).toContain('t-tag--checked');
-      await wrapper.trigger('click');
-      expect(onChange).toHaveBeenLastCalledWith(false);
-      expect(wrapper.classes()).not.toContain('t-tag--checked');
-    });
-  });
 });

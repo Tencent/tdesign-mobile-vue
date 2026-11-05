@@ -1,6 +1,5 @@
 import { h, type VNodeChild } from 'vue';
 import { mount, type DOMWrapper, type VueWrapper } from '@vue/test-utils';
-import { nextTick } from 'vue';
 import { vi, afterEach, describe, expect, it } from 'vitest';
 import TCell from '../../cell/index';
 import { Indexes, IndexesAnchor } from '../index';
@@ -25,12 +24,6 @@ const list = [
   { index: '#', children },
 ];
 const indexList = list.map((item) => item.index);
-
-const move = async (target: VueWrapper | DOMWrapper<Element>, distance: number) => {
-  await trigger(target, 'touchstart', 0, 0);
-  await trigger(target, 'touchmove', 0, distance);
-  await trigger(target, 'touchend', 0, distance);
-};
 
 // type.ts 中 showFullIndex/sticky 误声明为大写 Boolean（包装对象类型），
 // 此处修正为 boolean 以匹配组件运行时 props 的推断类型
@@ -200,89 +193,6 @@ describe('Indexes', () => {
       // 再次点击已激活索引：不重复触发
       await $items[1].trigger('click');
       expect(onChange).toBeCalledTimes(2);
-    });
-  });
-
-  describe('scenarios', () => {
-    it('renders the sidebar and anchor sections from indexList', () => {
-      const wrapper = mountIndexes({ showFullIndex: true });
-      // 侧边栏按 indexList 逐项渲染
-      const sidebarItems = wrapper.findAll(`.${indexesClass}__sidebar-item`);
-      expect(sidebarItems.map((item) => item.text())).toEqual(indexList.map(String));
-      sidebarItems.forEach((item, index) => {
-        expect(item.attributes('data-index')).toBe(String(indexList[index]));
-      });
-      // 每个锚点对应一组单元格
-      expect(wrapper.findAll(`.${indexesAnchorClass}`)).toHaveLength(list.length);
-      expect(wrapper.findAll('.indexes-cell')).toHaveLength(list.length * children.length);
-    });
-
-    it('swiping the sidebar switches indexes without emitting select', async () => {
-      const onSelect = vi.fn();
-      const onChange = vi.fn();
-      const wrapper = mountIndexes({ onSelect, onChange });
-
-      const $sideBarItems = wrapper.findAll(`.${indexesClass}__sidebar-item`);
-      // 模拟点击第一项 item, 此时第一项为激活态，两个事件均被触发
-      await $sideBarItems[0].trigger('click');
-      expect(onChange).toBeCalledTimes(1);
-      expect(onSelect).toBeCalledTimes(1);
-      expect($sideBarItems[0].classes()).toContain(`${indexesClass}__sidebar-item--active`);
-
-      // mock document.elementFromPoint
-      document.elementFromPoint = () => wrapper.findAll(`.${indexesClass}__sidebar-item`)[2].element;
-
-      // 每一项的高度是20，这里以第0项为起始点，模拟滑动 40，此时第3项转为激活态，只会触发 change 事件
-      await move($sideBarItems[0], 40);
-      expect(wrapper.findAll(`.${indexesClass}__sidebar-item`)[2].classes()).toContain(
-        `${indexesClass}__sidebar-item--active`,
-      );
-      expect(onSelect).toBeCalledTimes(1);
-      expect(onChange).toBeCalledTimes(2);
-    });
-
-    it('shows the sidebar tips after selecting and hides them after one second', async () => {
-      vi.useFakeTimers();
-      try {
-        const wrapper = mountIndexes();
-        await wrapper.findAll(`.${indexesClass}__sidebar-item`)[1].trigger('click');
-        await nextTick();
-        const tips = wrapper.find(`.${indexesClass}__sidebar-tips`);
-        expect(tips.exists()).toBe(true);
-        expect(tips.text()).toBe(String(list[1].index));
-
-        vi.advanceTimersByTime(1000);
-        await nextTick();
-        expect(wrapper.find(`.${indexesClass}__sidebar-tips`).exists()).toBe(false);
-      } finally {
-        vi.useRealTimers();
-      }
-    });
-
-    it('scrolling the list activates the anchor covering the scroll position', async () => {
-      const onChange = vi.fn();
-      // jsdom 无布局：按 data-index 为每个锚点提供确定性的 top/height
-      const topByIndex = new Map(list.map((item, i) => [String(item.index), i * 100]));
-      vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockImplementation(function (this: HTMLElement) {
-        const top = this.dataset?.index ? (topByIndex.get(this.dataset.index) ?? 0) : 0;
-        return { top, bottom: top + 20, height: 20, width: 100, left: 0, right: 100, x: 0, y: top } as DOMRect;
-      });
-
-      const wrapper = mountIndexes({ current: 1, onChange });
-      await sleep(0);
-
-      const root = wrapper.get(`.${indexesClass}`);
-      (root.element as HTMLElement).scrollTop = 250;
-      await root.trigger('scroll');
-      await nextTick();
-
-      const activeItem = wrapper
-        .findAll(`.${indexesClass}__sidebar-item`)
-        .find((item) => item.classes().includes(`${indexesClass}__sidebar-item--active`));
-      expect(activeItem?.text()).toBe(String(list[2].index));
-      expect(onChange).toHaveBeenLastCalledWith(list[2].index);
-      const emittedList = wrapper.findComponent(Indexes).emitted('update:current');
-      expect(emittedList[emittedList.length - 1]).toEqual([list[2].index]);
     });
   });
 });

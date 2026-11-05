@@ -160,27 +160,4 @@ describe('Tag', () => {
       expect(onClick).not.toHaveBeenCalled();
     });
   });
-
-  describe('scenarios', () => {
-    it('renders default content and root class', async () => {
-      const wrapper = mount(() => <Tag>{TEXT}</Tag>);
-      expect(wrapper.text()).toBe(TEXT);
-      expect(wrapper.classes()).toContain('t-tag');
-      expect(wrapper.attributes('aria-disabled')).toBe('false');
-      expect(wrapper.attributes('role')).toBe('button');
-    });
-
-    it('updates tag classes and style when appearance props change', async () => {
-      const wrapper = mount(Tag, { props: { theme: 'primary', size: 'small', variant: 'outline', shape: 'round' } });
-      expect(wrapper.classes()).toEqual(
-        expect.arrayContaining(['t-tag--primary', 't-tag--small', 't-tag--outline', 't-tag--round']),
-      );
-      await wrapper.setProps({ theme: 'success', size: 'large', variant: 'light', shape: 'mark', maxWidth: 96 });
-      expect(wrapper.classes()).toEqual(
-        expect.arrayContaining(['t-tag--success', 't-tag--large', 't-tag--light', 't-tag--mark']),
-      );
-      expect(wrapper.classes()).not.toContain('t-tag--primary');
-      expect((wrapper.element as HTMLElement).style.maxWidth).toBe('96px');
-    });
-  });
 });

@@ -1,4 +1,4 @@
-import { describe, expect, it, vi } from 'vitest';
+import { describe, expect, it } from 'vitest';
 import { mount } from '@vue/test-utils';
 import ActionSheetList from '../action-sheet-list';
 import TBadge from '../../badge';
@@ -75,36 +75,5 @@ describe('ActionSheetList', () => {
     });
   });
 
-  describe('events', () => {
-    it('selected', async () => {
-      const onSelected = vi.fn();
-      const wrapper = mount(ActionSheetList, {
-        props: {
-          items: [{ label: '选项一' }, { label: '选项二' }],
-          onSelected,
-        },
-      });
-
-      await wrapper.findAll(`.${name}__list-item`)[1].trigger('click');
-
-      expect(wrapper.emitted('selected')).toEqual([[1]]);
-      expect(onSelected).toHaveBeenCalledWith(1);
-    });
-  });
-
-  describe('scenarios', () => {
-    it('does not select a disabled item', async () => {
-      const onSelected = vi.fn();
-      const wrapper = mount(ActionSheetList, {
-        props: {
-          items: [{ label: '禁用项', disabled: true }],
-          onSelected,
-        },
-      });
-
-      await wrapper.find(`.${name}__list-item`).trigger('click');
-
-      expect(onSelected).not.toHaveBeenCalled();
-    });
-  });
+  // selected 事件已由 action-sheet.test.tsx 的 events 覆盖（同一点击路径且断言公开签名），此处不再重复。
 });

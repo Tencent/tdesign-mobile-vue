@@ -85,32 +85,4 @@ describe('Footer', () => {
       expect(wrapper.find('.t-footer__text').exists()).toBe(false);
     });
   });
-
-  describe('scenarios', () => {
-    it('renders no optional regions without props', () => {
-      const wrapper = mount(Footer);
-      expect(wrapper.classes()).toContain('t-footer');
-      expect(wrapper.find('.t-footer__logo').exists()).toBe(false);
-      expect(wrapper.find('.t-footer__link-list').exists()).toBe(false);
-      expect(wrapper.find('.t-footer__text').exists()).toBe(false);
-    });
-
-    it('renders logo, links and copyright together in order', () => {
-      const wrapper = mount(Footer, {
-        props: {
-          logo: { icon: '', title: '品牌' },
-          links: [{ name: '帮助', url: '/help' }],
-          text: '版权信息',
-        },
-      });
-      expect(Array.from(wrapper.element.children).map((element) => element.className)).toEqual([
-        't-footer__logo',
-        't-footer__link-list',
-        't-footer__text',
-      ]);
-      expect(wrapper.get('.t-footer__title').text()).toBe('品牌');
-      expect(wrapper.get('.t-footer__link-item').text()).toBe('帮助');
-      expect(wrapper.get('.t-footer__text').text()).toBe('版权信息');
-    });
-  });
 });

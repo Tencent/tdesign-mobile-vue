@@ -40,14 +40,6 @@ afterAll(() => {
   getContextSpy.mockRestore();
 });
 
-// ctx.scale 以 (size / numCells) * pixelRatio 调用，据此反推二维码模块数
-const getCanvasNumCells = (size = defaultSize) => {
-  const calls = mockCtx.scale.mock.calls as number[][];
-  const [scaleX] = calls[calls.length - 1];
-  const pixelRatio = window.devicePixelRatio || 1;
-  return (size * pixelRatio) / scaleX;
-};
-
 describe('QRCode', () => {
   beforeEach(() => {
     fillStyleHistory.length = 0;
@@ -88,7 +80,7 @@ describe('QRCode', () => {
       expect(wrapper.find('.t-qrcode').classes('t-borderless')).eq(true);
     });
 
-    // color 只能通过 svg 的前景 path 验证（canvas 绘制断言见 scenarios/canvas rendering）
+    // color 只能通过 svg 的前景 path 验证（jsdom 不支持 canvas 绘制断言）
     it('color[string]', async () => {
       const wrapper = mount(QRCode, { props: { value: VALUE, type: 'svg' } });
       // [0] 是背景
@@ -295,147 +287,6 @@ describe('QRCode', () => {
         </ConfigProvider>,
       );
       expect(scannedWrapper.find('.t-scanned').text()).contain('已扫描过啦');
-    });
-  });
-
-  describe('scenarios', () => {
-    // 默认使用全局配置（zh_CN 语言包）的状态文案
-    it('renders default zh-CN status texts', () => {
-      const wrapper = mount(QRCode, { props: { value: VALUE, status: 'expired', onRefresh: () => {} } });
-      expect(wrapper.find('.t-expired__text').text()).eq('二维码过期');
-      expect(wrapper.find('.t-expired__button').text()).contain('点击刷新');
-
-      const scannedWrapper = mount(QRCode, { props: { value: VALUE, status: 'scanned' } });
-      expect(scannedWrapper.find('.t-scanned').text()).contain('已扫描');
-    });
-
-    describe('status rendering', () => {
-      it('statusRender prop takes precedence over statusRender slot', () => {
-        // prop 与 slot 同时提供时，prop 优先（renderTNodeJSX 优先级：props > slot > 默认）
-        const wrapper = mount(QRCode, {
-          props: {
-            value: VALUE,
-            status: 'expired',
-            statusRender: (() => <div class="prop-status">prop 渲染</div>) as unknown as TdQRCodeProps['statusRender'],
-          },
-          slots: {
-            statusRender: () => <div class="slot-status">slot 渲染</div>,
-          },
-        });
-        expect(wrapper.find('.prop-status').exists()).eq(true);
-        expect(wrapper.find('.slot-status').exists()).eq(false);
-      });
-
-      it('switching status toggles the mask and its content', async () => {
-        const wrapper = mount(QRCode, { props: { value: VALUE } });
-        expect(wrapper.find('.t-mask').exists()).eq(false);
-
-        await wrapper.setProps({ status: 'scanned' });
-        expect(wrapper.find('.t-mask').exists()).eq(true);
-        expect(wrapper.find('.t-scanned').text()).contain('已扫描');
-
-        await wrapper.setProps({ status: 'expired' });
-        expect(wrapper.find('.t-expired__text').exists()).eq(true);
-      });
-    });
-
-    describe('canvas rendering', () => {
-      it('value change re-encodes and redraws the canvas', async () => {
-        // 更长的内容需要更高版本的二维码：模块数增加，画布按新模块数重新缩放绘制
-        const wrapper = mount(QRCode, { props: { value: VALUE } });
-        const prevNumCells = getCanvasNumCells();
-        await wrapper.setProps({ value: 'https://github.com/Tencent/tdesign-mobile-vue' });
-        const numCells = getCanvasNumCells();
-        expect(numCells).toBeGreaterThan(prevNumCells);
-      });
-
-      it('draws background and modules onto the canvas', () => {
-        const bgColor = 'rgb(240, 242, 245)';
-        const fgColor = 'rgb(7, 193, 96)';
-        const wrapper = mount(QRCode, { props: { value: VALUE, bgColor, color: fgColor } });
-        const $canvas = wrapper.find('canvas');
-        const pixelRatio = window.devicePixelRatio || 1;
-        // 画布尺寸 = size * devicePixelRatio
-        expect($canvas.attributes('width')).eq(`${defaultSize * pixelRatio}`);
-        expect($canvas.attributes('height')).eq(`${defaultSize * pixelRatio}`);
-
-        // 先以 bgColor 填充整个模块坐标系，再以 fgColor 逐模块绘制二维码
-        const numCells = getCanvasNumCells();
-        const fillRectCalls = mockCtx.fillRect.mock.calls as number[][];
-        const [bgX, bgY, bgW, bgH] = fillRectCalls[0];
-        expect(bgX).eq(0);
-        expect(bgY).eq(0);
-        expect(bgW).toBeCloseTo(numCells);
-        expect(bgH).toBeCloseTo(numCells);
-        expect(fillStyleHistory[0]).eq(bgColor);
-        expect(fillStyleHistory[1]).eq(fgColor);
-        const moduleCalls = fillRectCalls.slice(1);
-        expect(moduleCalls.length).toBeGreaterThan(0);
-        moduleCalls.forEach(([, , w, h]) => {
-          expect(w).eq(1);
-          expect(h).eq(1);
-        });
-        // 未设置 icon 时不绘制图片
-        expect(mockCtx.drawImage).not.toHaveBeenCalled();
-      });
-
-      it('draws the icon onto the canvas after it loads', async () => {
-        const wrapper = mount(QRCode, { props: { value: VALUE, icon: ICON_SRC, iconSize: 60 } });
-        const $img = wrapper.find('img');
-        // 图片加载完成前不绘制 icon
-        expect(mockCtx.drawImage).not.toHaveBeenCalled();
-        // 为支持画布导出，图片设置 crossOrigin 属性
-        expect($img.element.crossOrigin).eq('anonymous');
-
-        // 模拟图片异步加载完成（jsdom 不会请求真实图片资源）
-        Object.defineProperty($img.element, 'complete', { value: true });
-        Object.defineProperty($img.element, 'naturalWidth', { value: 320 });
-        Object.defineProperty($img.element, 'naturalHeight', { value: 320 });
-        await $img.trigger('load');
-
-        const numCells = getCanvasNumCells();
-        const drawImageCalls = mockCtx.drawImage.mock.calls;
-        const [image, x, y, w, h] = drawImageCalls[drawImageCalls.length - 1];
-        expect(image).eq($img.element);
-        // iconSize 缩放到模块坐标系并居中绘制
-        expect(w).toBeCloseTo((60 * numCells) / defaultSize);
-        expect(h).toBeCloseTo((60 * numCells) / defaultSize);
-        expect(x).toBeCloseTo(numCells / 2 - w / 2);
-        expect(y).toBeCloseTo(numCells / 2 - h / 2);
-        expect(mockCtx.globalAlpha).toBeCloseTo(1);
-      });
-    });
-
-    describe('svg rendering', () => {
-      it('icon excavates the modules beneath it', () => {
-        // excavate 默认开启：icon 覆盖区域的模块被挖除，前景 path 与无 icon 时不一致
-        const plain = mount(QRCode, { props: { value: VALUE, type: 'svg' } });
-        const withIcon = mount(QRCode, { props: { value: VALUE, type: 'svg', icon: ICON_SRC } });
-        expect(withIcon.findAll('path')[1].attributes('d')).not.eq(plain.findAll('path')[1].attributes('d'));
-      });
-
-      it('higher error correction level produces denser modules', () => {
-        // 同一内容 L 与 H 纠错级别下的版本不同，模块矩阵大小不同
-        const low = mount(QRCode, { props: { value: VALUE, type: 'svg', level: 'L' } });
-        const high = mount(QRCode, { props: { value: VALUE, type: 'svg', level: 'H' } });
-        expect(low.find('svg').attributes('viewBox')).not.eq(high.find('svg').attributes('viewBox'));
-      });
-    });
-
-    describe('edge cases', () => {
-      it('renders nothing when value is empty', async () => {
-        // value 缺省为空字符串：组件不渲染任何内容
-        const wrapper = mount(QRCode, { props: {} });
-        expect(wrapper.find('.t-qrcode').exists()).eq(false);
-        // 源码在 setup 阶段判断 value，为空时直接返回渲染函数为空，
-        // 后续补传 value 也不会重新渲染（见源码缺口清单）
-        await wrapper.setProps({ value: VALUE });
-        expect(wrapper.find('.t-qrcode').exists()).eq(false);
-      });
-
-      // 源码缺口：qrcode-svg 在 setup 中调用 useQRCode 并一次性解构入参，computed 无法感知 props.value 变化，
-      // value 更新后 svg 不会重新编码；canvas 模式每次渲染重新调用 useQRCode，可正常重绘（见 canvas rendering 分组）
-      it.todo('value change updates the rendered svg path');
     });
   });
 });

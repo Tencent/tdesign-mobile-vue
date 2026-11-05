@@ -38,11 +38,4 @@ describe('Row', () => {
       expect(wrapper.findComponent(Col).text()).toBe('内容');
     });
   });
-
-  describe('scenarios', () => {
-    // provide 传入的是普通对象（gutter 为初始值快照），更新 gutter 不会同步已有子列内边距。
-    it.todo('updates child column padding when gutter changes');
-    // 带单位字符串 gutter 计算为 NaN，无法用于 rem/em 等单位。
-    it.todo('gutter supports css unit strings');
-  });
 });

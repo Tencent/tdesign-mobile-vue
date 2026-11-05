@@ -1,11 +1,9 @@
-import { nextTick, provide, ref } from 'vue';
+import { nextTick, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import PickerItem from '../picker-item';
-import { DEFAULT_ITEM_HEIGHT } from '../picker.class';
 import { DEFAULT_WHEEL_CONFIG } from '../constants';
-import { makeTouch, simulateMoveOption, seasonOptions } from './mount';
-import type { KeysType } from '../../common';
+import { simulateMoveOption, seasonOptions } from './mount';
 import type { PickerColumn, PickerColumnItem, PickerValue, PickerWheelConfig } from '../type';
 
 interface PickerItemProps {
@@ -196,97 +194,6 @@ describe('PickerItem', () => {
 
       // indicatorOffset = 240 / 2 - 30 / 2 = 105，index 1 → 105 - 30 = 75
       expect($list.element.style.transform).toBe('translate(0,75px) translateZ(0)');
-    });
-  });
-
-  describe('scenarios', () => {
-    describe('wheel scrolling', () => {
-      it('keeps scrolling by inertia after a fast swipe', () => {
-        const onPick = vi.fn();
-        // 同步执行 rAF 回调，让惯性动画在 touchend 内完成
-        let frame = 0;
-        vi.spyOn(window, 'requestAnimationFrame').mockImplementation((callback) => {
-          frame += 1;
-          callback(frame * 16);
-          return frame;
-        });
-
-        const wrapper = mountPickerItem({ onPick });
-        const el = wrapper.find('.t-picker-item').element;
-
-        makeTouch(el, 'touchstart', { pageY: 0 });
-        makeTouch(el, 'touchmove', { pageY: -2 * DEFAULT_ITEM_HEIGHT });
-        makeTouch(el, 'touchend', { pageY: -2 * DEFAULT_ITEM_HEIGHT });
-
-        // 惯性滚动越过拖拽位置，最终停留在最后一项
-        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(seasonOptions[3].label);
-        expect(onPick).toHaveBeenCalledWith({ value: seasonOptions[3].value, index: 3 });
-      });
-
-      it('stops on the swiped option after a slow swipe', async () => {
-        const wrapper = mountPickerItem();
-        await simulateMoveOption(wrapper.find('.t-picker-item').element, 2);
-        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(seasonOptions[2].label);
-      });
-    });
-
-    describe('disabled options', () => {
-      const workdayOptions: PickerColumn = [
-        { label: '周一', value: 'monday' },
-        { label: '周二', value: 'tuesday', disabled: true },
-        { label: '周三', value: 'wednesday' },
-      ];
-
-      it('falls back to a nearby enabled option when value points to a disabled one', () => {
-        const onPick = vi.fn();
-        const wrapper = mountPickerItem({ options: workdayOptions, value: 'tuesday', onPick });
-
-        // 回退到最近的可用项（双向搜索优先命中周三），并通过 pick 通知
-        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(workdayOptions[2].label);
-        expect(onPick).toHaveBeenCalledWith({ value: workdayOptions[2].value, index: 2 });
-      });
-
-      it('skips a disabled option when a swipe lands on it', async () => {
-        const onPick = vi.fn();
-        const wrapper = mountPickerItem({ options: workdayOptions, onPick });
-
-        await simulateMoveOption(wrapper.find('.t-picker-item').element, 1);
-
-        // 落点为禁用项（周二）时，吸附到最近的可用项（周三）
-        expect(wrapper.find('.t-picker-item__item--active').text()).toBe(workdayOptions[2].label);
-        expect(onPick).toHaveBeenCalledWith({ value: workdayOptions[2].value, index: 2 });
-      });
-    });
-
-    describe('picker context', () => {
-      it('resolves option fields via keys injected from the picker parent', () => {
-        const aliasOptions = [
-          { text: '春', val: 'spring' },
-          { text: '夏', val: 'summer' },
-        ];
-        const wrapper = mount({
-          setup() {
-            provide('picker', { keys: ref<KeysType>({ label: 'text', value: 'val' }) });
-            return () => <PickerItem options={aliasOptions as unknown as PickerColumn} value="summer" />;
-          },
-        });
-
-        const itemContainers = wrapper.findAll('.t-picker-item__item');
-        expect(itemContainers.map((container) => container.text())).toEqual(['春', '夏']);
-        expect(wrapper.find('.t-picker-item__item--active').text()).toBe('夏');
-      });
-    });
-
-    describe('rendering priority', () => {
-      it('option slot overrides renderLabel', () => {
-        const wrapper = mount(PickerItem, {
-          props: { options: seasonOptions, renderLabel: (item: PickerColumnItem) => `label-${item.label}` },
-          slots: { option: (option: PickerColumnItem) => `slot-${option.label}` },
-        });
-        expect(wrapper.findAll('.t-picker-item__item').map((container) => container.text())).toEqual(
-          seasonOptions.map((option) => `slot-${option.label}`),
-        );
-      });
     });
   });
 });

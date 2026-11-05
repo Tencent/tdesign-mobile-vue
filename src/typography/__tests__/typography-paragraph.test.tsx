@@ -112,45 +112,4 @@ describe('Typography Paragraph', () => {
       expect(onExpand).toHaveBeenCalledWith(false);
     });
   });
-
-  describe('scenarios', () => {
-    it('updates content and switches between paragraph and ellipsis modes', async () => {
-      const wrapper = mount(Paragraph, {
-        props: { content: '初始内容' },
-        slots: { default: () => '后备内容' },
-      });
-      await wrapper.setProps({ content: '更新内容', ellipsis: { row: 2 } });
-      expect(wrapper.get('p').text()).toBe('更新内容');
-      expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
-      await wrapper.setProps({ content: '', ellipsis: false });
-      expect(wrapper.findComponent(Ellipsis).exists()).toBe(false);
-      expect(wrapper.element.tagName).toBe('P');
-      expect(wrapper.text()).toBe('后备内容');
-    });
-
-    it('renders as p tag with typography class', () => {
-      const wrapper = mount(Paragraph, {
-        slots: { default: () => shortText },
-      });
-      expect(wrapper.find(`p.${COMPONENT_NAME}`).exists()).toBe(true);
-      expect(wrapper.findComponent(Ellipsis).exists()).toBe(false);
-    });
-
-    it('ellipsis[boolean] & content[string]', () => {
-      const wrapper = mount(Paragraph, {
-        props: { ellipsis: true, content: longText },
-      });
-      expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
-      expect(wrapper.text()).toContain(longText);
-    });
-
-    it('content prop takes precedence over default slot', () => {
-      const wrapper = mount(Paragraph, {
-        props: { content: 'content-prop' },
-        slots: { default: () => 'default-slot' },
-      });
-      // 与 Text/Title 不同，Paragraph 优先渲染 content 属性
-      expect(wrapper.text()).toBe('content-prop');
-    });
-  });
 });

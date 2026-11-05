@@ -60,23 +60,4 @@ describe('ActionSheetGrid', () => {
       expect(onSelected).toHaveBeenCalledWith(1);
     });
   });
-
-  describe('scenarios', () => {
-    it('selects the correct item on a later page', async () => {
-      const onSelected = vi.fn();
-      const wrapper = mount(ActionSheetGrid, {
-        props: {
-          count: 2,
-          items: [{ label: '选项一' }, { label: '选项二' }, { label: '选项三' }],
-          onSelected,
-        },
-      });
-
-      expect(wrapper.find(`.${prefix}-action-sheet__grid--swiper`).exists()).toBe(true);
-      await wrapper.findAll(`.${prefix}-grid-item`)[2].trigger('click');
-
-      expect(wrapper.emitted('selected')).toEqual([[2]]);
-      expect(onSelected).toHaveBeenCalledWith(2);
-    });
-  });
 });

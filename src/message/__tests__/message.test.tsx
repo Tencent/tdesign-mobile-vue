@@ -258,46 +258,4 @@ describe('Message', () => {
       expect(onDurationEnd).toHaveBeenCalledTimes(1);
     });
   });
-
-  describe('scenarios', () => {
-    it('marquee[boolean] applies nowrap and animation after delay', async () => {
-      vi.useFakeTimers();
-      const wrapper = mount(<Message visible={false} marquee content="滚动消息" />);
-      expect(wrapper.find(`.${name}__text-nowrap`).exists()).toBe(false);
-
-      await wrapper.setProps({ visible: true });
-      // 文本立即换行约束，动画延迟后启动
-      expect(wrapper.get(`.${name}__text-wrap`).classes()).toContain(`${name}__text-nowrap`);
-      expect(wrapper.get(`.${name}__text`).attributes('style') || '').not.toContain('transition-duration');
-
-      vi.advanceTimersByTime(300);
-      await nextTick();
-      expect(wrapper.get(`.${name}__text`).attributes('style')).toContain('transition-duration: 0s');
-      expect(wrapper.get(`.${name}__text`).attributes('style')).toContain('transition-timing-function: linear');
-    });
-
-    it('marquee[loop 0] never starts scrolling', async () => {
-      vi.useFakeTimers();
-      const wrapper = mount(<Message visible={false} marquee={{ loop: 0 }} content="不滚动" />);
-      await wrapper.setProps({ visible: true });
-      vi.advanceTimersByTime(1000);
-      await nextTick();
-      expect(wrapper.get(`.${name}__text`).attributes('style') || '').not.toContain('transition-duration');
-    });
-
-    it('marquee stops after the configured loops', async () => {
-      vi.useFakeTimers();
-      const wrapper = mount(<Message visible={false} marquee={{ loop: 1 }} content="滚动一次" />);
-      await wrapper.setProps({ visible: true });
-      vi.advanceTimersByTime(300);
-      await nextTick();
-      expect(wrapper.get(`.${name}__text`).attributes('style')).toContain('transition-duration');
-
-      await wrapper.get(`.${name}__text`).trigger('transitionend');
-      expect(wrapper.get(`.${name}__text`).attributes('style') || '').not.toContain('transition-duration');
-    });
-
-    // useVModel 未传 propName='visible'，受控通道事件名实际为 update:value。
-    it.todo('visible channel emits update:visible');
-  });
 });

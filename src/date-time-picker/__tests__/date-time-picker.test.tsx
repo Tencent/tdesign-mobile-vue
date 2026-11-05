@@ -1,7 +1,6 @@
 import { nextTick, ref } from 'vue';
 import { mount, type VueWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import dayjs from 'dayjs';
 
 import DateTimePicker from '../date-time-picker';
 import ConfigProvider from '../../config-provider';
@@ -30,7 +29,6 @@ const simulateMoveOption = async (optionContainerEl: Element, distance: number) 
 };
 
 const prefix = 't';
-const name = `${prefix}-date-time-picker`;
 
 const renderLabel = (type: string, value: number): string => {
   if (type === 'year') {
@@ -441,10 +439,5 @@ describe('DateTimePicker', () => {
       expect(columns[1].find(`.${prefix}-picker-item__item--active`).text()).toContain('月号');
       expect(columns[2].find(`.${prefix}-picker-item__item--active`).text()).toContain('日号');
     });
-  });
-
-  describe('scenarios', () => {
-    // modelValue 在 setup 中被复制到独立 ref，外部更新不会同步到日期列。
-    it.todo('external modelValue changes update the selected date');
   });
 });

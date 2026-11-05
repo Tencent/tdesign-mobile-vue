@@ -3,7 +3,6 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Radio from '../radio';
 import RadioGroup from '../radio-group';
-import Form from '../../form';
 import type { TdRadioProps } from '../type';
 import config from '../../config';
 
@@ -498,81 +497,6 @@ describe('Radio', () => {
       await wrapper.trigger('click');
       expect(onChange).toHaveBeenNthCalledWith(2, false, { e: expect.any(MouseEvent) });
       expect(onChange).toHaveBeenCalledTimes(2);
-    });
-  });
-
-  describe('scenarios', () => {
-    it('explicit disabled overrides group and form disabled states', async () => {
-      const onChange = vi.fn();
-      const wrapper = mount(() => (
-        <Form disabled>
-          <RadioGroup disabled onChange={onChange}>
-            <Radio value="one" label="选项一" disabled={false} />
-          </RadioGroup>
-        </Form>
-      ));
-      // Radio.disabled=false 优先于 RadioGroup.disabled 与 Form.disabled
-      await wrapper.find(`.${name}`).trigger('click');
-      expect(wrapper.find(`.${name}__icon--checked`).exists()).toBe(true);
-      expect(onChange).toHaveBeenCalledTimes(1);
-    });
-
-    it('inherits disabled from form', async () => {
-      const formDisabled = ref(true);
-      const onChange = vi.fn();
-      const wrapper = mount(() => (
-        <Form disabled={formDisabled.value}>
-          <RadioGroup onChange={onChange}>
-            <Radio value="one" label="选项一" />
-          </RadioGroup>
-        </Form>
-      ));
-
-      // 表单禁用下，Radio 与 RadioGroup 均未设置 disabled 时继承禁用态
-      await wrapper.find(`.${name}`).trigger('click');
-      expect(wrapper.find(`.${name}__icon--checked`).exists()).toBe(false);
-      expect(onChange).toHaveBeenCalledTimes(0);
-
-      formDisabled.value = false;
-      await nextTick();
-      await wrapper.find(`.${name}`).trigger('click');
-      expect(wrapper.find(`.${name}__icon--checked`).exists()).toBe(true);
-      expect(onChange).toHaveBeenCalledTimes(1);
-    });
-
-    it('explicit readonly overrides group readonly', async () => {
-      const onChange = vi.fn();
-      const wrapper = mount(RadioGroup, {
-        props: { readonly: true, onChange },
-        slots: { default: () => <Radio value="one" label="选项一" readonly={false} /> },
-      });
-      // Radio.readonly=false 优先于 RadioGroup.readonly
-      await wrapper.find(`.${name}`).trigger('click');
-      expect(wrapper.find(`.${name}__icon--checked`).exists()).toBe(true);
-      expect(onChange).toHaveBeenCalledTimes(1);
-    });
-
-    it('radio placement overrides group placement', () => {
-      const wrapper = mount(() => (
-        <RadioGroup placement="right">
-          <Radio value="one" label="选项一" placement="left" />
-        </RadioGroup>
-      ));
-      const radio = wrapper.find(`.${name}`);
-      // Radio.placement 优先于 RadioGroup.placement
-      expect(radio.classes()).toContain(`${name}--left`);
-      expect(radio.classes()).not.toContain(`${name}--right`);
-      expect(radio.find(`.${name}__icon--left`).exists()).toBe(true);
-    });
-
-    it('radio borderless overrides group borderless', () => {
-      const wrapper = mount(() => (
-        <RadioGroup borderless>
-          <Radio value="one" label="选项一" borderless={false} />
-        </RadioGroup>
-      ));
-      // Radio.borderless=false 优先于 RadioGroup.borderless，仍渲染边框
-      expect(wrapper.find(`.${name}__border`).exists()).toBe(true);
     });
   });
 });

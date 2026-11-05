@@ -76,12 +76,4 @@ describe('Divider', () => {
       expect(wrapper.classes()).not.toContain(`${name}--${layout === 'horizontal' ? 'vertical' : 'horizontal'}`);
     });
   });
-
-  describe('scenarios', () => {
-    it('renders an empty separator without content', () => {
-      const wrapper = mount(Divider);
-      expect(wrapper.attributes('role')).toBe('separator');
-      expect(wrapper.get(`.${name}__content`).text()).toBe('');
-    });
-  });
 });

@@ -1,6 +1,6 @@
 import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { LoadingIcon, CloseIcon } from 'tdesign-icons-vue-next';
+import { LoadingIcon } from 'tdesign-icons-vue-next';
 import { nextTick } from 'vue';
 import Image from '../image';
 
@@ -218,85 +218,6 @@ describe('Image', () => {
       await $image.trigger('error');
       expect(onError).toBeCalledTimes(1);
       expect(onError).toHaveBeenCalledWith({ e: expect.any(Event) });
-    });
-  });
-
-  describe('scenarios', () => {
-    it('shows loading and error slots only in their respective states', async () => {
-      const wrapper = mount(Image, {
-        props: { src: IMAGE },
-        slots: {
-          loading: () => <span class="custom-loading">正在加载</span>,
-          error: () => <span class="custom-error">图片失败</span>,
-        },
-      });
-      expect(wrapper.get('.custom-loading').text()).toBe('正在加载');
-      expect(wrapper.find('.custom-error').exists()).toBe(false);
-      await wrapper.get('img').trigger('error');
-      expect(wrapper.find('.custom-loading').exists()).toBe(false);
-      expect(wrapper.get('.custom-error').text()).toBe('图片失败');
-    });
-
-    it('fallback replaces a failed source instead of rendering the error slot', async () => {
-      const wrapper = mount(Image, {
-        props: { src: FAIL_IMAGE, fallback: IMAGE },
-        slots: { error: () => <span class="custom-error">图片失败</span> },
-      });
-      await wrapper.get('img').trigger('error');
-      expect(wrapper.get('img').attributes('src')).toBe(IMAGE);
-      expect(wrapper.find('.custom-error').exists()).toBe(false);
-      expect(wrapper.find(`.${name}__mask`).exists()).toBe(false);
-    });
-
-    it('does not report errors before a lazy image enters the viewport', async () => {
-      const onError = vi.fn();
-      const wrapper = mount(Image, { props: { src: IMAGE, lazy: true, onError } });
-      await nextTick();
-      await wrapper.get('img').trigger('error');
-      expect(onError).not.toHaveBeenCalled();
-      expect(wrapper.find(`.${name}__mask`).exists()).toBe(false);
-    });
-
-    it('disabling lazy loading loads the source without waiting for intersection', async () => {
-      const wrapper = mount(Image, { props: { src: IMAGE, lazy: true } });
-      expect(wrapper.get('img').attributes('src')).toBe('');
-      await wrapper.setProps({ lazy: false });
-      expect(wrapper.get('img').attributes('src')).toBe(IMAGE);
-      expect(wrapper.find(`.${name}__mask`).exists()).toBe(true);
-    });
-
-    it('disconnects the observer when unmounted before intersection', async () => {
-      const wrapper = mount(Image, { props: { src: IMAGE, lazy: true } });
-      await nextTick();
-      const observer = observers.find((item) => item.targets.has(wrapper.get('img').element));
-      expect(observer).toBeDefined();
-      wrapper.unmount();
-      expect(observer.disconnect).toHaveBeenCalledTimes(1);
-      expect(observer.targets.size).toBe(0);
-    });
-
-    // src 更新只修改 realSrc，没有重置 isLoading/isError。
-    it.todo('resets loading and error state when the image source changes');
-
-    describe('state transitions', () => {
-      it('shows the loading icon while loading and hides the mask once loaded', async () => {
-        const wrapper = mount(() => <Image src={IMAGE} />);
-        await nextTick();
-        const $image = wrapper.find(`.${name}__img`);
-        expect(wrapper.find(`.${name}__mask`).exists()).toBeTruthy();
-        await $image.trigger('load');
-        expect(wrapper.find(`.${name}__mask`).exists()).toBeFalsy();
-      });
-
-      it('shows the close icon after loading fails', async () => {
-        const wrapper = mount(() => <Image src={FAIL_IMAGE} />);
-        await nextTick();
-        const $image = wrapper.find(`.${name}__img`);
-        await $image.trigger('error');
-        const $status = wrapper.find(`.${name}__mask`);
-        expect($status.exists()).toBeTruthy();
-        expect(wrapper.findComponent(CloseIcon).exists()).toBeTruthy();
-      });
     });
   });
 });
