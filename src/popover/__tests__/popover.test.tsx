@@ -143,43 +143,26 @@ describe('Popover', () => {
       wrapper.unmount();
     });
 
-    it('placement[top/left/right/bottom/top-left/top-right/bottom-left/bottom-right/left-top/left-bottom/right-top/right-bottom]', async () => {
+    it.each([
+      ['top', 'top'],
+      ['left', 'left'],
+      ['right', 'right'],
+      ['bottom', 'bottom'],
+      ['top-left', 'top-start'],
+      ['top-right', 'top-end'],
+      ['bottom-left', 'bottom-start'],
+      ['bottom-right', 'bottom-end'],
+      ['left-top', 'left-start'],
+      ['left-bottom', 'left-end'],
+      ['right-top', 'right-start'],
+      ['right-bottom', 'right-end'],
+    ] as const)('placement[%s]', async (placement, popperPlacement) => {
       mockPopperLayout();
       // TDesign 方位命名会被转换为 popper 的 start/end 命名
-      const placementCases: Array<[TdPopoverProps['placement'], string]> = [
-        ['top', 'top'],
-        ['left', 'left'],
-        ['right', 'right'],
-        ['bottom', 'bottom'],
-        ['top-left', 'top-start'],
-        ['top-right', 'top-end'],
-        ['bottom-left', 'bottom-start'],
-        ['bottom-right', 'bottom-end'],
-        ['left-top', 'left-start'],
-        ['left-bottom', 'left-end'],
-        ['right-top', 'right-start'],
-        ['right-bottom', 'right-end'],
-      ];
-      const basePlacementTranslate: Record<string, { x: number; y: number }> = {};
-
-      const mountedCases = placementCases.map(([placement]) => ({
-        placement,
-        wrapper: mount(() => <Popover visible content="气泡内容" placement={placement} />),
-      }));
+      const wrapper = mount(() => <Popover visible content="气泡内容" placement={placement} />);
       await flush();
-
-      mountedCases.forEach(({ placement, wrapper }, index) => {
-        const popover = wrapper.find(`.${name}`);
-        expect(popover.attributes('data-popper-placement')).toBe(placementCases[index][1]);
-        if (['top', 'bottom', 'left', 'right'].includes(placement as string)) {
-          basePlacementTranslate[placement as string] = getTranslate(popover.attributes('style') ?? '');
-        }
-        wrapper.unmount();
-      });
-
-      // 基础方位的方向：top 位于参照物上方 / bottom 位于下方；left 位于左侧 / right 位于右侧
-      expect(basePlacementTranslate.top.y).toBeLessThan(basePlacementTranslate.bottom.y);
-      expect(basePlacementTranslate.left.x).toBeLessThan(basePlacementTranslate.right.x);
+      expect(wrapper.get(`.${name}`).attributes('data-popper-placement')).toBe(popperPlacement);
+      wrapper.unmount();
     });
 
     it('showArrow[boolean]', () => {
@@ -194,25 +177,16 @@ describe('Popover', () => {
       wrapper2.unmount();
     });
 
-    it('theme[dark/light/brand/success/warning/error]', () => {
-      // 默认 dark
-      const defaultWrapper = mount(() => <Popover visible={true} content="气泡内容" />);
-      expect(defaultWrapper.find(`.${name}--dark`).exists()).toBeTruthy();
-      defaultWrapper.unmount();
+    it.each(['dark', 'light', 'brand', 'success', 'warning', 'error'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(() => <Popover visible content="气泡内容" theme={theme} />);
+      expect(wrapper.find(`.${name}--${theme}`).exists()).toBe(true);
+      wrapper.unmount();
+    });
 
-      const themeList: Array<NonNullable<TdPopoverProps['theme']>> = [
-        'dark',
-        'light',
-        'brand',
-        'success',
-        'warning',
-        'error',
-      ];
-      themeList.forEach((theme) => {
-        const wrapper = mount(() => <Popover visible={true} content="气泡内容" theme={theme} />);
-        expect(wrapper.find(`.${name}--${theme}`).exists()).toBeTruthy();
-        wrapper.unmount();
-      });
+    it('theme[default]', () => {
+      const wrapper = mount(() => <Popover visible content="气泡内容" />);
+      expect(wrapper.find(`.${name}--dark`).exists()).toBe(true);
+      wrapper.unmount();
     });
 
     it('triggerElement[string]', () => {

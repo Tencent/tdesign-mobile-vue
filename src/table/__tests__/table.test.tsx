@@ -577,21 +577,19 @@ describe('Table', () => {
       expect(wrapper.find('table').attributes('style')).toContain('width: 800px');
     });
 
-    it('tableLayout[auto/fixed]', () => {
-      (['auto', 'fixed'] as const).forEach((layout) => {
-        const wrapper = mount(TTable, { props: { rowKey: 'index', data, columns, tableLayout: layout } });
-        expect(wrapper.find('table').classes()).toContain(`${name}--layout-${layout}`);
-      });
-      // 默认布局为 fixed
+    it.each(['auto', 'fixed'] as const)('tableLayout[%s]', (layout) => {
+      const wrapper = mount(TTable, { props: { rowKey: 'index', data, columns, tableLayout: layout } });
+      expect(wrapper.find('table').classes()).toContain(`${name}--layout-${layout}`);
+    });
+
+    it('tableLayout[default]', () => {
       const defaultWrapper = mount(TTable, { props: { rowKey: 'index', data, columns } });
       expect(defaultWrapper.find('table').classes()).toContain(`${name}--layout-fixed`);
     });
 
-    it('verticalAlign[top/middle/bottom]', () => {
-      (['top', 'middle', 'bottom'] as const).forEach((verticalAlign) => {
-        const wrapper = mount(TTable, { props: { rowKey: 'index', data, columns, verticalAlign } });
-        expect(wrapper.classes()).toContain(`${prefix}-vertical-align-${verticalAlign}`);
-      });
+    it.each(['top', 'middle', 'bottom'] as const)('verticalAlign[%s]', (verticalAlign) => {
+      const wrapper = mount(TTable, { props: { rowKey: 'index', data, columns, verticalAlign } });
+      expect(wrapper.classes()).toContain(`${prefix}-vertical-align-${verticalAlign}`);
     });
 
     it('applicant[slot]', () => {

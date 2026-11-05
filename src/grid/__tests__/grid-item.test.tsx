@@ -110,18 +110,13 @@ describe('GridItem', () => {
       expect(wrapper.get(`.${name}-item__image b`).text()).toBe('图片插槽');
     });
 
-    it('layout[vertical/horizontal]', () => {
-      const layoutList: TdGridItemProps['layout'][] = ['vertical', 'horizontal'];
-      layoutList.forEach((l) => {
-        const wrapper = mount(() => {
-          return (
-            <Grid>
-              <GridItem layout={l} />
-            </Grid>
-          );
-        });
-        expect(wrapper.find('.t-grid-item').classes()).toContain(`t-grid-item--${l}`);
-      });
+    it.each(['vertical', 'horizontal'] as const)('layout[%s]', (layout) => {
+      const wrapper = mount(() => (
+        <Grid>
+          <GridItem layout={layout} />
+        </Grid>
+      ));
+      expect(wrapper.find('.t-grid-item').classes()).toContain(`t-grid-item--${layout}`);
     });
 
     it('text[string]', () => {

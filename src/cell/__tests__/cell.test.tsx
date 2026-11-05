@@ -16,12 +16,9 @@ const avatarUrl = 'https://tdesign.gtimg.com/mobile/demos/avatar_1.png';
 
 describe('Cell', () => {
   describe('props', () => {
-    it('align[top/middle/bottom]', async () => {
-      alignList.forEach((a) => {
-        const wrapper = mount(() => <Cell title="单行标题" align={a} arrow></Cell>);
-        const rightAlign = wrapper.find(`.t-cell__right--${a}`);
-        expect(rightAlign.exists()).toBeTruthy();
-      });
+    it.each(alignList)('align[%s]', async (align) => {
+      const wrapper = mount(() => <Cell title="单行标题" align={align} arrow />);
+      expect(wrapper.find(`.t-cell__right--${align}`).exists()).toBe(true);
     });
 
     it('arrow[boolean]', async () => {

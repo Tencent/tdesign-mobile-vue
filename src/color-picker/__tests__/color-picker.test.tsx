@@ -75,26 +75,18 @@ describe('ColorPicker', () => {
       testFixed(true, 0.9);
     });
 
-    it('format[RGB/HEX]', () => {
-      const testFormat = (format: TdColorPickerProps['format'], target: string) => {
-        const wrapper = mountColorPicker({ format, type: 'multiple' });
-        const dom = wrapper.find('.t-color-picker__format-item--first');
-        expect(dom.element.innerHTML).toBe(target);
-      };
-      testFormat('RGB', 'RGB');
-      testFormat('HEX', 'HEX');
+    it.each(['RGB', 'HEX'] as const)('format[%s]', (format) => {
+      const wrapper = mountColorPicker({ format, type: 'multiple' });
+      expect(wrapper.find('.t-color-picker__format-item--first').text()).toBe(format);
     });
 
-    it('format[HEX8/RGBA/HSL/HSLA/HSV/HSVA/CMYK/CSS]', () => {
-      const formats = ['HEX8', 'RGBA', 'HSL', 'HSLA', 'HSV', 'HSVA', 'CMYK', 'CSS'] as const;
-      formats.forEach((format) => {
-        const wrapper = mountColorPicker({ format, type: 'multiple' });
-        const first = wrapper.find('.t-color-picker__format-item--first');
-        expect(first.text()).toBe(format);
-        const actualValues = wrapper.findAll('.t-color-picker__format-input').map((item) => item.text());
-        const [_, expectedValues] = getFormatList(format, new Color('#001f97'));
-        expect(actualValues).toEqual(expectedValues.map(String));
-      });
+    it.each(['HEX8', 'RGBA', 'HSL', 'HSLA', 'HSV', 'HSVA', 'CMYK', 'CSS'] as const)('format[%s]', (format) => {
+      const wrapper = mountColorPicker({ format, type: 'multiple' });
+      const first = wrapper.find('.t-color-picker__format-item--first');
+      expect(first.text()).toBe(format);
+      const actualValues = wrapper.findAll('.t-color-picker__format-input').map((item) => item.text());
+      const [_, expectedValues] = getFormatList(format, new Color('#001f97'));
+      expect(actualValues).toEqual(expectedValues.map(String));
     });
 
     it('swatchColors[array]', () => {

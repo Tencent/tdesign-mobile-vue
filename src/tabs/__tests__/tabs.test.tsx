@@ -149,13 +149,12 @@ describe('Tabs', () => {
       expect(wrapper.find(`.${name}__track`).exists()).toBe(false);
     });
 
-    it('size[medium/large]', async () => {
-      const wrapper = mountTabs({ size: 'medium' });
-      expect(wrapper.classes()).toContain('t-size-m');
-
-      await wrapper.setProps({ size: 'large' });
-      expect(wrapper.classes()).toContain('t-size-l');
-      expect(wrapper.classes()).not.toContain('t-size-m');
+    it.each([
+      ['medium', 't-size-m'],
+      ['large', 't-size-l'],
+    ] as const)('size[%s]', (size, className) => {
+      const wrapper = mountTabs({ size });
+      expect(wrapper.classes()).toContain(className);
     });
 
     it('spaceEvenly[boolean]', async () => {

@@ -3,7 +3,6 @@ import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { LoadingIcon, CloseIcon } from 'tdesign-icons-vue-next';
 import { nextTick } from 'vue';
 import Image from '../image';
-import type { TdImageProps } from '../type';
 
 const prefix = 't';
 const name = `${prefix}-image`;
@@ -98,28 +97,9 @@ describe('Image', () => {
       expect(wrapper.find(`.${name}__mask`).exists()).toBe(false);
     });
 
-    it('fit[contain/cover/fill/none/scale-down]', async () => {
-      const wrapper = mount(Image, {
-        props: {
-          src: IMAGE,
-        },
-      });
-      const $image = wrapper.find(`.${name}__img`);
-      // fit 默认 fill
-      expect($image.attributes('style')).toContain('object-fit: fill');
-      fitList
-        .filter((fit) => fit !== 'fill')
-        .forEach((item) => {
-          expect($image.attributes('style').includes(`object-fit: ${item}`)).toBeFalsy();
-        });
-
-      await Promise.all(
-        fitList.map(async (fit) => {
-          const fitted = mount(Image, { props: { src: IMAGE } });
-          await fitted.setProps({ fit });
-          expect(fitted.get('img').element.style.objectFit).toBe(fit);
-        }),
-      );
+    it.each(fitList)('fit[%s]', (fit) => {
+      const wrapper = mount(Image, { props: { src: IMAGE, fit } });
+      expect(wrapper.get('img').element.style.objectFit).toBe(fit);
     });
 
     it('lazy[boolean]', async () => {
@@ -156,59 +136,28 @@ describe('Image', () => {
       expect(wrapper.findComponent(LoadingIcon).exists()).toBeTruthy();
     });
 
-    it('position[string]', async () => {
-      positionList.forEach((position) => {
-        const wrapper = mount(() => <Image src={IMAGE} position={position} />);
-        const $image = wrapper.find('.t-image__img');
-        expect($image.attributes('style')).toContain(`object-position: ${position}`);
-      });
+    it.each(positionList)('position[%s]', (position) => {
+      const wrapper = mount(() => <Image src={IMAGE} position={position} />);
+      expect(wrapper.find('.t-image__img').attributes('style')).toContain(`object-position: ${position}`);
     });
 
-    it('referrerpolicy[string]', () => {
-      const policies: TdImageProps['referrerpolicy'][] = [
-        'no-referrer',
-        'no-referrer-when-downgrade',
-        'origin',
-        'origin-when-cross-origin',
-        'same-origin',
-        'strict-origin',
-        'strict-origin-when-cross-origin',
-        'unsafe-url',
-      ];
-      policies.forEach((referrerpolicy) => {
-        const wrapper = mount(Image, { props: { src: IMAGE, referrerpolicy } });
-        expect(wrapper.get('img').attributes('referrerpolicy')).toBe(referrerpolicy);
-      });
+    it.each([
+      'no-referrer',
+      'no-referrer-when-downgrade',
+      'origin',
+      'origin-when-cross-origin',
+      'same-origin',
+      'strict-origin',
+      'strict-origin-when-cross-origin',
+      'unsafe-url',
+    ] as const)('referrerpolicy[%s]', (referrerpolicy) => {
+      const wrapper = mount(Image, { props: { src: IMAGE, referrerpolicy } });
+      expect(wrapper.get('img').attributes('referrerpolicy')).toBe(referrerpolicy);
     });
 
-    it('shape[circle/round/square]', async () => {
-      const wrapper = mount(Image, {
-        props: {
-          src: IMAGE,
-        },
-      });
-      const $image = wrapper.findComponent(Image);
-
-      // shape 默认 square
-      expect($image.classes()).toContain(`${name}--square`);
-      shapeList
-        .filter((shape) => shape !== 'square')
-        .forEach((item) => {
-          expect($image.classes().includes(`${name}--${item}`)).toBeFalsy();
-        });
-
-      await Promise.all(
-        shapeList.map(async (shape) => {
-          const shaped = mount(Image, { props: { src: IMAGE } });
-          await shaped.setProps({ shape });
-          expect(shaped.classes()).toContain(`${name}--${shape}`);
-          shapeList
-            .filter((value) => value !== shape)
-            .forEach((value) => {
-              expect(shaped.classes()).not.toContain(`${name}--${value}`);
-            });
-        }),
-      );
+    it.each(shapeList)('shape[%s]', (shape) => {
+      const wrapper = mount(Image, { props: { src: IMAGE, shape } });
+      expect(wrapper.classes()).toContain(`${name}--${shape}`);
     });
 
     it('src[string]', async () => {

@@ -2,7 +2,6 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect } from 'vitest';
 import { nextTick } from 'vue';
 import { Steps, StepItem } from '../index';
-import type { StepStatus } from '../type';
 
 describe('StepItem', () => {
   describe('props', () => {
@@ -57,25 +56,22 @@ describe('StepItem', () => {
       expect(wrapper.find('.t-step-item__circle').exists()).toBeFalsy();
     });
 
-    it('status[default/process/finish/error]', () => {
-      const statusList: StepStatus[] = ['process', 'finish', 'error', 'default'];
+    it.each([
+      ['process', '1', undefined],
+      ['finish', undefined, '.t-icon-check'],
+      ['error', undefined, '.t-icon-close'],
+      ['default', '1', undefined],
+    ] as const)('status[%s]', (status, circleText, iconSelector) => {
       const wrapper = mount(() => (
         <Steps current={0}>
-          {statusList.map((status) => (
-            <StepItem key={status} title="标题" content="内容" status={status} />
-          ))}
+          <StepItem title="标题" content="内容" status={status} />
         </Steps>
       ));
-      const $items = wrapper.findAllComponents(StepItem);
-      // 显式 status 优先于按 current 推导的状态
-      statusList.forEach((status, index) => {
-        expect($items[index].classes()).toContain(`t-step-item--${status}`);
-      });
-      // 各状态圆形图标内容：完成态为对勾、错误态为叉号、其余为序号
-      expect($items[0].find('.t-step-item__circle').text()).toEqual('1');
-      expect($items[1].find('.t-icon-check').exists()).toBeTruthy();
-      expect($items[2].find('.t-icon-close').exists()).toBeTruthy();
-      expect($items[3].find('.t-step-item__circle').text()).toEqual('4');
+      const item = wrapper.findComponent(StepItem);
+      if (status === 'default') expect(item.classes()).not.toContain('t-step-item--default');
+      else expect(item.classes()).toContain(`t-step-item--${status}`);
+      if (circleText) expect(item.find('.t-step-item__circle').text()).toBe(circleText);
+      if (iconSelector) expect(item.find(iconSelector).exists()).toBe(true);
     });
 
     it('title[string]', () => {

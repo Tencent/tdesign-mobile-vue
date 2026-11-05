@@ -18,12 +18,9 @@ describe('CellGroup', () => {
       expect(wrapper2.find('.t-cell-group').classes()).toContain('t-cell-group--bordered');
     });
 
-    it('theme[default/card]', async () => {
-      themeList.forEach((t) => {
-        const wrapper = mount(() => <CellGroup theme={t}></CellGroup>);
-        const theme = wrapper.find(`.t-cell-group--${t}`);
-        expect(theme.exists()).toBeTruthy();
-      });
+    it.each(themeList)('theme[%s]', async (theme) => {
+      const wrapper = mount(() => <CellGroup theme={theme} />);
+      expect(wrapper.find(`.t-cell-group--${theme}`).exists()).toBe(true);
     });
 
     it('title[string]', async () => {

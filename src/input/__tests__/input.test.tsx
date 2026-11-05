@@ -17,24 +17,16 @@ const focusInput = (wrapper: VueWrapper) => (wrapper.vm as unknown as { focus: (
 const getInputElement = (wrapper: VueWrapper) => wrapper.get('input').element as HTMLInputElement;
 describe('Input', () => {
   describe('props', () => {
-    it('align[left/center/right]', async () => {
-      const alignList: TdInputProps['align'][] = ['left', 'center', 'right'];
-      alignList.forEach((align) => {
-        const tips = 'tips';
-        const wrapper = mount(<Input label="标题" align={align} tips={tips} />);
-        const $tips = wrapper.find('.t-input__tips');
-        const control = wrapper.find(`.t-input__control`);
-
-        if (align && align !== 'left') {
-          expect(control.classes()).toContain(`t-input--${align}`);
-        } else {
-          // 默认 left 不额外添加对齐修饰类
-          expect(control.classes()).not.toContain(`t-input--center`);
-          expect(control.classes()).not.toContain(`t-input--right`);
-        }
-
-        expect($tips.classes()).contain(`t-input--${align}`);
-      });
+    it.each(['left', 'center', 'right'] as const)('align[%s]', (align) => {
+      const wrapper = mount(<Input label="标题" align={align} tips="tips" />);
+      const tips = wrapper.find('.t-input__tips');
+      const control = wrapper.find('.t-input__control');
+      if (align !== 'left') expect(control.classes()).toContain(`t-input--${align}`);
+      else {
+        expect(control.classes()).not.toContain('t-input--center');
+        expect(control.classes()).not.toContain('t-input--right');
+      }
+      expect(tips.classes()).toContain(`t-input--${align}`);
     });
 
     it('allowInputOverMax[boolean]', async () => {
@@ -245,14 +237,9 @@ describe('Input', () => {
       expect(wrapper.get('.t-input__label .slot-label').text()).toBe('插槽标签');
     });
 
-    it('layout[vertical/horizontal]', async () => {
-      const layoutList: TdInputProps['layout'][] = ['vertical', 'horizontal'];
-      layoutList.forEach((layout, index) => {
-        const wrapper = mount(() => <Input label="标题" layout={layout} />);
-        if (layout) {
-          expect(wrapper.classes()).toContain(`t-input--layout-${layout}`);
-        }
-      });
+    it.each(['vertical', 'horizontal'] as const)('layout[%s]', (layout) => {
+      const wrapper = mount(() => <Input label="标题" layout={layout} />);
+      expect(wrapper.classes()).toContain(`t-input--layout-${layout}`);
     });
 
     it('maxcharacter[number]', async () => {
@@ -331,12 +318,9 @@ describe('Input', () => {
       expect(wrapper2.find('input').attributes('spellcheck')).toBe('false');
     });
 
-    it('status[default/success/warning/error]', async () => {
-      const statusList: TdInputProps['status'][] = ['default', 'success', 'warning', 'error'];
-      statusList.forEach((status) => {
-        const wrapper = mount(<Input status={status} />);
-        expect(wrapper.get('.t-input__control').classes()).toContain(`t-input--${status}`);
-      });
+    it.each(['default', 'success', 'warning', 'error'] as const)('status[%s]', (status) => {
+      const wrapper = mount(<Input status={status} />);
+      expect(wrapper.get('.t-input__control').classes()).toContain(`t-input--${status}`);
     });
 
     it('suffix[string]', async () => {
@@ -491,13 +475,13 @@ describe('Input', () => {
       expect(wrapper.find('input').attributes('pattern')).toBe('[0-9]*');
     });
 
-    it('inputmode[search/text/none/url/tel/email/numeric/decimal]', async () => {
-      const inputmodeList = ['search', 'text', 'none', 'url', 'tel', 'email', 'numeric', 'decimal'] as const;
-      inputmodeList.forEach((inputmode) => {
+    it.each(['search', 'text', 'none', 'url', 'tel', 'email', 'numeric', 'decimal'] as const)(
+      'inputmode[%s]',
+      (inputmode) => {
         const wrapper = mount(<Input inputmode={inputmode} />);
         expect(wrapper.get('input').attributes('inputmode')).toBe(inputmode);
-      });
-    });
+      },
+    );
   });
   describe('events', () => {
     it('compositionend', async () => {

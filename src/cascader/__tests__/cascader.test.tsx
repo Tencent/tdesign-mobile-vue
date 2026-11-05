@@ -334,21 +334,10 @@ describe('Cascader', () => {
       expect($subTitles.text()).toBe(subTitles[0]);
     });
 
-    it('theme[step/tab]', async () => {
-      const themeList: TdCascaderProps['theme'][] = ['step', 'tab'];
-      themeList.forEach((theme) => {
-        const wrapper = mount(() => (
-          <Cascader visible={true} options={options} value={address.value} theme={theme}></Cascader>
-        ));
-        if (theme === 'step') {
-          expect(wrapper.find(`.${name}__steps`).exists()).toBeTruthy();
-          expect(wrapper.findComponent(TTabs).exists()).toBeFalsy();
-        }
-        if (theme === 'tab') {
-          expect(wrapper.find(`.${name}__steps`).exists()).toBeFalsy();
-          expect(wrapper.findComponent(TTabs).exists()).toBeTruthy();
-        }
-      });
+    it.each(['step', 'tab'] as const)('theme[%s]', async (theme) => {
+      const wrapper = mount(() => <Cascader visible options={options} value={address.value} theme={theme} />);
+      expect(wrapper.find(`.${name}__steps`).exists()).toBe(theme === 'step');
+      expect(wrapper.findComponent(TTabs).exists()).toBe(theme === 'tab');
     });
 
     it('title[string]', async () => {

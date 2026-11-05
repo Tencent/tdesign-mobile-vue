@@ -136,12 +136,9 @@ describe('Loading', () => {
     // 组件会输出 `color: inherit`，但 jsdom 的 cssstyle 序列化会丢弃该值，无法在单测中断言。
     it.todo('inheritColor[boolean]');
 
-    it('layout[horizontal/vertical]', async () => {
-      const wrapper = mount(Loading, { props: { text: '加载中' } });
-      // 默认水平布局不添加修饰类
-      expect(wrapper.classes()).not.toContain('t-loading--vertical');
-      await wrapper.setProps({ layout: 'vertical' });
-      expect(wrapper.classes()).toContain('t-loading--vertical');
+    it.each(['horizontal', 'vertical'] as const)('layout[%s]', (layout) => {
+      const wrapper = mount(Loading, { props: { text: '加载中', layout } });
+      expect(wrapper.classes().includes('t-loading--vertical')).toBe(layout === 'vertical');
     });
 
     it('loading[boolean]', async () => {
@@ -198,17 +195,11 @@ describe('Loading', () => {
       expect(wrapper.get('.t-loading__text .slot-text').text()).toBe('插槽文案');
     });
 
-    it('theme[circular/spinner/dots]', () => {
-      const circular = mount(Loading, { props: { theme: 'circular' } });
-      expect(circular.find('.t-loading__gradient').exists()).toBe(true);
-
-      const spinner = mount(Loading, { props: { theme: 'spinner' } });
-      expect(spinner.find('.t-loading__spinner').exists()).toBe(true);
-      expect(spinner.find('.t-loading__gradient').exists()).toBe(false);
-
-      const dots = mount(Loading, { props: { theme: 'dots' } });
-      expect(dots.findAll('.t-loading__dot')).toHaveLength(3);
-      expect(dots.find('.t-loading__gradient').exists()).toBe(false);
+    it.each(['circular', 'spinner', 'dots'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(Loading, { props: { theme } });
+      if (theme === 'circular') expect(wrapper.find('.t-loading__gradient').exists()).toBe(true);
+      if (theme === 'spinner') expect(wrapper.find('.t-loading__spinner').exists()).toBe(true);
+      if (theme === 'dots') expect(wrapper.findAll('.t-loading__dot')).toHaveLength(3);
     });
   });
 

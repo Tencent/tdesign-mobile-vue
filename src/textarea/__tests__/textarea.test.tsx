@@ -168,13 +168,12 @@ describe('Textarea', () => {
       expect(wrapper.get('.t-textarea__label .slot-label').text()).toBe('插槽标签');
     });
 
-    it('layout[vertical/horizontal]', async () => {
-      const layoutList = ['vertical', 'horizontal'] as const;
-      layoutList.forEach((layout) => {
-        const wrapper = mount(<Textarea label="标题" layout={layout} />);
-        expect(wrapper.classes()).toContain(`t-textarea--layout-${layout}`);
-      });
+    it.each(['vertical', 'horizontal'] as const)('layout[%s]', (layout) => {
+      const wrapper = mount(<Textarea label="标题" layout={layout} />);
+      expect(wrapper.classes()).toContain(`t-textarea--layout-${layout}`);
+    });
 
+    it('layout[default and update]', async () => {
       const wrapper = mount(<Textarea />);
       expect(wrapper.classes()).toContain('t-textarea--layout-horizontal');
       await wrapper.setProps({ layout: 'vertical' });

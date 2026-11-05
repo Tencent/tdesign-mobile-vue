@@ -115,29 +115,26 @@ describe('Steps', () => {
       expect($items[2].classes()).toContain('t-step-item--process');
     });
 
-    it('currentStatus[default/process/finish/error]', () => {
-      const statusList = ['default', 'process', 'finish', 'error'] as const;
-      statusList.forEach((currentStatus) => {
-        const wrapper = mount(() => (
-          <Steps current={0} currentStatus={currentStatus}>
-            <StepItem title="步骤1" content="描述1" />
-          </Steps>
-        ));
-        const $item = wrapper.findAllComponents(StepItem)[0];
-        expect($item.classes()).toContain(`t-step-item--${currentStatus}`);
-        expect($item.find('.t-step-item__circle').classes()).toContain(`t-step-item__circle--${currentStatus}`);
-      });
+    it.each(['default', 'process', 'finish', 'error'] as const)('currentStatus[%s]', (currentStatus) => {
+      const wrapper = mount(() => (
+        <Steps current={0} currentStatus={currentStatus}>
+          <StepItem title="步骤1" content="描述1" />
+        </Steps>
+      ));
+      const item = wrapper.findComponent(StepItem);
+      expect(item.classes()).toContain(`t-step-item--${currentStatus}`);
+      expect(item.find('.t-step-item__circle').classes()).toContain(`t-step-item__circle--${currentStatus}`);
     });
 
-    it('layout[horizontal/vertical]', () => {
-      // horizontal（默认）
-      const horizontalWrapper = mount(() => <Steps current={1}>{renderItems()}</Steps>);
-      expect(horizontalWrapper.find('.t-steps--horizontal').exists()).toBeTruthy();
-      expect(horizontalWrapper.find('.t-steps--vertical').exists()).toBeFalsy();
-      expect(horizontalWrapper.find('.t-step-item__anchor--horizontal').exists()).toBeTruthy();
-      expect(horizontalWrapper.find('.t-step-item__title--horizontal').exists()).toBeTruthy();
-
-      // vertical
+    it.each(['horizontal', 'vertical'] as const)('layout[%s]', (layout) => {
+      if (layout === 'horizontal') {
+        const wrapper = mount(() => <Steps current={1}>{renderItems()}</Steps>);
+        expect(wrapper.find('.t-steps--horizontal').exists()).toBe(true);
+        expect(wrapper.find('.t-steps--vertical').exists()).toBe(false);
+        expect(wrapper.find('.t-step-item__anchor--horizontal').exists()).toBe(true);
+        expect(wrapper.find('.t-step-item__title--horizontal').exists()).toBe(true);
+        return;
+      }
       const current = ref(1);
       const wrapper = mount({
         setup() {
@@ -153,8 +150,8 @@ describe('Steps', () => {
           );
         },
       });
-      expect(wrapper.find('.t-steps--vertical').exists()).toBeTruthy();
-      expect(wrapper.find('.t-step-item__anchor--vertical').exists()).toBeTruthy();
+      expect(wrapper.find('.t-steps--vertical').exists()).toBe(true);
+      expect(wrapper.find('.t-step-item__anchor--vertical').exists()).toBe(true);
       const $stepItems = wrapper.findAllComponents(StepItem);
       expect($stepItems.length).toEqual(itemStatus.length);
       $stepItems.forEach((item, index) => {

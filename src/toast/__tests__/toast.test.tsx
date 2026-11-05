@@ -20,21 +20,13 @@ afterEach(() => {
 
 describe('Toast', () => {
   describe('props', () => {
-    it('direction[row/column]', () => {
-      (['row', 'column'] as TdToastProps['direction'][]).forEach((direction) => {
-        const wrapper = mount(Toast, {
-          props: {
-            direction,
-            icon: () => <LoadingIcon />,
-            message: '排列方式',
-          },
-        });
-        const $toast = wrapper.find(`.${name}`);
-        expect($toast.classes()).toContain(`${name}--${direction}`);
-        expect($toast.classes()).toContain(`${name}__content--${direction}`);
-        expect(wrapper.find(`.${name}__icon--${direction}`).exists()).toBe(true);
-        expect(wrapper.find(`.${name}__text--${direction}`).exists()).toBe(true);
-      });
+    it.each(['row', 'column'] as TdToastProps['direction'][])('direction[%s]', (direction) => {
+      const wrapper = mount(Toast, { props: { direction, icon: () => <LoadingIcon />, message: '排列方式' } });
+      const toast = wrapper.find(`.${name}`);
+      expect(toast.classes()).toContain(`${name}--${direction}`);
+      expect(toast.classes()).toContain(`${name}__content--${direction}`);
+      expect(wrapper.find(`.${name}__icon--${direction}`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}__text--${direction}`).exists()).toBe(true);
     });
 
     // duration 仅由插件 plugin.ts 消费（自动关闭定时器），组件源码未使用该属性，见 toast.plugin.test.tsx
@@ -101,21 +93,14 @@ describe('Toast', () => {
       expect(style).toContain('z-index: 2000');
     });
 
-    it('placement[top/middle/bottom]', () => {
-      const topMap: Record<TdToastProps['placement'], string> = {
-        top: '25%',
-        middle: '50%',
-        bottom: '75%',
-      };
-      (Object.keys(topMap) as TdToastProps['placement'][]).forEach((placement) => {
-        const wrapper = mount(Toast, {
-          props: {
-            placement,
-          },
-        });
-        // 展示位置映射为内容层 top 定位
-        expect(wrapper.find(`.${name}__content`).attributes('style')).toContain(`top: ${topMap[placement]}`);
-      });
+    it.each([
+      ['top', '25%'],
+      ['middle', '50%'],
+      ['bottom', '75%'],
+    ] as const)('placement[%s]', (placement, top) => {
+      const wrapper = mount(Toast, { props: { placement } });
+      // 展示位置映射为内容层 top 定位
+      expect(wrapper.find(`.${name}__content`).attributes('style')).toContain(`top: ${top}`);
     });
 
     it('preventScrollThrough[boolean]', async () => {
@@ -146,29 +131,17 @@ describe('Toast', () => {
       expect(wrapper.findComponent(Overlay).vm.visible).toBe(false);
     });
 
-    it('theme[loading/success/warning/error]', () => {
-      const themeIconMap = {
-        loading: LoadingIcon,
-        success: CheckCircleIcon,
-        warning: ErrorCircleIcon,
-        error: CloseCircleIcon,
-      } as const;
-
-      (Object.keys(themeIconMap) as (keyof typeof themeIconMap)[]).forEach((theme) => {
-        const wrapper = mount(Toast, {
-          props: {
-            theme,
-          },
-        });
-        expect(wrapper.findComponent(themeIconMap[theme]).exists()).toBe(true);
-      });
-
-      const wrapper = mount(Toast, {
-        props: {
-          theme: 'loading',
-        },
-      });
-      expect(wrapper.find(`.${name}`).classes()).toContain(`${name}--loading`);
+    it.each([
+      ['loading', LoadingIcon],
+      ['success', CheckCircleIcon],
+      ['warning', ErrorCircleIcon],
+      ['error', CloseCircleIcon],
+    ] as const)('theme[%s]', (theme, icon) => {
+      const wrapper = mount(Toast, { props: { theme } });
+      expect(wrapper.findComponent(icon).exists()).toBe(true);
+      if (theme === 'loading') {
+        expect(wrapper.find(`.${name}`).classes()).toContain(`${name}--loading`);
+      }
     });
 
     it('default[slot]', () => {

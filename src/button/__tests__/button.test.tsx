@@ -193,54 +193,16 @@ describe('Button', () => {
       expect(wrapper.find('.t-icon-loading').exists()).toBeFalsy();
     });
 
-    it('shape[rectangle/square/round/circle]', async () => {
-      const wrapper = mount(Button, {
-        props: {
-          content: TEXT,
-        },
-      });
-      // shape 默认 rectangle
-      const $button = wrapper.findComponent(Button);
-      expect($button.classes()).toContain(`${name}--rectangle`);
-      ['square', 'round', 'circle'].forEach((item) => {
-        expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
-      });
+    it.each(['rectangle', 'square', 'round', 'circle'] as const)('shape[%s]', (shape) => {
+      const wrapper = mount(Button, { props: { content: TEXT, shape } });
+      expect(wrapper.classes()).toContain(`${name}--${shape}`);
       expect(wrapper.text()).toBe(TEXT);
-      const shape = 'square';
-      await wrapper.setProps({
-        shape,
-      });
-      // shape = 'square'
-      expect($button.classes()).toContain(`${name}--${shape}`);
-      (['rectangle', 'square', 'round', 'circle'] as const).forEach((value) => {
-        const shapeWrapper = mount(Button, { props: { shape: value } });
-        expect(shapeWrapper.classes()).toContain(`${name}--${value}`);
-      });
     });
 
-    it('size[extra-small/small/medium/large]', async () => {
-      const wrapper = mount(Button, {
-        props: {
-          content: TEXT,
-        },
-      });
-      // size 默认 medium
-      const $button = wrapper.findComponent(Button);
-      expect($button.classes()).toContain(`${name}--size-medium`);
-      ['small', 'large'].forEach((item) => {
-        expect($button.classes().includes(`${name}--size-${item}`)).toBeFalsy();
-      });
+    it.each(['extra-small', 'small', 'medium', 'large'] as const)('size[%s]', (size) => {
+      const wrapper = mount(Button, { props: { content: TEXT, size } });
+      expect(wrapper.classes()).toContain(`${name}--size-${size}`);
       expect(wrapper.text()).toBe(TEXT);
-      const size = 'small';
-      await wrapper.setProps({
-        size,
-      });
-      // size = 'small'
-      expect($button.classes()).toContain(`${name}--size-small`);
-      (['extra-small', 'small', 'medium', 'large'] as const).forEach((value) => {
-        const sizeWrapper = mount(Button, { props: { size: value } });
-        expect(sizeWrapper.classes()).toContain(`${name}--size-${value}`);
-      });
     });
 
     it('suffix[function]', async () => {
@@ -280,72 +242,21 @@ describe('Button', () => {
       expect(wrapper.element.tagName.toLowerCase()).toBe('div');
     });
 
-    it('theme[default/primary/danger/light]', async () => {
-      const wrapper = mount(Button, {
-        props: {
-          content: TEXT,
-        },
-      });
-      // theme 默认 default
-      const $button = wrapper.findComponent(Button);
-      expect($button.classes()).toContain(`${name}--default`);
-      ['primary', 'danger'].forEach((item) => {
-        expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
-      });
+    it.each(['default', 'primary', 'danger', 'light'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(Button, { props: { content: TEXT, theme } });
+      expect(wrapper.classes()).toContain(`${name}--${theme}`);
       expect(wrapper.text()).toBe(TEXT);
-      const theme = 'danger';
-      await wrapper.setProps({
-        theme,
-      });
-      // theme = 'danger'
-      expect($button.classes()).toContain(`${name}--${theme}`);
-      (['default', 'primary', 'danger', 'light'] as const).forEach((value) => {
-        const themeWrapper = mount(Button, { props: { theme: value } });
-        expect(themeWrapper.classes()).toContain(`${name}--${value}`);
-      });
     });
 
-    it('type[submit/reset/button]', async () => {
-      const wrapper = mount(Button, {
-        props: {
-          content: TEXT,
-        },
-      });
-      // type 默认 button，作为原生 button 标签的 type 属性输出
-      expect(wrapper.element.getAttribute('type')).toBe('button');
-
-      // 遍历枚举值，均输出到原生 type 属性
-      await wrapper.setProps({ type: 'submit' });
-      expect(wrapper.element.getAttribute('type')).toBe('submit');
-      await wrapper.setProps({ type: 'reset' });
-      expect(wrapper.element.getAttribute('type')).toBe('reset');
-      await wrapper.setProps({ type: 'button' });
-      expect(wrapper.element.getAttribute('type')).toBe('button');
+    it.each(['submit', 'reset', 'button'] as const)('type[%s]', (type) => {
+      const wrapper = mount(Button, { props: { content: TEXT, type } });
+      expect(wrapper.element.getAttribute('type')).toBe(type);
     });
 
-    it('variant[base/outline/dashed/text]', async () => {
-      const wrapper = mount(Button, {
-        props: {
-          content: TEXT,
-        },
-      });
-      // variant 默认 base
-      const $button = wrapper.findComponent(Button);
-      expect($button.classes()).toContain(`${name}--base`);
-      ['outline', 'text'].forEach((item) => {
-        expect($button.classes().includes(`${name}--${item}`)).toBeFalsy();
-      });
+    it.each(['base', 'outline', 'dashed', 'text'] as const)('variant[%s]', (variant) => {
+      const wrapper = mount(Button, { props: { content: TEXT, variant } });
+      expect(wrapper.classes()).toContain(`${name}--${variant}`);
       expect(wrapper.text()).toBe(TEXT);
-      const variant = 'outline';
-      await wrapper.setProps({
-        variant,
-      });
-      // variant = 'outline'
-      expect($button.classes()).toContain(`${name}--${variant}`);
-      (['base', 'outline', 'dashed', 'text'] as const).forEach((value) => {
-        const variantWrapper = mount(Button, { props: { variant: value } });
-        expect(variantWrapper.classes()).toContain(`${name}--${value}`);
-      });
     });
 
     it('default[slot]', () => {

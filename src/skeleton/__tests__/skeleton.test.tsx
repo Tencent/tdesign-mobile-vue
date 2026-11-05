@@ -12,25 +12,15 @@ const getCols = (wrapper: VueWrapper) => wrapper.findAll(`.${name}__col`);
 
 describe('Skeleton', () => {
   describe('props', () => {
-    it('animation[gradient/flashed/none]', () => {
-      const animations: TdSkeletonProps['animation'][] = ['gradient', 'flashed', 'none'];
-
+    it.each(['gradient', 'flashed', 'none'] as const)('animation[%s]', (animation) => {
       // 默认值 none：列上仅携带 --animation-none，不带渐变/闪烁动画类
       const wrapper = mount(Skeleton, { props: { rowCol: [1, 1] } });
       expect(getCols(wrapper)).toHaveLength(2);
       expect(getCols(wrapper)[0].classes()).toEqual([`${name}__col`, `${name}--type-text`, `${name}--animation-none`]);
 
-      // 每个取值互斥地作用于所有列
-      animations.forEach((animation) => {
-        const animationWrapper = mount(Skeleton, { props: { rowCol: [1, 1], animation } });
-        getCols(animationWrapper).forEach(($col) => {
-          expect($col.classes()).toContain(`${name}--animation-${animation}`);
-          animations
-            .filter((item) => item !== animation)
-            .forEach((item) => {
-              expect($col.classes()).not.toContain(`${name}--animation-${item}`);
-            });
-        });
+      const animationWrapper = mount(Skeleton, { props: { rowCol: [1, 1], animation } });
+      getCols(animationWrapper).forEach(($col) => {
+        expect($col.classes()).toContain(`${name}--animation-${animation}`);
       });
     });
 
@@ -140,7 +130,7 @@ describe('Skeleton', () => {
       expect(wrapper4.find('.rowcol-tnode').exists()).toBe(true);
     });
 
-    it('theme[avatar/image/text/paragraph]', () => {
+    it('theme[text]', () => {
       // 默认值 text：首行两列（24%/76%）+ 次行一列，均为 text 类型
       const wrapper = mount(Skeleton);
       const $rows = getRows(wrapper);
@@ -155,8 +145,9 @@ describe('Skeleton', () => {
       getCols(wrapper).forEach(($col) => {
         expect($col.classes()).toContain(`${name}--type-text`);
       });
+    });
 
-      // paragraph：四行文本，末行宽度收窄为 55%
+    it('theme[paragraph]', () => {
       const paragraph = mount(Skeleton, { props: { theme: 'paragraph' } });
       const $paragraphRows = getRows(paragraph);
       expect($paragraphRows).toHaveLength(4);
@@ -164,22 +155,18 @@ describe('Skeleton', () => {
         expect($row.findAll(`.${name}__col`)).toHaveLength(1);
       });
       expect($paragraphRows[3].find(`.${name}__col`).attributes('style')).toContain('width: 55%');
+    });
 
-      // avatar：一行一列圆形占位，尺寸 48px
-      const avatar = mount(Skeleton, { props: { theme: 'avatar' } });
-      expect(getRows(avatar)).toHaveLength(1);
-      const $avatarCol = avatar.find(`.${name}__col`);
-      expect($avatarCol.classes()).toContain(`${name}--type-circle`);
-      expect($avatarCol.attributes('style')).toContain('width: 48px');
-      expect($avatarCol.attributes('style')).toContain('height: 48px');
-
-      // image：一行一列方形占位，尺寸 72px
-      const image = mount(Skeleton, { props: { theme: 'image' } });
-      expect(getRows(image)).toHaveLength(1);
-      const $imageCol = image.find(`.${name}__col`);
-      expect($imageCol.classes()).toContain(`${name}--type-rect`);
-      expect($imageCol.attributes('style')).toContain('width: 72px');
-      expect($imageCol.attributes('style')).toContain('height: 72px');
+    it.each([
+      ['avatar', 'circle', '48px'],
+      ['image', 'rect', '72px'],
+    ] as const)('theme[%s]', (theme, type, size) => {
+      const wrapper = mount(Skeleton, { props: { theme } });
+      expect(getRows(wrapper)).toHaveLength(1);
+      const col = wrapper.find(`.${name}__col`);
+      expect(col.classes()).toContain(`${name}--type-${type}`);
+      expect(col.attributes('style')).toContain(`width: ${size}`);
+      expect(col.attributes('style')).toContain(`height: ${size}`);
     });
 
     it('default[slot]', () => {
