@@ -1,10 +1,16 @@
-import { mount } from '@vue/test-utils';
-import { vi } from 'vitest';
-import { ref } from 'vue';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { afterEach, describe, expect, it, vi } from 'vitest';
+import { nextTick, ref } from 'vue';
 import TreeSelect from '../index';
 import { SideBarItem } from '../../side-bar';
 import { CheckboxGroup, Checkbox } from '../../checkbox';
 import { RadioGroup, Radio } from '../../radio';
+
+enableAutoUnmount(afterEach);
+
+afterEach(() => {
+  vi.restoreAllMocks();
+});
 
 // 三级选项：第一级渲染侧边栏，第二级渲染中间列表，第三级渲染叶子单选/多选
 const options = [
@@ -180,6 +186,9 @@ describe('TreeSelect', () => {
     });
 
     it('options[array]', () => {
+      const emptyWrapper = mount(TreeSelect);
+      expect(emptyWrapper.findAll('.t-tree-select__column')).toHaveLength(0);
+
       const wrapper = mount(<TreeSelect options={options} value={defaultValue} />);
 
       // 三级选项渲染为三列，列布局依次为 root/middle/leaf
@@ -362,7 +371,135 @@ describe('TreeSelect', () => {
   });
 
   describe('scenarios', () => {
+    describe('disabled options', () => {
+      it.each([false, true])('ignores disabled root and leaf options with multiple %s', async (multiple) => {
+        const onChange = vi.fn();
+        const wrapper = mount(TreeSelect, {
+          props: {
+            options: [
+              {
+                label: '可用根节点',
+                value: 'root',
+                children: [
+                  { label: '可选叶子', value: 'enabled' },
+                  { label: '禁用叶子', value: 'disabled', disabled: true },
+                ],
+              },
+              { label: '禁用根节点', value: 'disabled-root', disabled: true },
+            ],
+            defaultValue: ['root', multiple ? ['enabled'] : 'enabled'],
+            multiple,
+            onChange,
+          },
+        });
+        const root = wrapper.findAllComponents(SideBarItem)[1];
+        expect(root.props('disabled')).toBe(true);
+        await root.trigger('click');
+        const leaf = multiple ? wrapper.findAllComponents(Checkbox)[1] : wrapper.findAllComponents(Radio)[1];
+        expect(leaf.props('disabled')).toBe(true);
+        await leaf.trigger('click');
+
+        expect(onChange).not.toHaveBeenCalled();
+        expect(wrapper.get('.t-side-bar-item--active').text()).toContain('可用根节点');
+        const group = multiple ? wrapper.getComponent(CheckboxGroup) : wrapper.getComponent(RadioGroup);
+        expect(group.props('modelValue')).toEqual(multiple ? ['enabled'] : 'enabled');
+        expect(wrapper.emitted('update:value')).toBeUndefined();
+        expect(wrapper.emitted('update:modelValue')).toBeUndefined();
+      });
+    });
+
+    describe('multiple selection', () => {
+      it('allows selecting, deselecting and clearing all leaf values', async () => {
+        const onChange = vi.fn();
+        const wrapper = mount(TreeSelect, {
+          props: { options, multiple: true, defaultValue: ['1', '1-1', ['1-1-1']], onChange },
+        });
+        const checkboxes = wrapper.findAllComponents(Checkbox);
+        await checkboxes[1].trigger('click');
+        expect(onChange).toHaveBeenLastCalledWith(['1', '1-1', ['1-1-1', '1-1-2']], 2);
+        await checkboxes[0].trigger('click');
+        expect(onChange).toHaveBeenLastCalledWith(['1', '1-1', ['1-1-2']], 2);
+        await checkboxes[1].trigger('click');
+        expect(onChange).toHaveBeenLastCalledWith(['1', '1-1', []], 2);
+        expect(onChange).toHaveBeenCalledTimes(3);
+        expect(wrapper.getComponent(CheckboxGroup).props('modelValue')).toEqual([]);
+        expect(wrapper.findAll('.t-checkbox--checked')).toHaveLength(0);
+        expect(wrapper.get('.t-side-bar-item--active').text()).toContain('一级一');
+        expect(wrapper.get('.t-tree-select__item--active').text()).toBe('二级一');
+      });
+
+      it('switches leaf controls when multiple and its value are updated together', async () => {
+        const onChange = vi.fn();
+        const wrapper = mount(TreeSelect, { props: { options, value: [...defaultValue], onChange } });
+        await wrapper.setProps({ multiple: true, value: ['1', '1-1', ['1-1-1', '1-1-2']] });
+        expect(wrapper.findComponent(RadioGroup).exists()).toBe(false);
+        expect(wrapper.getComponent(CheckboxGroup).props('modelValue')).toEqual(['1-1-1', '1-1-2']);
+        expect(wrapper.findAll('.t-checkbox--checked')).toHaveLength(2);
+
+        await wrapper.setProps({ multiple: false, value: ['1', '1-1', '1-1-2'] });
+        expect(wrapper.findComponent(CheckboxGroup).exists()).toBe(false);
+        expect(wrapper.getComponent(RadioGroup).props('modelValue')).toBe('1-1-2');
+        expect(wrapper.findAllComponents(Radio)[1].find('.t-radio__icon--checked').exists()).toBe(true);
+        expect(onChange).not.toHaveBeenCalled();
+      });
+    });
+
     describe('level navigation', () => {
+      it('supports numeric zero at every level instead of falling back to the first option', async () => {
+        const onChange = vi.fn();
+        const wrapper = mount(TreeSelect, {
+          props: {
+            options: [
+              { label: '其他根节点', value: 1 },
+              {
+                label: '零值根节点',
+                value: 0,
+                children: [
+                  { label: '其他中间节点', value: 10 },
+                  {
+                    label: '零值中间节点',
+                    value: 0,
+                    children: [
+                      { label: '其他叶子', value: 100 },
+                      { label: '零值叶子', value: 0 },
+                    ],
+                  },
+                ],
+              },
+            ],
+            defaultValue: [0, 0, 0],
+            onChange,
+          },
+        });
+        expect(wrapper.get('.t-side-bar-item--active').text()).toContain('零值根节点');
+        expect(wrapper.get('.t-tree-select__item--active').text()).toBe('零值中间节点');
+        expect(wrapper.getComponent(RadioGroup).props('modelValue')).toBe(0);
+        const radios = wrapper.findAllComponents(Radio);
+        expect(radios[1].find('.t-radio__icon--checked').exists()).toBe(true);
+        await radios[0].trigger('click');
+        expect(onChange).toHaveBeenLastCalledWith([0, 0, 100], 2);
+      });
+
+      it('selects root options in a single-level tree without rendering leaf groups', async () => {
+        const onChange = vi.fn();
+        const wrapper = mount(TreeSelect, {
+          props: {
+            options: [
+              { label: '根节点一', value: 'a' },
+              { label: '根节点二', value: 'b' },
+            ],
+            defaultValue: ['a'],
+            onChange,
+          },
+        });
+        expect(wrapper.findAll('.t-tree-select__column')).toHaveLength(1);
+        expect(wrapper.findComponent(RadioGroup).exists()).toBe(false);
+        expect(wrapper.findComponent(CheckboxGroup).exists()).toBe(false);
+        await wrapper.findAllComponents(SideBarItem)[1].trigger('click');
+        expect(wrapper.get('.t-side-bar-item--active').text()).toContain('根节点二');
+        expect(onChange).toHaveBeenLastCalledWith(['b'], 0);
+      });
+
       it('clicking root option switches middle column and refreshes leaf column', async () => {
         const wrapper = mount(<TreeSelect options={options} defaultValue={['1', '1-1', '1-1-1']} />);
         expect(wrapper.text()).toContain('二级一');
@@ -430,6 +567,28 @@ describe('TreeSelect', () => {
     });
 
     describe('controlled value sync', () => {
+      it('syncs modelValue when the parent replaces the selected path', async () => {
+        const onChange = vi.fn();
+        const wrapper = mount(TreeSelect, { props: { options, modelValue: [...defaultValue], onChange } });
+        await wrapper.setProps({ modelValue: ['2', '2-2', '2-2-2'] });
+        expect(wrapper.get('.t-side-bar-item--active').text()).toContain('一级二');
+        expect(wrapper.get('.t-tree-select__item--active').text()).toBe('二级五');
+        expect(wrapper.getComponent(RadioGroup).props('modelValue')).toBe('2-2-2');
+        expect(wrapper.findAllComponents(Radio)[1].find('.t-radio__icon--checked').exists()).toBe(true);
+        expect(onChange).not.toHaveBeenCalled();
+      });
+
+      it('updates the parent model and the displayed selection through v-model', async () => {
+        const selected = ref([...defaultValue]);
+        const onChange = vi.fn();
+        const wrapper = mount(() => <TreeSelect options={options} v-model={selected.value} onChange={onChange} />);
+        await wrapper.findAllComponents(Radio)[1].trigger('click');
+        expect(selected.value).toEqual(['1', '1-1', '1-1-2']);
+        expect(wrapper.getComponent(TreeSelect).emitted('update:modelValue')).toEqual([[['1', '1-1', '1-1-2'], 2]]);
+        expect(wrapper.findAllComponents(Radio)[1].find('.t-radio__icon--checked').exists()).toBe(true);
+        expect(onChange).toHaveBeenLastCalledWith(['1', '1-1', '1-1-2'], 2);
+      });
+
       it('syncs view when value prop changes externally', async () => {
         const wrapper = mount(<TreeSelect options={options} value={['1', '1-1', '1-1-1']} />);
         expect(wrapper.findComponent(RadioGroup).props('modelValue')).toBe('1-1-1');
@@ -441,6 +600,75 @@ describe('TreeSelect', () => {
         ).toBe(true);
         expect(wrapper.findComponent(RadioGroup).props('modelValue')).toBe('2-2-2');
       });
+    });
+
+    describe('dynamic options and keys', () => {
+      it('renders loaded options after starting with an empty list', async () => {
+        const wrapper = mount(TreeSelect, { props: { options: [], value: [...defaultValue] } });
+        expect(wrapper.findAll('.t-tree-select__column')).toHaveLength(0);
+        await wrapper.setProps({ options });
+        expect(wrapper.findAll('.t-tree-select__column')).toHaveLength(3);
+        expect(wrapper.get('.t-side-bar-item--active').text()).toContain('一级一');
+        expect(wrapper.getComponent(RadioGroup).props('modelValue')).toBe('1-1-1');
+      });
+
+      it('reacts to nested option additions, label updates and disabled changes', async () => {
+        const data = ref([
+          { label: '根节点', value: 'root', children: [{ label: '叶子一', value: 'a', disabled: false }] },
+        ]);
+        const onChange = vi.fn();
+        const wrapper = mount(() => <TreeSelect options={data.value} value={['root', 'a']} onChange={onChange} />);
+        data.value[0].children.push({ label: '叶子二', value: 'b', disabled: false });
+        await nextTick();
+        expect(wrapper.findAllComponents(Radio)).toHaveLength(2);
+        data.value[0].children[1].label = '更新的叶子';
+        data.value[0].children[1].disabled = true;
+        await nextTick();
+        const leaf = wrapper.findAllComponents(Radio)[1];
+        expect(leaf.text()).toContain('更新的叶子');
+        expect(leaf.props('disabled')).toBe(true);
+        await leaf.trigger('click');
+        expect(onChange).not.toHaveBeenCalled();
+        expect(wrapper.getComponent(RadioGroup).props('modelValue')).toBe('a');
+      });
+
+      it('rebuilds the tree when keys and the selected path change', async () => {
+        const wrapper = mount(TreeSelect, {
+          props: {
+            options: [
+              {
+                label: '默认根节点',
+                value: 'root',
+                children: [{ label: '默认叶子', value: 'leaf' }],
+                name: '别名根节点',
+                id: 'alias-root',
+                nodes: [
+                  { name: '别名叶子', id: 'alias-leaf' },
+                  { name: '禁用别名叶子', id: 'disabled', inactive: true },
+                ],
+              },
+            ],
+            value: ['root', 'leaf'],
+          },
+        });
+        expect(wrapper.text()).toContain('默认叶子');
+        await wrapper.setProps({
+          keys: { label: 'name', value: 'id', children: 'nodes', disabled: 'inactive' },
+          value: ['alias-root', 'alias-leaf'],
+        });
+        expect(wrapper.text()).toContain('别名根节点');
+        expect(wrapper.text()).not.toContain('默认根节点');
+        const leaves = wrapper.findAllComponents(Radio);
+        expect(leaves[0].text()).toContain('别名叶子');
+        expect(leaves[1].props('disabled')).toBe(true);
+        expect(wrapper.getComponent(RadioGroup).props('modelValue')).toBe('alias-leaf');
+      });
+
+      // 源码未实现：options 置空时 buildTreeOptions 提前返回，旧的 treeOptions 未清空，仍保留原有列
+      it.todo('clears rendered columns when options become empty');
+
+      // 源码未实现：treeMaxLevel 只增不减，三级数据替换为两级后，叶子仍按中间节点渲染而非单选组
+      it.todo('renders selectable leaves when replacement options have fewer levels');
     });
 
     describe('edge cases', () => {
@@ -467,11 +695,17 @@ describe('TreeSelect', () => {
 
       it('logs error when multiple leaf value is not an array', () => {
         const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-        mount(<TreeSelect options={options} value={['1', '1-1', '1-1-1']} multiple />);
+        const warnHandler = vi.fn();
+        mount(TreeSelect, {
+          props: { options, value: ['1', '1-1', '1-1-1'], multiple: true },
+          global: { config: { warnHandler } },
+        });
         expect(errorSpy).toHaveBeenCalledWith(
           'TDesign TreeSelect Error: `value` should be an array when `multiple` is true, got `string`',
         );
-        errorSpy.mockRestore();
+        expect(warnHandler.mock.calls.map(([message]) => message)).toEqual([
+          expect.stringContaining('Expected Array, got String'),
+        ]);
       });
     });
   });
