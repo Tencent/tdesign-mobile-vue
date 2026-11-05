@@ -4,69 +4,31 @@ import { ref } from 'vue';
 import { DropdownMenu, DropdownItem } from '../index';
 import { sleep } from '../../shared/util';
 import Popup from '../../popup';
-
-const prefix = 't';
-const name = `${prefix}-dropdown-menu`;
-
-const chineseMap = '一二';
-const emptyArr = new Array(2).fill(null);
-const options = emptyArr.map((_, i) => ({
-  label: `选项${chineseMap[i]}`,
-  value: `option_${i}`,
-  disabled: false,
-}));
-
-options.push({
-  label: '禁用选项',
-  value: 'disabled-item',
-  disabled: true,
-});
+import { name, options, prefix, mountMenu } from './mount';
 
 describe('DropdownMenu', () => {
   describe('props', () => {
     it('closeOnClickOverlay[boolean]', async () => {
-      const mountMenu = (closeOnClickOverlay?: boolean) =>
-        mount({
-          setup() {
-            return () => (
-              <DropdownMenu closeOnClickOverlay={closeOnClickOverlay}>
-                <DropdownItem label="菜单" options={options} />
-              </DropdownMenu>
-            );
-          },
-        });
-
       // 默认 closeOnClickOverlay = true：点击遮罩收起菜单
       const wrapper = mountMenu();
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       expect(wrapper.find(`.${name}__item--active`).exists()).toBe(true);
-      await wrapper.find(`.${prefix}-overlay`).trigger('click');
+      await wrapper.find(`.t-overlay`).trigger('click');
       await sleep(200);
       expect(wrapper.find(`.${name}__item--active`).exists()).toBe(false);
 
       // closeOnClickOverlay = false：点击遮罩不收起菜单
-      const wrapper2 = mountMenu(false);
+      const wrapper2 = mountMenu({ closeOnClickOverlay: false });
       await wrapper2.find(`.${name}__item`).trigger('click');
       await sleep(200);
       expect(wrapper2.find(`.${name}__item--active`).exists()).toBe(true);
-      await wrapper2.find(`.${prefix}-overlay`).trigger('click');
+      await wrapper2.find(`.t-overlay`).trigger('click');
       await sleep(200);
       expect(wrapper2.find(`.${name}__item--active`).exists()).toBe(true);
     });
 
     it('direction[down/up]', async () => {
-      const mountMenu = (direction?: 'down' | 'up') =>
-        mount({
-          setup() {
-            return () => (
-              <DropdownMenu direction={direction}>
-                <DropdownItem label="菜单" options={options} />
-              </DropdownMenu>
-            );
-          },
-        });
-
       // direction = down（默认）：标题栏箭头朝下
       const wrapper = mountMenu();
       expect(wrapper.find('.t-icon-caret-down-small').exists()).toBe(true);
@@ -76,7 +38,7 @@ describe('DropdownMenu', () => {
       expect(wrapper.findComponent(Popup).props('placement')).toBe('top');
 
       // direction = up：标题栏箭头朝上
-      const wrapper2 = mountMenu('up');
+      const wrapper2 = mountMenu({ direction: 'up' });
       expect(wrapper2.find('.t-icon-caret-up-small').exists()).toBe(true);
       expect(wrapper2.find('.t-icon-caret-down-small').exists()).toBe(false);
       await wrapper2.find(`.${name}__item`).trigger('click');
@@ -86,15 +48,7 @@ describe('DropdownMenu', () => {
 
     // duration 仅透传给内部 Popup 控制过渡动画时长，此处断言透传结果
     const mountMenuWithDuration = async (duration?: string | number) => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu duration={duration}>
-              <DropdownItem label="菜单" options={options} />
-            </DropdownMenu>
-          );
-        },
-      });
+      const wrapper = mountMenu({ duration });
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       return wrapper;
@@ -114,47 +68,28 @@ describe('DropdownMenu', () => {
     });
 
     it('showOverlay[boolean]', async () => {
-      const mountMenu = (showOverlay?: boolean) =>
-        mount({
-          setup() {
-            return () => (
-              <DropdownMenu showOverlay={showOverlay}>
-                <DropdownItem label="菜单" options={options} />
-              </DropdownMenu>
-            );
-          },
-        });
-
       // 默认显示遮罩层
       const wrapper = mountMenu();
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
-      expect(wrapper.find(`.${prefix}-overlay`).isVisible()).toBe(true);
+      expect(wrapper.find(`.t-overlay`).isVisible()).toBe(true);
 
       // showOverlay = false：遮罩 DOM 由 v-show 控制，不可见
-      const wrapper2 = mountMenu(false);
+      const wrapper2 = mountMenu({ showOverlay: false });
       await wrapper2.find(`.${name}__item`).trigger('click');
       await sleep(200);
-      const $overlay = wrapper2.find(`.${prefix}-overlay`);
+      const $overlay = wrapper2.find(`.t-overlay`);
       expect($overlay.exists()).toBe(true);
       expect($overlay.isVisible()).toBe(false);
     });
 
     it('zIndex[number]', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu zIndex={2000}>
-              <DropdownItem label="菜单" options={options} />
-            </DropdownMenu>
-          );
-        },
-      });
+      const wrapper = mountMenu({ zIndex: 2000 });
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       // 展开层使用 zIndex，弹出内容使用 zIndex + 1
-      expect(wrapper.find(`.${prefix}-dropdown-item`).attributes('style')).toContain('z-index: 2000');
-      expect(wrapper.find(`.${prefix}-popup`).attributes('style')).toContain('z-index: 2001');
+      expect(wrapper.find(`.t-dropdown-item`).attributes('style')).toContain('z-index: 2000');
+      expect(wrapper.find(`.t-popup`).attributes('style')).toContain('z-index: 2001');
     });
 
     it('default[slot]', () => {
@@ -173,10 +108,7 @@ describe('DropdownMenu', () => {
   describe('events', () => {
     it('menuOpened', async () => {
       const onMenuOpened = vi.fn();
-      const wrapper = mount(DropdownMenu, {
-        props: { onMenuOpened },
-        slots: { default: () => <DropdownItem label="菜单" options={options} /> },
-      });
+      const wrapper = mountMenu({ onMenuOpened });
       expect(onMenuOpened).not.toHaveBeenCalled();
       await wrapper.find(`.${name}__item`).trigger('click');
       expect(onMenuOpened).toHaveBeenCalledTimes(1);
@@ -185,10 +117,7 @@ describe('DropdownMenu', () => {
 
     it('menuClosed', async () => {
       const onMenuClosed = vi.fn();
-      const wrapper = mount(DropdownMenu, {
-        props: { onMenuClosed },
-        slots: { default: () => <DropdownItem label="菜单" options={options} /> },
-      });
+      const wrapper = mountMenu({ onMenuClosed });
       await wrapper.find(`.${name}__item`).trigger('click');
       expect(onMenuClosed).not.toHaveBeenCalled();
       await wrapper.find(`.${name}__item`).trigger('click');
@@ -208,6 +137,7 @@ describe('DropdownMenu', () => {
 
   describe('instanceFunctions', () => {
     it('toggle', async () => {
+      // 直接挂载 DropdownMenu 以通过 wrapper.vm 访问实例方法
       const wrapper = mount(DropdownMenu, {
         slots: { default: () => <DropdownItem label="菜单" options={options} /> },
       });
@@ -227,6 +157,7 @@ describe('DropdownMenu', () => {
     });
 
     it('expandMenu', async () => {
+      // 直接挂载 DropdownMenu 以通过 wrapper.vm 访问实例方法
       const wrapper = mount(DropdownMenu, {
         slots: { default: () => <DropdownItem label="菜单" options={options} /> },
       });
@@ -243,6 +174,7 @@ describe('DropdownMenu', () => {
     });
 
     it('collapseMenu', async () => {
+      // 直接挂载 DropdownMenu 以通过 wrapper.vm 访问实例方法
       const wrapper = mount(DropdownMenu, {
         slots: { default: () => <DropdownItem label="菜单" options={options} /> },
       });

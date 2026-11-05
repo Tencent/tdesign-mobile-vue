@@ -5,28 +5,7 @@ import { DropdownMenu, DropdownItem } from '../index';
 import { sleep } from '../../shared/util';
 import ConfigProvider from '../../config-provider';
 import type { DropdownOption } from '../type';
-
-const prefix = 't';
-const name = `${prefix}-dropdown-menu`;
-
-const chineseMap = '一二';
-const emptyArr = new Array(2).fill(null);
-const options = emptyArr.map((_, i) => ({
-  label: `选项${chineseMap[i]}`,
-  value: `option_${i}`,
-  disabled: false,
-}));
-
-options.push({
-  label: '禁用选项',
-  value: 'disabled-item',
-  disabled: true,
-});
-
-const numberOptions = [
-  { label: '数量一', value: 1, disabled: false },
-  { label: '数量二', value: 2, disabled: false },
-];
+import { name, options, numberOptions, prefix, mountDropdownItem } from './mount';
 
 describe('DropdownItem', () => {
   describe('props', () => {
@@ -50,19 +29,11 @@ describe('DropdownItem', () => {
     });
 
     it('footer[function]', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu>
-              <DropdownItem
-                label="菜单"
-                multiple
-                options={options}
-                footer={() => <div class="custom-footer">自定义底部</div>}
-              />
-            </DropdownMenu>
-          );
-        },
+      const wrapper = mountDropdownItem({
+        label: '菜单',
+        multiple: true,
+        options,
+        footer: () => <div class="custom-footer">自定义底部</div>,
       });
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
@@ -88,11 +59,11 @@ describe('DropdownItem', () => {
     });
 
     it('icon[function]', () => {
-      const wrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem label="菜单" options={options} icon={() => <span class="custom-menu-icon">custom-icon</span>} />
-        </DropdownMenu>
-      ));
+      const wrapper = mountDropdownItem({
+        label: '菜单',
+        options,
+        icon: () => <span class="custom-menu-icon">custom-icon</span>,
+      });
       expect(wrapper.find(`.${name}__icon .custom-menu-icon`).text()).toBe('custom-icon');
       expect(wrapper.find('.t-icon-caret-down-small').exists()).toBe(false);
     });
@@ -199,16 +170,12 @@ describe('DropdownItem', () => {
         { name: '映射二', id: 'mapped_1', blocked: false },
         { name: '映射禁用项', id: 'mapped_2', blocked: true },
       ];
-      const wrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem
-            defaultValue="mapped_1"
-            keys={{ label: 'name', value: 'id', disabled: 'blocked' }}
-            options={customOptions as unknown as DropdownOption[]}
-            onChange={onChange}
-          />
-        </DropdownMenu>
-      ));
+      const wrapper = mountDropdownItem({
+        defaultValue: 'mapped_1',
+        keys: { label: 'name', value: 'id', disabled: 'blocked' },
+        options: customOptions as unknown as DropdownOption[],
+        onChange,
+      });
       expect(wrapper.find(`.${name}__title`).text()).toBe('映射二');
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
@@ -238,15 +205,7 @@ describe('DropdownItem', () => {
 
     it('multiple[boolean]', async () => {
       // 单选：面板渲染 Radio 列表，无底部操作栏
-      const singleWrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu>
-              <DropdownItem label="菜单" options={options} />
-            </DropdownMenu>
-          );
-        },
-      });
+      const singleWrapper = mountDropdownItem({ label: '菜单', options });
       await singleWrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       expect(singleWrapper.find(`.${prefix}-dropdown-item__radio-group`).exists()).toBe(true);
@@ -254,15 +213,7 @@ describe('DropdownItem', () => {
       expect(singleWrapper.find(`.${prefix}-dropdown-item__footer`).exists()).toBe(false);
 
       // 多选：面板渲染 Checkbox 列表与重置/确认操作栏
-      const multipleWrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu>
-              <DropdownItem label="菜单" multiple options={options} />
-            </DropdownMenu>
-          );
-        },
-      });
+      const multipleWrapper = mountDropdownItem({ label: '菜单', multiple: true, options });
       await multipleWrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       expect(multipleWrapper.find(`.${prefix}-dropdown-item__checkbox-group`).exists()).toBe(true);
@@ -272,15 +223,7 @@ describe('DropdownItem', () => {
     });
 
     it('options[array]', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu>
-              <DropdownItem label="菜单" options={options} />
-            </DropdownMenu>
-          );
-        },
-      });
+      const wrapper = mountDropdownItem({ label: '菜单', options });
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       // 选项按 options 顺序渲染为单选列表，label 与选项一致
@@ -290,11 +233,7 @@ describe('DropdownItem', () => {
         expect($radios[index].text()).toBe(option.label);
       });
 
-      const emptyWrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem label="空菜单" />
-        </DropdownMenu>
-      ));
+      const emptyWrapper = mountDropdownItem({ label: '空菜单' });
       await emptyWrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       expect(emptyWrapper.findAll(`.${prefix}-dropdown-item__radio-item`)).toHaveLength(0);
@@ -343,11 +282,7 @@ describe('DropdownItem', () => {
     });
 
     it('optionsColumns[string]', async () => {
-      const wrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem label="菜单" multiple options={options} optionsColumns="3" />
-        </DropdownMenu>
-      ));
+      const wrapper = mountDropdownItem({ label: '菜单', multiple: true, options, optionsColumns: '3' });
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       expect(wrapper.find(`.${prefix}-dropdown-item__checkbox-group`).attributes('style')).toContain(
@@ -356,11 +291,7 @@ describe('DropdownItem', () => {
     });
 
     it.each(['left', 'right'] as const)('placement[%s]', async (placement) => {
-      const wrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem label="菜单" options={options} placement={placement} />
-        </DropdownMenu>
-      ));
+      const wrapper = mountDropdownItem({ label: '菜单', options, placement });
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       const radios = wrapper.findAll(`.${prefix}-dropdown-item__radio-item`);
@@ -507,15 +438,7 @@ describe('DropdownItem', () => {
     });
 
     it('defaultValue[string]', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu>
-              <DropdownItem defaultValue="option_1" options={options} />
-            </DropdownMenu>
-          );
-        },
-      });
+      const wrapper = mountDropdownItem({ defaultValue: 'option_1', options });
       expect(wrapper.find(`.${name}__title`).text()).toBe('选项二');
 
       // 非受控：切换选项后内部值与标题自行更新
@@ -527,15 +450,7 @@ describe('DropdownItem', () => {
     });
 
     it('defaultValue[number]', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu>
-              <DropdownItem defaultValue={1} options={numberOptions} />
-            </DropdownMenu>
-          );
-        },
-      });
+      const wrapper = mountDropdownItem({ defaultValue: 1, options: numberOptions });
       expect(wrapper.find(`.${name}__title`).text()).toBe('数量一');
 
       await wrapper.find(`.${name}__item`).trigger('click');
@@ -546,15 +461,7 @@ describe('DropdownItem', () => {
     });
 
     it('defaultValue[array]', async () => {
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu>
-              <DropdownItem defaultValue={['option_1']} label="菜单" multiple options={options} />
-            </DropdownMenu>
-          );
-        },
-      });
+      const wrapper = mountDropdownItem({ defaultValue: ['option_1'], label: '菜单', multiple: true, options });
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       // 初始选中 defaultValue 指定的 1 项
@@ -583,11 +490,7 @@ describe('DropdownItem', () => {
   describe('events', () => {
     it('change', async () => {
       const onChange = vi.fn();
-      const wrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem value="option_1" label="菜单" options={options} onChange={onChange} />
-        </DropdownMenu>
-      ));
+      const wrapper = mountDropdownItem({ value: 'option_1', label: '菜单', options, onChange });
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       const radios = wrapper.findAll(`.${prefix}-dropdown-item__radio-item`);
@@ -628,11 +531,7 @@ describe('DropdownItem', () => {
 
     it('confirm', async () => {
       const onConfirm = vi.fn();
-      const wrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem multiple defaultValue={['option_1']} options={options} onConfirm={onConfirm} />
-        </DropdownMenu>
-      ));
+      const wrapper = mountDropdownItem({ multiple: true, defaultValue: ['option_1'], options, onConfirm });
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       expect(onConfirm).not.toHaveBeenCalled();
@@ -667,11 +566,7 @@ describe('DropdownItem', () => {
     it('reset', async () => {
       const onReset = vi.fn();
       const initial = ['option_1'];
-      const wrapper = mount(() => (
-        <DropdownMenu>
-          <DropdownItem multiple defaultValue={initial} options={options} onReset={onReset} />
-        </DropdownMenu>
-      ));
+      const wrapper = mountDropdownItem({ multiple: true, defaultValue: initial, options, onReset });
       await wrapper.find(`.${name}__item`).trigger('click');
       await sleep(200);
       await wrapper.find(`.${prefix}-dropdown-item__reset-btn`).trigger('click');

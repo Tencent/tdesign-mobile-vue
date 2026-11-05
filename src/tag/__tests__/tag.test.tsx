@@ -107,32 +107,24 @@ describe('Tag', () => {
       expect(wrapper.element.style.maxWidth).toBe('calc(100% - 16px)');
     });
 
-    it('shape[square/round/mark]', async () => {
-      shapeList.forEach((s) => {
-        const wrapper = mount(() => <Tag shape={s}>{TEXT}</Tag>);
-        expect(wrapper.classes()).toContain(`t-tag--${s}`);
-      });
+    it.each(shapeList)('shape[%s]', (shape) => {
+      const wrapper = mount(() => <Tag shape={shape}>{TEXT}</Tag>);
+      expect(wrapper.classes()).toContain(`t-tag--${shape}`);
     });
 
-    it('size[small/medium/large/extra-large]', async () => {
-      sizeList.forEach((s) => {
-        const wrapper = mount(() => <Tag size={s}>{TEXT}</Tag>);
-        expect(wrapper.classes()).toContain(`t-tag--${s}`);
-      });
+    it.each(sizeList)('size[%s]', (size) => {
+      const wrapper = mount(() => <Tag size={size}>{TEXT}</Tag>);
+      expect(wrapper.classes()).toContain(`t-tag--${size}`);
     });
 
-    it('theme[default/primary/warning/danger/success]', async () => {
-      themeList.forEach((t) => {
-        const wrapper = mount(() => <Tag theme={t}>{TEXT}</Tag>);
-        expect(wrapper.classes()).toContain(`t-tag--${t}`);
-      });
+    it.each(themeList)('theme[%s]', (theme) => {
+      const wrapper = mount(() => <Tag theme={theme}>{TEXT}</Tag>);
+      expect(wrapper.classes()).toContain(`t-tag--${theme}`);
     });
 
-    it('variant[dark/light/outline/light-outline]', async () => {
-      variantList.forEach((v) => {
-        const wrapper = mount(() => <Tag variant={v}>{TEXT}</Tag>);
-        expect(wrapper.classes()).toContain(`t-tag--${v}`);
-      });
+    it.each(variantList)('variant[%s]', (variant) => {
+      const wrapper = mount(() => <Tag variant={variant}>{TEXT}</Tag>);
+      expect(wrapper.classes()).toContain(`t-tag--${variant}`);
     });
   });
 

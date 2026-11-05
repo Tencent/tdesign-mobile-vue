@@ -1,5 +1,7 @@
 import { ref, nextTick, h, markRaw } from 'vue';
+import type { VNodeChild } from 'vue';
 import { mount } from '@vue/test-utils';
+import type { DOMWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { ThumbUpIcon, ThumbDownIcon, StarFilledIcon } from 'tdesign-icons-vue-next';
 import Rate from '../rate';
@@ -25,6 +27,21 @@ afterEach(() => {
   window.HTMLElement.prototype.getBoundingClientRect = originalGetBoundingClientRect;
   vi.useRealTimers();
 });
+
+/** 触摸交互用例公共前置：启用 fake timers（含 Date，rate 内部依赖时间戳）、固定容器宽度并挂载 */
+const mountRateForTouch = (render: () => VNodeChild) => {
+  vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'Date'] });
+  mockRect();
+  const wrapper = mount(render);
+  const $target = wrapper.find(`.${name}__wrapper`);
+  return { wrapper, $target };
+};
+
+/** 完成一次按压超过 200ms 阈值的手势，使后续 touchmove 能换算分值 */
+const pressPastThreshold = async ($target: DOMWrapper<Element>) => {
+  await trigger($target, 'touchstart', 10, 10);
+  vi.advanceTimersByTime(250);
+};
 
 describe('Rate', () => {
   describe('props', () => {
@@ -344,12 +361,9 @@ describe('Rate', () => {
 
     describe('touch interactions', () => {
       it('slide updates value only after press threshold', async () => {
-        vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'Date'] });
-        mockRect();
         const value = ref(0);
         const onChange = vi.fn();
-        const wrapper = mount(() => <Rate v-model={value.value} onChange={onChange} />);
-        const $target = wrapper.find(`.${name}__wrapper`);
+        const { wrapper, $target } = mountRateForTouch(() => <Rate v-model={value.value} onChange={onChange} />);
 
         await trigger($target, 'touchstart', 10, 10);
         // 按住未超过 200ms，滑动不生效
@@ -370,13 +384,9 @@ describe('Rate', () => {
       });
 
       it('touchend hides tips immediately', async () => {
-        vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'Date'] });
-        mockRect();
-        const wrapper = mount(() => <Rate />);
-        const $target = wrapper.find(`.${name}__wrapper`);
+        const { wrapper, $target } = mountRateForTouch(() => <Rate />);
+        await pressPastThreshold($target);
 
-        await trigger($target, 'touchstart', 10, 10);
-        vi.advanceTimersByTime(250);
         await trigger($target, 'touchmove', 120, 10);
         expect(wrapper.find(`.${name}__tips`).exists()).toBeTruthy();
 
@@ -385,13 +395,9 @@ describe('Rate', () => {
       });
 
       it('touchcancel behaves as touchend', async () => {
-        vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'Date'] });
-        mockRect();
-        const wrapper = mount(() => <Rate />);
-        const $target = wrapper.find(`.${name}__wrapper`);
+        const { wrapper, $target } = mountRateForTouch(() => <Rate />);
+        await pressPastThreshold($target);
 
-        await trigger($target, 'touchstart', 10, 10);
-        vi.advanceTimersByTime(250);
         await trigger($target, 'touchmove', 120, 10);
         expect(wrapper.find(`.${name}__tips`).exists()).toBeTruthy();
 
@@ -400,10 +406,7 @@ describe('Rate', () => {
       });
 
       it('tips auto hides 3s after tap selection following touch', async () => {
-        vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'Date'] });
-        mockRect();
-        const wrapper = mount(() => <Rate />);
-        const $target = wrapper.find(`.${name}__wrapper`);
+        const { wrapper, $target } = mountRateForTouch(() => <Rate />);
 
         // 先经历一次触摸结束（touchEnd=true），随后的 tap 选择会开启 3s 自动关闭
         await trigger($target, 'touchstart', 10, 10);
@@ -421,15 +424,11 @@ describe('Rate', () => {
 
     describe('value clamping', () => {
       it('clamps to count when sliding beyond right edge', async () => {
-        vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'Date'] });
-        mockRect();
         const value = ref(0);
         const onChange = vi.fn();
-        const wrapper = mount(() => <Rate v-model={value.value} onChange={onChange} />);
-        const $target = wrapper.find(`.${name}__wrapper`);
+        const { wrapper, $target } = mountRateForTouch(() => <Rate v-model={value.value} onChange={onChange} />);
+        await pressPastThreshold($target);
 
-        await trigger($target, 'touchstart', 10, 10);
-        vi.advanceTimersByTime(250);
         await trigger($target, 'touchmove', 400, 10);
         expect(onChange).toHaveBeenCalledWith(5);
         expect(value.value).toBe(5);
@@ -437,15 +436,11 @@ describe('Rate', () => {
       });
 
       it('clamps to 0 when sliding beyond left edge', async () => {
-        vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout', 'Date'] });
-        mockRect();
         const value = ref(2);
         const onChange = vi.fn();
-        const wrapper = mount(() => <Rate v-model={value.value} onChange={onChange} />);
-        const $target = wrapper.find(`.${name}__wrapper`);
+        const { wrapper, $target } = mountRateForTouch(() => <Rate v-model={value.value} onChange={onChange} />);
+        await pressPastThreshold($target);
 
-        await trigger($target, 'touchstart', 10, 10);
-        vi.advanceTimersByTime(250);
         await trigger($target, 'touchmove', -200, 10);
         expect(onChange).toHaveBeenCalledWith(0);
         expect(value.value).toBe(0);
