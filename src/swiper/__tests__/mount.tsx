@@ -2,7 +2,7 @@ import { nextTick } from 'vue';
 import { vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import type { DOMWrapper, VueWrapper } from '@vue/test-utils';
-import { trigger } from '../../image-viewer/__tests__/touch';
+import { trigger } from '@/test/touch';
 import Swiper from '../swiper';
 import SwiperItem from '../swiper-item';
 import type { TdSwiperProps } from '../type';
@@ -12,12 +12,6 @@ export const navClassPrefix = 't-swiper-nav';
 export const images = ['swiper-01.png', 'swiper-02.png', 'swiper-03.png'];
 
 export type SwiperMountProps = TdSwiperProps & { disabled?: boolean };
-
-/** 等待 SwiperItem 注册、父容器完成定位计算并重渲染 */
-export const flush = async () => {
-  await nextTick();
-  await nextTick();
-};
 
 /** 挂载一个包含若干 SwiperItem 的 Swiper */
 export const mountSwiper = (props: SwiperMountProps = {}, items: string[] = images) =>

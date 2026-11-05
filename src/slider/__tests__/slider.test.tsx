@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { nextTick } from 'vue';
 
 import Form from '../../form';
-import { trigger } from '../../image-viewer/__tests__/touch';
+import { trigger } from '@/test/touch';
 import Slider from '../slider';
 
 const classPrefix = 't-slider';

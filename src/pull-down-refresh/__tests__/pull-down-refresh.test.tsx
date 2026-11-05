@@ -4,7 +4,8 @@ import { afterEach, beforeAll, vi } from 'vitest';
 import PullDownRefresh from '../index';
 import type { TdPullDownRefreshProps } from '../type';
 import ConfigProvider from '../../config-provider';
-import { MockResizeObserver, trigger } from './utils';
+import { MockResizeObserver } from './utils';
+import { trigger } from '@/test/touch';
 
 const TRACK = '.t-pull-down-refresh__track';
 const TIPS = '.t-pull-down-refresh__tips';

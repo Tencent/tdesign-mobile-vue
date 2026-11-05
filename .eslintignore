@@ -15,6 +15,6 @@ node_modules
 yarn-error.log
 vitest.config.js
 
-test
+/test
 
 helper/**

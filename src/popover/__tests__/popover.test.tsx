@@ -3,6 +3,7 @@ import { describe, it, expect, vi, afterEach } from 'vitest';
 import { nextTick } from 'vue';
 import Popover from '../popover';
 import type { TdPopoverProps } from '../type';
+import { flush } from '@/test/flush';
 
 const name = 't-popover';
 
@@ -51,12 +52,6 @@ const restorePopperLayout = () => {
   }
   Reflect.deleteProperty(document.documentElement, 'clientWidth');
   Reflect.deleteProperty(document.documentElement, 'clientHeight');
-};
-
-/** popper 实例的 update 通过微任务调度，等待定位结果应用到 DOM 后再断言 */
-const flushPopperUpdate = async () => {
-  await nextTick();
-  await nextTick();
 };
 
 /** 从浮层 style 中解析 popper 写入的 translate 定位 */
@@ -171,7 +166,7 @@ describe('Popover', () => {
         placement,
         wrapper: mount(() => <Popover visible content="气泡内容" placement={placement} />),
       }));
-      await flushPopperUpdate();
+      await flush();
 
       mountedCases.forEach(({ placement, wrapper }, index) => {
         const popover = wrapper.find(`.${name}`);
@@ -336,18 +331,18 @@ describe('Popover', () => {
       const wrapper = mount(Popover, {
         props: { visible: true, content: '气泡内容', placement: 'top' },
       });
-      await flushPopperUpdate();
+      await flush();
       expect(wrapper.find(`.${name}`).attributes('data-popper-placement')).toBe('top');
 
       await wrapper.setProps({ placement: 'bottom-left' });
-      await flushPopperUpdate();
+      await flush();
       expect(wrapper.find(`.${name}`).attributes('data-popper-placement')).toBe('bottom-start');
       wrapper.unmount();
     });
 
     it('keeps open when clicking inside popover and closes when clicking outside', async () => {
       const wrapper = mount(() => <Popover defaultVisible content="气泡内容" />);
-      await flushPopperUpdate();
+      await flush();
       expect(wrapper.find(`.${name}`).exists()).toBeTruthy();
 
       // 点击浮层内容不关闭
@@ -365,15 +360,15 @@ describe('Popover', () => {
     it('recreates popper after closing and reopening', async () => {
       mockPopperLayout();
       const wrapper = mount(() => <Popover defaultVisible content="气泡内容" />);
-      await flushPopperUpdate();
+      await flush();
       expect(wrapper.find(`.${name}`).attributes('data-popper-placement')).toBe('top');
 
       await wrapper.find(`.${name}__wrapper`).trigger('click');
-      await flushPopperUpdate();
+      await flush();
       expect(wrapper.find(`.${name}`).exists()).toBeFalsy();
 
       await wrapper.find(`.${name}__wrapper`).trigger('click');
-      await flushPopperUpdate();
+      await flush();
       expect(wrapper.find(`.${name}`).attributes('data-popper-placement')).toBe('top');
       wrapper.unmount();
     });

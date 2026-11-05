@@ -4,10 +4,11 @@ import { nextTick } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import Popup from '../index';
 import type { TdPopupProps } from '../type';
+import { createAttachContainer } from '@/test/attach';
+import { finishTransitions } from '@/test/flush';
 
 const mountPopup = async (props: TdPopupProps = {}, slots = {}) => {
-  const container = document.createElement('div');
-  document.body.appendChild(container);
+  const container = createAttachContainer();
   const wrapper = mount(Popup, {
     props: { ...props, attach: () => container },
     slots,
@@ -15,12 +16,6 @@ const mountPopup = async (props: TdPopupProps = {}, slots = {}) => {
   });
   await nextTick();
   return { wrapper, content: new DOMWrapper(container) };
-};
-
-const finishTransitions = async () => {
-  await nextTick();
-  await vi.runAllTimersAsync();
-  await nextTick();
 };
 
 beforeEach(() => {
@@ -36,9 +31,7 @@ afterEach(async () => {
 describe('Popup', () => {
   describe('props', () => {
     it('attach[string]', async () => {
-      const container = document.createElement('div');
-      container.id = 'popup-container';
-      document.body.appendChild(container);
+      const container = createAttachContainer('popup-container');
       mount(Popup, { props: { visible: true, attach: '#popup-container' } });
       await nextTick();
       expect(container.querySelector('.t-popup')).not.toBeNull();

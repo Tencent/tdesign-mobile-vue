@@ -1,5 +1,7 @@
 /**
- * https://github.com/vant-ui/vant/blob/dev/packages/vant/test/event.ts
+ * 模拟触摸/指针事件的公共工具。
+ * 来源：https://github.com/vant-ui/vant/blob/dev/packages/vant/test/event.ts
+ * 原先散落在 image-viewer 与 pull-down-refresh 的测试目录，现统一收敛于此。
  */
 
 import { ComponentPublicInstance, nextTick } from 'vue';

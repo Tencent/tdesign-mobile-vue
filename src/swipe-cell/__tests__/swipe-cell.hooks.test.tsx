@@ -3,7 +3,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { defineComponent, nextTick, ref } from 'vue';
 import { useSwipe } from '../useSwipe';
 import type { UseSwipeOptions, UseSwipeReturn } from '../useSwipe';
-import { trigger } from '../../image-viewer/__tests__/touch';
+import { trigger } from '@/test/touch';
 
 /**
  * 挂载一个使用 useSwipe 的宿主组件。

@@ -4,7 +4,7 @@ import { nextTick } from 'vue';
 import { TabPanel, Tabs } from '../index';
 import type { TdTabsProps } from '../type';
 import Sticky from '../../sticky/index';
-import { trigger } from '../../image-viewer/__tests__/touch';
+import { trigger } from '@/test/touch';
 import { mountTabs, name, numericTabList, tabList, tabPanelName } from './mount';
 
 enableAutoUnmount(afterEach);

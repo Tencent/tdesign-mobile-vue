@@ -5,7 +5,7 @@ import { ThumbUpIcon, ThumbDownIcon, StarFilledIcon } from 'tdesign-icons-vue-ne
 import Rate from '../rate';
 import Form from '../../form';
 import ConfigProvider from '../../config-provider';
-import { trigger } from '../../image-viewer/__tests__/touch';
+import { trigger } from '@/test/touch';
 
 const prefix = 't';
 const name = `${prefix}-rate`;

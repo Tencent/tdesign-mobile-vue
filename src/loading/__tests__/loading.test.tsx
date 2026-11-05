@@ -1,6 +1,7 @@
 import { mount, enableAutoUnmount } from '@vue/test-utils';
 import { afterEach, describe, it, expect, vi } from 'vitest';
 import Loading from '../index';
+import { createAttachContainer } from '@/test/attach';
 
 // attach/fullscreen 用例会 teleport 到 body，统一清理残留节点
 afterEach(() => {
@@ -9,17 +10,10 @@ afterEach(() => {
 });
 enableAutoUnmount(afterEach);
 
-const mountAttachContainer = (id: string) => {
-  const container = document.createElement('div');
-  container.id = id;
-  document.body.appendChild(container);
-  return container;
-};
-
 describe('Loading', () => {
   describe('props', () => {
     it('attach[string]', async () => {
-      mountAttachContainer('loading-attach');
+      createAttachContainer('loading-attach');
       const wrapper = mount(<Loading attach="#loading-attach" />);
       await wrapper.vm.$nextTick();
 
@@ -30,7 +24,7 @@ describe('Loading', () => {
     });
 
     it('attach[function]', async () => {
-      const container = mountAttachContainer('loading-attach-fn');
+      const container = createAttachContainer('loading-attach-fn');
       const wrapper = mount(<Loading attach={() => container} />);
       await wrapper.vm.$nextTick();
 

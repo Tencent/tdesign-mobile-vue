@@ -1,14 +1,14 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { nextTick, ref } from 'vue';
-import { trigger } from '../../image-viewer/__tests__/touch';
+import { trigger } from '@/test/touch';
+import { flush } from '@/test/flush';
 import Swiper from '../swiper';
 import SwiperItem from '../swiper-item';
 import type { SwiperNavigation } from '../type';
 import {
   classPrefix,
   finishTransition,
-  flush,
   getActiveDotIndex,
   getContainer,
   getDots,

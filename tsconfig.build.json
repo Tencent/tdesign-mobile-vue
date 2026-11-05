@@ -10,5 +10,5 @@
     }
   },
   "include": ["src/**/*", "globals.d.ts"],
-  "exclude": ["node_modules", "src/**/demos", "src/_common", "dist", "es", "esm", "lib", "cjs", "site"]
+  "exclude": ["node_modules", "src/**/demos", "src/_common", "src/test", "dist", "es", "esm", "lib", "cjs", "site"]
 }

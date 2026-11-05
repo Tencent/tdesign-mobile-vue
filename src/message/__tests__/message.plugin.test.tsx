@@ -2,12 +2,8 @@ import { mount } from '@vue/test-utils';
 import { nextTick, type Plugin } from 'vue';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { MessagePlugin } from '../index';
-
-// 等待插件 create 内 nextTick 后的 visible 翻转与渲染
-const flush = async () => {
-  await nextTick();
-  await nextTick();
-};
+import { flush } from '@/test/flush';
+import { createAttachContainer } from '@/test/attach';
 
 describe('MessagePlugin', () => {
   describe('scenarios', () => {
@@ -55,9 +51,7 @@ describe('MessagePlugin', () => {
     });
 
     it('mounts to a custom context container', async () => {
-      const container = document.createElement('div');
-      container.id = 'plugin-context';
-      document.body.appendChild(container);
+      const container = createAttachContainer('plugin-context');
 
       MessagePlugin.info({ content: '局部消息', context: container });
       await flush();

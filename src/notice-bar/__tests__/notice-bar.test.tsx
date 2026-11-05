@@ -4,6 +4,7 @@ import { mount } from '@vue/test-utils';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import NoticeBar from '../notice-bar';
 import { Swiper } from '../../swiper';
+import { mockRectByClass } from '@/test/mock-rect';
 
 const LIST_WIDTH = 100;
 const ITEM_WIDTH = 300;
@@ -12,12 +13,8 @@ const ITEM_WIDTH = 300;
  * jsdom 中 getBoundingClientRect 恒为 0，跑马灯测宽逻辑无法触发。
  * 通过 mock 容器(.t-notice-bar__content-wrap)与内容(.t-notice-bar__content)宽度驱动滚动分支。
  */
-function mockContentRect(listWidth = LIST_WIDTH, itemWidth = ITEM_WIDTH) {
-  return vi.spyOn(HTMLElement.prototype, 'getBoundingClientRect').mockImplementation(function (this: HTMLElement) {
-    const width = this.classList.contains('t-notice-bar__content-wrap') ? listWidth : itemWidth;
-    return { width } as DOMRect;
-  });
-}
+const mockContentRect = (listWidth = LIST_WIDTH, itemWidth = ITEM_WIDTH) =>
+  mockRectByClass({ 't-notice-bar__content-wrap': { width: listWidth } }, { width: itemWidth });
 
 describe('NoticeBar', () => {
   afterEach(() => {

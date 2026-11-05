@@ -4,27 +4,13 @@ import { h, nextTick, ref } from 'vue';
 import { HomeIcon } from 'tdesign-icons-vue-next';
 import Segmented from '../segmented';
 import type { SegmentedItem } from '../type';
+import { createRect, mockRectByClass, type RectInit } from '@/test/mock-rect';
 
 const prefix = 't';
 const name = `${prefix}-segmented`;
 
 const stringOptions = ['选项一', '选项二', '选项三'];
 const numberOptions = [1, 2, 3];
-
-type RectInit = { left: number; width: number };
-
-const createRect = ({ left, width }: RectInit): DOMRect =>
-  ({ left, width, right: left + width, top: 0, bottom: 0, height: 0, x: left, y: 0 }) as unknown as DOMRect;
-
-/** jsdom 中 getBoundingClientRect 恒为 0，按 class 名映射元素矩形，驱动滑块定位计算 */
-const mockRectsByClass = (rects: Record<string, RectInit>) =>
-  vi.spyOn(Element.prototype, 'getBoundingClientRect').mockImplementation(function (this: Element) {
-    for (const className of Array.from(this.classList)) {
-      const rect = rects[className];
-      if (rect) return createRect(rect);
-    }
-    return createRect({ left: 0, width: 0 });
-  });
 
 /** 滑块定位所需的三等分布局：group 起点 8px，每个选项宽 60px */
 const layoutRects = (): Record<string, RectInit> => ({
@@ -352,7 +338,7 @@ describe('Segmented', () => {
   describe('scenarios', () => {
     describe('thumb position', () => {
       it('positions the thumb on the active item after mount', async () => {
-        mockRectsByClass(layoutRects());
+        mockRectByClass(layoutRects());
         const wrapper = mount(Segmented, {
           props: {
             options: stringOptions,
@@ -367,7 +353,7 @@ describe('Segmented', () => {
       });
 
       it('moves the thumb when the selected value changes', async () => {
-        mockRectsByClass(layoutRects());
+        mockRectByClass(layoutRects());
         const value = ref('选项一');
         const wrapper = mount({
           setup() {
@@ -389,7 +375,7 @@ describe('Segmented', () => {
 
       it('updates the thumb when the group size changes', async () => {
         const rects = layoutRects();
-        mockRectsByClass(rects);
+        mockRectByClass(rects);
 
         // jsdom 未实现 ResizeObserver，用可记录回调的 Mock 替代
         class MockResizeObserver {
@@ -435,7 +421,7 @@ describe('Segmented', () => {
       });
 
       it('resets the thumb when no option matches the value', async () => {
-        mockRectsByClass(layoutRects());
+        mockRectByClass(layoutRects());
         const wrapper = mount(Segmented, {
           props: {
             options: stringOptions,
@@ -451,7 +437,7 @@ describe('Segmented', () => {
 
     describe('dynamic options', () => {
       it('updates items and thumb when options change', async () => {
-        mockRectsByClass(layoutRects());
+        mockRectByClass(layoutRects());
         const value = ref('选项一');
         const options = ref(['选项一', '选项二', '选项三']);
         const wrapper = mount({
@@ -475,7 +461,7 @@ describe('Segmented', () => {
       });
 
       it('clears the active item when the value is removed from options', async () => {
-        mockRectsByClass(layoutRects());
+        mockRectByClass(layoutRects());
         const value = ref('选项三');
         const options = ref(['选项一', '选项二', '选项三']);
         const wrapper = mount({

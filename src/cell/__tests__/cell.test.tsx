@@ -7,7 +7,7 @@ import type { TdCellProps } from '../type';
 import Avatar from '../../avatar/avatar';
 import Form from '../../form';
 import { sleep } from '../../shared/util';
-import { trigger } from '@/image-viewer/__tests__/touch';
+import { trigger } from '@/test/touch';
 
 const appIcon = () => h(AppIcon);
 const chevronRightIcon = () => h(ChevronRightIcon);

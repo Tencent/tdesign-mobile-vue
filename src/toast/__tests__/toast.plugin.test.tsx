@@ -2,6 +2,7 @@ import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { ToastPlugin } from '../index';
 import config from '../../config';
+import { createAttachContainer } from '@/test/attach';
 
 const { prefix } = config;
 const name = `${prefix}-toast`;
@@ -181,12 +182,10 @@ describe('ToastPlugin', () => {
     });
 
     it.each(['string', 'function'] as const)('attach[%s]', (type) => {
-      const container = document.createElement('div');
-      container.id = 'toast-attach';
+      const container = createAttachContainer('toast-attach');
       const existingChild = document.createElement('span');
       existingChild.textContent = '原有内容';
       container.appendChild(existingChild);
-      document.body.appendChild(container);
 
       ToastPlugin({ message: '指定节点挂载', attach: type === 'string' ? '#toast-attach' : () => container });
       expect(container.querySelector(`.${name}`)).toBeTruthy();

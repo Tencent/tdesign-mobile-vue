@@ -4,15 +4,10 @@ import { nextTick } from 'vue';
 import type { Plugin } from 'vue';
 import { DialogPlugin } from '../index';
 import type { DialogInstance, TdDialogProps } from '../type';
+import { finishTransitions } from '@/test/flush';
 
 const body = new DOMWrapper(document.body);
 let handler: DialogInstance | undefined;
-
-const finishTransitions = async () => {
-  await nextTick();
-  await vi.runAllTimersAsync();
-  await nextTick();
-};
 
 beforeEach(() => {
   vi.useFakeTimers();

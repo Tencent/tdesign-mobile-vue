@@ -4,7 +4,8 @@ import { ref } from 'vue';
 import Swiper from '../swiper';
 import SwiperItem from '../swiper-item';
 import type { TdSwiperProps } from '../type';
-import { flush, getDots, images, mockElementSize } from './mount';
+import { flush } from '@/test/flush';
+import { getDots, images, mockElementSize } from './mount';
 
 enableAutoUnmount(afterEach);
 

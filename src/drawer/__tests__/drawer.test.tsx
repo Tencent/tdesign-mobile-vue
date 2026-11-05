@@ -5,6 +5,7 @@ import { AppIcon } from 'tdesign-icons-vue-next';
 import Drawer from '../index';
 import type { TdDrawerProps } from '../type';
 import { sleep } from '../../shared/util';
+import { createAttachContainer } from '@/test/attach';
 
 // 先等待浮层异步任务，再由 Vue 卸载，最后清理 DOM；避免提前清空 Teleport 锚点。
 enableAutoUnmount((unmount) => {
@@ -21,9 +22,7 @@ const body = new DOMWrapper(document.body);
 describe('Drawer', () => {
   describe('props', () => {
     it('attach[string]', async () => {
-      const div = document.createElement('div');
-      div.id = 'drawer-container';
-      document.body.appendChild(div);
+      const container = createAttachContainer('drawer-container');
 
       mount(Drawer, {
         props: {
@@ -36,8 +35,7 @@ describe('Drawer', () => {
     });
 
     it('attach[function]', async () => {
-      const container = document.createElement('div');
-      document.body.appendChild(container);
+      const container = createAttachContainer();
       const wrapper = mount(Drawer, { props: { visible: true, attach: () => container } });
       await nextTick();
       expect(container.querySelector('.t-drawer')).not.toBeNull();

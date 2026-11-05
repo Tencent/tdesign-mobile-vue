@@ -4,7 +4,7 @@ import { nextTick } from 'vue';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import SwipeCell from '../swipe-cell';
 import type { SwipeActionItem, SwipeCellInstanceFunctions } from '../type';
-import { trigger } from '../../image-viewer/__tests__/touch';
+import { trigger } from '@/test/touch';
 
 const BUTTON_WIDTH = 80;
 /** 右侧菜单：两个操作按钮 */

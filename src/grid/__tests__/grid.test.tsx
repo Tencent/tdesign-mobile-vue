@@ -3,7 +3,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import Grid from '../grid';
 import GridItem from '../grid-item';
 import config from '../../config';
-import { trigger } from '@/image-viewer/__tests__/touch';
+import { trigger } from '@/test/touch';
 import { sleep } from '../../shared/util';
 
 const { prefix } = config;
