@@ -102,9 +102,9 @@ describe('Tag', () => {
       const wrapper = mount(Tag, { props: { maxWidth: 130 } });
       expect(getComputedStyle(wrapper.element, null).maxWidth).toBe('130px');
       await wrapper.setProps({ maxWidth: 0 });
-      expect(wrapper.element.style.maxWidth).toBe('');
+      expect((wrapper.element as HTMLElement).style.maxWidth).toBe('');
       await wrapper.setProps({ maxWidth: 'calc(100% - 16px)' });
-      expect(wrapper.element.style.maxWidth).toBe('calc(100% - 16px)');
+      expect((wrapper.element as HTMLElement).style.maxWidth).toBe('calc(100% - 16px)');
     });
 
     it.each(shapeList)('shape[%s]', (shape) => {
@@ -180,7 +180,7 @@ describe('Tag', () => {
         expect.arrayContaining(['t-tag--success', 't-tag--large', 't-tag--light', 't-tag--mark']),
       );
       expect(wrapper.classes()).not.toContain('t-tag--primary');
-      expect(wrapper.element.style.maxWidth).toBe('96px');
+      expect((wrapper.element as HTMLElement).style.maxWidth).toBe('96px');
     });
   });
 });
