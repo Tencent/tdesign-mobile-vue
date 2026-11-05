@@ -18,7 +18,7 @@ export const subTabBarItems: SubTabBarItem[] = [
 ];
 
 /** 三个子项：前两项为普通标签，第三项带二级菜单 */
-export const barItems: TabBarItemDesc[] = [
+const barItems: TabBarItemDesc[] = [
   { value: '1', label: '标签一' },
   { value: '2', label: '标签二' },
   { value: '3', label: '此处展开', subTabBar: subTabBarItems },
@@ -29,9 +29,6 @@ export const numericBarItems: TabBarItemDesc[] = [
   { value: 1, label: '标签一' },
   { value: 2, label: '标签二' },
 ];
-
-/** 未设置 value 的子项（按挂载顺序索引标识） */
-export const unnamedBarItems: TabBarItemDesc[] = [{ label: '标签一' }, { label: '标签二' }, { label: '标签三' }];
 
 /** 以 TabBar 为根组件挂载，items 为子项描述 */
 export const mountTabBar = (props: Record<string, any> = {}, items: TabBarItemDesc[] = barItems): VueWrapper =>

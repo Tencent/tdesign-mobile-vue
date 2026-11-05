@@ -11,7 +11,7 @@ export const classPrefix = 't-swiper';
 export const navClassPrefix = 't-swiper-nav';
 export const images = ['swiper-01.png', 'swiper-02.png', 'swiper-03.png'];
 
-export type SwiperMountProps = TdSwiperProps & { disabled?: boolean };
+type SwiperMountProps = TdSwiperProps & { disabled?: boolean };
 
 /** 挂载一个包含若干 SwiperItem 的 Swiper */
 export const mountSwiper = (props: SwiperMountProps = {}, items: string[] = images) =>

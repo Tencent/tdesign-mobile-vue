@@ -52,26 +52,3 @@ export function trigger(
 
   return nextTick();
 }
-
-function triggerTwoFingerTouchmove(el: Element | DOMWrapper<Element>, x: number, y: number) {
-  trigger(el, 'touchmove', -x, -y, { x, y });
-}
-
-// simulate zoom
-export function triggerZoom(el: Element | DOMWrapper<Element>, x: number, y: number, direction: 'in' | 'out' = 'in') {
-  trigger(el, 'touchstart', 0, 0, { x, y });
-
-  if (direction === 'in') {
-    triggerTwoFingerTouchmove(el, x / 4, y / 4);
-    triggerTwoFingerTouchmove(el, x / 3, y / 3);
-    triggerTwoFingerTouchmove(el, x / 2, y / 2);
-    triggerTwoFingerTouchmove(el, x, y);
-  } else if (direction === 'out') {
-    triggerTwoFingerTouchmove(el, x, y);
-    triggerTwoFingerTouchmove(el, x / 2, y / 2);
-    triggerTwoFingerTouchmove(el, x / 3, y / 3);
-    triggerTwoFingerTouchmove(el, x / 4, y / 4);
-  }
-
-  trigger(el, 'touchend', 0, 0, { touchList: [] });
-}

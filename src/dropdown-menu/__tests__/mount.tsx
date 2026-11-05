@@ -5,7 +5,7 @@ import type { TdDropdownMenuProps, TdDropdownItemProps } from '../type';
 export const prefix = 't';
 export const name = `${prefix}-dropdown-menu`;
 
-export const chineseMap = '一二';
+const chineseMap = '一二';
 const emptyArr = new Array(2).fill(null);
 
 export const options = emptyArr.map((_, i) => ({
