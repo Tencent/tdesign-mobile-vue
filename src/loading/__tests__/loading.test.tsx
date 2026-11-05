@@ -1,0 +1,205 @@
+import { mount, enableAutoUnmount } from '@vue/test-utils';
+import { afterEach, describe, it, expect, vi } from 'vitest';
+import Loading from '../index';
+import { createAttachContainer } from '@/test/attach';
+
+// attach/fullscreen 用例会 teleport 到 body，统一清理残留节点
+afterEach(() => {
+  document.body.innerHTML = '';
+  document.body.className = '';
+});
+enableAutoUnmount(afterEach);
+
+describe('Loading', () => {
+  describe('props', () => {
+    it('attach[string]', async () => {
+      createAttachContainer('loading-attach');
+      const wrapper = mount(<Loading attach="#loading-attach" />);
+      await wrapper.vm.$nextTick();
+
+      // 字符串选择器：Loading 挂载到目标容器，且带全屏遮罩类名
+      expect(document.querySelector('#loading-attach .t-loading')).toBeTruthy();
+      expect(document.querySelector('#loading-attach .t-loading--full')).toBeTruthy();
+      expect(wrapper.find('.t-loading').exists()).toBe(false);
+    });
+
+    it('attach[function]', async () => {
+      const container = createAttachContainer('loading-attach-fn');
+      const wrapper = mount(<Loading attach={() => container} />);
+      await wrapper.vm.$nextTick();
+
+      // 函数返回挂载节点：同样 teleport 到目标容器
+      expect(container.querySelector('.t-loading')).toBeTruthy();
+      expect(wrapper.find('.t-loading').exists()).toBe(false);
+    });
+
+    it('content[string]', () => {
+      const wrapper = mount(<Loading content="加载中..." />);
+      // content 作为子元素渲染在 loading 根节点内
+      expect(wrapper.text()).toContain('加载中...');
+    });
+
+    it('content[function]', () => {
+      const wrapper = mount(<Loading content={() => <div class="custom-content">自定义内容</div>} />);
+      expect(wrapper.get('.custom-content').text()).toBe('自定义内容');
+    });
+
+    it('content[slot]', () => {
+      const wrapper = mount(Loading, { slots: { content: () => <span class="slot-content">插槽内容</span> } });
+      expect(wrapper.get('.slot-content').text()).toBe('插槽内容');
+    });
+
+    it('default[string]', () => {
+      // default prop 与默认插槽同名，此处验证 prop 传入通道
+      const wrapper = mount(Loading, { props: { default: '默认子元素' } });
+      expect(wrapper.text()).toContain('默认子元素');
+    });
+
+    it('default[function]', () => {
+      const wrapper = mount(Loading, { props: { default: () => <span class="fn-default">函数默认子元素</span> } });
+      expect(wrapper.get('.fn-default').text()).toBe('函数默认子元素');
+    });
+
+    it('default[slot]', () => {
+      const wrapper = mount(Loading, { slots: { default: () => <span class="slot-content">插槽子元素</span> } });
+      expect(wrapper.get('.slot-content').text()).toBe('插槽子元素');
+    });
+
+    it('delay[number]', async () => {
+      vi.useFakeTimers();
+      try {
+        const wrapper = mount(Loading, { props: { delay: 500 } });
+        // 延迟窗口内不渲染指示符
+        expect(wrapper.find('.t-loading__gradient').exists()).toBe(false);
+        vi.advanceTimersByTime(500);
+        await wrapper.vm.$nextTick();
+        expect(wrapper.find('.t-loading__gradient').exists()).toBe(true);
+
+        // 重新进入 loading 状态时再次延迟
+        await wrapper.setProps({ loading: false });
+        await wrapper.setProps({ loading: true });
+        expect(wrapper.find('.t-loading__gradient').exists()).toBe(false);
+        vi.advanceTimersByTime(500);
+        await wrapper.vm.$nextTick();
+        expect(wrapper.find('.t-loading__gradient').exists()).toBe(true);
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
+    it('duration[number]', () => {
+      const wrapper = mount(Loading, { props: { duration: 1200 } });
+      expect(wrapper.get('.t-loading__gradient').attributes('style')).toContain('1200ms');
+
+      // dots 主题下容器与每个点均应用 duration
+      const dots = mount(Loading, { props: { theme: 'dots', duration: 600 } });
+      expect(dots.get('.t-loading__dots').attributes('style')).toContain('600ms');
+      dots.findAll('.t-loading__dot').forEach((dot, index) => {
+        expect(dot.attributes('style')).toContain('animation-duration: 0.6s');
+        expect(dot.attributes('style')).toContain(`animation-delay: ${(600 * index) / 3000}s`);
+      });
+    });
+
+    it('fullscreen[boolean]', async () => {
+      // 未设置 attach 时 Teleport 处于禁用态，全屏内容原位渲染并带 fullscreen 类名
+      const wrapper = mount(<Loading fullscreen />);
+      expect(wrapper.find('.t-loading--fullscreen').exists()).toBe(true);
+
+      // fullscreen 模式下 loading = false 不渲染
+      await wrapper.setProps({ loading: false });
+      expect(wrapper.find('.t-loading').exists()).toBe(false);
+    });
+
+    it('indicator[boolean]', async () => {
+      const wrapper = mount(Loading, { props: { indicator: false, text: '加载中' } });
+      expect(wrapper.find('.t-loading__gradient').exists()).toBe(false);
+      // 无指示符时文案使用独立样式
+      expect(wrapper.get('.t-loading__text').classes()).toContain('t-loading__text--only');
+
+      await wrapper.setProps({ indicator: true });
+      expect(wrapper.find('.t-loading__gradient').exists()).toBe(true);
+      expect(wrapper.get('.t-loading__text').classes()).not.toContain('t-loading__text--only');
+    });
+
+    it('indicator[function]', () => {
+      const wrapper = mount(Loading, { props: { indicator: () => <span class="custom-indicator">指示符</span> } });
+      expect(wrapper.get('.custom-indicator').text()).toBe('指示符');
+      expect(wrapper.find('.t-loading__gradient').exists()).toBe(false);
+    });
+
+    it('indicator[slot]', () => {
+      const wrapper = mount(Loading, { slots: { indicator: () => <span class="slot-indicator">插槽指示符</span> } });
+      expect(wrapper.get('.slot-indicator').text()).toBe('插槽指示符');
+      expect(wrapper.find('.t-loading__gradient').exists()).toBe(false);
+    });
+
+    // 组件会输出 `color: inherit`，但 jsdom 的 cssstyle 序列化会丢弃该值，无法在单测中断言。
+    it.todo('inheritColor[boolean]');
+
+    it.each(['horizontal', 'vertical'] as const)('layout[%s]', (layout) => {
+      const wrapper = mount(Loading, { props: { text: '加载中', layout } });
+      expect(wrapper.classes().includes('t-loading--vertical')).toBe(layout === 'vertical');
+    });
+
+    it('loading[boolean]', async () => {
+      const wrapper = mount(Loading);
+      expect(wrapper.find('.t-loading__gradient').exists()).toBe(true);
+      expect(document.body.classList.contains('t-loading--lock')).toBe(false);
+
+      await wrapper.setProps({ loading: false });
+      expect(wrapper.find('.t-loading__gradient').exists()).toBe(false);
+
+      // fullscreen 开启时进入加载态会锁定 body 滚动
+      await wrapper.setProps({ loading: true, fullscreen: true });
+      expect(document.body.classList.contains('t-loading--lock')).toBe(true);
+
+      await wrapper.setProps({ loading: false });
+      expect(document.body.classList.contains('t-loading--lock')).toBe(false);
+    });
+
+    it('pause[boolean]', async () => {
+      const wrapper = mount(Loading);
+      expect(wrapper.get('.t-loading__gradient').attributes('style')).not.toContain('animation-play-state');
+      await wrapper.setProps({ pause: true });
+      expect(wrapper.get('.t-loading__gradient').attributes('style')).toContain('animation-play-state: paused');
+    });
+
+    it('reverse[boolean]', async () => {
+      const wrapper = mount(Loading);
+      expect(wrapper.get('.t-loading__gradient').attributes('style')).not.toContain('animation-direction');
+      await wrapper.setProps({ reverse: true });
+      expect(wrapper.get('.t-loading__gradient').attributes('style')).toContain('animation-direction: reverse');
+    });
+
+    it('size[string]', async () => {
+      const wrapper = mount(Loading);
+      expect(wrapper.attributes('style')).toContain('font-size: 20px');
+      await wrapper.setProps({ size: '40px' });
+      expect(wrapper.attributes('style')).toContain('font-size: 40px');
+      expect(wrapper.get('.t-loading__gradient').attributes('style')).toContain('width: 40px');
+      expect(wrapper.get('.t-loading__gradient').attributes('style')).toContain('height: 40px');
+    });
+
+    it('text[string]', () => {
+      const wrapper = mount(Loading, { props: { text: '加载中' } });
+      expect(wrapper.get('.t-loading__text').text()).toBe('加载中');
+    });
+
+    it('text[function]', () => {
+      const wrapper = mount(Loading, { props: { text: () => <span class="fn-text">函数文案</span> } });
+      expect(wrapper.get('.t-loading__text .fn-text').text()).toBe('函数文案');
+    });
+
+    it('text[slot]', () => {
+      const wrapper = mount(Loading, { slots: { text: () => <span class="slot-text">插槽文案</span> } });
+      expect(wrapper.get('.t-loading__text .slot-text').text()).toBe('插槽文案');
+    });
+
+    it.each(['circular', 'spinner', 'dots'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(Loading, { props: { theme } });
+      if (theme === 'circular') expect(wrapper.find('.t-loading__gradient').exists()).toBe(true);
+      if (theme === 'spinner') expect(wrapper.find('.t-loading__spinner').exists()).toBe(true);
+      if (theme === 'dots') expect(wrapper.findAll('.t-loading__dot')).toHaveLength(3);
+    });
+  });
+});

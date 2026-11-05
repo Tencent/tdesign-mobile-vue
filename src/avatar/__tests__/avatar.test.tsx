@@ -1,0 +1,105 @@
+import { h } from 'vue';
+import { mount } from '@vue/test-utils';
+import { describe, it, expect, vi } from 'vitest';
+import { UserIcon } from 'tdesign-icons-vue-next';
+import Avatar from '../avatar';
+import Badge from '../../badge/badge';
+import { IMAGE, IMAGE_FAIL, shapeList, sizeList } from './mount';
+
+const userIconFunc = () => h(UserIcon);
+
+describe('Avatar', () => {
+  describe('props', () => {
+    it('alt[string]', async () => {
+      const wrapper = mount(() => <Avatar image={IMAGE} alt="头像替代文本" />);
+      // alt 作为图片加载失败时的替代文本透传给内部 img 标签
+      expect(wrapper.find('img').attributes('alt')).toBe('头像替代文本');
+    });
+
+    it('badgeProps[object]', async () => {
+      const wrapper = mount(() => <Avatar image={IMAGE} badgeProps={{ count: 10 }}></Avatar>);
+      expect(wrapper.findComponent(Badge).exists()).toBeTruthy();
+      const badge = wrapper.find('.t-badge > .t-badge--basic');
+      expect(badge.exists()).toBeTruthy();
+      expect(badge.text()).toBe('10');
+    });
+
+    it('hideOnLoadFailed[boolean]', async () => {
+      // hideOnLoadFailed 开启时不渲染图片，改为图标/文本兜底
+      const wrapper = mount(() => <Avatar image={IMAGE} hideOnLoadFailed />);
+      expect(wrapper.find('img').exists()).toBeFalsy();
+
+      const wrapper2 = mount(() => <Avatar image={IMAGE} />);
+      expect(wrapper2.find('img').exists()).toBeTruthy();
+    });
+
+    it('icon[function]', async () => {
+      const wrapper = mount(() => <Avatar icon={userIconFunc} />);
+      expect(wrapper.findComponent(UserIcon).exists()).toBeTruthy();
+    });
+
+    it('icon[slot]', async () => {
+      const wrapper = mount(Avatar, {
+        slots: {
+          icon: userIconFunc,
+        },
+      });
+      const icon = wrapper.find('.t-avatar > .t-avatar__icon');
+      expect(icon.exists()).toBeTruthy();
+      expect(wrapper.findComponent(UserIcon).exists()).toBeTruthy();
+    });
+
+    it('image[string]', async () => {
+      const wrapper = mount(() => <Avatar image={IMAGE} />);
+      // jsdom 不触发图片 onload，断言 image 已作为地址透传给内部 img 的 src
+      expect(wrapper.find('img').attributes('src')).toBe(IMAGE);
+
+      // 未设置 image 时不渲染图片节点
+      const wrapper2 = mount(() => <Avatar />);
+      expect(wrapper2.find('img').exists()).toBe(false);
+    });
+
+    it('imageProps[object]', async () => {
+      const wrapper = mount(() => <Avatar image={IMAGE} imageProps={{ alt: '头像', fit: 'cover' }} />);
+      expect(wrapper.find('img').attributes('alt')).toBe('头像');
+      expect(wrapper.find('img').attributes('style')).toContain('object-fit: cover');
+    });
+
+    it.each(shapeList)('shape[%s]', async (shape) => {
+      const wrapper = mount(() => <Avatar image={IMAGE} shape={shape} />);
+      expect(wrapper.find(`.t-avatar--${shape}`).exists()).toBe(true);
+    });
+
+    it.each(sizeList)('size[%s]', async (size) => {
+      const wrapper = mount(() => <Avatar image={IMAGE} size={size} />);
+      expect(wrapper.find(`.t-avatar--${size}`).exists()).toBe(true);
+    });
+
+    it('size[custom]', async () => {
+      const customSizeWrapper = mount(() => <Avatar image={IMAGE} size="24px" />);
+      const avatar = customSizeWrapper.find('.t-avatar');
+      expect(avatar.attributes('style')).toContain('width: 24px');
+      expect(avatar.attributes('style')).toContain('height: 24px');
+    });
+
+    it('default[slot]', async () => {
+      const wrapper = mount(() => <Avatar>A</Avatar>);
+      const characterAvatar = wrapper.find('.t-avatar');
+      expect(characterAvatar.text()).toBe('A');
+    });
+  });
+
+  describe('events', () => {
+    it('error', async () => {
+      const onError = vi.fn();
+      const wrapper = mount(() => <Avatar image={IMAGE_FAIL} alt="加载错误" onError={onError} />);
+      const img = wrapper.find('img');
+      const status = wrapper.find(`.t-image__mask`);
+      expect(status.exists()).toBeTruthy();
+      expect(img.exists()).toBeTruthy();
+      await img.trigger('error');
+      expect(onError).toBeCalledTimes(1);
+      expect(onError).toHaveBeenCalledWith({ e: expect.any(Event) });
+    });
+  });
+});

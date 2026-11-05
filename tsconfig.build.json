@@ -3,10 +3,12 @@
   "compilerOptions": {
     "rootDir": "src",
     "paths": {
+      "@/*": ["./src/*"],
       "tdesign-mobile-vue": ["./src"],
+      "tdesign-mobile-vue/es/_util/*": ["./src/_util/*"],
       "tdesign-mobile-vue/es/locale/*": ["./src/locale/*"]
     }
   },
   "include": ["src/**/*", "globals.d.ts"],
-  "exclude": ["node_modules", "src/**/demos", "src/_common", "src/**/__test__", "dist", "es", "esm", "lib", "cjs", "site"]
+  "exclude": ["node_modules", "src/**/demos", "src/_common", "src/test", "dist", "es", "esm", "lib", "cjs", "site"]
 }

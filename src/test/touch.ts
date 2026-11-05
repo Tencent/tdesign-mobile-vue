@@ -1,0 +1,54 @@
+/**
+ * 模拟触摸/指针事件的公共工具。
+ * 来源：https://github.com/vant-ui/vant/blob/dev/packages/vant/test/event.ts
+ * 原先散落在 image-viewer 与 pull-down-refresh 的测试目录，现统一收敛于此。
+ */
+
+import { ComponentPublicInstance, nextTick } from 'vue';
+import { VueWrapper, DOMWrapper } from '@vue/test-utils';
+
+function getTouch(el: Element | Window, x: number, y: number) {
+  return {
+    identifier: Date.now(),
+    target: el,
+    pageX: x,
+    pageY: y,
+    clientX: x,
+    clientY: y,
+    radiusX: 2.5,
+    radiusY: 2.5,
+    rotationAngle: 10,
+    force: 0.5,
+  };
+}
+
+// trigger pointer/touch event
+export function trigger(
+  wrapper: VueWrapper<ComponentPublicInstance<any, any, any>> | DOMWrapper<Element> | Element | Window,
+  eventName: string,
+  x = 0,
+  y = 0,
+  options: any = {},
+) {
+  const el = 'element' in wrapper ? wrapper.element : wrapper;
+  const touchList = options.touchList || [getTouch(el, x, y)];
+
+  if (options.x || options.y) {
+    touchList.push(getTouch(el, options.x, options.y));
+  }
+
+  const event = document.createEvent('CustomEvent');
+  event.initCustomEvent(eventName, true, true, {});
+
+  Object.assign(event, {
+    clientX: x,
+    clientY: y,
+    touches: touchList,
+    targetTouches: touchList,
+    changedTouches: touchList,
+  });
+
+  el.dispatchEvent(event);
+
+  return nextTick();
+}
