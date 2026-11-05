@@ -121,19 +121,13 @@ describe('Progress', () => {
       expect(wrapper.find('svg').attributes('width')).toBe('160');
     });
 
-    it('status[success/error/warning/active]', () => {
-      const statusList: TdProgressProps['status'][] = ['success', 'error', 'warning', 'active'];
-      statusList.forEach((status) => {
-        const wrapper = mount(Progress, {
-          props: { percentage: 30, status },
-        });
-        expect(wrapper.find('.t-progress--thin').classes()).toContain(`t-progress--status-${status}`);
-      });
+    it.each(['success', 'error', 'warning', 'active'] as const)('status[%s]', (status) => {
+      const wrapper = mount(Progress, { props: { percentage: 30, status } });
+      expect(wrapper.find('.t-progress--thin').classes()).toContain(`t-progress--status-${status}`);
+    });
 
-      // 未设置 status 时按 default 状态渲染
-      const wrapper = mount(Progress, {
-        props: { percentage: 30 },
-      });
+    it('status[default]', () => {
+      const wrapper = mount(Progress, { props: { percentage: 30 } });
       expect(wrapper.find('.t-progress--thin').classes()).toContain('t-progress--status-default');
     });
 
@@ -214,36 +208,26 @@ describe('Progress', () => {
 
   describe('scenarios', () => {
     describe('status icon display', () => {
-      it('renders filled icons for line theme when status is success/error/warning', () => {
-        const iconClassMap: Record<string, string> = {
-          success: 't-icon-check-circle-filled',
-          error: 't-icon-error-circle-filled',
-          warning: 't-icon-error-circle-filled',
-        };
-        Object.entries(iconClassMap).forEach(([status, iconClass]) => {
-          const wrapper = mount(Progress, {
-            props: { percentage: 30, status: status as TdProgressProps['status'] },
-          });
-          expect(wrapper.find('.t-progress__info .t-progress__icon').exists()).toBe(true);
-          expect(wrapper.find(`.t-progress__icon.${iconClass}`).exists()).toBe(true);
-          expect(wrapper.text()).not.toContain('30%');
-        });
+      it.each([
+        ['success', 't-icon-check-circle-filled'],
+        ['error', 't-icon-error-circle-filled'],
+        ['warning', 't-icon-error-circle-filled'],
+      ] as const)('renders filled icon for line theme with %s status', (status, iconClass) => {
+        const wrapper = mount(Progress, { props: { percentage: 30, status } });
+        expect(wrapper.find('.t-progress__info .t-progress__icon').exists()).toBe(true);
+        expect(wrapper.find(`.t-progress__icon.${iconClass}`).exists()).toBe(true);
+        expect(wrapper.text()).not.toContain('30%');
       });
 
-      it('renders stroke icons for circle theme when status is success/error/warning', () => {
-        const iconClassMap: Record<string, string> = {
-          success: 't-icon-check',
-          error: 't-icon-close',
-          warning: 't-icon-error',
-        };
-        Object.entries(iconClassMap).forEach(([status, iconClass]) => {
-          const wrapper = mount(Progress, {
-            props: { theme: 'circle', percentage: 30, status: status as TdProgressProps['status'] },
-          });
-          expect(wrapper.find('.t-progress__info .t-progress__icon').exists()).toBe(true);
-          expect(wrapper.find(`.t-progress__icon.${iconClass}`).exists()).toBe(true);
-          expect(wrapper.text()).not.toContain('30%');
-        });
+      it.each([
+        ['success', 't-icon-check'],
+        ['error', 't-icon-close'],
+        ['warning', 't-icon-error'],
+      ] as const)('renders stroke icon for circle theme with %s status', (status, iconClass) => {
+        const wrapper = mount(Progress, { props: { theme: 'circle', percentage: 30, status } });
+        expect(wrapper.find('.t-progress__info .t-progress__icon').exists()).toBe(true);
+        expect(wrapper.find(`.t-progress__icon.${iconClass}`).exists()).toBe(true);
+        expect(wrapper.text()).not.toContain('30%');
       });
 
       it('keeps percentage text instead of icon for plump theme', () => {

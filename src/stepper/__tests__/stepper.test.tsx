@@ -124,16 +124,12 @@ describe('Stepper', () => {
       expect($minus.classes()).toContain(`${name}--normal-disabled`);
     });
 
-    it('size[small/medium/large]', () => {
-      (['small', 'medium', 'large'] as const).forEach((size) => {
-        const wrapper = mount(Stepper, {
-          props: { size },
-        });
-        expect(wrapper.classes()).toContain(`${name}--${size}`);
-        expect(wrapper.find(`.${name}__minus`).classes()).toContain(`${name}__icon--${size}`);
-        expect(wrapper.find(`.${name}__plus`).classes()).toContain(`${name}__icon--${size}`);
-        expect(wrapper.find(`.${name}__input`).classes()).toContain(`${name}__input--${size}`);
-      });
+    it.each(['small', 'medium', 'large'] as const)('size[%s]', (size) => {
+      const wrapper = mount(Stepper, { props: { size } });
+      expect(wrapper.classes()).toContain(`${name}--${size}`);
+      expect(wrapper.find(`.${name}__minus`).classes()).toContain(`${name}__icon--${size}`);
+      expect(wrapper.find(`.${name}__plus`).classes()).toContain(`${name}__icon--${size}`);
+      expect(wrapper.find(`.${name}__input`).classes()).toContain(`${name}__input--${size}`);
     });
 
     it('step[number]', async () => {
@@ -150,17 +146,13 @@ describe('Stepper', () => {
       expect(value.value).toBe('0');
     });
 
-    it('theme[normal/filled/outline]', () => {
-      (['normal', 'filled', 'outline'] as const).forEach((theme) => {
-        const wrapper = mount(Stepper, {
-          props: { theme },
-        });
-        expect(wrapper.find(`.${name}__minus`).classes()).toContain(`${name}__minus--${theme}`);
-        expect(wrapper.find(`.${name}__input`).classes()).toContain(`${name}__input--${theme}`);
-        expect(wrapper.find(`.${name}__plus`).classes()).toContain(`${name}__plus--${theme}`);
-        // 默认值 0 位于最小值边界，禁用态类名同样跟随主题
-        expect(wrapper.find(`.${name}__minus`).classes()).toContain(`${name}--${theme}-disabled`);
-      });
+    it.each(['normal', 'filled', 'outline'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(Stepper, { props: { theme } });
+      expect(wrapper.find(`.${name}__minus`).classes()).toContain(`${name}__minus--${theme}`);
+      expect(wrapper.find(`.${name}__input`).classes()).toContain(`${name}__input--${theme}`);
+      expect(wrapper.find(`.${name}__plus`).classes()).toContain(`${name}__plus--${theme}`);
+      // 默认值 0 位于最小值边界，禁用态类名同样跟随主题
+      expect(wrapper.find(`.${name}__minus`).classes()).toContain(`${name}--${theme}-disabled`);
     });
 
     it('value[number]', async () => {

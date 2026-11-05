@@ -144,25 +144,19 @@ describe('CheckTag', () => {
       expect(wrapper.findComponent(TIconApp).exists()).toBe(true);
     });
 
-    it('shape[square/round/mark]', async () => {
-      shapeList.forEach((s) => {
-        const wrapper = mount(() => <TCheckTag shape={s}>{TEXT}</TCheckTag>);
-        expect(wrapper.classes()).toContain(`t-tag--${s}`);
-      });
+    it.each(shapeList)('shape[%s]', (shape) => {
+      const wrapper = mount(() => <TCheckTag shape={shape}>{TEXT}</TCheckTag>);
+      expect(wrapper.classes()).toContain(`t-tag--${shape}`);
     });
 
-    it('size[small/medium/large]', async () => {
-      sizeList.forEach((s) => {
-        const wrapper = mount(() => <TCheckTag size={s}>{TEXT}</TCheckTag>);
-        expect(wrapper.classes()).toContain(`t-tag--${s}`);
-      });
+    it.each(sizeList)('size[%s]', (size) => {
+      const wrapper = mount(() => <TCheckTag size={size}>{TEXT}</TCheckTag>);
+      expect(wrapper.classes()).toContain(`t-tag--${size}`);
     });
 
-    it('variant[dark/light/outline/light-outline]', async () => {
-      variantList.forEach((v) => {
-        const wrapper = mount(() => <TCheckTag variant={v}>{TEXT}</TCheckTag>);
-        expect(wrapper.classes()).toContain(`t-tag--${v}`);
-      });
+    it.each(variantList)('variant[%s]', (variant) => {
+      const wrapper = mount(() => <TCheckTag variant={variant}>{TEXT}</TCheckTag>);
+      expect(wrapper.classes()).toContain(`t-tag--${variant}`);
     });
   });
 

@@ -270,37 +270,19 @@ describe('Checkbox', () => {
       expect(onChange).toHaveBeenCalledTimes(1);
     });
 
-    it('value[string]', async () => {
+    it.each([
+      ['string', 'one'],
+      ['number', 1],
+      ['boolean', false],
+    ] as const)('value[%s]', async (_type, value) => {
       const onChange = vi.fn();
       const wrapper = mount(() => (
         <CheckboxGroup onChange={onChange}>
-          <Checkbox value="one" />
+          <Checkbox value={value} />
         </CheckboxGroup>
       ));
       await wrapper.findComponent(Checkbox).trigger('click');
-      expect(onChange).toHaveBeenCalledWith(['one'], expect.objectContaining({ current: 'one' }));
-    });
-
-    it('value[number]', async () => {
-      const onChange = vi.fn();
-      const wrapper = mount(() => (
-        <CheckboxGroup onChange={onChange}>
-          <Checkbox value={1} />
-        </CheckboxGroup>
-      ));
-      await wrapper.findComponent(Checkbox).trigger('click');
-      expect(onChange).toHaveBeenCalledWith([1], expect.objectContaining({ current: 1 }));
-    });
-
-    it('value[boolean]', async () => {
-      const onChange = vi.fn();
-      const wrapper = mount(() => (
-        <CheckboxGroup onChange={onChange}>
-          <Checkbox value={false} />
-        </CheckboxGroup>
-      ));
-      await wrapper.findComponent(Checkbox).trigger('click');
-      expect(onChange).toHaveBeenCalledWith([false], expect.objectContaining({ current: false }));
+      expect(onChange).toHaveBeenCalledWith([value], expect.objectContaining({ current: value }));
     });
   });
 

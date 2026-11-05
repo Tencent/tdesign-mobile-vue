@@ -13,11 +13,9 @@ enableAutoUnmount(afterEach);
 
 describe('Grid', () => {
   describe('props', () => {
-    it('align[left/center]', () => {
-      (['left', 'center'] as const).forEach((align) => {
-        const wrapper = mount(Grid, { props: { align }, slots: { default: () => <GridItem /> } });
-        expect((wrapper.get(`.${name}-item`).element as HTMLElement).style.textAlign).toBe(align);
-      });
+    it.each(['left', 'center'] as const)('align[%s]', (align) => {
+      const wrapper = mount(Grid, { props: { align }, slots: { default: () => <GridItem /> } });
+      expect((wrapper.get(`.${name}-item`).element as HTMLElement).style.textAlign).toBe(align);
     });
 
     it('border[boolean]', () => {
@@ -56,15 +54,13 @@ describe('Grid', () => {
       expect(disabled.get(`.${name}-item`).classes()).not.toContain(`${name}-item--hover`);
     });
 
-    it('theme[default/card]', () => {
-      (['default', 'card'] as const).forEach((theme) => {
-        const wrapper = mount(Grid, { props: { theme }, slots: { default: () => <GridItem /> } });
-        if (theme === 'card') {
-          expect(wrapper.classes()).toContain(`${name}--card`);
-        } else {
-          expect(wrapper.classes()).not.toContain(`${name}--card`);
-        }
-      });
+    it.each(['default', 'card'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(Grid, { props: { theme }, slots: { default: () => <GridItem /> } });
+      if (theme === 'card') {
+        expect(wrapper.classes()).toContain(`${name}--card`);
+      } else {
+        expect(wrapper.classes()).not.toContain(`${name}--card`);
+      }
     });
 
     it('default[slot]', () => {

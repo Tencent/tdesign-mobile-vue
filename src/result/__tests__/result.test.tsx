@@ -69,25 +69,20 @@ describe('Result', () => {
       expect(img.attributes('src')).toBe(imageUrl);
     });
 
-    it('theme[default/success/warning/error]', () => {
-      const wrapper1 = mount(() => <Result theme="success"></Result>);
-      const wrapper2 = mount(() => <Result theme="warning"></Result>);
-      const wrapper3 = mount(() => <Result theme="error"></Result>);
-      const wrapper4 = mount(() => <Result theme="default"></Result>);
-      const wrapper5 = mount(() => <Result></Result>);
+    it.each([
+      ['success', CheckCircleIcon],
+      ['warning', InfoCircleIcon],
+      ['error', CloseCircleIcon],
+    ] as const)('theme[%s]', (theme, icon) => {
+      const wrapper = mount(() => <Result theme={theme} />);
+      expect(wrapper.classes()).toContain(`t-result--theme-${theme}`);
+      expect(wrapper.findComponent(icon).exists()).toBe(true);
+    });
 
-      expect(wrapper1.classes()).toContain('t-result--theme-success');
-      expect(wrapper1.findComponent(CheckCircleIcon).exists()).toBeTruthy();
-      expect(wrapper2.classes()).toContain('t-result--theme-warning');
-      expect(wrapper2.findComponent(InfoCircleIcon).exists()).toBeTruthy();
-      expect(wrapper3.classes()).toContain('t-result--theme-error');
-      expect(wrapper3.findComponent(CloseCircleIcon).exists()).toBeTruthy();
-
-      expect(wrapper4.classes()).toContain('t-result--theme-default');
-      expect(wrapper4.findComponent(InfoCircleIcon).exists()).toBeTruthy();
-      // 未传 theme 时回退到 default
-      expect(wrapper5.classes()).toContain('t-result--theme-default');
-      expect(wrapper5.findComponent(InfoCircleIcon).exists()).toBeTruthy();
+    it('theme[default]', () => {
+      const wrapper = mount(() => <Result />);
+      expect(wrapper.classes()).toContain('t-result--theme-default');
+      expect(wrapper.findComponent(InfoCircleIcon).exists()).toBe(true);
     });
 
     it('title[string]', () => {

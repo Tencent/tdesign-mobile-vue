@@ -59,11 +59,9 @@ describe('CountDown', () => {
       expect(wrapper.text()).toContain('00:01:40:000');
     });
 
-    it('size[small/medium/large]', () => {
-      (['small', 'medium', 'large'] as const).forEach((size) => {
-        const wrapper = mount(CountDown, { props: { time: 100000, size } });
-        expect(wrapper.classes()).toContain(`t-count-down--${size}`);
-      });
+    it.each(['small', 'medium', 'large'] as const)('size[%s]', (size) => {
+      const wrapper = mount(CountDown, { props: { time: 100000, size } });
+      expect(wrapper.classes()).toContain(`t-count-down--${size}`);
     });
 
     it('splitWithUnit[boolean]', async () => {
@@ -71,11 +69,9 @@ describe('CountDown', () => {
       expect(wrapper.find('.t-count-down__split--text').exists()).toBeTruthy();
     });
 
-    it('theme[default/round/square]', () => {
-      (['default', 'round', 'square'] as const).forEach((theme) => {
-        const wrapper = mount(CountDown, { props: { time: 100000, theme } });
-        expect(wrapper.classes()).toContain(`t-count-down--${theme}`);
-      });
+    it.each(['default', 'round', 'square'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(CountDown, { props: { time: 100000, theme } });
+      expect(wrapper.classes()).toContain(`t-count-down--${theme}`);
     });
 
     it('time[number]', async () => {

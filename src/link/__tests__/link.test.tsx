@@ -93,11 +93,9 @@ describe('Link', () => {
       expect(wrapper.get('.t-link__prefix-icon').findComponent(Icon).exists()).toBe(true);
     });
 
-    it('size[small/medium/large]', () => {
-      (['small', 'medium', 'large'] as const).forEach((size) => {
-        const wrapper = mount(Link, { props: { size }, slots: { default: () => '链接' } });
-        expect(wrapper.classes()).toContain(`t-link--${size}`);
-      });
+    it.each(['small', 'medium', 'large'] as const)('size[%s]', (size) => {
+      const wrapper = mount(Link, { props: { size }, slots: { default: () => '链接' } });
+      expect(wrapper.classes()).toContain(`t-link--${size}`);
     });
 
     it('suffixIcon[function]', () => {
@@ -119,11 +117,9 @@ describe('Link', () => {
       expect(wrapper.attributes('target')).toBe('_self');
     });
 
-    it('theme[default/primary/danger/warning/success]', () => {
-      (['default', 'primary', 'danger', 'warning', 'success'] as const).forEach((theme) => {
-        const wrapper = mount(Link, { props: { theme }, slots: { default: () => '链接' } });
-        expect(wrapper.classes()).toContain(`t-link--${theme}`);
-      });
+    it.each(['default', 'primary', 'danger', 'warning', 'success'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(Link, { props: { theme }, slots: { default: () => '链接' } });
+      expect(wrapper.classes()).toContain(`t-link--${theme}`);
     });
 
     it('underline[boolean]', async () => {

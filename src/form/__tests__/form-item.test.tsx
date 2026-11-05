@@ -38,24 +38,20 @@ describe('FormItem', () => {
       expect(wrapper.findComponent(ChevronRightIcon).exists()).toBe(true);
     });
 
-    it('contentAlign[left/right]', () => {
-      const alignList: TdFormItemProps['contentAlign'][] = ['left', 'right'];
-
-      alignList.forEach((contentAlign) => {
-        const wrapper = mount({
-          setup() {
-            return () => (
-              <Form>
-                <FormItem label="label" name="name" contentAlign={contentAlign}>
-                  <Input />
-                </FormItem>
-              </Form>
-            );
-          },
-        });
-        // 表单项内容区按 contentAlign 添加对齐类名（优先级高于 Form.contentAlign）
-        expect(wrapper.find(`.${name}__controls--${contentAlign}`).exists()).toBe(true);
+    it.each(['left', 'right'] as TdFormItemProps['contentAlign'][])('contentAlign[%s]', (contentAlign) => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form>
+              <FormItem label="label" name="name" contentAlign={contentAlign}>
+                <Input />
+              </FormItem>
+            </Form>
+          );
+        },
       });
+      // 表单项内容区按 contentAlign 添加对齐类名（优先级高于 Form.contentAlign）
+      expect(wrapper.find(`.${name}__controls--${contentAlign}`).exists()).toBe(true);
     });
 
     it('for[string]', () => {
@@ -163,25 +159,21 @@ describe('FormItem', () => {
       expect(wrapper.get(`.${name}__label label`).text()).toBe('插槽标签');
     });
 
-    it('labelAlign[left/right/top]', () => {
-      const labelAlignList: TdFormItemProps['labelAlign'][] = ['left', 'right', 'top'];
-
-      labelAlignList.forEach((labelAlign) => {
-        const wrapper = mount({
-          setup() {
-            return () => (
-              <Form label-align="right">
-                <FormItem label="label" name="name" labelAlign={labelAlign}>
-                  <Input />
-                </FormItem>
-              </Form>
-            );
-          },
-        });
-        if (labelAlign) {
-          expect(wrapper.find(`.${name}__label`).classes(`${name}__label--${labelAlign}`)).toBeTruthy();
-        }
+    it.each(['left', 'right', 'top'] as TdFormItemProps['labelAlign'][])('labelAlign[%s]', (labelAlign) => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Form label-align="right">
+              <FormItem label="label" name="name" labelAlign={labelAlign}>
+                <Input />
+              </FormItem>
+            </Form>
+          );
+        },
       });
+      if (labelAlign) {
+        expect(wrapper.find(`.${name}__label`).classes(`${name}__label--${labelAlign}`)).toBeTruthy();
+      }
     });
 
     it('labelWidth[number]', async () => {

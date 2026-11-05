@@ -3,15 +3,10 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { UserIcon } from 'tdesign-icons-vue-next';
 import Avatar from '../avatar';
-import type { TdAvatarProps } from '../type';
 import Badge from '../../badge/badge';
+import { IMAGE, IMAGE_FAIL, shapeList, sizeList } from './mount';
 
-const IMAGE = 'https://tdesign.gtimg.com/site/avatar.jpg';
-const IMAGE_FAIL = 'https://tdesign.gtimg.com/mobile/demos/avatar_11112233.png';
 const userIconFunc = () => h(UserIcon);
-
-const shapeList: TdAvatarProps['shape'][] = ['circle', 'round'];
-const sizeList = ['small', 'medium', 'large'];
 
 describe('Avatar', () => {
   describe('props', () => {
@@ -70,21 +65,17 @@ describe('Avatar', () => {
       expect(wrapper.find('img').attributes('style')).toContain('object-fit: cover');
     });
 
-    it('shape[circle/round]', async () => {
-      shapeList.forEach((s) => {
-        const wrapper = mount(() => <Avatar image={IMAGE} shape={s}></Avatar>);
-        const shape = wrapper.find(`.t-avatar--${s}`);
-        expect(shape.exists()).toBeTruthy();
-      });
+    it.each(shapeList)('shape[%s]', async (shape) => {
+      const wrapper = mount(() => <Avatar image={IMAGE} shape={shape} />);
+      expect(wrapper.find(`.t-avatar--${shape}`).exists()).toBe(true);
     });
 
-    it('size[string]', async () => {
-      sizeList.forEach((s) => {
-        const wrapper = mount(() => <Avatar image={IMAGE} size={s}></Avatar>);
-        const size = wrapper.find(`.t-avatar--${s}`);
-        expect(size.exists()).toBeTruthy();
-      });
+    it.each(sizeList)('size[%s]', async (size) => {
+      const wrapper = mount(() => <Avatar image={IMAGE} size={size} />);
+      expect(wrapper.find(`.t-avatar--${size}`).exists()).toBe(true);
+    });
 
+    it('size[custom]', async () => {
       const customSizeWrapper = mount(() => <Avatar image={IMAGE} size="24px" />);
       const avatar = customSizeWrapper.find('.t-avatar');
       expect(avatar.attributes('style')).toContain('width: 24px');

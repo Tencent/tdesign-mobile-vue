@@ -3,14 +3,9 @@ import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { afterAll, afterEach, beforeAll, describe, it, expect, vi } from 'vitest';
 import Ellipsis from '../ellipsis';
 import ConfigProvider from '../../config-provider';
+import { COMPONENT_NAME, longText } from './mount';
 
 enableAutoUnmount(afterEach);
-
-const prefix = 't';
-const COMPONENT_NAME = `${prefix}-typography`;
-
-const longText =
-  'TDesign 秉承开放的设计理念从创立之初就采用开源协作的方式进行设计和开发。协作方案讨论、组件设计以及 API 设计，包括源代码在内均在公司内部完全开放，赢得了内部开发者和设计师的广泛关注。TDesign 遵循平等、开放、严格的原则，不论参与者的角色如何。';
 
 const CLAMP_STORE = '__webkitLineClamp';
 

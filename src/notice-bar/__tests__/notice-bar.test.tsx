@@ -196,18 +196,16 @@ describe('NoticeBar', () => {
       expect(wrapper.find('.t-notice-bar__suffix-icon .slot-suffix-icon').exists()).toBe(true);
     });
 
-    it('theme[info/success/warning/error]', () => {
-      const themeIconMap = {
-        info: 't-icon-info-circle-filled',
-        success: 't-icon-check-circle-filled',
-        warning: 't-icon-error-circle-filled',
-        error: 't-icon-error-circle-filled',
-      };
-      (['info', 'success', 'warning', 'error'] as const).forEach((theme) => {
-        const wrapper = mount(<NoticeBar visible content="测试" theme={theme} />);
-        expect(wrapper.find('.t-notice-bar').classes()).toContain(`t-notice-bar--${theme}`);
-        expect(wrapper.find(`.t-notice-bar__prefix-icon .${themeIconMap[theme]}`).exists()).toBe(true);
-      });
+    const themeIconMap = {
+      info: 't-icon-info-circle-filled',
+      success: 't-icon-check-circle-filled',
+      warning: 't-icon-error-circle-filled',
+      error: 't-icon-error-circle-filled',
+    };
+    it.each(Object.keys(themeIconMap) as Array<keyof typeof themeIconMap>)('theme[%s]', (theme) => {
+      const wrapper = mount(<NoticeBar visible content="测试" theme={theme} />);
+      expect(wrapper.find('.t-notice-bar').classes()).toContain(`t-notice-bar--${theme}`);
+      expect(wrapper.find(`.t-notice-bar__prefix-icon .${themeIconMap[theme]}`).exists()).toBe(true);
     });
 
     it('visible[boolean]', async () => {

@@ -16,11 +16,9 @@ afterEach(() => {
 
 describe('Message', () => {
   describe('props', () => {
-    it('align[left/center]', () => {
-      (['left', 'center'] as const).forEach((align) => {
-        const wrapper = mount(<Message visible align={align} />);
-        expect(wrapper.get(`.${name}`).classes()).toContain(`${name}-align--${align}`);
-      });
+    it.each(['left', 'center'] as const)('align[%s]', (align) => {
+      const wrapper = mount(<Message visible align={align} />);
+      expect(wrapper.get(`.${name}`).classes()).toContain(`${name}-align--${align}`);
     });
 
     it('closeBtn[boolean]', () => {
@@ -180,11 +178,9 @@ describe('Message', () => {
       expect(getMessageTop(first)).toBe(0);
     });
 
-    it('theme[info/success/warning/error]', () => {
-      (['info', 'success', 'warning', 'error'] as const).forEach((theme) => {
-        const wrapper = mount(<Message visible theme={theme} />);
-        expect(wrapper.get(`.${name}`).classes()).toContain(`${name}--${theme}`);
-      });
+    it.each(['info', 'success', 'warning', 'error'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(<Message visible theme={theme} />);
+      expect(wrapper.get(`.${name}`).classes()).toContain(`${name}--${theme}`);
     });
 
     it('visible[boolean]', async () => {

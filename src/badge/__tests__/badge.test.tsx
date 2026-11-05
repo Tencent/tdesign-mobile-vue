@@ -122,27 +122,18 @@ describe('Badge', () => {
       expect(style).toContain('top: 8rem');
     });
 
-    it('shape[circle/square/bubble/ribbon/ribbon-right/ribbon-left/triangle-right/triangle-left]', () => {
-      const shapes = [
-        'circle',
-        'square',
-        'bubble',
-        'ribbon',
-        'ribbon-right',
-        'ribbon-left',
-        'triangle-right',
-        'triangle-left',
-      ] as const;
-
-      shapes.forEach((shape) => {
-        const wrapper = mount(Badge, {
-          props: {
-            count: 16,
-            shape,
-          },
-        });
-        expect(wrapper.find(`.${name}--basic`).classes()).toContain(`${name}--${shape}`);
-      });
+    it.each([
+      'circle',
+      'square',
+      'bubble',
+      'ribbon',
+      'ribbon-right',
+      'ribbon-left',
+      'triangle-right',
+      'triangle-left',
+    ] as const)('shape[%s]', (shape) => {
+      const wrapper = mount(Badge, { props: { count: 16, shape } });
+      expect(wrapper.find(`.${name}--basic`).classes()).toContain(`${name}--${shape}`);
     });
 
     it('showZero[boolean]', () => {
@@ -156,16 +147,9 @@ describe('Badge', () => {
       expect(inner.text()).toEqual('0');
     });
 
-    it('size[medium/large]', () => {
-      (['medium', 'large'] as const).forEach((size) => {
-        const wrapper = mount(Badge, {
-          props: {
-            count: 1,
-            size,
-          },
-        });
-        expect(wrapper.find(`.${name}--basic`).classes()).toContain(`${name}--${size}`);
-      });
+    it.each(['medium', 'large'] as const)('size[%s]', (size) => {
+      const wrapper = mount(Badge, { props: { count: 1, size } });
+      expect(wrapper.find(`.${name}--basic`).classes()).toContain(`${name}--${size}`);
     });
 
     it('default[slot]', () => {

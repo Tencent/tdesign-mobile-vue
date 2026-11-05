@@ -103,15 +103,13 @@ describe('Popup', () => {
       expect(content.get('.t-overlay').attributes('style')).toContain('z-index: 2000');
     });
 
-    it('placement[top/left/right/bottom/center]', async () => {
-      const placements: TdPopupProps['placement'][] = ['top', 'left', 'right', 'bottom', 'center'];
-      await Promise.all(
-        placements.map(async (placement) => {
-          const { content } = await mountPopup({ visible: true, placement });
-          expect(content.get('.t-popup').classes()).toContain(`t-popup--${placement}`);
-        }),
-      );
-    });
+    it.each(['top', 'left', 'right', 'bottom', 'center'] as TdPopupProps['placement'][])(
+      'placement[%s]',
+      async (placement) => {
+        const { content } = await mountPopup({ visible: true, placement });
+        expect(content.get('.t-popup').classes()).toContain(`t-popup--${placement}`);
+      },
+    );
 
     it('preventScrollThrough[boolean]', async () => {
       const { wrapper } = await mountPopup({ visible: true, preventScrollThrough: true });

@@ -13,19 +13,9 @@ const name = `${prefix}-action-sheet`;
 
 describe('ActionSheet', () => {
   describe('props', () => {
-    it('align[center/left]', async () => {
-      const alignList: TdActionSheetProps['align'][] = ['center', 'left'];
-
-      alignList.forEach((align) => {
-        const wrapper = mount(() => (
-          <ActionSheet items={[]} visible={true} description={'动作面板描述文字'} align={align}></ActionSheet>
-        ));
-        if (align === 'left') {
-          expect(wrapper.find(`.${name}--left`).exists()).toBeTruthy();
-        } else {
-          expect(wrapper.find(`.${name}--left`).exists()).toBeFalsy();
-        }
-      });
+    it.each(['center', 'left'] as TdActionSheetProps['align'][])('align[%s]', (align) => {
+      const wrapper = mount(() => <ActionSheet items={[]} visible description="动作面板描述文字" align={align} />);
+      expect(wrapper.find(`.${name}--left`).exists()).toBe(align === 'left');
     });
 
     it('cancelText[string]', () => {

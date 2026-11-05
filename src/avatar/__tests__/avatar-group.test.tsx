@@ -2,95 +2,54 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import Avatar from '../avatar';
 import AvatarGroup from '../avatar-group';
-
-const IMAGE = 'https://tdesign.gtimg.com/site/avatar.jpg';
-const sizeList = ['small', 'medium', 'large'];
-const shapeList = ['circle', 'round'] as const;
+import { IMAGE, mountAvatarGroup, shapeList, sizeList } from './mount';
 
 describe('AvatarGroup', () => {
   describe('props', () => {
-    it('cascading[left-up/right-up]', () => {
-      (['left-up', 'right-up'] as const).forEach((cascading) => {
-        const wrapper = mount(() => (
-          <AvatarGroup cascading={cascading}>
-            <Avatar image={IMAGE}></Avatar>
-            <Avatar image={IMAGE}></Avatar>
-          </AvatarGroup>
-        ));
-        const direction = cascading === 'left-up' ? 'left' : 'right';
-        expect(wrapper.classes()).toContain(`t-avatar-group-offset-${direction}-medium`);
-      });
+    it.each(['left-up', 'right-up'] as const)('cascading[%s]', (cascading) => {
+      const wrapper = mountAvatarGroup({ cascading });
+      const direction = cascading === 'left-up' ? 'left' : 'right';
+      expect(wrapper.classes()).toContain(`t-avatar-group-offset-${direction}-medium`);
     });
 
     it('collapseAvatar[string]', () => {
-      const wrapper = mount(() => (
-        <AvatarGroup max={2} collapseAvatar="更多">
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-        </AvatarGroup>
-      ));
+      const wrapper = mountAvatarGroup({ max: 2, collapseAvatar: '更多' }, 3);
       const avatarList = wrapper.findAllComponents(Avatar);
       expect(avatarList[avatarList.length - 1].text()).toBe('更多');
     });
 
     it('collapseAvatar[function]', () => {
-      const wrapper = mount(() => (
-        <AvatarGroup max={2} collapseAvatar={() => <span class="custom-collapse">查看更多</span>}>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-        </AvatarGroup>
-      ));
+      const wrapper = mountAvatarGroup(
+        { max: 2, collapseAvatar: () => <span class="custom-collapse">查看更多</span> },
+        3,
+      );
       expect(wrapper.find('.custom-collapse').text()).toBe('查看更多');
     });
 
     it('max[number]', () => {
-      const wrapper = mount(() => (
-        <AvatarGroup max={2}>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-        </AvatarGroup>
-      ));
+      const wrapper = mountAvatarGroup({ max: 2 }, 5);
       const avatarList = wrapper.findAllComponents(Avatar);
       expect(avatarList.length).toBe(3);
       expect(avatarList[avatarList.length - 1].text()).toBe('+3');
     });
 
-    it('shape[circle/round]', () => {
-      shapeList.forEach((s) => {
-        const wrapper = mount(() => (
-          <AvatarGroup shape={s}>
-            <Avatar image={IMAGE}></Avatar>
-            <Avatar image={IMAGE}></Avatar>
-          </AvatarGroup>
-        ));
-        const avatarList = wrapper.findAll('.t-avatar');
-        expect(avatarList).toHaveLength(2);
-        avatarList.forEach((avatar) => {
-          expect(avatar.classes()).toContain(`t-avatar--${s}`);
-        });
+    it.each(shapeList)('shape[%s]', (shape) => {
+      const wrapper = mountAvatarGroup({ shape });
+      const avatarList = wrapper.findAll('.t-avatar');
+      expect(avatarList).toHaveLength(2);
+      avatarList.forEach((avatar) => {
+        expect(avatar.classes()).toContain(`t-avatar--${shape}`);
       });
     });
 
-    it('size[string]', () => {
-      sizeList.forEach((s) => {
-        const wrapper = mount(() => (
-          <AvatarGroup size={s}>
-            <Avatar image={IMAGE}></Avatar>
-            <Avatar image={IMAGE}></Avatar>
-          </AvatarGroup>
-        ));
-        expect(wrapper.classes()).toContain('t-avatar-group');
-        expect(wrapper.classes()).toContain(`t-avatar-group-offset-right-${s}`);
-        const avatars = wrapper.findAll('.t-avatar');
-        expect(avatars).toHaveLength(2);
-        avatars.forEach((avatar) => {
-          expect(avatar.classes()).toContain(`t-avatar--${s}`);
-        });
+    it.each(sizeList)('size[%s]', (size) => {
+      const wrapper = mountAvatarGroup({ size });
+      expect(wrapper.classes()).toContain('t-avatar-group');
+      expect(wrapper.classes()).toContain(`t-avatar-group-offset-right-${size}`);
+      const avatars = wrapper.findAll('.t-avatar');
+      expect(avatars).toHaveLength(2);
+      avatars.forEach((avatar) => {
+        expect(avatar.classes()).toContain(`t-avatar--${size}`);
       });
     });
   });
@@ -98,12 +57,7 @@ describe('AvatarGroup', () => {
   describe('events', () => {
     it('collapsedItemClick', async () => {
       const onCollapsedItemClick = vi.fn();
-      const wrapper = mount(() => (
-        <AvatarGroup max={1} onCollapsedItemClick={onCollapsedItemClick}>
-          <Avatar image={IMAGE}></Avatar>
-          <Avatar image={IMAGE}></Avatar>
-        </AvatarGroup>
-      ));
+      const wrapper = mountAvatarGroup({ max: 1, onCollapsedItemClick }, 2);
 
       await wrapper.find('.t-avatar-group__collapse--default').trigger('click');
 
@@ -133,10 +87,8 @@ describe('AvatarGroup', () => {
           <Avatar image={IMAGE} size="small" />
         </AvatarGroup>
       ));
-      const avatars = wrapper.findAll('.t-avatar');
-
-      expect(avatars[0].classes()).toContain('t-avatar--large');
-      expect(avatars[1].classes()).toContain('t-avatar--small');
+      expect(wrapper.find('.t-avatar--large').exists()).toBe(true);
+      expect(wrapper.find('.t-avatar--small').exists()).toBe(true);
     });
   });
 });

@@ -96,13 +96,9 @@ describe('BackTop', () => {
       expect(wrapper.find('.t-back-top__text--round').text()).toEqual('返回');
     });
 
-    it('theme[round/half-round/round-dark/half-round-dark]', () => {
-      const themes = ['round', 'half-round', 'round-dark', 'half-round-dark'] as const;
-
-      themes.forEach((theme) => {
-        const wrapper = mount(BackTop, { props: { theme } });
-        expect(wrapper.find('.t-back-top').classes()).toContain(`t-back-top--${theme}`);
-      });
+    it.each(['round', 'half-round', 'round-dark', 'half-round-dark'] as const)('theme[%s]', (theme) => {
+      const wrapper = mount(BackTop, { props: { theme } });
+      expect(wrapper.find('.t-back-top').classes()).toContain(`t-back-top--${theme}`);
     });
 
     it('visibilityHeight[number]', async () => {
