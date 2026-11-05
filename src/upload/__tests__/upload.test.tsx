@@ -37,6 +37,8 @@ type UploadInstanceFunctions = {
   cancelUpload: (context?: { file?: UploadFile; e?: MouseEvent }) => void;
 };
 
+const getUploadInstance = (wrapper: VueWrapper<any>) => wrapper.vm as typeof wrapper.vm & UploadInstanceFunctions;
+
 // jsdom 环境下 URL.createObjectURL / revokeObjectURL 不存在，需要 mock
 let _objectUrlCounter = 0;
 const _origCreateObjectURL = URL.createObjectURL;
@@ -96,6 +98,11 @@ const triggerUploadFile = (wrapper: VueWrapper<any>, fileList: File[]) => {
   }
 
   target.trigger('change');
+};
+
+const triggerUploadFileAndWait = async (wrapper: VueWrapper<any>, file = mockFileFoo) => {
+  triggerUploadFile(wrapper, [file]);
+  await sleep(0);
 };
 
 // 请求配置类属性（method/headers/withCredentials/data/formatRequest/模拟进度）走 XHR 链路，
@@ -162,8 +169,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { action: customAction },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // 上传请求发往 action 指定的地址
       expect(mockXHRInstances[0].open).toHaveBeenCalledWith('POST', customAction, true);
       expect(mockXHRInstances[0].send).toHaveBeenCalled();
@@ -224,13 +230,11 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { requestMethod: uploadMethod, onValidate },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(uploadMethod).toHaveBeenCalledTimes(1);
 
       // 默认过滤同名文件：再次选择同名文件触发校验提示且不再上传
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(onValidate).toHaveBeenCalledWith(expect.objectContaining({ type: 'FILTER_FILE_SAME_NAME' }));
       expect(uploadMethod).toHaveBeenCalledTimes(1);
 
@@ -240,10 +244,8 @@ describe('Upload', () => {
       const wrapper2 = mount(Upload, {
         props: { requestMethod: uploadMethod2, allowUploadDuplicateFile: true, onValidate: onValidate2 },
       });
-      triggerUploadFile(wrapper2, [mockFileFoo]);
-      await sleep(0);
-      triggerUploadFile(wrapper2, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper2);
+      await triggerUploadFileAndWait(wrapper2);
       expect(onValidate2).not.toHaveBeenCalledWith(expect.objectContaining({ type: 'FILTER_FILE_SAME_NAME' }));
       expect(uploadMethod2).toHaveBeenCalledTimes(2);
     });
@@ -254,8 +256,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { autoUpload: false, requestMethod: uploadMethod, onChange },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // 非自动上传：文件仅以 waiting 状态加入列表，不发起上传
       expect(uploadMethod).not.toHaveBeenCalled();
       expect(onChange).toHaveBeenLastCalledWith(
@@ -280,8 +281,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { requestMethod: uploadMethod, beforeAllFilesUpload, onValidate },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // 返回 false 终止整批文件上传
       expect(beforeAllFilesUpload).toHaveBeenCalledTimes(1);
       expect(beforeAllFilesUpload.mock.calls[0][0][0]).toMatchObject({ name: 'foo.png' });
@@ -296,8 +296,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { requestMethod: uploadMethod, beforeUpload, onValidate },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // 返回 false 时当前文件被剔除，不发起上传
       expect(beforeUpload).toHaveBeenCalledWith(expect.objectContaining({ name: 'foo.png' }));
       expect(onValidate).toHaveBeenCalledWith(expect.objectContaining({ type: 'CUSTOM_BEFORE_UPLOAD' }));
@@ -323,8 +322,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { action, data: { channel: 'wx' } },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       const { requestParams } = mockXHRInstances[0].upload;
       // 额外字段随请求发送，默认字段 file/length 保留
       expect(requestParams).toMatchObject({ channel: 'wx', length: 1 });
@@ -338,8 +336,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { action, data },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(data).toHaveBeenCalledTimes(1);
       expect(mockXHRInstances[0].upload.requestParams).toMatchObject({ count: 1, fileName: 'foo.png' });
     });
@@ -420,8 +417,7 @@ describe('Upload', () => {
       // 初始渲染受控文件
       expect(wrapper.findComponent(TImage).props('src')).toBe('https://a.png');
 
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // 上传成功后通过 update:files 通知父组件
       const updateEvents = wrapper.emitted<[UploadFile[]]>('update:files');
       expect(updateEvents).toHaveLength(1);
@@ -450,8 +446,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { requestMethod, format, onSelectChange },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // format 接收原始 File，返回值合并进 UploadFile
       expect(format).toHaveBeenCalledWith(mockFileFoo);
       const selected = onSelectChange.mock.calls[0][1].currentSelectedFiles;
@@ -467,8 +462,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { action, formatRequest },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(formatRequest).toHaveBeenCalledTimes(1);
       // formatRequest 完全自定义请求字段
       expect(mockXHRInstances[0].upload.requestParams).toEqual({ fileList: mockFileFoo, extra: 'custom' });
@@ -487,8 +481,7 @@ describe('Upload', () => {
           onSuccess,
         },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // 原始响应经 formatResponse 解析
       expect(formatResponse).toHaveBeenCalledWith(
         { url: 'https://x.png' },
@@ -508,8 +501,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { action, headers: { 'X-Token': 'tdesign' } },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(mockXHRInstances[0].setRequestHeader).toHaveBeenCalledWith('X-Token', 'tdesign');
     });
 
@@ -517,8 +509,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { requestMethod, imageProps: { fit: 'cover' } },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // imageProps 透传给内部 Image 组件
       const image = wrapper.findComponent(TImage);
       expect(image.exists()).toBe(true);
@@ -531,10 +522,8 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { autoUpload: false, multiple: true, isBatchUpload: true, onChange: onChangeBatch },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
-      triggerUploadFile(wrapper, [mockFileBar]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
+      await triggerUploadFileAndWait(wrapper, mockFileBar);
       // 批量模式下文件作为整体替换，第二批不追加第一批文件
       expect(onChangeBatch).toHaveBeenLastCalledWith(
         [expect.objectContaining({ name: 'bar.png' })],
@@ -546,8 +535,7 @@ describe('Upload', () => {
       const wrapper2 = mount(Upload, {
         props: { autoUpload: false, multiple: true, onChange },
       });
-      triggerUploadFile(wrapper2, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper2);
       triggerUploadFile(wrapper2, [mockFileBar]);
       await sleep(0);
       const lastCall = onChange.mock.calls[onChange.mock.calls.length - 1];
@@ -593,16 +581,14 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { action, method: 'PUT' },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(mockXHRInstances[0].open).toHaveBeenCalledWith('PUT', action, true);
 
       // 默认 POST
       const wrapper2 = mount(Upload, {
         props: { action },
       });
-      triggerUploadFile(wrapper2, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper2);
       expect(mockXHRInstances[1].open).toHaveBeenCalledWith('POST', action, true);
     });
 
@@ -648,8 +634,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { action, name: 'customFile' },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       const { requestParams } = mockXHRInstances[0].upload;
       // 文件字段使用 name 别名，默认 file 字段不再存在
       expect(requestParams.customFile).toBe(mockFileFoo);
@@ -661,8 +646,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { requestMethod },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       await wrapper.find('.t-upload__image').trigger('click');
       expect(wrapper.find('.t-image-viewer').exists()).toBe(true);
 
@@ -670,8 +654,7 @@ describe('Upload', () => {
       const wrapper2 = mount(Upload, {
         props: { requestMethod, preview: false },
       });
-      triggerUploadFile(wrapper2, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper2);
       await wrapper2.find('.t-upload__image').trigger('click');
       expect(wrapper2.find('.t-image-viewer').exists()).toBe(false);
     });
@@ -680,8 +663,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { requestMethod },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(wrapper.findComponent(CloseIcon).exists()).toBe(true);
       await wrapper.setProps({ removeBtn: false });
       expect(wrapper.findComponent(CloseIcon).exists()).toBe(false);
@@ -706,8 +688,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { requestMethod: uploadMethod, onSuccess },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // 自定义上传函数接管请求，单文件场景入参为待上传文件对象
       expect(uploadMethod).toHaveBeenCalledTimes(1);
       expect(uploadMethod.mock.calls[0][0]).toMatchObject({ name: 'foo.png', raw: mockFileFoo });
@@ -843,8 +824,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { modelValue: [], requestMethod },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // 上传成功后通过 update:modelValue 通知父组件
       const updateEvents = wrapper.emitted<[UploadFile[]]>('update:modelValue');
       expect(updateEvents).toHaveLength(1);
@@ -865,16 +845,14 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { action, withCredentials: true },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(mockXHRInstances[0].withCredentials).toBe(true);
 
       // 默认不携带 cookie
       const wrapper2 = mount(Upload, {
         props: { action },
       });
-      triggerUploadFile(wrapper2, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper2);
       expect(mockXHRInstances[1].withCredentials).toBe(false);
     });
   });
@@ -885,7 +863,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { onCancelUpload },
       });
-      const instance = wrapper.vm as typeof wrapper.vm & UploadInstanceFunctions;
+      const instance = getUploadInstance(wrapper);
       instance.cancelUpload();
       expect(onCancelUpload).toHaveBeenCalledTimes(1);
     });
@@ -900,8 +878,7 @@ describe('Upload', () => {
         },
       });
       // 上传成功新增文件
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(onChange).toHaveBeenLastCalledWith(
         [expect.objectContaining({ name: 'foo.png', status: 'success' })],
         expect.objectContaining({ trigger: 'add' }),
@@ -988,8 +965,7 @@ describe('Upload', () => {
           onFail,
         },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(onFail).toHaveBeenCalledTimes(1);
       expect(onFail.mock.calls[0][0]).toMatchObject({
         file: expect.objectContaining({ name: 'foo.png' }),
@@ -1051,8 +1027,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { requestMethod, onPreview },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       await wrapper.find('.t-upload__image').trigger('click');
       expect(onPreview).toHaveBeenCalledTimes(1);
       expect(onPreview.mock.calls[0][0]).toMatchObject({
@@ -1133,8 +1108,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { requestMethod, onSelectChange },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(onSelectChange).toHaveBeenCalledTimes(1);
       // 第一个参数为原始 File 对象数组
       expect(onSelectChange.mock.calls[0][0]).toHaveLength(1);
@@ -1149,8 +1123,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { requestMethod, onSuccess },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       expect(onSuccess).toHaveBeenCalledTimes(1);
       const context = onSuccess.mock.calls[0][0];
       expect(context.fileList).toEqual([
@@ -1182,8 +1155,7 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { action, useMockProgress: false, onWaitingUploadFilesChange },
       });
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // 文件通过校验后进入待上传列表
       expect(onWaitingUploadFilesChange).toHaveBeenCalledWith({
         files: [expect.objectContaining({ name: 'foo.png' })],
@@ -1198,7 +1170,7 @@ describe('Upload', () => {
   describe('instanceFunctions', () => {
     it('triggerUpload', async () => {
       const wrapper = mount(Upload);
-      const instance = wrapper.vm as typeof wrapper.vm & UploadInstanceFunctions;
+      const instance = getUploadInstance(wrapper);
       const clickSpy = vi.spyOn(wrapper.find('input').element, 'click');
       instance.triggerUpload(new MouseEvent('click'));
       expect(clickSpy).toHaveBeenCalledTimes(1);
@@ -1214,9 +1186,8 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { autoUpload: false, requestMethod: uploadMethod, onSuccess },
       });
-      const instance = wrapper.vm as typeof wrapper.vm & UploadInstanceFunctions;
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      const instance = getUploadInstance(wrapper);
+      await triggerUploadFileAndWait(wrapper);
       // 非自动上传模式选择文件后不发起请求
       expect(uploadMethod).not.toHaveBeenCalled();
       instance.uploadFiles();
@@ -1232,7 +1203,7 @@ describe('Upload', () => {
           defaultFiles: [{ name: 'p.png', raw: mockFileFoo, type: 'image/png', status: 'progress' }],
         },
       });
-      const instance = wrapper.vm as typeof wrapper.vm & UploadInstanceFunctions;
+      const instance = getUploadInstance(wrapper);
       await nextTick();
       // 上传中的文件按 raw 匹配并更新进度
       instance.uploadFilePercent({ file: { raw: mockFileFoo }, percent: 66 });
@@ -1246,9 +1217,8 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { action, useMockProgress: false, onCancelUpload },
       });
-      const instance = wrapper.vm as typeof wrapper.vm & UploadInstanceFunctions;
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      const instance = getUploadInstance(wrapper);
+      await triggerUploadFileAndWait(wrapper);
       // 中断进行中的请求并复位上传状态
       expect(instance.uploading).toBe(true);
       instance.cancelUpload();
@@ -1262,9 +1232,8 @@ describe('Upload', () => {
       const wrapper2 = mount(Upload, {
         props: { autoUpload: false, onChange, onRemove, onCancelUpload },
       });
-      const instance2 = wrapper2.vm as typeof wrapper2.vm & UploadInstanceFunctions;
-      triggerUploadFile(wrapper2, [mockFileFoo]);
-      await sleep(0);
+      const instance2 = getUploadInstance(wrapper2);
+      await triggerUploadFileAndWait(wrapper2);
       instance2.cancelUpload({ file: { name: 'foo.png', raw: mockFileFoo }, e: new MouseEvent('click') });
       expect(onCancelUpload).toHaveBeenCalledTimes(2);
       expect(onRemove).toHaveBeenCalledTimes(1);
@@ -1276,10 +1245,9 @@ describe('Upload', () => {
       const wrapper = mount(Upload, {
         props: { action, useMockProgress: false },
       });
-      const instance = wrapper.vm as typeof wrapper.vm & UploadInstanceFunctions;
+      const instance = getUploadInstance(wrapper);
       expect(instance.uploading).toBe(false);
-      triggerUploadFile(wrapper, [mockFileFoo]);
-      await sleep(0);
+      await triggerUploadFileAndWait(wrapper);
       // 请求进行中为 true
       expect(instance.uploading).toBe(true);
       // 请求成功后复位为 false
@@ -1410,8 +1378,7 @@ describe('Upload', () => {
               }),
           },
         });
-        triggerUploadFile(wrapper, [mockFileFoo]);
-        await sleep(0);
+        await triggerUploadFileAndWait(wrapper);
         // 上传中：进度遮罩 + loading 图标
         expect(wrapper.find('.t-upload__progress-mask').exists()).toBe(true);
         expect(wrapper.findComponent(LoadingIcon).exists()).toBe(true);
@@ -1430,9 +1397,8 @@ describe('Upload', () => {
         const wrapper = mount(Upload, {
           props: { autoUpload: false, requestMethod: uploadMethod, onChange },
         });
-        const instance = wrapper.vm as typeof wrapper.vm & UploadInstanceFunctions;
-        triggerUploadFile(wrapper, [mockFileFoo]);
-        await sleep(0);
+        const instance = getUploadInstance(wrapper);
+        await triggerUploadFileAndWait(wrapper);
         // 文件以 waiting 状态进入列表，不发起请求
         expect(onChange).toHaveBeenLastCalledWith(
           [expect.objectContaining({ name: 'foo.png', status: 'waiting' })],
@@ -1463,8 +1429,7 @@ describe('Upload', () => {
         const wrapper = mount(Upload, {
           props: { requestMethod: uploadMethod, allowUploadDuplicateFile: true, onFail, onSuccess },
         });
-        triggerUploadFile(wrapper, [mockFileFoo]);
-        await sleep(0);
+        await triggerUploadFileAndWait(wrapper);
         // 失败状态展示
         expect(onFail).toHaveBeenCalledTimes(1);
         expect(wrapper.findComponent(CloseCircleIcon).exists()).toBe(true);
@@ -1472,8 +1437,7 @@ describe('Upload', () => {
 
         // 重新选择同一文件后上传成功
         shouldFail = false;
-        triggerUploadFile(wrapper, [mockFileFoo]);
-        await sleep(0);
+        await triggerUploadFileAndWait(wrapper);
         expect(onSuccess).toHaveBeenCalledTimes(1);
         expect(wrapper.findComponent(CloseCircleIcon).exists()).toBe(false);
         expect(wrapper.find('.t-upload__image img').attributes('src')).toBe(successUrl);
@@ -1549,8 +1513,7 @@ describe('Upload', () => {
             onChange,
           },
         });
-        triggerUploadFile(wrapper, [mockFileFoo]);
-        await sleep(0);
+        await triggerUploadFileAndWait(wrapper);
         expect(wrapper.findComponent(TImage).exists()).toBe(true);
         await wrapper.findComponent(CloseIcon).trigger('click');
         expect(onChange).toHaveBeenLastCalledWith(

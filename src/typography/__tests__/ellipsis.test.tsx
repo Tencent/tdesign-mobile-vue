@@ -3,7 +3,7 @@ import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { afterAll, afterEach, beforeAll, describe, it, expect, vi } from 'vitest';
 import Ellipsis from '../ellipsis';
 import ConfigProvider from '../../config-provider';
-import { COMPONENT_NAME, longText } from './mount';
+import { COMPONENT_NAME, longText, mountWithEllipsis } from './mount';
 
 enableAutoUnmount(afterEach);
 
@@ -102,27 +102,18 @@ describe('Ellipsis', () => {
     });
 
     it('ellipsis[expandable]', () => {
-      const expandableWrapper = mount(Ellipsis, {
-        props: { ellipsis: { expandable: true } },
-        slots: { default: () => longText },
-      });
+      const expandableWrapper = mountWithEllipsis(Ellipsis, { expandable: true });
       const symbol = expandableWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
       expect(symbol.exists()).toBe(true);
       expect(symbol.text()).toBe('展开');
       expect((symbol.element as HTMLElement).style.marginRight).toBe('0px');
 
-      const collapsedWrapper = mount(Ellipsis, {
-        props: { ellipsis: { expandable: false } },
-        slots: { default: () => longText },
-      });
+      const collapsedWrapper = mountWithEllipsis(Ellipsis, { expandable: false });
       expect(collapsedWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
     });
 
     it('ellipsis[collapsible]', async () => {
-      const collapsibleWrapper = mount(Ellipsis, {
-        props: { ellipsis: { expandable: true, collapsible: true } },
-        slots: { default: () => longText },
-      });
+      const collapsibleWrapper = mountWithEllipsis(Ellipsis, { expandable: true, collapsible: true });
 
       // 展开后内容样式恢复完整展示，按钮切换为「收起」
       await collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
@@ -140,10 +131,7 @@ describe('Ellipsis', () => {
       expect(collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).text()).toBe('展开');
       expect(collapsibleWrapper.find('p').element.style.overflow).toBe('hidden');
 
-      const unCollapsibleWrapper = mount(Ellipsis, {
-        props: { ellipsis: { expandable: true, collapsible: false } },
-        slots: { default: () => longText },
-      });
+      const unCollapsibleWrapper = mountWithEllipsis(Ellipsis, { expandable: true, collapsible: false });
       await unCollapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
       await nextTick();
       // collapsible 为 false 时展开后不再出现按钮，内容保持完整展示

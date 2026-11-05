@@ -2,7 +2,7 @@ import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { afterEach, describe, it, expect, vi } from 'vitest';
 import Title from '../title';
 import Ellipsis from '../ellipsis';
-import { COMPONENT_NAME, longText, shortText } from './mount';
+import { COMPONENT_NAME, longText, shortText, mountWithEllipsis } from './mount';
 
 enableAutoUnmount(afterEach);
 
@@ -54,10 +54,7 @@ describe('Typography Title', () => {
     });
 
     it('ellipsis[boolean]', () => {
-      const wrapper = mount(Title, {
-        props: { ellipsis: true },
-        slots: { default: () => longText },
-      });
+      const wrapper = mountWithEllipsis(Title, true);
       expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
       expect(wrapper.text()).toContain(longText);
       const pEl = wrapper.find('p');
@@ -67,35 +64,23 @@ describe('Typography Title', () => {
     });
 
     it('ellipsis[object]', () => {
-      const wrapper = mount(Title, {
-        props: { ellipsis: { row: 3 } },
-        slots: { default: () => longText },
-      });
+      const wrapper = mountWithEllipsis(Title, { row: 3 });
       expect(wrapper.findComponent(Ellipsis).props('ellipsis')).toEqual({ row: 3 });
       expect(wrapper.find('p').element.style.overflow).toBe('hidden');
     });
 
     it('ellipsis[expandable]', () => {
-      const expandableWrapper = mount(Title, {
-        props: { ellipsis: { expandable: true } },
-        slots: { default: () => longText },
-      });
+      const expandableWrapper = mountWithEllipsis(Title, { expandable: true });
       const symbol = expandableWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
       expect(symbol.exists()).toBe(true);
       expect(symbol.text()).toBe('展开');
 
-      const collapsedWrapper = mount(Title, {
-        props: { ellipsis: { expandable: false } },
-        slots: { default: () => longText },
-      });
+      const collapsedWrapper = mountWithEllipsis(Title, { expandable: false });
       expect(collapsedWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
     });
 
     it('ellipsis[collapsible]', async () => {
-      const collapsibleWrapper = mount(Title, {
-        props: { ellipsis: { expandable: true, collapsible: true } },
-        slots: { default: () => longText },
-      });
+      const collapsibleWrapper = mountWithEllipsis(Title, { expandable: true, collapsible: true });
 
       await collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
       const collapseSymbol = collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
@@ -107,10 +92,7 @@ describe('Typography Title', () => {
       expect(collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).text()).toBe('展开');
       expect(collapsibleWrapper.find('p').element.style.overflow).toBe('hidden');
 
-      const unCollapsibleWrapper = mount(Title, {
-        props: { ellipsis: { expandable: true, collapsible: false } },
-        slots: { default: () => longText },
-      });
+      const unCollapsibleWrapper = mountWithEllipsis(Title, { expandable: true, collapsible: false });
       await unCollapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
       expect(unCollapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
       expect(unCollapsibleWrapper.find('p').element.style.overflow).toBe('visible');

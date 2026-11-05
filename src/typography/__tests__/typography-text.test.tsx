@@ -5,7 +5,7 @@ import { CheckIcon, CopyIcon } from 'tdesign-icons-vue-next';
 import Text from '../text';
 import Ellipsis from '../ellipsis';
 import { copy } from '../../_util/copy-to-clipboard';
-import { COMPONENT_NAME, longText, shortText } from './mount';
+import { COMPONENT_NAME, longText, shortText, mountWithEllipsis } from './mount';
 
 // 固定剪贴板行为：将复制工具替换为确定的 mock，便于断言被复制的文本
 vi.mock('../../_util/copy-to-clipboard', () => ({ copy: vi.fn() }));
@@ -193,10 +193,7 @@ describe('Typography Text', () => {
     });
 
     it('ellipsis[boolean]', () => {
-      const wrapper = mount(Text, {
-        props: { ellipsis: true },
-        slots: { default: () => longText },
-      });
+      const wrapper = mountWithEllipsis(Text, true);
       expect(wrapper.findComponent(Ellipsis).exists()).toBe(true);
       expect(wrapper.text()).toContain(longText);
       const pEl = wrapper.find('p');
@@ -206,10 +203,7 @@ describe('Typography Text', () => {
     });
 
     it('ellipsis[object]', async () => {
-      const wrapper = mount(Text, {
-        props: { ellipsis: { row: 2 } },
-        slots: { default: () => longText },
-      });
+      const wrapper = mountWithEllipsis(Text, { row: 2 });
       expect(wrapper.findComponent(Ellipsis).props('ellipsis')).toEqual({ row: 2 });
       expect(wrapper.find('p').element.style.overflow).toBe('hidden');
 
@@ -220,26 +214,17 @@ describe('Typography Text', () => {
     });
 
     it('ellipsis[expandable]', () => {
-      const expandableWrapper = mount(Text, {
-        props: { ellipsis: { expandable: true } },
-        slots: { default: () => longText },
-      });
+      const expandableWrapper = mountWithEllipsis(Text, { expandable: true });
       const symbol = expandableWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`);
       expect(symbol.exists()).toBe(true);
       expect(symbol.text()).toBe('展开');
 
-      const collapsedWrapper = mount(Text, {
-        props: { ellipsis: { expandable: false } },
-        slots: { default: () => longText },
-      });
+      const collapsedWrapper = mountWithEllipsis(Text, { expandable: false });
       expect(collapsedWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
     });
 
     it('ellipsis[collapsible]', async () => {
-      const collapsibleWrapper = mount(Text, {
-        props: { ellipsis: { expandable: true, collapsible: true } },
-        slots: { default: () => longText },
-      });
+      const collapsibleWrapper = mountWithEllipsis(Text, { expandable: true, collapsible: true });
 
       // 展开后出现「收起」按钮，且内容样式恢复完整展示
       await collapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
@@ -256,10 +241,7 @@ describe('Typography Text', () => {
       expect(expandSymbol.text()).toBe('展开');
       expect(collapsibleWrapper.find('p').element.style.overflow).toBe('hidden');
 
-      const unCollapsibleWrapper = mount(Text, {
-        props: { ellipsis: { expandable: true, collapsible: false } },
-        slots: { default: () => longText },
-      });
+      const unCollapsibleWrapper = mountWithEllipsis(Text, { expandable: true, collapsible: false });
       await unCollapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).trigger('click');
       // collapsible 为 false 时展开后不再出现任何按钮，内容保持完整展示
       expect(unCollapsibleWrapper.find(`.${COMPONENT_NAME}-ellipsis-symbol`).exists()).toBe(false);
