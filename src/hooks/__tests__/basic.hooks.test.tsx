@@ -1,4 +1,4 @@
-import { h, ref, defineComponent } from 'vue';
+import { h, ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, expect, it, vi } from 'vitest';
 import useChildSlots from '../useChildSlots';
@@ -6,6 +6,7 @@ import { useIcon } from '../icon';
 import { useCommonClassName } from '../useCommonClassName';
 import { usePrefixClass } from '../useClass';
 import useToggle from '../useToggle';
+import createTestComponent from './createTestComponent';
 
 describe('hooks', () => {
   describe('useToggle', () => {
@@ -39,9 +40,9 @@ describe('hooks', () => {
   });
 
   describe('useIcon', () => {
-    const IconTester = defineComponent({
+    const IconTester = createTestComponent({
       props: { icon: [String, Function], theme: { type: String, default: 'default' } },
-      setup(props) {
+      setup(props: { icon: unknown }) {
         const renderIcon = useIcon();
         return () => <div>{renderIcon('icon', { default: h('span', 'default icon') })}</div>;
       },
@@ -67,8 +68,8 @@ describe('hooks', () => {
 
   describe('useChildSlots', () => {
     it('returns only direct children with the requested component name', () => {
-      const Child = defineComponent({ name: 'TargetChild', setup: () => () => h('span') });
-      const Other = defineComponent({ name: 'OtherChild', setup: () => () => h('span') });
+      const Child = createTestComponent({ name: 'TargetChild', setup: () => () => h('span') });
+      const Other = createTestComponent({ name: 'OtherChild', setup: () => () => h('span') });
       const children = [h(Child), h(Other), h(Child)];
       const result = useChildSlots('TargetChild', children);
       expect(result).toHaveLength(2);

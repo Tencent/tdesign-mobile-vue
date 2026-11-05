@@ -1,4 +1,4 @@
-import { defineComponent } from 'vue';
+import { defineComponent, PropType, VNode } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, expect, it, vi } from 'vitest';
 import { useContent, useTNodeDefault, useTNodeJSX } from '../tnode';
@@ -15,7 +15,7 @@ const TNodeHookTester = defineComponent({
     default: [String, Function, Boolean],
     content: String,
     params: Object,
-    defaultNode: [String, Object],
+    defaultNode: [String, Object] as PropType<string | VNode>,
     name: {
       type: String,
       default: 'node',

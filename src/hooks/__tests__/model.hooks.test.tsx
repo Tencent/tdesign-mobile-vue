@@ -1,25 +1,27 @@
-import { h, ref, defineComponent } from 'vue';
+import { h, ref, Ref } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, expect, it, vi } from 'vitest';
 import useDefaultValue from '../useDefaultValue';
 import useExpose from '../useExpose';
 import useVModel from '../useVModel';
+import createTestComponent from './createTestComponent';
 
 describe('hooks', () => {
   describe('useDefaultValue and useVModel', () => {
     it('updates internal default state in uncontrolled mode', () => {
-      let result: ReturnType<typeof useDefaultValue>;
+      let result: [Ref<string>, (value: string) => void];
       const wrapper = mount(
-        defineComponent({
+        createTestComponent({
           setup() {
             const value = ref('initial');
-            result = useDefaultValue(value, 'default', vi.fn(), 'value');
+            result = useDefaultValue<string, []>(value, 'default', vi.fn(), 'value');
             return () => h('div');
           },
         }),
       );
-      result![1]('changed');
-      expect(result![0].value).toBe('changed');
+      if (!result) throw new Error('useDefaultValue result was not initialized');
+      result[1]('changed');
+      expect(result[0].value).toBe('changed');
       wrapper.unmount();
     });
 
@@ -27,7 +29,7 @@ describe('hooks', () => {
       const onChange = vi.fn();
       let update: (value: string, extra?: string) => void;
       const wrapper = mount(
-        defineComponent({
+        createTestComponent({
           props: { value: String },
           emits: ['update:value'],
           setup() {
@@ -38,17 +40,18 @@ describe('hooks', () => {
         }),
         { props: { value: 'controlled' } },
       );
-      update!('next', 'extra');
+      if (!update) throw new Error('useDefaultValue change handler was not initialized');
+      update('next', 'extra');
       expect(wrapper.emitted('update:value')).toEqual([['next']]);
       expect(onChange).toHaveBeenCalledWith('next', 'extra');
     });
 
     it('selects prop value, modelValue, or default in useVModel', () => {
       let selected: any;
-      const Probe = defineComponent({
+      const Probe = createTestComponent({
         props: { value: String, modelValue: String },
         emits: ['update:value', 'update:modelValue'],
-        setup(props) {
+        setup(props: { value?: string; modelValue?: string }) {
           selected = useVModel(ref<string>(), ref(props.modelValue), 'default');
           return () => h('div');
         },
@@ -66,7 +69,7 @@ describe('hooks', () => {
     it('exposes APIs on the component public instance', () => {
       const exposed = vi.fn();
       const wrapper = mount(
-        defineComponent({
+        createTestComponent({
           setup() {
             useExpose({ exposed });
             return () => h('div');

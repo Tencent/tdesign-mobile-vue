@@ -1,9 +1,10 @@
-import { h, nextTick, defineComponent } from 'vue';
+import { h, nextTick } from 'vue';
 import { mount } from '@vue/test-utils';
 import { describe, expect, it, vi, beforeEach, afterEach } from 'vitest';
 import useElementRect from '../useElementRect';
 import useMutationObservable from '../useMutationObservable';
 import useTeleport from '../useTeleport';
+import createTestComponent from './createTestComponent';
 
 describe('hooks', () => {
   describe('useElementRect', () => {
@@ -22,31 +23,33 @@ describe('hooks', () => {
       });
       let api: ReturnType<typeof useElementRect>;
       mount(
-        defineComponent({
+        createTestComponent({
           setup() {
             api = useElementRect(element);
             return () => h('div');
           },
         }),
       );
-      expect(api!.element.value).toBe(element);
-      expect(api!.rect.value).toMatchObject({ top: 1, width: 30, height: 20 });
+      if (!api) throw new Error('useElementRect API was not initialized');
+      expect(api.element.value).toBe(element);
+      expect(api.rect.value).toMatchObject({ top: 1, width: 30, height: 20 });
     });
 
     it('keeps the zero rectangle until update when immediate is false', () => {
       const element = document.createElement('div');
       let api: ReturnType<typeof useElementRect>;
       mount(
-        defineComponent({
+        createTestComponent({
           setup() {
             api = useElementRect(element, { immediate: false });
             return () => h('div');
           },
         }),
       );
-      expect(api!.element.value).toBe(null);
-      api!.updateElement();
-      expect(api!.element.value).toBe(element);
+      if (!api) throw new Error('useElementRect API was not initialized');
+      expect(api.element.value).toBe(null);
+      api.updateElement();
+      expect(api.element.value).toBe(element);
     });
   });
 
@@ -57,14 +60,15 @@ describe('hooks', () => {
       document.body.appendChild(target);
       let element: ReturnType<typeof useTeleport>;
       mount(
-        defineComponent({
+        createTestComponent({
           setup() {
-            element = useTeleport('#teleport-target');
+            element = useTeleport(() => '#teleport-target');
             return () => h('div');
           },
         }),
       );
-      expect(element!.value).toBe(target);
+      if (!element) throw new Error('useTeleport API was not initialized');
+      expect(element.value).toBe(target);
       target.remove();
     });
   });
@@ -87,7 +91,7 @@ describe('hooks', () => {
       const target = document.createElement('div');
       const callback = vi.fn();
       const wrapper = mount(
-        defineComponent({
+        createTestComponent({
           setup() {
             useMutationObservable(target, callback);
             return () => h('div');
