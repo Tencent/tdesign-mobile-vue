@@ -88,6 +88,13 @@ describe('Textarea', () => {
         const minRowsWrapper = mount(<Textarea v-model={value.value} autosize={{ minRows: 2, maxRows: 3 }} />);
         await nextTick();
         expect(getTextarea(minRowsWrapper).style.height).toBe('40px');
+
+        await wrapper.setProps({ autosize: { minRows: 4, maxRows: 5 } });
+        expect(el.style.minHeight).toBe('80px');
+        expect(el.style.height).toBe('80px');
+        await wrapper.setProps({ autosize: true });
+        expect(el.style.minHeight).toBe('20px');
+        expect(el.style.height).toBe('64px');
       } finally {
         scrollHeight.mockRestore();
       }
@@ -137,6 +144,11 @@ describe('Textarea', () => {
       // 未设置 maxlength 且未设置 maxcharacter 时计数器不渲染
       const noLimitWrapper = mount(<Textarea indicator />);
       expect(noLimitWrapper.find('.t-textarea__indicator').exists()).toBeFalsy();
+
+      await wrapper.setProps({ indicator: false });
+      expect(wrapper.find('.t-textarea__indicator').exists()).toBe(false);
+      await wrapper.setProps({ indicator: true });
+      expect(wrapper.get('.t-textarea__indicator').text()).toBe(`0/${maxcharacter}`);
     });
 
     it('label[string]', async () => {
@@ -162,6 +174,12 @@ describe('Textarea', () => {
         const wrapper = mount(<Textarea label="标题" layout={layout} />);
         expect(wrapper.classes()).toContain(`t-textarea--layout-${layout}`);
       });
+
+      const wrapper = mount(<Textarea />);
+      expect(wrapper.classes()).toContain('t-textarea--layout-horizontal');
+      await wrapper.setProps({ layout: 'vertical' });
+      expect(wrapper.classes()).toContain('t-textarea--layout-vertical');
+      expect(wrapper.classes()).not.toContain('t-textarea--layout-horizontal');
     });
 
     it('maxcharacter[number]', async () => {
@@ -468,6 +486,33 @@ describe('Textarea', () => {
       await nextTick();
       // 父组件未回写受控值，输入框回退为受控值
       expect(el.value).toBe('初始值');
+    });
+
+    it('updates counters when a controlled value and its length limit change', async () => {
+      const wrapper = mount(Textarea, { props: { value: 'abc', maxlength: 5, indicator: true } });
+      expect(wrapper.get('.t-textarea__indicator').text()).toBe('3/5');
+
+      await wrapper.setProps({ value: 'abcdef', maxlength: 2 });
+      expect(getTextarea(wrapper).value).toBe('abcdef');
+      expect(wrapper.get('.t-textarea__indicator').text()).toBe('6/2');
+
+      await wrapper.setProps({ value: 'abcdef', maxlength: undefined, maxcharacter: 4 });
+      expect(wrapper.get('.t-textarea__indicator').text()).toBe('6/4');
+      await wrapper.setProps({ indicator: false });
+      expect(wrapper.find('.t-textarea__indicator').exists()).toBe(false);
+    });
+
+    it('passes the latest value to focus and blur callbacks', async () => {
+      const onFocus = vi.fn();
+      const onBlur = vi.fn();
+      const wrapper = mount(Textarea, { props: { defaultValue: '初始值', onFocus, onBlur } });
+      const textarea = wrapper.get('textarea');
+      await textarea.trigger('focus');
+      await textarea.setValue('更新值');
+      await textarea.trigger('blur');
+
+      expect(onFocus).toHaveBeenCalledExactlyOnceWith('初始值', { e: expect.any(FocusEvent) });
+      expect(onBlur).toHaveBeenCalledExactlyOnceWith('更新值', { e: expect.any(FocusEvent) });
     });
   });
 });
