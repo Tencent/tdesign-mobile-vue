@@ -469,26 +469,14 @@ exports[`Button > Button iconVue demo works fine 1`] = `
       class="t-loading"
       style="font-size: 20px;"
     >
-      <svg
+      <div
         class="t-loading__gradient t-icon-loading"
-        height="1em"
         style="animation-duration: 800ms; width: 20px; height: 20px;"
-        version="1.1"
-        viewBox="0 0 12 12"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <foreignobject
-          height="12"
-          width="12"
-          x="0"
-          y="0"
-        >
-          <div
-            class="t-loading__gradient-conic"
-          />
-        </foreignobject>
-      </svg>
+        <div
+          class="t-loading__gradient-conic"
+        />
+      </div>
       <!---->
       <!---->
     </div>
@@ -900,26 +888,14 @@ exports[`Button > Button mobileVue demo works fine 1`] = `
             class="t-loading"
             style="font-size: 20px;"
           >
-            <svg
+            <div
               class="t-loading__gradient t-icon-loading"
-              height="1em"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
-              version="1.1"
-              viewBox="0 0 12 12"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
             >
-              <foreignobject
-                height="12"
-                width="12"
-                x="0"
-                y="0"
-              >
-                <div
-                  class="t-loading__gradient-conic"
-                />
-              </foreignobject>
-            </svg>
+              <div
+                class="t-loading__gradient-conic"
+              />
+            </div>
             <!---->
             <!---->
           </div>

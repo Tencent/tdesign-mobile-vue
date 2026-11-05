@@ -40,26 +40,14 @@ exports[`Loading > Loading baseVue demo works fine 1`] = `
     data-v-ed539936=""
     style="font-size: 20px;"
   >
-    <svg
+    <div
       class="t-loading__gradient t-icon-loading"
-      height="1em"
       style="animation-duration: 800ms; width: 20px; height: 20px;"
-      version="1.1"
-      viewBox="0 0 12 12"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <foreignobject
-        height="12"
-        width="12"
-        x="0"
-        y="0"
-      >
-        <div
-          class="t-loading__gradient-conic"
-        />
-      </foreignobject>
-    </svg>
+      <div
+        class="t-loading__gradient-conic"
+      />
+    </div>
     <!---->
     <!---->
   </div>
@@ -225,26 +213,14 @@ exports[`Loading > Loading horzVue demo works fine 1`] = `
     data-v-9d98c19e=""
     style="font-size: 20px;"
   >
-    <svg
+    <div
       class="t-loading__gradient t-icon-loading"
-      height="1em"
       style="animation-duration: 800ms; width: 20px; height: 20px;"
-      version="1.1"
-      viewBox="0 0 12 12"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <foreignobject
-        height="12"
-        width="12"
-        x="0"
-        y="0"
-      >
-        <div
-          class="t-loading__gradient-conic"
-        />
-      </foreignobject>
-    </svg>
+      <div
+        class="t-loading__gradient-conic"
+      />
+    </div>
     <span
       class="t-loading__text"
     >
@@ -360,26 +336,14 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-ed539936=""
           style="font-size: 20px;"
         >
-          <svg
+          <div
             class="t-loading__gradient t-icon-loading"
-            height="1em"
             style="animation-duration: 800ms; width: 20px; height: 20px;"
-            version="1.1"
-            viewBox="0 0 12 12"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <foreignobject
-              height="12"
-              width="12"
-              x="0"
-              y="0"
-            >
-              <div
-                class="t-loading__gradient-conic"
-              />
-            </foreignobject>
-          </svg>
+            <div
+              class="t-loading__gradient-conic"
+            />
+          </div>
           <!---->
           <!---->
         </div>
@@ -494,26 +458,14 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-9d98c19e=""
           style="font-size: 20px;"
         >
-          <svg
+          <div
             class="t-loading__gradient t-icon-loading"
-            height="1em"
             style="animation-duration: 800ms; width: 20px; height: 20px;"
-            version="1.1"
-            viewBox="0 0 12 12"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <foreignobject
-              height="12"
-              width="12"
-              x="0"
-              y="0"
-            >
-              <div
-                class="t-loading__gradient-conic"
-              />
-            </foreignobject>
-          </svg>
+            <div
+              class="t-loading__gradient-conic"
+            />
+          </div>
           <span
             class="t-loading__text"
           >
@@ -613,26 +565,14 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
             data-v-a2ea6ccb=""
             style="font-size: 20px;"
           >
-            <svg
+            <div
               class="t-loading__gradient t-icon-loading"
-              height="1em"
               style="animation-duration: 800ms; width: 20px; height: 20px;"
-              version="1.1"
-              viewBox="0 0 12 12"
-              width="1em"
-              xmlns="http://www.w3.org/2000/svg"
             >
-              <foreignobject
-                height="12"
-                width="12"
-                x="0"
-                y="0"
-              >
-                <div
-                  class="t-loading__gradient-conic"
-                />
-              </foreignobject>
-            </svg>
+              <div
+                class="t-loading__gradient-conic"
+              />
+            </div>
             <span
               class="t-loading__text"
             >
@@ -773,26 +713,14 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-8b49e899=""
           style="font-size: 26px;"
         >
-          <svg
+          <div
             class="t-loading__gradient t-icon-loading"
-            height="1em"
             style="animation-duration: 800ms; width: 26px; height: 26px;"
-            version="1.1"
-            viewBox="0 0 12 12"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <foreignobject
-              height="12"
-              width="12"
-              x="0"
-              y="0"
-            >
-              <div
-                class="t-loading__gradient-conic"
-              />
-            </foreignobject>
-          </svg>
+            <div
+              class="t-loading__gradient-conic"
+            />
+          </div>
           <span
             class="t-loading__text"
           >
@@ -816,26 +744,14 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-8b49e899=""
           style="font-size: 22px;"
         >
-          <svg
+          <div
             class="t-loading__gradient t-icon-loading"
-            height="1em"
             style="animation-duration: 800ms; width: 22px; height: 22px;"
-            version="1.1"
-            viewBox="0 0 12 12"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <foreignobject
-              height="12"
-              width="12"
-              x="0"
-              y="0"
-            >
-              <div
-                class="t-loading__gradient-conic"
-              />
-            </foreignobject>
-          </svg>
+            <div
+              class="t-loading__gradient-conic"
+            />
+          </div>
           <span
             class="t-loading__text"
           >
@@ -859,26 +775,14 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-8b49e899=""
           style="font-size: 20px;"
         >
-          <svg
+          <div
             class="t-loading__gradient t-icon-loading"
-            height="1em"
             style="animation-duration: 800ms; width: 20px; height: 20px;"
-            version="1.1"
-            viewBox="0 0 12 12"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <foreignobject
-              height="12"
-              width="12"
-              x="0"
-              y="0"
-            >
-              <div
-                class="t-loading__gradient-conic"
-              />
-            </foreignobject>
-          </svg>
+            <div
+              class="t-loading__gradient-conic"
+            />
+          </div>
           <span
             class="t-loading__text"
           >
@@ -923,26 +827,14 @@ exports[`Loading > Loading mobileVue demo works fine 1`] = `
           data-v-4a5d8906=""
           style="font-size: 20px;"
         >
-          <svg
+          <div
             class="t-loading__gradient t-icon-loading"
-            height="1em"
             style="animation-duration: 600ms; width: 20px; height: 20px;"
-            version="1.1"
-            viewBox="0 0 12 12"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
           >
-            <foreignobject
-              height="12"
-              width="12"
-              x="0"
-              y="0"
-            >
-              <div
-                class="t-loading__gradient-conic"
-              />
-            </foreignobject>
-          </svg>
+            <div
+              class="t-loading__gradient-conic"
+            />
+          </div>
           <span
             class="t-loading__text"
           >
@@ -1088,26 +980,14 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
       data-v-8b49e899=""
       style="font-size: 26px;"
     >
-      <svg
+      <div
         class="t-loading__gradient t-icon-loading"
-        height="1em"
         style="animation-duration: 800ms; width: 26px; height: 26px;"
-        version="1.1"
-        viewBox="0 0 12 12"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <foreignobject
-          height="12"
-          width="12"
-          x="0"
-          y="0"
-        >
-          <div
-            class="t-loading__gradient-conic"
-          />
-        </foreignobject>
-      </svg>
+        <div
+          class="t-loading__gradient-conic"
+        />
+      </div>
       <span
         class="t-loading__text"
       >
@@ -1131,26 +1011,14 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
       data-v-8b49e899=""
       style="font-size: 22px;"
     >
-      <svg
+      <div
         class="t-loading__gradient t-icon-loading"
-        height="1em"
         style="animation-duration: 800ms; width: 22px; height: 22px;"
-        version="1.1"
-        viewBox="0 0 12 12"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <foreignobject
-          height="12"
-          width="12"
-          x="0"
-          y="0"
-        >
-          <div
-            class="t-loading__gradient-conic"
-          />
-        </foreignobject>
-      </svg>
+        <div
+          class="t-loading__gradient-conic"
+        />
+      </div>
       <span
         class="t-loading__text"
       >
@@ -1174,26 +1042,14 @@ exports[`Loading > Loading sizeVue demo works fine 1`] = `
       data-v-8b49e899=""
       style="font-size: 20px;"
     >
-      <svg
+      <div
         class="t-loading__gradient t-icon-loading"
-        height="1em"
         style="animation-duration: 800ms; width: 20px; height: 20px;"
-        version="1.1"
-        viewBox="0 0 12 12"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <foreignobject
-          height="12"
-          width="12"
-          x="0"
-          y="0"
-        >
-          <div
-            class="t-loading__gradient-conic"
-          />
-        </foreignobject>
-      </svg>
+        <div
+          class="t-loading__gradient-conic"
+        />
+      </div>
       <span
         class="t-loading__text"
       >
@@ -1220,26 +1076,14 @@ exports[`Loading > Loading speedVue demo works fine 1`] = `
       data-v-4a5d8906=""
       style="font-size: 20px;"
     >
-      <svg
+      <div
         class="t-loading__gradient t-icon-loading"
-        height="1em"
         style="animation-duration: 600ms; width: 20px; height: 20px;"
-        version="1.1"
-        viewBox="0 0 12 12"
-        width="1em"
-        xmlns="http://www.w3.org/2000/svg"
       >
-        <foreignobject
-          height="12"
-          width="12"
-          x="0"
-          y="0"
-        >
-          <div
-            class="t-loading__gradient-conic"
-          />
-        </foreignobject>
-      </svg>
+        <div
+          class="t-loading__gradient-conic"
+        />
+      </div>
       <span
         class="t-loading__text"
       >
@@ -1292,26 +1136,14 @@ exports[`Loading > Loading vertVue demo works fine 1`] = `
     data-v-a2ea6ccb=""
     style="font-size: 20px;"
   >
-    <svg
+    <div
       class="t-loading__gradient t-icon-loading"
-      height="1em"
       style="animation-duration: 800ms; width: 20px; height: 20px;"
-      version="1.1"
-      viewBox="0 0 12 12"
-      width="1em"
-      xmlns="http://www.w3.org/2000/svg"
     >
-      <foreignobject
-        height="12"
-        width="12"
-        x="0"
-        y="0"
-      >
-        <div
-          class="t-loading__gradient-conic"
-        />
-      </foreignobject>
-    </svg>
+      <div
+        class="t-loading__gradient-conic"
+      />
+    </div>
     <span
       class="t-loading__text"
     >
