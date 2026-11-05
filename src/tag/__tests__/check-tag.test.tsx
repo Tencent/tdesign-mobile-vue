@@ -1,6 +1,6 @@
 import { defineComponent, h, ref, nextTick } from 'vue';
-import { mount } from '@vue/test-utils';
-import { describe, it, expect, vi } from 'vitest';
+import { enableAutoUnmount, mount } from '@vue/test-utils';
+import { afterEach, describe, it, expect, vi } from 'vitest';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import TCheckTag from '../check-tag';
 import type { TdCheckTagProps } from '../type';
@@ -12,13 +12,17 @@ const variantList: TdCheckTagProps['variant'][] = ['dark', 'light', 'light-outli
 const sizeList: TdCheckTagProps['size'][] = ['large', 'medium', 'small'];
 const shapeList: TdCheckTagProps['shape'][] = ['mark', 'round', 'square'];
 
+enableAutoUnmount(afterEach);
+
 describe('CheckTag', () => {
   describe('props', () => {
     it('checked[boolean]', async () => {
-      const wrapper = mount(TCheckTag, { props: { checked: true } });
+      const onChange = vi.fn();
+      const wrapper = mount(TCheckTag, { props: { checked: true, onChange } });
       expect(wrapper.classes()).toContain('t-tag--checked');
       await wrapper.setProps({ checked: false });
       expect(wrapper.classes()).not.toContain('t-tag--checked');
+      expect(onChange).not.toHaveBeenCalled();
     });
 
     it('modelValue[boolean]', async () => {
@@ -75,6 +79,9 @@ describe('CheckTag', () => {
       await wrapper.trigger('click');
       expect(wrapper.text()).toContain('已选中态');
       expect(wrapper.classes()).toContain('t-tag--checked');
+      await wrapper.trigger('click');
+      expect(wrapper.text()).toContain('未选中态');
+      expect(wrapper.classes()).not.toContain('t-tag--checked');
     });
 
     it('content[string]', async () => {
@@ -113,8 +120,18 @@ describe('CheckTag', () => {
     });
 
     it('disabled[boolean]', async () => {
-      const wrapper = mount(() => <TCheckTag disabled>{TEXT}</TCheckTag>);
+      const onClick = vi.fn();
+      const onChange = vi.fn();
+      const wrapper = mount(TCheckTag, { props: { disabled: true, defaultChecked: true, onClick, onChange } });
       expect(wrapper.classes()).toContain('t-tag--disabled');
+      expect(wrapper.classes()).not.toContain('t-tag--checked');
+      expect(wrapper.attributes('aria-disabled')).toBe('true');
+      await wrapper.trigger('click');
+      expect(wrapper.classes()).not.toContain('t-tag--checked');
+      expect(onClick).not.toHaveBeenCalled();
+      expect(onChange).not.toHaveBeenCalled();
+      expect(wrapper.emitted('update:checked')).toBeUndefined();
+      expect(wrapper.emitted('update:modelValue')).toBeUndefined();
     });
 
     it('icon[function]', async () => {
@@ -154,6 +171,11 @@ describe('CheckTag', () => {
       const wrapper = mount(() => <TCheckTag>{TEXT}</TCheckTag>);
       await wrapper.trigger('click');
       expect(wrapper.emitted('click')).toBeTruthy();
+      const onClick = vi.fn();
+      const event = new MouseEvent('click', { bubbles: true });
+      const callbackWrapper = mount(TCheckTag, { props: { onClick } });
+      callbackWrapper.element.dispatchEvent(event);
+      expect(onClick).toHaveBeenCalledExactlyOnceWith({ e: event });
     });
 
     it('change', async () => {
@@ -182,8 +204,9 @@ describe('CheckTag', () => {
 
     it('close', async () => {
       const onClose = vi.fn();
+      const onClick = vi.fn();
       const wrapper = mount(() => (
-        <TCheckTag closable onClose={onClose}>
+        <TCheckTag closable onClose={onClose} onClick={onClick}>
           {TEXT}
         </TCheckTag>
       ));
@@ -193,7 +216,8 @@ describe('CheckTag', () => {
       expect(closeBtn.exists()).toBeTruthy();
 
       await closeBtn.trigger('click');
-      expect(onClose).toBeCalledWith({ e: expect.any(MouseEvent) });
+      expect(onClose).toHaveBeenCalledExactlyOnceWith({ e: expect.any(MouseEvent) });
+      expect(onClick).not.toHaveBeenCalled();
     });
   });
 
@@ -202,6 +226,32 @@ describe('CheckTag', () => {
       const wrapper = mount(() => <TCheckTag>{TEXT}</TCheckTag>);
       expect(wrapper.classes()).toContain('t-tag');
       expect(wrapper.classes()).toContain('t-tag--checkable');
+      expect(wrapper.attributes('aria-disabled')).toBe('false');
+      expect(wrapper.attributes('role')).toBe('button');
+    });
+
+    it('keeps the selected state controlled until the parent updates it', async () => {
+      const wrapper = mount(TCheckTag, { props: { checked: false } });
+      await wrapper.trigger('click');
+      expect(wrapper.emitted('update:checked')).toEqual([[true]]);
+      expect(wrapper.classes()).not.toContain('t-tag--checked');
+
+      await wrapper.setProps({ checked: true });
+      expect(wrapper.classes()).toContain('t-tag--checked');
+      await wrapper.trigger('click');
+      expect(wrapper.emitted('update:checked')).toEqual([[true], [false]]);
+      expect(wrapper.classes()).toContain('t-tag--checked');
+    });
+
+    it('toggles the change callback and selected style in uncontrolled mode', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount(TCheckTag, { props: { defaultChecked: false, onChange } });
+      await wrapper.trigger('click');
+      expect(onChange).toHaveBeenCalledExactlyOnceWith(true);
+      expect(wrapper.classes()).toContain('t-tag--checked');
+      await wrapper.trigger('click');
+      expect(onChange).toHaveBeenLastCalledWith(false);
+      expect(wrapper.classes()).not.toContain('t-tag--checked');
     });
   });
 });
