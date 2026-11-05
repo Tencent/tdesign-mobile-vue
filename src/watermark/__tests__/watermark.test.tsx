@@ -365,7 +365,7 @@ describe('Watermark', () => {
 
     it('falls back to content slot when the default slot is empty', () => {
       const wrapper = mount(() => (
-        <Watermark v-slots={{ default: () => null, content: () => <span>后备内容</span> }} />
+        <Watermark v-slots={{ default: (): null => null, content: () => <span>后备内容</span> }} />
       ));
       expect(wrapper.text()).toBe('后备内容');
     });
