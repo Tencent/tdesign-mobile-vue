@@ -64,7 +64,9 @@ describe('NoticeBar', () => {
     ] as const)('direction[%s]', async (direction, content) => {
       const wrapper = mount(<NoticeBar visible direction={direction} content={content} />);
       await nextTick();
+      expect(wrapper.find('.t-notice-bar__content').exists()).toBe(direction === 'horizontal');
       expect(wrapper.find('.t-notice-bar__content--vertical').exists()).toBe(direction === 'vertical');
+      expect(wrapper.findComponent(Swiper).exists()).toBe(direction === 'vertical');
       if (direction === 'vertical') expect(wrapper.findComponent(Swiper).props('direction')).toBe('vertical');
     });
 
