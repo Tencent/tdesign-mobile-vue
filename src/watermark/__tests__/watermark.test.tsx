@@ -1,6 +1,6 @@
-import { flushPromises, mount } from '@vue/test-utils';
+import { enableAutoUnmount, flushPromises, mount } from '@vue/test-utils';
 import type { VueWrapper } from '@vue/test-utils';
-import { describe, it, expect, vi, beforeAll, afterAll, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeAll, afterAll, beforeEach, afterEach } from 'vitest';
 import Watermark from '../watermark';
 import type { TdWatermarkProps } from '../type';
 
@@ -47,6 +47,12 @@ class FakeImage {
 const findWatermarkLayer = (wrapper: VueWrapper) =>
   wrapper.findAll('.t-watermark > div').find((node) => (node.attributes('style') ?? '').includes('background-image'));
 
+const getWatermarkLayer = (wrapper: VueWrapper) => {
+  const layer = findWatermarkLayer(wrapper);
+  if (!layer) throw new Error('Expected a watermark layer to be rendered');
+  return layer;
+};
+
 // 最近一次绘制使用的 canvas 元素（通过 getContext 调用时的 this 捕获）
 const lastCanvas = () => getContext.mock.contexts.at(-1) as HTMLCanvasElement;
 
@@ -60,7 +66,11 @@ const mountWatermark = (props: TdWatermarkProps = {}) =>
     </Watermark>
   ));
 
+enableAutoUnmount(afterEach);
+
 describe('Watermark', () => {
+  let existingStyles: Set<HTMLStyleElement>;
+
   beforeAll(() => {
     HTMLCanvasElement.prototype.getContext = getContext as unknown as typeof originGetContext;
     HTMLCanvasElement.prototype.toDataURL = toDataURL as unknown as typeof originToDataURL;
@@ -74,12 +84,20 @@ describe('Watermark', () => {
   });
 
   beforeEach(() => {
+    existingStyles = new Set(document.head.querySelectorAll('style'));
     vi.clearAllMocks();
     canvasContext.globalAlpha = undefined;
     canvasContext.fillStyle = '';
     canvasContext.font = '';
     canvasContext.textAlign = '';
     canvasContext.textBaseline = '';
+  });
+
+  afterEach(() => {
+    document.head.querySelectorAll('style').forEach((style) => {
+      if (!existingStyles.has(style)) style.remove();
+    });
+    vi.unstubAllGlobals();
   });
 
   describe('props', () => {
@@ -101,6 +119,13 @@ describe('Watermark', () => {
     it('content[function]', () => {
       const wrapper = mount(() => <Watermark content={() => '函数水印内容'} />);
       expect(wrapper.text()).toContain('函数水印内容');
+    });
+
+    it('content[slot]', () => {
+      const wrapper = mount(() => (
+        <Watermark v-slots={{ content: () => <div class="covered">content 插槽内容</div> }} />
+      ));
+      expect(wrapper.find('.covered').text()).toBe('content 插槽内容');
     });
 
     it('default[string]', () => {
@@ -219,8 +244,22 @@ describe('Watermark', () => {
       await vi.waitFor(() => {
         expect(findWatermarkLayer(unremovableWrapper)).toBeTruthy();
       });
-      const reInjectedLayer = findWatermarkLayer(unremovableWrapper);
+      const reInjectedLayer = getWatermarkLayer(unremovableWrapper);
       expect(reInjectedLayer?.element).not.toBe(removedLayer?.element);
+
+      // 不可删除的水印层被修改样式后，同样恢复为原始配置
+      reInjectedLayer.element.setAttribute('style', 'display: none');
+      await vi.waitFor(() => {
+        expect(findWatermarkLayer(unremovableWrapper)?.element).not.toBe(reInjectedLayer?.element);
+        expect(findWatermarkLayer(unremovableWrapper)?.attributes('style')).toContain('background-image');
+      });
+
+      const removableLayer = mountWatermark();
+      const originalLayer = getWatermarkLayer(removableLayer);
+      originalLayer.element.setAttribute('style', 'display: none');
+      await flushPromises();
+      expect(removableLayer.element.contains(originalLayer.element)).toBe(true);
+      expect(originalLayer.attributes('style')).toBe('display: none');
     });
 
     it('rotate[number]', () => {
@@ -288,7 +327,7 @@ describe('Watermark', () => {
       const wrapper = mount(Watermark, {
         props: { ...geometry, watermarkContent: [{ text: '初始水印' }] },
       });
-      const layer = findWatermarkLayer(wrapper);
+      const layer = getWatermarkLayer(wrapper);
       expect(canvasContext.fillText).toHaveBeenCalledWith('初始水印', 0, 0);
       const generatedCount = toDataURL.mock.calls.length;
 
@@ -297,7 +336,7 @@ describe('Watermark', () => {
       // 旧水印层被移除，重新注入新水印层
       const newLayer = findWatermarkLayer(wrapper);
       expect(newLayer?.element).not.toBe(layer?.element);
-      expect(layer?.element.isConnected).toBe(false);
+      expect(wrapper.element.contains(layer.element)).toBe(false);
       // 水印图被重新生成
       expect(toDataURL.mock.calls.length).toBeGreaterThan(generatedCount);
     });
@@ -317,6 +356,58 @@ describe('Watermark', () => {
       expect(wrapper.text()).not.toContain('content 内容');
     });
 
+    it('explicit content prop takes precedence over content slot', () => {
+      const wrapper = mount(() => (
+        <Watermark content="content 属性" v-slots={{ content: () => <span>content 插槽</span> }} />
+      ));
+      expect(wrapper.text()).toBe('content 属性');
+    });
+
+    it('falls back to content slot when the default slot is empty', () => {
+      const wrapper = mount(() => (
+        <Watermark v-slots={{ default: () => null, content: () => <span>后备内容</span> }} />
+      ));
+      expect(wrapper.text()).toBe('后备内容');
+    });
+
+    it('ignores changes to covered content when protecting the watermark layer', async () => {
+      const wrapper = mount(Watermark, {
+        props: { ...geometry, watermarkContent: { text: '水印文字' }, removable: false },
+        slots: { default: () => <div class="covered">被覆盖内容</div> },
+      });
+      const layer = getWatermarkLayer(wrapper);
+      const generatedCount = toDataURL.mock.calls.length;
+      wrapper.find('.covered').element.setAttribute('title', '更新内容');
+      wrapper.find('.covered').element.append(document.createElement('span'));
+      await flushPromises();
+
+      expect(findWatermarkLayer(wrapper)?.element).toBe(layer.element);
+      expect(toDataURL).toHaveBeenCalledTimes(generatedCount);
+    });
+
+    it('stops protecting the watermark layer after unmount', async () => {
+      const wrapper = mountWatermark({ removable: false });
+      const layer = getWatermarkLayer(wrapper);
+      const generatedCount = toDataURL.mock.calls.length;
+      wrapper.unmount();
+      layer.element.setAttribute('style', 'display: none');
+      layer.element.remove();
+      await flushPromises();
+      expect(toDataURL).toHaveBeenCalledTimes(generatedCount);
+    });
+
+    it('scales drawing dimensions without changing the background size on high-density screens', () => {
+      vi.stubGlobal('devicePixelRatio', 2);
+      const wrapper = mountWatermark();
+      expect(lastCanvas().width).toBe(248);
+      expect(lastCanvas().height).toBe(176);
+      expect(lastCanvas().style.width).toBe('124px');
+      expect(lastCanvas().style.height).toBe('88px');
+      expect(canvasContext.translate).toHaveBeenNthCalledWith(1, 24, 48);
+      expect(canvasContext.fillRect).toHaveBeenCalledWith(0, 0, 200, 80);
+      expect(findWatermarkLayer(wrapper)?.attributes('style')).toContain('background-size: 124px');
+    });
+
     it('draws and injects the image watermark after the image loads', async () => {
       vi.stubGlobal('Image', FakeImage);
       const wrapper = mountWatermark({ watermarkContent: { url: 'https://tdesign.gtimg.com/watermark.png' } });
@@ -327,7 +418,6 @@ describe('Watermark', () => {
       expect(canvasContext.drawImage).toHaveBeenCalledWith(expect.anything(), 0, 0, 100, 40);
       expect(toDataURL).toHaveBeenCalledTimes(1);
       expect(findWatermarkLayer(wrapper)?.attributes('style')).toContain('background-image');
-      vi.unstubAllGlobals();
     });
 
     it('processes grayscale image watermark pixels through a temporary canvas', async () => {
@@ -341,7 +431,6 @@ describe('Watermark', () => {
       // 第一次将原图绘制到临时画布，第二次将灰度画布绘制到水印画布
       expect(canvasContext.drawImage).toHaveBeenCalledTimes(2);
       expect(canvasContext.drawImage.mock.calls[1][0]).toBeInstanceOf(HTMLCanvasElement);
-      vi.unstubAllGlobals();
     });
 
     it('draws the image watermark twice with staggered offsets in hexagonal layout', async () => {
@@ -353,7 +442,30 @@ describe('Watermark', () => {
       expect(canvasContext.drawImage).toHaveBeenNthCalledWith(2, expect.anything(), 124, 88, 100, 40);
       // 两张图片均加载完成后仅生成一次水印图
       expect(toDataURL).toHaveBeenCalledTimes(1);
-      vi.unstubAllGlobals();
+    });
+
+    it('draws mixed text and image content before injecting a single watermark layer', async () => {
+      vi.stubGlobal('Image', FakeImage);
+      const wrapper = mountWatermark({
+        watermarkContent: [
+          { text: '第一行文字' },
+          { url: 'https://tdesign.gtimg.com/watermark.png', isGrayscale: true },
+          { text: '第二行文字' },
+          { url: 'https://tdesign.gtimg.com/watermark-second.png' },
+        ],
+      });
+      expect(canvasContext.fillText).toHaveBeenNthCalledWith(1, '第一行文字', 0, 0);
+      expect(canvasContext.fillText).toHaveBeenNthCalledWith(2, '第二行文字', 0, 56);
+      expect(findWatermarkLayer(wrapper)).toBeUndefined();
+      expect(toDataURL).not.toHaveBeenCalled();
+
+      await flushPromises();
+      expect(canvasContext.drawImage).toHaveBeenNthCalledWith(2, expect.any(HTMLCanvasElement), 0, 16, 100, 40);
+      expect(canvasContext.drawImage).toHaveBeenNthCalledWith(3, expect.any(FakeImage), 0, 72, 100, 40);
+      expect(canvasContext.getImageData).toHaveBeenCalledTimes(1);
+      expect(canvasContext.putImageData).toHaveBeenCalledTimes(1);
+      expect(toDataURL).toHaveBeenCalledTimes(1);
+      expect(findWatermarkLayer(wrapper)).toBeTruthy();
     });
   });
 });
