@@ -144,39 +144,42 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
         <div
           class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check t-radio__icon-wrap"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <div
+            class="t-radio__icon-line"
           >
-            <g
-              id="check"
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <path
-                d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
-          </svg>
-          <!---->
+              <g
+                id="check"
+              >
+                <path
+                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             选项一
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -194,21 +197,22 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             选项二
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -226,21 +230,22 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             选项三
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -258,21 +263,22 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             选项四
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -290,21 +296,22 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             选项五
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -322,21 +329,22 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             选项六
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -354,21 +362,22 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             选项七
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -386,21 +395,22 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             选项八
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -418,21 +428,22 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             选项九
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -450,21 +461,22 @@ exports[`TreeSelect > TreeSelect baseVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             选项十
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -655,39 +667,42 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
               >
-                <svg
-                  class="t-icon t-icon-check t-radio__icon-wrap"
-                  fill="none"
-                  height="1em"
-                  style="fill: none;"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <div
+                  class="t-radio__icon-line"
                 >
-                  <g
-                    id="check"
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <path
-                      d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
-                <!---->
+                    <g
+                      id="check"
+                    >
+                      <path
+                        d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   选项一
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -705,21 +720,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   选项二
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -737,21 +753,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   选项三
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -769,21 +786,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   选项四
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -801,21 +819,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   选项五
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -833,21 +852,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   选项六
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -865,21 +885,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   选项七
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -897,21 +918,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   选项八
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -929,21 +951,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   选项九
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -961,21 +984,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   选项十
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1140,26 +1164,30 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
               >
-                <svg
-                  class="t-icon t-icon-check t-checkbox__icon-wrapper"
-                  fill="none"
-                  height="1em"
-                  style="fill: none;"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <div
+                  class="t-checkbox__icon-line"
                 >
-                  <g
-                    id="check"
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <path
-                      d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      id="check"
+                    >
+                      <path
+                        d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1185,26 +1213,30 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
               >
-                <svg
-                  class="t-icon t-icon-check t-checkbox__icon-wrapper"
-                  fill="none"
-                  height="1em"
-                  style="fill: none;"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <div
+                  class="t-checkbox__icon-line"
                 >
-                  <g
-                    id="check"
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <path
-                      d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
+                    <g
+                      id="check"
+                    >
+                      <path
+                        d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1230,12 +1262,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
                 <div
-                  class="placeholder"
-                />
-                
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1261,12 +1292,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
                 <div
-                  class="placeholder"
-                />
-                
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1292,12 +1322,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
                 <div
-                  class="placeholder"
-                />
-                
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1323,12 +1352,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
                 <div
-                  class="placeholder"
-                />
-                
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1354,12 +1382,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
                 <div
-                  class="placeholder"
-                />
-                
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1385,12 +1412,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
                 <div
-                  class="placeholder"
-                />
-                
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1416,12 +1442,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
                 <div
-                  class="placeholder"
-                />
-                
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1447,12 +1472,11 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-checkbox__icon t-checkbox__icon--right"
               >
-                
-                <!---->
                 <div
-                  class="placeholder"
-                />
-                
+                  class="t-checkbox__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-checkbox__content"
@@ -1584,39 +1608,42 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
               <div
                 class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
               >
-                <svg
-                  class="t-icon t-icon-check t-radio__icon-wrap"
-                  fill="none"
-                  height="1em"
-                  style="fill: none;"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <div
+                  class="t-radio__icon-line"
                 >
-                  <g
-                    id="check"
+                  <svg
+                    class="t-icon t-icon-check"
+                    fill="none"
+                    height="1em"
+                    style="fill: none;"
+                    viewBox="0 0 24 24"
+                    width="1em"
                   >
-                    <path
-                      d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                      id="stroke1"
-                      stroke="currentColor"
-                      stroke-linecap="square"
-                      stroke-width="2"
-                    />
-                  </g>
-                </svg>
-                <!---->
+                    <g
+                      id="check"
+                    >
+                      <path
+                        d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                        id="stroke1"
+                        stroke="currentColor"
+                        stroke-linecap="square"
+                        stroke-width="2"
+                      />
+                    </g>
+                  </svg>
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   东城区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1635,21 +1662,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right t-radio__icon--disabled"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line t-radio__icon-line--disabled"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title t-radio__title--disabled"
                   style=""
                 >
                   
                   西城区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1667,21 +1695,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   朝阳区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1699,21 +1728,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   丰台区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1731,21 +1761,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   石景山区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1763,21 +1794,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   海淀区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1795,21 +1827,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   门头沟区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1827,21 +1860,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   房山区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1859,21 +1893,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   通州区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1891,21 +1926,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   顺义区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1923,21 +1959,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   昌平区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1955,21 +1992,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   大兴区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -1987,21 +2025,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   怀柔区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -2019,21 +2058,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   平谷区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -2051,21 +2091,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   密云区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -2083,21 +2124,22 @@ exports[`TreeSelect > TreeSelect mobileVue demo works fine 1`] = `
                 class="t-radio__icon t-radio__icon--right"
               >
                 <div
-                  class="placeholder"
-                />
-                <!---->
+                  class="t-radio__icon-line"
+                >
+                  <!---->
+                </div>
               </div>
               <div
                 class="t-radio__content"
               >
-                <span
+                <div
                   class="t-radio__title"
                   style=""
                 >
                   
                   延庆区
                   
-                </span>
+                </div>
                 <!---->
               </div>
               <!---->
@@ -2249,26 +2291,30 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check t-checkbox__icon-wrapper"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <div
+            class="t-checkbox__icon-line"
           >
-            <g
-              id="check"
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <path
-                d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
-          </svg>
+              <g
+                id="check"
+              >
+                <path
+                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <div
           class="t-checkbox__content"
@@ -2294,26 +2340,30 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right t-checkbox__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check t-checkbox__icon-wrapper"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <div
+            class="t-checkbox__icon-line"
           >
-            <g
-              id="check"
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <path
-                d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
-          </svg>
+              <g
+                id="check"
+              >
+                <path
+                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <div
           class="t-checkbox__content"
@@ -2339,12 +2389,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
           <div
-            class="placeholder"
-          />
-          
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-checkbox__content"
@@ -2370,12 +2419,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
           <div
-            class="placeholder"
-          />
-          
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-checkbox__content"
@@ -2401,12 +2449,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
           <div
-            class="placeholder"
-          />
-          
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-checkbox__content"
@@ -2432,12 +2479,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
           <div
-            class="placeholder"
-          />
-          
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-checkbox__content"
@@ -2463,12 +2509,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
           <div
-            class="placeholder"
-          />
-          
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-checkbox__content"
@@ -2494,12 +2539,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
           <div
-            class="placeholder"
-          />
-          
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-checkbox__content"
@@ -2525,12 +2569,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
           <div
-            class="placeholder"
-          />
-          
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-checkbox__content"
@@ -2556,12 +2599,11 @@ exports[`TreeSelect > TreeSelect multipleVue demo works fine 1`] = `
         <div
           class="t-checkbox__icon t-checkbox__icon--right"
         >
-          
-          <!---->
           <div
-            class="placeholder"
-          />
-          
+            class="t-checkbox__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-checkbox__content"
@@ -2672,39 +2714,42 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
         <div
           class="t-radio__icon t-radio__icon--right t-radio__icon--checked"
         >
-          <svg
-            class="t-icon t-icon-check t-radio__icon-wrap"
-            fill="none"
-            height="1em"
-            style="fill: none;"
-            viewBox="0 0 24 24"
-            width="1em"
+          <div
+            class="t-radio__icon-line"
           >
-            <g
-              id="check"
+            <svg
+              class="t-icon t-icon-check"
+              fill="none"
+              height="1em"
+              style="fill: none;"
+              viewBox="0 0 24 24"
+              width="1em"
             >
-              <path
-                d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
-                id="stroke1"
-                stroke="currentColor"
-                stroke-linecap="square"
-                stroke-width="2"
-              />
-            </g>
-          </svg>
-          <!---->
+              <g
+                id="check"
+              >
+                <path
+                  d="M19.5708 7.37842L10.3785 16.5708L5.42871 11.6211"
+                  id="stroke1"
+                  stroke="currentColor"
+                  stroke-linecap="square"
+                  stroke-width="2"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             东城区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -2723,21 +2768,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right t-radio__icon--disabled"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line t-radio__icon-line--disabled"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title t-radio__title--disabled"
             style=""
           >
             
             西城区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -2755,21 +2801,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             朝阳区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -2787,21 +2834,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             丰台区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -2819,21 +2867,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             石景山区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -2851,21 +2900,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             海淀区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -2883,21 +2933,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             门头沟区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -2915,21 +2966,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             房山区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -2947,21 +2999,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             通州区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -2979,21 +3032,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             顺义区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -3011,21 +3065,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             昌平区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -3043,21 +3098,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             大兴区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -3075,21 +3131,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             怀柔区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -3107,21 +3164,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             平谷区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -3139,21 +3197,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             密云区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->
@@ -3171,21 +3230,22 @@ exports[`TreeSelect > TreeSelect normalVue demo works fine 1`] = `
           class="t-radio__icon t-radio__icon--right"
         >
           <div
-            class="placeholder"
-          />
-          <!---->
+            class="t-radio__icon-line"
+          >
+            <!---->
+          </div>
         </div>
         <div
           class="t-radio__content"
         >
-          <span
+          <div
             class="t-radio__title"
             style=""
           >
             
             延庆区
             
-          </span>
+          </div>
           <!---->
         </div>
         <!---->

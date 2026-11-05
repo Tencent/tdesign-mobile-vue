@@ -1,7 +1,7 @@
 import { inject, computed, defineComponent, Ref, toRefs } from 'vue';
-import { CheckIcon, CheckCircleFilledIcon } from 'tdesign-icons-vue-next';
+import { Check1Icon as TdCheck1Icon, CheckIcon as TdCheckIcon } from 'tdesign-icons-vue-next';
 import props from './props';
-import { TdRadioGroupProps, TdRadioProps } from './type';
+import { TdRadioGroupProps } from './type';
 import useVModel from '../hooks/useVModel';
 import { useFormDisabled, useReadonly } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
@@ -59,14 +59,6 @@ export default defineComponent({
       value: props.value,
     }));
 
-    const iconContent = computed(() => {
-      if (props.icon?.length === 2) {
-        const iconIndex = radioChecked.value ? 0 : 1;
-        return props.icon[iconIndex];
-      }
-      return null;
-    });
-
     const radioClasses = computed(() => [
       `${radioClass.value}`,
       `${radioClass.value}--${finalPlacement.value}`,
@@ -113,39 +105,39 @@ export default defineComponent({
       }
     };
 
-    const readerIcon = () => {
-      if (radioChecked.value) {
-        if (props.icon === 'circle') {
-          return <CheckCircleFilledIcon class={`${radioClass.value}__icon-wrap`} />;
-        }
-        if (props.icon === 'line') {
-          return <CheckIcon class={`${radioClass.value}__icon-wrap`} />;
-        }
-        if (props.icon === 'dot') {
-          return (
-            <div
-              class={[
-                `${radioClass.value}__icon-${props.icon}`,
-                { [`${radioClass.value}__icon-${props.icon}--disabled`]: isDisabled.value },
-              ]}
-            />
-          );
-        }
-      } else {
-        if (props.icon === 'circle' || props.icon === 'dot') {
-          return (
-            <div
-              class={[
-                `${radioClass.value}__icon-circle`,
-                { [`${radioClass.value}__icon-circle--disabled`]: isDisabled.value },
-              ]}
-            />
-          );
-        }
-        if (props.icon === 'line') {
-          return <div class="placeholder" />;
-        }
+    const renderIconContent = () => {
+      if (Array.isArray(props.icon) && props.icon.length > 1) {
+        return props.icon[radioChecked.value ? 0 : 1];
       }
+      if (props.icon !== 'circle' && props.icon !== 'line' && props.icon !== 'dot') return null;
+
+      if (props.icon === 'dot') {
+        return (
+          <div
+            class={{
+              [`${radioClass.value}__icon-dot`]: true,
+              [`${radioClass.value}__icon-dot--checked`]: radioChecked.value,
+              [`${radioClass.value}__icon-dot--disabled`]: isDisabled.value,
+            }}
+          >
+            {radioChecked.value && <div class={`${radioClass.value}__icon-dot-inner`} />}
+          </div>
+        );
+      }
+
+      const shape = props.icon === 'line' ? 'line' : 'circle';
+      const ActiveIcon = shape === 'line' ? TdCheckIcon : TdCheck1Icon;
+      return (
+        <div
+          class={{
+            [`${radioClass.value}__icon-${shape}`]: true,
+            [`${radioClass.value}__icon-${shape}--checked`]: shape !== 'line' && radioChecked.value,
+            [`${radioClass.value}__icon-${shape}--disabled`]: isDisabled.value,
+          }}
+        >
+          {radioChecked.value && <ActiveIcon />}
+        </div>
+      );
     };
 
     return () => {
@@ -154,19 +146,19 @@ export default defineComponent({
       return (
         <div class={radioClasses.value} onClick={radioOrgChange}>
           <input type="radio" class={`${radioClass.value}__original`} {...inputProps.value} />
-          <div class={iconClass.value}>
-            {readerIcon()}
-            {iconContent.value}
-          </div>
+          <div class={iconClass.value}>{renderIconContent()}</div>
           <div class={`${radioClass.value}__content`} onClick={radioContentChange}>
             {label && (
-              <span class={titleClasses.value} style={`-webkit-line-clamp: ${props.maxLabelRow}`}>
+              <div class={titleClasses.value} style={`-webkit-line-clamp: ${props.maxLabelRow}`}>
                 {label}
-              </span>
+              </div>
             )}
             {content && (
               <div
-                class={[`${radioClass.value}__description`, { [`${radioClass.value}__description`]: isDisabled.value }]}
+                class={[
+                  `${radioClass.value}__description`,
+                  { [`${radioClass.value}__description--disabled`]: isDisabled.value },
+                ]}
                 style={`-webkit-line-clamp: ${props.maxContentRow}`}
               >
                 {content}
