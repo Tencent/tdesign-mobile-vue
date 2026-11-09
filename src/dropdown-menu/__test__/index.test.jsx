@@ -91,6 +91,34 @@ describe('dropdown-menu', () => {
   });
 
   describe('DropdownItem Props', () => {
+    it('does not select an option after the open item is disabled', async () => {
+      const disabled = ref(false);
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <DropdownMenu>
+              <DropdownItem
+                value="option_0"
+                label="Menu"
+                disabled={disabled.value}
+                options={options}
+                onChange={onChange}
+              />
+            </DropdownMenu>
+          );
+        },
+      });
+
+      await wrapper.get(`.${name}__item`).trigger('click');
+      expect(wrapper.findAll('.t-radio')).toHaveLength(3);
+      disabled.value = true;
+      await wrapper.vm.$nextTick();
+      await wrapper.findAll('.t-radio')[1].trigger('click');
+
+      expect(onChange).not.toHaveBeenCalled();
+    });
+
     it(': label', () => {
       const value1 = ref('option_2');
       const value2 = ref('option_2');

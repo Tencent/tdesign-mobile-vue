@@ -232,7 +232,7 @@ export default defineComponent({
                   key={option.value}
                   value={option.value}
                   label={option.label}
-                  disabled={option.disabled}
+                  disabled={props.disabled || option.disabled}
                   class={styleDropRadio(option.value)}
                   checked={isCheckedRadio(option.value)}
                   icon="line"
@@ -257,7 +257,7 @@ export default defineComponent({
                 borderless
                 value={option.value}
                 label={option.label}
-                disabled={option.disabled}
+                disabled={props.disabled || option.disabled}
               />
             ))}
           </TCheckboxGroup>
@@ -271,7 +271,7 @@ export default defineComponent({
               <TButton
                 theme="light"
                 class={`${dropdownItemClass.value}__footer-btn ${dropdownItemClass.value}__reset-btn`}
-                disabled={isBtnDisabled.value}
+                disabled={props.disabled || isBtnDisabled.value}
                 onClick={resetSelect}
               >
                 {globalConfig.value.reset}
@@ -279,7 +279,7 @@ export default defineComponent({
               <TButton
                 theme="primary"
                 class={`${dropdownItemClass.value}__footer-btn ${dropdownItemClass.value}__confirm-btn`}
-                disabled={isBtnDisabled.value}
+                disabled={props.disabled || isBtnDisabled.value}
                 onClick={confirmSelect}
               >
                 {globalConfig.value.confirm}
