@@ -29,6 +29,8 @@ export default defineComponent({
     const leafLevel = ref(0);
     const treeMaxLevel = ref(0);
     const treeOptions = ref<_TreeOptionData[][]>([]);
+    // 当前渲染路径上每一级实际展示的值，用于补全初始值为空时缺失的父级值
+    const treePath = ref<TreeSelectValue[]>([]);
     const rootStyle = computed(() => [`height: ${convertUnit(height.value)}`, customStyle.value].join(';'));
 
     const buildTreeOptions = () => {
@@ -36,6 +38,8 @@ export default defineComponent({
 
       let level = -1;
       const tmpTreeOptions: _TreeOptionData[][] = [];
+      const tmpTreePath: TreeSelectValue[] = [];
+      const valueKey = keys?.value || 'value';
       let node: _TreeOptionData = { children: options };
       if (options.length === 0 || (Array.isArray(value) && value.length === 0)) return;
       while (node && node.children) {
@@ -57,7 +61,9 @@ export default defineComponent({
           const child = list.find((child) => child.value === thisValue);
           node = child ?? list[0];
         }
+        if (node) tmpTreePath.push(node[valueKey]);
       }
+      treePath.value = tmpTreePath;
       leafLevel.value = Math.max(0, level);
       if (leafLevel.value > treeMaxLevel.value) {
         treeMaxLevel.value = leafLevel.value;
@@ -82,7 +88,16 @@ export default defineComponent({
     };
 
     const onRootChange = (level: number) => {
-      setInnerValue(innerValue.value, level);
+      // value 初始为空数组 / 未传时，点击子级只会写入当前层级的值，
+      // 父级一直为 undefined，导致父级不显示选中态，change 回调中的父级值也是 undefined。
+      // 这里按当前渲染路径补齐缺失的父级值，使空初始值与非空初始值行为一致。
+      const currentValue = innerValue.value;
+      if (Array.isArray(currentValue)) {
+        for (let i = 0; i < level; i += 1) {
+          if (currentValue[i] == null) currentValue[i] = treePath.value[i];
+        }
+      }
+      setInnerValue(currentValue, level);
     };
 
     const handleTreeClick = (itemValue: TreeSelectValue, level: number, isDisabled: boolean) => {

@@ -84,6 +84,26 @@ describe('tree-select', () => {
   });
 
   describe('event', () => {
+    it(':change in single with empty initial value', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          const value = ref([]);
+          return () => <TreeSelect options={options} value={value.value} onChange={onChange} />;
+        },
+      });
+
+      expect(wrapper.findAll('.t-side-bar-item--active')).toHaveLength(0);
+      const radios = wrapper.findAllComponents(Radio);
+      await radios[0].trigger('click');
+
+      // 初始值为空数组时，点击子级需要补齐父级的值，与非空初始值行为一致
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenLastCalledWith(['1', '1-1', '1-1-1'], 2);
+      expect(wrapper.findAll('.t-side-bar-item--active')).toHaveLength(1);
+      expect(wrapper.findAll('.t-tree-select__item--active')).toHaveLength(1);
+    });
+
     it(':change in single', async () => {
       const onChange = vi.fn();
       const wrapper = mount({
