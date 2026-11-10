@@ -84,6 +84,50 @@ describe('tree-select', () => {
   });
 
   describe('event', () => {
+    it(':change in single with empty initial value', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          const value = ref([]);
+          return () => <TreeSelect options={options} value={value.value} onChange={onChange} />;
+        },
+      });
+
+      expect(wrapper.findAll('.t-side-bar-item--active')).toHaveLength(0);
+      const radios = wrapper.findAllComponents(Radio);
+      await radios[0].trigger('click');
+
+      // 初始值为空数组时，点击子级需要补齐父级的值，与非空初始值行为一致
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange).toHaveBeenLastCalledWith(['1', '1-1', '1-1-1'], 2);
+      expect(wrapper.findAll('.t-side-bar-item--active')).toHaveLength(1);
+      expect(wrapper.findAll('.t-tree-select__item--active')).toHaveLength(1);
+    });
+
+    it(':change fills correct parents when switching to another branch after an empty initial value', async () => {
+      const onChange = vi.fn();
+      const wrapper = mount({
+        setup() {
+          const value = ref([]);
+          return () => <TreeSelect options={options} value={value.value} onChange={onChange} />;
+        },
+      });
+
+      // 空初始值，先点第一个叶子（1-1-1）
+      await wrapper.findAllComponents(Radio)[0].trigger('click');
+      expect(onChange).toHaveBeenLastCalledWith(['1', '1-1', '1-1-1'], 2);
+
+      // 切到第二个省份（2），再点其叶子（2-1-1）：
+      // 父级必须校正为当前分支 ['2','2-1']，不能残留上一分支的 '1-1'
+      const sideBarItems = wrapper.findAllComponents(SideBarItem);
+      await sideBarItems[1].trigger('click');
+      expect(onChange).toHaveBeenLastCalledWith(['2', '1-1', '1-1-1'], 0);
+
+      const radios = wrapper.findAllComponents(Radio);
+      await radios[0].trigger('click');
+      expect(onChange).toHaveBeenLastCalledWith(['2', '2-1', '2-1-1'], 2);
+    });
+
     it(':change in single', async () => {
       const onChange = vi.fn();
       const wrapper = mount({
