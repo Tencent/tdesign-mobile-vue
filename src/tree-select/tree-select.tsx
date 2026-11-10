@@ -90,11 +90,15 @@ export default defineComponent({
     const onRootChange = (level: number) => {
       // value 初始为空数组 / 未传时，点击子级只会写入当前层级的值，
       // 父级一直为 undefined，导致父级不显示选中态，change 回调中的父级值也是 undefined。
-      // 这里按当前渲染路径补齐缺失的父级值，使空初始值与非空初始值行为一致。
+      // 这里按当前渲染路径校正父级值：父级要么缺失、要么已不属于当前渲染分支
+      // （跨分支切换后残留的过期值），统一用当前渲染路径的值补齐/覆盖，
+      // 使空初始值与非空初始值行为一致，且不会残留旧分支的父级值。
       const currentValue = innerValue.value;
       if (Array.isArray(currentValue)) {
         for (let i = 0; i < level; i += 1) {
-          if (currentValue[i] == null) currentValue[i] = treePath.value[i];
+          if (currentValue[i] == null || currentValue[i] !== treePath.value[i]) {
+            currentValue[i] = treePath.value[i];
+          }
         }
       }
       setInnerValue(currentValue, level);
