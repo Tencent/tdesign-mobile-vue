@@ -169,14 +169,15 @@ describe('Watermark', () => {
       expect(findWatermarkLayer(noRepeatWrapper)?.attributes('style')).toContain('background-repeat: no-repeat');
     });
 
-    it('layout[rectangular/hexagonal]', () => {
+    it('layout[rectangular]', () => {
       // rectangular：内容绘制一次，画布宽度 = x + width
       mountWatermark({ layout: 'rectangular' });
       expect(canvasContext.fillText).toHaveBeenCalledTimes(1);
       expect(lastCanvas().width).toBe(124);
-      canvasContext.fillText.mockClear();
+    });
 
-      // hexagonal：画布宽高扩大一倍，内容错位绘制第二次，背景宽度 = x + width * 2 + width / 2
+    it('layout[hexagonal]', () => {
+      // 画布宽高扩大一倍，内容错位绘制第二次，背景宽度 = x + width * 2 + width / 2
       const wrapper = mountWatermark({ layout: 'hexagonal' });
       expect(canvasContext.fillText).toHaveBeenCalledTimes(2);
       expect(canvasContext.fillText).toHaveBeenNthCalledWith(1, '水印文字', 0, 0);
@@ -292,6 +293,53 @@ describe('Watermark', () => {
       expect(canvasContext.fillText).toHaveBeenCalledTimes(2);
       expect(canvasContext.fillText).toHaveBeenNthCalledWith(1, '第一行', 0, 0);
       expect(canvasContext.fillText).toHaveBeenNthCalledWith(2, '第二行', 0, 16);
+    });
+
+    it('watermarkContent[object<image>]', async () => {
+      vi.stubGlobal('Image', FakeImage as unknown as typeof Image);
+
+      // 普通图片：加载完成后按水印区域尺寸直接绘制到水印画布
+      mountWatermark({ watermarkContent: { url: 'https://tdesign.gtimg.com/logo.png' } });
+      await flushPromises();
+      expect(canvasContext.drawImage).toHaveBeenCalledTimes(1);
+      const [image, ...rest] = canvasContext.drawImage.mock.calls[0];
+      expect(image).toBeInstanceOf(FakeImage);
+      expect(image.src).toBe('https://tdesign.gtimg.com/logo.png');
+      expect(rest).toEqual([0, 0, 100, 40]);
+      expect(canvasContext.getImageData).not.toHaveBeenCalled();
+
+      // 灰阶图片：先绘制到临时画布做像素级灰度处理，再把临时画布绘制到水印画布
+      canvasContext.drawImage.mockClear();
+      mountWatermark({ watermarkContent: { url: 'https://tdesign.gtimg.com/logo.png', isGrayscale: true } });
+      await flushPromises();
+      expect(canvasContext.drawImage).toHaveBeenCalledTimes(2);
+      expect(canvasContext.drawImage.mock.calls[0][0]).toBeInstanceOf(FakeImage);
+      expect(canvasContext.drawImage.mock.calls[1][0]).toBeInstanceOf(HTMLCanvasElement);
+      expect(canvasContext.drawImage).toHaveBeenNthCalledWith(1, expect.anything(), 0, 0, 100, 40);
+      expect(canvasContext.drawImage).toHaveBeenNthCalledWith(2, expect.anything(), 0, 0, 100, 40);
+      expect(canvasContext.getImageData).toHaveBeenCalledWith(0, 0, 100, 40);
+      expect(canvasContext.putImageData).toHaveBeenCalledTimes(1);
+    });
+
+    it('watermarkContent[array<image>]', async () => {
+      vi.stubGlobal('Image', FakeImage as unknown as typeof Image);
+
+      // 图片数组：每张图片独占一行（行高 = height），全部加载完成后才生成水印
+      mountWatermark({
+        watermarkContent: [{ url: 'https://tdesign.gtimg.com/a.png' }, { url: 'https://tdesign.gtimg.com/b.png' }],
+      });
+      await flushPromises();
+      expect(canvasContext.drawImage).toHaveBeenCalledTimes(2);
+      expect(canvasContext.drawImage).toHaveBeenNthCalledWith(1, expect.anything(), 0, 0, 100, 40);
+      // 第二张图片的 y 起点 = height
+      expect(canvasContext.drawImage).toHaveBeenNthCalledWith(2, expect.anything(), 0, 40, 100, 40);
+
+      // 文本与图片混合数组：文本用 fillText 绘制，图片紧随文本行后绘制
+      canvasContext.drawImage.mockClear();
+      mountWatermark({ watermarkContent: [{ text: '文字水印' }, { url: 'https://tdesign.gtimg.com/a.png' }] });
+      await flushPromises();
+      expect(canvasContext.fillText).toHaveBeenCalledWith('文字水印', 0, 0);
+      expect(canvasContext.drawImage).toHaveBeenCalledWith(expect.anything(), 0, 16, 100, 40);
     });
 
     it('width[number]', () => {

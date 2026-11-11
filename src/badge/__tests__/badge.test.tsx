@@ -75,6 +75,19 @@ describe('Badge', () => {
       expect(inner.text()).toEqual('hot');
     });
 
+    it('count[slot]', () => {
+      // count 为 true 时回落到插槽通道渲染自定义计数（TNode 通用行为）
+      const wrapper = mount(() => (
+        <Badge count={true as unknown as undefined} v-slots={{ count: () => <span class="slot-count">99+</span> }}>
+          <Button>按钮</Button>
+        </Badge>
+      ));
+      const inner = wrapper.find(`.${name}--count`);
+      expect(inner.exists()).toBeTruthy();
+      expect(wrapper.get('.slot-count').text()).toEqual('99+');
+      expect(inner.text()).toEqual('99+');
+    });
+
     it('dot[boolean]', () => {
       const wrapper = mount(() => (
         <Badge dot>

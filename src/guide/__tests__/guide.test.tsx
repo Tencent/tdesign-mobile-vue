@@ -147,11 +147,14 @@ describe('Guide', () => {
       expect(highlight.style.left).toBe('-12px');
     });
 
-    it('mode[popover/dialog]', async () => {
+    it('mode[popover]', async () => {
       const wrapper = await mountGuide({ mode: 'popover' });
       expect(wrapper.findComponent(Popover).props()).toMatchObject({ theme: 'light', showArrow: false, visible: true });
       expect(wrapper.findComponent(Popup).exists()).toBe(false);
-      await wrapper.setProps({ mode: 'dialog' });
+    });
+
+    it('mode[dialog]', async () => {
+      const wrapper = await mountGuide({ mode: 'dialog' });
       await flushPromises();
       expect(wrapper.findComponent(Popup).props()).toMatchObject({ placement: 'center', visible: true });
       expect(wrapper.findComponent(Popover).exists()).toBe(false);

@@ -222,25 +222,21 @@ describe('CollapsePanel', () => {
       expect(wrapper.find('.t-cell__note > span').html()).toBe('<span>操作</span>');
     });
 
-    test('placement[bottom/top]', async () => {
-      await Promise.all(
-        placementList.map(async (placement) => {
-          const wrapper = mount({
-            setup() {
-              return () => (
-                <Collapse>
-                  <CollapsePanel ref="1" value="1" placement={placement} />
-                </Collapse>
-              );
-            },
-          });
-          const $CollapsePanel = wrapper.findComponent(CollapsePanel);
-          expect($CollapsePanel.classes()).toContain(`t-collapse-panel--${placement}`);
-          expect($CollapsePanel.find(`.t-icon-chevron-${placement === 'bottom' ? 'down' : 'up'}`).exists()).toBe(true);
-          await $CollapsePanel.find('.t-collapse-panel__header').trigger('click');
-          expect($CollapsePanel.find(`.t-icon-chevron-${placement === 'bottom' ? 'up' : 'down'}`).exists()).toBe(true);
-        }),
-      );
+    test.each(placementList)('placement[%s]', async (placement) => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Collapse>
+              <CollapsePanel ref="1" value="1" placement={placement} />
+            </Collapse>
+          );
+        },
+      });
+      const $CollapsePanel = wrapper.findComponent(CollapsePanel);
+      expect($CollapsePanel.classes()).toContain(`t-collapse-panel--${placement}`);
+      expect($CollapsePanel.find(`.t-icon-chevron-${placement === 'bottom' ? 'down' : 'up'}`).exists()).toBe(true);
+      await $CollapsePanel.find('.t-collapse-panel__header').trigger('click');
+      expect($CollapsePanel.find(`.t-icon-chevron-${placement === 'bottom' ? 'up' : 'down'}`).exists()).toBe(true);
     });
 
     test('value[string]', async () => {

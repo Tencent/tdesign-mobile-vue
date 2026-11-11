@@ -575,20 +575,14 @@ describe('Upload', () => {
       expect(listWrapper.find('.t-upload__list-trigger').exists()).toBe(false);
     });
 
-    it('method[string]', async () => {
+    // 全部 5 个枚举取值逐一验证；未传时的默认 POST 行为由 action[string] 用例覆盖
+    it.each(['POST', 'GET', 'PUT', 'OPTIONS', 'PATCH'] as const)('method[%s]', async (method) => {
       useMockXMLHttpRequest();
       const wrapper = mount(Upload, {
-        props: { action, method: 'PUT' },
+        props: { action, method },
       });
       await triggerUploadFileAndWait(wrapper);
-      expect(mockXHRInstances[0].open).toHaveBeenCalledWith('PUT', action, true);
-
-      // 默认 POST
-      const wrapper2 = mount(Upload, {
-        props: { action },
-      });
-      await triggerUploadFileAndWait(wrapper2);
-      expect(mockXHRInstances[1].open).toHaveBeenCalledWith('POST', action, true);
+      expect(mockXHRInstances[0].open).toHaveBeenCalledWith(method, action, true);
     });
 
     it('mockProgressDuration[number]', async () => {

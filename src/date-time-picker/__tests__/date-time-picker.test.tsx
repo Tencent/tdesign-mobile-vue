@@ -3,6 +3,7 @@ import { mount, type VueWrapper } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 
 import DateTimePicker from '../date-time-picker';
+import type { TimeModeValues } from '../type';
 import ConfigProvider from '../../config-provider';
 import PickerItem from '../../picker/picker-item';
 import { DEFAULT_ITEM_HEIGHT } from '../../picker/picker.class';
@@ -65,12 +66,17 @@ const getActiveTexts = (wrapper: VueWrapper) =>
 
 describe('DateTimePicker', () => {
   describe('props', () => {
-    it('cancelBtn[string] & confirmBtn[string]', async () => {
-      const wrapper = mount(DateTimePicker, { props: { cancelBtn: '取消选择', confirmBtn: '确认选择' } });
+    it('cancelBtn[string]', async () => {
+      const wrapper = mount(DateTimePicker, { props: { cancelBtn: '取消选择' } });
       expect(wrapper.find(`.${prefix}-picker__cancel`).text()).toBe('取消选择');
-      expect(wrapper.find(`.${prefix}-picker__confirm`).text()).toBe('确认选择');
-      await wrapper.setProps({ cancelBtn: '取消', confirmBtn: '确定' });
+      await wrapper.setProps({ cancelBtn: '取消' });
       expect(wrapper.find(`.${prefix}-picker__cancel`).text()).toBe('取消');
+    });
+
+    it('confirmBtn[string]', async () => {
+      const wrapper = mount(DateTimePicker, { props: { confirmBtn: '确认选择' } });
+      expect(wrapper.find(`.${prefix}-picker__confirm`).text()).toBe('确认选择');
+      await wrapper.setProps({ confirmBtn: '确定' });
       expect(wrapper.find(`.${prefix}-picker__confirm`).text()).toBe('确定');
     });
 
@@ -81,6 +87,16 @@ describe('DateTimePicker', () => {
       });
       expect(getActiveTexts(wrapper)).toEqual(['2023 年', '10 月', '13 日']);
       expect(wrapper.findAllComponents(PickerItem)[0].findAll('.t-picker-item__item').at(-1).text()).toBe('2023 年');
+    });
+
+    it('end[string]', () => {
+      const wrapper = mount(DateTimePicker, {
+        props: { value: '2026-05-01 10:00:00', end: '2025-10-10 10:10:10', mode: 'date' },
+      });
+      // 超出 end 的值被收敛到 end
+      expect(getActiveTexts(wrapper)).toEqual(['2025 年', '10 月', '10 日']);
+      // 年列最大值以 end 年份为界
+      expect(wrapper.findAllComponents(PickerItem)[0].findAll('.t-picker-item__item').at(-1).text()).toBe('2025 年');
     });
 
     it('footer[function]', async () => {
@@ -146,6 +162,24 @@ describe('DateTimePicker', () => {
     it('header[slot]', () => {
       const wrapper = mount(DateTimePicker, { slots: { header: () => <span class="slot-header">头部</span> } });
       expect(wrapper.find('.slot-header').text()).toBe('头部');
+    });
+
+    it('mode[string]', () => {
+      // 六种字符串模式依次递增一列：year 1 列 → second 6 列
+      const modeColumns: Array<[TimeModeValues, number]> = [
+        ['year', 1],
+        ['month', 2],
+        ['date', 3],
+        ['hour', 4],
+        ['minute', 5],
+        ['second', 6],
+      ];
+      modeColumns.forEach(([mode, count]) => {
+        const wrapper = mount(DateTimePicker, {
+          props: { defaultValue: `${defaultDateTime} 10:20:30`, mode },
+        });
+        expect(wrapper.findAllComponents(PickerItem)).toHaveLength(count);
+      });
     });
 
     it('mode[array]', async () => {
@@ -215,32 +249,14 @@ describe('DateTimePicker', () => {
       expect(getDateColumnTexts()).toEqual(['1 日', '2 日', '3 日']);
     });
 
-    it('start[string] & end[string]', async () => {
-      const start = '2020-6-30 10:00:00';
-      const end = '2025-10-10 10:10:10';
-      const startYear = start.split('-')[0];
-      const endYear = end.split('-')[0];
-
+    it('start[string]', () => {
       const wrapper = mount(DateTimePicker, {
-        props: {
-          value: start,
-          start,
-          end,
-          mode: 'second',
-        },
+        props: { value: '2020-6-20 10:00:00', start: '2020-6-30 10:00:00', mode: 'date' },
       });
-      const $pickerItems = wrapper.findAllComponents(PickerItem);
-      const yearItemCount = $pickerItems[0].findAll(`.${prefix}-picker-item__item`).length;
-      expect(yearItemCount).toEqual(Number(endYear) - Number(startYear) + 1);
-
-      // 设置到最后一天
-      await wrapper.setProps({ value: end });
-
-      $pickerItems.forEach((item, index) => {
-        const { length } = item.findAll(`.${prefix}-picker-item__item`);
-        const counter = [6, 10, 10, 11, 11, 11];
-        expect(length).toBe(counter[index]);
-      });
+      // 早于 start 的值被收敛到 start
+      expect(getActiveTexts(wrapper)).toEqual(['2020 年', '6 月', '30 日']);
+      // 年列最小值以 start 年份为界
+      expect(wrapper.findAllComponents(PickerItem)[0].get('.t-picker-item__item').text()).toBe('2020 年');
     });
 
     it('start[number]', () => {

@@ -120,33 +120,52 @@ describe('Overlay', () => {
       });
     });
 
-    it('open & opened & close & closed', async () => {
-      const onOpen = vi.fn();
-      const onOpened = vi.fn();
-      const onClose = vi.fn();
-      const onClosed = vi.fn();
-      const wrapper = mount(Overlay, {
-        // 单测环境全局 stub 了 transition，这里放开以验证真实的过渡钩子
+    // 单测环境全局 stub 了 transition，这里放开以验证真实的过渡钩子
+    const mountTransitionOverlay = (handlers: Record<string, ReturnType<typeof vi.fn>>) =>
+      mount(Overlay, {
         global: { stubs: { transition: false } },
-        props: {
-          visible: false,
-          onOpen,
-          onOpened,
-          onClose,
-          onClosed,
-        },
+        props: { visible: false, ...handlers },
       });
 
+    it('open', async () => {
+      const onOpen = vi.fn();
+      const wrapper = mountTransitionOverlay({ onOpen });
       await wrapper.setProps({ visible: true });
       await nextTick();
       await waitFrame();
       expect(onOpen).toHaveBeenCalledTimes(1);
-      expect(onOpened).toHaveBeenCalledTimes(1);
+    });
 
+    it('opened', async () => {
+      const onOpened = vi.fn();
+      const wrapper = mountTransitionOverlay({ onOpened });
+      await wrapper.setProps({ visible: true });
+      await nextTick();
+      await waitFrame();
+      expect(onOpened).toHaveBeenCalledTimes(1);
+    });
+
+    it('close', async () => {
+      const onClose = vi.fn();
+      const wrapper = mountTransitionOverlay({ onClose });
+      await wrapper.setProps({ visible: true });
+      await nextTick();
+      await waitFrame();
       await wrapper.setProps({ visible: false });
       await nextTick();
       await waitFrame();
       expect(onClose).toHaveBeenCalledTimes(1);
+    });
+
+    it('closed', async () => {
+      const onClosed = vi.fn();
+      const wrapper = mountTransitionOverlay({ onClosed });
+      await wrapper.setProps({ visible: true });
+      await nextTick();
+      await waitFrame();
+      await wrapper.setProps({ visible: false });
+      await nextTick();
+      await waitFrame();
       expect(onClosed).toHaveBeenCalledTimes(1);
     });
   });

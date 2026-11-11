@@ -97,6 +97,9 @@ describe('TabPanel', () => {
       expect($icon.find('.custom-icon').exists()).toBe(true);
     });
 
+    // tabs.tsx 构建导航数据时仅提取 label 插槽，icon 只透传 item.props.icon 函数属性，插槽通道未被消费
+    it.todo('icon[slot]');
+
     it('label[string]', () => {
       const wrapper = mount(() => (
         <Tabs defaultValue="1">

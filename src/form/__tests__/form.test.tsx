@@ -47,11 +47,11 @@ describe('Form', () => {
       expect(wrapper.find(`.${name}__label`).text()).toContain('：');
     });
 
-    it('contentAlign[left/right]', async () => {
+    it.each(['left', 'right'] as const)('contentAlign[%s]', (contentAlign) => {
       const wrapper = mount({
         setup() {
           return () => (
-            <Form contentAlign="right">
+            <Form contentAlign={contentAlign}>
               <FormItem label="姓名" name="name">
                 <Input placeholder="请输入内容" />
               </FormItem>
@@ -59,10 +59,7 @@ describe('Form', () => {
           );
         },
       });
-      expect(wrapper.find(`.${name}__controls--right`).exists()).toBeTruthy();
-      await wrapper.setProps({ contentAlign: 'left' });
-      expect(wrapper.find(`.${name}__controls--left`).exists()).toBe(true);
-      expect(wrapper.find(`.${name}__controls--right`).exists()).toBe(false);
+      expect(wrapper.find(`.${name}__controls--${contentAlign}`).exists()).toBe(true);
     });
 
     it('data[object]', async () => {
@@ -127,14 +124,9 @@ describe('Form', () => {
       expect(form.element.getAttribute('id')).toBe('my-form');
     });
 
-    it('labelAlign[left/right/top]', async () => {
-      expect(wrapper.find(`.${name}__label`).classes(`${name}__label--right`)).toBeTruthy();
-
-      await wrapper.setProps({ labelAlign: 'top' });
-      expect(wrapper.find(`.${name}__label`).classes(`${name}__label--top`)).toBeTruthy();
-
-      await wrapper.setProps({ labelAlign: 'left' });
-      expect(wrapper.find(`.${name}__label`).classes(`${name}__label--left`)).toBeTruthy();
+    it.each(['left', 'right', 'top'] as const)('labelAlign[%s]', async (labelAlign) => {
+      await wrapper.setProps({ labelAlign });
+      expect(wrapper.find(`.${name}__label`).classes(`${name}__label--${labelAlign}`)).toBe(true);
     });
 
     it('labelWidth[number]', async () => {
@@ -201,33 +193,23 @@ describe('Form', () => {
       expect(mountForm(true).find(`.${name}__label--required`).exists()).toBe(true);
     });
 
-    it('requiredMarkPosition[left/right]', async () => {
+    it.each(['left', 'right'] as const)('requiredMarkPosition[%s]', (requiredMarkPosition) => {
       const wrapper = mount({
         setup() {
           return () => (
-            <Form>
+            <Form requiredMarkPosition={requiredMarkPosition}>
               <FormItem required-mark />
             </Form>
           );
         },
       });
-      const labelEl = wrapper.find(`.${name}__label`);
-
-      expect(labelEl.classes(`${name}__label--required-right`)).toBe(false);
-
-      await wrapper.setProps({ requiredMarkPosition: 'right' });
-      await nextTick();
-      expect(labelEl.classes(`${name}__label--required-right`)).toBe(true);
-
-      await wrapper.setProps({ requiredMarkPosition: 'left' });
-      await nextTick();
-      expect(labelEl.classes(`${name}__label--required-right`)).toBe(false);
+      // 仅 right 取值添加 required-right 类名
+      expect(wrapper.find(`.${name}__label`).classes(`${name}__label--required-right`)).toBe(
+        requiredMarkPosition === 'right',
+      );
     });
 
-    it('resetType[empty/initial]', async () => {
-      const rules = {
-        name: [{ required: true }],
-      };
+    it.each(['empty', 'initial'] as const)('resetType[%s]', async (resetType) => {
       const formData = ref({
         name: 'defaultName',
       });
@@ -235,7 +217,7 @@ describe('Form', () => {
       const wrapper = mount({
         setup() {
           return () => (
-            <Form rules={rules} data={formData.value}>
+            <Form rules={{ name: [{ required: true }] }} data={formData.value} resetType={resetType}>
               <FormItem label="name" name="name">
                 <Input v-model={formData.value.name} />
               </FormItem>
@@ -244,15 +226,9 @@ describe('Form', () => {
         },
       });
 
-      const form = wrapper.findComponent(Form);
-
-      expect(formData.value.name).eq('defaultName');
-      await form.vm.$.exposed.reset();
-      expect(formData.value.name).eq('');
-
-      await wrapper.setProps({ resetType: 'initial' });
-      await form.vm.$.exposed.reset();
-      expect(formData.value.name).eq('defaultName');
+      await wrapper.findComponent(Form).vm.$.exposed.reset();
+      // empty 重置为空值，initial 重置为初始值
+      expect(formData.value.name).eq(resetType === 'initial' ? 'defaultName' : '');
     });
 
     it('rules[object]', async () => {
@@ -266,41 +242,47 @@ describe('Form', () => {
       expect(await form.vm.$.exposed.validate()).toBe(true);
     });
 
-    it('scrollToFirstError[smooth/auto]', async () => {
-      const formData = ref({ name: '' });
+    const mountScrollForm = (scrollToFirstError: '' | 'smooth' | 'auto') => {
       const wrapper = mount({
         setup() {
           return () => (
             <Form
               rules={{ name: [{ required: true, message: '姓名必填' }] }}
-              data={formData.value}
-              scrollToFirstError="smooth"
+              data={{ name: '' }}
+              scrollToFirstError={scrollToFirstError}
             >
               <FormItem label="name" name="name">
-                <Input v-model={formData.value.name} />
+                <Input />
               </FormItem>
             </Form>
           );
         },
       });
-
       const scrollIntoView = vi.fn();
       wrapper.element.querySelector('.t-form-item__name').scrollIntoView = scrollIntoView;
+      return { wrapper, scrollIntoView };
+    };
 
-      const form = wrapper.findComponent(Form);
-      await form.trigger('submit');
+    it('scrollToFirstError[smooth]', async () => {
+      const { wrapper, scrollIntoView } = mountScrollForm('smooth');
+      await wrapper.findComponent(Form).trigger('submit');
       await sleep(0);
-
-      // 校验失败提交时，自动滚动定位到第一个校验不通过的字段
+      // 校验失败提交时，按 smooth 滚动定位到第一个校验不通过的字段
       expect(scrollIntoView).toHaveBeenCalledTimes(1);
       expect(scrollIntoView).toHaveBeenCalledWith({ behavior: 'smooth' });
-      await wrapper.setProps({ scrollToFirstError: 'auto' });
-      await form.trigger('submit');
+    });
+
+    it('scrollToFirstError[auto]', async () => {
+      const { wrapper, scrollIntoView } = mountScrollForm('auto');
+      await wrapper.findComponent(Form).trigger('submit');
       await flushPromises();
-      expect(scrollIntoView).toHaveBeenLastCalledWith({ behavior: 'auto' });
-      await wrapper.setProps({ scrollToFirstError: '' });
-      scrollIntoView.mockClear();
-      await form.trigger('submit');
+      expect(scrollIntoView).toHaveBeenCalledWith({ behavior: 'auto' });
+    });
+
+    // 空字符串（默认）不触发滚动定位
+    it('scrollToFirstError[default]', async () => {
+      const { wrapper, scrollIntoView } = mountScrollForm('');
+      await wrapper.findComponent(Form).trigger('submit');
       await flushPromises();
       expect(scrollIntoView).not.toHaveBeenCalled();
     });

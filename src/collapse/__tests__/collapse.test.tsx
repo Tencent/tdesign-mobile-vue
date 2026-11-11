@@ -138,19 +138,17 @@ describe('Collapse', () => {
       expect(panel2.classes()).not.toContain('t-collapse-panel--expanded');
     });
 
-    test('theme[default/card]', async () => {
-      themeList.forEach((theme) => {
-        const wrapper = mount({
-          setup() {
-            return () => (
-              <Collapse theme={theme}>
-                <CollapsePanel ref="1" value="1" />
-              </Collapse>
-            );
-          },
-        });
-        expect(wrapper.classes()).toContain(`t-collapse--${theme}`);
+    test.each(themeList)('theme[%s]', (theme) => {
+      const wrapper = mount({
+        setup() {
+          return () => (
+            <Collapse theme={theme}>
+              <CollapsePanel ref="1" value="1" />
+            </Collapse>
+          );
+        },
       });
+      expect(wrapper.classes()).toContain(`t-collapse--${theme}`);
     });
 
     test('value[array]', async () => {

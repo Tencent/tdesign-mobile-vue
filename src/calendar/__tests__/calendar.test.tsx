@@ -179,18 +179,20 @@ describe('Calendar', () => {
       expect($dates[day - 1].classes()).toContain(`${name}__dates-item--selected`);
     });
 
-    it('switchMode[none/month/year-month]', async () => {
-      const onPanelChange = vi.fn();
-      const switchMinDate = new Date(2021, 11, 1);
-      const switchMaxDate = new Date(2022, 1, 28);
+    const switchMinDate = new Date(2021, 11, 1);
+    const switchMaxDate = new Date(2022, 1, 28);
 
-      // switchMode = none（默认）：平铺展示所有月份，无切换头部
+    it('switchMode[none]', () => {
+      // none（默认）：平铺展示所有月份，无切换头部
       const wrapper = mount(<Calendar visible={true} value={value} minDate={switchMinDate} maxDate={switchMaxDate} />);
       expect(wrapper.find(`.${name}-header`).exists()).toBe(false);
       expect(wrapper.findAll(`.${name}__month`)).toHaveLength(3);
+    });
 
-      // switchMode = month：按月切换，仅上月/下月两个切换按钮，只展示单月日期区
-      const wrapper2 = mount(
+    it('switchMode[month]', async () => {
+      const onPanelChange = vi.fn();
+      // 按月切换：仅上月/下月两个切换按钮，只展示单月日期区
+      const wrapper = mount(
         <Calendar
           visible={true}
           value={value}
@@ -200,19 +202,21 @@ describe('Calendar', () => {
           onPanelChange={onPanelChange}
         />,
       );
-      expect(wrapper2.find(`.${name}-header`).exists()).toBe(true);
-      expect(wrapper2.findAll(`.${name}-header__icon`)).toHaveLength(2);
-      expect(wrapper2.findAll(`.${name}__dates`)).toHaveLength(1);
-      expect(wrapper2.find(`.${name}-header__title`).text()).toContain('2022');
+      expect(wrapper.find(`.${name}-header`).exists()).toBe(true);
+      expect(wrapper.findAll(`.${name}-header__icon`)).toHaveLength(2);
+      expect(wrapper.findAll(`.${name}__dates`)).toHaveLength(1);
+      expect(wrapper.find(`.${name}-header__title`).text()).toContain('2022');
 
       // 切换到下一月，触发 panelChange 并展示新月份数据
-      await wrapper2.findAll(`.${name}-header__icon`)[1].trigger('click');
+      await wrapper.findAll(`.${name}-header__icon`)[1].trigger('click');
       expect(onPanelChange).toHaveBeenCalledWith({ year: 2022, month: 2 });
       // 交互后内容已 teleport 到 body，从 document 查询
       expect(document.querySelector(`.${name}-header__title`).textContent).toContain('2022 年 2');
+    });
 
-      // switchMode = year-month：额外支持切年，共 4 个切换按钮
-      const wrapper3 = mount(
+    it('switchMode[year-month]', () => {
+      // 额外支持切年，共 4 个切换按钮
+      const wrapper = mount(
         <Calendar
           visible={true}
           value={value}
@@ -221,7 +225,7 @@ describe('Calendar', () => {
           maxDate={switchMaxDate}
         />,
       );
-      expect(wrapper3.findAll(`.${name}-header__icon`)).toHaveLength(4);
+      expect(wrapper.findAll(`.${name}-header__icon`)).toHaveLength(4);
     });
 
     it('title[string]', async () => {

@@ -34,4 +34,26 @@ describe('ToastPlugin', () => {
     handler.clear();
     expect(getToast()).toBeNull();
   });
+
+  it('close', () => {
+    const onClose = vi.fn();
+    const handler = ToastPlugin({ message: '关闭回调', onClose }) as unknown as { clear: () => void };
+
+    // 手动 clear 时触发 onClose 回调并移除挂载节点
+    handler.clear();
+    expect(onClose).toHaveBeenCalledTimes(1);
+    expect(getToast()).toBeNull();
+  });
+
+  it('destroy', () => {
+    const onClose = vi.fn();
+    const onDestroy = vi.fn();
+    ToastPlugin({ message: '销毁回调', duration: 2000, onClose, onDestroy });
+
+    // duration 计时结束自动关闭：先触发 onClose，再触发 onDestroy
+    vi.advanceTimersByTime(2000);
+    expect(onClose).toHaveBeenCalledTimes(1);
+    expect(onDestroy).toHaveBeenCalledTimes(1);
+    expect(getToast()).toBeNull();
+  });
 });

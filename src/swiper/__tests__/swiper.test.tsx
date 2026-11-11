@@ -123,12 +123,14 @@ describe('Swiper', () => {
       expect(getActiveDotIndex(wrapper)).toBe(1);
     });
 
-    it('direction[horizontal/vertical]', async () => {
+    it('direction[horizontal]', async () => {
       const horizontal = mountSwiper();
       await flush();
       expect(getContainer(horizontal).attributes('style')).toContain('flex-direction: row');
       expect(horizontal.find(`.${navClassPrefix}--horizontal`).exists()).toBe(true);
+    });
 
+    it('direction[vertical]', async () => {
       const vertical = mountSwiper({ direction: 'vertical', navigation: { type: 'dots', showControls: true } });
       await flush();
       expect(getContainer(vertical).attributes('style')).toContain('flex-direction: column');

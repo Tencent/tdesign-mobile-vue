@@ -129,7 +129,7 @@ describe('ImageViewer', () => {
       expect(wrapper.get('.t-image-viewer__swiper-item').attributes('style')).toContain('align-items: end');
     });
 
-    it('images[array]', async () => {
+    it('images[string]', async () => {
       const wrapper = mountViewer();
       expect(wrapper.findAll('.t-swiper-item')).toHaveLength(5);
       expect(wrapper.findAll('img').map((item) => item.attributes('src'))).toEqual([
@@ -137,12 +137,16 @@ describe('ImageViewer', () => {
         'second.png',
         'fifth.png',
       ]);
-      await wrapper.setProps({ images: [{ url: 'aligned.png', align: 'start', extra: { id: 1 } }] });
+      // 空数组不渲染任何轮播项
+      await wrapper.setProps({ images: [] });
+      expect(wrapper.find('.t-swiper-item').exists()).toBe(false);
+    });
+
+    it('images[object]', () => {
+      const wrapper = mountViewer({ images: [{ url: 'aligned.png', align: 'start', extra: { id: 1 } }] });
       expect(wrapper.findAll('.t-swiper-item')).toHaveLength(1);
       expect(wrapper.get('img').attributes('src')).toBe('aligned.png');
       expect(wrapper.get('.t-image-viewer__swiper-item').attributes('style')).toContain('align-items: start');
-      await wrapper.setProps({ images: [] });
-      expect(wrapper.find('.t-swiper-item').exists()).toBe(false);
     });
 
     it('index[number]', async () => {

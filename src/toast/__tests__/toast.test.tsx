@@ -154,10 +154,6 @@ describe('Toast', () => {
     });
   });
 
-  // onClose/onDestroy 由插件 plugin.ts 在 clear 与定时器销毁时调用，组件源码不会触发，见 toast.plugin.test.tsx
-  describe('events', () => {
-    it.todo('close');
-
-    it.todo('destroy');
-  });
+  // onClose/onDestroy 事件仅由插件 plugin.ts 在 clear 与定时器销毁时触发，组件源码不会调用，
+  // 对应 events 用例见 toast.plugin.test.tsx 的 close/destroy，此处不保留空的 events 分组
 });

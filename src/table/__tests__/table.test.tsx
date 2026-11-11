@@ -209,11 +209,11 @@ describe('Table', () => {
     // 源码仅将 ellipsisTitle 作为表头超出省略的开关使用，未实现 TNode 自定义省略浮层内容的渲染
     it.todo('columns.ellipsisTitle[function]');
 
-    it('columns.fixed[left/right]', async () => {
+    it('columns.fixed[left]', async () => {
       const fixedColumns: BaseTableCol[] = [
         { colKey: 'applicant', title: '标题', fixed: 'left' },
         { colKey: 'status', title: '状态' },
-        { colKey: 'channel', title: '渠道', fixed: 'right' },
+        { colKey: 'channel', title: '渠道' },
       ];
       const wrapper = mount(TTable, { props: { rowKey: 'index', data, columns: fixedColumns } });
       await waitForFixedPosition();
@@ -223,12 +223,27 @@ describe('Table', () => {
       expect(thList[0].classes(`${name}__cell--fixed-left`)).toBe(true);
       expect(thList[0].classes(`${name}__cell--fixed-left-last`)).toBe(true);
       expect(thList[0].attributes('style')).toContain('left: 0px');
+
+      const tds = wrapper.find('tbody tr').findAll('td');
+      expect(tds[0].classes(`${name}__cell--fixed-left-last`)).toBe(true);
+    });
+
+    it('columns.fixed[right]', async () => {
+      const fixedColumns: BaseTableCol[] = [
+        { colKey: 'applicant', title: '标题' },
+        { colKey: 'status', title: '状态' },
+        { colKey: 'channel', title: '渠道', fixed: 'right' },
+      ];
+      const wrapper = mount(TTable, { props: { rowKey: 'index', data, columns: fixedColumns } });
+      await waitForFixedPosition();
+      expect(wrapper.classes(`${name}--column-fixed`)).toBe(true);
+
+      const thList = wrapper.findAll('thead th');
       expect(thList[2].classes(`${name}__cell--fixed-right`)).toBe(true);
       expect(thList[2].classes(`${name}__cell--fixed-right-first`)).toBe(true);
       expect(thList[2].attributes('style')).toContain('right: 0px');
 
       const tds = wrapper.find('tbody tr').findAll('td');
-      expect(tds[0].classes(`${name}__cell--fixed-left-last`)).toBe(true);
       expect(tds[2].classes(`${name}__cell--fixed-right-first`)).toBe(true);
     });
 

@@ -180,7 +180,7 @@ describe('Steps', () => {
       expect($items[2].classes()).not.toContain('t-step-item--process');
     });
 
-    it('sequence[positive/reverse]', async () => {
+    it('sequence[positive]', async () => {
       // positive（默认）：非末尾项渲染连接线，末尾项不渲染
       const wrapper = mount(() => <Steps current={1}>{renderItems()}</Steps>);
       expect(wrapper.find('.t-steps--positive').exists()).toBeTruthy();
@@ -190,8 +190,10 @@ describe('Steps', () => {
       expect($positiveItems[1].find('.t-step-item__line').exists()).toBeTruthy();
       expect($positiveItems[2].find('.t-step-item__line').exists()).toBeFalsy();
       expect(wrapper.find('.t-step-item__line--positive').exists()).toBeTruthy();
+    });
 
-      // reverse：首项为视觉上的末尾项，不渲染连接线
+    it('sequence[reverse]', async () => {
+      // 首项为视觉上的末尾项，不渲染连接线
       const reverseWrapper = mount(() => (
         <Steps sequence="reverse" current={1}>
           {renderItems()}
@@ -206,15 +208,17 @@ describe('Steps', () => {
       expect(reverseWrapper.find('.t-step-item__line--reverse').exists()).toBeTruthy();
     });
 
-    it('theme[default/dot]', () => {
-      // default：渲染圆形序号图标
+    it('theme[default]', () => {
+      // 渲染圆形序号图标
       const wrapper = mount(() => <Steps current={0}>{renderItems()}</Steps>);
       const $items = wrapper.findAllComponents(StepItem);
       expect($items[0].find('.t-step-item__circle').exists()).toBeTruthy();
       expect($items[0].find('.t-step-item__circle').text()).toEqual('1');
       expect(wrapper.find('.t-step-item__dot').exists()).toBeFalsy();
+    });
 
-      // dot：渲染带状态类的圆点，不渲染圆形图标，标题与描述正常展示
+    it('theme[dot]', () => {
+      // 渲染带状态类的圆点，不渲染圆形图标，标题与描述正常展示
       const dotWrapper = mount(() => (
         <Steps current={1} theme="dot">
           {renderItems()}

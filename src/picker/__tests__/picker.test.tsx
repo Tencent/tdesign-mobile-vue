@@ -53,11 +53,6 @@ describe('Picker', () => {
     });
 
     it('columns[array]', () => {
-      // 单列：直接传入一维数组
-      const single = mountPicker({ columns: seasonOptions, defaultValue: undefined });
-      expect(single.findAll('.t-picker-item__group')).toHaveLength(1);
-      expect(single.findAll('.t-picker-item__item')).toHaveLength(seasonOptions.length);
-
       // 多列：传入二维数组，每列渲染为一组选项
       const multiple = mountPicker({ columns: [seasonOptions, weekdayOptions] });
       expect(multiple.findAll('.t-picker-item__group')).toHaveLength(2);
@@ -73,6 +68,13 @@ describe('Picker', () => {
       // 空数据不渲染选项
       const empty = mountPicker({ columns: [] });
       expect(empty.findAll('.t-picker-item__item')).toHaveLength(0);
+    });
+
+    it('columns[array<column>]', () => {
+      // 单列：直接传入一维数组
+      const single = mountPicker({ columns: seasonOptions, defaultValue: undefined });
+      expect(single.findAll('.t-picker-item__group')).toHaveLength(1);
+      expect(single.findAll('.t-picker-item__item')).toHaveLength(seasonOptions.length);
     });
 
     it('columns[function]', () => {

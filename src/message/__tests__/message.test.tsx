@@ -159,6 +159,39 @@ describe('Message', () => {
       expect(wrapper.get(`.${name}__link`).findComponent(TIconApp).exists()).toBe(true);
     });
 
+    it('marquee[boolean]', async () => {
+      const wrapper = mount(<Message visible marquee content="这是一条消息通知" />);
+      // 开启跑马灯后文本容器应用单行省略样式
+      expect(wrapper.get(`.${name}__text-wrap`).classes()).toContain(`${name}__text-nowrap`);
+      await nextTick();
+      await nextTick();
+      // 挂载后启动跑马灯：文本节点挂上动画内联样式
+      expect(wrapper.get(`.${name}__text`).attributes('style')).toContain('transition-timing-function: linear');
+
+      // marquee = false（默认）不启用跑马灯
+      const off = mount(<Message visible content="这是一条消息通知" />);
+      expect(off.get(`.${name}__text-wrap`).classes()).not.toContain(`${name}__text-nowrap`);
+      await nextTick();
+      expect(off.get(`.${name}__text`).attributes('style') ?? '').not.toContain('transition-timing-function');
+    });
+
+    it('marquee[object]', async () => {
+      // loop = 0 表示不循环播放，动画不启动，但单行省略样式仍然生效
+      const off = mount(<Message visible marquee={{ loop: 0 }} content="这是一条消息通知" />);
+      expect(off.get(`.${name}__text-wrap`).classes()).toContain(`${name}__text-nowrap`);
+      await nextTick();
+      expect(off.get(`.${name}__text`).attributes('style') ?? '').not.toContain('transition-timing-function');
+
+      // 自定义 speed/loop/delay 正常启动跑马灯动画
+      vi.useFakeTimers();
+      const wrapper = mount(<Message visible marquee={{ speed: 100, loop: 2, delay: 0 }} content="这是一条消息通知" />);
+      await nextTick();
+      await nextTick();
+      vi.advanceTimersByTime(0);
+      await nextTick();
+      expect(wrapper.get(`.${name}__text`).attributes('style')).toContain('transition-timing-function: linear');
+    });
+
     it('offset[array]', () => {
       const wrapper = mount(<Message visible offset={[-10, 20]} />);
       expect(wrapper.get(`.${name}`).attributes('style')).toContain('top: -10px');
