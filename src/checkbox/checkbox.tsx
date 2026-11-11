@@ -1,17 +1,13 @@
 import { defineComponent, h, computed, inject, toRefs } from 'vue';
 import {
-  CheckIcon,
-  MinusIcon,
-  CheckCircleFilledIcon,
-  CircleIcon,
-  MinusCircleFilledIcon,
-  MinusRectangleFilledIcon,
-  CheckRectangleFilledIcon,
+  Check1Icon as TdCheck1Icon,
+  Remove1Icon as TdRemove1Icon,
+  CheckIcon as TdCheckIcon,
+  MinusIcon as TdMinusIcon,
 } from 'tdesign-icons-vue-next';
 import CheckboxProps from './props';
 import { TNode } from '../shared';
 import useVModel from '../hooks/useVModel';
-import { TdCheckboxProps } from '../checkbox/type';
 import { useTNodeJSX, useContent } from '../hooks/tnode';
 import { useFormDisabled, useReadonly } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
@@ -44,26 +40,6 @@ export default defineComponent({
       return props.indeterminate;
     });
 
-    const isIconArray = Array.isArray(props.icon);
-    const defaultCheckIcons = [h(CheckCircleFilledIcon), h(CircleIcon)];
-    const checkIcons = computed(() => {
-      if (isIconArray && props.icon.length > 1) {
-        return props.icon.map((icon) =>
-          typeof icon === 'string' ? h('img', { class: `${checkboxClass.value}__icon-image`, src: icon }) : icon,
-        );
-      }
-      return defaultCheckIcons;
-    });
-
-    const checkedIcon = computed(() => {
-      if (props.icon === 'circle' || props.icon === true)
-        return indeterminate.value ? h(MinusCircleFilledIcon) : h(CheckCircleFilledIcon);
-      if (props.icon === 'rectangle')
-        return indeterminate.value ? h(MinusRectangleFilledIcon) : h(CheckRectangleFilledIcon);
-      if (props.icon === 'line') return indeterminate.value ? h(MinusIcon) : h(CheckIcon);
-      return null;
-    });
-
     const isChecked = computed(() => {
       if (props.checkAll) {
         const checkAllStatus = checkboxGroup?.checkAllStatus.value;
@@ -74,6 +50,8 @@ export default defineComponent({
       }
       return innerChecked.value;
     });
+
+    const isActive = computed(() => isChecked.value || indeterminate.value);
 
     const isDisabled = computed(() => {
       if (!props.checkAll && !isChecked.value && checkboxGroup?.maxExceeded.value) {
@@ -97,31 +75,34 @@ export default defineComponent({
       const { placement, block, icon, maxLabelRow, maxContentRow } = props;
       const borderless = props.borderless || checkboxGroup?.borderless.value;
 
-      const renderIconArray = () => {
-        if (isIconArray) {
-          return (
-            <t-node
-              content={checkIcons.value[isChecked.value ? 0 : 1]}
-              class={`${checkboxClass.value}__icon-wrapper`}
-            />
-          );
+      const renderIconContent = () => {
+        if (Array.isArray(icon) && icon.length > 1) {
+          const selectedIcon = icon[isActive.value ? 0 : 1];
+          const content =
+            typeof selectedIcon === 'string'
+              ? h('img', { class: `${checkboxClass.value}__icon-image`, src: selectedIcon })
+              : selectedIcon;
+          return <t-node content={content} class={`${checkboxClass.value}__icon-wrapper`} />;
         }
-        if (isChecked.value) {
-          return <t-node content={checkedIcon.value} class={`${checkboxClass.value}__icon-wrapper`} />;
+        if (icon !== 'circle' && icon !== true && icon !== 'rectangle' && icon !== 'line' && !Array.isArray(icon)) {
+          return null;
         }
+
+        let shape = 'circle';
+        if (icon === 'rectangle') shape = 'rectangle';
+        if (icon === 'line') shape = 'line';
+        let ActiveIcon = indeterminate.value ? TdRemove1Icon : TdCheck1Icon;
+        if (shape === 'line') ActiveIcon = indeterminate.value ? TdMinusIcon : TdCheckIcon;
         return (
-          <>
-            {(icon === 'circle' || icon === true || icon === 'rectangle') && (
-              <div
-                class={{
-                  [`${checkboxClass.value}__icon-circle`]: icon === true,
-                  [`${checkboxClass.value}__icon-${icon}`]: typeof icon === 'string',
-                  [`${checkboxClass.value}__icon-${icon}--disabled`]: isDisabled.value,
-                }}
-              ></div>
-            )}
-            {icon === 'line' && <div class="placeholder"></div>}
-          </>
+          <div
+            class={{
+              [`${checkboxClass.value}__icon-${shape}`]: true,
+              [`${checkboxClass.value}__icon-${shape}--checked`]: shape !== 'line' && isActive.value,
+              [`${checkboxClass.value}__icon-${shape}--disabled`]: isDisabled.value,
+            }}
+          >
+            {isActive.value && <ActiveIcon />}
+          </div>
         );
       };
 
@@ -134,11 +115,11 @@ export default defineComponent({
             class={{
               [`${checkboxClass.value}__icon`]: true,
               [`${checkboxClass.value}__icon--${placement}`]: true,
-              [`${checkboxClass.value}__icon--checked`]: isChecked.value,
+              [`${checkboxClass.value}__icon--checked`]: isActive.value,
               [`${checkboxClass.value}__icon--disabled`]: isDisabled.value,
             }}
           >
-            {renderIconArray()}
+            {renderIconContent()}
           </div>
         );
       };

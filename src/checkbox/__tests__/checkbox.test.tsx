@@ -50,7 +50,7 @@ describe('Checkbox', () => {
       await $checkboxes[2].trigger('click');
       expect($checkboxes[2].classes()).not.toContain(`${name}--checked`);
       expect($checkboxes[1].classes()).toContain(`${name}--checked`);
-      expect($checkboxes[0].find('.t-icon-minus-circle-filled').exists()).toBe(true);
+      expect($checkboxes[0].find('.t-icon-remove-1').exists()).toBe(true);
 
       // 半选态再次点击全选选项，清空所有选中
       await $checkboxes[0].trigger('click');
@@ -58,7 +58,6 @@ describe('Checkbox', () => {
         expect(item.classes()).not.toContain(`${name}--checked`);
       });
     });
-
     it('checked[boolean]', async () => {
       const checked = ref(false);
       const wrapper = mount({
@@ -172,14 +171,14 @@ describe('Checkbox', () => {
       await wrapper.setProps({ icon: true });
       expect(wrapper.find(`.${name}__icon-circle`).exists()).toBe(true);
       await wrapper.trigger('click');
-      expect(wrapper.find('.t-icon-check-circle-filled').exists()).toBe(true);
+      expect(wrapper.find('.t-icon-check-1').exists()).toBe(true);
     });
 
     it('icon[circle]', async () => {
       const wrapper = mount(Checkbox, { props: { icon: 'circle' } });
       expect(wrapper.find(`.${name}__icon-circle`).exists()).toBe(true);
       await wrapper.trigger('click');
-      expect(wrapper.find('.t-icon-check-circle-filled').exists()).toBe(true);
+      expect(wrapper.find('.t-icon-check-1').exists()).toBe(true);
     });
 
     it('icon[array]', async () => {
@@ -196,21 +195,23 @@ describe('Checkbox', () => {
 
     it('icon[incomplete-array]', async () => {
       const wrapper = mount(() => <Checkbox icon={['']} />);
-      expect(wrapper.find('.t-icon-circle').exists()).toBe(true);
+      // 数组长度不足 2 时回退默认 circle 形状
+      expect(wrapper.find(`.${name}__icon-circle`).exists()).toBe(true);
       await wrapper.trigger('click');
-      expect(wrapper.find('.t-icon-check-circle-filled').exists()).toBe(true);
+      expect(wrapper.find('.t-icon-check-1').exists()).toBe(true);
     });
 
     it('icon[rectangle]', async () => {
       const wrapper = mount(() => <Checkbox icon="rectangle" />);
       expect(wrapper.find(`.${name}__icon-rectangle`).exists()).toBe(true);
       await wrapper.trigger('click');
-      expect(wrapper.find('.t-icon-check-rectangle-filled').exists()).toBe(true);
+      expect(wrapper.find(`.${name}__icon-rectangle--checked`).exists()).toBe(true);
+      expect(wrapper.find('.t-icon-check-1').exists()).toBe(true);
     });
 
     it('icon[line]', async () => {
       const wrapper = mount(() => <Checkbox icon="line" />);
-      expect(wrapper.find(`.${name}__icon .placeholder`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}__icon-line`).exists()).toBe(true);
       await wrapper.trigger('click');
       expect(wrapper.find('.t-icon-check').exists()).toBe(true);
     });
@@ -218,7 +219,7 @@ describe('Checkbox', () => {
     it('indeterminate[boolean]', async () => {
       const wrapper = mount(() => <Checkbox indeterminate>选项</Checkbox>);
       await wrapper.trigger('click');
-      expect(wrapper.find('.t-icon-minus-circle-filled').exists()).toBe(true);
+      expect(wrapper.find('.t-icon-remove-1').exists()).toBe(true);
     });
 
     it('label[string]', async () => {

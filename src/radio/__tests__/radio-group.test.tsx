@@ -124,14 +124,17 @@ describe('RadioGroup', () => {
       const selected = icons[0];
       const unselected = icons[1];
       if (icon === 'circle') {
-        expect(selected.find('.t-icon-check-circle-filled').exists()).toBe(true);
+        expect(selected.find('.t-icon-check-1').exists()).toBe(true);
+        expect(selected.find(`.${name}__icon-circle--checked`).exists()).toBe(true);
         expect(unselected.find(`.${name}__icon-circle`).exists()).toBe(true);
       } else if (icon === 'line') {
         expect(selected.find('.t-icon-check').exists()).toBe(true);
-        expect(unselected.find('.placeholder').exists()).toBe(true);
+        expect(unselected.find(`.${name}__icon-line`).exists()).toBe(true);
       } else if (icon === 'dot') {
-        expect(selected.find(`.${name}__icon-dot`).exists()).toBe(true);
-        expect(unselected.find(`.${name}__icon-circle`).exists()).toBe(true);
+        expect(selected.find(`.${name}__icon-dot--checked`).exists()).toBe(true);
+        expect(selected.find(`.${name}__icon-dot-inner`).exists()).toBe(true);
+        expect(unselected.find(`.${name}__icon-dot`).exists()).toBe(true);
+        expect(unselected.find(`.${name}__icon-dot-inner`).exists()).toBe(false);
       }
     });
 

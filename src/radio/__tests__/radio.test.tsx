@@ -256,11 +256,13 @@ describe('Radio', () => {
           defaultChecked: false,
         },
       });
-      // 未选中渲染空心圆
+      // 未选中渲染空心圆容器，无选中态修饰
       expect(wrapper.find(`.${name}__icon-circle`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}__icon-circle--checked`).exists()).toBe(false);
       await wrapper.trigger('click');
-      // 选中渲染填充型图标
-      expect(wrapper.find('.t-icon-check-circle-filled').exists()).toBe(true);
+      // 选中后容器带选中态修饰并内嵌描边型对勾图标
+      expect(wrapper.find(`.${name}__icon-circle--checked`).exists()).toBe(true);
+      expect(wrapper.find('.t-icon-check-1').exists()).toBe(true);
     });
 
     it('icon[line]', async () => {
@@ -270,11 +272,11 @@ describe('Radio', () => {
           defaultChecked: false,
         },
       });
-      // 未选中渲染占位元素
-      expect(wrapper.find(`.${name}__icon .placeholder`).exists()).toBe(true);
+      // 未选中渲染线条占位容器
+      expect(wrapper.find(`.${name}__icon-line`).exists()).toBe(true);
       await wrapper.trigger('click');
       // 选中渲染描边型对勾图标
-      expect(wrapper.find('.t-icon-check').exists()).toBe(true);
+      expect(wrapper.find(`.${name}__icon-line .t-icon-check`).exists()).toBe(true);
     });
 
     it('icon[dot]', async () => {
@@ -284,11 +286,13 @@ describe('Radio', () => {
           defaultChecked: false,
         },
       });
-      // 未选中渲染空心圆
-      expect(wrapper.find(`.${name}__icon-circle`).exists()).toBe(true);
-      await wrapper.trigger('click');
-      // 选中渲染圆点图标
+      // 未选中渲染圆点容器，无内部实心点
       expect(wrapper.find(`.${name}__icon-dot`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}__icon-dot-inner`).exists()).toBe(false);
+      await wrapper.trigger('click');
+      // 选中后容器带选中态修饰并渲染内部实心点
+      expect(wrapper.find(`.${name}__icon-dot--checked`).exists()).toBe(true);
+      expect(wrapper.find(`.${name}__icon-dot-inner`).exists()).toBe(true);
     });
 
     it('icon[none]', async () => {
@@ -304,7 +308,7 @@ describe('Radio', () => {
       await wrapper.trigger('click');
       // 选中后同样不渲染图标
       expect(wrapper.find(`.${name}__icon`).element.children).toHaveLength(0);
-      expect(wrapper.find('.t-icon-check-circle-filled').exists()).toBe(false);
+      expect(wrapper.find('.t-icon-check-1').exists()).toBe(false);
       expect(wrapper.find(`.${name}__icon-dot`).exists()).toBe(false);
     });
 
