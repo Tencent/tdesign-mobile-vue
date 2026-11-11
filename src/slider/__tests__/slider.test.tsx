@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { nextTick } from 'vue';
 
-import { trigger } from '@/test/touch';
+import { trigger } from '../../../test/utils/touch';
 import Slider from '../slider';
 
 const classPrefix = 't-slider';

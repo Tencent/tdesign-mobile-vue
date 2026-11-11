@@ -4,7 +4,7 @@ import { h, nextTick, ref } from 'vue';
 import { HomeIcon } from 'tdesign-icons-vue-next';
 import Segmented from '../segmented';
 import type { SegmentedItem } from '../type';
-import { type RectInit } from '@/test/mock-rect';
+import { type RectInit } from '../../../test/utils/mock-rect';
 
 const prefix = 't';
 const name = `${prefix}-segmented`;

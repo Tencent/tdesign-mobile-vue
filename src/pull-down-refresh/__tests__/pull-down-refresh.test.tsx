@@ -5,7 +5,7 @@ import PullDownRefresh from '../index';
 import type { TdPullDownRefreshProps } from '../type';
 import ConfigProvider from '../../config-provider';
 import { MockResizeObserver } from './utils';
-import { trigger } from '@/test/touch';
+import { trigger } from '../../../test/utils/touch';
 
 const TRACK = '.t-pull-down-refresh__track';
 const TIPS = '.t-pull-down-refresh__tips';

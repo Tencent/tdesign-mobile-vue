@@ -5,7 +5,7 @@ import { AppIcon } from 'tdesign-icons-vue-next';
 import Drawer from '../index';
 import type { TdDrawerProps } from '../type';
 import { sleep } from '../../shared/util';
-import { createAttachContainer } from '@/test/attach';
+import { createAttachContainer } from '../../../test/utils/attach';
 
 // 先等待浮层异步任务，再由 Vue 卸载，最后清理 DOM；避免提前清空 Teleport 锚点。
 enableAutoUnmount((unmount) => {

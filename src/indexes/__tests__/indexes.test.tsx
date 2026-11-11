@@ -6,7 +6,7 @@ import { Indexes, IndexesAnchor } from '../index';
 import type { TdIndexesProps } from '../type';
 import config from '@/config';
 import { sleep } from '../../shared/util';
-import { trigger } from '@/test/touch';
+import { trigger } from '../../../test/utils/touch';
 
 const { prefix } = config;
 

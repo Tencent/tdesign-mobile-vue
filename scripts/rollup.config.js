@@ -38,7 +38,6 @@ const inputList = [
   '!src/**/demos',
   '!src/**/*.d.ts',
   '!src/**/__tests__',
-  '!src/test',
 ];
 
 const getPlugins = ({

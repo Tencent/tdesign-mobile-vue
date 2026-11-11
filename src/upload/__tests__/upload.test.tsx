@@ -21,7 +21,7 @@ import TImage from '../../image';
 import ConfigProvider from '../../config-provider';
 import Upload from '../upload';
 import type { RequestMethodResponse, UploadFile } from '../type';
-import { trigger } from '@/test/touch';
+import { trigger } from '../../../test/utils/touch';
 import { sleep } from '../../shared/util';
 
 // 模拟进度的真实定时器可能晚于用例断言触发，自动卸载组件可避免残留渲染在环境销毁后执行

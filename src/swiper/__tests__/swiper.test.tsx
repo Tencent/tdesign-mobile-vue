@@ -1,8 +1,8 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { nextTick, ref } from 'vue';
-import { trigger } from '@/test/touch';
-import { flush } from '@/test/flush';
+import { trigger } from '../../../test/utils/touch';
+import { flush } from '../../../test/utils/flush';
 import Swiper from '../swiper';
 import SwiperItem from '../swiper-item';
 import type { SwiperNavigation } from '../type';

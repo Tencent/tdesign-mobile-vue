@@ -62,6 +62,7 @@ pnpm run test:snap-update
 - 组件内部 hooks 测试文件：`[组件名].hooks.test.tsx`，例如 `form.hooks.test.tsx`。
 - 组件内部 utils 测试文件：`[组件名].utils.test.tsx`，例如 `config-provider.utils.test.tsx`。
 - 多个测试文件共用的挂载逻辑可提取到 `mount.tsx`，用于存放 mount factory、测试数据、查询方法和清理逻辑；仅被单个测试文件使用的辅助逻辑应保留在原测试文件中。
+- 跨组件共享的测试辅助（touch 手势模拟、flush、attach 容器、mock-rect 等）统一放在仓库根目录 `test/utils/`，测试中通过相对路径 `../../../test/utils/<模块名>` 引用；不得放入 `src/` 目录，避免被构建收集。
 - `mount.tsx` 是测试辅助文件，不直接编写测试用例，也不要求使用组件测试分组。
 - `demo.test.jsx` 为 demo 快照（由 `npm run test:demo` 自动生成，禁止手写修改）。
 

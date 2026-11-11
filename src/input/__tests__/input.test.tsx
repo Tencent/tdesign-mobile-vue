@@ -4,7 +4,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { CloseCircleFilledIcon, InfoCircleFilledIcon, AppIcon } from 'tdesign-icons-vue-next';
 import Input from '../input';
 import type { TdInputProps } from '../type';
-import { simulateInputEvent as simulateEvent } from '@/test/input';
+import { simulateInputEvent as simulateEvent } from '../../../test/utils/input';
 
 const prefix = 't';
 const name = `${prefix}-input`;

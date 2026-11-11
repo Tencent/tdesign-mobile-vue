@@ -6,7 +6,7 @@ import Cell from '../cell';
 import type { TdCellProps } from '../type';
 import Avatar from '../../avatar/avatar';
 import { sleep } from '../../shared/util';
-import { trigger } from '@/test/touch';
+import { trigger } from '../../../test/utils/touch';
 
 const appIcon = () => h(AppIcon);
 const chevronRightIcon = () => h(ChevronRightIcon);

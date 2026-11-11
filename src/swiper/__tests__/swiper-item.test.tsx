@@ -2,7 +2,7 @@ import { afterEach, describe, expect, it, vi } from 'vitest';
 import { enableAutoUnmount, mount } from '@vue/test-utils';
 import Swiper from '../swiper';
 import SwiperItem from '../swiper-item';
-import { flush } from '@/test/flush';
+import { flush } from '../../../test/utils/flush';
 
 enableAutoUnmount(afterEach);
 

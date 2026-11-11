@@ -3,7 +3,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { nextTick } from 'vue';
 import { DialogPlugin } from '../index';
 import type { DialogInstance } from '../type';
-import { finishTransitions } from '@/test/flush';
+import { finishTransitions } from '../../../test/utils/flush';
 
 const body = new DOMWrapper(document.body);
 let handler: DialogInstance | undefined;

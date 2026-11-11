@@ -4,7 +4,7 @@ import { mount } from '@vue/test-utils';
 import { AppIcon as TIconApp } from 'tdesign-icons-vue-next';
 import NoticeBar from '../notice-bar';
 import { Swiper } from '../../swiper';
-import { mockRectByClass } from '@/test/mock-rect';
+import { mockRectByClass } from '../../../test/utils/mock-rect';
 
 const LIST_WIDTH = 100;
 const ITEM_WIDTH = 300;

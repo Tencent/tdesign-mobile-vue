@@ -4,7 +4,7 @@ import { describe, it, expect, vi, afterEach } from 'vitest';
 import { ThumbUpIcon, ThumbDownIcon } from 'tdesign-icons-vue-next';
 import Rate from '../rate';
 import ConfigProvider from '../../config-provider';
-import { trigger } from '@/test/touch';
+import { trigger } from '../../../test/utils/touch';
 
 const prefix = 't';
 const name = `${prefix}-rate`;

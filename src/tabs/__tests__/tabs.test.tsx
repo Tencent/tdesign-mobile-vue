@@ -2,7 +2,7 @@ import { enableAutoUnmount, mount } from '@vue/test-utils';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { TabPanel, Tabs } from '../index';
 import Sticky from '../../sticky/index';
-import { trigger } from '@/test/touch';
+import { trigger } from '../../../test/utils/touch';
 import { mountTabs, name, numericTabList, tabList, tabPanelName } from './mount';
 
 enableAutoUnmount(afterEach);

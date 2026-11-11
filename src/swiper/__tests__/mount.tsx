@@ -2,7 +2,7 @@ import { nextTick } from 'vue';
 import { vi } from 'vitest';
 import { mount } from '@vue/test-utils';
 import type { DOMWrapper, VueWrapper } from '@vue/test-utils';
-import { trigger } from '@/test/touch';
+import { trigger } from '../../../test/utils/touch';
 import Swiper from '../swiper';
 import SwiperItem from '../swiper-item';
 import type { TdSwiperProps } from '../type';

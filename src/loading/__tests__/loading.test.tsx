@@ -1,7 +1,7 @@
 import { mount, enableAutoUnmount } from '@vue/test-utils';
 import { afterEach, describe, it, expect, vi } from 'vitest';
 import Loading from '../index';
-import { createAttachContainer } from '@/test/attach';
+import { createAttachContainer } from '../../../test/utils/attach';
 
 // attach/fullscreen 用例会 teleport 到 body，统一清理残留节点
 afterEach(() => {

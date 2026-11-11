@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { nextTick } from 'vue';
 import Popover from '../popover';
-import { flush } from '@/test/flush';
+import { flush } from '../../../test/utils/flush';
 
 const name = 't-popover';
 

@@ -2,7 +2,7 @@ import { nextTick, ref } from 'vue';
 import { enableAutoUnmount, mount, type VueWrapper } from '@vue/test-utils';
 import { afterEach, describe, it, expect, vi } from 'vitest';
 import Textarea from '../textarea';
-import { simulateInputEvent as simulateEvent } from '@/test/input';
+import { simulateInputEvent as simulateEvent } from '../../../test/utils/input';
 
 const getTextarea = (wrapper: VueWrapper) => wrapper.get('textarea').element as HTMLTextAreaElement;
 

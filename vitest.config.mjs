@@ -34,7 +34,7 @@ export default mergeConfig(
       coverage: {
         reporter: ['text', 'json', 'html'],
         reportsDirectory: 'test/unit/coverage',
-        exclude: ['src/**.{js,ts}', 'src/_common/**', 'src/shared/**', 'src/test/**', 'src/**/{__tests__,demos,style}/**'],
+        exclude: ['src/**.{js,ts}', 'src/_common/**', 'src/shared/**', 'src/**/{__tests__,demos,style}/**'],
         include: ['src/**/*'],
       },
     },

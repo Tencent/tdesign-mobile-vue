@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest';
 import { MessagePlugin } from '../index';
-import { flush } from '@/test/flush';
+import { flush } from '../../../test/utils/flush';
 
 describe('MessagePlugin', () => {
   it.each(['info', 'success', 'warning', 'error'] as const)('%s renders a themed message', async (method) => {

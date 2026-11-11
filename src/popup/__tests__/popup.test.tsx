@@ -4,8 +4,8 @@ import { nextTick } from 'vue';
 import { CloseIcon } from 'tdesign-icons-vue-next';
 import Popup from '../index';
 import type { TdPopupProps } from '../type';
-import { createAttachContainer } from '@/test/attach';
-import { finishTransitions } from '@/test/flush';
+import { createAttachContainer } from '../../../test/utils/attach';
+import { finishTransitions } from '../../../test/utils/flush';
 
 const mountPopup = async (props: TdPopupProps = {}, slots = {}) => {
   const container = createAttachContainer();
