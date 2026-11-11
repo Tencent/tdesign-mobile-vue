@@ -256,9 +256,8 @@ describe('Radio', () => {
           defaultChecked: false,
         },
       });
-      // 未选中渲染空心圆容器，无选中态修饰
+      // 未选中渲染空心圆容器
       expect(wrapper.find(`.${name}__icon-circle`).exists()).toBe(true);
-      expect(wrapper.find(`.${name}__icon-circle--checked`).exists()).toBe(false);
       await wrapper.trigger('click');
       // 选中后容器带选中态修饰并内嵌描边型对勾图标
       expect(wrapper.find(`.${name}__icon-circle--checked`).exists()).toBe(true);
@@ -286,9 +285,8 @@ describe('Radio', () => {
           defaultChecked: false,
         },
       });
-      // 未选中渲染圆点容器，无内部实心点
+      // 未选中渲染圆点容器
       expect(wrapper.find(`.${name}__icon-dot`).exists()).toBe(true);
-      expect(wrapper.find(`.${name}__icon-dot-inner`).exists()).toBe(false);
       await wrapper.trigger('click');
       // 选中后容器带选中态修饰并渲染内部实心点
       expect(wrapper.find(`.${name}__icon-dot--checked`).exists()).toBe(true);

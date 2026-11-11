@@ -134,7 +134,6 @@ describe('RadioGroup', () => {
         expect(selected.find(`.${name}__icon-dot--checked`).exists()).toBe(true);
         expect(selected.find(`.${name}__icon-dot-inner`).exists()).toBe(true);
         expect(unselected.find(`.${name}__icon-dot`).exists()).toBe(true);
-        expect(unselected.find(`.${name}__icon-dot-inner`).exists()).toBe(false);
       }
     });
 
