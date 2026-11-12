@@ -4,18 +4,17 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdFormItemProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdFormItemProps } from './type';
 export default {
   /** 是否显示右侧箭头 */
   arrow: Boolean,
-  /** 表单内容对齐方式：左对齐、右对齐，优先级高于 Form.contentAlign */
+  /** 表单内容对齐方式：左对齐、居中对齐及右对齐，优先级高于 Form.contentAlign */
   contentAlign: {
     type: String as PropType<TdFormItemProps['contentAlign']>,
     validator(val: TdFormItemProps['contentAlign']): boolean {
       if (!val) return true;
-      return ['left', 'right'].includes(val);
+      return ['left', 'center', 'right'].includes(val);
     },
   },
   /** label 原生属性 */
