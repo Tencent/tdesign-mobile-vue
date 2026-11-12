@@ -59,6 +59,7 @@ export default defineComponent({
     const distance = 10; // distance 滑动多少距离后开始显示菜
     const autoBack = true; // autoBack 点击菜单后是否收回菜
     const threshold = 0.3; // threshold 滑动宽度的百分之多少自动打开菜单，否则收回
+    const fullSwipeThreshold = 0.9; // fullSwipe 触发操作所需的整行宽度比例
     const initData: SwipeInitData = reactive({
       moving: false, // 是否正在划动
       moved: false, // 标记是否有过划动，划动过则不触发点击事件
@@ -68,6 +69,56 @@ export default defineComponent({
       pos: 0, // 移动的距离
       status: 'close', // 菜单的状态，默认close
     });
+
+    // 组件宽度，用于滑动到底时的最大位移和触发阈值
+    let cellWidth = 0;
+    // full swipe 回弹期间冻结拉伸宽度与按钮补偿，只让外层位移做动画
+    const fullSwipeSettling = ref(false);
+    const fullSwipeHoldSide = ref<SwipeSource | undefined>();
+    const fullSwipeHoldWidth = ref(0);
+    const getFullSwipeAction = (side: SwipeSource): SwipeActionItem | undefined => {
+      const actions = props[side];
+      if (!isArray(actions) || !actions.length) return undefined;
+      return actions[actions.length - 1];
+    };
+    const canFullSwipe = (side: SwipeSource) =>
+      !!props.fullSwipe &&
+      (side === 'right' ? initData.rightWidth : initData.leftWidth) > 0 &&
+      !!getFullSwipeAction(side);
+    // 滑动越过操作项宽度时，当前被拉伸的一侧；回弹期间保持冻结值
+    const fullSwipeSide = computed<SwipeSource | undefined>(() => {
+      if (initData.moving) {
+        if (canFullSwipe('right') && initData.pos < -initData.rightWidth) return 'right';
+        if (canFullSwipe('left') && initData.pos > initData.leftWidth) return 'left';
+        return undefined;
+      }
+      if (fullSwipeSettling.value) return fullSwipeHoldSide.value;
+      return undefined;
+    });
+    const rightPanelWidth = computed(() => {
+      if (fullSwipeSide.value !== 'right') return initData.rightWidth;
+      if (!initData.moving && fullSwipeSettling.value) return fullSwipeHoldWidth.value;
+      return Math.max(initData.rightWidth, -initData.pos);
+    });
+    const leftPanelWidth = computed(() => {
+      if (fullSwipeSide.value !== 'left') return initData.leftWidth;
+      if (!initData.moving && fullSwipeSettling.value) return fullSwipeHoldWidth.value;
+      return Math.max(initData.leftWidth, initData.pos);
+    });
+    // 操作区宽度由位移直接驱动，不做独立动画
+    const panelTransition = computed(() => (props.fullSwipe ? 'none' : undefined));
+    // 拉伸出来的区域用被触发操作项的背景色填充，按钮本身保持固定宽度与居中
+    const fullSwipeBg = ref<Record<SwipeSource, string>>({ left: '', right: '' });
+    const cacheFullSwipeBg = () => {
+      if (!props.fullSwipe) return;
+      (['left', 'right'] as SwipeSource[]).forEach((side) => {
+        const panel = side === 'right' ? rightRef.value : leftRef.value;
+        const actions = props[side];
+        if (!panel || !isArray(actions) || !actions.length) return;
+        const btn = panel.children[actions.length - 1] as HTMLElement | undefined;
+        if (btn) fullSwipeBg.value[side] = getComputedStyle(btn).backgroundColor || '';
+      });
+    };
 
     const {
       sureRightRef,
@@ -101,6 +152,8 @@ export default defineComponent({
           return;
         }
         setPanelWidth();
+        cacheFullSwipeBg();
+        cellWidth = swipeCellRef.value?.clientWidth || 0;
         swipeDir = 0;
         initData.moved = false;
         initData.offset = initData.pos;
@@ -140,7 +193,9 @@ export default defineComponent({
         dragging = true;
         initData.moving = true;
         initData.moved = true;
-        const offset = range(initData.offset - lengthX.value, -initData.rightWidth, initData.leftWidth);
+        const maxRight = canFullSwipe('right') ? Math.max(initData.rightWidth, cellWidth) : initData.rightWidth;
+        const maxLeft = canFullSwipe('left') ? Math.max(initData.leftWidth, cellWidth) : initData.leftWidth;
+        const offset = range(initData.offset - lengthX.value, -maxRight, maxLeft);
         initData.pos = offset;
       },
       onSwipeEnd: (e: TouchEvent) => {
@@ -149,11 +204,23 @@ export default defineComponent({
         if (props.disabled) {
           return;
         }
+        const wasFullSwiping = fullSwipeSide.value;
         initData.moving = false;
+        if (wasFullSwiping) {
+          fullSwipeHoldSide.value = wasFullSwiping;
+          fullSwipeHoldWidth.value = wasFullSwiping === 'right' ? -initData.pos : initData.pos;
+          fullSwipeSettling.value = true;
+          setTimeout(() => {
+            fullSwipeSettling.value = false;
+            if (!initData.moving) resetMenuPosStyle();
+          }, 600);
+        }
         setTimeout(() => {
           closedSure.value = false;
         }, 0);
-        end();
+        if (!triggerFullSwipe()) {
+          end();
+        }
         if (wasDragging) {
           props.onDragend?.();
         }
@@ -161,6 +228,7 @@ export default defineComponent({
     });
 
     const setPanelWidth = () => {
+      if (fullSwipeSettling.value) return;
       const leftWidth = leftRef.value?.clientWidth as number;
       const rightWidth = rightRef.value?.clientWidth as number;
       initData.leftWidth = leftWidth > 0 ? leftWidth : 0;
@@ -184,12 +252,15 @@ export default defineComponent({
     watch(
       () => initData.pos,
       (newVal, oldVal) => {
+        // 回弹期间冻结按钮补偿，避免它跳到终值而外层位移仍在缓动
+        if (fullSwipeSettling.value && !initData.moving) return;
         if (rightRef.value && (newVal < 0 || (newVal === 0 && oldVal < 0))) {
           updateRightMenuPosStyle(newVal);
         } else if (leftRef.value && (newVal > 0 || (newVal === 0 && oldVal > 0))) {
           updateLeftMenuPosStyle(newVal);
         }
       },
+      { flush: 'sync' },
     );
     const updateRightMenuPosStyle = (value?: number) => {
       if (!rightRef.value) return;
@@ -202,10 +273,11 @@ export default defineComponent({
       }
       for (let i = 0, len = children.length - 2; i < len; ++i) {
         const el = children[i] as HTMLElement;
-        const w = (1 + pos / initData.rightWidth) * (wArr[i - 1] || 0);
+        const w = Math.max(0, (1 + pos / initData.rightWidth) * (wArr[i - 1] || 0));
         if (el) {
           el.style.transform = `translate3d(${-w}px, 0, 0)`;
-          el.style.transition = initData.moving ? 'none' : `transform .6s cubic-bezier(0.18, 0.89, 0.32, 1)`;
+          el.style.transition =
+            initData.moving || fullSwipeSettling.value ? 'none' : `transform .6s cubic-bezier(0.18, 0.89, 0.32, 1)`;
         }
       }
     };
@@ -220,11 +292,23 @@ export default defineComponent({
       }
       for (let i = 0, len = children.length - 2; i < len; ++i) {
         const el = children[i] as HTMLElement;
-        const w = (1 - pos / initData.leftWidth) * (wArr[i - 1] || 0);
+        const w = Math.max(0, (1 - pos / initData.leftWidth) * (wArr[i - 1] || 0));
         if (el) {
           el.style.transform = `translate3d(${w}px, 0, 0)`;
-          el.style.transition = initData.moving ? 'none' : `transform .6s cubic-bezier(0.18, 0.89, 0.32, 1)`;
+          el.style.transition =
+            initData.moving || fullSwipeSettling.value ? 'none' : `transform .6s cubic-bezier(0.18, 0.89, 0.32, 1)`;
         }
+      }
+    };
+    // 回弹动画结束后按终值复位按钮补偿，此时操作区已移出屏幕或宽度变化被裁剪
+    const resetMenuPosStyle = () => {
+      if (initData.pos < 0) {
+        updateRightMenuPosStyle(initData.pos);
+      } else if (initData.pos > 0) {
+        updateLeftMenuPosStyle(initData.pos);
+      } else {
+        updateRightMenuPosStyle(0);
+        updateLeftMenuPosStyle(0);
       }
     };
     const stopClickAway = ref(
@@ -257,6 +341,28 @@ export default defineComponent({
         }
       }
     };
+    // 滑动到底：松手时自动执行该侧最后一个操作项，等同于点击该操作项
+    const triggerFullSwipe = () => {
+      if (!props.fullSwipe || !cellWidth) return false;
+      let side: SwipeSource | undefined;
+      if (initData.pos < 0) {
+        side = 'right';
+      } else if (initData.pos > 0) {
+        side = 'left';
+      }
+      if (!side || !canFullSwipe(side)) return false;
+      const distance = side === 'right' ? -initData.pos : initData.pos;
+      const menuWidth = side === 'right' ? initData.rightWidth : initData.leftWidth;
+      if (distance <= Math.max(menuWidth, cellWidth * fullSwipeThreshold)) return false;
+      const action = getFullSwipeAction(side);
+      if (!action) return false;
+      // 先回到菜单展开态，保证二次确认和回弹有正确的位置基准
+      initData.status = 'open';
+      initData.pos = side === 'right' ? -initData.rightWidth : initData.leftWidth;
+      handleClickBtn({ action, source: side });
+      return true;
+    };
+
     const end = () => {
       if (props.disabled) {
         return;
@@ -338,8 +444,15 @@ export default defineComponent({
     const renderLeft = () => {
       const leftContent = () => {
         if (Array.isArray(props.left)) {
-          return props.left.map((btn) => {
-            const btnClass = [`${swipeCellClass.value}__content`, btn.className || ''];
+          const actions = props.left;
+          return actions.map((btn, index) => {
+            const btnClass = [
+              `${swipeCellClass.value}__content`,
+              btn.className || '',
+              fullSwipeSide.value === 'left' && index === actions.length - 1
+                ? `${swipeCellClass.value}__content--full`
+                : '',
+            ];
             const style = btn.style || 'height: 100%';
             const { icon: btnIcon } = btn;
             const { text: btnText } = btn;
@@ -363,7 +476,9 @@ export default defineComponent({
           ref={leftRef}
           class={`${swipeCellClass.value}__left`}
           style={{
-            width: initData?.leftWidth ? `${initData.leftWidth}px` : 'auto',
+            width: leftPanelWidth.value ? `${leftPanelWidth.value}px` : 'auto',
+            transition: panelTransition.value,
+            backgroundColor: fullSwipeSide.value === 'left' ? fullSwipeBg.value.left : undefined,
           }}
         >
           {leftContent()}
@@ -377,8 +492,15 @@ export default defineComponent({
     const renderRight = () => {
       const rightContent = () => {
         if (Array.isArray(props.right)) {
-          return props.right.map((btn) => {
-            const btnClass = [`${swipeCellClass.value}__content`, btn.className || ''];
+          const actions = props.right;
+          return actions.map((btn, index) => {
+            const btnClass = [
+              `${swipeCellClass.value}__content`,
+              btn.className || '',
+              fullSwipeSide.value === 'right' && index === actions.length - 1
+                ? `${swipeCellClass.value}__content--full`
+                : '',
+            ];
             const style = btn.style || 'height: 100%';
             const { icon: btnIcon } = btn;
             const { text: btnText } = btn;
@@ -398,7 +520,9 @@ export default defineComponent({
           ref={rightRef}
           class={`${swipeCellClass.value}__right`}
           style={{
-            width: initData.rightWidth ? `${initData.rightWidth}px` : 'auto',
+            width: rightPanelWidth.value ? `${rightPanelWidth.value}px` : 'auto',
+            transition: panelTransition.value,
+            backgroundColor: fullSwipeSide.value === 'right' ? fullSwipeBg.value.right : undefined,
           }}
         >
           {rightContent()}

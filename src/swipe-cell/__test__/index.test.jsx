@@ -12,6 +12,16 @@ const move = async (target, offsetX = 120, startX = 0, offsetY = 0, startY = 0) 
   return async () => trigger(target, 'touchend', startX + offsetX, startY + offsetY);
 };
 
+const fullSwipeActions = (onClick) => [{ text: '删除', className: 'btn delete-btn', onClick }];
+const mockFullSwipeWidth = async (wrapper) => {
+  Object.defineProperty(wrapper.find('.t-swipe-cell').element, 'clientWidth', { configurable: true, value: 375 });
+  Object.defineProperty(wrapper.find('.t-swipe-cell__right').element, 'clientWidth', {
+    configurable: true,
+    value: 61,
+  });
+  await wrapper.vm.$nextTick();
+};
+
 describe('swipe-cell', () => {
   describe('props', () => {
     it(': content', async () => {
@@ -201,6 +211,28 @@ describe('swipe-cell', () => {
       // await touchend();
       // expect(wrapper.vm.initData.moving).toBe(false);
       // expect(wrapper.vm.showSureRight).toBe(false);
+    });
+
+    it(': fullSwipe', async () => {
+      const swipeOnce = async (offsetX, extraProps = {}) => {
+        const onDelete = vi.fn();
+        const wrapper = mount(SwipeCell, {
+          props: { right: fullSwipeActions(onDelete), fullSwipe: true, ...extraProps },
+        });
+        await mockFullSwipeWidth(wrapper);
+        const touchend = await move(wrapper.find('.t-swipe-cell'), offsetX);
+        await touchend();
+        return onDelete;
+      };
+
+      const short = await swipeOnce(-130);
+      const below = await swipeOnce(-337);
+      const above = await swipeOnce(-340);
+      const disabled = await swipeOnce(-350, { fullSwipe: false });
+      expect(short).toBeCalledTimes(0);
+      expect(below).toBeCalledTimes(0);
+      expect(above).toBeCalledTimes(1);
+      expect(disabled).toBeCalledTimes(0);
     });
   });
 

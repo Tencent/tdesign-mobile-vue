@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdSwipeCellProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdSwipeCellProps } from './type';
 export default {
   /** 操作项以外的内容 */
   content: {
@@ -18,6 +17,8 @@ export default {
   },
   /** 是否禁用滑动 */
   disabled: Boolean,
+  /**  是否启用滑动到底自动执行操作。 */
+  fullSwipe: Boolean,
   /** 左侧滑动操作项。所有行为同 `right` */
   left: {
     type: [Array, Function] as PropType<TdSwipeCellProps['left']>,
