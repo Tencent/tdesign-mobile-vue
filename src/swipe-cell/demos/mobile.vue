@@ -7,6 +7,7 @@
     <double />
     <icon />
     <event />
+    <full />
   </div>
 </template>
 
@@ -16,4 +17,5 @@ import right from './right.vue';
 import double from './double.vue';
 import icon from './icon.vue';
 import event from './event.vue';
+import full from './full.vue';
 </script>

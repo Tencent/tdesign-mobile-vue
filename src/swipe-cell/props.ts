@@ -17,6 +17,8 @@ export default {
   },
   /** 是否禁用滑动 */
   disabled: Boolean,
+  /**  是否启用滑动到底自动执行操作。 */
+  fullSwipe: Boolean,
   /** 左侧滑动操作项。所有行为同 `right` */
   left: {
     type: [Array, Function] as PropType<TdSwipeCellProps['left']>,
