@@ -51,7 +51,11 @@ export default defineComponent({
       scaleArray: [],
       scaleTextArray: [],
     });
-    const defaultValue = props.defaultValue || props.min;
+    // range 模式下值必须是数组，未传 defaultValue 时默认取整个区间
+    let defaultValue = props.defaultValue || props.min;
+    if (props.range && !Array.isArray(props.defaultValue)) {
+      defaultValue = [props.min, props.max];
+    }
     const { value, modelValue } = toRefs(props);
     const [innerValue, setInnerValue] = useVModel(value, modelValue, defaultValue, props.onChange);
     const scope = computed(() => Number(props.max) - Number(props.min));
