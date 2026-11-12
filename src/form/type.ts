@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { IsEmailOptions } from 'validator/es/lib/isEmail';
-import { IsURLOptions } from 'validator/es/lib/isURL';
+import type { IsEmailOptions } from 'validator/es/lib/isEmail';
+import type { IsURLOptions } from 'validator/es/lib/isURL';
 import type { TNode, FormResetEvent, FormSubmitEvent } from '../common';
 
 export interface TdFormProps<FormData extends Data = Data> {
@@ -18,7 +18,7 @@ export interface TdFormProps<FormData extends Data = Data> {
    * 表单内容对齐方式：左对齐、右对齐
    * @default left
    */
-  contentAlign?: 'left' | 'right';
+  contentAlign?: 'left' | 'center' | 'right';
   /**
    * 表单数据
    * @default {}
@@ -137,7 +137,7 @@ export interface TdFormItemProps {
   /**
    * 表单内容对齐方式：左对齐、右对齐，优先级高于 Form.contentAlign
    */
-  contentAlign?: 'left' | 'right';
+  contentAlign?: 'left' | 'center' | 'right';
   /**
    * label 原生属性
    * @default ''

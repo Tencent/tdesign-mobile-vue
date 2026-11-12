@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdFormItemProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdFormItemProps } from './type';
 export default {
   /** 是否显示右侧箭头 */
   arrow: Boolean,
@@ -15,7 +14,7 @@ export default {
     type: String as PropType<TdFormItemProps['contentAlign']>,
     validator(val: TdFormItemProps['contentAlign']): boolean {
       if (!val) return true;
-      return ['left', 'right'].includes(val);
+      return ['left', 'center', 'right'].includes(val);
     },
   },
   /** label 原生属性 */
