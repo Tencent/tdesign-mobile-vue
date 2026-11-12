@@ -1,0 +1,52 @@
+---
+name: tdesign-mobile-vue-unit-test
+description: 按 tdesign-mobile-vue 规范编写、补充、迁移或审查 Vue 组件单元测试，并运行 Vitest 验证。适用于 src 下的组件 API 测试、Issue 回归测试，以及相关 plugin、hooks、utils 测试。
+---
+
+# TDesign Mobile Vue Unit Test
+
+## 规范来源
+
+开始前阅读 `test/README.md`，以其中的“单元测试规范”为唯一规范来源。Skill 只负责执行规范，不另行定义冲突规则。
+
+## 工作流程
+
+1. 阅读目标组件源码、API 定义、现有测试和相邻组件测试，不根据文件名猜测行为。
+2. 按 `test/README.md` 的规范梳理需要覆盖的 API 和测试分组，确认现有覆盖后再修改。
+3. 沿用项目现有的 Vitest、Vue Test Utils 和 TSX 写法；文件拆分、命名和存放位置遵循 `test/README.md`，不在 Skill 中重复维护。
+4. 仅修改任务涉及的测试。除非任务明确要求，不批量迁移无关存量用例。
+5. 优先验证公开 API 和用户可观察行为，避免为覆盖实现细节重复断言。
+
+## 执行要点
+
+规范细节以 `test/README.md` 为准，以下是执行时的高频出错点：
+
+- setup 未 stub Teleport：弹层类组件（Popup、Toast、Dialog、Drawer 等）渲染在 `document.body`，用 `document.querySelector` 或 `new DOMWrapper(document.body)` 断言，不能用 `wrapper.find`。
+- 每个测试文件调用 `enableAutoUnmount(afterEach)` 清理实例；过渡和异步浮层等待用 `test/utils/flush.ts` 的 `flush` / `finishTransitions`。
+- 枚举 Prop 用 `it.each([...])('prop[%s]')` 逐值生成用例，不写 `theme[list/grid]` 合并标题；多类型 Prop 拆成 `prop[type]` 独立用例。
+- jsdom 无布局、无真实输入：尺寸/定位用 `test/utils/mock-rect.ts`，输入用 `test/utils/input.ts`，手势用 `test/utils/touch.ts`。
+- `demo.test.jsx` 由脚本生成，禁止手写修改；新增 demos 后执行 `pnpm run test:demo` 重新生成。
+- Issue 回归用例在对应 `it` 紧邻上方标注 `// Issue: <完整 Issue URL>`，不只写编号。
+
+## 验证
+
+从仓库根目录运行目标组件测试：
+
+```bash
+pnpm run test:unit <component>
+```
+
+需要覆盖率时运行：
+
+```bash
+pnpm run test:unit-coverage <component>
+```
+
+涉及 `demos` 或 demo 快照时运行：
+
+```bash
+pnpm run test:demo
+pnpm run test:snap-update
+```
+
+若调整存量测试结构，确保用例语义、断言和快照保持不变，并报告测试结果及未验证项。

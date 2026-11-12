@@ -12,7 +12,15 @@ const pkg = require(resolveCwd('package.json'));
 
 const framework = pkg.name;
 
-const fixedDateComponentList = ['config-provider', 'time-picker', 'date-picker', 'table', 'form', 'calendar']; // 需要在测试阶段固定日期的组件，table中因为有filter例子 渲染datepicker需要固定
+const fixedDateComponentList = [
+  'config-provider',
+  'time-picker',
+  'date-picker',
+  'date-time-picker',
+  'table',
+  'form',
+  'calendar',
+]; // 需要在测试阶段固定日期的组件，table中因为有filter例子 渲染datepicker需要固定
 
 // TODO 过滤掉一些导致挂掉的demo
 const filterCom = ['table'];
@@ -66,7 +74,7 @@ describe('${newComponent}', () => {
 }
 
 function outputOneComponentTestFile(component, demoFiles) {
-  const outputPath = `${targetPath}/${component}/__test__`;
+  const outputPath = `${targetPath}/${component}/__tests__`;
   const imports = [];
   const demos = ['\nconst mapper = {'];
 

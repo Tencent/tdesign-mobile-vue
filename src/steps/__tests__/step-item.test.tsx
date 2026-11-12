@@ -1,0 +1,143 @@
+import { mount } from '@vue/test-utils';
+import { describe, it, expect } from 'vitest';
+import { Steps, StepItem } from '../index';
+
+describe('StepItem', () => {
+  describe('props', () => {
+    it('content[string]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem title="标题" content="文字描述" />
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__description').text()).toEqual('文字描述');
+    });
+
+    it('content[function]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem title="标题" content={() => <span class="custom-content">函数描述</span>} />
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__description .custom-content').exists()).toBeTruthy();
+      expect(wrapper.find('.t-step-item__description').text()).toEqual('函数描述');
+    });
+
+    it('content[slot]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem title="标题">{{ content: () => <span class="slot-content">插槽描述</span> }}</StepItem>
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__description .slot-content').exists()).toBeTruthy();
+    });
+
+    it('icon[function]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem title="标题" content="内容" icon={() => <span class="custom-step-icon">图标</span>} />
+        </Steps>
+      ));
+      // 自定义图标渲染在图标容器内，且不再渲染圆形序号图标
+      expect(wrapper.find('.t-step-item__icon .custom-step-icon').exists()).toBeTruthy();
+      expect(wrapper.find('.t-step-item__circle').exists()).toBeFalsy();
+    });
+
+    // 文档声明 icon 支持 boolean（值为 false 时不显示图标），源码中 false 会回退渲染内置图标，待源码实现后补充
+    it.todo('icon[boolean]');
+    it('icon[slot]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem title="标题">{{ icon: () => <span class="slot-icon">插槽图标</span> }}</StepItem>
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__icon .slot-icon').exists()).toBeTruthy();
+      expect(wrapper.find('.t-step-item__circle').exists()).toBeFalsy();
+    });
+
+    it.each([
+      ['process', '1', undefined],
+      ['finish', undefined, '.t-icon-check'],
+      ['error', undefined, '.t-icon-close'],
+      ['default', '1', undefined],
+    ] as const)('status[%s]', (status, circleText, iconSelector) => {
+      const wrapper = mount(() => (
+        <Steps current={0}>
+          <StepItem title="标题" content="内容" status={status} />
+        </Steps>
+      ));
+      const item = wrapper.findComponent(StepItem);
+      if (status === 'default') expect(item.classes()).not.toContain('t-step-item--default');
+      else expect(item.classes()).toContain(`t-step-item--${status}`);
+      if (circleText) expect(item.find('.t-step-item__circle').text()).toBe(circleText);
+      if (iconSelector) expect(item.find(iconSelector).exists()).toBe(true);
+    });
+
+    it('title[string]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem title="文字标题" content="内容" />
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__title').text()).toEqual('文字标题');
+    });
+
+    it('title[function]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem title={() => <span class="custom-title">函数标题</span>} content="内容" />
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__title .custom-title').exists()).toBeTruthy();
+      expect(wrapper.find('.t-step-item__title').text()).toEqual('函数标题');
+    });
+
+    it('title[slot]', () => {
+      const wrapper = mount(() => (
+        <Steps>
+          <StepItem content="内容">{{ title: () => <span class="slot-title">插槽标题</span> }}</StepItem>
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__title .slot-title').exists()).toBeTruthy();
+    });
+
+    it('titleRight[string]', () => {
+      const wrapper = mount(() => (
+        <Steps layout="vertical">
+          <StepItem title="标题" titleRight="右侧信息" content="内容" />
+        </Steps>
+      ));
+      // titleRight 渲染在标题区域内、标题文字之后
+      expect(wrapper.find('.t-step-item__title').text()).toEqual('标题右侧信息');
+    });
+
+    it('titleRight[function]', () => {
+      const wrapper = mount(() => (
+        <Steps layout="vertical">
+          <StepItem title="标题" titleRight={() => <span class="title-right">右侧文字</span>} />
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__title .title-right').exists()).toBeTruthy();
+    });
+
+    it('titleRight[slot]', () => {
+      const wrapper = mount(() => (
+        <Steps layout="vertical">
+          <StepItem title="标题">{{ titleRight: () => <span class="slot-title-right">插槽右侧</span> }}</StepItem>
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__title .slot-title-right').exists()).toBeTruthy();
+    });
+
+    it('extra[slot]', () => {
+      const wrapper = mount(() => (
+        <Steps layout="vertical">
+          <StepItem title="标题" content="内容">
+            {{ extra: () => <span class="slot-extra">插槽额外内容</span> }}
+          </StepItem>
+        </Steps>
+      ));
+      expect(wrapper.find('.t-step-item__extra .slot-extra').exists()).toBeTruthy();
+    });
+  });
+});

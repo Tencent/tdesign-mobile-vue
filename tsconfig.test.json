@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "noEmit": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "tdesign-mobile-vue": ["./src"],
+      "tdesign-mobile-vue/es/_util/*": ["./src/_util/*"],
+      "tdesign-mobile-vue/es/locale/*": ["./src/locale/*"]
+    }
+  },
+  "include": ["src/**/*", "test/utils/**/*", "globals.d.ts"],
+  "exclude": ["node_modules", "src/**/demos", "src/_common", "dist", "es", "esm", "lib", "cjs", "site"]
+}

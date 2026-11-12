@@ -44,7 +44,7 @@ export default defineComponent({
       }
       return 'TabBar';
     };
-    const ariaLabel = ref(getBadgeAriaLabel());
+    const ariaLabel = computed(getBadgeAriaLabel);
 
     const iconOnly = ref(false);
     watch(textNode, () => {
@@ -180,6 +180,7 @@ export default defineComponent({
               [`${tabBarItemClass.value}__content--checked`]: isChecked.value,
               [`${tabBarItemClass.value}__content--${theme.value}`]: true,
             }}
+            aria-label={ariaLabel.value}
             aria-selected={(!hasChildren.value || !isSpread.value) && isChecked.value}
             aria-expanded={hasChildren.value && isSpread.value}
             role={hasChildren.value ? 'button' : 'tab'}

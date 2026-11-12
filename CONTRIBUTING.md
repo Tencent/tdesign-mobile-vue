@@ -34,7 +34,7 @@ npm run start
 ├── src // 组件代码
      └─ componentA
           ├── demos // 组件示例文档
-          └─  __test__ // 组件测试用例
+          └─  __tests__ // 组件测试用例
 └─ test // 测试配置文件
 ```
 

@@ -1,0 +1,3003 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TabBar > TabBar badgePropsVue demo works fine 1`] = `
+<div
+  data-v-app=""
+>
+  
+  <div
+    class="bar-wrapper"
+    data-v-56c81c82=""
+  >
+    <div
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+      data-v-56c81c82=""
+      role="tablist"
+      style="z-index: 1;"
+    >
+      
+      
+      <div
+        aria-label="首页，有16条消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="有 16 条消息"
+          aria-selected="true"
+          class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <!---->
+          <div
+            class="t-tab-bar-item__text"
+          >
+            <!---->
+            
+            首页
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="软件，有新的消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="有新的消息"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <!---->
+          <div
+            class="t-tab-bar-item__text"
+          >
+            <!---->
+            
+            软件
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="聊天，New"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="New"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <!---->
+          <div
+            class="t-tab-bar-item__text"
+          >
+            <!---->
+            
+            聊天
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="我的，有很多消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="···"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <!---->
+          <div
+            class="t-tab-bar-item__text"
+          >
+            <!---->
+            
+            我的
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="bar-wrapper"
+    data-v-56c81c82=""
+  >
+    <div
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+      data-v-56c81c82=""
+      role="tablist"
+      style="z-index: 1;"
+    >
+      
+      
+      <div
+        aria-label="首页，有16条消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="有 16 条消息"
+          aria-selected="true"
+          class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-home"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-home"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              >
+                <div
+                  class="t-badge__count"
+                >
+                  16
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="软件，有新的消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="有新的消息"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-app"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-app"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+              >
+                <div
+                  class="t-badge__count"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="聊天，New"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="New"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-chat"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-chat"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              >
+                <div
+                  class="t-badge__count"
+                >
+                  New
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="我的，有很多消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="···"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-user"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-user"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              >
+                <div
+                  class="t-badge__count"
+                >
+                  ···
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            <!---->
+          </div>
+        </div>
+        <!---->
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="bar-wrapper"
+    data-v-56c81c82=""
+  >
+    <div
+      class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+      data-v-56c81c82=""
+      role="tablist"
+      style="z-index: 1;"
+    >
+      
+      
+      <div
+        aria-label="首页，有16条消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="有 16 条消息"
+          aria-selected="true"
+          class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-home"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-home"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              >
+                <div
+                  class="t-badge__count"
+                >
+                  16
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            
+            首页 
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="软件，有新的消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="有新的消息"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-app"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-app"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+              >
+                <div
+                  class="t-badge__count"
+                >
+                  <!---->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            
+            软件 
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="聊天，New"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="New"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-chat"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-chat"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              >
+                <div
+                  class="t-badge__count"
+                >
+                  New
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            
+            聊天 
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      <div
+        aria-label="我的，有很多消息"
+        class="t-tab-bar-item t-tab-bar-item--normal"
+        data-v-56c81c82=""
+      >
+        <div
+          aria-expanded="false"
+          aria-label="···"
+          aria-selected="false"
+          class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+          role="tab"
+        >
+          <div
+            class="t-tab-bar-item__icon"
+            style="height: 20px;"
+          >
+            <div
+              class="t-badge"
+            >
+              <div
+                class="t-badge__content"
+              >
+                
+                
+                <svg
+                  class="t-icon t-icon-user"
+                  data-v-56c81c82=""
+                  style="font-size: 20px;"
+                >
+                  <use
+                    href="#t-icon-user"
+                  />
+                </svg>
+                
+                
+              </div>
+              <div
+                class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+              >
+                <div
+                  class="t-badge__count"
+                >
+                  ···
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="t-tab-bar-item__text t-tab-bar-item__text--small"
+          >
+            <!---->
+            
+            我的 
+            
+          </div>
+        </div>
+        <!---->
+      </div>
+      
+      
+    </div>
+  </div>
+  
+</div>
+`;
+
+exports[`TabBar > TabBar baseVue demo works fine 1`] = `
+<div
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+  role="tablist"
+  style="z-index: 1;"
+>
+  
+  
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="true"
+      class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-home"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-home"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        
+        首页 
+        
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-app"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-app"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        
+        应用 
+        
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-chat"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-chat"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        
+        聊天 
+        
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-user"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-user"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        
+        我的 
+        
+      </div>
+    </div>
+    <!---->
+  </div>
+  
+  
+</div>
+`;
+
+exports[`TabBar > TabBar customVue demo works fine 1`] = `
+<div
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal wrapper"
+  data-v-d74bfed2=""
+  role="tablist"
+  style="z-index: 1;"
+>
+  
+  
+  <div
+    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
+    data-v-d74bfed2=""
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="true"
+      class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-home"
+          data-v-d74bfed2=""
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-home"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
+    data-v-d74bfed2=""
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-app"
+          data-v-d74bfed2=""
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-app"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
+    data-v-d74bfed2=""
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-chat"
+          data-v-d74bfed2=""
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-chat"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
+    data-v-d74bfed2=""
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-user"
+          data-v-d74bfed2=""
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-user"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  
+  
+</div>
+`;
+
+exports[`TabBar > TabBar mobileVue demo works fine 1`] = `
+<div
+  class="tdesign-mobile-demo"
+  data-v-8bf7e573=""
+>
+  <h1
+    class="title"
+    data-v-8bf7e573=""
+  >
+    TabBar 底部标签栏
+  </h1>
+  <p
+    class="summary"
+    data-v-8bf7e573=""
+  >
+    用于在不同功能模块之间进行快速切换，位于页面底部。
+  </p>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        01 组件类型
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        纯文本标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+        data-v-8bf7e573=""
+        role="tablist"
+        style="z-index: 1;"
+      >
+        
+        
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="true"
+            class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <!---->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!---->
+              
+              首页
+              
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <!---->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!---->
+              
+              应用
+              
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <!---->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!---->
+              
+              聊天
+              
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <!---->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!---->
+              
+              我的
+              
+            </div>
+          </div>
+          <!---->
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        图标加文字标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+        data-v-8bf7e573=""
+        role="tablist"
+        style="z-index: 1;"
+      >
+        
+        
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="true"
+            class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-home"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-home"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              
+              首页 
+              
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-app"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-app"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              
+              应用 
+              
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-chat"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-chat"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              
+              聊天 
+              
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-user"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-user"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              
+              我的 
+              
+            </div>
+          </div>
+          <!---->
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        纯图标标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+        data-v-8bf7e573=""
+        role="tablist"
+        style="z-index: 1;"
+      >
+        
+        
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="true"
+            class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-home"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-home"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-app"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-app"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-chat"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-chat"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-user"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-user"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        双层级纯文本标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+        data-v-8bf7e573=""
+        role="tablist"
+        style="z-index: 1;"
+      >
+        
+        
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="true"
+            class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <!---->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!---->
+              
+              首页
+              
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <!---->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <!---->
+              
+              应用
+              
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--normal"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="button"
+          >
+            <!---->
+            <div
+              class="t-tab-bar-item__text"
+            >
+              <svg
+                class="t-icon t-icon-view-list t-tab-bar-item__icon-menu"
+                fill="none"
+                height="1em"
+                style="fill: none;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <g
+                  id="view-list"
+                >
+                  <path
+                    d="M3 5H21M3 12H21M3 19H21"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+              
+              我的
+              
+            </div>
+          </div>
+          <!---->
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        02 组件样式
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        弱选中标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      
+      <div
+        class="bar-wrapper"
+        data-v-56c81c82=""
+      >
+        <div
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+          data-v-56c81c82=""
+          role="tablist"
+          style="z-index: 1;"
+        >
+          
+          
+          <div
+            aria-label="首页，有16条消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="有 16 条消息"
+              aria-selected="true"
+              class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <!---->
+              <div
+                class="t-tab-bar-item__text"
+              >
+                <!---->
+                
+                首页
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="软件，有新的消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="有新的消息"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <!---->
+              <div
+                class="t-tab-bar-item__text"
+              >
+                <!---->
+                
+                软件
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="聊天，New"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="New"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <!---->
+              <div
+                class="t-tab-bar-item__text"
+              >
+                <!---->
+                
+                聊天
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="我的，有很多消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="···"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <!---->
+              <div
+                class="t-tab-bar-item__text"
+              >
+                <!---->
+                
+                我的
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          
+          
+        </div>
+      </div>
+      <div
+        class="bar-wrapper"
+        data-v-56c81c82=""
+      >
+        <div
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+          data-v-56c81c82=""
+          role="tablist"
+          style="z-index: 1;"
+        >
+          
+          
+          <div
+            aria-label="首页，有16条消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="有 16 条消息"
+              aria-selected="true"
+              class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-home"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-home"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                  >
+                    <div
+                      class="t-badge__count"
+                    >
+                      16
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="软件，有新的消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="有新的消息"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-app"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-app"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                  >
+                    <div
+                      class="t-badge__count"
+                    >
+                      <!---->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="聊天，New"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="New"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-chat"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-chat"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                  >
+                    <div
+                      class="t-badge__count"
+                    >
+                      New
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="我的，有很多消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="···"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-user"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-user"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                  >
+                    <div
+                      class="t-badge__count"
+                    >
+                      ···
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                <!---->
+              </div>
+            </div>
+            <!---->
+          </div>
+          
+          
+        </div>
+      </div>
+      <div
+        class="bar-wrapper"
+        data-v-56c81c82=""
+      >
+        <div
+          class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+          data-v-56c81c82=""
+          role="tablist"
+          style="z-index: 1;"
+        >
+          
+          
+          <div
+            aria-label="首页，有16条消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="有 16 条消息"
+              aria-selected="true"
+              class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-home"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-home"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                  >
+                    <div
+                      class="t-badge__count"
+                    >
+                      16
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                首页 
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="软件，有新的消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="有新的消息"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-app"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-app"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--dot t-badge--medium t-badge--circle t-has-count"
+                  >
+                    <div
+                      class="t-badge__count"
+                    >
+                      <!---->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                软件 
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="聊天，New"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="New"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-chat"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-chat"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                  >
+                    <div
+                      class="t-badge__count"
+                    >
+                      New
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                聊天 
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          <div
+            aria-label="我的，有很多消息"
+            class="t-tab-bar-item t-tab-bar-item--normal"
+            data-v-56c81c82=""
+          >
+            <div
+              aria-expanded="false"
+              aria-label="···"
+              aria-selected="false"
+              class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+              role="tab"
+            >
+              <div
+                class="t-tab-bar-item__icon"
+                style="height: 20px;"
+              >
+                <div
+                  class="t-badge"
+                >
+                  <div
+                    class="t-badge__content"
+                  >
+                    
+                    
+                    <svg
+                      class="t-icon t-icon-user"
+                      data-v-56c81c82=""
+                      style="font-size: 20px;"
+                    >
+                      <use
+                        href="#t-icon-user"
+                      />
+                    </svg>
+                    
+                    
+                  </div>
+                  <div
+                    class="t-badge--basic t-badge--medium t-badge--circle t-badge--count t-has-count"
+                  >
+                    <div
+                      class="t-badge__count"
+                    >
+                      ···
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="t-tab-bar-item__text t-tab-bar-item__text--small"
+              >
+                <!---->
+                
+                我的 
+                
+              </div>
+            </div>
+            <!---->
+          </div>
+          
+          
+        </div>
+      </div>
+      
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        悬浮胶囊标签栏
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round"
+        data-v-8bf7e573=""
+        role="tablist"
+        style="z-index: 1;"
+      >
+        
+        
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="true"
+            class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-home"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-home"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-app"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-app"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-chat"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-chat"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--round"
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-user"
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-user"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+  <div
+    class="tdesign-mobile-demo-block"
+    data-v-8bf7e573=""
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <h2
+        class="tdesign-mobile-demo-block__title"
+      >
+        03 自定义
+      </h2>
+      <p
+        class="tdesign-mobile-demo-block__summary"
+      >
+        自定义样式
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <div
+        class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal wrapper"
+        data-v-8bf7e573=""
+        data-v-d74bfed2=""
+        role="tablist"
+        style="z-index: 1;"
+      >
+        
+        
+        <div
+          class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
+          data-v-d74bfed2=""
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="true"
+            class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--normal"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-home"
+                data-v-d74bfed2=""
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-home"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
+          data-v-d74bfed2=""
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-app"
+                data-v-d74bfed2=""
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-app"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
+          data-v-d74bfed2=""
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-chat"
+                data-v-d74bfed2=""
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-chat"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        <div
+          class="t-tab-bar-item t-tab-bar-item--split t-tab-bar-item--normal"
+          data-v-d74bfed2=""
+        >
+          <div
+            aria-expanded="false"
+            aria-label="TabBar"
+            aria-selected="false"
+            class="t-tab-bar-item__content t-tab-bar-item__content--normal"
+            role="tab"
+          >
+            <div
+              class="t-tab-bar-item__icon"
+              style="height: 20px;"
+            >
+              
+              <svg
+                class="t-icon t-icon-user"
+                data-v-d74bfed2=""
+                style="font-size: 20px;"
+              >
+                <use
+                  href="#t-icon-user"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-tab-bar-item__text t-tab-bar-item__text--small"
+            >
+              <!---->
+              <!---->
+            </div>
+          </div>
+          <!---->
+        </div>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TabBar > TabBar pureIconVue demo works fine 1`] = `
+<div
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+  role="tablist"
+  style="z-index: 1;"
+>
+  
+  
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="true"
+      class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-home"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-home"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-app"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-app"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-chat"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-chat"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-user"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-user"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  
+  
+</div>
+`;
+
+exports[`TabBar > TabBar roundVue demo works fine 1`] = `
+<div
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--round"
+  role="tablist"
+  style="z-index: 1;"
+>
+  
+  
+  <div
+    class="t-tab-bar-item t-tab-bar-item--round"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="true"
+      class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-home"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-home"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--round"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-app"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-app"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--round"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-chat"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-chat"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--round"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <div
+        class="t-tab-bar-item__icon"
+        style="height: 20px;"
+      >
+        
+        <svg
+          class="t-icon t-icon-user"
+          style="font-size: 20px;"
+        >
+          <use
+            href="#t-icon-user"
+          />
+        </svg>
+        
+      </div>
+      <div
+        class="t-tab-bar-item__text t-tab-bar-item__text--small"
+      >
+        <!---->
+        <!---->
+      </div>
+    </div>
+    <!---->
+  </div>
+  
+  
+</div>
+`;
+
+exports[`TabBar > TabBar textSpreadVue demo works fine 1`] = `
+<div
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+  role="tablist"
+  style="z-index: 1;"
+>
+  
+  
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="true"
+      class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <!---->
+      <div
+        class="t-tab-bar-item__text"
+      >
+        <!---->
+        
+        首页
+        
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <!---->
+      <div
+        class="t-tab-bar-item__text"
+      >
+        <!---->
+        
+        应用
+        
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="button"
+    >
+      <!---->
+      <div
+        class="t-tab-bar-item__text"
+      >
+        <svg
+          class="t-icon t-icon-view-list t-tab-bar-item__icon-menu"
+          fill="none"
+          height="1em"
+          style="fill: none;"
+          viewBox="0 0 24 24"
+          width="1em"
+        >
+          <g
+            id="view-list"
+          >
+            <path
+              d="M3 5H21M3 12H21M3 19H21"
+              id="stroke1"
+              stroke="currentColor"
+              stroke-linecap="square"
+              stroke-width="2"
+            />
+          </g>
+        </svg>
+        
+        我的
+        
+      </div>
+    </div>
+    <!---->
+  </div>
+  
+  
+</div>
+`;
+
+exports[`TabBar > TabBar textVue demo works fine 1`] = `
+<div
+  class="t-tab-bar t-tab-bar--bordered t-tab-bar--safe t-tab-bar--normal"
+  role="tablist"
+  style="z-index: 1;"
+>
+  
+  
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="true"
+      class="t-tab-bar-item__content t-tab-bar-item__content--checked t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <!---->
+      <div
+        class="t-tab-bar-item__text"
+      >
+        <!---->
+        
+        首页
+        
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <!---->
+      <div
+        class="t-tab-bar-item__text"
+      >
+        <!---->
+        
+        应用
+        
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <!---->
+      <div
+        class="t-tab-bar-item__text"
+      >
+        <!---->
+        
+        聊天
+        
+      </div>
+    </div>
+    <!---->
+  </div>
+  <div
+    class="t-tab-bar-item t-tab-bar-item--normal"
+  >
+    <div
+      aria-expanded="false"
+      aria-label="TabBar"
+      aria-selected="false"
+      class="t-tab-bar-item__content t-tab-bar-item__content--tag"
+      role="tab"
+    >
+      <!---->
+      <div
+        class="t-tab-bar-item__text"
+      >
+        <!---->
+        
+        我的
+        
+      </div>
+    </div>
+    <!---->
+  </div>
+  
+  
+</div>
+`;

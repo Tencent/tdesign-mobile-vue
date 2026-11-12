@@ -39,21 +39,13 @@ export default defineComponent({
       itemsActive: [],
     });
 
-    // 子成员处理
-    const menuItems = ref<any>([]);
-    const updateItems = () => {
-      if (slots.default) {
-        const itemName = 'TDropdownItem';
-        const children = slots.default();
-        menuItems.value = children.filter((child: any) => {
-          const childTypeName = child?.type?.name;
-          return childTypeName?.includes && childTypeName.includes(itemName);
-        });
-      }
-    };
-    watch(() => slots?.default?.(), updateItems, {
-      deep: true,
-      immediate: true,
+    const menuItems = computed<any[]>(() => {
+      const itemName = 'TDropdownItem';
+      const children = slots.default?.() || [];
+      return children.filter((child: any) => {
+        const childTypeName = child?.type?.name;
+        return childTypeName?.includes && childTypeName.includes(itemName);
+      });
     });
 
     // 通过 slots.default 子成员，计算标题栏选项

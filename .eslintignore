@@ -15,6 +15,8 @@ node_modules
 yarn-error.log
 vitest.config.js
 
-test
+/test/snap
+/test/ssr
+/test/unit
 
 helper/**
