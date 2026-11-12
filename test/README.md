@@ -30,14 +30,20 @@ pnpm run test:unit-coverage
 
 ### 组件快照测试 `snap`
 
-组件 `demos` 目录下的示例快照测试由 `npm run test:demo` 生成在各组件 `__tests__/demo.test.jsx`，通过 `pnpm run test:snap` 运行，不适用组件单测的分组规范。`test/snap/` 目录为历史遗留入口，当前 `vitest.config.mjs` 的 `include` 不会收集其中用例。
+组件 `demos` 目录下的示例快照测试由 `npm run test:demo` 生成在各组件 `__tests__/demo.test.jsx`，通过 `pnpm run test:snap` 运行，不适用组件单测的分组规范。新增或调整 `demos` 后需重新执行 `pnpm run test:demo` 再运行/更新快照。`test/snap/`、`test/ssr/` 目录为历史遗留入口，当前 `vitest.config.mjs` 的 `include` 不会收集其中用例。
 
 ```bash
+# 重新生成各组件 demo 测试文件（demo.test.jsx）
+pnpm run test:demo
 # 快照
 pnpm run test:snap
 # 更新快照
 pnpm run test:snap-update
 ```
+
+### E2E
+
+`test:e2e` / `test:e2e-gui` 为 Cypress 命令（配置见 `scripts/test/cypress.json`），当前仓库未提交 `test/e2e` 用例，日常组件测试不涉及。
 
 ## 单元测试规范
 
@@ -53,6 +59,13 @@ pnpm run test:snap-update
 - 组件内部的 hooks（自定义 Hook）。
 - 组件内部的 utils（工具函数）。
 
+### 测试环境与挂载约定
+
+- 单测运行在 jsdom 环境，公共配置见 `vitest.config.mjs` 与 `scripts/test/setup.js`。
+- setup 中设置了 `config.global.stubs.teleport = false`：Popup、Toast、Dialog、Drawer 等经 Teleport 挂载到 `document.body` 的组件无法通过 `wrapper.find` 查询，需改用 `document.querySelector` 或 `new DOMWrapper(document.body)` 断言；必要时在用例开始前重置 `document.body.innerHTML`。
+- 组件实例清理统一使用 `enableAutoUnmount(afterEach)`（来自 `@vue/test-utils`）；Teleport 类组件卸载还需等待过渡与重渲染，可使用 `test/utils/flush.ts` 的 `flush` / `finishTransitions`。
+- jsdom 不执行布局、无法触发真实键盘输入：尺寸/定位类逻辑用 `test/utils/mock-rect.ts`，Input/Textarea 值变更用 `test/utils/input.ts` 的 `simulateInputEvent`，触摸/指针手势用 `test/utils/touch.ts` 的 `trigger`。
+
 ### 测试文件命名及存放规范
 
 - 测试文件统一放置在组件目录 `src/[组件名]/__tests__/` 中，例如 `src/watermark/__tests__/watermark.test.tsx`。
@@ -60,9 +73,10 @@ pnpm run test:snap-update
 - 插件测试文件：`[组件名].plugin.test.tsx`，例如 `drawer.plugin.test.tsx`。插件测试必须独立于组件测试文件；插件的创建、安装和返回实例方法均放在插件测试文件中。
 - 多子组件场景：每个子组件单独编写测试文件，例如 `form.test.tsx` 和 `form-item.test.tsx`，同样放在 `src/form/__tests__/` 下。
 - 组件内部 hooks 测试文件：`[组件名].hooks.test.tsx`，例如 `form.hooks.test.tsx`。
+- 仓库级共享 hooks（`src/hooks`）的测试放在 `src/hooks/__tests__/`，命名 `[hook 名].hooks.test.tsx`，例如 `tnode.hooks.test.tsx`。
 - 组件内部 utils 测试文件：`[组件名].utils.test.tsx`，例如 `config-provider.utils.test.tsx`。
 - 多个测试文件共用的挂载逻辑可提取到 `mount.tsx`，用于存放 mount factory、测试数据、查询方法和清理逻辑；仅被单个测试文件使用的辅助逻辑应保留在原测试文件中。
-- 跨组件共享的测试辅助（touch 手势模拟、flush、attach 容器、mock-rect 等）统一放在仓库根目录 `test/utils/`，测试中通过相对路径 `../../../test/utils/<模块名>` 引用；不得放入 `src/` 目录，避免被构建收集。
+- 跨组件共享的测试辅助（touch 手势模拟、flush、attach 容器、mock-rect、input 输入模拟等）统一放在仓库根目录 `test/utils/`，测试中通过相对路径 `../../../test/utils/<模块名>` 引用；不得放入 `src/` 目录，避免被构建收集。
 - `mount.tsx` 是测试辅助文件，不直接编写测试用例，也不要求使用组件测试分组。
 - `demo.test.jsx` 为 demo 快照（由 `npm run test:demo` 自动生成，禁止手写修改）。
 
@@ -98,7 +112,7 @@ Props 用例标题格式为 `it('propName[类型]', ...)`，每个声明类型�
 - 声明为多类型联合（如 `[String, Function]`）时，拆成独立用例分别验证各类型通道：
   `it('content[string]')` + `it('content[function]')`，不合并写成 `[string/function]`。
 - 同一 Prop 需按不同取值区分时，用无冒号的取值标注：`it('placement[top]')`、`it('theme[default]')`。
-- 枚举类 Prop 在单个用例中遍历全部枚举值时，用斜杠分隔的枚举值列表：`it('theme[list/grid]')`、`it('align[center/left]')`。
+- 枚举类 Prop 用 `it.each` 逐值生成用例，标题仍为单值形式：`it.each(['list', 'grid'] as const)('theme[%s]')` 生成 `theme[list]`、`theme[grid]` 两个用例，不写成 `theme[list/grid]` 合并标题。
 - 事件用例直接使用事件名称：`it('change')`、`it('visibleChange')`。
 - 实例方法用例直接使用方法名：`it('clearValidate')`。
 - 插槽用例放入 `props` 分组，`[slot]` 作为一种输入类型标注：`it('icon[slot]')`、`it('default[slot]')`，与同名 Prop 的其它类型用例（如 `it('icon[function]')`）相邻排列。
