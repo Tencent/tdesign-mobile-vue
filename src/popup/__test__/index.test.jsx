@@ -83,8 +83,8 @@ describe('popup', () => {
     });
 
     it(': duration keeps the CSS animation in sync with the transition timer', async () => {
-      // Transition 等到 duration 毫秒就会移除过渡类，而过渡类里的 CSS 动画时长是固定的
-      // （fade-zoom 0.35s / slide-* 0.3s），不一致时动画会被提前打断，元素在最后一帧跳回初始样式。
+      // Transition 只等待 duration 毫秒就会移除过渡类，而过渡类里的 CSS 动画时长在样式表中是固定值，
+      // 不一致时动画会被提前打断，元素在最后一帧跳回初始样式。
       const wrapper = mount(Popup, {
         props: {
           visible: true,
