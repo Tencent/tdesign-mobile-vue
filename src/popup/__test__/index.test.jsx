@@ -82,6 +82,25 @@ describe('popup', () => {
       // expect(wrapper.find('.t-popup').attributes('style')).toContain('z-index: 17000');
     });
 
+    it(': duration keeps the CSS animation in sync with the transition timer', async () => {
+      // Transition 只等待 duration 毫秒就会移除过渡类，而过渡类里的 CSS 动画时长在样式表中是固定值，
+      // 不一致时动画会被提前打断，元素在最后一帧跳回初始样式。
+      const wrapper = mount(Popup, {
+        props: {
+          visible: true,
+          duration: 240,
+        },
+        attachTo: document.body,
+      });
+      const style = document.body.querySelector('.t-popup').getAttribute('style');
+      expect(style).toContain('animation-duration: 240ms');
+      // fill-mode 保留动画末帧，避免过渡类移除到元素隐藏之间的空档露出初始样式
+      expect(style).toContain('animation-fill-mode: both');
+      expect(style).toContain('transition-duration: 240ms');
+
+      wrapper.unmount();
+    });
+
     it(': transitionName', async () => {
       const wrapper = mount(Popup, {
         props: {

@@ -68,6 +68,16 @@ export default defineComponent({
       if (props.zIndex) {
         styles.zIndex = `${props.zIndex}`;
       }
+
+      // 过渡类里的 CSS 动画时长在样式表中是固定值，而 <Transition duration={props.duration}>
+      // 只等待 duration 毫秒就会移除过渡类。两者不一致时动画会被提前打断，
+      // 元素在最后一帧跳回初始样式（表现为动画末尾的跳跃/闪烁）。
+      // 这里把动画时长对齐到 duration，并用 fill-mode 保留末帧，保证过渡类移除时动画已经完整结束。
+      if (props.duration) {
+        styles.animationDuration = `${props.duration}ms`;
+        styles.animationFillMode = 'both';
+        styles.transitionDuration = `${props.duration}ms`;
+      }
       return { ...(context.attrs.style as Object), ...styles };
     });
 
