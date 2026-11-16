@@ -5,16 +5,28 @@
 import { mount } from '@vue/test-utils';
 import MockDate from 'mockdate';
 
-import horizontalVue from '@/form/demos/horizontal.vue';
+import baseVue from '@/form/demos/base.vue';
+import colonVue from '@/form/demos/colon.vue';
+import contentAlignVue from '@/form/demos/content-align.vue';
+import helpVue from '@/form/demos/help.vue';
+import labelAlignVue from '@/form/demos/label-align.vue';
+import labelWidthVue from '@/form/demos/label-width.vue';
 import mobileVue from '@/form/demos/mobile.vue';
-import verticalVue from '@/form/demos/vertical.vue';
+import requiredMarkVue from '@/form/demos/required-mark.vue';
+import rulesVue from '@/form/demos/rules.vue';
 
 MockDate.set('2020-12-28');
 
 const mapper = {
-  horizontalVue,
+  baseVue,
+  colonVue,
+  contentAlignVue,
+  helpVue,
+  labelAlignVue,
+  labelWidthVue,
   mobileVue,
-  verticalVue,
+  requiredMarkVue,
+  rulesVue,
 };
 
 describe('Form', () => {

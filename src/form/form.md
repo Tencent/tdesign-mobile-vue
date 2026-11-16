@@ -7,7 +7,7 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 colon | Boolean | false | 是否在表单标签字段右侧显示冒号 | N
-contentAlign | String | left | 表单内容对齐方式：左对齐、右对齐。可选项：left/right | N
+contentAlign | String | left | 表单内容对齐方式：左对齐、居中对齐及右对齐。可选项：left/center/right | N
 data | Object | {} | 表单数据。TS 类型：`FormData` | N
 disabled | Boolean | undefined | 是否禁用整个表单 | N
 errorMessage | Object | - | 表单错误信息配置，示例：`{ idcard: '请输入正确的身份证号码', max: '字符长度不能超过 ${max}' }`。TS 类型：`FormErrorMessage` | N
@@ -52,7 +52,7 @@ validateOnly | `(params?: Pick<FormValidateParams, 'fields' \| 'trigger'>)` | `P
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 arrow | Boolean | false | 是否显示右侧箭头 | N
-contentAlign | String | - | 表单内容对齐方式：左对齐、右对齐，优先级高于 Form.contentAlign。可选项：left/right | N
+contentAlign | String | - | 表单内容对齐方式：左对齐、居中对齐及右对齐，优先级高于 Form.contentAlign。可选项：left/center/right | N
 for | String | - | label 原生属性 | N
 help | String / Slot / Function | - | 表单项说明内容。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String / Slot / Function | '' | 字段标签名称。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
