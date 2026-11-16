@@ -62,11 +62,18 @@ export default defineComponent({
       }
     });
 
+    const hasMaxWidth = computed(
+      () => ['top', 'bottom'].includes(props.placement) && props.maxWidth !== undefined && props.maxWidth !== null,
+    );
+
     const rootStyles = computed(() => {
       const styles: Record<string, any> = {};
 
       if (props.zIndex) {
         styles.zIndex = `${props.zIndex}`;
+      }
+      if (hasMaxWidth.value) {
+        styles.maxWidth = typeof props.maxWidth === 'number' ? `${props.maxWidth}px` : props.maxWidth;
       }
       return { ...(context.attrs.style as Object), ...styles };
     });
@@ -78,6 +85,7 @@ export default defineComponent({
 
     const contentClasses = computed(() => ({
       [`${popupClass.value}--${props.placement}`]: true,
+      [`${popupClass.value}--with-max-width`]: hasMaxWidth.value,
     }));
 
     const contentTransitionName = computed(() => {

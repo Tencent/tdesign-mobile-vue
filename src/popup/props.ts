@@ -29,6 +29,10 @@ export default {
     type: Number,
     default: 240,
   },
+  /** 顶部和底部弹出层的最大宽度，设置后水平居中。数字单位为 px，支持 CSS 长度字符串。不设置时保持原有布局 */
+  maxWidth: {
+    type: [String, Number] as PropType<TdPopupProps['maxWidth']>,
+  },
   /** 遮罩层的属性，透传至 overlay */
   overlayProps: {
     type: Object as PropType<TdPopupProps['overlayProps']>,
