@@ -30,7 +30,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -122,7 +122,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -210,7 +210,7 @@ exports[`Dialog > Dialog confirmVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -300,7 +300,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -380,7 +380,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -456,7 +456,7 @@ exports[`Dialog > Dialog feedbackVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -549,7 +549,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -688,7 +688,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -823,7 +823,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -954,7 +954,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -1081,7 +1081,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -1220,7 +1220,7 @@ exports[`Dialog > Dialog imageDialogVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -1356,7 +1356,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -1488,7 +1488,7 @@ exports[`Dialog > Dialog inputVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -1660,7 +1660,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1740,7 +1740,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1816,7 +1816,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1921,7 +1921,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2013,7 +2013,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2101,7 +2101,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2205,7 +2205,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2337,7 +2337,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2492,7 +2492,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2631,7 +2631,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2766,7 +2766,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2897,7 +2897,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -3024,7 +3024,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -3163,7 +3163,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -3316,7 +3316,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -3413,7 +3413,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -3510,7 +3510,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -3607,7 +3607,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -3720,7 +3720,7 @@ exports[`Dialog > Dialog mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -3886,7 +3886,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -3983,7 +3983,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -4080,7 +4080,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -4177,7 +4177,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -4290,7 +4290,7 @@ exports[`Dialog > Dialog multiStateVue demo works fine 1`] = `
   </div>
   <div
     class="t-dialog__wrapper t-popup t-dialog__wrapper t-popup--center"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     

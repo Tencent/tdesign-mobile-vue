@@ -779,7 +779,7 @@ exports[`ColorPicker > ColorPicker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1505,7 +1505,7 @@ exports[`ColorPicker > ColorPicker usePopupVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     

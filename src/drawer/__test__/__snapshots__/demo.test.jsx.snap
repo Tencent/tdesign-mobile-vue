@@ -15,7 +15,7 @@ exports[`Drawer > Drawer baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--right"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -130,7 +130,7 @@ exports[`Drawer > Drawer footerVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--left"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -269,7 +269,7 @@ exports[`Drawer > Drawer iconVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--right"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -1052,7 +1052,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--right"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1180,7 +1180,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--right"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1949,7 +1949,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--left"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2118,7 +2118,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--left"
-          style="display: none;"
+          style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
         >
           <!---->
           
@@ -2235,7 +2235,7 @@ exports[`Drawer > Drawer mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--left"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2434,7 +2434,7 @@ exports[`Drawer > Drawer titleVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--left"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     

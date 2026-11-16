@@ -69,7 +69,7 @@ exports[`Cascader > Cascader baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -314,7 +314,7 @@ exports[`Cascader > Cascader checkStrictlyVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -546,7 +546,7 @@ exports[`Cascader > Cascader keysVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -790,7 +790,7 @@ exports[`Cascader > Cascader lazyVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -1034,7 +1034,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1291,7 +1291,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1515,7 +1515,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1772,7 +1772,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2029,7 +2029,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2290,7 +2290,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2517,7 +2517,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -2752,7 +2752,7 @@ exports[`Cascader > Cascader themeTabVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -2959,7 +2959,7 @@ exports[`Cascader > Cascader withTitleVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -3207,7 +3207,7 @@ exports[`Cascader > Cascader withValueVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     

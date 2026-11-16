@@ -685,7 +685,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="display: none;"
+          style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
         >
           <!---->
           
@@ -3336,7 +3336,7 @@ exports[`ConfigProvider > ConfigProvider mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -4253,7 +4253,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
     >
       <!---->
       
@@ -6904,7 +6904,7 @@ exports[`ConfigProvider > ConfigProvider otherEnVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     

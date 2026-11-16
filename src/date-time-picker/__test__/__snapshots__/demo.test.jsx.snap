@@ -65,7 +65,7 @@ exports[`DateTimePicker > DateTimePicker dateAllVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -1704,7 +1704,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteSecondVue demo works fine 1`]
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -2862,7 +2862,7 @@ exports[`DateTimePicker > DateTimePicker hourMinuteVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -3620,7 +3620,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -4196,7 +4196,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -4579,7 +4579,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -5750,7 +5750,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -6490,7 +6490,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -8142,7 +8142,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -8905,7 +8905,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -9243,7 +9243,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -9810,7 +9810,7 @@ exports[`DateTimePicker > DateTimePicker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -10376,7 +10376,7 @@ exports[`DateTimePicker > DateTimePicker showWeekVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -11126,7 +11126,7 @@ exports[`DateTimePicker > DateTimePicker stepsVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -11447,7 +11447,7 @@ exports[`DateTimePicker > DateTimePicker withTitleVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -12010,7 +12010,7 @@ exports[`DateTimePicker > DateTimePicker withoutTitleVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -12573,7 +12573,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthDateVue demo works fine 1`] = 
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -13136,7 +13136,7 @@ exports[`DateTimePicker > DateTimePicker yearMonthVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     

@@ -65,7 +65,7 @@ exports[`Picker > Picker areaVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -281,7 +281,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -400,7 +400,7 @@ exports[`Picker > Picker baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -638,7 +638,7 @@ exports[`Picker > Picker customHeightVue demo works fine 1`] = `
   </div>
   <div
     class="picker-custom-height-demo t-popup picker-custom-height-demo t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -898,7 +898,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1017,7 +1017,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1248,7 +1248,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1477,7 +1477,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1627,7 +1627,7 @@ exports[`Picker > Picker mobileVue demo works fine 1`] = `
       </div>
       <div
         class="picker-custom-height-demo t-popup picker-custom-height-demo t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -1859,7 +1859,7 @@ exports[`Picker > Picker withTitleVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="display: none;"
+    style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
