@@ -42,8 +42,8 @@ cancel | String | - | 语言配置，“取消” 按钮描述文本 | N
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 confirm | String | - | 语言配置，“确定” 按钮描述文本 | N
-monthTitle | String | - | 语言配置，日期月面板标题描述文本。示例：“{year} / {month}” | N
 months | Array | - | 月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']。TS 类型：`string[]` | N
+monthTitle | String | - | 语言配置，日期月面板标题描述文本。示例：“{year} / {month}” | N
 title | String | - | 语言配置，组件标题“请选择日期”描述文本 | N
 weekdays | Array | - | 星期文本描述，默认值：['日', '一', '二', '三', '四', '五', '六']。TS 类型：`string[]` | N
 
@@ -51,6 +51,8 @@ weekdays | Array | - | 星期文本描述，默认值：['日', '一', '二', '�
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+empty | String | - | 语言配置，“暂无数据”描述文本 | N
+filterPlaceholder | String | - | 语言配置，“搜索框”占位描述文本 | N
 placeholder | String | - | 语言配置，未选中时的提示文案“选择选项”描述文本 | N
 title | String | - | 语言配置，组件标题“选择地址”描述文本 | N
 
@@ -58,8 +60,8 @@ title | String | - | 语言配置，组件标题“选择地址”描述文本 |
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
-collapseText | String | - | 语言配置，“收起”描述文本 | N
 collapsedText | String | - | 语言配置，折叠状态下“展开回复”描述文本 | N
+collapseText | String | - | 语言配置，“收起”描述文本 | N
 expandMoreText | String | - | 语言配置，半展开状态下“展开更多回复”描述文本 | N
 
 ### DateTimePickerConfig
@@ -167,7 +169,14 @@ newsAriaLabel | String | - | 语言配置，“有新的消息”描述文本 | 
 
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
+clearFilterResultButtonText | String | - | 语言配置，过滤功能中，“清空筛选” 描述文本 | N
+confirmText | String | - | 语言配置，“确认” 描述文本 | N
 empty | String / Slot / Function | - | 语言配置，“暂无数据” 描述文本。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+filterIcon | Slot / Function | undefined | 过滤图标，如果没有配置，会使用组件内置的默认图标。TS 类型：`TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+hideSortTips | Boolean | false | 隐藏排序文本提示 | N
+loadingText | String | - | 语言配置，“正在加载中，请稍后” 描述文本 | N
+resetText | String | - | 语言配置，“重置” 描述文本 | N
+searchResultText | String | - | 语言配置，过滤功能中，过滤条件和结果描述文本，示例：'搜索“{result}”，找到 {count} 条结果' | N
 
 ### TypographyConfig
 
