@@ -151,8 +151,8 @@
       "check-strictly",
       "close-btn",
       "filter",
-      "filter-placeholder",
       "filterable",
+      "filter-placeholder",
       "header",
       "keys",
       "load",
@@ -196,23 +196,6 @@
     ],
     "description": "CellGroup\n\n单元格组\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cell)"
   },
-  "t-check-tag": {
-    "attributes": [
-      "checked",
-      "closable",
-      "content",
-      "default",
-      "disabled",
-      "icon",
-      "shape",
-      "size",
-      "variant",
-      "change",
-      "click",
-      "close"
-    ],
-    "description": "CheckTag\n\n可选标签\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag)"
-  },
   "t-checkbox": {
     "attributes": [
       "block",
@@ -251,6 +234,23 @@
     ],
     "description": "CheckboxGroup\n\n多选框组\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/checkbox)"
   },
+  "t-check-tag": {
+    "attributes": [
+      "checked",
+      "closable",
+      "content",
+      "default",
+      "disabled",
+      "icon",
+      "shape",
+      "size",
+      "variant",
+      "change",
+      "click",
+      "close"
+    ],
+    "description": "CheckTag\n\n可选标签\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag)"
+  },
   "t-col": {
     "attributes": [
       "offset",
@@ -288,9 +288,7 @@
   "t-color-picker": {
     "attributes": [
       "clearable",
-      "color-modes",
       "enable-alpha",
-      "enable-multiple-gradient",
       "fixed",
       "format",
       "swatch-colors",
@@ -663,8 +661,8 @@
       "autocomplete",
       "autofocus",
       "borderless",
-      "clear-trigger",
       "clearable",
+      "clear-trigger",
       "cursor-color",
       "disabled",
       "enterkeyhint",
@@ -1002,8 +1000,8 @@
       "action",
       "autocomplete-options",
       "center",
-      "clear-trigger",
       "clearable",
+      "clear-trigger",
       "cursor-color",
       "disabled",
       "focus",
@@ -1095,8 +1093,8 @@
   },
   "t-stepper": {
     "attributes": [
-      "disable-input",
       "disabled",
+      "disable-input",
       "input-width",
       "integer",
       "max",
@@ -1323,7 +1321,7 @@
   },
   "t-tree-select": {
     "attributes": [
-      "custom-value",
+      "custom-style",
       "height",
       "keys",
       "multiple",
