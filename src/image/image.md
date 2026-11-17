@@ -17,15 +17,15 @@ referrerpolicy | String | - | `<img>` 标签的原生属性，[MDN 定义](https
 shape | String | square | 图片圆角类型。可选项：circle/round/square | N
 src | String | - | 图片链接 | N
 srcset | Object | - | 图片链接集合，用于支持特殊格式的图片，如 `.avif` 和 `.webp`。会优先加载 `srcset` 中的图片格式，浏览器不支持的情况下，加载 `src` 设置的图片地址。TS 类型：`ImageSrcset` `interface ImageSrcset { 'image/avif': string; 'image/webp': string; }`。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image/type.ts) | N
-onError | Function |  | TS 类型：`(context: { e: ImageEvent }) => void`<br/>图片加载失败时触发 | N
-onLoad | Function |  | TS 类型：`(context: { e: ImageEvent }) => void`<br/>图片加载完成时触发 | N
+onError | Function |  | TS 类型：`(context: { e: ImageEvent }) => void`<br/>图片加载失败时触发。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+onLoad | Function |  | TS 类型：`(context: { e: ImageEvent }) => void`<br/>图片加载完成时触发。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 
 ### Image Events
 
 名称 | 参数 | 描述
 -- | -- | --
-error | `(context: { e: ImageEvent })` | 图片加载失败时触发
-load | `(context: { e: ImageEvent })` | 图片加载完成时触发
+error | `(context: { e: ImageEvent })` | 图片加载失败时触发。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)
+load | `(context: { e: ImageEvent })` | 图片加载完成时触发。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)
 
 ### CSS Variables
 

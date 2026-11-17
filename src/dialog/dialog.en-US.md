@@ -6,26 +6,26 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-actions | Array / Slot / Function | - | Typescript: `Array<ButtonProps>`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
+actions | Array / Slot / Function | - | Typescript: `Array<ButtonProps>`，[Button API Documents](./button?tab=api). [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
 beforeClose | Function | - | Typescript: `(trigger: 'confirm' \| 'cancel' \| 'overlay' \| 'close-btn', context: { e: MouseEvent }) => void \| Promise<void>` | N
 buttonLayout | String | horizontal | options: horizontal/vertical | N
-cancelBtn | String / Object / Slot / Function | - | Typescript: `string \| ButtonProps \| TNode \| null`，[Button API Documents](./button?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
+cancelBtn | String / Object / Slot / Function | - | Typescript: `string \| ButtonProps \| TNode \| null`，[Button API Documents](./button?tab=api). [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts). [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
 closeBtn | Boolean | false | \- | N
 closeOnOverlayClick | Boolean | false | \- | N
-confirmBtn | String / Object / Slot / Function | - | Typescript: `string \| ButtonProps \| TNode \| null`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-content | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+confirmBtn | String / Object / Slot / Function | - | Typescript: `string \| ButtonProps \| TNode \| null`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+content | String / Slot / Function | - | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 destroyOnClose | Boolean | false | \- | N
-middle | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-overlayProps | Object | {} | Typescript: `OverlayProps`，[Overlay API Documents](./overlay?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
+middle | Slot / Function | - | Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+overlayProps | Object | {} | Typescript: `OverlayProps`，[Overlay API Documents](./overlay?tab=api). [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts) | N
 preventScrollThrough | Boolean | true | \- | N
 showOverlay | Boolean | true | \- | N
-title | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-top | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+title | String / Slot / Function | - | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+top | Slot / Function | - | Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 visible | Boolean | - | \- | N
 width | String / Number | - | \- | N
 zIndex | Number | - | \- | N
 onCancel | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N
-onClose | Function |  | Typescript: `(context: DialogCloseContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/> | N
+onClose | Function |  | Typescript: `(context: DialogCloseContext) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts). <br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/> | N
 onClosed | Function |  | Typescript: `() => void`<br/> | N
 onConfirm | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N
 onOverlayClick | Function |  | Typescript: `(context: { e: MouseEvent }) => void`<br/> | N
@@ -35,7 +35,7 @@ onOverlayClick | Function |  | Typescript: `(context: { e: MouseEvent }) => void
 name | params | description
 -- | -- | --
 cancel | `(context: { e: MouseEvent })` | \-
-close | `(context: DialogCloseContext)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts)。<br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/>
+close | `(context: DialogCloseContext)` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dialog/type.ts). <br/>`type DialogEventSource = 'cancel' \| 'overlay' \| 'close-btn'`<br/><br/>`interface DialogCloseContext { trigger: DialogEventSource; e: MouseEvent }`<br/>
 closed | \- | \-
 confirm | `(context: { e: MouseEvent })` | \-
 overlay-click | `(context: { e: MouseEvent })` | \-
@@ -45,7 +45,7 @@ overlay-click | `(context: { e: MouseEvent })` | \-
 name | type | default | description | required
 -- | -- | -- | -- | --
 className | String | - | \- | N
-style | String / Object | - | Typescript: `string \| Styles`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+style | String / Object | - | Typescript: `string \| Styles`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 `Omit<DialogProps, 'attach'>` | \- | - | extends `Omit<DialogProps, 'attach'>` | N
 
 ### DialogInstance

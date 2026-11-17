@@ -4,18 +4,17 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdSideBarProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdSideBarProps } from './type';
 export default {
   /** 选项值 */
   value: {
     type: [String, Number] as PropType<TdSideBarProps['value']>,
-    default: undefined,
+    default: undefined as TdSideBarProps['value'],
   },
   modelValue: {
     type: [String, Number] as PropType<TdSideBarProps['value']>,
-    default: undefined,
+    default: undefined as TdSideBarProps['value'],
   },
   /** 选项值，非受控属性 */
   defaultValue: {

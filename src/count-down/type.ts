@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdCountDownProps {
   /**
@@ -44,6 +44,7 @@ export interface TdCountDownProps {
   theme?: 'default' | 'round' | 'square';
   /**
    * 倒计时时长，单位毫秒
+   * @default 0
    */
   time: number;
   /**

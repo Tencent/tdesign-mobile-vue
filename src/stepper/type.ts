@@ -4,18 +4,18 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { SizeEnum } from '../common';
+import type { SizeEnum } from '../common';
 
 export interface TdStepperProps {
+  /**
+   * 禁用全部操作
+   */
+  disabled?: boolean;
   /**
    * 禁用输入框
    * @default false
    */
   disableInput?: boolean;
-  /**
-   * 禁用全部操作
-   */
-  disabled?: boolean;
   /**
    * 输入框宽度
    */
