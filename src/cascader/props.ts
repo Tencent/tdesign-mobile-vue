@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdCascaderProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdCascaderProps } from './type';
 export default {
   /** 父子节点选中状态不再关联，可各自选中或取消 */
   checkStrictly: Boolean,
@@ -19,13 +18,13 @@ export default {
   filter: {
     type: Function as PropType<TdCascaderProps['filter']>,
   },
+  /** 是否可搜索，开启后顶部会展示一个搜索框  */
+  filterable: Boolean,
   /** 搜索框占位符描述文本 */
   filterPlaceholder: {
     type: String,
     default: '',
   },
-  /** 是否可搜索，开启后顶部会展示一个搜索框  */
-  filterable: Boolean,
   /** 头部 */
   header: {
     type: Function as PropType<TdCascaderProps['header']>,

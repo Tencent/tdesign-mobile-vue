@@ -91,6 +91,9 @@ export default defineComponent({
       disabled: props.keys?.disabled ?? 'disabled',
     }));
 
+    // 判断是否显示搜索视图
+    const isSearchActive = computed(() => props.filterable && isSearching.value);
+
     // 展平所有路径
     const flattenPaths = (
       options: TreeOptionData[],
@@ -170,7 +173,7 @@ export default defineComponent({
         .map((node) => String(node?.[labelKey] ?? ''))
         .join('')
         .toLowerCase();
-      const text = String(path[path.length - 1]?.[labelKey] ?? '').toLowerCase();
+      const text = String(path[path.length - 1]?.text ?? '').toLowerCase();
       return joined.includes(lower) || (!!text && text.includes(lower));
     };
 
@@ -192,9 +195,10 @@ export default defineComponent({
         if (!props.checkStrictly && !entry.isLeaf) return;
 
         const leaf = entry.path[entry.path.length - 1];
-        const matched = userFilter
-          ? !!userFilter(keyword, leaf, entry.path)
-          : defaultFilterFn(keyword, leaf, entry.path);
+        const matched =
+          typeof userFilter === 'function'
+            ? !!userFilter(keyword, leaf, entry.path)
+            : defaultFilterFn(keyword, leaf, entry.path);
 
         if (matched) {
           results.push({
@@ -482,6 +486,9 @@ export default defineComponent({
     };
 
     const close = (trigger: CascaderTriggerSource) => {
+      if (filterDebouncedRef.value) {
+        clearTimeout(filterDebouncedRef.value);
+      }
       resetFilter();
       props.onClose?.(trigger);
     };
@@ -675,7 +682,7 @@ export default defineComponent({
           <div class={`${cascaderClass.value}__filter`}>
             <Search
               value={searchKeyword.value}
-              placeholder={props.filterPlaceholder || '搜索'}
+              placeholder={props.filterPlaceholder || globalConfig.value.filterPlaceholder}
               clearable
               onChange={handleFilterChange}
               onClear={handleFilterClear}
@@ -691,7 +698,7 @@ export default defineComponent({
         if (searchResults.value.length === 0) {
           return (
             <div class={`${cascaderClass.value}__filter-empty`}>
-              <span>{(globalConfig.value as any).empty || '暂无搜索结果'}</span>
+              <span>{globalConfig.value.empty}</span>
             </div>
           );
         }
@@ -717,9 +724,6 @@ export default defineComponent({
           </div>
         );
       };
-
-      // 判断是否显示搜索视图
-      const isSearchActive = computed(() => props.filterable && isSearching.value);
 
       return (
         <TPopup
@@ -751,7 +755,7 @@ export default defineComponent({
                   >
                     {items.value.map((options, index) => {
                       return (
-                        <div class={`${cascaderClass.value}__options`}>
+                        <div key={`cascader-option-${index}`} class={`${cascaderClass.value}__options`}>
                           <Transition appear name="slide">
                             <div class={`${cascaderClass.value}-radio-group-${index}`}>
                               <TRadioGroup
