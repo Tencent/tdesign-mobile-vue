@@ -30,8 +30,10 @@ export default defineComponent({
     const leafLevel = ref(0);
     const treeMaxLevel = ref(0);
     const treeOptions = ref<TreeOptionData<string | number>[][]>([]);
-    // 当前渲染路径上每一级实际展示的值，用于补全初始值为空时缺失的父级值
-    const treePath = ref<TreeSelectValue[]>([]);
+    // 当前渲染路径上每一级实际展示的值，用于补全初始值为空时缺失的父级值。
+    // 这里存的是叶子节点的 value（string | number），不能用递归的 TreeSelectValue，
+    // 否则 ref 的类型解包会无限递归（TS2589）。
+    const treePath = ref<Array<string | number>>([]);
     const rootStyle = computed(() => [`height: ${convertUnit(height.value)}`, customStyle.value].join(';'));
 
     const buildTreeOptions = () => {
@@ -39,7 +41,7 @@ export default defineComponent({
 
       let level = -1;
       const tmpTreeOptions: TreeOptionData<string | number>[][] = [];
-      const tmpTreePath: TreeSelectValue[] = [];
+      const tmpTreePath: Array<string | number> = [];
       const valueKey = keys?.value || 'value';
       let node: TreeOptionData<string | number> = { children: options as TreeOptionData<string | number>[] };
       if (options.length === 0 || (Array.isArray(value) && value.length === 0)) return;
