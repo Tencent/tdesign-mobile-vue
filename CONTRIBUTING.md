@@ -4,24 +4,24 @@
 
 ## 开发
 
-建议使用 node 18 版本进行开发
+建议使用 node 18 版本进行开发，并使用 pnpm（仓库已通过 package.json 的 packageManager 字段锁定为 pnpm@10.2.0）。
 
 ### 1.初始化子仓库
 
 ```bash
-npm run init
+pnpm run init
 ```
 
 ### 2.安装依赖
 
 ```bash
-npm i
+pnpm install
 ```
 
 ### 3.本地开发
 
 ```bash
-npm run start
+pnpm run start
 ```
 
 完成以上 3 个步骤，浏览器访问 <http://127.0.0.1:18000> 即可调该框架的任何内容
