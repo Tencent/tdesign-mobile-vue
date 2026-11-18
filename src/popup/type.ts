@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { OverlayProps } from '../overlay';
+import type { OverlayProps } from '../overlay';
 import type { TNode, AttachNode } from '../common';
 
 export interface TdPopupProps {
@@ -32,6 +32,10 @@ export interface TdPopupProps {
    * @default 240
    */
   duration?: number;
+  /**
+   * 顶部和底部弹出层的最大宽度，设置后水平居中。数字单位为 px，支持 CSS 长度字符串。不设置时保持原有布局
+   */
+  maxWidth?: string | number;
   /**
    * 遮罩层的属性，透传至 overlay
    * @default {}

@@ -12,6 +12,9 @@
     <tdesign-demo-block title="03 嵌套弹窗" summary="多层 Popup 嵌套使用">
       <nestedDemo />
     </tdesign-demo-block>
+    <tdesign-demo-block title="04 宽屏适配" summary="自定义最大宽度">
+      <maxWidthDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -20,6 +23,7 @@ import baseDemo from './base.vue';
 import withTitle from './with-title.vue';
 import customClose from './custom-close.vue';
 import nestedDemo from './nested.vue';
+import maxWidthDemo from './max-width.vue';
 </script>
 
 <style lang="less">

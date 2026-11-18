@@ -5,6 +5,7 @@
 import { mount } from '@vue/test-utils';
 import baseVue from '@/popup/demos/base.vue';
 import customCloseVue from '@/popup/demos/custom-close.vue';
+import maxWidthVue from '@/popup/demos/max-width.vue';
 import mobileVue from '@/popup/demos/mobile.vue';
 import nestedVue from '@/popup/demos/nested.vue';
 import withTitleVue from '@/popup/demos/with-title.vue';
@@ -12,6 +13,7 @@ import withTitleVue from '@/popup/demos/with-title.vue';
 const mapper = {
   baseVue,
   customCloseVue,
+  maxWidthVue,
   mobileVue,
   nestedVue,
   withTitleVue,
