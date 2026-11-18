@@ -39,10 +39,8 @@ export const getOptions = (props: any, slots: Slots) => {
 
   // 从 slot 中解析 checkbox 选项列表
   const updateOptionListBySlots = () => {
-    const nodes = slots.default && slots.default();
-    if (nodes !== undefined) {
-      optionList.value = getOptionListBySlots(useChildSlots('TCheckbox'));
-    }
+    if (!slots.default) return;
+    optionList.value = getOptionListBySlots(useChildSlots('TCheckbox'));
   };
 
   // 挂载时初始化

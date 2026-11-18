@@ -7,6 +7,7 @@
 名称 | 类型 | 默认值 | 描述 | 必传
 -- | -- | -- | -- | --
 customStyle | String | - | 自定义组件样式 | N
+customValue | String / Number / Array | - | `1.17.2`。自定义选中值，优先级高于 `value`。TS 类型：`TreeSelectValue` | N
 height | String / Number | 336 | 高度，默认单位为 px | N
 keys | Object | - | 用来定义 `value / label / disabled / children` 在 `options` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }`。TS 类型：`TreeKeysType`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 multiple | Boolean | false | 是否允许多选 | N

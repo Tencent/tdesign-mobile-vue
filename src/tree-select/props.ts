@@ -12,6 +12,10 @@ export default {
     type: String,
     default: '',
   },
+  /** 自定义选中值，优先级高于 `value` */
+  customValue: {
+    type: [String, Number, Array] as PropType<TdTreeSelectProps['customValue']>,
+  },
   /** 高度，默认单位为 px */
   height: {
     type: [String, Number] as PropType<TdTreeSelectProps['height']>,
