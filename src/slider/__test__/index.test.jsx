@@ -147,6 +147,20 @@ describe('slider', () => {
       // // restore
       window.HTMLElement.prototype.getBoundingClientRect = original;
     });
+
+    it(': range', () => {
+      // renders without throwing when range is set and no value is given
+      let wrapper = mount(Slider, { props: { range: true } });
+      expect(wrapper.find(`.${classPrefix}`).exists()).toBe(true);
+
+      // defaults to the full range when range is set and no value is given
+      wrapper = mount(Slider, { props: { range: true, min: 10, max: 60 } });
+      expect(wrapper.findAll(`.${classPrefix}__dot`).length).toBe(2);
+
+      // keeps an explicit array defaultValue
+      wrapper = mount(Slider, { props: { range: true, defaultValue: [20, 30] } });
+      expect(wrapper.find(`.${classPrefix}`).exists()).toBe(true);
+    });
   });
 
   describe('event', () => {
