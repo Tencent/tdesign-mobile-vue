@@ -1,4 +1,4 @@
-import { ref, computed, watch, onBeforeUnmount, Ref } from 'vue';
+import { ref, computed, watch, toRefs, onBeforeUnmount, Ref } from 'vue';
 import { get } from 'lodash-es';
 import type { MoveEvent, Options, SortableEvent } from 'sortablejs';
 import Sortable from 'sortablejs';
@@ -25,20 +25,21 @@ interface DragSortOptions {
 }
 
 function useDragSort(props: TdPrimaryTableProps, options: DragSortOptions) {
-  const { dragSort, data, onDragSort } = props;
+  // 使用 toRefs 保持 props 响应性
+  const { dragSort, data } = toRefs(props);
   const { primaryTableRef, innerPagination } = options;
 
   const { tableDraggableClasses, tableExpandClasses, tableBaseClass, tableFullRowClasses } = useClassName();
 
   const columns = ref<DragColumn[]>((props.columns || []) as unknown as DragColumn[]);
   const dragCol = computed(() => columns.value.find((item) => item.colKey === 'drag'));
-  const isRowDraggable = computed(() => dragSort === 'row');
+  const isRowDraggable = computed(() => dragSort.value === 'row');
   const isRowHandlerDraggable = computed(
-    () => ['row-handler', 'row-handler-col'].includes(dragSort || '') && !!dragCol.value,
+    () => ['row-handler', 'row-handler-col'].includes(dragSort.value || '') && !!dragCol.value,
   );
-  const isColDraggable = computed(() => ['col', 'row-handler-col'].includes(dragSort || ''));
+  const isColDraggable = computed(() => ['col', 'row-handler-col'].includes(dragSort.value || ''));
 
-  let tData: TableRowData[] = data || [];
+  let tData: TableRowData[] = data.value || [];
   const dragRowInstance = ref<Sortable | null>(null);
   const dragColInstance = ref<Sortable | null>(null);
   const trIdList = ref<string[]>([]);
@@ -73,7 +74,7 @@ function useDragSort(props: TdPrimaryTableProps, options: DragSortOptions) {
   const getDataPageIndex = (index: number, pagination: PaginationProps) => {
     const current = pagination.current ?? pagination.defaultCurrent;
     const pageSize = pagination.pageSize ?? pagination.defaultPageSize;
-    if (pagination && data.length > pageSize) {
+    if (pagination && data.value.length > pageSize) {
       return pageSize * (current - 1) + index;
     }
     return index;
@@ -243,9 +244,9 @@ function useDragSort(props: TdPrimaryTableProps, options: DragSortOptions) {
           };
           params.currentData = params.newData;
 
-          if (onDragSort) {
+          if (props.onDragSort) {
             dragRowInstance.value?.sort(trIdList.value);
-            onDragSort(params);
+            props.onDragSort(params);
           } else {
             tData = newData;
             updateLastRowList();
@@ -308,7 +309,7 @@ function useDragSort(props: TdPrimaryTableProps, options: DragSortOptions) {
           sort: 'col',
         };
         params.currentData = params.newData;
-        onDragSort?.(params);
+        props.onDragSort?.(params);
       },
       ...props.dragSortOptions,
     };
@@ -341,7 +342,7 @@ function useDragSort(props: TdPrimaryTableProps, options: DragSortOptions) {
   };
 
   watch(
-    () => data,
+    data,
     (newData) => {
       tData = newData || [];
       updateLastRowList();
@@ -360,15 +361,16 @@ function useDragSort(props: TdPrimaryTableProps, options: DragSortOptions) {
     { immediate: true },
   );
 
+  // flush: 'post' 确保在 DOM 更新提交后再注册，避免在行/表头渲染前绑定导致失效
   watch(
-    () => [columns.value, dragSort, innerPagination.value, primaryTableRef.value],
+    () => [columns.value, dragSort.value, innerPagination.value, primaryTableRef.value],
     () => {
       if (!primaryTableRef.value) return;
       cleanupSortableInstances();
       registerRowDragEvent(primaryTableRef.value.tableElement);
       registerColDragEvent(primaryTableRef.value.tableHtmlElement);
     },
-    { immediate: true },
+    { immediate: true, flush: 'post' },
   );
 
   onBeforeUnmount(() => {
