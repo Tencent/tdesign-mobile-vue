@@ -73,7 +73,10 @@ const globalColumns = [
   },
 ];
 
-const singleSelectColumns = ref([{ colKey: 'row-select', type: 'single', width: 30 }, ...globalColumns]);
+const singleSelectColumns = ref([
+  { colKey: 'row-select', type: 'single', width: 30, checkProps: { allowUncheck: true } },
+  ...globalColumns,
+]);
 
 const multipleSelectColumns = ref([{ colKey: 'row-select', type: 'multiple', width: 30 }, ...globalColumns]);
 

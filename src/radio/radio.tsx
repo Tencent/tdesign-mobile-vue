@@ -96,6 +96,7 @@ export default defineComponent({
       if (isDisabled.value || isReadonly.value) {
         return;
       }
+      e.stopPropagation();
       if (rootGroupChange) {
         const value = finalAllowUncheck.value && radioChecked.value ? undefined : props.value;
         rootGroupChange(value, { e, name: props.name });
