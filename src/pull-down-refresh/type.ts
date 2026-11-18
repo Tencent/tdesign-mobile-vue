@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { LoadingProps } from '../loading';
+import type { LoadingProps } from '../loading';
 
 export interface TdPullDownRefreshProps {
   /**
@@ -36,6 +36,11 @@ export interface TdPullDownRefreshProps {
    * @default 3000
    */
   refreshTimeout?: number;
+  /**
+   * 刷新成功提示展示时长，单位 'ms'
+   * @default 500
+   */
+  successDuration?: string | number;
   /**
    * 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态
    * @default false

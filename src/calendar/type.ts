@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { ButtonProps } from '../button';
-import { TNode } from '../common';
+import type { ButtonProps } from '../button';
+import type { TNode } from '../common';
 
 export interface TdCalendarProps {
   /**
@@ -59,15 +59,15 @@ export interface TdCalendarProps {
    */
   usePopup?: boolean;
   /**
-   * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组
+   * 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组
    */
   value?: CalendarValue;
   /**
-   * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组，非受控属性
+   * 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组，非受控属性
    */
   defaultValue?: CalendarValue;
   /**
-   * 当前选择的日期，不传则默认今天，当 type = multiple 或 range 时传入数组
+   * 当前选择的日期，不传则选用 minDate 属性值或今天，优先级：minDate > today。当 type = multiple 或 range 时传入数组
    */
   modelValue?: CalendarValue;
   /**
@@ -118,4 +118,4 @@ export type CalendarValue = TCalendarValue | TCalendarValue[];
 
 export type TCalendarValue = number | Date;
 
-export type CalendarTrigger = 'close-btn' | 'confirm-btn' | 'overlay';
+export type CalendarTrigger = 'close-btn' | 'confirm-btn' | 'overlay' | 'auto-close';

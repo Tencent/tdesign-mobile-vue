@@ -4,17 +4,16 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdStepperProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdStepperProps } from './type';
 export default {
-  /** 禁用输入框 */
-  disableInput: Boolean,
   /** 禁用全部操作 */
   disabled: {
     type: Boolean,
     default: undefined,
   },
+  /** 禁用输入框 */
+  disableInput: Boolean,
   /** 输入框宽度 */
   inputWidth: {
     type: Number,

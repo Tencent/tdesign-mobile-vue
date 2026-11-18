@@ -6,19 +6,19 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-closeBtn | Boolean / Slot / Function | true | Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-cover | Slot / Function | - | `1.12.0`。Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-deleteBtn | Boolean / Slot / Function | false | Typescript: `boolean \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-image | Slot / Function | - | `1.12.0`。Typescript: `TNode<ImageSlotParams>` `interface ImageSlotParams {src: string; index?: number;  extra?: Record<string, any>; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} `。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts) | N
-images | Array | [] | Typescript: `Array<string \| ImageInfo>` `interface ImageInfo { url: string; align: 'start' \| 'center' \| 'end'; extra?: Record<string, any>}`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts) | N
+closeBtn | Boolean / Slot / Function | true | Typescript: `boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+cover | Slot / Function | - | `1.12.0`. Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+deleteBtn | Boolean / Slot / Function | false | Typescript: `boolean \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+image | Slot / Function | - | `1.12.0`. Typescript: `TNode<ImageSlotParams>` `interface ImageSlotParams {src: string; index?: number; extra?: Record<string, any>; className?: string; style?: string; onLoad?: (e: Event) => void; onTransitionstart?: (e: TransitionEvent) => void; onTransitionend?: (e: TransitionEvent) => void;} `. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts). [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts) | N
+images | Array | [] | Typescript: `Array<string \| ImageInfo>` `interface ImageInfo { url: string; align: 'start' \| 'center' \| 'end'; extra?: Record<string, any>}`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts) | N
 index | Number | - | `v-model:index` is supported | N
 defaultIndex | Number | - | uncontrolled property | N
 loop | Boolean | true | \- | N
 maxZoom | Number | 3 | \- | N
 showIndex | Boolean | false | \- | N
-visible | Boolean | false | hide or show image viewer。`v-model` and `v-model:visible` is supported | N
-defaultVisible | Boolean | false | hide or show image viewer。uncontrolled property | N
-onClose | Function |  | Typescript: `(context: { trigger: ImageViewerCloseTrigger, visible: boolean, index: number }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts)。<br/>`type ImageViewerCloseTrigger = 'image' \| 'overlay' \| 'close-btn'`<br/> | N
+visible | Boolean | false | hide or show image viewer. `v-model` and `v-model:visible` is supported | N
+defaultVisible | Boolean | false | hide or show image viewer. uncontrolled property | N
+onClose | Function |  | Typescript: `(context: { trigger: ImageViewerCloseTrigger, visible: boolean, index: number }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts). <br/>`type ImageViewerCloseTrigger = 'image' \| 'overlay' \| 'close-btn'`<br/> | N
 onDelete | Function |  | Typescript: `(index: number) => void`<br/> | N
 onIndexChange | Function |  | Typescript: `(index: number, context: { trigger: 'prev' \| 'next' }) => void`<br/> | N
 
@@ -26,7 +26,7 @@ onIndexChange | Function |  | Typescript: `(index: number, context: { trigger: '
 
 name | params | description
 -- | -- | --
-close | `(context: { trigger: ImageViewerCloseTrigger, visible: boolean, index: number })` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts)。<br/>`type ImageViewerCloseTrigger = 'image' \| 'overlay' \| 'close-btn'`<br/>
+close | `(context: { trigger: ImageViewerCloseTrigger, visible: boolean, index: number })` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts). <br/>`type ImageViewerCloseTrigger = 'image' \| 'overlay' \| 'close-btn'`<br/>
 delete | `(index: number)` | \-
 index-change | `(index: number, context: { trigger: 'prev' \| 'next' })` | \-
 
@@ -34,7 +34,7 @@ index-change | `(index: number, context: { trigger: 'prev' \| 'next' })` | \-
 
 name | params | return | description
 -- | -- | -- | --
-swipeTo | `(index: number, options?: SwiperToOptions)` | \- | `1.13.2`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts)。<br/>`import { SwiperToOptions } from '@Swiper'`<br/>
+swipeTo | `(index: number, options?: SwiperToOptions)` | \- | `1.13.2`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/image-viewer/type.ts). <br/>`import { SwiperToOptions } from '@Swiper'`<br/>
 
 ### CSS Variables
 

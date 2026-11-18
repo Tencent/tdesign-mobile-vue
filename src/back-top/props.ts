@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdBackTopProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdBackTopProps } from './type';
 export default {
   /** 滚动的容器 */
   container: {
@@ -20,7 +19,7 @@ export default {
   /** 图标 */
   icon: {
     type: [Boolean, Function] as PropType<TdBackTopProps['icon']>,
-    default: true,
+    default: true as TdBackTopProps['icon'],
   },
   /** 定位滚动到指定对象 */
   target: {

@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdStepsProps {
   /**
@@ -56,10 +56,14 @@ export interface TdStepItemProps {
    */
   content?: string | TNode;
   /**
+   * 步骤条自定义内容
+   */
+  extra?: string | TNode;
+  /**
    * 图标，默认显示内置图标，也可以自定义图标，值为 false 则不显示图标。优先级大于 `status` 定义的图标
    * @default true
    */
-  icon?: TNode;
+  icon?: boolean | TNode;
   /**
    * 当前步骤的状态：默认状态（未开始）、进行中状态、完成状态、错误状态
    * @default default

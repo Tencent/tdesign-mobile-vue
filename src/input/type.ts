@@ -4,7 +4,7 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TNode } from '../common';
+import type { TNode } from '../common';
 
 export interface TdInputProps {
   /**
@@ -32,15 +32,15 @@ export interface TdInputProps {
    */
   borderless?: boolean;
   /**
-   * 清空图标触发方式，仅在输入框有值时有效
-   * @default always
-   */
-  clearTrigger?: 'always' | 'focus';
-  /**
    * 是否可清空
    * @default false
    */
   clearable?: boolean;
+  /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
   /**
    * 光标颜色
    * @default #0052d9
@@ -144,7 +144,7 @@ export interface TdInputProps {
    */
   onChange?: (
     value: InputValue,
-    context?: { e?: InputEvent | MouseEvent | CompositionEvent; trigger: 'input' | 'initial' | 'clear' },
+    context?: { e?: InputEvent | MouseEvent | CompositionEvent; trigger: 'input' | 'initial' | 'clear' | 'blur' },
   ) => void;
   /**
    * 清空按钮点击时触发

@@ -5,7 +5,8 @@ import TCheckbox, { CheckboxGroup as TCheckboxGroup } from '../checkbox';
 import { convertUnit } from '../shared';
 import log from '../_common/js/log';
 import props from './props';
-import { TdTreeSelectProps, TreeSelectValue, _TreeOptionData } from './type';
+import { TdTreeSelectProps, TreeSelectValue } from './type';
+import type { TreeOptionData } from '../common';
 import { usePrefixClass } from '../hooks/useClass';
 import useVModel from '../hooks/useVModel';
 
@@ -28,25 +29,27 @@ export default defineComponent({
 
     const leafLevel = ref(0);
     const treeMaxLevel = ref(0);
-    const treeOptions = ref<_TreeOptionData[][]>([]);
+    const treeOptions = ref<TreeOptionData<string | number>[][]>([]);
     const rootStyle = computed(() => [`height: ${convertUnit(height.value)}`, customStyle.value].join(';'));
 
     const buildTreeOptions = () => {
       const { options, multiple, keys } = props;
 
       let level = -1;
-      const tmpTreeOptions: _TreeOptionData[][] = [];
-      let node: _TreeOptionData = { children: options };
+      const tmpTreeOptions: TreeOptionData<string | number>[][] = [];
+      let node: TreeOptionData<string | number> = { children: options as TreeOptionData<string | number>[] };
       if (options.length === 0 || (Array.isArray(value) && value.length === 0)) return;
       while (node && node.children) {
         level += 1;
-        const list = (node.children as _TreeOptionData[]).map((item: _TreeOptionData) => ({
-          label: item[keys?.label || 'label'],
-          value: item[keys?.value || 'value'],
-          disabled: item[keys?.disabled || 'disabled'],
-          children: item[keys?.children || 'children'],
-          level: leafLevel.value,
-        }));
+        const list = (node.children as TreeOptionData<string | number>[]).map(
+          (item: TreeOptionData<string | number>) => ({
+            label: item[keys?.label || 'label'],
+            value: item[keys?.value || 'value'],
+            disabled: item[keys?.disabled || 'disabled'],
+            children: item[keys?.children || 'children'],
+            level: leafLevel.value,
+          }),
+        );
         const thisValue = (innerValue.value as TreeSelectValueGroup)?.[level];
 
         tmpTreeOptions.push([...list]);
@@ -99,7 +102,7 @@ export default defineComponent({
       { immediate: true, deep: true },
     );
 
-    const renderSideBar = (treeOption: _TreeOptionData[]) => {
+    const renderSideBar = (treeOption: TreeOptionData<string | number>[]) => {
       return (
         <TSideBar
           v-model={(innerValue.value as TreeSelectValueGroup)[0]}
@@ -107,13 +110,18 @@ export default defineComponent({
           onChange={() => onRootChange(0)}
         >
           {treeOption.map((item, index) => (
-            <TSideBarItem key={index} label={item.label} value={item.value} disabled={item.disabled}></TSideBarItem>
+            <TSideBarItem
+              key={index}
+              label={item.label as string}
+              value={item.value}
+              disabled={item.disabled}
+            ></TSideBarItem>
           ))}
         </TSideBar>
       );
     };
 
-    const renderMiddleLevel = (treeOption: _TreeOptionData[], level: number) => {
+    const renderMiddleLevel = (treeOption: TreeOptionData<string | number>[], level: number) => {
       return treeOption.map((item) => (
         <div
           key={item.value}
@@ -130,7 +138,7 @@ export default defineComponent({
       ));
     };
 
-    const renderLeafLevel = (treeOption: _TreeOptionData[], level: number) => {
+    const renderLeafLevel = (treeOption: TreeOptionData<string | number>[], level: number) => {
       if (multiple.value) {
         return (
           <TCheckboxGroup
