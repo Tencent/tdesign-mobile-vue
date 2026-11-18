@@ -10,14 +10,14 @@
     <tdesign-demo-block summary="横向平铺可滚动表格" :padding="true">
       <scrollDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="带斑马纹表格样式" :padding="true">
+    <tdesign-demo-block title="02 组件状态" summary="单元格超出省略的表格" :padding="true">
+      <ellipsisDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block title="03 组件样式" summary="带斑马纹表格样式" :padding="true">
       <stripeDemo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="带边框表格样式" :padding="true">
       <borderedDemo />
-    </tdesign-demo-block>
-    <tdesign-demo-block summary="单元格超出省略的表格" :padding="true">
-      <ellipsisDemo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="可自定义样式的表格" :padding="true">
       <customRowStyle />
@@ -45,11 +45,11 @@ import baseDemo from './base.vue';
 import scrollDemo from './scroll.vue';
 import stripeDemo from './stripe.vue';
 import borderedDemo from './bordered.vue';
+import ellipsisDemo from './ellipsis.vue';
 import customRowStyle from './custom-row-style.vue';
 import rowspanColspan from './rowspan-colspan.vue';
 import dragSortDemo from './drag-sort.vue';
 import loadingDemo from './loading.vue';
 import selectDemo from './select.vue';
 import filterSortDemo from './filter-sort.vue';
-import ellipsisDemo from './ellipsis.vue';
 </script>
