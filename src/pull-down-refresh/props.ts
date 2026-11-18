@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdPullDownRefreshProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdPullDownRefreshProps } from './type';
 export default {
   /** 是否禁用下拉刷新 */
   disabled: Boolean,
@@ -33,6 +32,11 @@ export default {
   refreshTimeout: {
     type: Number,
     default: 3000,
+  },
+  /** 刷新成功提示展示时长，单位 'ms' */
+  successDuration: {
+    type: [String, Number] as PropType<TdPullDownRefreshProps['successDuration']>,
+    default: 500 as TdPullDownRefreshProps['successDuration'],
   },
   /** 组件状态，值为 `true` 表示下拉状态，值为 `false` 表示收起状态 */
   value: {

@@ -1,13 +1,17 @@
-import BaseTable from './base-table';
+import _BaseTable from './base-table';
+import _PrimaryTable from './primary-table';
 import { withInstall } from '../shared';
 
 import './style';
-import { TdBaseTableProps } from './type';
+import { TdPrimaryTableProps } from './type';
 
-export type TableProps = TdBaseTableProps;
+export type TableProps = TdPrimaryTableProps;
 
 export * from './type';
 export * from './interface';
 
-export const Table = withInstall(BaseTable, 'TTable');
+export const BaseTable = withInstall(_BaseTable, 'TBaseTable');
+export const PrimaryTable = withInstall(_PrimaryTable, 'TTable');
+export const Table = PrimaryTable;
+
 export default Table;

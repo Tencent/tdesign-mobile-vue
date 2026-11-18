@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdIconfontProps } from '../icon/type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdIconFontProps } from './type';
 export default {
   /** 是否加载组件库内置图标 */
   loadDefaultIcons: {
@@ -31,8 +30,8 @@ export default {
   },
   /** 图标地址，地址内容参考[组件内部默认加载图标](https://tdesign.gtimg.com/icon/web/index.css)。也可以在 index.html 中引入图标地址 */
   url: {
-    type: [String, Array] as PropType<TdIconfontProps['url']>,
+    type: [String, Array] as PropType<TdIconFontProps['url']>,
   },
   /** 点击时触发 */
-  onClick: Function as PropType<TdIconfontProps['onClick']>,
+  onClick: Function as PropType<TdIconFontProps['onClick']>,
 };

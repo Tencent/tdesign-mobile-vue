@@ -22,22 +22,22 @@ export interface TdSearchProps {
    */
   center?: boolean;
   /**
-   * 清空图标触发方式，仅在输入框有值时有效
-   * @default always
-   */
-  clearTrigger?: 'always' | 'focus';
-  /**
    * 是否可清空
    * @default true
    */
   clearable?: boolean;
+  /**
+   * 清空图标触发方式，仅在输入框有值时有效
+   * @default always
+   */
+  clearTrigger?: 'always' | 'focus';
   /**
    * 光标颜色
    * @default #0052d9
    */
   cursorColor?: string;
   /**
-   * 是否禁用。优先级：Search.disabled > Form.disabled
+   * 禁用状态
    */
   disabled?: boolean;
   /**

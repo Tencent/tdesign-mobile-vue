@@ -4,9 +4,9 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { BadgeProps } from '../badge';
-import { ImageProps } from '../image';
-import { TNode, ShapeEnum } from '../common';
+import type { BadgeProps } from '../badge';
+import type { ImageProps } from '../image';
+import type { TNode, ShapeEnum } from '../common';
 
 export interface TdAvatarProps {
   /**

@@ -6,30 +6,30 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-globalConfig | Object | - | global config。Typescript: `GlobalConfigProvider` | N
+globalConfig | Object | - | global config. Typescript: `GlobalConfigProvider` | N
 
 ### GlobalConfigProvider
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-actionSheet | Object | - | ActionSheet global configs。Typescript: `ActionSheetConfig` | N
-calendar | Object | - | Calendar global configs。Typescript: `CalendarConfig` | N
-cascader | Object | - | Cascader global configs。Typescript: `CascaderConfig` | N
+actionSheet | Object | - | ActionSheet global configs. Typescript: `ActionSheetConfig` | N
+calendar | Object | - | Calendar global configs. Typescript: `CalendarConfig` | N
+cascader | Object | - | Cascader global configs. Typescript: `CascaderConfig` | N
 classPrefix | String | t | \- | N
-comment | Object | - | Comment global configs。Typescript: `CommentConfig` | N
-dateTimePicker | Object | - | DateTimePicker global configs。Typescript: `DateTimePickerConfig` | N
-dropdownMenu | Object | - | DropdownMenu global configs。Typescript: `DropdownMenuConfig` | N
-form | Object | - | Form global configs。Typescript: `FormConfig` | N
-guide | Object | - | Guide global configs。Typescript: `GuideConfig` | N
-list | Object | - | List global configs。Typescript: `ListConfig` | N
-picker | Object | - | Picker global configs。Typescript: `PickerConfig` | N
-pullDownRefresh | Object | - | PullDownRefresh global configs。Typescript: `PullDownRefreshConfig` | N
-qrcode | Object | - | QRCode global configs。Typescript: `QRCodeConfig` | N
-rate | Object | - | Rate global configs。Typescript: `RateConfig` | N
-tabBar | Object | - | TabBar global configs。Typescript: `TabBarConfig` | N
-table | Object | - | Table global configs。Typescript: `TableConfig` | N
-typography | Object | - | Typography global configs。Typescript: `TypographyConfig` | N
-upload | Object | - | Upload global configs。Typescript: `UploadConfig` | N
+comment | Object | - | Comment global configs. Typescript: `CommentConfig` | N
+dateTimePicker | Object | - | DateTimePicker global configs. Typescript: `DateTimePickerConfig` | N
+dropdownMenu | Object | - | DropdownMenu global configs. Typescript: `DropdownMenuConfig` | N
+form | Object | - | Form global configs. Typescript: `FormConfig` | N
+guide | Object | - | Guide global configs. Typescript: `GuideConfig` | N
+list | Object | - | List global configs. Typescript: `ListConfig` | N
+picker | Object | - | Picker global configs. Typescript: `PickerConfig` | N
+pullDownRefresh | Object | - | PullDownRefresh global configs. Typescript: `PullDownRefreshConfig` | N
+qrcode | Object | - | QRCode global configs. Typescript: `QRCodeConfig` | N
+rate | Object | - | Rate global configs. Typescript: `RateConfig` | N
+tabBar | Object | - | TabBar global configs. Typescript: `TabBarConfig` | N
+table | Object | - | Table global configs. Typescript: `TableConfig` | N
+typography | Object | - | Typography global configs. Typescript: `TypographyConfig` | N
+upload | Object | - | Upload global configs. Typescript: `UploadConfig` | N
 
 ### ActionSheetConfig
 
@@ -42,8 +42,8 @@ cancel | String | - | cancel text | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 confirm | String | - | confirm text | N
-monthTitle | String | - | \- | N
 months | Array | - | Typescript: `string[]` | N
+monthTitle | String | - | \- | N
 title | String | - | \- | N
 weekdays | Array | - | Typescript: `string[]` | N
 
@@ -51,6 +51,8 @@ weekdays | Array | - | Typescript: `string[]` | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
+empty | String | - | \- | N
+filterPlaceholder | String | - | \- | N
 placeholder | String | - | \- | N
 title | String | - | \- | N
 
@@ -58,8 +60,8 @@ title | String | - | \- | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-collapseText | String | - | \- | N
 collapsedText | String | - | \- | N
+collapseText | String | - | \- | N
 expandMoreText | String | - | \- | N
 
 ### DateTimePickerConfig
@@ -89,9 +91,9 @@ reset | String | - | reset text | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 colonText | String | - | colon on the right of label ":" | N
-errorMessage | Object | - | Typescript: `FormErrorMessage`，[Form API Documents](./form?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/config-provider/type.ts) | N
+errorMessage | Object | - | Typescript: `FormErrorMessage`，[Form API Documents](./form?tab=api). [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/config-provider/type.ts) | N
 requiredMark | Boolean | true | \- | N
-requiredMarkPosition | String | left | Display position of required symbols。options: left/right | N
+requiredMarkPosition | String | left | Display position of required symbols. options: left/right | N
 
 ### GuideConfig
 
@@ -108,7 +110,7 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 errorText | String | - | loading text, default value is "Error" | N
 loadingText | String | - | loading text, default value is "loading" | N
-replaceImageSrc | Function | - | replace all `src` attribute of images。Typescript: `(params: ImageProps) => string`，[Image API Documents](./image?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/config-provider/type.ts) | N
+replaceImageSrc | Function | - | replace all `src` attribute of images. Typescript: `(params: ImageProps) => string`，[Image API Documents](./image?tab=api). [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/config-provider/type.ts) | N
 
 ### InputConfig
 
@@ -167,7 +169,21 @@ newsAriaLabel | String | - | \- | N
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-empty | String / Slot / Function | - | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+clearFilterResultButtonText | String | - | \- | N
+confirmText | String | - | \- | N
+clearFilterResultButtonText | String | - | \- | N
+confirmText | String | - | \- | N
+empty | String / Slot / Function | - | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+filterIcon | Slot / Function | undefined | Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+hideSortTips | Boolean | false | hide sort tips | N
+loadingText | String | - | \- | N
+resetText | String | - | \- | N
+searchResultText | String | - | \- | N
+filterIcon | Slot / Function | undefined | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+hideSortTips | Boolean | false | hide sort tips | N
+loadingText | String | - | \- | N
+resetText | String | - | \- | N
+searchResultText | String | - | \- | N
 
 ### TypographyConfig
 

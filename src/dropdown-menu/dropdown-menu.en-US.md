@@ -18,17 +18,17 @@ zIndex | Number | - | \- | N
 name | type | default | description | required
 -- | -- | -- | -- | --
 disabled | Boolean | false | \- | N
-footer | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-icon | Array / Slot / Function | undefined | Typescript: `TNode \| TNode[] \| undefined`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+footer | Slot / Function | - | Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+icon | Array / Slot / Function | undefined | Typescript: `TNode \| TNode[] \| undefined`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 keepLabelActive | Boolean | false | `1.17.0` | N
-keys | Object | - | Typescript: `KeysType`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+keys | Object | - | Typescript: `KeysType`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String | - | \- | N
 multiple | Boolean | false | \- | N
-options | Array | [] | Typescript: `Array<DropdownOption>` `interface DropdownOption { label: string; disabled?: boolean; value: DropdownValue; }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+options | Array | [] | Typescript: `Array<DropdownOption>` `interface DropdownOption { label: string; disabled?: boolean; value: DropdownValue; }`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 optionsColumns | String / Number | 1 | \- | N
 placement | String | left | options: left/right | N
-value | String / Number / Array | undefined | `v-model` and `v-model:value` is supported。Typescript: `DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
-defaultValue | String / Number / Array | undefined | uncontrolled property。Typescript: `DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+value | String / Number / Array | undefined | `v-model` and `v-model:value` is supported. Typescript: `DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
+defaultValue | String / Number / Array | undefined | uncontrolled property. Typescript: `DropdownValue ` `type DropdownValue = string \| number \| Array<DropdownValue>;`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/dropdown-menu/type.ts) | N
 onChange | Function |  | Typescript: `(value: DropdownValue) => void`<br/> | N
 onClose | Function |  | Typescript: `() => void`<br/> | N
 onClosed | Function |  | Typescript: `() => void`<br/> | N
