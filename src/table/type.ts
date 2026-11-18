@@ -4,13 +4,13 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { LoadingProps } from '../loading';
-import { PopupProps } from '../popup';
-import { CheckboxGroupValue } from '../checkbox';
-import { SortableEvent, SortableOptions } from 'sortablejs';
-import { CheckboxProps } from '../checkbox';
-import { RadioProps } from '../radio';
-import { InputProps } from '../input';
+import type { LoadingProps } from '../loading';
+import type { PopupProps } from '../popup';
+import type { CheckboxGroupValue } from '../checkbox';
+import type { SortableEvent, SortableOptions } from 'sortablejs';
+import type { CheckboxProps } from '../checkbox';
+import type { RadioProps } from '../radio';
+import type { InputProps } from '../input';
 import type { TNode, OptionData, ClassName, Styles, HTMLElementAttributes, ComponentType } from '../common';
 
 export interface TdBaseTableProps<T extends TableRowData = TableRowData> {
@@ -226,15 +226,6 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData> exte
    */
   dragSortOptions?: SortableOptions;
   /**
-   * 用于控制是否显示「展开图标列」，值为 `false` 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。`expandedRow` 存在时，该参数有效。支持全局配置 `GlobalConfigProvider`
-   * @default true
-   */
-  expandIcon?: boolean | TNode<ExpandArrowRenderParams<T>>;
-  /**
-   * 是否允许点击行展开
-   */
-  expandOnRowClick?: boolean;
-  /**
    * 展开行内容，泛型 T 指表格数据类型
    */
   expandedRow?: TNode<TableExpandedRowParams<T>>;
@@ -248,6 +239,15 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData> exte
    * @default []
    */
   defaultExpandedRowKeys?: Array<string | number>;
+  /**
+   * 用于控制是否显示「展开图标列」，值为 `false` 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。`expandedRow` 存在时，该参数有效。支持全局配置 `GlobalConfigProvider`
+   * @default true
+   */
+  expandIcon?: boolean | TNode<ExpandArrowRenderParams<T>>;
+  /**
+   * 是否允许点击行展开
+   */
+  expandOnRowClick?: boolean;
   /**
    * 自定义过滤图标，支持全局配置 `GlobalConfigProvider`
    */
@@ -283,10 +283,6 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData> exte
    */
   reserveSelectedRowOnPaginate?: boolean;
   /**
-   * 是否在点击整行时选中
-   */
-  selectOnRowClick?: boolean;
-  /**
    * 选中行。半选状态行请更为使用 `indeterminateSelectedRowKeys` 控制
    * @default []
    */
@@ -296,6 +292,10 @@ export interface TdPrimaryTableProps<T extends TableRowData = TableRowData> exte
    * @default []
    */
   defaultSelectedRowKeys?: Array<string | number>;
+  /**
+   * 是否在点击整行时选中
+   */
+  selectOnRowClick?: boolean;
   /**
    * 当前排序列是否显示背景色
    * @default false
@@ -389,15 +389,15 @@ export interface PrimaryTableCol<T extends TableRowData = TableRowData> extends 
    */
   render?: TNode<PrimaryTableRenderParams<T>>;
   /**
-   * 当前列支持排序的方式，desc 表示当前列只能进行降序排列；asc 表示当前列只能进行升序排列；all 表示当前列既可升序排列，又可以降序排列
-   * @default all
-   */
-  sortType?: SortType;
-  /**
    * 该列是否支持排序。值为 true 表示该列支持排序；值类型为函数，表示对本地数据 `data` 进行排序，返回值参考 [MDN Array.sort](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)。泛型 T 指表格数据类型
    * @default false
    */
   sorter?: boolean | SorterFun<T>;
+  /**
+   * 当前列支持排序的方式，desc 表示当前列只能进行降序排列；asc 表示当前列只能进行升序排列；all 表示当前列既可升序排列，又可以降序排列
+   * @default all
+   */
+  sortType?: SortType;
   /**
    * 自定义表头渲染。值类型为 Function 表示以函数形式渲染表头。值类型为 string 表示使用插槽渲染，插槽名称为 title 的值。优先级高于 render
    */
@@ -560,15 +560,15 @@ export type RenderType = 'cell' | 'title';
 
 export type DataType = TableRowData;
 
-export interface ExpandArrowRenderParams<T> {
-  row: T;
-  index: number;
-}
-
 export interface TableExpandedRowParams<T> {
   row: T;
   index: number;
   columns: PrimaryTableCol<T>[] | BaseTableCol<T>[];
+}
+
+export interface ExpandArrowRenderParams<T> {
+  row: T;
+  index: number;
 }
 
 export type FilterValue = { [key: string]: any };
@@ -660,9 +660,9 @@ export interface PrimaryTableRenderParams<T> extends PrimaryTableCellParams<T> {
   type: RenderType;
 }
 
-export type SortType = 'desc' | 'asc' | 'all';
-
 export type SorterFun<T> = (a: T, b: T) => number;
+
+export type SortType = 'desc' | 'asc' | 'all';
 
 export type FilterProps = RadioProps | CheckboxProps | InputProps | { [key: string]: any };
 

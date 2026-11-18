@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdPrimaryTableProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdPrimaryTableProps } from './type';
 export default {
   /** 列配置，泛型 T 指表格数据类型 */
   columns: {
@@ -34,13 +33,6 @@ export default {
   dragSortOptions: {
     type: Object as PropType<TdPrimaryTableProps['dragSortOptions']>,
   },
-  /** 用于控制是否显示「展开图标列」，值为 `false` 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。`expandedRow` 存在时，该参数有效。支持全局配置 `GlobalConfigProvider` */
-  expandIcon: {
-    type: [Boolean, Function] as PropType<TdPrimaryTableProps['expandIcon']>,
-    default: true as TdPrimaryTableProps['expandIcon'],
-  },
-  /** 是否允许点击行展开 */
-  expandOnRowClick: Boolean,
   /** 展开行内容，泛型 T 指表格数据类型 */
   expandedRow: {
     type: [String, Function] as PropType<TdPrimaryTableProps['expandedRow']>,
@@ -55,6 +47,13 @@ export default {
     type: Array as PropType<TdPrimaryTableProps['defaultExpandedRowKeys']>,
     default: (): TdPrimaryTableProps['defaultExpandedRowKeys'] => [],
   },
+  /** 用于控制是否显示「展开图标列」，值为 `false` 则不会显示。可以精确到某一行是否显示，还可以自定义展开图标内容。`expandedRow` 存在时，该参数有效。支持全局配置 `GlobalConfigProvider` */
+  expandIcon: {
+    type: [Boolean, Function] as PropType<TdPrimaryTableProps['expandIcon']>,
+    default: true as TdPrimaryTableProps['expandIcon'],
+  },
+  /** 是否允许点击行展开 */
+  expandOnRowClick: Boolean,
   /** 自定义过滤图标，支持全局配置 `GlobalConfigProvider` */
   filterIcon: {
     type: Function as PropType<TdPrimaryTableProps['filterIcon']>,
@@ -85,8 +84,6 @@ export default {
     type: Boolean,
     default: true,
   },
-  /** 是否在点击整行时选中 */
-  selectOnRowClick: Boolean,
   /** 选中行。半选状态行请更为使用 `indeterminateSelectedRowKeys` 控制 */
   selectedRowKeys: {
     type: Array as PropType<TdPrimaryTableProps['selectedRowKeys']>,
@@ -97,6 +94,8 @@ export default {
     type: Array as PropType<TdPrimaryTableProps['defaultSelectedRowKeys']>,
     default: (): TdPrimaryTableProps['defaultSelectedRowKeys'] => [],
   },
+  /** 是否在点击整行时选中 */
+  selectOnRowClick: Boolean,
   /** 当前排序列是否显示背景色 */
   showSortColumnBgColor: Boolean,
   /** 排序控制。sortBy 排序字段；descending 是否进行降序排列。值为数组时，表示正进行多字段排序 */

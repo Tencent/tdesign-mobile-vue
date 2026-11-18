@@ -1,21 +1,19 @@
-import { defineComponent, ref, computed, h } from 'vue';
+import { defineComponent, ref, computed, h, PropType } from 'vue';
 import Popup from '../popup';
 import { TdPopupProps } from '../popup/type';
 import { useTNodeJSX } from '../hooks/tnode';
-import { usePrefixClass } from '../hooks/useClass';
 import { TNode } from '../common';
 
 // 浮层属性
 export type EllipsisPopupProps = TdPopupProps & { title?: TNode };
 
 export interface EllipsisProps {
-  content?: TNode;
-  popupContent?: TNode;
-  popupProps?: EllipsisPopupProps;
+  content?: string | TNode;
+  popupContent?: string | number | TNode;
   classPrefix?: string;
   attach?: TdPopupProps['attach'];
-  zIndex?: number;
-  overlayClassName?: string;
+  /** 透传给 Popup 的属性，如 placement/title/closeBtn 等 */
+  popupProps?: EllipsisPopupProps;
 }
 
 /** 超出省略，点击溢出内容弹出浮层预览 */
@@ -24,107 +22,91 @@ export default defineComponent({
   props: {
     content: [String, Number, Function, Object, Array],
     popupContent: [String, Number, Function, Object, Array],
-    popupProps: Object as import('vue').PropType<EllipsisPopupProps>,
     classPrefix: String,
-    attach: [String, Function] as import('vue').PropType<TdPopupProps['attach']>,
-    zIndex: Number,
-    overlayClassName: String,
+    attach: [String, Function] as PropType<TdPopupProps['attach']>,
+    popupProps: Object as PropType<EllipsisPopupProps>,
   },
   setup(props) {
     const renderTNodeJSX = useTNodeJSX();
-    const componentName = usePrefixClass('table');
     const root = ref<HTMLElement>();
     const visible = ref(false);
 
     const ellipsisClasses = computed(() => [
-      props.classPrefix ? `${props.classPrefix}-table__ellipsis` : `${componentName.value}__ellipsis`,
-      props.classPrefix ? `${props.classPrefix}-text-ellipsis` : 't-text-ellipsis',
-      props.overlayClassName,
+      `${props.classPrefix}-table__ellipsis`,
+      `${props.classPrefix}-text-ellipsis`,
     ]);
 
+    const parseNode = (node: unknown) => (typeof node === 'function' ? (node as any)(h) : node);
+
     const renderContent = () => {
-      if (props.content !== undefined) {
-        return typeof props.content === 'function' ? (props.content as any)(h) : props.content;
+      if (props.content) {
+        return parseNode(props.content);
       }
       return renderTNodeJSX('default');
     };
 
     const cellNode = renderContent();
 
-    // 仅在内容真正溢出时才弹出浮层
+    // 仅在内容溢出时弹出预览
     const handleClick = () => {
       const el = root.value;
-      if (el && el.scrollWidth > el.clientWidth) {
-        visible.value = true;
-      }
+      if (el && el.scrollWidth > el.clientWidth) visible.value = true;
     };
 
-    const popupVisible = computed({
-      get: () => props.popupProps?.visible ?? visible.value,
-      set: (val: boolean) => {
-        visible.value = val;
-      },
-    });
-
-    const handleVisibleChange = (val: boolean, trigger: any) => {
+    const handleVisibleChange = (val: boolean) => {
       visible.value = val;
-      props.popupProps?.onVisibleChange?.(val, trigger);
     };
 
-    const popupPlacement = props.popupProps?.placement || 'bottom';
-    const showCloseBtn = props.popupProps?.closeBtn ?? true;
+    return () => {
+      const {
+        title,
+        placement = 'bottom',
+        closeBtn = true,
+        showOverlay = true,
+        closeOnOverlayClick = true,
+        ...restPopupProps
+      } = props.popupProps ?? {};
 
-    const renderPopupContent = () => {
-      if (props.popupContent !== undefined) {
-        return typeof props.popupContent === 'function' ? (props.popupContent as any)(h) : props.popupContent;
-      }
-      return cellNode;
-    };
-
-    const renderPopupTitle = () => {
-      const title = props.popupProps?.title;
-      if (title === undefined || title === null) return null;
       return (
-        <div class={`${componentName.value}__popup-title`}>
-          {typeof title === 'function' ? (title as any)(h) : title}
-        </div>
-      );
-    };
-
-    return () => (
-      <>
-        <div ref={root} class={ellipsisClasses.value} onClick={handleClick}>
-          {cellNode}
-        </div>
-        <Popup
-          visible={popupVisible.value}
-          onVisibleChange={handleVisibleChange}
-          placement={popupPlacement}
-          showOverlay={props.popupProps?.showOverlay}
-          closeOnOverlayClick={props.popupProps?.closeOnOverlayClick}
-          closeBtn={showCloseBtn}
-          destroyOnClose={props.popupProps?.destroyOnClose}
-          zIndex={props.zIndex ?? props.popupProps?.zIndex}
-          attach={props.attach ?? props.popupProps?.attach}
-          overlayProps={props.popupProps?.overlayProps}
-          class={[`${componentName.value}__popup`, `${componentName.value}__popup--${popupPlacement}`]}
-        >
-          <div class={`${componentName.value}__popup-inner`}>
-            {renderPopupTitle()}
+        <>
+          <div ref={root} class={ellipsisClasses.value} onClick={handleClick}>
+            {cellNode}
+          </div>
+          <Popup
+            attach={props.attach}
+            {...restPopupProps}
+            class={`${props.classPrefix}-table__popup ${props.classPrefix}-table__popup--${placement}`}
+            placement={placement}
+            showOverlay={showOverlay}
+            closeOnOverlayClick={closeOnOverlayClick}
+            closeBtn={closeBtn}
+            visible={visible.value}
+            onVisibleChange={handleVisibleChange}
+          >
             <div
               class={[
-                `${componentName.value}__popup-content`,
-                {
-                  [`${componentName.value}__popup-content--center`]: popupPlacement === 'center',
-                  [`${componentName.value}__popup-content--with-close`]: showCloseBtn !== false,
-                },
+                `${props.classPrefix}-table__popup-inner`,
+                `${props.classPrefix}-table__popup-inner--${placement}`,
               ]}
             >
-              {renderPopupContent()}
+              <div class={`${props.classPrefix}-table__popup-title`}>{title ? parseNode(title) : null}</div>
+              <div
+                class={[
+                  `${props.classPrefix}-table__popup-content`,
+                  `${props.classPrefix}-table__popup-content--${placement}`,
+                  {
+                    [`${props.classPrefix}-table__popup-content--with-close`]: closeBtn !== false,
+                  },
+                ]}
+              >
+                <div class={`${props.classPrefix}-table__popup-content-inner`}>
+                  {props.popupContent != null ? parseNode(props.popupContent) : cellNode}
+                </div>
+              </div>
             </div>
-          </div>
-        </Popup>
-      </>
-    );
+          </Popup>
+        </>
+      );
+    };
   },
 });

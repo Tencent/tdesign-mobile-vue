@@ -54,7 +54,6 @@ export function renderTitleWidthIcon(
             popupContent={(resolved.content ?? title) as any}
             popupProps={resolved.props}
             classPrefix={extra?.classPrefix}
-            overlayClassName={extra?.ellipsisOverlayClassName}
           >
             {title}
           </Ellipsis>

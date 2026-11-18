@@ -1,90 +1,78 @@
 <template>
-  <div>
-    <t-table
-      row-key="id"
-      :data="data"
-      :columns="columns"
-      show-header
-      cell-empty-content="-"
-      @row-click="handleRowClick"
-      @cell-click="handleCellClick"
-    />
-  </div>
+  <t-table
+    row-key="id"
+    :data="data"
+    :columns="columns"
+    show-header
+    cell-empty-content="-"
+    @row-click="handleRowClick"
+    @cell-click="handleCellClick"
+  />
 </template>
 
 <script lang="ts" setup>
 import { ref } from 'vue';
 import type { BaseTableCol } from 'tdesign-mobile-vue';
 
-// 组合 ellipsis + ellipsisTitle 的不同形式与取值
-// 约束：弹出层方向仅 bottom / center；弹出内容为单元格内容；弹出标题为该列表头
+const SHORT_TEXT = '单元格内容单元格内容单元格内容';
+const CENTER_LONG_TEXT = '单元格内容'.repeat(200);
+const BOTTOM_LONG_TEXT = '单元格内容'.repeat(80);
+const EXTRA_LONG_TEXT = '单元格内容'.repeat(300);
+
 const columns = ref<BaseTableCol[]>([
-  // 1. ellipsis 为 Object：整体透传给 Popup（center 弹出 + 列表头作为标题）；content 缺省时回退为单元格内容
   {
-    colKey: 'applicant',
-    title: '申请人',
-    ellipsis: { placement: 'center', title: '申请人' },
+    colKey: 'centerWithTitle',
+    title: '居中弹出·有标题',
+    width: 180,
+    ellipsis: { placement: 'center', title: '表格标题文案' },
+    ellipsisTitle: { placement: 'center', title: '居中弹出·有标题' },
   },
-  // 2. ellipsis 为 Object + ellipsisTitle 为 Object：表头内容也超出省略；center 弹出
   {
-    colKey: 'status',
-    title: '审批状态与处理结果',
+    colKey: 'centerNoTitle',
+    title: '居中弹出·无标题',
+    width: 180,
+    ellipsis: { placement: 'center' },
+  },
+  {
+    colKey: 'centerNoCloseBtn',
+    title: '居中弹出·无标题无关闭按钮',
+    width: 240,
     ellipsis: { placement: 'center', closeBtn: false },
-    ellipsisTitle: { placement: 'center', title: '审批状态与处理结果' },
   },
-  // 3. ellipsis 为 Object + ellipsisTitle 为 Object：仅单元格超出省略，表头不省略（closeBtn: false）
   {
-    colKey: 'channel',
-    title: '签署方式',
-    ellipsis: { closeBtn: false },
-    ellipsisTitle: { closeBtn: false },
+    colKey: 'bottomWithTitle',
+    title: '底部弹出·有标题',
+    width: 180,
+    ellipsis: { placement: 'bottom', title: '表格标题文案' },
+    ellipsisTitle: { placement: 'bottom', title: '底部弹出·有标题' },
   },
-  // 4. ellipsis 与 ellipsisTitle 均为 Object：单元格浮层与表头浮层均带列表头标题；bottom 弹出
   {
-    colKey: 'email',
-    title: '邮箱地址',
-    ellipsis: { title: '邮箱地址' },
-    ellipsisTitle: { title: '邮箱地址' },
+    colKey: 'bottomNoCloseBtn',
+    title: '底部弹出·无关闭按钮',
+    width: 220,
+    ellipsis: { placement: 'bottom', title: '表格标题文案', closeBtn: false },
+  },
+  {
+    colKey: 'bottomNoTitle',
+    title: '底部弹出·无标题无关闭按钮',
+    width: 240,
+    ellipsis: { placement: 'bottom', closeBtn: false },
   },
 ] as any);
 
 const data = [
-  {
-    id: 1,
-    applicant: '贾明（kyrieJia）',
-    status: '审批通过，流程已全部走完',
-    channel: '电子签署（在线完成）',
-    email: 'jiaming.kyrie@example.com',
-  },
-  {
-    id: 2,
-    applicant: '张三（threeZhang）',
-    status: '审批失败，请联系管理员处理',
-    channel: '纸质签署（线下邮寄）',
-    email: 'zhangsan.three@example.com',
-  },
-  {
-    id: 3,
-    applicant: '王芳（fangWang）',
-    status: '审批已过期，需重新发起',
-    channel: '电子签署（在线完成）',
-    email: 'wangfang.fw@example.com',
-  },
-  {
-    id: 4,
-    applicant: '李雷（leiLi）',
-    status: '审批中，等待上级确认',
-    channel: '纸质签署（线下邮寄）',
-    email: 'lilei.ll@example.com',
-  },
-  {
-    id: 5,
-    applicant: '韩梅梅（meiHan）',
-    status: '审批通过，流程已全部走完',
-    channel: '电子签署（在线完成）',
-    email: 'hanmeimei.mm@example.com',
-  },
-];
+  { id: 1, centerText: SHORT_TEXT, bottomText: SHORT_TEXT },
+  { id: 2, centerText: CENTER_LONG_TEXT, bottomText: BOTTOM_LONG_TEXT },
+  { id: 3, centerText: EXTRA_LONG_TEXT, bottomText: EXTRA_LONG_TEXT },
+].map(({ id, centerText, bottomText }) => ({
+  id,
+  centerWithTitle: centerText,
+  centerNoTitle: centerText,
+  centerNoCloseBtn: centerText,
+  bottomWithTitle: bottomText,
+  bottomNoCloseBtn: bottomText,
+  bottomNoTitle: bottomText,
+}));
 
 const handleRowClick = (e: any) => {
   console.log('[row-click]', e);
