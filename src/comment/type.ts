@@ -52,6 +52,10 @@ export interface TdCommentProps {
    * 用户点击“展开回复/收起”时触发，并返回点击后的 fold 配置
    */
   onFolds?: (context: { fold: CommentFold; e: Event }) => void;
+  /**
+   * 长按整个评论时触发
+   */
+  onLongPress?: (context: { e: LongPressEvent }) => void;
 }
 
 export type ActionPlacement = 'start' | 'end';
@@ -71,3 +75,5 @@ export interface CommentFold {
   step?: number;
   content?: Partial<Record<CommentFoldState, TNode | [TNode, TNode]>>;
 }
+
+export type LongPressEvent = PointerEvent | TouchEvent;
