@@ -37,6 +37,7 @@ const inputList = [
   'src/**/*.tsx',
   '!src/**/demos',
   '!src/**/*.d.ts',
+  '!src/**/__test__',
   '!src/**/__tests__',
 ];
 
