@@ -13,7 +13,7 @@ exports[`Calendar > Calendar baseVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
     >
       <!---->
       
@@ -13584,7 +13584,7 @@ exports[`Calendar > Calendar customTextSingleVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
     >
       <!---->
       
@@ -14681,7 +14681,7 @@ exports[`Calendar > Calendar customTextVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
     >
       <!---->
       
@@ -15795,7 +15795,7 @@ exports[`Calendar > Calendar disabledVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
     >
       <!---->
       
@@ -16654,7 +16654,7 @@ exports[`Calendar > Calendar localTextVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
     >
       <!---->
       
@@ -17557,7 +17557,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-popup t-popup--bottom"
-              style="display: none;"
+              style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
             >
               <!---->
               
@@ -31129,7 +31129,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-popup t-popup--bottom"
-              style="display: none;"
+              style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
             >
               <!---->
               
@@ -32006,7 +32006,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-popup t-popup--bottom"
-                style="display: none;"
+                style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
               >
                 <!---->
                 
@@ -33122,7 +33122,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
               </div>
               <div
                 class="t-popup t-popup--bottom"
-                style="display: none;"
+                style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
               >
                 <!---->
                 
@@ -34260,7 +34260,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 </div>
                 <div
                   class="t-popup t-popup--bottom"
-                  style="display: none;"
+                  style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
                 >
                   <!---->
                   
@@ -34895,7 +34895,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 </div>
                 <div
                   class="t-popup t-popup--bottom"
-                  style="display: none;"
+                  style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
                 >
                   <!---->
                   
@@ -35836,7 +35836,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 </div>
                 <div
                   class="t-popup t-popup--bottom"
-                  style="display: none;"
+                  style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
                 >
                   <!---->
                   
@@ -36720,7 +36720,7 @@ exports[`Calendar > Calendar mobileVue demo works fine 1`] = `
                 </div>
                 <div
                   class="t-popup t-popup--bottom"
-                  style="display: none;"
+                  style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
                 >
                   <!---->
                   
@@ -40128,7 +40128,7 @@ exports[`Calendar > Calendar multipleVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
     >
       <!---->
       
@@ -40989,7 +40989,7 @@ exports[`Calendar > Calendar rangeVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
     >
       <!---->
       
@@ -41882,7 +41882,7 @@ exports[`Calendar > Calendar switchModeVue demo works fine 1`] = `
     </div>
     <div
       class="t-popup t-popup--bottom"
-      style="display: none;"
+      style="animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
     >
       <!---->
       

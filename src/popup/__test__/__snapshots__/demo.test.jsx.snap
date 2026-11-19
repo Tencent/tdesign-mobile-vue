@@ -97,7 +97,7 @@ exports[`Popup > Popup baseVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--top"
-    style="padding: 100px; display: none;"
+    style="padding: 100px; animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     <!---->
@@ -136,7 +136,7 @@ exports[`Popup > Popup customCloseVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--center"
-    style="width: 240px; height: 240px; display: none;"
+    style="width: 240px; height: 240px; animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -286,7 +286,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--top"
-          style="padding: 100px; display: none;"
+          style="padding: 100px; animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
         >
           <!---->
           <!---->
@@ -348,7 +348,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="height: 258px; display: none;"
+          style="height: 258px; animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
         >
           <!---->
           
@@ -410,7 +410,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--center"
-          style="width: 240px; height: 240px; display: none;"
+          style="width: 240px; height: 240px; animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
         >
           <!---->
           
@@ -482,7 +482,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
         </div>
         <div
           class="t-popup t-popup--bottom"
-          style="z-index: 1500; display: none;"
+          style="z-index: 1500; animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
         >
           <!---->
           
@@ -529,7 +529,7 @@ exports[`Popup > Popup mobileVue demo works fine 1`] = `
             </div>
             <div
               class="t-popup t-popup--bottom"
-              style="z-index: 1600; display: none;"
+              style="z-index: 1600; animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
             >
               <!---->
               
@@ -614,7 +614,7 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="z-index: 1500; display: none;"
+    style="z-index: 1500; animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
@@ -661,7 +661,7 @@ exports[`Popup > Popup nestedVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="z-index: 1600; display: none;"
+        style="z-index: 1600; animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
       >
         <!---->
         
@@ -741,7 +741,7 @@ exports[`Popup > Popup withTitleVue demo works fine 1`] = `
   </div>
   <div
     class="t-popup t-popup--bottom"
-    style="height: 258px; display: none;"
+    style="height: 258px; animation-duration: 240ms; animation-fill-mode: both; transition-duration: 240ms; display: none;"
   >
     <!---->
     
