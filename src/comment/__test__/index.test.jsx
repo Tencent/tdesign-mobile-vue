@@ -69,7 +69,7 @@ describe('comment', () => {
       let wrapper = mount(Comment, {
         props: { actions },
       });
-      const blocks = wrapper.findAll('.t-comment-block');
+      const blocks = wrapper.findAll('.t-comment__actions-block');
       expect(blocks).toHaveLength(2);
       expect(blocks[0].text()).toBe('回复');
       expect(blocks[1].text()).toBe('点赞');
@@ -92,7 +92,7 @@ describe('comment', () => {
           onActions,
         },
       });
-      const actionItem = wrapper.find('.t-comment-block > div');
+      const actionItem = wrapper.find('.t-comment__actions-block > div');
       await actionItem.trigger('click');
       expect(onActions).toHaveBeenCalledWith({ action, e: expect.any(Event) });
     });

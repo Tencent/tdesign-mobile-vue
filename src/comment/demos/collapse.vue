@@ -7,6 +7,7 @@
       content="这是一段很长很长很长很长很长很长的评论内容。"
       datetime="今天16:38·广东"
       @folds="handleUpdateFold"
+      @long-press="handleLongPress(mainCommentAuthor)"
     >
       <template #author>
         <div class="mobile-comment__author">
@@ -20,35 +21,26 @@
         :key="`${item.author}-${index}`"
         :avatar="{ shape: 'circle', size: '20px', image: item.avatar }"
         :actions="getReplyActions(item)"
+        @long-press="handleLongPress(item.author)"
       >
         <template #author>
           <div class="mobile-comment__author">
             <div>{{ item.author }}</div>
           </div>
         </template>
-        <template #content>
-          <span v-if="item.replyTo">
-            回复<span class="mobile-comment__reply-name">{{ item.replyTo }}</span
-            >：{{ item.content }}
-          </span>
-          <span v-else>{{ item.content }}</span>
-        </template>
+        <template #content>{{ item.content }}</template>
         <template #datetime>{{ item.datetime }}</template>
       </t-comment>
     </t-comment>
-    <t-action-sheet
-      v-model:visible="showActionSheet"
-      :items="[{ label: '回复' }, { label: '转发' }, { label: '复制' }, { label: '举报' }]"
-      cancel-text="取消"
-      @selected="handleActionSheetSelected"
-    />
   </div>
+
+  <t-action-sheet v-model:visible="actionSheetVisible" :items="actionSheetItems" @selected="handleSelected" />
 </template>
 
 <script setup>
 import { ref, computed, h } from 'vue';
 import { Comment as TComment, Tag as TTag, Button as TButton, ActionSheet as TActionSheet } from 'tdesign-mobile-vue';
-import { ThumbUpIcon, Uncomfortable1Icon } from 'tdesign-icons-vue-next';
+import { HeartIcon, Uncomfortable1Icon } from 'tdesign-icons-vue-next';
 
 const REPLY_COUNT = 6;
 const mainCommentAuthor = 'Name1 名称';
@@ -64,18 +56,26 @@ const commentFold = ref({
   },
 });
 
+// 点赞数量格式化：过万（>= 10000）统一使用 k 单位，如 15800 -> 15.8k
+const formatLikeCount = (count) => {
+  if (count >= 10000) {
+    const value = count / 1000;
+    return `${Number.isInteger(value) ? value : value.toFixed(1)}k`;
+  }
+  return String(count);
+};
+
+const likeCounts = [6, 68, 688, 6888, 15800, 158000];
+
 const replyInfo = ref(
   new Array(REPLY_COUNT).fill({}).map((_, index) => ({
     author: `Name${index + 1} 名称`,
     avatar: 'https://tdesign.gtimg.com/mobile/demos/avatar1.png',
     content: '这是一段很长很长很长很长很长很长的评论内容。',
     datetime: '今天16:38·广东',
-    likeNum: 6,
+    likeNum: likeCounts[index],
   })),
 );
-
-const showActionSheet = ref(false);
-const longPressTarget = ref(null);
 
 const visibleItems = computed(() => {
   if (commentFold.value.state === 'collapsed') {
@@ -95,26 +95,29 @@ const mainActions = [
       h('div', { class: 'mobile-comment__reply-button', onClick: () => handleReply(mainCommentAuthor) }, '回复'),
   },
   {
-    key: 'actions',
+    key: 'like',
     placement: 'end',
     content: () =>
-      h('div', { class: 'mobile-comment__actions' }, [
-        h(
-          TButton,
-          { class: 'mobile-comment__actions-button', variant: 'text' },
-          {
-            default: () => '6',
-            icon: () => h(ThumbUpIcon, { size: '14px' }),
-          },
-        ),
-        h(
-          TButton,
-          { class: 'mobile-comment__actions-button', variant: 'text' },
-          {
-            icon: () => h(Uncomfortable1Icon, { size: '14px' }),
-          },
-        ),
-      ]),
+      h(
+        TButton,
+        { class: 'mobile-comment__actions-button', variant: 'text' },
+        {
+          default: () => '6',
+          icon: () => h(HeartIcon, { size: '16px' }),
+        },
+      ),
+  },
+  {
+    key: 'unlike',
+    placement: 'end',
+    content: () =>
+      h(
+        TButton,
+        { class: 'mobile-comment__actions-button', variant: 'text' },
+        {
+          icon: () => h(Uncomfortable1Icon, { size: '16px' }),
+        },
+      ),
   },
 ];
 
@@ -125,26 +128,29 @@ const getReplyActions = (item) => [
     content: () => h('div', { class: 'mobile-comment__reply-button', onClick: () => handleReply(item.author) }, '回复'),
   },
   {
-    key: 'actions',
+    key: 'like',
     placement: 'end',
     content: () =>
-      h('div', { class: 'mobile-comment__actions' }, [
-        h(
-          TButton,
-          { class: 'mobile-comment__actions-button', variant: 'text' },
-          {
-            default: () => item.likeNum || '',
-            icon: () => h(ThumbUpIcon, { size: '14px' }),
-          },
-        ),
-        h(
-          TButton,
-          { class: 'mobile-comment__actions-button', variant: 'text' },
-          {
-            icon: () => h(Uncomfortable1Icon, { size: '14px' }),
-          },
-        ),
-      ]),
+      h(
+        TButton,
+        { class: 'mobile-comment__actions-button', variant: 'text' },
+        {
+          default: () => formatLikeCount(item.likeNum),
+          icon: () => h(HeartIcon, { size: '16px' }),
+        },
+      ),
+  },
+  {
+    key: 'unlike',
+    placement: 'end',
+    content: () =>
+      h(
+        TButton,
+        { class: 'mobile-comment__actions-button', variant: 'text' },
+        {
+          icon: () => h(Uncomfortable1Icon, { size: '16px' }),
+        },
+      ),
   },
 ];
 
@@ -156,12 +162,17 @@ const handleReply = (authorName) => {
   console.log('回复:', authorName);
 };
 
-const handleActionSheetSelected = (selected) => {
-  const label = typeof selected === 'string' ? selected : selected.label;
-  if (label === '回复' && longPressTarget.value) {
-    handleReply(longPressTarget.value);
-  }
-  showActionSheet.value = false;
+const actionSheetVisible = ref(false);
+const actionSheetItems = ['复制', '回复', '举报', '删除'];
+const currentAuthor = ref('');
+
+const handleLongPress = (authorName) => {
+  currentAuthor.value = authorName;
+  actionSheetVisible.value = true;
+};
+
+const handleSelected = (selected) => {
+  console.log('长按评论：', currentAuthor.value, '操作：', selected);
 };
 </script>
 
@@ -179,30 +190,17 @@ const handleActionSheetSelected = (selected) => {
     }
   }
 
-  &__reply {
-    &-button {
-      color: var(--td-text-color-secondary);
-      font: var(--td-font-body-small);
-    }
-
-    &-name {
-      color: var(--td-text-color-secondary);
-      font: var(--td-font-body-medium);
-    }
+  &__reply-button {
+    color: var(--td-text-color-secondary);
+    font: var(--td-font-body-small);
   }
 
-  &__actions {
-    display: flex;
-    align-items: center;
-    gap: var(--td-spacer-2);
-
-    &-button {
-      padding: 2px calc(var(--td-spacer) / 4);
-      color: var(--td-text-color-placeholder);
-      font: var(--td-font-body-small);
-      box-sizing: border-box;
-      height: var(--td-spacer-3);
-    }
+  &__actions-button {
+    padding: 2px calc(var(--td-spacer) / 4);
+    color: var(--td-text-color-placeholder);
+    font: var(--td-font-body-small);
+    box-sizing: border-box;
+    height: var(--td-spacer-3);
   }
 }
 </style>
