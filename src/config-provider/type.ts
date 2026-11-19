@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { FormErrorMessage } from '../form';
-import { ImageProps } from '../image';
+import type { FormErrorMessage } from '../form';
+import type { ImageProps } from '../image';
 import type { TNode } from '../common';
 
 export interface TdConfigProviderProps {
@@ -106,14 +106,14 @@ export interface CalendarConfig {
    */
   confirm?: string;
   /**
+   * 月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']
+   */
+  months?: string[];
+  /**
    * 语言配置，日期月面板标题描述文本。示例：“{year} / {month}”
    * @default ''
    */
   monthTitle?: string;
-  /**
-   * 月文本描述，默认值：['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月']
-   */
-  months?: string[];
   /**
    * 语言配置，组件标题“请选择日期”描述文本
    * @default ''
@@ -126,6 +126,16 @@ export interface CalendarConfig {
 }
 
 export interface CascaderConfig {
+  /**
+   * 语言配置，“暂无数据”描述文本
+   * @default ''
+   */
+  empty?: string;
+  /**
+   * 语言配置，“搜索框”占位描述文本
+   * @default ''
+   */
+  filterPlaceholder?: string;
   /**
    * 语言配置，未选中时的提示文案“选择选项”描述文本
    * @default ''
@@ -140,15 +150,15 @@ export interface CascaderConfig {
 
 export interface CommentConfig {
   /**
-   * 语言配置，“收起”描述文本
-   * @default ''
-   */
-  collapseText?: string;
-  /**
    * 语言配置，折叠状态下“展开回复”描述文本
    * @default ''
    */
   collapsedText?: string;
+  /**
+   * 语言配置，“收起”描述文本
+   * @default ''
+   */
+  collapseText?: string;
   /**
    * 语言配置，半展开状态下“展开更多回复”描述文本
    * @default ''
@@ -396,9 +406,43 @@ export interface TabBarConfig {
 
 export interface TableConfig {
   /**
+   * 语言配置，过滤功能中，“清空筛选” 描述文本
+   * @default ''
+   */
+  clearFilterResultButtonText?: string;
+  /**
+   * 语言配置，“确认” 描述文本
+   * @default ''
+   */
+  confirmText?: string;
+  /**
    * 语言配置，“暂无数据” 描述文本
    */
   empty?: string | TNode;
+  /**
+   * 过滤图标，如果没有配置，会使用组件内置的默认图标
+   */
+  filterIcon?: TNode;
+  /**
+   * 隐藏排序文本提示
+   * @default false
+   */
+  hideSortTips?: boolean;
+  /**
+   * 语言配置，“正在加载中，请稍后” 描述文本
+   * @default ''
+   */
+  loadingText?: string;
+  /**
+   * 语言配置，“重置” 描述文本
+   * @default ''
+   */
+  resetText?: string;
+  /**
+   * 语言配置，过滤功能中，过滤条件和结果描述文本，示例：'搜索“{result}”，找到 {count} 条结果'
+   * @default ''
+   */
+  searchResultText?: string;
 }
 
 export interface TypographyConfig {

@@ -250,6 +250,18 @@ describe('cascader', () => {
         }
       });
     });
+
+    it(': filterable', () => {
+      const wrapper = mount(<Cascader options={options} filterable />);
+      const $filter = wrapper.find(`.${name}__filter`);
+      expect($filter.exists()).toBeTruthy();
+    });
+
+    it(': filterPlaceholder', () => {
+      const wrapper = mount(<Cascader options={options} filterable filterPlaceholder="搜索地址" />);
+      const $input = wrapper.find(`.${name}__filter .t-input__keyword`);
+      expect($input.attributes('placeholder')).toBe('搜索地址');
+    });
   });
 
   describe('slots', () => {

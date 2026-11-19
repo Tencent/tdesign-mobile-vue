@@ -1,7 +1,7 @@
 <template>
   <t-dropdown-menu placement="right" @menu-opened="handleMenuOpened" @menu-closed="handleMenuClosed">
-    <t-dropdown-item :options="product.options" :value="product.value" @change="onChange" />
-    <t-dropdown-item :options="sorter.options" :value="sorter.value" />
+    <t-dropdown-item :options="product.options" :value="product.value" placement="right" @change="onChange" />
+    <t-dropdown-item :options="sorter.options" :value="sorter.value" placement="right" />
   </t-dropdown-menu>
 </template>
 

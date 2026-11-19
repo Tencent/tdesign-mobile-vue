@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdCollapsePanelProps } from '../collapse/type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdCollapsePanelProps } from './type';
 export default {
   /** 折叠面板内容 */
   content: {
@@ -26,7 +25,7 @@ export default {
   /** 当前折叠面板展开图标，优先级大于 Collapse 的同名属性 */
   expandIcon: {
     type: [Boolean, Function] as PropType<TdCollapsePanelProps['expandIcon']>,
-    default: undefined,
+    default: undefined as TdCollapsePanelProps['expandIcon'],
   },
   /** 面板头内容 */
   header: {

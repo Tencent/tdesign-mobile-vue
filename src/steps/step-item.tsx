@@ -27,7 +27,8 @@ export default defineComponent({
 
     const theme = computed(() => stepsProvide.theme);
     const dot = computed(() => theme.value === 'dot');
-    const icon = computed(() => props.icon || context.slots.icon);
+    // 是否使用自定义图标（函数式 prop 或 icon 插槽），用于决定图标容器样式
+    const hasCustomIcon = computed(() => typeof props.icon === 'function' || !!context.slots.icon);
 
     const current = computed(() => stepsProvide.current.value || stepsProvide.defaultCurrent || 0);
     const stepsStatus = computed(() => stepsProvide.currentStatus);
@@ -56,10 +57,10 @@ export default defineComponent({
     ]);
 
     const iconClassName = computed(() => [
-      { [`${stepItemClass.value}__icon`]: icon.value },
-      { [`${stepItemClass.value}__icon--${currentStatus.value}`]: icon.value },
-      { [`${stepItemClass.value}__circle`]: !icon.value },
-      { [`${stepItemClass.value}__circle--${currentStatus.value}`]: !icon.value },
+      { [`${stepItemClass.value}__icon`]: hasCustomIcon.value },
+      { [`${stepItemClass.value}__icon--${currentStatus.value}`]: hasCustomIcon.value },
+      { [`${stepItemClass.value}__circle`]: !hasCustomIcon.value },
+      { [`${stepItemClass.value}__circle--${currentStatus.value}`]: !hasCustomIcon.value },
     ]);
     const contentClass = computed(() => [
       `${stepItemClass.value}__content`,
@@ -104,17 +105,11 @@ export default defineComponent({
       stepsProvide.removeRelation(proxy);
     });
     return () => {
-      const renderIconContent = () => {
-        if (icon.value) {
-          return renderTNodeJSX('icon') || null;
-        }
-        if (currentStatus.value === 'error') {
-          return iconDefault.close;
-        }
-        if (currentStatus.value === 'finish') {
-          return iconDefault.check;
-        }
-        return index.value + 1;
+      // 内置图标（无自定义图标时的兜底节点）
+      const getDefaultIcon = () => {
+        if (currentStatus.value === 'error') return iconDefault.close;
+        if (currentStatus.value === 'finish') return iconDefault.check;
+        return `${index.value + 1}`;
       };
 
       return (
@@ -123,7 +118,7 @@ export default defineComponent({
             {dot.value ? (
               <div class={dotClass.value}></div>
             ) : (
-              <div class={iconClassName.value}>{renderIconContent()}</div>
+              <div class={iconClassName.value}>{renderTNodeJSX('icon', { defaultNode: getDefaultIcon() })}</div>
             )}
           </div>
           <div class={contentClass.value}>

@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdFabProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdFabProps } from './type';
 export default {
   /** 透传至 Button 组件 */
   buttonProps: {
@@ -21,7 +20,7 @@ export default {
   icon: {
     type: Function as PropType<TdFabProps['icon']>,
   },
-  /** 是否吸附。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附 */
+  /** 是否吸附，仅在拖拽场景下生效。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附 */
   magnet: {
     type: [String, Boolean] as PropType<TdFabProps['magnet']>,
   },

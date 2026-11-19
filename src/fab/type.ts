@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { ButtonProps } from '../button';
-import { TNode, Styles } from '../common';
+import type { ButtonProps } from '../button';
+import type { TNode, Styles } from '../common';
 
 export interface TdFabProps {
   /**
@@ -22,7 +22,7 @@ export interface TdFabProps {
    */
   icon?: TNode;
   /**
-   * 是否吸附。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附
+   * 是否吸附，仅在拖拽场景下生效。`true` 启用左右吸附，`left` 仅吸附到左边，`right` 仅吸附到右边，`false` 不吸附
    */
   magnet?: boolean | MagnetEnum;
   /**

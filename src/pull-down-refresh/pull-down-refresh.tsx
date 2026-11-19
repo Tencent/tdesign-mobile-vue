@@ -86,10 +86,9 @@ export default defineComponent({
 
     watch(status, (newVal) => {
       if (newVal === 'success') {
-        // 延时300ms收起下拉框，加强刷新成功提示
         setTimeout(() => {
           distance.value = 0;
-        }, 300);
+        }, Number(props.successDuration));
       }
     });
 

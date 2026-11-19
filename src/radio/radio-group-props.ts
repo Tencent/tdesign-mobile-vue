@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdRadioGroupProps } from '../radio/type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdRadioGroupProps } from './type';
 export default {
   /** 是否允许取消选中 */
   allowUncheck: Boolean,

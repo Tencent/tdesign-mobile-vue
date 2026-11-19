@@ -2,76 +2,71 @@
   <div class="tdesign-mobile-demo">
     <h1 class="title">Form 表单</h1>
     <p class="summary">用以收集、校验和提交数据，一般由输入框、单选框、复选框、选择器等控件组成。</p>
-    <tdesign-demo-block title="01 基础类型" summary="基础表单">
-      <div class="option">
-        <div class="button-group">
-          <t-button :theme="isActive1 ? 'light' : 'default'" shape="round" @click="onClick('isActive1', isActive1)">
-            水平排布
-          </t-button>
-          <t-button :theme="isActive2 ? 'light' : 'default'" shape="round" @click="onClick('isActive2', isActive2)">
-            竖直排布
-          </t-button>
-        </div>
+    <t-sticky>
+      <div class="form-demo-sticky">
+        <t-tabs v-model="layout" theme="tag" :sticky-props="{ disabled: true }">
+          <t-tab-panel value="horizontal" label="水平排布" />
+          <t-tab-panel value="vertical" label="竖向排布" />
+        </t-tabs>
         <t-cell title="禁用态">
-          <template #note>
-            <t-switch :value="switchValue" @change="onChangeSwitch"></t-switch>
-          </template>
+          <t-switch v-model="disabled" />
         </t-cell>
       </div>
+    </t-sticky>
+    <tdesign-demo-block title="01 组件类型" summary="基础表单">
+      <baseDemo :label-align="labelAlign" :disabled="disabled" />
     </tdesign-demo-block>
-    <tdesign-demo-block v-if="isActive1">
-      <horizontal :disabled="switchValue" />
+    <tdesign-demo-block title="02 组件状态" summary="提示">
+      <helpDemo :label-align="labelAlign" :disabled="disabled" />
     </tdesign-demo-block>
-    <tdesign-demo-block v-if="isActive2">
-      <vertical :disabled="switchValue" />
+    <tdesign-demo-block summary="校验规则">
+      <rulesDemo :label-align="labelAlign" :disabled="disabled" />
     </tdesign-demo-block>
+    <template v-if="isHorizontal">
+      <tdesign-demo-block title="03 组件样式" summary="标签对齐样式">
+        <labelAlignDemo :disabled="disabled" />
+      </tdesign-demo-block>
+      <tdesign-demo-block summary="标签带冒号">
+        <colonDemo :label-align="labelAlign" :disabled="disabled" />
+      </tdesign-demo-block>
+      <tdesign-demo-block summary="标签必填位置">
+        <requiredMarkDemo :label-align="labelAlign" :disabled="disabled" />
+      </tdesign-demo-block>
+      <tdesign-demo-block summary="标签宽度">
+        <labelWidthDemo :disabled="disabled" />
+      </tdesign-demo-block>
+      <tdesign-demo-block summary="标签内容对齐样式">
+        <contentAlignDemo :label-align="labelAlign" :disabled="disabled" />
+      </tdesign-demo-block>
+    </template>
+    <template v-else>
+      <tdesign-demo-block title="03 组件样式" summary="标签必填位置">
+        <requiredMarkDemo :label-align="labelAlign" :disabled="disabled" />
+      </tdesign-demo-block>
+      <tdesign-demo-block summary="标签带冒号">
+        <colonDemo :label-align="labelAlign" :disabled="disabled" />
+      </tdesign-demo-block>
+      <tdesign-demo-block summary="标签内容对齐样式">
+        <contentAlignDemo :label-align="labelAlign" :disabled="disabled" />
+      </tdesign-demo-block>
+    </template>
   </div>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue';
-import horizontal from './horizontal.vue';
-import vertical from './vertical.vue';
+import { computed, ref } from 'vue';
+import './style/index.less';
+import baseDemo from './base.vue';
+import helpDemo from './help.vue';
+import rulesDemo from './rules.vue';
+import labelAlignDemo from './label-align.vue';
+import colonDemo from './colon.vue';
+import requiredMarkDemo from './required-mark.vue';
+import labelWidthDemo from './label-width.vue';
+import contentAlignDemo from './content-align.vue';
 
-const isActive1 = ref(true);
-const isActive2 = ref(false);
+const layout = ref('horizontal');
+const disabled = ref(false);
 
-const onClick = (name: string, isActive: boolean) => {
-  if (name === 'isActive1') {
-    isActive1.value = !isActive;
-    isActive2.value = isActive;
-  } else {
-    isActive1.value = isActive;
-    isActive2.value = !isActive;
-  }
-};
-
-const switchValue = ref(false);
-const onChangeSwitch = (val: any) => {
-  switchValue.value = val;
-};
+const isHorizontal = computed(() => layout.value === 'horizontal');
+const labelAlign = computed(() => (isHorizontal.value ? 'left' : 'top'));
 </script>
-
-<style lang="less" scoped>
-.option {
-  margin-bottom: 12px;
-}
-.button-group {
-  background-color: var(--td-bg-color-container);
-  box-sizing: border-box;
-  padding: 8px 4px;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  border-bottom: 0.5px solid #e7e7e7;
-
-  .t-button {
-    height: 32px;
-    flex: 1;
-
-    &:not(:last-child) {
-      flex: 1;
-      margin-right: 8px;
-    }
-  }
-}
-</style>

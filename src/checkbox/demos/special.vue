@@ -54,6 +54,7 @@ const value1 = ref([1, 2]);
   left: 1.5px;
   top: 1.5px;
   z-index: 1;
+  font-size: 14px;
 }
 
 /* 横向布局 */

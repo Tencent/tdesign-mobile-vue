@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTabBarItemProps } from '../tab-bar/type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdTabBarItemProps } from './type';
 export default {
   /** 图标右上角提示信息 */
   badgeProps: {

@@ -1,6 +1,7 @@
 import { computed, h, ref, shallowRef, toRefs, onBeforeUnmount, ComputedRef, Ref, ShallowRef } from 'vue';
 import { isFunction, isString } from 'lodash-es';
 import { SizeLimitObj, TdUploadProps, UploadChangeContext, UploadFile, UploadRemoveContext } from '../type';
+import type { TdUploadInternalProps } from '../internal-props';
 import useVModel from '../../hooks/useVModel';
 import {
   formatToUploadFile,
@@ -20,7 +21,7 @@ import { getFileList, IMAGE_REGEXP } from '../../_common/js/upload/utils';
 // @ts-ignore
 export type ValidateParams = Parameters<TdUploadProps['onValidate']>[0];
 
-export default function useUpload(props: TdUploadProps): {
+export default function useUpload(props: TdUploadProps & TdUploadInternalProps): {
   toUploadFiles: ShallowRef<UploadFile[]>;
   uploadValue: Ref<UploadFile[]>;
   displayFiles: ComputedRef<UploadFile[]>;
