@@ -37,8 +37,9 @@ const inputList = [
   'src/**/*.tsx',
   '!src/**/demos',
   '!src/**/*.d.ts',
+  '!src/**/type.ts',
+  '!src/**/types.ts',
   '!src/**/__test__',
-  '!src/**/__tests__',
 ];
 
 const getPlugins = ({
