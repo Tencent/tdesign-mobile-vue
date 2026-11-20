@@ -15,6 +15,7 @@ folds | Object | - | `v-model` and `v-model:folds` is supported. Typescript: `Co
 reply | String / Slot / Function | - | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 onActions | Function |  | Typescript: `(context: { action: CommentActionItem \| TNode; e: Event }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 onFolds | Function |  | Typescript: `(context: { fold: CommentFold; e: Event }) => void`<br/> | N
+onLongPress | Function |  | Typescript: ` (context: { e: LongPressEvent }) => void`<br/>`1.17.2`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/comment/type.ts). <br/>`type LongPressEvent = PointerEvent \| TouchEvent;`<br/> | N
 
 ### Comment Events
 
@@ -22,3 +23,4 @@ name | params | description
 -- | -- | --
 actions | `(context: { action: CommentActionItem \| TNode; e: Event })` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)
 folds | `(context: { fold: CommentFold; e: Event })` | \-
+long-press | ` (context: { e: LongPressEvent })` | `1.17.2`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/comment/type.ts). <br/>`type LongPressEvent = PointerEvent \| TouchEvent;`<br/>
