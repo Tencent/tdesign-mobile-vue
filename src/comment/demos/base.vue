@@ -60,6 +60,7 @@ const actions = [
   &__author {
     display: flex;
     align-items: center;
+    color: var(--td-text-color-placeholder);
     font: var(--td-font-body-small);
 
     &-tag {
@@ -75,7 +76,7 @@ const actions = [
   }
 
   &__actions-button {
-    padding: 2px calc(var(--td-spacer) / 4);
+    padding: calc(var(--td-spacer) / 2);
     color: var(--td-text-color-placeholder);
     font: var(--td-font-body-small);
     box-sizing: border-box;
