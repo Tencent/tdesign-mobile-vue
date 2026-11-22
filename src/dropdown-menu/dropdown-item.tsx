@@ -115,6 +115,15 @@ export default defineComponent({
       (val: boolean) => setExpand(val),
     );
 
+    watch(
+      () => props.disabled,
+      (disabled) => {
+        if (disabled && menuState.activeId === itemId.value) {
+          collapseMenu();
+        }
+      },
+    );
+
     const radioSelect = ref();
     const checkSelect = ref();
     // 根据传入值更新当前选中
@@ -152,6 +161,7 @@ export default defineComponent({
     });
     // 重置
     const resetSelect = () => {
+      if (props.disabled) return;
       checkSelect.value = [];
       let values = checkSelect.value;
       values = JSON.parse(JSON.stringify(values));
@@ -159,6 +169,7 @@ export default defineComponent({
     };
     // 确认
     const confirmSelect = () => {
+      if (props.disabled) return;
       let values = checkSelect.value;
       values = JSON.parse(JSON.stringify(values));
       props.onConfirm?.(values);
@@ -212,9 +223,11 @@ export default defineComponent({
 
     return () => {
       const handleRadioChange = (value: any) => {
+        if (props.disabled) return;
         radioSelect.value = value;
       };
       const handleCheckboxChange = (value: any) => {
+        if (props.disabled) return;
         checkSelect.value = value;
       };
       const defaultSlot = () => {
@@ -232,7 +245,7 @@ export default defineComponent({
                   key={option.value}
                   value={option.value}
                   label={option.label}
-                  disabled={props.disabled || option.disabled}
+                  disabled={option.disabled}
                   class={styleDropRadio(option.value)}
                   checked={isCheckedRadio(option.value)}
                   icon="line"
@@ -257,7 +270,7 @@ export default defineComponent({
                 borderless
                 value={option.value}
                 label={option.label}
-                disabled={props.disabled || option.disabled}
+                disabled={option.disabled}
               />
             ))}
           </TCheckboxGroup>
@@ -271,7 +284,7 @@ export default defineComponent({
               <TButton
                 theme="light"
                 class={`${dropdownItemClass.value}__footer-btn ${dropdownItemClass.value}__reset-btn`}
-                disabled={props.disabled || isBtnDisabled.value}
+                disabled={isBtnDisabled.value}
                 onClick={resetSelect}
               >
                 {globalConfig.value.reset}
@@ -279,7 +292,7 @@ export default defineComponent({
               <TButton
                 theme="primary"
                 class={`${dropdownItemClass.value}__footer-btn ${dropdownItemClass.value}__confirm-btn`}
-                disabled={props.disabled || isBtnDisabled.value}
+                disabled={isBtnDisabled.value}
                 onClick={confirmSelect}
               >
                 {globalConfig.value.confirm}

@@ -1,4 +1,4 @@
-import { mount } from '@vue/test-utils';
+import { flushPromises, mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
 import { ref } from 'vue';
 import { DropdownMenu, DropdownItem } from '../index';
@@ -91,33 +91,50 @@ describe('dropdown-menu', () => {
   });
 
   describe('DropdownItem Props', () => {
-    it('does not select an option after the open item is disabled', async () => {
-      const disabled = ref(false);
-      const onChange = vi.fn();
-      const wrapper = mount({
-        setup() {
-          return () => (
-            <DropdownMenu>
-              <DropdownItem
-                value="option_0"
-                label="Menu"
-                disabled={disabled.value}
-                options={options}
-                onChange={onChange}
-              />
-            </DropdownMenu>
-          );
-        },
-      });
+    it.each([false, true])(
+      'collapses a disabled open item without changing selection (multiple=%s)',
+      async (multiple) => {
+        const disabled = ref(false);
+        const onChange = vi.fn();
+        const onUpdateValue = vi.fn();
+        const onClose = vi.fn();
+        const wrapper = mount({
+          setup() {
+            return () => (
+              <DropdownMenu duration={0}>
+                <DropdownItem
+                  value={multiple ? ['option_0'] : 'option_0'}
+                  multiple={multiple}
+                  onUpdate:value={onUpdateValue}
+                  onClose={onClose}
+                  label="Menu"
+                  disabled={disabled.value}
+                  options={options}
+                  onChange={onChange}
+                />
+              </DropdownMenu>
+            );
+          },
+        });
 
-      await wrapper.get(`.${name}__item`).trigger('click');
-      expect(wrapper.findAll('.t-radio')).toHaveLength(3);
-      disabled.value = true;
-      await wrapper.vm.$nextTick();
-      await wrapper.findAll('.t-radio')[1].trigger('click');
+        await wrapper.get(`.${name}__item`).trigger('click');
+        const selector = multiple ? '.t-checkbox' : '.t-radio';
+        expect(wrapper.findAll(selector)).toHaveLength(3);
+        expect(wrapper.findComponent({ name: 'TPopup' }).props('visible')).toBe(true);
+        disabled.value = true;
+        await flushPromises();
+        expect(wrapper.findComponent({ name: 'TPopup' }).props('visible')).toBe(false);
+        expect(onClose).toHaveBeenCalledTimes(1);
+        await wrapper.findAll(selector)[1].trigger('click');
 
-      expect(onChange).not.toHaveBeenCalled();
-    });
+        expect(onChange).not.toHaveBeenCalled();
+        expect(onUpdateValue).not.toHaveBeenCalled();
+        disabled.value = false;
+        await wrapper.vm.$nextTick();
+        await wrapper.get(`.${name}__item`).trigger('click');
+        expect(wrapper.findComponent({ name: 'TPopup' }).props('visible')).toBe(true);
+      },
+    );
 
     it(': label', () => {
       const value1 = ref('option_2');
