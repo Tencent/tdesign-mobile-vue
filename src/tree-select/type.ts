@@ -4,36 +4,25 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TreeOptionData, TreeKeysType, PlainObject } from '../common';
+import type { TreeOptionData, TreeKeysType } from '../common';
 
-export type _TreeOptionData<T = string | number> = {
-  children?: Array<TreeOptionData<T>> | boolean;
-  /** option label content */
-  label?: any;
-  /** option search text */
-  text?: string;
-  /** option value */
-  value?: T;
-} & PlainObject;
-
-export interface TdTreeSelectProps<DataOption extends _TreeOptionData = _TreeOptionData> {
+export interface TdTreeSelectProps<DataOption extends TreeOptionData = TreeOptionData> {
   /**
    * 自定义组件样式
    * @default ''
    */
   customStyle?: string;
   /**
-   * 是否可搜索
-   * @default false
+   * 自定义选中值，优先级高于 `value`
    */
-  filterable?: boolean;
+  customValue?: TreeSelectValue;
   /**
    * 高度，默认单位为 px
    * @default 336
    */
   height?: string | number;
   /**
-   * 用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }`
+   * 用来定义 `value / label / disabled / children` 在 `options` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }`
    */
   keys?: TreeKeysType;
   /**

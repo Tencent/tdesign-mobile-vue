@@ -8,8 +8,8 @@ name | type | default | description | required
 -- | -- | -- | -- | --
 value | String / Number | - | `v-model` and `v-model:value` is supported | N
 defaultValue | String / Number | - | uncontrolled property | N
-onChange | Function |  | Typescript：`(value: number \| string) => void`<br/> | N
-onClick | Function |  | Typescript：`(value: number \| string, label: string) => void`<br/> | N
+onChange | Function |  | Typescript: `(value: number \| string) => void`<br/> | N
+onClick | Function |  | Typescript: `(value: number \| string, label: string) => void`<br/> | N
 
 ### SideBar Events
 
@@ -23,9 +23,9 @@ click | `(value: number \| string, label: string)` | \-
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-badgeProps | Object | - | Typescript：`BadgeProps`，[Badge API Documents](./badge?tab=api)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/side-bar/type.ts) | N
+badgeProps | Object | - | Typescript: `BadgeProps`，[Badge API Documents](./badge?tab=api). [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/side-bar/type.ts) | N
 disabled | Boolean | false | \- | N
-icon | Slot / Function | - | Typescript：`TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+icon | Slot / Function | - | Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 label | String | - | \- | N
 value | String / Number | - | \- | N
 

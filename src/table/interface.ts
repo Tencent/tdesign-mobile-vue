@@ -1,5 +1,29 @@
+import { InjectionKey } from 'vue';
 import { TNodeReturnValue } from '../common';
-import { TableRowData, BaseTableCol } from './type';
+import { TableRowData, BaseTableCol, TdBaseTableProps, TdPrimaryTableProps, TableExpandedRowParams } from './type';
+
+export type BaseTableProps<T extends TableRowData = TableRowData> = TdBaseTableProps<T>;
+
+/** 表格内部通信（PrimaryTable -> BaseTable），非公开，请勿在业务中使用 */
+export interface TableInternalContext {
+  onLeafColumnsChange?: (columns: BaseTableColumns) => void;
+  renderExpandedRow?: (
+    p: TableExpandedRowParams<TableRowData> & { tableWidth: number; isWidthOverflow: boolean },
+  ) => TNodeReturnValue | null;
+}
+
+export const tableInternalKey: InjectionKey<TableInternalContext> = Symbol('tdesign-table-internal');
+
+export type PrimaryTableProps<T extends TableRowData = TableRowData> = TdPrimaryTableProps<T>;
+
+export interface BaseTableRef {
+  tableElement: HTMLDivElement;
+  tableHtmlElement: HTMLTableElement;
+  tableContentElement: HTMLDivElement;
+  refreshTable: () => void;
+}
+
+export type PrimaryTableRef = BaseTableRef;
 
 export type BaseTableColumns = BaseTableCol<TableRowData>[];
 

@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdSearchProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdSearchProps } from './type';
 export default {
   /** 自定义右侧操作按钮文字，如：“取消” */
   action: {
@@ -19,6 +18,11 @@ export default {
   },
   /** 是否居中 */
   center: Boolean,
+  /** 是否可清空 */
+  clearable: {
+    type: Boolean,
+    default: true,
+  },
   /** 清空图标触发方式，仅在输入框有值时有效 */
   clearTrigger: {
     type: String as PropType<TdSearchProps['clearTrigger']>,
@@ -28,21 +32,13 @@ export default {
       return ['always', 'focus'].includes(val);
     },
   },
-  /** 是否可清空 */
-  clearable: {
-    type: Boolean,
-    default: true,
-  },
   /** 光标颜色 */
   cursorColor: {
     type: String,
     default: '#0052d9',
   },
-  /** 是否禁用。优先级：Search.disabled > Form.disabled */
-  disabled: {
-    type: Boolean,
-    default: undefined,
-  },
+  /** 禁用状态 */
+  disabled: Boolean,
   /** 是否聚焦 */
   focus: Boolean,
   /** 左侧图标 */

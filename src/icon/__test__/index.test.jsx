@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils';
 import { vi } from 'vitest';
 import Icon from '../index';
 import '../icon-svg-props';
-import '../iconfont-props';
+import '../icon-font-props';
 
 describe('icon', () => {
   describe('props', () => {

@@ -5,6 +5,40 @@ toc: false
 spline: explain
 ---
 
+## 🌈 1.17.2 `2026-11-19`
+
+### 🚀 Features
+
+- `ActionSheet`: 修复 `v-model:visible` 无效 @lnuxe ([#2410](https://github.com/Tencent/tdesign-mobile-vue/pull/2410))
+- `Cascader`: 新增 `filterable`、`filter` 和 `filterPlaceholder` 属性，支持搜索功能 @boomLL ([#2371](https://github.com/Tencent/tdesign-mobile-vue/pull/2371))
+- `Form`: `contentAlign` 属性新增 `center` 可选项 @anlyyao ([#2411](https://github.com/Tencent/tdesign-mobile-vue/pull/2411))
+- `Picker`: 修复值为 `0` 时确认事件返回值与滚轮实际显示不一致 @lnuxe ([#2409](https://github.com/Tencent/tdesign-mobile-vue/pull/2409))
+- `PullDownRefresh`: 新增 `successDuration` 属性 @anlyyao ([#2415](https://github.com/Tencent/tdesign-mobile-vue/pull/2415))
+- `Table`: 
+  - 新增筛选、过滤、单选、多选以及上拉加载功能 @boomLL ([#2362](https://github.com/Tencent/tdesign-mobile-vue/pull/2362))
+  - 新增 `ellipsis` 和 `ellipsisTitle`  属性，支持弹窗显示单元格省略内容 @boomLL ([#2362](https://github.com/Tencent/tdesign-mobile-vue/pull/2362))
+- `TreeSelect`: 新增 `customValue` 属性，自定义选中值，用于弥补 `value` 为空数组场景 @anlyyao ([#2416](https://github.com/Tencent/tdesign-mobile-vue/pull/2416))
+
+### 🐞 Bug Fixes
+
+- `Checkbox`: 
+  - 统一圆形图标描边宽度为 2px @anlyyao ([#2400](https://github.com/Tencent/tdesign-mobile-vue/pull/2400))
+  - 优化组件内部图标实现路径，修复 `circle` 和 `rectangle` 图标的选中和非选中态直径不一致问题 @anlyyao ([#2400](https://github.com/Tencent/tdesign-mobile-vue/pull/2400))
+- `DropdownMenu`: 
+  - 修复 `label` 字重错误 @anlyyao ([#2403](https://github.com/Tencent/tdesign-mobile-vue/pull/2403))
+  - 修复单选菜单关闭后页面无法滚动的问题。 @yuxino ([#2413](https://github.com/Tencent/tdesign-mobile-vue/pull/2413))
+- `Radio`: 
+  - 统一圆形图标描边宽度为 2px @anlyyao ([#2400](https://github.com/Tencent/tdesign-mobile-vue/pull/2400))
+  - 优化组件内部图标实现路径，修复 `circle` 图标的选中和非选中态直径不一致问题 @anlyyao ([#2400](https://github.com/Tencent/tdesign-mobile-vue/pull/2400))
+- `Slider`: 修复 `<Slider range />` 场景挂载即崩溃 @lnuxe ([#2408](https://github.com/Tencent/tdesign-mobile-vue/pull/2408))
+
+### 🚧 Others
+
+- build:  @anlyyao ([#2421](https://github.com/Tencent/tdesign-mobile-vue/pull/2421)) 
+  - 构建入口排除 test 测试用例目录（消除测试文件泄漏进 es 等产物）
+  - 声明产物中排除 style 目录， 防止生成冗余的 .d.ts 文件
+  - 不再产出空的 `type.mjs` / `types.mjs`
+
 ## 🌈 1.17.1 `2026-10-29`
 
 ### 🚧 Others

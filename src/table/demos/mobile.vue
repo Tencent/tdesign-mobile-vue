@@ -10,7 +10,10 @@
     <tdesign-demo-block summary="横向平铺可滚动表格" :padding="true">
       <scrollDemo />
     </tdesign-demo-block>
-    <tdesign-demo-block summary="带斑马纹表格样式" :padding="true">
+    <tdesign-demo-block title="02 组件状态" summary="单元格超出省略的表格" :padding="true">
+      <ellipsisDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block title="03 组件样式" summary="带斑马纹表格样式" :padding="true">
       <stripeDemo />
     </tdesign-demo-block>
     <tdesign-demo-block summary="带边框表格样式" :padding="true">
@@ -22,6 +25,18 @@
     <tdesign-demo-block summary="带合并单元格的表格" :padding="true">
       <rowspanColspan />
     </tdesign-demo-block>
+    <tdesign-demo-block summary="带拖拽的表格" :padding="true">
+      <dragSortDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="带加载的表格" :padding="true">
+      <loadingDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="带选择的表格" :padding="true">
+      <selectDemo />
+    </tdesign-demo-block>
+    <tdesign-demo-block summary="带筛选排序的表格" :padding="true">
+      <filterSortDemo />
+    </tdesign-demo-block>
   </div>
 </template>
 
@@ -30,6 +45,11 @@ import baseDemo from './base.vue';
 import scrollDemo from './scroll.vue';
 import stripeDemo from './stripe.vue';
 import borderedDemo from './bordered.vue';
+import ellipsisDemo from './ellipsis.vue';
 import customRowStyle from './custom-row-style.vue';
 import rowspanColspan from './rowspan-colspan.vue';
+import dragSortDemo from './drag-sort.vue';
+import loadingDemo from './loading.vue';
+import selectDemo from './select.vue';
+import filterSortDemo from './filter-sort.vue';
 </script>

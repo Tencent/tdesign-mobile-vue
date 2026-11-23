@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdCommentProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdCommentProps } from './type';
 export default {
   /** 操作 */
   actions: {
@@ -49,4 +48,6 @@ export default {
   onActions: Function as PropType<TdCommentProps['onActions']>,
   /** 用户点击“展开回复/收起”时触发，并返回点击后的 fold 配置 */
   onFolds: Function as PropType<TdCommentProps['onFolds']>,
+  /** 长按整个评论时触发 */
+  onLongPress: Function as PropType<TdCommentProps['onLongPress']>,
 };

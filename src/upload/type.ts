@@ -4,8 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { ImageProps } from '../image';
-import { PlainObject, TNode, UploadDisplayDragEvents } from '../common';
+import type { ImageProps } from '../image';
+import type { PlainObject, TNode } from '../common';
 
 export interface TdUploadProps<T extends UploadFile = UploadFile> {
   /**
@@ -38,10 +38,6 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   autoUpload?: boolean;
   /**
-   * 如果是自动上传模式 `autoUpload=true`，表示全部文件上传之前的钩子函数，函数参数为上传的文件，函数返回值决定是否继续上传，若返回值为 `false` 则终止上传。<br/>如果是非自动上传模式 `autoUpload=false`，则函数返回值为 `false` 时表示本次选中的文件不会加入到文件列表中，即不触发 `onChange` 事件
-   */
-  beforeAllFilesUpload?: (file: UploadFile[]) => boolean | Promise<boolean>;
-  /**
    * 如果是自动上传模式 `autoUpload=true`，表示单个文件上传之前的钩子函数，若函数返回值为 `false` 则表示不上传当前文件。<br/>如果是非自动上传模式 `autoUpload=false`，函数返回值为 `false` 时表示从上传文件中剔除当前文件
    */
   beforeUpload?: (file: UploadFile) => boolean | Promise<boolean>;
@@ -58,13 +54,9 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   disabled?: boolean;
   /**
-   * 是否启用拖拽上传
+   * 是否支持拖拽排序
    */
   draggable?: boolean;
-  /**
-   * 用于完全自定义文件列表界面内容(UI)，单文件和多文件均有效
-   */
-  fileListDisplay?: TNode<{ files: UploadFile[]; dragEvents?: UploadDisplayDragEvents }>;
   /**
    * 已上传文件列表，同 `value`。TS 类型：`UploadFile`
    * @default []
@@ -96,11 +88,6 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   imageProps?: ImageProps;
   /**
-   * 多个文件是否作为一个独立文件包，整体替换，整体删除。不允许追加文件，只允许替换文件。`theme=file-flow` 时有效
-   * @default false
-   */
-  isBatchUpload?: boolean;
-  /**
    * 用于控制文件上传数量，值为 0 则不限制
    * @default 0
    */
@@ -111,19 +98,10 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   method?: 'POST' | 'GET' | 'PUT' | 'OPTIONS' | 'PATCH' | 'post' | 'get' | 'put' | 'options' | 'patch';
   /**
-   * 模拟进度间隔时间，单位：毫秒，默认：300。由于原始的上传请求，小文件上传进度只有 0 和 100，故而新增模拟进度，每间隔 `mockProgressDuration` 毫秒刷新一次模拟进度。小文件设置小一点，大文件设置大一点。注意：当 `useMockProgress` 为真时，当前设置有效
-   */
-  mockProgressDuration?: number;
-  /**
    * 支持多文件上传
    * @default false
    */
   multiple?: boolean;
-  /**
-   * 文件上传时的名称
-   * @default file
-   */
-  name?: string;
   /**
    * 是否支持图片预览，文件没有预览
    * @default true
@@ -143,20 +121,15 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   sizeLimit?: number | SizeLimitObj;
   /**
-   * 是否在同一个请求中上传全部文件，默认一个请求上传一个文件。多文件上传时有效
-   * @default false
+   * 组件风格。提供宫格和列表两种布局风格
+   * @default grid
    */
-  uploadAllFilesInOneRequest?: boolean;
+  theme?: 'grid' | 'list';
   /**
    * 是否在请求时间超过 300ms 后显示模拟进度。上传进度有模拟进度和真实进度两种。一般大小的文件上传，真实的上传进度只有 0 和 100，不利于交互呈现，因此组件内置模拟上传进度。真实上传进度一般用于大文件上传
    * @default true
    */
   useMockProgress?: boolean;
-  /**
-   * 组件风格。提供宫格和列表两种布局风格
-   * @default grid
-   */
-  theme?: 'grid' | 'list';
   /**
    * 已上传文件列表，同 `files`。TS 类型：`UploadFile`
    * @default []
@@ -178,10 +151,6 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   withCredentials?: boolean;
   /**
-   * 点击「取消上传」时触发
-   */
-  onCancelUpload?: () => void;
-  /**
    * 已上传文件列表发生变化时触发，`trigger` 表示触发本次的来源
    */
   onChange?: (value: Array<T>, context: UploadChangeContext) => void;
@@ -190,7 +159,7 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    */
   onClickUpload?: (context: { e: MouseEvent }) => void;
   /**
-   * 拖拽开始时触发
+   * 拖拽开始时触发，`context.file` 为拖拽文件
    */
   onDrag?: (context: { file: UploadFile; index: number }) => void;
   /**
@@ -201,14 +170,6 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 上传失败后触发。`response` 指接口响应结果，`response.error` 会作为错误文本提醒。如果希望判定为上传失败，但接口响应数据不包含 `error` 字段，可以使用 `formatResponse` 格式化 `response` 数据结构。如果是多文件多请求上传场景，请到事件 `onOneFileFail` 中查看 `response`
    */
   onFail?: (options: UploadFailContext) => void;
-  /**
-   * 多文件/图片场景下，单个文件上传失败后触发，如果一个请求上传一个文件，则会触发多次。单文件/图片不会触发
-   */
-  onOneFileFail?: (options: UploadFailContext) => void;
-  /**
-   * 单个文件上传成功后触发，在多文件场景下会触发多次。`context.file` 表示当前上传成功的单个文件，`context.response` 表示上传请求的返回数据
-   */
-  onOneFileSuccess?: (context: Pick<SuccessContext, 'e' | 'file' | 'response' | 'XMLHttpRequest'>) => void;
   /**
    * 点击图片预览时触发，文件没有预览
    */
@@ -233,13 +194,6 @@ export interface TdUploadProps<T extends UploadFile = UploadFile> {
    * 文件上传校验结束事件，文件数量超出、文件大小超出限制、文件同名、`beforeAllFilesUpload` 返回值为假、`beforeUpload` 返回值为假等场景会触发。<br/>注意：如果设置允许上传同名文件，即 `allowUploadDuplicateFile=true`，则不会因为文件重名触发该事件。<br/>结合 `status` 和 `tips` 可以在组件中呈现不同类型的错误（或告警）提示
    */
   onValidate?: (context: { type: UploadValidateType; files: UploadFile[] }) => void;
-  /**
-   * 待上传文件列表发生变化时触发。`context.files` 表示事件参数为待上传文件，`context.trigger` 引起此次变化的触发来源
-   */
-  onWaitingUploadFilesChange?: (context: {
-    files: Array<UploadFile>;
-    trigger: 'validate' | 'remove' | 'uploaded';
-  }) => void;
 }
 
 export interface UploadFile extends PlainObject {

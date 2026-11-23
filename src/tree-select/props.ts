@@ -4,23 +4,24 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdTreeSelectProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdTreeSelectProps } from './type';
 export default {
   /** 自定义组件样式 */
   customStyle: {
     type: String,
     default: '',
   },
-  /** 是否可搜索 */
-  filterable: Boolean,
+  /** 自定义选中值，优先级高于 `value` */
+  customValue: {
+    type: [String, Number, Array] as PropType<TdTreeSelectProps['customValue']>,
+  },
   /** 高度，默认单位为 px */
   height: {
     type: [String, Number] as PropType<TdTreeSelectProps['height']>,
-    default: 336,
+    default: 336 as TdTreeSelectProps['height'],
   },
-  /** 用来定义 `value / label / disabled / children` 在 `data` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }` */
+  /** 用来定义 `value / label / disabled / children` 在 `options` 数据中对应的字段别名，示例：`{ value: 'key', label: 'name', children: 'list' }` */
   keys: {
     type: Object as PropType<TdTreeSelectProps['keys']>,
   },
@@ -34,11 +35,11 @@ export default {
   /** 选中值 */
   value: {
     type: [String, Number, Array] as PropType<TdTreeSelectProps['value']>,
-    default: undefined,
+    default: undefined as TdTreeSelectProps['value'],
   },
   modelValue: {
     type: [String, Number, Array] as PropType<TdTreeSelectProps['value']>,
-    default: undefined,
+    default: undefined as TdTreeSelectProps['value'],
   },
   /** 选中值，非受控属性 */
   defaultValue: {

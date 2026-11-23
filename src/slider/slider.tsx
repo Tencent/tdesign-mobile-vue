@@ -3,7 +3,7 @@ import { isFunction } from 'lodash-es';
 import { useIntersectionObserver } from '@vueuse/core';
 import props from './props';
 import useVModel from '../hooks/useVModel';
-import { trimSingleValue, trimValue } from './tool';
+import { trimSingleValue, trimValue, normalizeDefaultValue } from './tool';
 import type { SliderValue } from './type';
 import { useFormDisabled, useReadonly } from '../form/hooks';
 import { usePrefixClass } from '../hooks/useClass';
@@ -51,7 +51,7 @@ export default defineComponent({
       scaleArray: [],
       scaleTextArray: [],
     });
-    const defaultValue = props.defaultValue || props.min;
+    const defaultValue = normalizeDefaultValue(props.defaultValue, props.min, props.max, props.range);
     const { value, modelValue } = toRefs(props);
     const [innerValue, setInnerValue] = useVModel(value, modelValue, defaultValue, props.onChange);
     const scope = computed(() => Number(props.max) - Number(props.min));

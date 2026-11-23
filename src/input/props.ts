@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdInputProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdInputProps } from './type';
 export default {
   /** 文本内容位置，居左/居中/居右 */
   align: {
@@ -28,6 +27,8 @@ export default {
   autofocus: Boolean,
   /** 是否开启无边框模式 */
   borderless: Boolean,
+  /** 是否可清空 */
+  clearable: Boolean,
   /** 清空图标触发方式，仅在输入框有值时有效 */
   clearTrigger: {
     type: String as PropType<TdInputProps['clearTrigger']>,
@@ -37,8 +38,6 @@ export default {
       return ['always', 'focus'].includes(val);
     },
   },
-  /** 是否可清空 */
-  clearable: Boolean,
   /** 光标颜色 */
   cursorColor: {
     type: String,

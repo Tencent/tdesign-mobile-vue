@@ -2,13 +2,14 @@ import { Ref, watch, onMounted, onActivated, onBeforeUnmount, onDeactivated, nex
 import { useTouch } from '../_util/useTouch';
 import getScrollParent from '../_util/getScrollParent';
 
-const totalLockCount = new Map<String, number>();
+const totalLockCount = new Map<string, number>();
 let mounted: boolean = null;
 
 // 移植自vant：https://github.com/youzan/vant/blob/HEAD/src/composables/use-lock-scroll.ts
 export function useLockScroll(rootRef: Ref<HTMLElement | undefined>, shouldLock: () => boolean, componentName: string) {
   const touch = useTouch();
   const BODY_LOCK_CLASS = `${componentName}--lock`;
+  let locked = false;
 
   const onTouchMove = (event: TouchEvent) => {
     touch.move(event);
@@ -33,6 +34,8 @@ export function useLockScroll(rootRef: Ref<HTMLElement | undefined>, shouldLock:
   };
 
   const lock = () => {
+    if (locked) return;
+    locked = true;
     document.addEventListener('touchstart', touch.start);
     document.addEventListener('touchmove', onTouchMove, { passive: false });
 
@@ -44,22 +47,21 @@ export function useLockScroll(rootRef: Ref<HTMLElement | undefined>, shouldLock:
   };
 
   const unlock = () => {
-    const sum = Array.from(totalLockCount.values()).reduce((acc, val) => acc + val, 0);
-    if (sum) {
-      document.removeEventListener('touchstart', touch.start);
-      document.removeEventListener('touchmove', onTouchMove);
+    if (!locked) return;
+    locked = false;
+    document.removeEventListener('touchstart', touch.start);
+    document.removeEventListener('touchmove', onTouchMove);
 
-      totalLockCount.set(BODY_LOCK_CLASS, Math.max((totalLockCount.get(BODY_LOCK_CLASS) ?? 0) - 1, 0));
-
-      if (!totalLockCount.get(BODY_LOCK_CLASS)) {
-        document.body.classList.remove(BODY_LOCK_CLASS);
-      }
+    const count = totalLockCount.get(BODY_LOCK_CLASS) ?? 0;
+    if (count > 1) {
+      totalLockCount.set(BODY_LOCK_CLASS, count - 1);
+    } else {
+      totalLockCount.delete(BODY_LOCK_CLASS);
+      document.body.classList.remove(BODY_LOCK_CLASS);
     }
   };
 
   const init = () => shouldLock() && lock();
-
-  const destroy = () => shouldLock() && unlock();
 
   onMounted(() => {
     init();
@@ -74,8 +76,8 @@ export function useLockScroll(rootRef: Ref<HTMLElement | undefined>, shouldLock:
     }
   });
 
-  onDeactivated(destroy);
-  onBeforeUnmount(destroy);
+  onDeactivated(unlock);
+  onBeforeUnmount(unlock);
 
   watch(shouldLock, (value) => {
     value ? lock() : unlock();

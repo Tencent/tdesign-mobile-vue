@@ -9,10 +9,10 @@
 action | String / Slot / Function | '' | 自定义右侧操作按钮文字，如：“取消”。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 autocompleteOptions | Array | - | 【讨论中】联想词列表，如果不存在或长度为 0 则不显示联想框。可以使用函数 `label` 自定义联想词为任意内容；也可使用插槽 `option` 定义联想词内容，插槽参数为 `{ option: AutocompleteOption; index: number }`。如果 `group` 值为 `true` 则表示当前项为分组标题。TS 类型：`Array<AutocompleteOption>` `type AutocompleteOption = string \| { label: string \| TNode; group?: boolean }`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[详细类型定义](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/search/type.ts) | N
 center | Boolean | false | 是否居中 | N
-clearTrigger | String | always | 清空图标触发方式，仅在输入框有值时有效。可选项：always / focus | N
 clearable | Boolean | true | 是否可清空 | N
+clearTrigger | String | always | 清空图标触发方式，仅在输入框有值时有效。可选项：always / focus | N
 cursorColor | String | #0052d9 | `1.12.2`。光标颜色 | N
-disabled | Boolean | undefined | 是否禁用。优先级：Search.disabled > Form.disabled | N
+disabled | Boolean | - | 禁用状态 | N
 focus | Boolean | false | 是否聚焦 | N
 leftIcon | String / Slot / Function | 'search' | 左侧图标。TS 类型：`string \| TNode`。[通用类型定义](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | 用户最多可以输入的字符个数，一个中文汉字表示两个字符长度。`maxcharacter` 和 `maxlength` 二选一使用 | N

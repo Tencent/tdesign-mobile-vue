@@ -22,6 +22,7 @@ import TImageViewer from '../image-viewer';
 import TButton from '../button';
 import { TdUploadProps, UploadFile } from './type';
 import UploadProps from './props';
+import UploadInternalProps from './internal-props';
 import useUpload from './hooks/useUpload';
 import useDrag from './hooks/useDrag';
 import { useTNodeJSX } from '../hooks/tnode';
@@ -43,7 +44,7 @@ export default defineComponent({
   components: {
     TImage,
   },
-  props: UploadProps,
+  props: { ...UploadProps, ...UploadInternalProps },
   emits: [
     'update:files',
     'update:modelValue',

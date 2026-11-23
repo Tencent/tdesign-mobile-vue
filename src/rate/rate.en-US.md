@@ -7,18 +7,18 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 allowHalf | Boolean | false | \- | N
-color | String / Array | '#ED7B2F' | Typescript：`string \| Array<string>` | N
+color | String / Array | '#ED7B2F' | Typescript: `string \| Array<string>` | N
 count | Number | 5 | \- | N
 disabled | Boolean | undefined | \- | N
 gap | String / Number | 8 | \- | N
-icon | Array / Slot / Function | - | Typescript：`Array<TNode \| Function>`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+icon | Array / Slot / Function | - | Typescript: `Array<TNode \| Function>`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 placement | String | top | options: top / bottom / '' | N
 showText | Boolean | false | \- | N
 size | String | 24px | \- | N
-texts | Array | [] | Typescript：`Array<string>` | N
+texts | Array | [] | Typescript: `Array<string>` | N
 value | Number | 0 | `v-model` and `v-model:value` is supported | N
 defaultValue | Number | 0 | uncontrolled property | N
-onChange | Function |  | Typescript：`(value: number) => void`<br/> | N
+onChange | Function |  | Typescript: `(value: number) => void`<br/> | N
 
 ### Rate Events
 
