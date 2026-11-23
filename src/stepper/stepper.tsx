@@ -19,6 +19,9 @@ export default defineComponent({
     const disabled = useFormDisabled();
     const isReadonly = useReadonly();
     const inputStyle = computed(() => (props.inputWidth ? { width: `${props.inputWidth}px` } : ''));
+    // integer 默认 true，但一个小数步长（如 0.01 做金额调整）本身就说明允许小数，
+    // 只认 integer 会让这类用法弹不出带小数点的键盘，输入的小数也会被抹掉。
+    const allowDecimal = computed(() => !integer.value || !Number.isInteger(Number(step.value)));
 
     const isDisabled = (type: 'minus' | 'plus') => {
       if (disabled.value || isReadonly.value) return true;
@@ -52,7 +55,7 @@ export default defineComponent({
     };
 
     const updateValue = (value: TdStepperProps['value']) => {
-      setStepperValue(formatNumber(`${value}`, !integer.value));
+      setStepperValue(formatNumber(`${value}`, allowDecimal.value));
     };
 
     const plusValue = () => {
@@ -72,7 +75,7 @@ export default defineComponent({
     };
 
     const handleInput = (e: Event) => {
-      const value = formatNumber((e.target as HTMLTextAreaElement).value, !integer.value);
+      const value = formatNumber((e.target as HTMLTextAreaElement).value, allowDecimal.value);
       setStepperValue(value);
     };
 
@@ -115,8 +118,8 @@ export default defineComponent({
               `${stepperClass.value}__input--${props.size}`,
               `${disabled.value ? `${stepperClass.value}--${props.theme}-disabled` : ''}`,
             ]}
-            type={integer.value ? 'tel' : 'text'}
-            inputmode={integer.value ? 'numeric' : 'decimal'}
+            type={allowDecimal.value ? 'text' : 'tel'}
+            inputmode={allowDecimal.value ? 'decimal' : 'numeric'}
             style={inputStyle.value}
             disabled={props.disableInput || disabled.value}
             readonly={props.disableInput || isReadonly.value}
