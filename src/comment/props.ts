@@ -48,4 +48,6 @@ export default {
   onActions: Function as PropType<TdCommentProps['onActions']>,
   /** 用户点击“展开回复/收起”时触发，并返回点击后的 fold 配置 */
   onFolds: Function as PropType<TdCommentProps['onFolds']>,
+  /** 长按整个评论时触发 */
+  onLongPress: Function as PropType<TdCommentProps['onLongPress']>,
 };

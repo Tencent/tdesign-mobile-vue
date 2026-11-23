@@ -4,6 +4,7 @@ import { ChevronDownSIcon, ChevronUpSIcon } from 'tdesign-icons-vue-next';
 import Avatar from '../avatar';
 import { usePrefixClass } from '../hooks/useClass';
 import { useResizeObserver } from '../hooks/useResizeObserver';
+import { useLongPress } from '../hooks/useLongPress';
 import { useContent, useTNodeJSX } from '../hooks/tnode';
 import { useConfig } from '../config-provider/useConfig';
 import type { CommentActionItem, CommentFold, CommentFoldState } from './type';
@@ -30,6 +31,12 @@ export default defineComponent({
     const foldSteps = ref(0);
     const replyBodyRef = ref<HTMLDivElement>(null);
     const replyInnerRef = ref<HTMLDivElement>(null);
+
+    const { isLongPressed, handlers: longPressHandlers } = useLongPress({
+      onLongPress: (e) => {
+        props.onLongPress?.({ e });
+      },
+    });
 
     const isControlled = computed(() => folds.value !== undefined);
     const commentFolds = computed(() => folds.value || defaultFolds.value || DEFAULT_COMMENT_FOLDS);
@@ -143,8 +150,8 @@ export default defineComponent({
             ));
         return (
           <>
-            <div class={`${commentClass.value}-block`}>{renderLeftPlacement()}</div>
-            <div class={`${commentClass.value}-block`}>{renderRightPlacement()}</div>
+            <div class={`${commentClass.value}__actions-block`}>{renderLeftPlacement()}</div>
+            <div class={`${commentClass.value}__actions-block`}>{renderRightPlacement()}</div>
           </>
         );
       };
@@ -232,7 +239,13 @@ export default defineComponent({
 
     return () => (
       <div class={`${commentClass.value}`}>
-        <div class={`${commentClass.value}__inner`}>
+        <div
+          class={[
+            `${commentClass.value}__inner`,
+            { [`${commentClass.value}__inner--long-press`]: isLongPressed.value },
+          ]}
+          {...longPressHandlers}
+        >
           {renderAvatar()}
           <div class={`${commentClass.value}__detail`}>
             {renderAuthor()}
