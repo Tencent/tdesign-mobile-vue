@@ -28,7 +28,7 @@ export default {
     type: Number,
     default: 240,
   },
-  /** 顶部和底部弹出层的最大宽度，设置后水平居中。数字单位为 px，支持 CSS 长度字符串。不设置时保持原有布局 */
+  /** 弹出层最大宽度，仅顶部和底部弹出场景有效。 */
   maxWidth: {
     type: [String, Number] as PropType<TdPopupProps['maxWidth']>,
   },
