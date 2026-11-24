@@ -89,7 +89,7 @@
     "dayjs": "^1.10.7",
     "lodash-es": "^4.17.21",
     "sortablejs": "^1.15.7",
-    "tdesign-icons-vue-next": "^0.4.11",
+    "tdesign-icons-vue-next": "^0.4.12",
     "tinycolor2": "^1.6.0",
     "validator": "^13.5.1"
   },
