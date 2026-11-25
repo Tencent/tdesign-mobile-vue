@@ -156,3 +156,10 @@ resetValue | \- | - | Typescript: `any` | N
 showConfirmAndReset | Boolean | false | \- | N
 style | Object | - | styles of component. Typescript: `Styles`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 type | String | - | Typescript: `FilterType` `type FilterType = 'input' \| 'single' \| 'multiple'`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/table/type.ts) | N
+
+### CSS Variables
+
+The component provides the following CSS variables, which can be used to customize styles.
+Name | Default Value | Description
+-- | -- | --
+--td-table-body-text-color | @text-color-primary | -

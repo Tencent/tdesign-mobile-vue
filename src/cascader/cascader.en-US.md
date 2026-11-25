@@ -44,7 +44,16 @@ Name | Default Value | Description
 --td-cascader-active-color | @brand-color | -
 --td-cascader-bg-color | @bg-color-container | -
 --td-cascader-border-color | @component-stroke | -
+--td-cascader-content-height | 78vh | -
 --td-cascader-disabled-color | @text-color-disabled | -
+--td-cascader-filter-empty-color | @text-color-placeholder | -
+--td-cascader-filter-empty-padding | @spacer-5 @spacer-2 | -
+--td-cascader-filter-highlight-color | @brand-color | -
+--td-cascader-filter-item-color | @text-color-primary | -
+--td-cascader-filter-item-disabled-color | @text-color-disabled | -
+--td-cascader-filter-item-hover-bg | @bg-color-secondarycontainer | -
+--td-cascader-filter-item-padding | @spacer-1 @spacer-2 | -
+--td-cascader-filter-padding | 0 @spacer-2 @spacer-1 | -
 --td-cascader-options-height | 320px | -
 --td-cascader-options-title-color | @text-color-placeholder | -
 --td-cascader-step-arrow-color | @text-color-placeholder | -

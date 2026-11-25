@@ -35,7 +35,7 @@ Name | Default Value | Description
 -- | -- | --
 --td-navbar-right | 95px | -
 --td-navbar-bg-color | @bg-color-container | -
---td-navbar-capsule-border-color | #e3e6ea | -
+--td-navbar-capsule-border-color | @component-stroke | -
 --td-navbar-capsule-border-radius | 16px | -
 --td-navbar-capsule-height | 32px | -
 --td-navbar-capsule-width | 88px | -
