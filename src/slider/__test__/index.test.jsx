@@ -246,3 +246,18 @@ describe('slider', () => {
     });
   });
 });
+
+describe('slider release bounds', () => {
+  it('clamps the final value after bounds change without another move', async () => {
+    const onDragend = vi.fn();
+    const onChange = vi.fn();
+    const wrapper = mount(Slider, { props: { defaultValue: 85, onDragend, onChange } });
+    const dot = wrapper.find('.t-slider__dot');
+    await dot.trigger('touchstart');
+    await wrapper.setProps({ max: 60 });
+    await dot.trigger('touchend');
+    expect(onDragend).toHaveBeenCalledWith(60, expect.any(Object));
+    expect(onChange).toHaveBeenCalledWith(60);
+    wrapper.unmount();
+  });
+});
