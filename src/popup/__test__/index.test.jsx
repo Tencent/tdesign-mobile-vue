@@ -94,8 +94,8 @@ describe('popup', () => {
       });
       const style = document.body.querySelector('.t-popup').getAttribute('style');
       expect(style).toContain('animation-duration: 240ms');
-      // fill-mode 保留动画末帧，避免过渡类移除到元素隐藏之间的空档露出初始样式
-      expect(style).toContain('animation-fill-mode: both');
+      // 末帧保持由 common 的 _transition.less（animation ... both）提供，组件不再写内联 fill-mode
+      expect(style).not.toContain('animation-fill-mode');
       expect(style).toContain('transition-duration: 240ms');
 
       wrapper.unmount();
