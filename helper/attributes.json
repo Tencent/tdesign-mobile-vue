@@ -536,13 +536,13 @@
     "type": "Function",
     "description": " 自定义过滤函数。返回 true 表示匹配，未设置时使用内置匹配规则：对路径中所有 label 拼接后做大小写不敏感的 includes 匹配\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
   },
-  "t-cascader/filter-placeholder": {
-    "type": "String",
-    "description": "搜索框占位符描述文本\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
-  },
   "t-cascader/filterable": {
     "type": "Boolean",
     "description": "是否可搜索，开启后顶部会展示一个搜索框 \n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
+  },
+  "t-cascader/filter-placeholder": {
+    "type": "String",
+    "description": "搜索框占位符描述文本\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cascader?tab=api#cascader-props)"
   },
   "t-cascader/header": {
     "type": "TNode",
@@ -677,70 +677,6 @@
     "type": "String",
     "description": "单元格组标题\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/cell?tab=api#cellgroup-props)"
   },
-  "t-check-tag/checked": {
-    "type": "Boolean",
-    "description": "标签选中的状态，默认风格（theme=default）才有选中态\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
-  },
-  "t-check-tag/closable": {
-    "type": "Boolean",
-    "description": "标签是否可关闭\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
-  },
-  "t-check-tag/content": {
-    "type": "String|Number|Array|TNode",
-    "description": "组件子元素；传入数组时：[选中内容，非选中内容]\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
-  },
-  "t-check-tag/default": {
-    "type": "String|TNode",
-    "description": "组件子元素，默认插槽\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
-  },
-  "t-check-tag/disabled": {
-    "type": "Boolean",
-    "description": "标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
-  },
-  "t-check-tag/icon": {
-    "type": "TNode",
-    "description": "标签中的图标，可自定义图标呈现\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
-  },
-  "t-check-tag/shape": {
-    "type": "String",
-    "options": [
-      "square",
-      "round",
-      "mark"
-    ],
-    "description": "标签类型，有三种：方形、圆角方形、标记型\n\ndefault: square\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
-  },
-  "t-check-tag/size": {
-    "type": "String",
-    "options": [
-      "small",
-      "medium",
-      "large"
-    ],
-    "description": "标签尺寸\n\ndefault: medium\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
-  },
-  "t-check-tag/variant": {
-    "type": "String",
-    "options": [
-      "dark",
-      "light",
-      "outline",
-      "light-outline"
-    ],
-    "description": "标签风格变体\n\ndefault: dark\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
-  },
-  "t-check-tag/change": {
-    "type": "event",
-    "description": "状态切换时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-events)"
-  },
-  "t-check-tag/click": {
-    "type": "event",
-    "description": "点击标签时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-events)"
-  },
-  "t-check-tag/close": {
-    "type": "event",
-    "description": "如果关闭按钮存在，点击关闭按钮时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-events)"
-  },
   "t-checkbox/block": {
     "type": "Boolean",
     "description": "是否为块级元素\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/checkbox?tab=api#checkbox-props)"
@@ -861,6 +797,70 @@
     "type": "event",
     "description": "值变化时触发。`context.current` 表示当前变化的数据项，如果是全选则为空；`context.type` 表示引起选中数据变化的是选中或是取消选中，`context.option` 表示当前变化的数据项\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/checkbox?tab=api#checkboxgroup-events)"
   },
+  "t-check-tag/checked": {
+    "type": "Boolean",
+    "description": "标签选中的状态，默认风格（theme=default）才有选中态\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
+  },
+  "t-check-tag/closable": {
+    "type": "Boolean",
+    "description": "标签是否可关闭\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
+  },
+  "t-check-tag/content": {
+    "type": "String|Number|Array|TNode",
+    "description": "组件子元素；传入数组时：[选中内容，非选中内容]\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
+  },
+  "t-check-tag/default": {
+    "type": "String|TNode",
+    "description": "组件子元素，默认插槽\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
+  },
+  "t-check-tag/disabled": {
+    "type": "Boolean",
+    "description": "标签禁用态，失效标签不能触发事件。默认风格（theme=default）才有禁用态\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
+  },
+  "t-check-tag/icon": {
+    "type": "TNode",
+    "description": "标签中的图标，可自定义图标呈现\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
+  },
+  "t-check-tag/shape": {
+    "type": "String",
+    "options": [
+      "square",
+      "round",
+      "mark"
+    ],
+    "description": "标签类型，有三种：方形、圆角方形、标记型\n\ndefault: square\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
+  },
+  "t-check-tag/size": {
+    "type": "String",
+    "options": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "description": "标签尺寸\n\ndefault: medium\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
+  },
+  "t-check-tag/variant": {
+    "type": "String",
+    "options": [
+      "dark",
+      "light",
+      "outline",
+      "light-outline"
+    ],
+    "description": "标签风格变体\n\ndefault: dark\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-props)"
+  },
+  "t-check-tag/change": {
+    "type": "event",
+    "description": "状态切换时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-events)"
+  },
+  "t-check-tag/click": {
+    "type": "event",
+    "description": "点击标签时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-events)"
+  },
+  "t-check-tag/close": {
+    "type": "event",
+    "description": "如果关闭按钮存在，点击关闭按钮时触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tag?tab=api#checktag-events)"
+  },
   "t-col/offset": {
     "type": "String|Number",
     "description": "列的偏移量（默认单位px）\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/col?tab=api#col-props)"
@@ -949,17 +949,9 @@
     "type": "Boolean",
     "description": "是否可清空\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
   },
-  "t-color-picker/color-modes": {
-    "type": "String|Array",
-    "description": "颜色模式选择。同时支持单色和渐变两种模式，可仅使用单色或者渐变其中一种模式，也可以同时使用。`monochrome` 表示单色，`linear-gradient` 表示渐变色\n\ndefault: \"monochrome\"\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
-  },
   "t-color-picker/enable-alpha": {
     "type": "Boolean",
     "description": "是否开启透明通道\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
-  },
-  "t-color-picker/enable-multiple-gradient": {
-    "type": "Boolean",
-    "description": "是否允许开启通过点击渐变轴增加渐变梯度，默认开启，关闭时只会存在起始和结束两个颜色\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/color-picker?tab=api#colorpicker-props)"
   },
   "t-color-picker/fixed": {
     "type": "Boolean",
@@ -1520,9 +1512,10 @@
     "type": "String",
     "options": [
       "left",
+      "center",
       "right"
     ],
-    "description": "表单内容对齐方式：左对齐、右对齐\n\ndefault: left\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form?tab=api#form-props)"
+    "description": "表单内容对齐方式：左对齐、居中对齐及右对齐\n\ndefault: left\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form?tab=api#form-props)"
   },
   "t-form/data": {
     "type": "Object",
@@ -1622,9 +1615,10 @@
     "type": "String",
     "options": [
       "left",
+      "center",
       "right"
     ],
-    "description": "表单内容对齐方式：左对齐、右对齐，优先级高于 Form.contentAlign\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form?tab=api#formitem-props)"
+    "description": "表单内容对齐方式：左对齐、居中对齐及右对齐，优先级高于 Form.contentAlign\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/form?tab=api#formitem-props)"
   },
   "t-form-item/for": {
     "type": "String",
@@ -2062,6 +2056,10 @@
     "type": "Boolean",
     "description": "input without border\n\n是否开启无边框模式\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props)"
   },
+  "t-input/clearable": {
+    "type": "Boolean",
+    "description": "show clear icon, clicked to clear input value\n\n是否可清空\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props)"
+  },
   "t-input/clear-trigger": {
     "type": "String",
     "options": [
@@ -2069,10 +2067,6 @@
       " focus"
     ],
     "description": "show clear icon, clicked to clear input value\n\n清空图标触发方式，仅在输入框有值时有效\n\ndefault: always\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props)"
-  },
-  "t-input/clearable": {
-    "type": "Boolean",
-    "description": "show clear icon, clicked to clear input value\n\n是否可清空\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/input?tab=api#input-props)"
   },
   "t-input/cursor-color": {
     "type": "String",
@@ -3175,6 +3169,10 @@
     "type": "Boolean",
     "description": "是否居中\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/search?tab=api#search-props)"
   },
+  "t-search/clearable": {
+    "type": "Boolean",
+    "description": "是否可清空\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/search?tab=api#search-props)"
+  },
   "t-search/clear-trigger": {
     "type": "String",
     "options": [
@@ -3182,10 +3180,6 @@
       " focus"
     ],
     "description": "show clear icon, clicked to clear input value\n\n清空图标触发方式，仅在输入框有值时有效\n\ndefault: always\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/search?tab=api#search-props)"
-  },
-  "t-search/clearable": {
-    "type": "Boolean",
-    "description": "是否可清空\n\ndefault: true\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/search?tab=api#search-props)"
   },
   "t-search/cursor-color": {
     "type": "String",
@@ -3432,13 +3426,13 @@
     "type": "String|TNode",
     "description": "标题右侧数据 仅支持 layout = 'vertical' 时\n\ndefault: ''\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/steps?tab=api#stepitem-props)"
   },
-  "t-stepper/disable-input": {
-    "type": "Boolean",
-    "description": "禁用输入框\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/stepper?tab=api#stepper-props)"
-  },
   "t-stepper/disabled": {
     "type": "Boolean",
     "description": "禁用全部操作\n\ndefault: undefined\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/stepper?tab=api#stepper-props)"
+  },
+  "t-stepper/disable-input": {
+    "type": "Boolean",
+    "description": "禁用输入框\n\ndefault: false\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/stepper?tab=api#stepper-props)"
   },
   "t-stepper/input-width": {
     "type": "Number",
@@ -4164,9 +4158,9 @@
     "type": "event",
     "description": "轻提示销毁的时候触发\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/toast?tab=api#toast-events)"
   },
-  "t-tree-select/custom-value": {
-    "type": "String|Number|Array",
-    "description": "自定义选中值，优先级高于 `value`\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tree-select?tab=api#treeselect-props)"
+  "t-tree-select/custom-style": {
+    "type": "String",
+    "description": "自定义组件样式\n\n[docs](https://tdesign.tencent.com/mobile-vue/components/tree-select?tab=api#treeselect-props)"
   },
   "t-tree-select/height": {
     "type": "String|Number",

@@ -6,15 +6,15 @@
 
 name | type | default | description | required
 -- | -- | -- | -- | --
-action | String / Slot / Function | '' | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
-autocompleteOptions | Array | - | autocomplete words list。Typescript: `Array<AutocompleteOption>` `type AutocompleteOption = string \| { label: string \| TNode; group?: boolean }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/search/type.ts) | N
+action | String / Slot / Function | '' | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+autocompleteOptions | Array | - | autocomplete words list. Typescript: `Array<AutocompleteOption>` `type AutocompleteOption = string \| { label: string \| TNode; group?: boolean }`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts). [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/search/type.ts) | N
 center | Boolean | false | \- | N
-clearTrigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean | true | \- | N
+clearTrigger | String | always | show clear icon, clicked to clear input value. options: always / focus | N
 cursorColor | String | #0052d9 | `1.12.2` | N
-disabled | Boolean | undefined | make search to be disabled. Priority: Search.disabled > Form.disabled | N
+disabled | Boolean | - | \- | N
 focus | Boolean | false | \- | N
-leftIcon | String / Slot / Function | 'search' | Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+leftIcon | String / Slot / Function | 'search' | Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 maxcharacter | Number | - | The maximum number of characters that the user can enter. One Chinese character represents two characters in length. Use either `maxcharacter` or `maxlength` | N
 maxlength | String / Number | - | The maximum length of text that the user can enter. One Chinese character is equal to one count length. By default, it is empty, and the input length is not limited. Use either `maxcharacter` or `maxlength` | N
 placeholder | String | '' | \- | N

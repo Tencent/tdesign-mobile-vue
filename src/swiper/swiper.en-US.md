@@ -15,17 +15,17 @@ duration | Number | 300 | \- | N
 height | String / Number | - | \- | N
 interval | Number | 5000 | \- | N
 loop | Boolean | true | \- | N
-navigation | Boolean / Object / Slot / Function | true | Typescript: `SwiperNavigation \| TNode \| Boolean`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+navigation | Boolean / Object / Slot / Function | true | Typescript: `SwiperNavigation \| TNode \| Boolean`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 nextMargin | String / Number | 0 | \- | N
 previousMargin | String / Number | 0 | \- | N
-onChange | Function |  | Typescript: `(current: number, context: { source: SwiperChangeSource }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/> | N
+onChange | Function |  | Typescript: `(current: number, context: { source: SwiperChangeSource }) => void`<br/>[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts). <br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/> | N
 onClick | Function |  | Typescript: `(index: number) => void`<br/> | N
 
 ### Swiper Events
 
 name | params | description
 -- | -- | --
-change | `(current: number, context: { source: SwiperChangeSource })` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts)。<br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/>
+change | `(current: number, context: { source: SwiperChangeSource })` | [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts). <br/>`type SwiperChangeSource = 'autoplay' \| 'touch' \| 'nav'`<br/>
 click | `(index: number)` | \-
 
 ### SwiperNavigation
@@ -36,7 +36,7 @@ minShowNum | Number | - | \- | N
 paginationPosition | String | bottom | options: top-left/top/top-right/bottom-left/bottom/bottom-right/left/right | N
 placement | String | inside | options: inside/outside | N
 showControls | Boolean | false | \- | N
-type | String | - | Typescript: `SwiperNavigationType` `type SwiperNavigationType = 'dots' \| 'dots-bar' \| 'fraction'`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts) | N
+type | String | - | Typescript: `SwiperNavigationType` `type SwiperNavigationType = 'dots' \| 'dots-bar' \| 'fraction'`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/swiper/type.ts) | N
 
 ### CSS Variables
 

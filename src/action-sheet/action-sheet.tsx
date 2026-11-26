@@ -27,7 +27,13 @@ export default defineComponent({
       });
     });
     const { visible, modelValue } = toRefs(props);
-    const [currentVisible] = useVModel(visible, modelValue, props.defaultVisible, () => {}, 'visible');
+    const [currentVisible, setCurrentVisible] = useVModel(
+      visible,
+      modelValue,
+      props.defaultVisible,
+      () => {},
+      'visible',
+    );
 
     const rootClasses = computed(() => [
       `${actionSheetClass.value}`,
@@ -39,13 +45,13 @@ export default defineComponent({
     ]);
 
     const hide = (trigger: string) => {
-      context.emit('update:modelValue', false);
+      setCurrentVisible(false);
       props.onClose?.({ trigger });
     };
 
     const handleCancel = () => {
       props.onCancel?.();
-      context.emit('update:modelValue', false);
+      setCurrentVisible(false);
     };
 
     const handleSelected = (index: number) => {

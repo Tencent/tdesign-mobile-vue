@@ -4,9 +4,8 @@
  * 该文件为脚本自动生成文件，请勿随意修改。如需修改请联系 PMC
  * */
 
-import { TdColorPickerProps } from './type';
-import { PropType } from 'vue';
-
+import type { PropType } from 'vue';
+import type { TdColorPickerProps } from './type';
 export default {
   /** 是否可清空 */
   clearable: Boolean,
@@ -25,7 +24,7 @@ export default {
   },
   /** 系统预设的颜色样例，值为 `null` 或 `[]` 则不显示系统色，值为 `undefined` 会显示组件内置的系统默认色 */
   swatchColors: {
-    type: Array as PropType<TdColorPickerProps['swatchColors']>,
+    type: [Array, null] as PropType<TdColorPickerProps['swatchColors']>,
     default: undefined as TdColorPickerProps['swatchColors'],
   },
   /** 颜色选择器类型。（base 表示仅展示系统预设内容; multiple 表示展示色板和系统预设内容 */

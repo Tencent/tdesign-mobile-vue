@@ -100,7 +100,7 @@ describe('picker', () => {
       itemContainers.forEach((container, index) => expect(container.text()).toBe(renderLabel(seasonOptions[index])));
     });
 
-    it(': defaultValue', () => {
+    it(': defaultValue', async () => {
       const selector = '.t-picker-item__item--active';
       // valid option value
       let wrapper = mountPicker({ defaultValue: [seasonOptions[1].value] });
@@ -111,6 +111,46 @@ describe('picker', () => {
       wrapper = mountPicker({ defaultValue: ['NOT_EXIST'] });
       textContainer = wrapper.find(selector);
       expect(textContainer.text()).toBe(seasonOptions[0].label);
+
+      // falsy 0 value：0 是合法选项值，不能被当成「未设置」
+      const onConfirmZero = vi.fn();
+      wrapper = mountPicker({
+        columns: [
+          [
+            { label: 'A', value: 1 },
+            { label: 'B', value: 0 },
+          ],
+        ],
+        defaultValue: [0],
+        onConfirm: onConfirmZero,
+      });
+      expect(wrapper.find(selector).text()).toBe('B');
+      await wrapper.find('.t-picker__confirm').trigger('click');
+      expect(onConfirmZero).toBeCalledWith([0], {
+        e: expect.any(MouseEvent),
+        index: [1],
+        label: ['B'],
+      });
+
+      // numeric value not in column：找不到时回退到第一项
+      const onConfirmMissing = vi.fn();
+      wrapper = mountPicker({
+        columns: [
+          [
+            { label: 'A', value: 1 },
+            { label: 'B', value: 2 },
+          ],
+        ],
+        defaultValue: [99],
+        onConfirm: onConfirmMissing,
+      });
+      expect(wrapper.find(selector).text()).toBe('A');
+      await wrapper.find('.t-picker__confirm').trigger('click');
+      expect(onConfirmMissing).toBeCalledWith([1], {
+        e: expect.any(MouseEvent),
+        index: [0],
+        label: ['A'],
+      });
     });
 
     it(': columns', () => {

@@ -16,13 +16,13 @@ theme | String | normal | 选项风格。可选项：normal/tag | N
 value | String / Number / Array | - | 当前选中标签的索引。支持语法糖 `v-model` 或 `v-model:value`。TS 类型：`string \| number \| Array<string \| number>` | N
 defaultValue | String / Number / Array | - | 当前选中标签的索引。非受控属性。TS 类型：`string \| number \| Array<string \| number>` | N
 zIndex | Number | 1 | `1.12.0`。标签栏层级 | N
-onChange | Function |  | TS 类型：`(value: string \| number) => void`<br/>选中标签切换时触发 | N
+onChange | Function |  | TS 类型：`(context: { value: string \| number }) => void`<br/>选中标签切换时触发 | N
 
 ### TabBar Events
 
 名称 | 参数 | 描述
 -- | -- | --
-change | `(value: string \| number)` | 选中标签切换时触发
+change | `(context: { value: string \| number })` | 选中标签切换时触发
 
 
 ### TabBarItem Props
@@ -40,12 +40,12 @@ value | String / Number | - | 标识符 | N
 名称 | 默认值 | 描述
 -- | -- | --
 --td-tab-bar-bg-color | @bg-color-container | -
---td-tab-bar-border-color | @border-color | -
+--td-tab-bar-border-color | @component-stroke | -
 --td-tab-bar-round-shadow | @shadow-3 | -
 --td-tab-bar-active-bg | @brand-color-light | -
 --td-tab-bar-active-color | @brand-color | -
 --td-tab-bar-color | @text-color-primary | -
 --td-tab-bar-height | 40px | -
 --td-tab-bar-hover-bg-color | rgba(0, 0, 0, 0.05) | -
---td-tab-bar-spread-border-color | @border-color | -
+--td-tab-bar-spread-border-color | @component-stroke | -
 --td-tab-bar-spread-shadow | @shadow-3 | -

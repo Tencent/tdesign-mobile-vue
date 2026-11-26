@@ -7,14 +7,14 @@
 name | type | default | description | required
 -- | -- | -- | -- | --
 animation | Boolean | true | \- | N
-capsule | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+capsule | Slot / Function | - | Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 fixed | Boolean | true | \- | N
-left | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+left | Slot / Function | - | Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 leftArrow | Boolean | false | \- | N
 placeholder | Boolean | false | `1.12.0` | N
-right | Slot / Function | - | Typescript: `TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+right | Slot / Function | - | Typescript: `TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 safeAreaInsetTop | Boolean | true | \- | N
-title | String / Slot / Function | - | page title。Typescript: `string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
+title | String / Slot / Function | - | page title. Typescript: `string \| TNode`. [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 titleMaxLength | Number | - | \- | N
 visible | Boolean | true | \- | N
 zIndex | Number | 1 | `1.12.0` | N
@@ -35,7 +35,7 @@ Name | Default Value | Description
 -- | -- | --
 --td-navbar-right | 95px | -
 --td-navbar-bg-color | @bg-color-container | -
---td-navbar-capsule-border-color | #e3e6ea | -
+--td-navbar-capsule-border-color | @component-stroke | -
 --td-navbar-capsule-border-radius | 16px | -
 --td-navbar-capsule-height | 32px | -
 --td-navbar-capsule-width | 88px | -
