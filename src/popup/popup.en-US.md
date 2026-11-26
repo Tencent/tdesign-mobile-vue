@@ -11,6 +11,7 @@ closeBtn | Boolean / Slot / Function | - | Typescript: `boolean \| TNode`. [see 
 closeOnOverlayClick | Boolean | true | \- | N
 destroyOnClose | Boolean | false | \- | N
 duration | Number | 240 | \- | N
+maxWidth | String / Number | - | Maximum width of the popup. Only applies to top and bottom placements. | N
 overlayProps | Object | {} | Typescript: `OverlayProps`，[Overlay API Documents](./overlay?tab=api). [see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/popup/type.ts) | N
 placement | String | top | options: top/left/right/bottom/center | N
 preventScrollThrough | Boolean | true | \- | N
