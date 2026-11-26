@@ -39,7 +39,7 @@ Name | Default Value | Description
 -- | -- | --
 --td-message-bg-color | @bg-color-container | -
 --td-message-border-radius | @radius-default | -
---td-message-box-shadow | @shadow-4 | -
+--td-message-box-shadow | @shadow-1 | -
 --td-message-close-icon-color | @text-color-placeholder | -
 --td-message-content-color | @text-color-primary | -
 --td-message-error-color | @error-color | -
