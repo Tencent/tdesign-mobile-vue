@@ -68,6 +68,11 @@ export default defineComponent({
       if (props.zIndex) {
         styles.zIndex = `${props.zIndex}`;
       }
+
+      if (props.duration) {
+        styles.animationDuration = `${props.duration}ms`;
+        styles.transitionDuration = `${props.duration}ms`;
+      }
       return { ...(context.attrs.style as Object), ...styles };
     });
 
