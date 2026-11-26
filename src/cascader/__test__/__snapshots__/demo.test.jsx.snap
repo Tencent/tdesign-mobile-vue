@@ -2795,7 +2795,7 @@ exports[`Cascader > Cascader mobileVue demo works fine 1`] = `
       </div>
       <div
         class="t-popup t-popup--bottom"
-        style="display: none;"
+        style="animation-duration: 240ms; transition-duration: 240ms; display: none;"
       >
         <!---->
         
