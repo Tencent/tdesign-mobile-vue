@@ -158,7 +158,13 @@ export default defineComponent({
     };
 
     const onTouchEnd = (e: TouchEvent) => {
-      props.onDragend?.(innerValue.value, { e });
+      const currentValue = innerValue.value;
+      const value = trimValue(Array.isArray(currentValue) ? [...currentValue] : currentValue, props);
+      const changed = Array.isArray(value)
+        ? !Array.isArray(currentValue) || value.some((item, index) => item !== currentValue[index])
+        : value !== currentValue;
+      if (changed) setInnerValue(value);
+      props.onDragend?.(value, { e });
     };
 
     const onTouchStart = (e: TouchEvent) => {

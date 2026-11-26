@@ -45,7 +45,7 @@ title | String | - | 单元格组标题 | N
 --td-cell-border-right-space | 0 | -
 --td-cell-description-color | @text-color-secondary | -
 --td-cell-description-font | @font-body-medium | -
---td-cell-group-border-color | @border-color | -
+--td-cell-group-border-color | @component-stroke | -
 --td-cell-group-title-bg-color | @bg-color-secondarycontainer | -
 --td-cell-group-title-color | @text-color-placeholder | -
 --td-cell-group-title-font-size | 14px | -
