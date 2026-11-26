@@ -60,7 +60,7 @@ options | \- | - | TS 类型：`DrawerOptions`
 名称 | 默认值 | 描述
 -- | -- | --
 --td-drawer-bg-color | @bg-color-container | -
---td-drawer-border-color | @border-color | -
+--td-drawer-border-color | @component-stroke | -
 --td-drawer-footer-padding-bottom | 20px | -
 --td-drawer-hover-color | @bg-color-secondarycontainer | -
 --td-drawer-item-icon-size | 24px | -
