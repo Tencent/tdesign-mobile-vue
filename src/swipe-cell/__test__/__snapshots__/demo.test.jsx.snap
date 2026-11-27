@@ -3252,6 +3252,7 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
           </div>
         </div>
       </div>
+      <!-- 数组 · iOS 风格 -->
       <div
         class="t-swipe-cell ios-swipe"
         style="margin-top: 16px;"

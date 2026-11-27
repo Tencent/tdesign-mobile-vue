@@ -36,14 +36,13 @@
       </template>
     </t-swipe-cell>
 
+    <!-- 数组 · iOS 风格 -->
     <t-swipe-cell
       style="margin-top: 16px"
       class="ios-swipe"
       :class="{ 'ios-swipe--active': iosSwiping }"
       full-swipe
       :right="iosActions"
-      @touchstart="onIosTouchStart"
-      @touchmove="onIosTouchMove"
       @change="(v?: string) => (iosSwiping = !!v)"
     >
       <t-cell title="胶囊型操作项（左滑到底删除）" note="数组"></t-cell>
@@ -67,19 +66,7 @@ const multiActions: SwipeActionItem[] = [
 const muteIcon = h(NotificationFilledIcon, { size: '22px' });
 const trashIcon = h(DeleteIcon, { size: '22px' });
 
-// 是否处于滑动/展开态：仅在左滑（露出右侧删除按钮）后给 cell 添加背景与圆角
 const iosSwiping = ref(false);
-// 右滑无操作项，不应触发样式，故按触摸方向判断：仅左滑激活
-let iosStartX = 0;
-const onIosTouchStart = (e: TouchEvent) => {
-  iosStartX = e.touches[0]?.clientX ?? 0;
-};
-const onIosTouchMove = (e: TouchEvent) => {
-  const deltaX = (e.touches[0]?.clientX ?? 0) - iosStartX;
-  if (deltaX < 0) {
-    iosSwiping.value = true;
-  }
-};
 
 const iosActions: SwipeActionItem[] = [
   { text: '', icon: muteIcon, className: 'ios-btn ios-mute-btn', onClick: () => Toast('隐藏提醒') },
@@ -113,18 +100,16 @@ const handleClick = (value: string) => {
   background-color: #0052d9;
 }
 
-/* 模拟苹果短信：圆形操作按钮，滑到底时红色按钮展开成胶囊 */
+/* 模拟苹果短信：圆形操作按钮，滑到底时删除按钮展开成胶囊 */
 .ios-swipe {
   background-color: var(--td-bg-color-container);
-  // 初始态 cell 保持原样；滑动后（--active）才呈浅灰圆角卡片（苹果短信条样式）
+
   &--active .t-cell {
     background-color: var(--td-bg-color-secondarycontainer);
     border-radius: var(--td-radius-extraLarge);
     overflow: hidden;
   }
 
-  // 面板背景透明，让圆形按钮之间露出空隙
-  // 拉伸区由删除按钮本体撑满，面板保持透明即可
   .t-swipe-cell__right {
     background-color: transparent;
     align-items: stretch;
@@ -134,11 +119,11 @@ const handleClick = (value: string) => {
 
   .ios-btn {
     height: 100%;
-    aspect-ratio: 1; // 宽 = 高，呈正圆
+    aspect-ratio: 1; // 正方形时为圆，拉伸时为胶囊
     min-width: 0;
     margin-left: 10px;
     padding: 0;
-    border-radius: 9999px; // 足够大：正方形时为圆，拉伸时为胶囊
+    border-radius: 9999px;
     color: #fff;
   }
 
@@ -150,11 +135,10 @@ const handleClick = (value: string) => {
     background-color: #ff3b30;
   }
 
-  // full-swipe 滑到底：删除按钮拉伸占满剩余空间，图标靠左，整体呈圆角胶囊
-  // 优先级 0,3,0 高于组件 pin 规则并加 !important，确保 flex:1 拉伸生效
+  // 滑到底：删除按钮拉伸占满剩余空间
   .t-swipe-cell__action-sliding.ios-delete-btn {
-    flex: 1 1 0% !important;
-    aspect-ratio: auto; // 解除正圆约束，交由 flex 撑满宽度
+    flex: 1 1 0%;
+    aspect-ratio: auto;
     justify-content: flex-start;
     padding-left: 16px;
   }
