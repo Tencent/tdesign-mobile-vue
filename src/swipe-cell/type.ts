@@ -20,6 +20,11 @@ export interface TdSwipeCellProps {
    */
   disabled?: boolean;
   /**
+   *  是否启用滑动到底自动执行操作。
+   * @default false
+   */
+  fullSwipe?: boolean;
+  /**
    * 左侧滑动操作项。所有行为同 `right`
    */
   left?: Array<SwipeActionItem> | TNode;

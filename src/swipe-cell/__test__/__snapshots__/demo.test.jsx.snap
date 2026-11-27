@@ -2850,6 +2850,576 @@ exports[`SwipeCell > SwipeCell mobileVue demo works fine 1`] = `
       
     </div>
   </div>
+  <div
+    class="tdesign-mobile-demo-block tdesign-mobile-demo-block_notitle"
+  >
+    <div
+      class="tdesign-mobile-demo-block__header"
+    >
+      <!--v-if-->
+      <p
+        class="tdesign-mobile-demo-block__summary tdesign-mobile-demo-block_subtitle"
+      >
+        滑动到底自动执行操作
+      </p>
+    </div>
+    <div
+      class="tdesign-mobile-demo-block__slot"
+    >
+      
+      <!-- 数组 · 单操作项 -->
+      <div
+        class="t-swipe-cell"
+      >
+        <div
+          class="t-swipe-cell__wrapper"
+          style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
+        >
+          <div
+            class="t-swipe-cell__left"
+            style="width: auto; transition: none;"
+          >
+            
+            <div
+              class="t-swipe-cell__content btn delete-btn"
+              style="height: 100%;"
+            >
+              <!---->
+              <span
+                class="t-swipe-cell__text"
+              >
+                删除
+              </span>
+            </div>
+            
+            <div
+              style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
+            />
+            <div
+              style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+            >
+              <!---->
+            </div>
+          </div>
+          
+          <div
+            class="t-cell"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              <div
+                class="t-cell__title-text"
+              >
+                左右滑到底删除
+                <!---->
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              数组 · 单操作项
+            </div>
+            <!---->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto; transition: none;"
+          >
+            
+            <div
+              class="t-swipe-cell__content btn delete-btn"
+              style="height: 100%;"
+            >
+              <!---->
+              <span
+                class="t-swipe-cell__text"
+              >
+                删除
+              </span>
+            </div>
+            
+            <div
+              style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); pointer-events: none;"
+            />
+            <div
+              style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+            >
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 数组 · 多操作项 -->
+      <div
+        class="t-swipe-cell"
+        style="margin-top: 16px;"
+      >
+        <div
+          class="t-swipe-cell__wrapper"
+          style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
+        >
+          <div
+            class="t-swipe-cell__left"
+            style="width: auto; transition: none;"
+          >
+            
+            <div
+              class="t-swipe-cell__content btn favor-btn"
+              style="height: 100%;"
+            >
+              <!---->
+              <span
+                class="t-swipe-cell__text"
+              >
+                收藏
+              </span>
+            </div>
+            <div
+              class="t-swipe-cell__content btn delete-btn"
+              style="height: 100%;"
+            >
+              <!---->
+              <span
+                class="t-swipe-cell__text"
+              >
+                删除
+              </span>
+            </div>
+            
+            <div
+              style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
+            />
+            <div
+              style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+            >
+              <!---->
+            </div>
+          </div>
+          
+          <div
+            class="t-cell"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              <div
+                class="t-cell__title-text"
+              >
+                左右滑到底删除（最外侧项）
+                <!---->
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              数组 · 多操作项
+            </div>
+            <!---->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto; transition: none;"
+          >
+            
+            <div
+              class="t-swipe-cell__content btn favor-btn"
+              style="height: 100%;"
+            >
+              <!---->
+              <span
+                class="t-swipe-cell__text"
+              >
+                收藏
+              </span>
+            </div>
+            <div
+              class="t-swipe-cell__content btn delete-btn"
+              style="height: 100%;"
+            >
+              <!---->
+              <span
+                class="t-swipe-cell__text"
+              >
+                删除
+              </span>
+            </div>
+            
+            <div
+              style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); pointer-events: none;"
+            />
+            <div
+              style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+            >
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 插槽 · 单操作项 -->
+      <div
+        class="t-swipe-cell"
+        style="margin-top: 16px;"
+      >
+        <div
+          class="t-swipe-cell__wrapper"
+          style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
+        >
+          <div
+            class="t-swipe-cell__left"
+            style="width: auto; transition: none;"
+          >
+            
+            <div
+              class="btn delete-btn"
+            >
+              删除
+            </div>
+            
+            <div
+              style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
+            />
+            <div
+              style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+            >
+              <!---->
+            </div>
+          </div>
+          
+          <div
+            class="t-cell"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              <div
+                class="t-cell__title-text"
+              >
+                左右滑到底删除
+                <!---->
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              插槽 · 单操作项
+            </div>
+            <!---->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto; transition: none;"
+          >
+            
+            <div
+              class="btn delete-btn"
+            >
+              删除
+            </div>
+            
+            <div
+              style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); pointer-events: none;"
+            />
+            <div
+              style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+            >
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 插槽 · 多操作项 -->
+      <div
+        class="t-swipe-cell"
+        style="margin-top: 16px;"
+      >
+        <div
+          class="t-swipe-cell__wrapper"
+          style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
+        >
+          <div
+            class="t-swipe-cell__left"
+            style="width: auto; transition: none;"
+          >
+            
+            <div
+              class="btn favor-btn"
+            >
+              收藏
+            </div>
+            <div
+              class="btn edit-btn"
+            >
+              编辑
+            </div>
+            <div
+              class="btn delete-btn"
+            >
+              删除
+            </div>
+            
+            <div
+              style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
+            />
+            <div
+              style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+            >
+              <!---->
+            </div>
+          </div>
+          
+          <div
+            class="t-cell"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              <div
+                class="t-cell__title-text"
+              >
+                左右滑到底删除（最外侧项）
+                <!---->
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              插槽 · 多操作项
+            </div>
+            <!---->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto; transition: none;"
+          >
+            
+            <div
+              class="btn favor-btn"
+            >
+              收藏
+            </div>
+            <div
+              class="btn edit-btn"
+            >
+              编辑
+            </div>
+            <div
+              class="btn delete-btn"
+            >
+              删除
+            </div>
+            
+            <div
+              style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); pointer-events: none;"
+            />
+            <div
+              style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+            >
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 数组 · iOS 风格 -->
+      <div
+        class="t-swipe-cell ios-swipe"
+        style="margin-top: 16px;"
+      >
+        <div
+          class="t-swipe-cell__wrapper"
+          style="position: relative; transition: margin-left .6s cubic-bezier(0.18, 0.89, 0.32, 1),margin-right .6s cubic-bezier(0.18, 0.89, 0.32, 1),transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); margin-left: 0px; margin-right: 0px;"
+        >
+          <div
+            class="t-swipe-cell__left"
+            style="width: auto; transition: none;"
+          >
+            <!---->
+            <div
+              style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0, 0, 0); pointer-events: none;"
+            />
+            <div
+              style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+            >
+              <!---->
+            </div>
+          </div>
+          
+          <div
+            class="t-cell"
+          >
+            <div
+              class="t-cell__left"
+            >
+              <!---->
+              <!---->
+            </div>
+            <div
+              class="t-cell__title"
+            >
+              <div
+                class="t-cell__title-text"
+              >
+                胶囊型操作项（左滑到底删除）
+                <!---->
+              </div>
+              <!---->
+            </div>
+            <div
+              class="t-cell__note"
+            >
+              数组
+            </div>
+            <!---->
+          </div>
+          
+          <div
+            class="t-swipe-cell__right"
+            style="width: auto; transition: none;"
+          >
+            
+            <div
+              class="t-swipe-cell__content ios-btn ios-mute-btn"
+              style="height: 100%;"
+            >
+              <svg
+                class="t-icon t-icon-notification-filled t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                style="fill: none; font-size: 22px;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <path
+                  d="M8.64494 20.5C9.07521 21.9457 10.4145 23 12 23C13.5855 23 14.9248 21.9457 15.3551 20.5H8.64494Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M3 19.5H21V16.5L19 13.5V8.5C19 4.63401 15.866 1.5 12 1.5C8.13401 1.5 5 4.63401 5 8.5V13.5L3 16.5V19.5Z"
+                  fill="currentColor"
+                />
+              </svg>
+              
+            </div>
+            <div
+              class="t-swipe-cell__content ios-btn ios-delete-btn"
+              style="height: 100%;"
+            >
+              <svg
+                class="t-icon t-icon-delete t-swipe-cell__icon"
+                fill="none"
+                height="1em"
+                style="fill: none; font-size: 22px;"
+                viewBox="0 0 24 24"
+                width="1em"
+              >
+                <defs>
+                  <mask
+                    height="24"
+                    id="t-icon-delete-instance-v7-overlap-fill1"
+                    mask-type="luminance"
+                    maskContentUnits="userSpaceOnUse"
+                    maskUnits="userSpaceOnUse"
+                    width="24"
+                    x="0"
+                    y="0"
+                  >
+                    <rect
+                      fill="#fff"
+                      height="24"
+                      width="24"
+                      x="0"
+                      y="0"
+                    />
+                    <path
+                      d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M12 9V18"
+                      fill="none"
+                      stroke="#000"
+                      stroke-linecap="square"
+                      stroke-width="2"
+                    />
+                  </mask>
+                </defs>
+                <g
+                  id="delete"
+                >
+                  <path
+                    d="M5 5H19L18.5 22H5.5L5 5Z"
+                    fill="transparent"
+                    id="fill1"
+                    mask="url(#t-icon-delete-instance-v7-overlap-fill1)"
+                  />
+                  <path
+                    d="M21 5H3M5 5H19L18.5 22H5.5L5 5ZM8.5 2H15.5V5H8.5V2Z"
+                    id="stroke1"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M12 9V18"
+                    id="stroke2"
+                    stroke="currentColor"
+                    stroke-linecap="square"
+                    stroke-width="2"
+                  />
+                </g>
+              </svg>
+              
+            </div>
+            
+            <div
+              style="display: inline-block; position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0); transition: background-color .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0); pointer-events: none;"
+            />
+            <div
+              style="display: inline-block; position: absolute; height: 100%; top: 0px; min-width: 100%; transition: transform .6s cubic-bezier(0.18, 0.89, 0.32, 1); transform: translate3d(0px, 0, 0);"
+            >
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 </div>
 `;
 

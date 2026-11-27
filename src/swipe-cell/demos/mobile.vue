@@ -7,6 +7,7 @@
     <double />
     <icon />
     <event />
+    <full-swipe />
   </div>
 </template>
 
@@ -16,4 +17,5 @@ import right from './right.vue';
 import double from './double.vue';
 import icon from './icon.vue';
 import event from './event.vue';
+import fullSwipe from './full-swipe.vue';
 </script>
